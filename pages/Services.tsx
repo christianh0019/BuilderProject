@@ -46,7 +46,7 @@ const Services: React.FC = () => {
                 <ul className="space-y-4 mb-8">
                   <li className="flex gap-3 text-slate-700 text-sm">
                     <Check className="text-green-500 flex-shrink-0" size={18} />
-                    <span>5-Page Custom Premium Website</span>
+                    <span>Up to 20 Pages Custom Premium Website</span>
                   </li>
                   <li className="flex gap-3 text-slate-700 text-sm">
                     <Check className="text-green-500 flex-shrink-0" size={18} />
@@ -58,7 +58,7 @@ const Services: React.FC = () => {
                   </li>
                   <li className="flex gap-3 text-slate-700 text-sm">
                     <Check className="text-green-500 flex-shrink-0" size={18} />
-                    <span>Basic SEO Foundations</span>
+                    <span>Advanced On-Page SEO</span>
                   </li>
                 </ul>
                 <Link to="/contact" className="block w-full py-3 rounded-lg border-2 border-slate-900 text-slate-900 text-center font-bold hover:bg-slate-50 transition-colors">
@@ -68,11 +68,11 @@ const Services: React.FC = () => {
             </div>
 
             {/* Tier 2: The Pipeline */}
-            <div className="bg-white rounded-2xl shadow-xl overflow-hidden border border-blue-100 flex flex-col relative">
-              <div className="absolute top-0 inset-x-0 h-1 bg-blue-500"></div>
-              <div className="p-8 bg-blue-50/30">
+            <div className="bg-white rounded-2xl shadow-xl overflow-hidden border border-purple-100 flex flex-col relative">
+              <div className="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-purple-700 to-pink-600"></div>
+              <div className="p-8 bg-purple-50/30">
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="p-2 bg-blue-100 rounded-lg shadow-sm text-blue-600">
+                  <div className="p-2 bg-purple-100 rounded-lg shadow-sm text-purple-600">
                     <TrendingUp size={24} />
                   </div>
                   <h3 className="font-bold text-xl text-slate-900">The Pipeline</h3>
@@ -101,11 +101,15 @@ const Services: React.FC = () => {
                     <span>Weekly Performance Reports</span>
                   </li>
                   <li className="flex gap-3 text-slate-700 text-sm">
-                    <Check className="text-blue-500 flex-shrink-0" size={18} />
+                    <Check className="text-purple-500 flex-shrink-0" size={18} />
                     <span>CRM Integration</span>
                   </li>
+                  <li className="flex gap-3 text-slate-700 text-sm">
+                    <Check className="text-purple-500 flex-shrink-0" size={18} />
+                    <span>Dedicated Project Manager</span>
+                  </li>
                 </ul>
-                <Link to="/contact" className="block w-full py-3 rounded-lg bg-blue-600 text-white text-center font-bold hover:bg-blue-700 transition-colors">
+                <Link to="/contact" className="block w-full py-3 rounded-lg bg-slate-900 text-white text-center font-bold hover:bg-gradient-to-r hover:from-purple-700 hover:to-pink-600 transition-all duration-300">
                   Start Generating Leads
                 </Link>
               </div>
@@ -124,7 +128,7 @@ const Services: React.FC = () => {
                   <h3 className="font-bold text-xl text-white">The Partner Program</h3>
                 </div>
                 <p className="text-slate-400 text-sm mb-6 h-10">
-                  Dominate your market. We become your entire media department for a fraction of the cost.
+                  Dominate your market. We become your entire marketing & media departments for a fraction of the cost.
                 </p>
                 <div className="flex items-baseline gap-1">
                   <span className="text-4xl font-bold text-white">$3,000</span>
