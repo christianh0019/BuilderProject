@@ -17,13 +17,13 @@ const WebsiteDesign: React.FC = () => {
                 <div className="container mx-auto px-6 relative z-10">
                     <div className="max-w-4xl mx-auto text-center">
                         <span className="inline-block py-1 px-3 rounded-full bg-purple-900/50 border border-purple-500 text-purple-300 text-xs font-bold tracking-wider uppercase mb-6">
-                            Premium Website Design
+                            Custom Home Builder Website Design
                         </span>
                         <h1 className="text-5xl md:text-7xl font-serif font-bold mb-8 leading-tight">
                             Build a Digital Model Home <br /> <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">That Sells Itself</span>
                         </h1>
                         <p className="text-xl text-slate-300 mb-10 max-w-2xl mx-auto leading-relaxed">
-                            We don't just build "brochure" sites. We build high-performance digital assets on a foundation tested across 50+ successful builder websites.
+                            We don't just build "brochure" sites. We deliver **high-performance construction website development** on a foundation tested across 50+ successful builder websites.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
                             <Link to="/contact" className="bg-white text-slate-900 px-8 py-4 rounded-full font-bold hover:bg-purple-50 transition-colors">
