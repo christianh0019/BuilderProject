@@ -7,7 +7,6 @@ import Services from './pages/Services';
 import Book from './pages/Book';
 import CaseStudies from './pages/CaseStudies';
 import CaseStudyDetail from './pages/CaseStudyDetail';
-import CaseStudyDetail from './pages/CaseStudyDetail';
 import Contact from './pages/Contact';
 import WebsiteDesign from './pages/services/WebsiteDesign';
 import ContentMarketing from './pages/services/ContentMarketing';
