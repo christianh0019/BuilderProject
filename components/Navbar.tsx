@@ -22,10 +22,9 @@ const Navbar: React.FC = () => {
   }, [location]);
 
   return (
-    <nav 
-      className={`fixed w-full z-50 transition-all duration-300 ${
-        scrolled ? 'bg-white/90 backdrop-blur-md shadow-sm py-4' : 'bg-transparent py-6'
-      }`}
+    <nav
+      className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white/90 backdrop-blur-md shadow-sm py-4' : 'bg-transparent py-6'
+        }`}
     >
       <div className="container mx-auto px-6 flex justify-between items-center">
         {/* Logo */}
@@ -37,12 +36,44 @@ const Navbar: React.FC = () => {
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center space-x-8">
           <Link to="/" className="text-slate-700 hover:text-purple-700 font-medium transition-colors">Home</Link>
-          <Link to="/services" className="text-slate-700 hover:text-purple-700 font-medium transition-colors">Services</Link>
+          <Link to="/" className="text-slate-700 hover:text-purple-700 font-medium transition-colors">Home</Link>
+
+          {/* Services Dropdown */}
+          <div className="relative group">
+            <Link
+              to="/services"
+              className="flex items-center text-slate-700 hover:text-purple-700 font-medium transition-colors gap-1 py-4"
+            >
+              Services <ChevronDown size={16} className="group-hover:rotate-180 transition-transform duration-200" />
+            </Link>
+            <div className="absolute top-full -left-4 w-64 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0">
+              <div className="bg-white rounded-xl shadow-xl border border-slate-100 overflow-hidden py-2">
+                <Link to="/services/website-design" className="block px-6 py-3 hover:bg-slate-50 transition-colors">
+                  <span className="block font-semibold text-slate-800">Website Design</span>
+                  <span className="text-xs text-slate-500">Premium custom builds</span>
+                </Link>
+                <Link to="/services/content-marketing" className="block px-6 py-3 hover:bg-slate-50 transition-colors">
+                  <span className="block font-semibold text-slate-800">Content Marketing</span>
+                  <span className="text-xs text-slate-500">SEO & Email Nurture</span>
+                </Link>
+                <Link to="/services/paid-advertising" className="block px-6 py-3 hover:bg-slate-50 transition-colors">
+                  <span className="block font-semibold text-slate-800">Paid Advertising</span>
+                  <span className="text-xs text-slate-500">Google & Meta Ads</span>
+                </Link>
+                <div className="border-t border-slate-50 mt-2 pt-2">
+                  <Link to="/services" className="block px-6 py-2 text-sm text-purple-600 font-bold hover:text-purple-800">
+                    View All Services &rarr;
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <Link to="/case-studies" className="text-slate-700 hover:text-purple-700 font-medium transition-colors">Case Studies</Link>
-          
+
           {/* Dropdown */}
           <div className="relative group">
-            <button 
+            <button
               className="flex items-center text-slate-700 hover:text-purple-700 font-medium transition-colors gap-1"
             >
               Resources <ChevronDown size={16} />
@@ -53,9 +84,9 @@ const Navbar: React.FC = () => {
                   <span className="block font-semibold text-slate-800">Our Book</span>
                   <span className="text-sm text-slate-500">The Builder's Marketing Playbook</span>
                 </Link>
-                <a 
-                  href="https://www.youtube.com/@BuilderProjectCo" 
-                  target="_blank" 
+                <a
+                  href="https://www.youtube.com/@BuilderProjectCo"
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="block px-6 py-4 hover:bg-slate-50 group/item"
                 >
@@ -68,8 +99,8 @@ const Navbar: React.FC = () => {
             </div>
           </div>
 
-          <Link 
-            to="/contact" 
+          <Link
+            to="/contact"
             className="px-6 py-2.5 rounded-full bg-slate-900 text-white font-medium hover:bg-gradient-to-r hover:from-purple-700 hover:to-pink-600 transition-all duration-300 shadow-lg hover:shadow-purple-500/25"
           >
             Get in Touch
@@ -77,7 +108,7 @@ const Navbar: React.FC = () => {
         </div>
 
         {/* Mobile Menu Button */}
-        <button 
+        <button
           className="md:hidden text-slate-900"
           onClick={() => setIsOpen(!isOpen)}
         >
@@ -86,18 +117,17 @@ const Navbar: React.FC = () => {
       </div>
 
       {/* Mobile Menu */}
-      <div 
-        className={`md:hidden fixed inset-0 bg-white z-40 transform transition-transform duration-300 ease-in-out pt-24 px-6 ${
-          isOpen ? 'translate-x-0' : 'translate-x-full'
-        }`}
+      <div
+        className={`md:hidden fixed inset-0 bg-white z-40 transform transition-transform duration-300 ease-in-out pt-24 px-6 ${isOpen ? 'translate-x-0' : 'translate-x-full'
+          }`}
       >
         <div className="flex flex-col space-y-6 text-lg">
           <Link to="/" className="text-slate-900 font-semibold border-b border-slate-100 pb-4">Home</Link>
           <Link to="/services" className="text-slate-900 font-semibold border-b border-slate-100 pb-4">Services</Link>
           <Link to="/case-studies" className="text-slate-900 font-semibold border-b border-slate-100 pb-4">Case Studies</Link>
-          
+
           <div>
-            <button 
+            <button
               onClick={() => setResourceOpen(!resourceOpen)}
               className="flex items-center justify-between w-full text-slate-900 font-semibold border-b border-slate-100 pb-4"
             >
@@ -113,8 +143,8 @@ const Navbar: React.FC = () => {
             )}
           </div>
 
-          <Link 
-            to="/contact" 
+          <Link
+            to="/contact"
             className="text-center w-full py-4 rounded-xl bg-slate-900 text-white font-bold mt-4"
           >
             Get in Touch

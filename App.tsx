@@ -7,7 +7,11 @@ import Services from './pages/Services';
 import Book from './pages/Book';
 import CaseStudies from './pages/CaseStudies';
 import CaseStudyDetail from './pages/CaseStudyDetail';
+import CaseStudyDetail from './pages/CaseStudyDetail';
 import Contact from './pages/Contact';
+import WebsiteDesign from './pages/services/WebsiteDesign';
+import ContentMarketing from './pages/services/ContentMarketing';
+import PaidAdvertising from './pages/services/PaidAdvertising';
 import ScrollToTop from './components/ScrollToTop';
 
 // Helper component to scroll to top on route change
@@ -26,6 +30,9 @@ const App: React.FC = () => {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/services" element={<Services />} />
+            <Route path="/services/website-design" element={<WebsiteDesign />} />
+            <Route path="/services/content-marketing" element={<ContentMarketing />} />
+            <Route path="/services/paid-advertising" element={<PaidAdvertising />} />
             <Route path="/book" element={<Book />} />
             <Route path="/case-studies" element={<CaseStudies />} />
             <Route path="/case-studies/:slug" element={<CaseStudyDetail />} />
