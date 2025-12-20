@@ -1,92 +1,82 @@
 import React from 'react';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, TrendingUp } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { CaseStudy } from '../types';
-
-const cases: CaseStudy[] = [
-  {
-    id: "1",
-    client: "Hamilton Custom Homes",
-    title: "From 5 Leads to 50: Scaling a Luxury Builder",
-    image: "https://images.unsplash.com/photo-1613545325278-f24b0cae1224?q=80&w=1600&auto=format&fit=crop",
-    stat: "900%",
-    statLabel: "Lead Growth",
-    category: "Paid Ads & SEO"
-  },
-  {
-    id: "2",
-    client: "Urban Renovations Co.",
-    title: "Rebranding a Legacy Remodeler for the Modern Market",
-    image: "https://images.unsplash.com/photo-1556912173-3db9963f63db?q=80&w=1600&auto=format&fit=crop",
-    stat: "3x",
-    statLabel: "Avg Project Value",
-    category: "Web Design & Branding"
-  },
-  {
-    id: "3",
-    client: "Nairobi Estates",
-    title: "Selling Out a Development in record time",
-    image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=1600&auto=format&fit=crop",
-    stat: "4 Mo",
-    statLabel: "Sell-out Time",
-    category: "Full Marketing Suite"
-  },
-  {
-    id: "4",
-    client: "Bristol Builders",
-    title: "Dominating Local Search in a Competitive Market",
-    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1600&auto=format&fit=crop",
-    stat: "#1",
-    statLabel: "Google Ranking",
-    category: "Local SEO"
-  }
-];
+import { caseStudies } from '../data/caseStudies';
 
 const CaseStudies: React.FC = () => {
   return (
-    <div className="pt-32 pb-20 bg-slate-50 min-h-screen">
+    <div className="pt-32 pb-20 bg-slate-50">
       <div className="container mx-auto px-6">
-        <div className="max-w-3xl mb-16">
-          <h1 className="text-5xl font-serif font-bold text-slate-900 mb-6">Proven Results</h1>
-          <p className="text-xl text-slate-600">
-            See how we've helped builders and remodelers across the country transform their digital presence and grow their bottom line.
+        <div className="max-w-4xl mx-auto text-center mb-20">
+          <span className="text-purple-600 font-bold tracking-wider text-sm uppercase mb-4 block">Success Stories</span>
+          <h1 className="text-5xl md:text-6xl font-serif font-bold text-slate-900 mb-6">
+            Real Results for <br />Real Builders
+          </h1>
+          <p className="text-xl text-slate-600 max-w-2xl mx-auto">
+            See how we help custom home builders add millions in pipeline value without relying on referrals.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-          {cases.map((study) => (
-            <div key={study.id} className="group bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300">
-              <div className="relative h-80 overflow-hidden">
-                <img 
-                  src={study.image} 
-                  alt={study.client} 
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+        <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+          {caseStudies.map((study) => (
+            <Link
+              key={study.id}
+              to={`/case-studies/${study.slug}`}
+              className="group bg-white rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 border border-slate-100 flex flex-col h-full"
+            >
+              <div className="relative h-64 overflow-hidden">
+                <img
+                  src={study.imageUrl}
+                  alt={study.title}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
-                <div className="absolute bottom-6 left-6 bg-white/90 backdrop-blur px-4 py-2 rounded-full text-sm font-bold text-slate-900">
-                  {study.category}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                <div className="absolute bottom-4 left-4 text-white">
+                  <div className="font-bold text-sm bg-purple-600/90 backdrop-blur-sm px-3 py-1 rounded-full inline-block mb-2">
+                    {study.builderName}
+                  </div>
+                  <div className="flex items-center text-sm opacity-90">
+                    {study.location}
+                  </div>
                 </div>
               </div>
-              
-              <div className="p-10">
-                <div className="flex justify-between items-start mb-6">
-                  <div>
-                    <h3 className="text-slate-500 font-medium mb-2">{study.client}</h3>
-                    <h2 className="text-2xl font-bold font-serif text-slate-900 leading-tight pr-4">{study.title}</h2>
-                  </div>
-                  <div className="text-right flex-shrink-0">
-                    <div className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-700 to-pink-600">
-                      {study.stat}
+
+              <div className="p-8 flex-1 flex flex-col">
+                <h3 className="text-2xl font-serif font-bold text-slate-900 mb-4 group-hover:text-purple-600 transition-colors leading-tight">
+                  {study.title}
+                </h3>
+
+                <div className="grid grid-cols-2 gap-4 mb-6 mt-auto bg-slate-50 p-4 rounded-xl">
+                  {study.results.slice(0, 2).map((res, i) => (
+                    <div key={i}>
+                      <div className="text-xs text-slate-500 uppercase tracking-wide font-semibold mb-1">{res.label}</div>
+                      <div className="font-bold text-slate-900 text-lg">{res.value}</div>
                     </div>
-                    <div className="text-xs font-bold text-slate-400 uppercase tracking-wide">{study.statLabel}</div>
-                  </div>
+                  ))}
                 </div>
-                
-                <Link to="/contact" className="inline-flex items-center text-slate-900 font-bold hover:text-purple-600 transition-colors group/link">
-                  View Full Study <ArrowRight size={18} className="ml-2 transition-transform group-hover/link:translate-x-1" />
-                </Link>
+
+                <div className="flex items-center text-purple-600 font-bold group-hover:translate-x-2 transition-transform">
+                  Read Full Story <ArrowRight size={20} className="ml-2" />
+                </div>
               </div>
-            </div>
+            </Link>
           ))}
+        </div>
+
+        <div className="mt-20 text-center">
+          <div className="bg-slate-900 text-white rounded-2xl p-12 max-w-4xl mx-auto relative overflow-hidden">
+            <div className="relative z-10">
+              <h2 className="text-3xl font-serif font-bold mb-6">Ready to be our next success story?</h2>
+              <p className="text-slate-300 text-lg mb-8 max-w-2xl mx-auto">
+                We only work with one builder per market to ensure exclusivity. Check if your territory is still available.
+              </p>
+              <Link to="/contact" className="inline-block bg-white text-slate-900 px-8 py-4 rounded-xl font-bold hover:bg-purple-50 transition-colors">
+                Check Availability
+              </Link>
+            </div>
+            {/* Background Glow */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-purple-600 rounded-full mix-blend-overlay filter blur-[100px] opacity-30"></div>
+          </div>
         </div>
       </div>
     </div>
