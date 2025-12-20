@@ -17,7 +17,7 @@ const Home: React.FC = () => {
                 <Star size={16} fill="currentColor" />
                 <Star size={16} fill="currentColor" />
               </div>
-              <span className="text-sm font-medium text-slate-600">Rated 4.9/5 by 175+ Builders</span>
+              <span className="text-sm font-medium text-slate-600">Rated 4.9/5 by 100+ Builders</span>
             </div>
             
             <h1 className="text-5xl lg:text-7xl font-serif font-bold text-slate-900 leading-[1.1] mb-8">
