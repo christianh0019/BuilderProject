@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import Services from './pages/Services';
 import Book from './pages/Book';
 import Booking from './pages/Booking';
+import ThankYou from './pages/ThankYou';
 import CaseStudies from './pages/CaseStudies';
 import CaseStudyDetail from './pages/CaseStudyDetail';
 import Contact from './pages/Contact';
@@ -35,6 +36,7 @@ const App: React.FC = () => {
             <Route path="/services/paid-advertising" element={<PaidAdvertising />} />
             <Route path="/book" element={<Book />} />
             <Route path="/booking" element={<Booking />} />
+            <Route path="/thank-you" element={<ThankYou />} />
             <Route path="/case-studies" element={<CaseStudies />} />
             <Route path="/case-studies/:slug" element={<CaseStudyDetail />} />
             <Route path="/contact" element={<Contact />} />
