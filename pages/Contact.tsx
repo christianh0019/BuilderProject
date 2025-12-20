@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { ArrowRight, ArrowLeft, Check, AlertCircle, Building2, Wallet, PieChart, User } from 'lucide-react';
+import { ArrowRight, ArrowLeft, Check, AlertCircle, Building2, Wallet, PieChart, User, Loader2 } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const Contact: React.FC = () => {
   const [step, setStep] = useState(1);
@@ -30,10 +31,36 @@ const Contact: React.FC = () => {
     setStep(prev => prev + 1);
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const navigate = useNavigate();
+  const [loading, setLoading] = useState(false);
+
+  // ... (existing state)
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission logic here (e.g., API call)
-    alert("Thanks! We'll be in touch.");
+    setLoading(true);
+
+    try {
+      const response = await fetch('https://services.leadconnectorhq.com/hooks/HllUVzV8V6VFH4nUuq4W/webhook-trigger/fad0a645-e084-4b96-8216-6e72e76b8f98', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        navigate('/booking');
+      } else {
+        console.error('Submission failed');
+        alert('Something went wrong. Please try again.');
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      alert('Something went wrong. Please try again.');
+    } finally {
+      setLoading(false);
+    }
   };
 
   const goBack = () => {
@@ -249,8 +276,19 @@ const Contact: React.FC = () => {
                   />
                 </div>
 
-                <button type="submit" className="w-full bg-slate-900 text-white font-bold py-4 rounded-xl hover:bg-gradient-to-r hover:from-purple-700 hover:to-pink-600 transition-all duration-300 shadow-lg shadow-purple-500/20">
-                  Submit Application
+                <button
+                  type="submit"
+                  disabled={loading}
+                  className="w-full bg-slate-900 text-white font-bold py-4 rounded-xl hover:bg-gradient-to-r hover:from-purple-700 hover:to-pink-600 transition-all duration-300 shadow-lg shadow-purple-500/20 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                >
+                  {loading ? (
+                    <>
+                      <Loader2 className="animate-spin" size={20} />
+                      Submitting...
+                    </>
+                  ) : (
+                    "Submit Application"
+                  )}
                 </button>
               </form>
             </div>
