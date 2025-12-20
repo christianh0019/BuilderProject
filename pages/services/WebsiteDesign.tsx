@@ -6,15 +6,19 @@ const WebsiteDesign: React.FC = () => {
     return (
         <div className="pt-20">
             {/* Hero Section */}
-            <section className="relative bg-slate-900 text-white pt-20 pb-32 overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-slate-900 to-slate-800"></div>
-                <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')] opacity-10 bg-cover bg-center mix-blend-overlay"></div>
+            {/* Hero Section */}
+            <section className="relative bg-[#0F172A] text-white pt-20 pb-32 overflow-hidden">
+                {/* Abstract Background */}
+                <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-purple-900/30 rounded-full blur-[120px] pointer-events-none"></div>
+                <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-blue-900/20 rounded-full blur-[100px] pointer-events-none"></div>
 
                 <div className="container mx-auto px-6 relative z-10">
                     <div className="max-w-4xl mx-auto text-center">
-                        <span className="text-purple-400 font-bold tracking-wider text-sm uppercase mb-4 block">Premium Website Design</span>
+                        <span className="inline-block py-1 px-3 rounded-full bg-purple-900/50 border border-purple-500 text-purple-300 text-xs font-bold tracking-wider uppercase mb-6">
+                            Premium Website Design
+                        </span>
                         <h1 className="text-5xl md:text-7xl font-serif font-bold mb-8 leading-tight">
-                            Build a Digital Model Home <br />That Sells Itself
+                            Build a Digital Model Home <br /> <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">That Sells Itself</span>
                         </h1>
                         <p className="text-xl text-slate-300 mb-10 max-w-2xl mx-auto leading-relaxed">
                             Your website is your 24/7 sales center. We build lightning-fast, SEO-optimized sites designed specifically to convert high-net-worth homeowners.

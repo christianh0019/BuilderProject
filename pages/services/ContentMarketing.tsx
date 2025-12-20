@@ -6,30 +6,27 @@ const ContentMarketing: React.FC = () => {
     return (
         <div className="pt-20">
             {/* Hero Section */}
-            <section className="relative bg-white pt-20 pb-32 overflow-hidden">
+            {/* Hero Section */}
+            <section className="relative bg-[#0F172A] text-white pt-20 pb-32 overflow-hidden">
+                {/* Abstract Background */}
+                <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-purple-900/30 rounded-full blur-[120px] pointer-events-none"></div>
+                <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-blue-900/20 rounded-full blur-[100px] pointer-events-none"></div>
+
                 <div className="container mx-auto px-6 relative z-10">
-                    <div className="grid lg:grid-cols-2 gap-16 items-center">
-                        <div>
-                            <span className="text-purple-600 font-bold tracking-wider text-sm uppercase mb-4 block">Content Marketing & Nurture</span>
-                            <h1 className="text-5xl md:text-7xl font-serif font-bold text-slate-900 mb-8 leading-tight">
-                                Stay Top of Mind <br />Until They're Ready
-                            </h1>
-                            <p className="text-xl text-slate-600 mb-10 leading-relaxed">
-                                Custom homes take months (or years) to plan. We keep your brand relevant with educational content and automated email usage, so when they break ground, they call you.
-                            </p>
-                            <div className="flex flex-col sm:flex-row gap-4">
-                                <Link to="/contact" className="bg-slate-900 text-white px-8 py-4 rounded-full font-bold hover:bg-purple-600 transition-colors">
-                                    Get a Content Plan
-                                </Link>
-                            </div>
-                        </div>
-                        <div className="relative">
-                            <div className="absolute -inset-4 bg-purple-100 rounded-full filter blur-3xl opacity-50"></div>
-                            <img
-                                src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
-                                alt="Content Strategy"
-                                className="relative rounded-2xl shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-500"
-                            />
+                    <div className="max-w-4xl mx-auto text-center">
+                        <span className="inline-block py-1 px-3 rounded-full bg-purple-900/50 border border-purple-500 text-purple-300 text-xs font-bold tracking-wider uppercase mb-6">
+                            Content Marketing & Nurture
+                        </span>
+                        <h1 className="text-5xl md:text-7xl font-serif font-bold mb-8 leading-tight">
+                            Stay Top of Mind <br /> <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">Until They're Ready</span>
+                        </h1>
+                        <p className="text-xl text-slate-300 mb-10 max-w-2xl mx-auto leading-relaxed">
+                            Custom homes take months (or years) to plan. We keep your brand relevant with educational content and automated email usage, so when they break ground, they call you.
+                        </p>
+                        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                            <Link to="/contact" className="bg-white text-slate-900 px-8 py-4 rounded-full font-bold hover:bg-purple-50 transition-colors">
+                                Get a Content Plan
+                            </Link>
                         </div>
                     </div>
                 </div>
