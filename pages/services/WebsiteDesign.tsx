@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Monitor, Smartphone, Gauge, Search, ArrowRight, CheckCircle, Database, Layers, Lock, Zap } from 'lucide-react';
 import PortfolioSection from '../../components/website/PortfolioSection';
+import BrowserFrame from '../../components/ui/BrowserFrame';
+import VersoShowcase from '../../components/website/VersoShowcase';
 
 const WebsiteDesign: React.FC = () => {
     return (
