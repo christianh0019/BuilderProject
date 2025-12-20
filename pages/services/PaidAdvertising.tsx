@@ -14,13 +14,13 @@ const PaidAdvertising: React.FC = () => {
                 <div className="container mx-auto px-6 relative z-10">
                     <div className="max-w-4xl mx-auto text-center">
                         <span className="inline-block py-1 px-3 rounded-full bg-purple-900/50 border border-purple-500 text-purple-300 text-xs font-bold tracking-wider uppercase mb-6">
-                            Paid Search & Social
+                            PPC for Home Builders
                         </span>
                         <h1 className="text-5xl md:text-7xl font-serif font-bold mb-8 leading-tight">
                             Predictable Leads. <br /> <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">Guaranteed ROI.</span>
                         </h1>
                         <p className="text-xl text-slate-300 mb-10 max-w-2xl mx-auto leading-relaxed">
-                            We run high-intent campaigns that put your homes in front of qualified buyers, not just window shoppers.
+                            Stop wasting budget on window shoppers. We run high-intent **construction lead generation** campaigns that put your homes in front of qualified buyers ready to build.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
                             <Link to="/contact" className="bg-white text-slate-900 px-8 py-4 rounded-full font-bold hover:bg-purple-50 transition-colors">
