@@ -89,15 +89,15 @@ const Services: React.FC = () => {
               <div className="p-8 flex-1">
                 <ul className="space-y-4 mb-8">
                   <li className="flex gap-3 text-slate-700 text-sm">
-                    <Check className="text-blue-500 flex-shrink-0" size={18} />
+                    <Check className="text-purple-500 flex-shrink-0" size={18} />
                     <span>Google & Meta Ads Management</span>
                   </li>
                   <li className="flex gap-3 text-slate-700 text-sm">
-                    <Check className="text-blue-500 flex-shrink-0" size={18} />
+                    <Check className="text-purple-500 flex-shrink-0" size={18} />
                     <span>"Tire-Kicker" Filtering System</span>
                   </li>
                   <li className="flex gap-3 text-slate-700 text-sm">
-                    <Check className="text-blue-500 flex-shrink-0" size={18} />
+                    <Check className="text-purple-500 flex-shrink-0" size={18} />
                     <span>Weekly Performance Reports</span>
                   </li>
                   <li className="flex gap-3 text-slate-700 text-sm">
