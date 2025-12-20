@@ -6,6 +6,7 @@ const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [resourceOpen, setResourceOpen] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
@@ -61,7 +62,7 @@ const Navbar: React.FC = () => {
                 </Link>
                 <div className="border-t border-slate-50 mt-2 pt-2">
                   <Link to="/services" className="block px-6 py-2 text-sm text-purple-600 font-bold hover:text-purple-800">
-                    View All Services &rarr;
+                    View Our Programs &rarr;
                   </Link>
                 </div>
               </div>
@@ -122,7 +123,24 @@ const Navbar: React.FC = () => {
       >
         <div className="flex flex-col space-y-6 text-lg">
           <Link to="/" className="text-slate-900 font-semibold border-b border-slate-100 pb-4">Home</Link>
-          <Link to="/services" className="text-slate-900 font-semibold border-b border-slate-100 pb-4">Services</Link>
+
+          <div>
+            <button
+              onClick={() => setServicesOpen(!servicesOpen)}
+              className="flex items-center justify-between w-full text-slate-900 font-semibold border-b border-slate-100 pb-4"
+            >
+              Services <ChevronDown size={20} className={`transition-transform ${servicesOpen ? 'rotate-180' : ''}`} />
+            </button>
+            {servicesOpen && (
+              <div className="pl-4 mt-4 flex flex-col space-y-4">
+                <Link to="/services/website-design" className="text-slate-600">Website Design</Link>
+                <Link to="/services/content-marketing" className="text-slate-600">Content Marketing</Link>
+                <Link to="/services/paid-advertising" className="text-slate-600">Paid Advertising</Link>
+                <Link to="/services" className="text-purple-600 font-bold text-sm">View Our Programs &rarr;</Link>
+              </div>
+            )}
+          </div>
+
           <Link to="/case-studies" className="text-slate-900 font-semibold border-b border-slate-100 pb-4">Case Studies</Link>
 
           <div>
