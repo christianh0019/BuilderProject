@@ -242,7 +242,7 @@ const Contact: React.FC = () => {
                 <div>
                   <label className="block text-sm font-bold text-slate-700 mb-2">Website URL</label>
                   <input
-                    type="url"
+                    type="text"
                     className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 bg-white"
                     placeholder="https://... (Optional)"
                     onChange={(e) => setFormData({ ...formData, website: e.target.value })}
