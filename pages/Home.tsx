@@ -1,215 +1,227 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Monitor, TrendingUp, Video, Layers, ArrowRight, Play, CheckCircle2 } from 'lucide-react';
+import { Star, Layout, TrendingUp, PenTool, ArrowRight, Play } from 'lucide-react';
 
 const Home: React.FC = () => {
   return (
-    <div className="bg-white font-sans antialiased text-slate-900">
-
-      {/* 1. HERO SECTION: Targeting "Custom Home Builder Marketing" */}
-      <section className="pt-32 pb-24 lg:pt-48 lg:pb-32 relative overflow-hidden bg-[#0F172A] text-white">
-        {/* Background Effects */}
-        <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-purple-900/20 rounded-full blur-[120px] pointer-events-none"></div>
-        <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-blue-900/10 rounded-full blur-[100px] pointer-events-none"></div>
-
+    <div className="bg-white">
+      {/* Hero Section */}
+      <section className="pt-32 pb-20 lg:pt-48 lg:pb-32 relative overflow-hidden">
         <div className="container mx-auto px-6 relative z-10">
-          <div className="max-w-5xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 bg-slate-800/50 border border-slate-700 px-4 py-2 rounded-full mb-8">
-              <span className="flex h-2 w-2 rounded-full bg-green-500 animate-pulse"></span>
-              <span className="text-sm font-medium text-slate-300 tracking-wide uppercase">For Custom Home Builders & Remodelers</span>
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="inline-flex items-center gap-2 bg-slate-50 border border-slate-200 px-4 py-2 rounded-full mb-8 animate-fade-in-up">
+              <div className="flex text-yellow-500">
+                <Star size={16} fill="currentColor" />
+                <Star size={16} fill="currentColor" />
+                <Star size={16} fill="currentColor" />
+                <Star size={16} fill="currentColor" />
+                <Star size={16} fill="currentColor" />
+              </div>
+              <span className="text-sm font-medium text-slate-600">Rated 4.9/5 by 100+ Builders</span>
             </div>
-
-            <h1 className="text-5xl lg:text-7xl font-serif font-bold leading-[1.1] mb-8">
-              Turn Your Recent Projects Into <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
-                A Predictable Revenue Engine.
+            
+            <h1 className="text-5xl lg:text-7xl font-serif font-bold text-slate-900 leading-[1.1] mb-8">
+              We help custom builders <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-700 via-fuchsia-600 to-pink-600">
+                land premium projects.
               </span>
             </h1>
-
-            <p className="text-xl text-slate-300 mb-12 max-w-3xl mx-auto leading-relaxed">
-              We are the specialized marketing agency for construction companies. We turn your finished homes into digital assets that attract high-net-worth clients on autopilot.
+            
+            <p className="text-xl text-slate-600 mb-10 max-w-2xl mx-auto leading-relaxed">
+              BuilderProject combines strategy, design, and digital innovation to help you stop chasing leads and start building your backlog.
             </p>
-
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-              <Link
-                to="/contact"
-                className="w-full sm:w-auto px-10 py-5 rounded-full bg-white text-slate-900 font-bold text-lg hover:bg-purple-50 transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105"
+            
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <Link 
+                to="/contact" 
+                className="w-full sm:w-auto px-8 py-4 rounded-full bg-slate-900 text-white font-bold text-lg hover:bg-gradient-to-r hover:from-purple-700 hover:to-pink-600 transition-all duration-300 shadow-xl hover:shadow-purple-500/25"
               >
-                Book Your Strategy Session
+                Book a Strategy Call
               </Link>
-              <a
-                href="#ecosystem"
-                className="w-full sm:w-auto px-10 py-5 rounded-full border border-slate-600 text-white font-bold text-lg hover:bg-slate-800 transition-all duration-300"
+              <Link 
+                to="/case-studies" 
+                className="w-full sm:w-auto px-8 py-4 rounded-full bg-white text-slate-900 border border-slate-200 font-bold text-lg hover:border-purple-200 hover:bg-purple-50 transition-all duration-300 flex items-center justify-center gap-2"
               >
-                How It Works
-              </a>
+                <Play size={18} fill="currentColor" className="text-purple-600" />
+                See Our Work
+              </Link>
+            </div>
+          </div>
+        </div>
+
+        {/* Hero Abstract Background */}
+        <div className="absolute top-0 left-0 w-full h-full z-0 pointer-events-none opacity-30">
+             <div className="absolute top-[-20%] right-[-10%] w-[800px] h-[800px] bg-purple-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob"></div>
+             <div className="absolute top-[-20%] left-[-10%] w-[800px] h-[800px] bg-pink-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-2000"></div>
+        </div>
+      </section>
+
+      {/* Hero Grid / Case Studies Preview */}
+      <section className="pb-24 overflow-hidden">
+        <div className="container mx-auto px-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 h-[600px] md:h-[500px]">
+            {/* Item 1 - Luxury Interior */}
+            <div className="group relative rounded-3xl overflow-hidden h-full">
+              <img 
+                src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=1600&auto=format&fit=crop" 
+                alt="Modern luxury kitchen interior" 
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent p-8 flex flex-col justify-end">
+                <div className="text-white text-5xl font-bold mb-2">150%</div>
+                <p className="text-white/80 font-medium">Increase in qualified leads</p>
+                <Link to="/case-studies" className="mt-4 inline-flex items-center text-white font-bold border-b border-white pb-1 w-max">See Project</Link>
+              </div>
+            </div>
+
+            {/* Item 2 - Central Focus - Construction/Builder */}
+            <div className="md:col-span-1 group relative rounded-3xl overflow-hidden h-full bg-slate-900 flex items-center justify-center">
+                <div className="absolute inset-0 opacity-60">
+                   <img 
+                    src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?q=80&w=1600&auto=format&fit=crop" 
+                    alt="Luxury Modern Home Exterior" 
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
+                   />
+                </div>
+                <div className="absolute inset-0 bg-slate-900/40"></div>
+                <div className="relative z-10 text-center p-8">
+                    <div className="w-20 h-20 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center mx-auto mb-6 cursor-pointer hover:bg-white/20 transition-all">
+                        <Play size={32} className="text-white ml-1" fill="currentColor" />
+                    </div>
+                    <p className="text-2xl font-serif text-white italic">"Project Alpha transformed our digital presence completely."</p>
+                </div>
+            </div>
+
+            {/* Item 3 - Architectural Detail */}
+            <div className="group relative rounded-3xl overflow-hidden h-full">
+              <img 
+                src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1600&auto=format&fit=crop" 
+                alt="Architectural detail" 
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
+              />
+               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent p-8 flex flex-col justify-end">
+                <div className="flex gap-1 mb-4">
+                  {[1,2,3,4,5].map(i => <Star key={i} size={20} className="text-yellow-400" fill="currentColor"/>)}
+                </div>
+                <p className="text-white text-xl font-serif font-medium leading-tight mb-4">"Smart ideas, beautiful execution. BuilderProject delivers."</p>
+                <Link to="/case-studies" className="bg-white/20 backdrop-blur-md text-white px-6 py-2 rounded-full font-bold text-sm w-max hover:bg-white hover:text-slate-900 transition-all">View Case Study</Link>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* 2. THE PROBLEM: "Feast or Famine" */}
-      <section className="py-24 bg-white">
+      {/* Stats Section */}
+      <section className="py-24 bg-slate-50">
         <div className="container mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-16 items-center">
-            <div className="relative">
-              <div className="absolute -inset-4 bg-gradient-to-r from-purple-100 to-pink-100 rounded-[2rem] transform -rotate-2"></div>
-              <img
-                src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=1600&auto=format&fit=crop"
-                alt="Construction Site Chaos"
-                className="relative rounded-[2rem] shadow-2xl w-full object-cover h-[500px]"
-              />
-              <div className="absolute bottom-8 left-8 bg-white p-6 rounded-xl shadow-xl max-w-xs">
-                <p className="font-bold text-slate-900 mb-2">The Reality:</p>
-                <p className="text-slate-600 text-sm">"We're busy now, but I have no idea where our work is coming from in 6 months."</p>
-              </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-12 text-center md:text-left">
+            <div>
+              <h3 className="text-5xl font-serif font-bold text-slate-900 mb-2">97%</h3>
+              <p className="text-slate-500 font-medium">Happy Clients Served</p>
             </div>
             <div>
-              <h2 className="text-4xl font-serif font-bold text-slate-900 mb-6">Stop Relying on "Word of Mouth" to Feed Your Family.</h2>
-              <p className="text-lg text-slate-600 mb-8 leading-relaxed">
-                Referrals are great, but they are unpredictable. You can't scale a multi-million dollar custom home business on hope.
-                <br /><br />
-                The most successful builders don't just build homes; they build <strong>systems</strong>. Systems that generate leads, qualify prospects, and nurture relationships while they are out on the job site.
-              </p>
-              <div className="space-y-4">
-                <div className="flex items-start gap-3">
-                  <CheckCircle2 className="text-purple-600 shrink-0 mt-1" />
-                  <p className="text-slate-700"><strong>Eliminate the "Slow Season":</strong> A consistent pipeline of leads all year round.</p>
-                </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle2 className="text-purple-600 shrink-0 mt-1" />
-                  <p className="text-slate-700"><strong>Attract Better Clients:</strong> Stop bidding against cheap competitors. Position yourself as the luxury authority.</p>
-                </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle2 className="text-purple-600 shrink-0 mt-1" />
-                  <p className="text-slate-700"><strong>Automate Follow-Up:</strong> Use AI to chase leads so you don't have to.</p>
-                </div>
-              </div>
+              <h3 className="text-5xl font-serif font-bold text-slate-900 mb-2">150+</h3>
+              <p className="text-slate-500 font-medium">Builders Scaled</p>
+            </div>
+            <div>
+              <h3 className="text-5xl font-serif font-bold text-slate-900 mb-2">$50M+</h3>
+              <p className="text-slate-500 font-medium">Revenue Generated</p>
+            </div>
+            <div>
+              <h3 className="text-5xl font-serif font-bold text-slate-900 mb-2">300%</h3>
+              <p className="text-slate-500 font-medium">Avg. ROI</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* 3. THE ECOSYSTEM (Navigation to Service Pages) */}
-      <section id="ecosystem" className="py-24 bg-slate-50">
-        <div className="container mx-auto px-6 max-w-6xl">
-          <div className="text-center mb-16">
-            <span className="text-purple-600 font-bold tracking-wider text-sm uppercase mb-4 block">The BuilderProject Ecosystem</span>
-            <h2 className="text-4xl md:text-5xl font-serif font-bold text-slate-900 mb-6">A Complete Growth Engine</h2>
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              We don't sell "services." We install a 4-part machine into your business that handles everything from the first click to the signed contract.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8">
-
-            {/* 1. Website Design */}
-            <Link to="/services/website-design" className="group bg-white p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 flex flex-col h-full">
-              <div className="w-14 h-14 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                <Monitor size={28} />
-              </div>
-              <h3 className="text-2xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors">1. The Foundation (Website)</h3>
-              <p className="text-slate-600 mb-6 flex-grow">
-                Your digital showroom. We build high-speed, SEO-architected websites that showcase your portfolio and convince visitors you are the premium choice.
-              </p>
-              <div className="flex items-center text-blue-600 font-bold">
-                Explore Website Design <ArrowRight size={18} className="ml-2 group-hover:translate-x-1 transition-transform" />
-              </div>
-            </Link>
-
-            {/* 2. Paid Advertising */}
-            <Link to="/services/paid-advertising" className="group bg-white p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 flex flex-col h-full">
-              <div className="w-14 h-14 bg-green-50 text-green-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                <TrendingUp size={28} />
-              </div>
-              <h3 className="text-2xl font-bold text-slate-900 mb-3 group-hover:text-green-600 transition-colors">2. The Traffic (Paid Ads)</h3>
-              <p className="text-slate-600 mb-6 flex-grow">
-                Predictable lead generation. We use Google & Meta ads to target landowners and high-income families, filtering them through our proprietary "Velvet Rope" funnel.
-              </p>
-              <div className="flex items-center text-green-600 font-bold">
-                View Ad Strategy <ArrowRight size={18} className="ml-2 group-hover:translate-x-1 transition-transform" />
-              </div>
-            </Link>
-
-            {/* 3. Content Marketing */}
-            <Link to="/services/content-marketing" className="group bg-white p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 flex flex-col h-full">
-              <div className="w-14 h-14 bg-red-50 text-red-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                <Video size={28} />
-              </div>
-              <h3 className="text-2xl font-bold text-slate-900 mb-3 group-hover:text-red-600 transition-colors">3. The Trust (Content)</h3>
-              <p className="text-slate-600 mb-6 flex-grow">
-                Automated authority. We turn 1 hour of your time into a month of YouTube videos, blogs, and social clips that educate leads until they trust you implicitly.
-              </p>
-              <div className="flex items-center text-red-600 font-bold">
-                See The Content System <ArrowRight size={18} className="ml-2 group-hover:translate-x-1 transition-transform" />
-              </div>
-            </Link>
-
-            {/* 4. Programs */}
-            <Link to="/services" className="group bg-white p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 flex flex-col h-full">
-              <div className="w-14 h-14 bg-purple-50 text-purple-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                <Layers size={28} />
-              </div>
-              <h3 className="text-2xl font-bold text-slate-900 mb-3 group-hover:text-purple-600 transition-colors">4. The Blueprint (Programs)</h3>
-              <p className="text-slate-600 mb-6 flex-grow">
-                Choose your growth speed. Whether you need a simple website refresh or a full-scale dominant partner, we have a clear tier for every stage of business.
-              </p>
-              <div className="flex items-center text-purple-600 font-bold">
-                Compare Programs <ArrowRight size={18} className="ml-2 group-hover:translate-x-1 transition-transform" />
-              </div>
-            </Link>
-
-          </div>
-        </div>
-      </section>
-
-      {/* 4. SOCIAL PROOF / STATS */}
-      <section className="py-24 bg-slate-900 text-white border-y border-slate-800">
+      {/* Services Preview */}
+      <section className="py-32">
         <div className="container mx-auto px-6">
-          <div className="grid md:grid-cols-4 gap-12 text-center divide-y md:divide-y-0 md:divide-x divide-slate-800">
-            <div className="p-4">
-              <div className="text-4xl font-bold text-purple-400 mb-2">150+</div>
-              <div className="text-slate-400 text-sm uppercase tracking-wider">Builders Scaled</div>
+          <div className="flex flex-col gap-24">
+            
+            {/* Feature 1 */}
+            <div className="grid md:grid-cols-2 gap-16 items-center">
+              <div className="order-2 md:order-1">
+                <div className="mb-6 p-4 bg-purple-50 rounded-2xl w-max">
+                  <Layout size={32} className="text-purple-600" />
+                </div>
+                <h3 className="text-4xl font-serif font-bold text-slate-900 mb-6">Custom Website Design & Build</h3>
+                <p className="text-lg text-slate-600 mb-8 leading-relaxed">
+                  We create visually stunning, user-focused websites that bring your brand to life. Your website isn't just a brochure; it's your 24/7 salesperson, optimized for speed, mobile, and converting visitors into homeowners.
+                </p>
+                <Link to="/services" className="font-bold text-slate-900 border-b-2 border-slate-900 pb-1 hover:text-purple-600 hover:border-purple-600 transition-colors">Explore Web Design</Link>
+              </div>
+              <div className="order-1 md:order-2 bg-slate-100 rounded-[3rem] p-8 h-[400px] relative overflow-hidden group">
+                  <img 
+                    src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1600&auto=format&fit=crop" 
+                    alt="Web Design for Builders" 
+                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
+                  />
+              </div>
             </div>
-            <div className="p-4">
-              <div className="text-4xl font-bold text-blue-400 mb-2">$50M+</div>
-              <div className="text-slate-400 text-sm uppercase tracking-wider">Revenue Generated</div>
+
+            {/* Feature 2 */}
+            <div className="grid md:grid-cols-2 gap-16 items-center">
+              <div className="bg-slate-100 rounded-[3rem] p-8 h-[400px] relative overflow-hidden group">
+                  <img 
+                    src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1600&auto=format&fit=crop" 
+                    alt="SEO Analytics" 
+                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
+                  />
+              </div>
+              <div>
+                <div className="mb-6 p-4 bg-pink-50 rounded-2xl w-max">
+                  <TrendingUp size={32} className="text-pink-600" />
+                </div>
+                <h3 className="text-4xl font-serif font-bold text-slate-900 mb-6">SEO & Paid Advertising</h3>
+                <p className="text-lg text-slate-600 mb-8 leading-relaxed">
+                  Dominate your local market. We ensure your business appears exactly when high-net-worth clients are searching for custom home builders. From Google Ads to organic SEO, we drive qualified traffic.
+                </p>
+                <Link to="/services" className="font-bold text-slate-900 border-b-2 border-slate-900 pb-1 hover:text-purple-600 hover:border-purple-600 transition-colors">View Growth Strategies</Link>
+              </div>
             </div>
-            <div className="p-4">
-              <div className="text-4xl font-bold text-green-400 mb-2">300%</div>
-              <div className="text-slate-400 text-sm uppercase tracking-wider">Average ROI</div>
+
+            {/* Feature 3 */}
+            <div className="grid md:grid-cols-2 gap-16 items-center">
+              <div className="order-2 md:order-1">
+                <div className="mb-6 p-4 bg-purple-50 rounded-2xl w-max">
+                  <PenTool size={32} className="text-purple-600" />
+                </div>
+                <h3 className="text-4xl font-serif font-bold text-slate-900 mb-6">Brand Storytelling & Content</h3>
+                <p className="text-lg text-slate-600 mb-8 leading-relaxed">
+                  Your projects are masterpieces; your marketing should be too. We craft compelling narratives, manage your portfolio photography, and create content that builds trust before you even meet the client.
+                </p>
+                <Link to="/services" className="font-bold text-slate-900 border-b-2 border-slate-900 pb-1 hover:text-purple-600 hover:border-purple-600 transition-colors">See Content Services</Link>
+              </div>
+              <div className="order-1 md:order-2 bg-slate-100 rounded-[3rem] p-8 h-[400px] relative overflow-hidden group">
+                   <img 
+                    src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=1600&auto=format&fit=crop" 
+                    alt="Interior Design Content" 
+                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
+                   />
+              </div>
             </div>
-            <div className="p-4">
-              <div className="text-4xl font-bold text-pink-400 mb-2">#1</div>
-              <div className="text-slate-400 text-sm uppercase tracking-wider">Agency for Builders</div>
-            </div>
+
           </div>
         </div>
       </section>
 
-      {/* 5. CTA */}
-      <section className="py-32 relative overflow-hidden">
-        {/* Background Blur */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-purple-100 rounded-full blur-[100px] -z-10"></div>
-
-        <div className="container mx-auto px-6 max-w-4xl text-center">
-          <h2 className="text-5xl font-serif font-bold text-slate-900 mb-8">
-            Your Market is Waiting. <br />
-            Will You Claim It?
+      {/* CTA Section */}
+      <section className="py-24 bg-slate-900 relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-purple-900/20 to-transparent"></div>
+        <div className="container mx-auto px-6 relative z-10 text-center">
+          <h2 className="text-4xl md:text-5xl font-serif font-bold text-white mb-6">
+            Ready to fill your pipeline with <br/> dream projects?
           </h2>
-          <p className="text-xl text-slate-600 mb-12 leading-relaxed">
-            There are families in your area looking for a custom home builder right now.
-            Stop letting your competitors take the projects that should be yours.
+          <p className="text-slate-400 text-xl mb-10 max-w-2xl mx-auto">
+            Schedule a free consultation. We'll audit your current online presence and show you exactly how to win more bids.
           </p>
-          <Link to="/contact" className="inline-flex items-center bg-slate-900 text-white px-12 py-5 rounded-full font-bold text-lg hover:bg-purple-600 transition-all duration-300 shadow-xl hover:shadow-2xl hover:-translate-y-1">
-            Book Your Free Strategy Session <ArrowRight className="ml-2" />
+          <Link to="/contact" className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-white text-slate-900 font-bold hover:bg-gradient-to-r hover:from-purple-600 hover:to-pink-600 hover:text-white transition-all duration-300">
+            Let's Talk <ArrowRight size={20} />
           </Link>
-          <p className="mt-8 text-slate-500 text-sm">
-            Strict exclusivity: We only partner with 1 builder per territory to avoid conflict of interest.
-          </p>
         </div>
       </section>
-
     </div>
   );
 };
