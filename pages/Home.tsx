@@ -143,22 +143,24 @@ const Home: React.FC = () => {
             </RevealOnScroll>
 
             <RevealOnScroll delay={300}>
-              <div className="mb-10 flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 text-sm md:text-base font-medium text-slate-600">
-                <div className="flex items-center gap-2">
-                  <div className="bg-green-100 text-green-700 rounded-full p-1">
-                    <ChevronDown size={14} className="stroke-[4]" />
+              <div className="mb-12 flex flex-col lg:flex-row items-center justify-center gap-4 lg:gap-8 text-base md:text-lg font-medium text-slate-700">
+                <div className="flex items-center gap-3">
+                  <div className="bg-green-100 text-green-700 rounded-full p-1.5 shadow-sm">
+                    <ChevronDown size={20} className="stroke-[3]" />
                   </div>
-                  <span>Guaranteed Or We Work For Free</span>
+                  <span>Guaranteed Results</span>
                 </div>
-                <div className="flex items-center gap-2">
-                  <div className="bg-green-100 text-green-700 rounded-full p-1">
-                    <ChevronDown size={14} className="stroke-[4]" />
+                <div className="hidden lg:block w-px h-6 bg-slate-300"></div>
+                <div className="flex items-center gap-3">
+                  <div className="bg-green-100 text-green-700 rounded-full p-1.5 shadow-sm">
+                    <ChevronDown size={20} className="stroke-[3]" />
                   </div>
-                  <span>30-Day Money Back Guarantee</span>
+                  <span>30-Day Money Back</span>
                 </div>
-                <div className="flex items-center gap-2">
-                  <div className="bg-green-100 text-green-700 rounded-full p-1">
-                    <ChevronDown size={14} className="stroke-[4]" />
+                <div className="hidden lg:block w-px h-6 bg-slate-300"></div>
+                <div className="flex items-center gap-3">
+                  <div className="bg-green-100 text-green-700 rounded-full p-1.5 shadow-sm">
+                    <ChevronDown size={20} className="stroke-[3]" />
                   </div>
                   <span>You Own Every Asset</span>
                 </div>
