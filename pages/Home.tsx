@@ -143,23 +143,7 @@ const Home: React.FC = () => {
             </RevealOnScroll>
 
             <RevealOnScroll delay={300}>
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-                <Link
-                  to="/contact"
-                  className="w-full sm:w-auto px-10 py-5 rounded-full bg-slate-900 text-white font-bold text-xl hover:bg-gradient-to-r hover:from-purple-700 hover:to-pink-600 transition-all duration-300 shadow-xl hover:shadow-purple-500/25 hover:-translate-y-1"
-                >
-                  Book a Strategy Call
-                </Link>
-                <Link
-                  to="/case-studies"
-                  className="w-full sm:w-auto px-10 py-5 rounded-full bg-white text-slate-900 border-2 border-slate-100 font-bold text-xl hover:border-purple-200 hover:bg-purple-50 transition-all duration-300 flex items-center justify-center gap-3 hover:-translate-y-1"
-                >
-                  <Play size={20} fill="currentColor" className="text-purple-600" />
-                  See Our Work
-                </Link>
-              </div>
-
-              <div className="mt-10 flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 text-sm md:text-base font-medium text-slate-600">
+              <div className="mb-10 flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 text-sm md:text-base font-medium text-slate-600">
                 <div className="flex items-center gap-2">
                   <div className="bg-green-100 text-green-700 rounded-full p-1">
                     <ChevronDown size={14} className="stroke-[4]" />
@@ -178,6 +162,22 @@ const Home: React.FC = () => {
                   </div>
                   <span>You Own Every Asset</span>
                 </div>
+              </div>
+
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+                <Link
+                  to="/contact"
+                  className="w-full sm:w-auto px-10 py-5 rounded-full bg-slate-900 text-white font-bold text-xl hover:bg-gradient-to-r hover:from-purple-700 hover:to-pink-600 transition-all duration-300 shadow-xl hover:shadow-purple-500/25 hover:-translate-y-1"
+                >
+                  Book a Strategy Call
+                </Link>
+                <Link
+                  to="/case-studies"
+                  className="w-full sm:w-auto px-10 py-5 rounded-full bg-white text-slate-900 border-2 border-slate-100 font-bold text-xl hover:border-purple-200 hover:bg-purple-50 transition-all duration-300 flex items-center justify-center gap-3 hover:-translate-y-1"
+                >
+                  <Play size={20} fill="currentColor" className="text-purple-600" />
+                  See Our Work
+                </Link>
               </div>
             </RevealOnScroll>
           </div>
