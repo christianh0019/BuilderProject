@@ -1,26 +1,26 @@
 export interface BlogPost {
-    id: string;
-    slug: string;
-    title: string;
-    date: string;
-    readTime: string;
-    thumbnail: string;
-    youtubeUrl: string;
-    excerpt: string;
-    content: React.ReactNode;
+  id: string;
+  slug: string;
+  title: string;
+  date: string;
+  readTime: string;
+  thumbnail: string;
+  youtubeUrl: string;
+  excerpt: string;
+  content: React.ReactNode;
 }
 
 export const blogPosts: BlogPost[] = [
-    {
-        id: '1',
-        slug: '2026-marketing-plan-home-builders',
-        title: 'The 2026 Marketing Plan For Home Builders Revealed',
-        date: 'December 12, 2025',
-        readTime: '5 min read',
-        thumbnail: 'https://img.youtube.com/vi/jZ3cUnBZvs8/maxresdefault.jpg',
-        youtubeUrl: 'https://www.youtube.com/watch?v=jZ3cUnBZvs8',
-        excerpt: 'Most builders enter 2026 with the same tired marketing playbook. That playbook worked in a different era. It fails now. Here is the exact roadmap to dominate your local market.',
-        content: `
+  {
+    id: '1',
+    slug: '2026-marketing-plan-home-builders',
+    title: 'The 2026 Marketing Plan For Home Builders Revealed',
+    date: 'December 12, 2025',
+    readTime: '5 min read',
+    thumbnail: 'https://img.youtube.com/vi/jZ3cUnBZvs8/maxresdefault.jpg',
+    youtubeUrl: 'https://www.youtube.com/watch?v=jZ3cUnBZvs8',
+    excerpt: 'Most builders enter 2026 with the same tired marketing playbook. That playbook worked in a different era. It fails now. Here is the exact roadmap to dominate your local market.',
+    content: `
       <p class="mb-6">Most builders enter 2026 with the same tired marketing playbook. That playbook worked in a different era. It fails now. Your buyers research differently. They find information differently. If you keep doing what you did in 2023, you will watch premium projects move to smarter competitors.</p>
 
       <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4 font-serif">Proof Before Theory</h2>
@@ -61,5 +61,56 @@ export const blogPosts: BlogPost[] = [
         <a href="/contact" class="inline-block bg-white text-slate-900 font-bold px-8 py-3 rounded-full hover:bg-purple-50 transition-colors">Book Your Audit</a>
       </div>
     `
-    }
+  },
+  {
+    id: '2',
+    slug: 'ai-advertising-millions-home-builders',
+    title: 'AI Advertising Is Generating Millions For Home Builders',
+    date: 'December 04, 2025',
+    readTime: '6 min read',
+    thumbnail: 'https://img.youtube.com/vi/-jDQ67rFrpI/maxresdefault.jpg',
+    youtubeUrl: 'https://www.youtube.com/watch?v=-jDQ67rFrpI',
+    excerpt: 'Most high-end builders follow broken marketing plays that steal margin. Real change starts when elite builders stop pretending that old techniques still win. The market rewards speed, volume, and message precision.',
+    content: `
+      <p class="mb-6">Most high-end builders follow one of four broken plays. Each one steals projects and margin. You pay a marketing person or a video guy and get crumbs in return. You spend your own hours filming and editing when your time is worth ten times what you chase. You recycle the same tired project shots until nobody reacts. Or you create zero content and pray referrals fill the pipeline.</p>
+      <p class="mb-6">That playbook is obsolete. It traps firms in feast or famine. It wastes budgets. It kills momentum. Real change starts when elite builders stop pretending that old techniques still win. The market rewards speed, volume, and message precision.</p>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4 font-serif">Proof that change already happened</h2>
+      <p class="mb-6">BuilderProject has helped 100+ custom home builders generate nearly $100M in revenue. That is not theory. It is a machine that works. A recent Invoca report shows 80% of marketers say AI tools exceed ROI expectations. The technology is moving faster than most owners can read the headlines. The builders who move first will dominate their regions.</p>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4 font-serif">The new tools that rewrite the rules</h2>
+      <p class="mb-6">Two AI tools are changing how high-end custom builders create content. <strong>Nano Banana</strong> from Google solves image creative in seconds. <strong>Sora 2</strong> from OpenAI generates lifelike video from your photos and a few minutes of footage. Combine them with a strategy and you swap expensive vendors and wasted time for relentless, scalable creative.</p>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4 font-serif">Nano Banana for image ads</h2>
+      <p class="mb-6">Nano Banana produces professional image ads from plain text. You describe a headline, a style, an offer. The AI returns finished art with layout, typography, and a conversion-minded headline. No designer. No Canva wrestling. No mounting monthly bills.</p>
+      <p class="mb-6">For custom home marketing, this means you can test 10 to 15 creative variations in a morning. You can push seasonal offers, spec home launches, client stories, and educational content. More creative equals faster learning. Meta rewards volume and variation. Nano Banana provides both.</p>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4 font-serif">Sora 2 for video ads and walkthroughs</h2>
+      <p class="mb-6">Video controls attention. Sora 2 removes the friction. Record a few minutes once and create an AI clone of your face and voice. Upload the photos you already have on your phone. Type the script. The AI clone walks through the project, narrates features, and looks and sounds like you. No crew. No expensive shoots. No editing nightmares.</p>
+      <p class="mb-6">This is not gimmick. It is leverage. You can create personalized follow-ups, project showcases, and ads that feel authentic and owned. You can scale film production from one afternoon to a library of hundreds of clips in a week.</p>
+
+      <div class="bg-purple-50 border-l-4 border-purple-500 p-6 my-8 rounded-r-lg">
+        <p class="font-medium text-purple-900 italic">"Marketing systems require clear hooks, precise offers, and a tested funnel. The conversion comes from the combination of content, targeting, funnel, and follow-up."</p>
+      </div>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4 font-serif">How the elite use AI to outwork competitors</h2>
+      <ul class="list-disc pl-6 mb-6 space-y-2 text-slate-700">
+        <li>Create a content engine using Nano Banana and Sora 2 to produce 50+ creative assets each month.</li>
+        <li>Feed those assets into Meta and native platforms with 10-15 variations per campaign.</li>
+        <li>Capture leads on a conversion-first landing page wired into your CRM.</li>
+        <li>Deploy tailored follow-up sequences including personalized video touchpoints.</li>
+        <li>Test offers weekly to cut cost per qualified lead by half or more.</li>
+      </ul>
+      <p class="mb-6">Builders who follow this sequence move from invisible to dominant. They replace feast or famine with predictable pipeline. They replace outsourced uncertainty with control.</p>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4 font-serif">Real clients. Real outcomes.</h2>
+      <p class="mb-6">We work with builders who had no marketing and turned into market leaders inside six months. We work with firms that reduced their cost per qualified lead by 40% while doubling appointment rates. We do not promise miracles. We deliver systems and measurable gains every month.</p>
+
+      <div class="bg-slate-900 text-white p-8 rounded-2xl my-10 text-center">
+        <h3 class="text-2xl font-bold mb-4 font-serif">Get Your Free Marketing Audit</h3>
+        <p class="text-slate-300 mb-6">We will map where you are losing bids, how your online presence converts, and where AI content can deliver instant lift. Spots are limited because we run each audit personally.</p>
+        <a href="/contact" class="inline-block bg-white text-slate-900 font-bold px-8 py-3 rounded-full hover:bg-purple-50 transition-colors">Book Your Audit</a>
+      </div>
+    `
+  }
 ];
