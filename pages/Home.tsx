@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Star, Layout, TrendingUp, PenTool, ArrowRight, Play, BookOpen, BarChart3, Youtube, ChevronRight, ChevronDown } from 'lucide-react';
+import { Star, ArrowRight, Play, BookOpen, BarChart3, Youtube, ChevronRight, ChevronDown } from 'lucide-react';
 
 const RevealOnScroll = ({ children, className = "", delay = 0 }: { children: React.ReactNode, className?: string, delay?: number }) => {
   const [isVisible, setIsVisible] = useState(false);
