@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Star, ArrowRight, Play, BookOpen, BarChart3, Youtube, ChevronRight, ChevronDown } from 'lucide-react';
+import SEO from '../components/SEO';
 
 const RevealOnScroll = ({ children, className = "", delay = 0 }: { children: React.ReactNode, className?: string, delay?: number }) => {
   const [isVisible, setIsVisible] = useState(false);
@@ -82,9 +83,8 @@ const Home: React.FC = () => {
     }
   ];
 
+  // ... imports moved to top
   import SEO from '../components/SEO';
-
-  // ... imports
 
   const Home: React.FC = () => {
     // ... existing code

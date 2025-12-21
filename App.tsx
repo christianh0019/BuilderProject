@@ -53,7 +53,8 @@ const App: React.FC = () => {
           <Footer />
         </div>
       </Router>
-      );
+    </HelmetProvider>
+  );
 };
 
-      export default App;
+export default App;
