@@ -303,18 +303,24 @@ const Home: React.FC = () => {
           <div className="grid md:grid-cols-2 gap-6 md:gap-10">
             {/* 1. Case Studies */}
             <RevealOnScroll delay={100}>
-              <Link to="/case-studies" className="group relative rounded-[2rem] md:rounded-[3rem] overflow-hidden aspect-[4/5] md:aspect-auto md:h-[500px] border border-slate-200 shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 w-full block">
+              <Link to="/case-studies" className="group relative rounded-[2rem] md:rounded-[3rem] overflow-hidden aspect-[4/5] md:aspect-auto md:h-[500px] border border-slate-200 shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 w-full block flex flex-col justify-between p-8 md:p-12">
                 <img
                   src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1200&auto=format&fit=crop"
                   alt="Case Studies"
                   className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent p-8 md:p-12 flex flex-col justify-end">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
+
+                <div className="relative z-10">
                   <div className="flex items-center gap-3 text-purple-400 mb-4 font-bold uppercase tracking-wider text-xs md:text-sm">
                     <BarChart3 size={20} /> Proven Results
                   </div>
                   <h3 className="text-3xl md:text-5xl font-serif font-bold text-white mb-4 group-hover:translate-x-2 transition-transform">See Real Results</h3>
                   <p className="text-slate-300 text-base md:text-lg">Detailed breakdowns of how we scaled builders to $10M+.</p>
+                </div>
+
+                <div className="relative z-10 flex items-center font-bold text-white text-lg md:text-xl group-hover:text-purple-300 transition-colors">
+                  View Case Studies <ArrowRight size={24} className="ml-3 group-hover:translate-x-2 transition-transform" />
                 </div>
               </Link>
             </RevealOnScroll>
@@ -338,12 +344,17 @@ const Home: React.FC = () => {
 
             {/* 3. YouTube */}
             <RevealOnScroll delay={300}>
-              <a href="https://youtube.com/@builderproject" target="_blank" rel="noopener noreferrer" className="group relative rounded-[2rem] md:rounded-[3rem] overflow-hidden aspect-[4/5] md:aspect-auto md:h-[500px] bg-[#FF0000] border border-red-600 shadow-xl hover:shadow-2xl hover:shadow-red-900/20 hover:-translate-y-2 transition-all duration-500 flex flex-col justify-between p-8 md:p-12 w-full block">
+              <a href="https://www.youtube.com/@builderprojectco" target="_blank" rel="noopener noreferrer" className="group relative rounded-[2rem] md:rounded-[3rem] overflow-hidden aspect-[4/5] md:aspect-auto md:h-[500px] bg-[#FF0000] border border-red-600 shadow-xl hover:shadow-2xl hover:shadow-red-900/20 hover:-translate-y-2 transition-all duration-500 flex flex-col justify-between p-8 md:p-12 w-full block">
                 <div className="absolute inset-0 bg-gradient-to-br from-black/20 to-transparent"></div>
                 <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
                 <div className="relative z-10">
                   <div className="w-14 h-14 md:w-16 md:h-16 bg-white rounded-2xl flex items-center justify-center shadow-md mb-6 md:mb-8 group-hover:scale-110 transition-transform">
-                    <Youtube size={32} className="text-[#FF0000]" fill="currentColor" />
+                    {/* Custom YouTube SVG */}
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect width="24" height="24" fill="white" rx="0" className="hidden" />
+                      <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z" fill="#FF0000" />
+                      <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="white" />
+                    </svg>
                   </div>
                   <h3 className="text-3xl md:text-5xl font-serif font-bold text-white mb-4">Watch The Strategy</h3>
                   <p className="text-white/90 text-lg md:text-xl font-medium">Deep dives on our YouTube channel.</p>
