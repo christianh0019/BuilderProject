@@ -30,7 +30,7 @@ const Navbar: React.FC = () => {
       <div className="container mx-auto px-6 flex justify-between items-center">
         {/* Logo */}
         <Link to="/" className="text-2xl font-bold font-serif tracking-tight flex items-center gap-2">
-          <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-purple-700 to-pink-600 flex items-center justify-center text-white font-sans text-lg">B</div>
+          <img src="/images/logo_icon.png" alt="BuilderProject Logo" className="w-8 h-8 rounded-lg" />
           <span className="text-slate-900">BuilderProject</span>
         </Link>
 

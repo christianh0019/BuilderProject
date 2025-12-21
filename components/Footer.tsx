@@ -9,8 +9,8 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16 border-b border-slate-800 pb-12">
           <div>
             <div className="text-3xl font-serif font-bold mb-6 flex items-center gap-2">
-               <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-purple-700 to-pink-600 flex items-center justify-center text-white font-sans text-lg">B</div>
-               BuilderProject
+              <img src="/images/logo_icon.png" alt="BuilderProject Logo" className="w-8 h-8 rounded-lg" />
+              BuilderProject
             </div>
             <p className="text-slate-400 max-w-md text-lg leading-relaxed">
               We help custom home builders and remodelers dominate their local market through premium design, strategic SEO, and high-converting paid ads.
@@ -19,9 +19,9 @@ const Footer: React.FC = () => {
           <div className="lg:pl-12">
             <h3 className="text-xl font-bold mb-6 font-serif">Subscribe to our newsletter</h3>
             <form className="flex flex-col sm:flex-row gap-4" onSubmit={(e) => e.preventDefault()}>
-              <input 
-                type="email" 
-                placeholder="Enter your email address" 
+              <input
+                type="email"
+                placeholder="Enter your email address"
                 className="flex-1 bg-slate-800 border border-slate-700 rounded-lg px-6 py-4 text-white focus:outline-none focus:border-purple-500 transition-colors"
               />
               <button className="bg-white text-slate-900 px-8 py-4 rounded-lg font-bold hover:bg-gradient-to-r hover:from-purple-600 hover:to-pink-600 hover:text-white transition-all duration-300">
