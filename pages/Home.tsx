@@ -303,23 +303,19 @@ const Home: React.FC = () => {
           <div className="grid md:grid-cols-2 gap-6 md:gap-10">
             {/* 1. Case Studies */}
             <RevealOnScroll delay={100}>
-              <Link to="/case-studies" className="group relative rounded-[2rem] md:rounded-[3rem] overflow-hidden aspect-[4/5] md:aspect-auto md:h-[500px] border border-slate-200 shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 w-full block flex flex-col justify-between p-8 md:p-12">
-                <img
-                  src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1200&auto=format&fit=crop"
-                  alt="Case Studies"
-                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
+              <Link to="/case-studies" className="group relative rounded-[2rem] md:rounded-[3rem] overflow-hidden aspect-[4/5] md:aspect-auto md:h-[500px] bg-purple-900 border border-purple-700 shadow-xl hover:shadow-2xl hover:shadow-purple-900/20 hover:-translate-y-2 transition-all duration-500 w-full block flex flex-col justify-between p-8 md:p-12">
+                <div className="absolute inset-0 bg-gradient-to-br from-black/20 to-transparent"></div>
+                <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
 
                 <div className="relative z-10">
-                  <div className="flex items-center gap-3 text-purple-400 mb-4 font-bold uppercase tracking-wider text-xs md:text-sm">
-                    <BarChart3 size={20} /> Proven Results
+                  <div className="w-14 h-14 md:w-16 md:h-16 bg-white rounded-2xl flex items-center justify-center shadow-md mb-6 md:mb-8 group-hover:scale-110 transition-transform">
+                    <BarChart3 size={32} className="text-purple-900" />
                   </div>
                   <h3 className="text-3xl md:text-5xl font-serif font-bold text-white mb-4 group-hover:translate-x-2 transition-transform">See Real Results</h3>
-                  <p className="text-slate-300 text-base md:text-lg">Detailed breakdowns of how we scaled builders to $10M+.</p>
+                  <p className="text-purple-100 text-lg md:text-xl font-medium max-w-sm">Detailed breakdowns of how we scaled builders to $10M+.</p>
                 </div>
 
-                <div className="relative z-10 flex items-center font-bold text-white text-lg md:text-xl group-hover:text-purple-300 transition-colors">
+                <div className="relative z-10 flex items-center font-bold text-white text-lg md:text-xl group-hover:text-purple-200 transition-colors">
                   View Case Studies <ArrowRight size={24} className="ml-3 group-hover:translate-x-2 transition-transform" />
                 </div>
               </Link>
