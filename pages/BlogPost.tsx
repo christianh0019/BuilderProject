@@ -92,18 +92,33 @@ const BlogPost: React.FC = () => {
                     </div>
                 </div>
 
-                {/* CTA Footer */}
-                <div className="mt-20 bg-slate-900 rounded-[2rem] p-8 md:p-16 text-center relative overflow-hidden">
-                    <div className="absolute top-0 right-0 w-full h-full bg-gradient-to-br from-purple-900/50 to-transparent pointer-events-none"></div>
-                    <div className="relative z-10">
-                        <h2 className="text-3xl md:text-5xl font-serif font-bold text-white mb-6">Ready to implement this system?</h2>
-                        <p className="text-slate-400 text-lg md:text-xl max-w-2xl mx-auto mb-10">
-                            We help custom home builders build this exact marketing machine. Book your free audit today.
-                        </p>
-                        <Link to="/contact" className="inline-flex items-center bg-white text-slate-900 px-10 py-4 rounded-full font-bold text-lg hover:bg-purple-50 transition-all hover:scale-105">
-                            Book Your Audit <ArrowRight className="ml-2" />
-                        </Link>
-                    </div>
+                {/* Read Next Section */}
+                <div className="mt-20 border-t border-slate-200 pt-16">
+                    <p className="font-serif font-bold text-slate-500 mb-8 uppercase tracking-widest text-sm">Read This Next</p>
+                    {(() => {
+                        const currentIndex = blogPosts.findIndex(p => p.id === post.id);
+                        const nextPost = blogPosts[(currentIndex + 1) % blogPosts.length];
+
+                        return (
+                            <Link to={`/blog/${nextPost.slug}`} className="group block bg-slate-50 rounded-[2rem] p-4 md:p-8 hover:bg-slate-100 transition-colors border border-slate-100 items-center md:flex gap-8">
+                                <div className="w-full md:w-1/3 aspect-video rounded-xl overflow-hidden shadow-lg mb-6 md:mb-0 relative">
+                                    <img src={nextPost.thumbnail} alt={nextPost.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                                    <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors"></div>
+                                </div>
+                                <div className="md:w-2/3">
+                                    <h3 className="text-2xl md:text-3xl font-serif font-bold text-slate-900 mb-4 group-hover:text-purple-700 transition-colors">
+                                        {nextPost.title}
+                                    </h3>
+                                    <p className="text-slate-600 mb-6 line-clamp-2">
+                                        {nextPost.excerpt}
+                                    </p>
+                                    <span className="inline-flex items-center font-bold text-purple-700">
+                                        Read Article <ArrowRight size={20} className="ml-2 group-hover:translate-x-1 transition-transform" />
+                                    </span>
+                                </div>
+                            </Link>
+                        );
+                    })()}
                 </div>
 
             </article>
