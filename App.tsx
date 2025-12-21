@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import Services from './pages/Services';
+import Programs from './pages/Programs';
 import Book from './pages/Book';
 import Booking from './pages/Booking';
 import ThankYou from './pages/ThankYou';
@@ -34,6 +35,7 @@ const App: React.FC = () => {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/services" element={<Services />} />
+            <Route path="/programs" element={<Programs />} />
             <Route path="/services/website-design" element={<WebsiteDesign />} />
             <Route path="/services/content-marketing" element={<ContentMarketing />} />
             <Route path="/services/paid-advertising" element={<PaidAdvertising />} />

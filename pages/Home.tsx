@@ -323,7 +323,7 @@ const Home: React.FC = () => {
 
             {/* 2. Pricing/Programs */}
             <RevealOnScroll delay={200}>
-              <Link to="/services" className="group relative rounded-[2rem] md:rounded-[3rem] overflow-hidden aspect-[4/5] md:aspect-auto md:h-[500px] bg-slate-50 border border-slate-200 shadow-xl hover:shadow-2xl hover:border-purple-200 hover:-translate-y-2 transition-all duration-500 flex flex-col justify-between p-8 md:p-12 w-full block">
+              <Link to="/programs" className="group relative rounded-[2rem] md:rounded-[3rem] overflow-hidden aspect-[4/5] md:aspect-auto md:h-[500px] bg-slate-50 border border-slate-200 shadow-xl hover:shadow-2xl hover:border-purple-200 hover:-translate-y-2 transition-all duration-500 flex flex-col justify-between p-8 md:p-12 w-full block">
                 <div className="absolute top-0 right-0 w-80 h-80 bg-purple-100 rounded-full blur-[80px] -translate-y-1/2 translate-x-1/3 group-hover:bg-purple-200 transition-colors"></div>
                 <div className="relative z-10">
                   <div className="w-14 h-14 md:w-16 md:h-16 bg-white rounded-2xl flex items-center justify-center shadow-md mb-6 md:mb-8 group-hover:scale-110 transition-transform">

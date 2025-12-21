@@ -61,7 +61,7 @@ const Navbar: React.FC = () => {
                   <span className="text-xs text-slate-500">Google & Meta Ads</span>
                 </Link>
                 <div className="border-t border-slate-50 mt-2 pt-2">
-                  <Link to="/services" className="block px-6 py-2 text-sm text-purple-600 font-bold hover:text-purple-800">
+                  <Link to="/programs" className="block px-6 py-2 text-sm text-purple-600 font-bold hover:text-purple-800">
                     View Our Programs &rarr;
                   </Link>
                 </div>
@@ -136,7 +136,7 @@ const Navbar: React.FC = () => {
                 <Link to="/services/website-design" className="text-slate-600">Website Design</Link>
                 <Link to="/services/content-marketing" className="text-slate-600">Content Marketing</Link>
                 <Link to="/services/paid-advertising" className="text-slate-600">Paid Advertising</Link>
-                <Link to="/services" className="text-purple-600 font-bold text-sm">View Our Programs &rarr;</Link>
+                <Link to="/programs" className="text-purple-600 font-bold text-sm">View Our Programs &rarr;</Link>
               </div>
             )}
           </div>

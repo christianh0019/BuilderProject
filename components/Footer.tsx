@@ -37,6 +37,7 @@ const Footer: React.FC = () => {
             <ul className="space-y-4">
               <li><Link to="/" className="text-slate-400 hover:text-white transition-colors">Home</Link></li>
               <li><Link to="/services" className="text-slate-400 hover:text-white transition-colors">Services</Link></li>
+              <li><Link to="/programs" className="text-slate-400 hover:text-white transition-colors">Programs</Link></li>
               <li><Link to="/case-studies" className="text-slate-400 hover:text-white transition-colors">Case Studies</Link></li>
               <li><Link to="/contact" className="text-slate-400 hover:text-white transition-colors">Contact</Link></li>
             </ul>
@@ -52,10 +53,10 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="text-lg font-bold mb-6 font-serif text-slate-200">Services</h4>
             <ul className="space-y-4">
-              <li><span className="text-slate-400">Website Design</span></li>
-              <li><span className="text-slate-400">SEO & Local Search</span></li>
-              <li><span className="text-slate-400">Content Marketing</span></li>
-              <li><span className="text-slate-400">Paid Advertising</span></li>
+              <li><Link to="/services/website-design" className="text-slate-400 hover:text-white transition-colors">Website Design</Link></li>
+              <li><Link to="/services/content-marketing" className="text-slate-400 hover:text-white transition-colors">SEO & Local Search</Link></li>
+              <li><Link to="/services/content-marketing" className="text-slate-400 hover:text-white transition-colors">Content Marketing</Link></li>
+              <li><Link to="/services/paid-advertising" className="text-slate-400 hover:text-white transition-colors">Paid Advertising</Link></li>
             </ul>
           </div>
           <div>
