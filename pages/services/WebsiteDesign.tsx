@@ -40,6 +40,27 @@ const WebsiteDesign: React.FC = () => {
             {/* Interactive Portfolio */}
             <PortfolioSection />
 
+            {/* Live Preview Section */}
+            <section className="py-24 bg-slate-50 border-y border-slate-200">
+                <div className="container mx-auto px-6">
+                    <div className="max-w-4xl mx-auto text-center mb-16">
+                        <span className="text-purple-600 font-bold tracking-wider text-sm uppercase mb-4 block">The "Premium" Difference</span>
+                        <h2 className="text-3xl md:text-5xl font-serif font-bold text-slate-900 mb-6">
+                            See A Real Example
+                        </h2>
+                        <p className="text-lg text-slate-600">
+                            Interact with "Verso Builders" below. This is the caliber of design we deliver as a baseline.
+                        </p>
+                    </div>
+
+                    <div className="max-w-6xl mx-auto">
+                        <BrowserFrame url="versobuilders.com">
+                            <VersoShowcase />
+                        </BrowserFrame>
+                    </div>
+                </div>
+            </section>
+
             {/* The Foundation Section */}
             <section className="py-24 bg-white overflow-hidden">
                 <div className="container mx-auto px-6">
