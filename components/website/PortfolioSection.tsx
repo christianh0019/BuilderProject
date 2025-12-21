@@ -29,7 +29,7 @@ const projects: Project[] = [
         id: 2,
         title: "Heritage Renovations",
         category: "High-End Remodeling",
-        image: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80",
+        image: "https://images.unsplash.com/photo-1600585154526-990dced4db0d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80",
         stats: {
             speedScore: 100,
             seoRank: "#1 'Luxury Kichen Remodel Boston'",
