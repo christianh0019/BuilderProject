@@ -101,7 +101,7 @@ const BlogPost: React.FC = () => {
                             We help custom home builders build this exact marketing machine. Book your free audit today.
                         </p>
                         <Link to="/contact" className="inline-flex items-center bg-white text-slate-900 px-10 py-4 rounded-full font-bold text-lg hover:bg-purple-50 transition-all hover:scale-105">
-                            Book Your Strategy Call <ArrowRight className="ml-2" />
+                            Book Your Audit <ArrowRight className="ml-2" />
                         </Link>
                     </div>
                 </div>
