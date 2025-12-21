@@ -281,6 +281,45 @@ const Home: React.FC = () => {
         </div>
       </section>
 
+      {/* FAQ Section */}
+      <section className="py-20 md:py-32 bg-slate-50">
+        <div className="container mx-auto px-6">
+          <RevealOnScroll>
+            <h2 className="text-4xl md:text-6xl font-serif font-bold text-slate-900 text-center mb-16">Common Questions</h2>
+          </RevealOnScroll>
+
+          <div className="grid md:grid-cols-2 gap-8 md:gap-12 max-w-5xl mx-auto">
+            <RevealOnScroll delay={100}>
+              <div className="bg-white p-8 md:p-10 rounded-[2rem] shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
+                <h3 className="text-xl md:text-2xl font-serif font-bold text-slate-900 mb-4">Do you work with remodelers?</h3>
+                <p className="text-slate-600 leading-relaxed text-lg">Yes! While many agencies chase volume, we specialize in high-ticket construction. Whether you're building custom homes or doing $300k+ renovations, our systems are built for your specific sales cycle.</p>
+              </div>
+            </RevealOnScroll>
+
+            <RevealOnScroll delay={200}>
+              <div className="bg-white p-8 md:p-10 rounded-[2rem] shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
+                <h3 className="text-xl md:text-2xl font-serif font-bold text-slate-900 mb-4">How fast will I see results?</h3>
+                <p className="text-slate-600 leading-relaxed text-lg">Our "done-for-you" paid ads system typically generates qualified leads within the first 7 days of launch. The full website and brand overhaul usually takes 4-8 weeks to complete.</p>
+              </div>
+            </RevealOnScroll>
+
+            <RevealOnScroll delay={300}>
+              <div className="bg-white p-8 md:p-10 rounded-[2rem] shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
+                <h3 className="text-xl md:text-2xl font-serif font-bold text-slate-900 mb-4">Do I own the assets?</h3>
+                <p className="text-slate-600 leading-relaxed text-lg">100%. Unlike other agencies that hold your assets hostage, you own your website, your ad account, and your lead list from day one. We build it, you keep it.</p>
+              </div>
+            </RevealOnScroll>
+
+            <RevealOnScroll delay={400}>
+              <div className="bg-white p-8 md:p-10 rounded-[2rem] shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
+                <h3 className="text-xl md:text-2xl font-serif font-bold text-slate-900 mb-4">How much does it cost?</h3>
+                <p className="text-slate-600 leading-relaxed text-lg">We believe in transparency. We have three clear tiers based on your growth stage. Check out our <Link to="/programs" className="text-purple-600 font-bold hover:underline">Programs</Link> page for detailed pricing.</p>
+              </div>
+            </RevealOnScroll>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 md:py-32 bg-slate-900 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-purple-900/20 to-transparent"></div>
