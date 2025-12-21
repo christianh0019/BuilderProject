@@ -155,21 +155,21 @@ const WebsiteDesign: React.FC = () => {
                         A pretty website that no one visits is a billboard in the desert. We bake Local SEO into every line of code. From <strong>Service Area Pages</strong> that capture traffic from neighboring towns to <strong>Project Galleries</strong> that rank for "Custom Home [City Name]", we engineer your site to be found by the people ready to build.
                     </p>
 
-                    <div className="grid md:grid-cols-3 gap-6 text-left">
-                        <div className="bg-white p-6 rounded-xl shadow-sm border border-slate-100">
-                            <div className="bg-green-100 w-10 h-10 rounded-full flex items-center justify-center text-green-600 mb-4 font-bold text-sm">01</div>
-                            <h4 className="font-bold text-slate-900 mb-2">Local Dominance</h4>
-                            <p className="text-sm text-slate-600">We create dedicated pages for every city and neighborhood you build in.</p>
+                    <div className="grid md:grid-cols-3 gap-8 text-left max-w-6xl mx-auto">
+                        <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
+                            <div className="bg-green-100 w-12 h-12 rounded-full flex items-center justify-center text-green-600 mb-6 font-bold text-sm group-hover:scale-110 transition-transform">01</div>
+                            <h4 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-purple-700 transition-colors">Local Dominance</h4>
+                            <p className="text-slate-600 leading-relaxed">We create dedicated pages for every city and neighborhood you build in tailored to that specific market.</p>
                         </div>
-                        <div className="bg-white p-6 rounded-xl shadow-sm border border-slate-100">
-                            <div className="bg-green-100 w-10 h-10 rounded-full flex items-center justify-center text-green-600 mb-4 font-bold text-sm">02</div>
-                            <h4 className="font-bold text-slate-900 mb-2">Project Showcases</h4>
-                            <p className="text-sm text-slate-600">Turn your portfolio into SEO gold. Each project ranks for specific renovation types.</p>
+                        <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
+                            <div className="bg-green-100 w-12 h-12 rounded-full flex items-center justify-center text-green-600 mb-6 font-bold text-sm group-hover:scale-110 transition-transform">02</div>
+                            <h4 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-purple-700 transition-colors">Project Showcases</h4>
+                            <p className="text-slate-600 leading-relaxed">Turn your portfolio into SEO gold. Each project page ranks for specific renovation types and locations.</p>
                         </div>
-                        <div className="bg-white p-6 rounded-xl shadow-sm border border-slate-100">
-                            <div className="bg-green-100 w-10 h-10 rounded-full flex items-center justify-center text-green-600 mb-4 font-bold text-sm">03</div>
-                            <h4 className="font-bold text-slate-900 mb-2">Speed Signals</h4>
-                            <p className="text-sm text-slate-600">Core Web Vitals are now a ranking factor. Our sites ace them by default.</p>
+                        <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
+                            <div className="bg-green-100 w-12 h-12 rounded-full flex items-center justify-center text-green-600 mb-6 font-bold text-sm group-hover:scale-110 transition-transform">03</div>
+                            <h4 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-purple-700 transition-colors">Speed Signals</h4>
+                            <p className="text-slate-600 leading-relaxed">Core Web Vitals are now a ranking factor. Our sites ace them by default, giving you an unfair advantage.</p>
                         </div>
                     </div>
                 </div>
