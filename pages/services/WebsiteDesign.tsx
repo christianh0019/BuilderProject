@@ -77,20 +77,20 @@ const WebsiteDesign: React.FC = () => {
                             <div className="space-y-6">
                                 <div className="flex gap-4">
                                     <div className="w-12 h-12 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center flex-shrink-0 border border-blue-100">
-                                        <Layers size={24} />
+                                        <Zap size={24} />
                                     </div>
                                     <div>
-                                        <h3 className="font-bold text-slate-900 text-lg">React & Next.js Core</h3>
-                                        <p className="text-slate-600">We use the same technology as Netflix and Airbnb. Zero "plugin bloat", instant page loads, and unhackable security.</p>
+                                        <h3 className="font-bold text-slate-900 text-lg">Built for Speed</h3>
+                                        <p className="text-slate-600">Your site loads instantly. No spinning wheels means customers don't bounce, and you get more leads.</p>
                                     </div>
                                 </div>
                                 <div className="flex gap-4">
                                     <div className="w-12 h-12 rounded-xl bg-green-50 text-green-600 flex items-center justify-center flex-shrink-0 border border-green-100">
-                                        <Database size={24} />
+                                        <Search size={24} />
                                     </div>
                                     <div>
-                                        <h3 className="font-bold text-slate-900 text-lg">Structured Data Architecture</h3>
-                                        <p className="text-slate-600">Every project you upload is automatically tagged with Schema.org markup so Google knows exactly what you built and where.</p>
+                                        <h3 className="font-bold text-slate-900 text-lg">Google-Ready Architecture</h3>
+                                        <p className="text-slate-600">We structure your site so Google knows exactly where you build and what you do. No extra "SEO plugins" needed.</p>
                                     </div>
                                 </div>
                                 <div className="flex gap-4">
@@ -98,8 +98,8 @@ const WebsiteDesign: React.FC = () => {
                                         <Lock size={24} />
                                     </div>
                                     <div>
-                                        <h3 className="font-bold text-slate-900 text-lg">Enterprise Grade Hosting</h3>
-                                        <p className="text-slate-600">Deployed on the edge. Your site loads in under 100ms regardless of where your client is located.</p>
+                                        <h3 className="font-bold text-slate-900 text-lg">Fail-Safe Reliability</h3>
+                                        <p className="text-slate-600">Your site never goes down. Period. We use enterprise-grade hosting that handles traffic spikes without breaking a sweat.</p>
                                     </div>
                                 </div>
                             </div>
@@ -149,10 +149,10 @@ const WebsiteDesign: React.FC = () => {
 
             {/* SEO Deep Dive */}
             <section className="py-24 bg-slate-50">
-                <div className="container mx-auto px-6 max-w-4xl text-center">
+                <div className="container mx-auto px-6 max-w-6xl text-center">
                     <h2 className="text-3xl font-serif font-bold text-slate-900 mb-8">Rank on Google. Dominate Your Market.</h2>
-                    <p className="text-lg text-slate-600 mb-12 leading-relaxed">
-                        A pretty website that no one visits is a billboard in the desert. We bake Local SEO into every line of code. From <strong>Service Area Pages</strong> that capture traffic from neighboring towns to <strong>Project Galleries</strong> that rank for "Custom Home [City Name]", we engineer your site to be found.
+                    <p className="text-lg text-slate-600 mb-12 leading-relaxed max-w-4xl mx-auto">
+                        A pretty website that no one visits is a billboard in the desert. We bake Local SEO into every line of code. From <strong>Service Area Pages</strong> that capture traffic from neighboring towns to <strong>Project Galleries</strong> that rank for "Custom Home [City Name]", we engineer your site to be found by the people ready to build.
                     </p>
 
                     <div className="grid md:grid-cols-3 gap-6 text-left">

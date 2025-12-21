@@ -21,7 +21,7 @@ const projects: Project[] = [
         image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80",
         stats: {
             speedScore: 99,
-            seoRank: "#1 'Custom Builder Austin'",
+            seoRank: "#1 'Custom Home Builder Austin'",
             leadsIncrease: "+145%"
         }
     },
@@ -29,21 +29,21 @@ const projects: Project[] = [
         id: 2,
         title: "Heritage Renovations",
         category: "High-End Remodeling",
-        image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80",
+        image: "https://images.unsplash.com/photo-1556912173-3db9963f6f35?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80",
         stats: {
             speedScore: 100,
-            seoRank: "#1 'Luxury Remodel'",
+            seoRank: "#1 'Luxury Kichen Remodel Boston'",
             leadsIncrease: "+210%"
         }
     },
     {
         id: 3,
-        title: "Ironwood Barndominiums",
+        title: "Ironwood Structures",
         category: "Niche Construction",
         image: "https://images.unsplash.com/photo-1449844908441-8829872d2607?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80",
         stats: {
             speedScore: 98,
-            seoRank: "#1 'Barndominium Builder'",
+            seoRank: "#1 'Barndominium Builder Texas'",
             leadsIncrease: "+300%"
         }
     }
