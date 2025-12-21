@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Star, Layout, TrendingUp, PenTool, ArrowRight, Play, BookOpen, BarChart3, Youtube, ChevronRight } from 'lucide-react';
+import { Star, Layout, TrendingUp, PenTool, ArrowRight, Play, BookOpen, BarChart3, Youtube, ChevronRight, ChevronDown } from 'lucide-react';
 
 const RevealOnScroll = ({ children, className = "", delay = 0 }: { children: React.ReactNode, className?: string, delay?: number }) => {
   const [isVisible, setIsVisible] = useState(false);
@@ -33,7 +33,78 @@ const RevealOnScroll = ({ children, className = "", delay = 0 }: { children: Rea
   );
 };
 
+const AccordionItem = ({ question, answer, isOpen, onClick }: { question: string, answer: string, isOpen: boolean, onClick: () => void }) => {
+  return (
+    <div className="border border-slate-200 rounded-2xl bg-white overflow-hidden mb-4 transition-all duration-300 hover:shadow-md">
+      <button
+        onClick={onClick}
+        className="w-full flex items-center justify-between p-6 md:p-8 text-left focus:outline-none"
+      >
+        <h3 className="text-xl md:text-2xl font-serif font-bold text-slate-900 pr-8">{question}</h3>
+        <div className={`flex-shrink-0 w-8 h-8 rounded-full border border-slate-300 flex items-center justify-center transition-transform duration-300 ${isOpen ? 'rotate-180 bg-slate-900 border-slate-900 text-white' : 'bg-white text-slate-500'}`}>
+          <ChevronDown size={18} />
+        </div>
+      </button>
+      <div
+        className={`transition-all duration-300 ease-in-out overflow-hidden ${isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}
+      >
+        <div className="p-6 md:p-8 pt-0 text-lg text-slate-600 leading-relaxed border-t border-slate-100/50">
+          {answer}
+        </div>
+      </div>
+    </div>
+  );
+};
+
 const Home: React.FC = () => {
+  const [openIndex, setOpenIndex] = useState<number | null>(0);
+
+  const faqData = [
+    {
+      question: "Do you primarily work with Custom Home Builders?",
+      answer: "Yes. We specialize exclusively in the high-ticket construction industry. Unlike generalist agencies that juggle dentists and e-commerce stores, our entire playbook—from ad copy to website architecture—is built specifically for the long sales cycle of custom homes and large-scale remodeling."
+    },
+    {
+      question: "Will I get 'tire kicker' leads?",
+      answer: "Our system is designed to repel them. We use a 'filtering' funnel that disqualifies leads based on budget and timeline before they ever book a call with you. We focus on quality over quantity, so you only spend time on homeowners who can actually afford your services."
+    },
+    {
+      question: "Do I really own the website and assets?",
+      answer: "100%. Many agencies lease you a site and hold it hostage if you leave. We believe that's wrong. You own your domain, your website files, your ad accounts, and your lead database from Day 1. We build it, but it's your intellectual property."
+    },
+    {
+      question: "How long until I see a return on investment?",
+      answer: "It depends on the service. Our Paid Advertising system typically generates qualified appointments within the first 7-14 days. Our SEO and Website overhaul creates a long-term asset that compounds over 3-6 months. Most clients see a positive ROI on their first closed project."
+    },
+    {
+      question: "I've been burned by agencies before. How are you different?",
+      answer: "We are partners, not vendors. We share our live results transparently, we don't lock you into long-term contracts (our results keep you staying), and we actually understand construction. You won't have to explain what a 'change order' is to us."
+    }
+  ];
+
+  // Inject JSON-LD for SEO
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.text = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": faqData.map(item => ({
+        "@type": "Question",
+        "name": item.question,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": item.answer
+        }
+      }))
+    });
+    document.head.appendChild(script);
+
+    return () => {
+      document.head.removeChild(script);
+    };
+  }, []);
+
   return (
     <div className="bg-white font-sans text-slate-900 selection:bg-purple-200 selection:text-purple-900">
 
@@ -288,34 +359,17 @@ const Home: React.FC = () => {
             <h2 className="text-4xl md:text-6xl font-serif font-bold text-slate-900 text-center mb-16">Common Questions</h2>
           </RevealOnScroll>
 
-          <div className="grid md:grid-cols-2 gap-8 md:gap-12 max-w-5xl mx-auto">
-            <RevealOnScroll delay={100}>
-              <div className="bg-white p-8 md:p-10 rounded-[2rem] shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
-                <h3 className="text-xl md:text-2xl font-serif font-bold text-slate-900 mb-4">Do you work with remodelers?</h3>
-                <p className="text-slate-600 leading-relaxed text-lg">Yes! While many agencies chase volume, we specialize in high-ticket construction. Whether you're building custom homes or doing $300k+ renovations, our systems are built for your specific sales cycle.</p>
-              </div>
-            </RevealOnScroll>
-
-            <RevealOnScroll delay={200}>
-              <div className="bg-white p-8 md:p-10 rounded-[2rem] shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
-                <h3 className="text-xl md:text-2xl font-serif font-bold text-slate-900 mb-4">How fast will I see results?</h3>
-                <p className="text-slate-600 leading-relaxed text-lg">Our "done-for-you" paid ads system typically generates qualified leads within the first 7 days of launch. The full website and brand overhaul usually takes 4-8 weeks to complete.</p>
-              </div>
-            </RevealOnScroll>
-
-            <RevealOnScroll delay={300}>
-              <div className="bg-white p-8 md:p-10 rounded-[2rem] shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
-                <h3 className="text-xl md:text-2xl font-serif font-bold text-slate-900 mb-4">Do I own the assets?</h3>
-                <p className="text-slate-600 leading-relaxed text-lg">100%. Unlike other agencies that hold your assets hostage, you own your website, your ad account, and your lead list from day one. We build it, you keep it.</p>
-              </div>
-            </RevealOnScroll>
-
-            <RevealOnScroll delay={400}>
-              <div className="bg-white p-8 md:p-10 rounded-[2rem] shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
-                <h3 className="text-xl md:text-2xl font-serif font-bold text-slate-900 mb-4">How much does it cost?</h3>
-                <p className="text-slate-600 leading-relaxed text-lg">We believe in transparency. We have three clear tiers based on your growth stage. Check out our <Link to="/programs" className="text-purple-600 font-bold hover:underline">Programs</Link> page for detailed pricing.</p>
-              </div>
-            </RevealOnScroll>
+          <div className="max-w-4xl mx-auto">
+            {faqData.map((item, index) => (
+              <RevealOnScroll key={index} delay={index * 100}>
+                <AccordionItem
+                  question={item.question}
+                  answer={item.answer}
+                  isOpen={openIndex === index}
+                  onClick={() => setOpenIndex(openIndex === index ? null : index)}
+                />
+              </RevealOnScroll>
+            ))}
           </div>
         </div>
       </section>
