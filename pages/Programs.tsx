@@ -1,10 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Check, Video, Smartphone, PenTool, Globe, Zap, ArrowRight, Layout, TrendingUp, Users } from 'lucide-react';
+import SEO from '../components/SEO';
 
 const Programs: React.FC = () => {
   return (
     <div className="pt-20 font-sans text-slate-900">
+      <SEO
+        title="Pricing & Programs"
+        description="Simple, transparent pricing for custom home builders. Choose from our Website Only, Pipeline Generation, or full Partner Program tiers."
+      />
       {/* Hero */}
       <section className="bg-slate-900 text-white py-24 px-6 text-center">
         <div className="max-w-3xl mx-auto">

@@ -18,6 +18,8 @@ import ScrollToTop from './components/ScrollToTop';
 
 import BookPopup from './components/BookPopup';
 
+import { HelmetProvider } from 'react-helmet-async';
+
 // Helper component to scroll to top on route change
 const ScrollToTopHelper = () => {
   ScrollToTop();
@@ -26,31 +28,32 @@ const ScrollToTopHelper = () => {
 
 const App: React.FC = () => {
   return (
-    <Router>
-      <ScrollToTopHelper />
-      <BookPopup />
-      <div className="flex flex-col min-h-screen font-sans text-slate-900 selection:bg-purple-200 selection:text-purple-900">
-        <Navbar />
-        <main className="flex-grow">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/services" element={<Services />} />
-            <Route path="/programs" element={<Programs />} />
-            <Route path="/services/website-design" element={<WebsiteDesign />} />
-            <Route path="/services/content-marketing" element={<ContentMarketing />} />
-            <Route path="/services/paid-advertising" element={<PaidAdvertising />} />
-            <Route path="/book" element={<Book />} />
-            <Route path="/booking" element={<Booking />} />
-            <Route path="/thank-you" element={<ThankYou />} />
-            <Route path="/case-studies" element={<CaseStudies />} />
-            <Route path="/case-studies/:slug" element={<CaseStudyDetail />} />
-            <Route path="/contact" element={<Contact />} />
-          </Routes>
-        </main>
-        <Footer />
-      </div>
-    </Router>
-  );
+    <HelmetProvider>
+      <Router>
+        <ScrollToTopHelper />
+        <BookPopup />
+        <div className="flex flex-col min-h-screen font-sans text-slate-900 selection:bg-purple-200 selection:text-purple-900">
+          <Navbar />
+          <main className="flex-grow">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/services" element={<Services />} />
+              <Route path="/programs" element={<Programs />} />
+              <Route path="/services/website-design" element={<WebsiteDesign />} />
+              <Route path="/services/content-marketing" element={<ContentMarketing />} />
+              <Route path="/services/paid-advertising" element={<PaidAdvertising />} />
+              <Route path="/book" element={<Book />} />
+              <Route path="/booking" element={<Booking />} />
+              <Route path="/thank-you" element={<ThankYou />} />
+              <Route path="/case-studies" element={<CaseStudies />} />
+              <Route path="/case-studies/:slug" element={<CaseStudyDetail />} />
+              <Route path="/contact" element={<Contact />} />
+            </Routes>
+          </main>
+          <Footer />
+        </div>
+      </Router>
+      );
 };
 
-export default App;
+      export default App;
