@@ -1,30 +1,7 @@
-import React from 'react';
-import { HashRouter as Router, Routes, Route } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
-import Home from './pages/Home';
-import Services from './pages/Services';
-import Programs from './pages/Programs';
-import Book from './pages/Book';
-import Booking from './pages/Booking';
-import ThankYou from './pages/ThankYou';
-import CaseStudies from './pages/CaseStudies';
-import CaseStudyDetail from './pages/CaseStudyDetail';
-import Contact from './pages/Contact';
-import WebsiteDesign from './pages/services/WebsiteDesign';
-import ContentMarketing from './pages/services/ContentMarketing';
-import PaidAdvertising from './pages/services/PaidAdvertising';
-import ScrollToTop from './components/ScrollToTop';
+import Blog from './pages/Blog';
+import BlogPost from './pages/BlogPost';
 
-import BookPopup from './components/BookPopup';
-
-import { HelmetProvider } from 'react-helmet-async';
-
-// Helper component to scroll to top on route change
-const ScrollToTopHelper = () => {
-  ScrollToTop();
-  return null;
-};
+// ... existing imports
 
 const App: React.FC = () => {
   return (
@@ -39,8 +16,11 @@ const App: React.FC = () => {
               <Route path="/" element={<Home />} />
               <Route path="/services" element={<Services />} />
               <Route path="/programs" element={<Programs />} />
+              <Route path="/blog" element={<Blog />} />
+              <Route path="/blog/:slug" element={<BlogPost />} />
               <Route path="/services/website-design" element={<WebsiteDesign />} />
               <Route path="/services/content-marketing" element={<ContentMarketing />} />
+// ... rest of routes
               <Route path="/services/paid-advertising" element={<PaidAdvertising />} />
               <Route path="/book" element={<Book />} />
               <Route path="/booking" element={<Booking />} />

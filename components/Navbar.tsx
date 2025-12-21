@@ -70,6 +70,7 @@ const Navbar: React.FC = () => {
           </div>
 
           <Link to="/case-studies" className="text-slate-700 hover:text-purple-700 font-medium transition-colors">Case Studies</Link>
+          <Link to="/blog" className="text-slate-700 hover:text-purple-700 font-medium transition-colors">Insights</Link>
 
           {/* Dropdown */}
           <div className="relative group">
