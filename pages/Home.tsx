@@ -321,7 +321,7 @@ const Home: React.FC = () => {
 
             {/* 2. Pricing/Programs */}
             <RevealOnScroll delay={200}>
-              <Link to="/programs" className="group relative rounded-[2rem] md:rounded-[3rem] overflow-hidden aspect-[4/5] md:aspect-auto md:h-[500px] bg-slate-50 border border-slate-200 shadow-xl hover:shadow-2xl hover:border-purple-200 hover:-translate-y-2 transition-all duration-500 flex flex-col justify-between p-8 md:p-12 w-full block">
+              <Link to="/services" className="group relative rounded-[2rem] md:rounded-[3rem] overflow-hidden aspect-[4/5] md:aspect-auto md:h-[500px] bg-slate-50 border border-slate-200 shadow-xl hover:shadow-2xl hover:border-purple-200 hover:-translate-y-2 transition-all duration-500 flex flex-col justify-between p-8 md:p-12 w-full block">
                 <div className="absolute top-0 right-0 w-80 h-80 bg-purple-100 rounded-full blur-[80px] -translate-y-1/2 translate-x-1/3 group-hover:bg-purple-200 transition-colors"></div>
                 <div className="relative z-10">
                   <div className="w-14 h-14 md:w-16 md:h-16 bg-white rounded-2xl flex items-center justify-center shadow-md mb-6 md:mb-8 group-hover:scale-110 transition-transform">
@@ -331,22 +331,25 @@ const Home: React.FC = () => {
                   <p className="text-slate-600 text-lg md:text-xl max-w-sm">No hidden fees. Choose the growth tier that fits your business stage.</p>
                 </div>
                 <div className="relative z-10 flex items-center font-bold text-slate-900 text-lg md:text-xl group-hover:text-purple-600 transition-colors">
-                  View Programs <ArrowRight size={24} className="ml-3 group-hover:translate-x-2 transition-transform" />
+                  View Services <ArrowRight size={24} className="ml-3 group-hover:translate-x-2 transition-transform" />
                 </div>
               </Link>
             </RevealOnScroll>
 
             {/* 3. YouTube */}
             <RevealOnScroll delay={300}>
-              <a href="https://youtube.com/@builderproject" target="_blank" rel="noopener noreferrer" className="group relative rounded-[2rem] md:rounded-[3rem] overflow-hidden aspect-[4/5] md:aspect-auto md:h-[500px] bg-[#FF0000] border border-red-600 shadow-xl hover:shadow-2xl hover:shadow-red-900/20 hover:-translate-y-2 transition-all duration-500 flex items-center justify-center w-full block">
+              <a href="https://youtube.com/@builderproject" target="_blank" rel="noopener noreferrer" className="group relative rounded-[2rem] md:rounded-[3rem] overflow-hidden aspect-[4/5] md:aspect-auto md:h-[500px] bg-[#FF0000] border border-red-600 shadow-xl hover:shadow-2xl hover:shadow-red-900/20 hover:-translate-y-2 transition-all duration-500 flex flex-col justify-between p-8 md:p-12 w-full block">
                 <div className="absolute inset-0 bg-gradient-to-br from-black/20 to-transparent"></div>
                 <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
-                <div className="text-center relative z-10 text-white p-6">
-                  <div className="w-20 h-20 md:w-24 md:h-24 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center mx-auto mb-6 md:mb-8 group-hover:scale-110 transition-transform duration-300">
-                    <Youtube size={40} md:size={48} fill="currentColor" />
+                <div className="relative z-10">
+                  <div className="w-14 h-14 md:w-16 md:h-16 bg-white rounded-2xl flex items-center justify-center shadow-md mb-6 md:mb-8 group-hover:scale-110 transition-transform">
+                    <Youtube size={32} className="text-[#FF0000]" fill="currentColor" />
                   </div>
-                  <h3 className="text-3xl md:text-5xl font-serif font-bold mb-4">Watch The Strategy</h3>
+                  <h3 className="text-3xl md:text-5xl font-serif font-bold text-white mb-4">Watch The Strategy</h3>
                   <p className="text-white/90 text-lg md:text-xl font-medium">Deep dives on our YouTube channel.</p>
+                </div>
+                <div className="relative z-10 flex items-center font-bold text-white text-lg md:text-xl group-hover:text-slate-100 transition-colors">
+                  Watch Now <ArrowRight size={24} className="ml-3 group-hover:translate-x-2 transition-transform" />
                 </div>
               </a>
             </RevealOnScroll>
