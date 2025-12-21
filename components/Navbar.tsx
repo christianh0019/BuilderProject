@@ -143,6 +143,7 @@ const Navbar: React.FC = () => {
           </div>
 
           <Link to="/case-studies" className="text-slate-900 font-semibold border-b border-slate-100 pb-4">Case Studies</Link>
+          <Link to="/blog" className="text-slate-900 font-semibold border-b border-slate-100 pb-4">Insights</Link>
 
           <div>
             <button
