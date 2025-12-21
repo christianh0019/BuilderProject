@@ -112,5 +112,46 @@ export const blogPosts: BlogPost[] = [
         <a href="/contact" class="inline-block bg-white text-slate-900 font-bold px-8 py-3 rounded-full hover:bg-purple-50 transition-colors">Book Your Audit</a>
       </div>
     `
+  },
+  {
+    id: '3',
+    slug: 'best-lead-magnets-custom-home-builders',
+    title: 'The Best Lead Magnets For Custom Home Builders',
+    date: 'December 21, 2025',
+    readTime: '7 min read',
+    thumbnail: 'https://img.youtube.com/vi/e9lC4J0z2o8/maxresdefault.jpg',
+    youtubeUrl: 'https://www.youtube.com/watch?v=e9lC4J0z2o8',
+    excerpt: 'Most builders ask for marriage on the first date. Asking for a "Consultation" too early kills conversions. Here is the lead magnet strategy that lowers lead costs by 70%.',
+    content: `
+      <p class="mb-6">What if I told you that the single biggest reason your website and Facebook ads aren't generating a flood of qualified leads comes down to one simple mistake? Most custom home builders ask for way too much, way too soon. You're asking prospects to "Book a Consultation" or "Schedule a Call" before you've given them any real value.</p>
+      <p class="mb-6">Think about it like this. You wouldn't walk up to a complete stranger and ask them to marry you. Of course not. You'd start with a conversation. Yet, online, most builders are asking for marriage on the first date.</p>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4 font-serif">What is a Lead Magnet?</h2>
+      <p class="mb-6">A lead magnet is simply a valuable piece of information that you offer to your potential clients for free in exchange for their contact information. Instead of asking for a high-commitment consultation, you're offering a low-commitment piece of value. It's the marketing equivalent of asking for their number instead of asking for marriage.</p>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4 font-serif">Why this works for Custom Builders</h2>
+      <p class="mb-6">The journey to building a custom home is long and filled with fear. When you provide a helpful resource—like a guide, checklist, or calculator—you're doing three incredibly important things:</p>
+      <ul class="list-disc pl-6 mb-6 space-y-2 text-slate-700">
+        <li><strong>Position yourself as the expert:</strong> You're no longer just asking for a sale; you're the trusted advisor providing help.</li>
+        <li><strong>Build a list of future clients:</strong> The person who downloads your budget guide today might not build for 18 months, but now you can nurture them.</li>
+        <li><strong>Lower lead costs:</strong> Far more people will download a guide than book a sales call, filling your pipeline at a fraction of the cost.</li>
+      </ul>
+
+      <div class="bg-purple-50 border-l-4 border-purple-500 p-6 my-8 rounded-r-lg">
+        <p class="font-medium text-purple-900 italic">"If you're a custom home builder running Facebook ads or driving traffic to your website and you're not using lead magnets, you're literally flushing money down the drain."</p>
+      </div>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4 font-serif">Stop Using Generic Newsletter Signups</h2>
+      <p class="mb-6">A generic "Sign up for our newsletter" button isn't going to cut it. You need to offer something so valuable that they can't resist. Solve a specific problem. Answer a burning question. That is how you turn a website visitor into a lead.</p>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4 font-serif">The Offer</h2>
+      <p class="mb-6">Creating and implementing these lead magnets is just one piece of the puzzle. To truly dominate your market, you need a complete marketing system. As a thank you for reading, I want to offer you a completely free, one-on-one marketing audit.</p>
+
+      <div class="bg-slate-900 text-white p-8 rounded-2xl my-10 text-center">
+        <h3 class="text-2xl font-bold mb-4 font-serif">Free Marketing Audit</h3>
+        <p class="text-slate-300 mb-6">We will audit your current marketing systems—or lack thereof—and show you hidden opportunities. No strings attached.</p>
+        <a href="/contact" class="inline-block bg-white text-slate-900 font-bold px-8 py-3 rounded-full hover:bg-purple-50 transition-colors">Book Your Audit</a>
+      </div>
+    `
   }
 ];
