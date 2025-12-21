@@ -15,6 +15,8 @@ import ContentMarketing from './pages/services/ContentMarketing';
 import PaidAdvertising from './pages/services/PaidAdvertising';
 import ScrollToTop from './components/ScrollToTop';
 
+import BookPopup from './components/BookPopup';
+
 // Helper component to scroll to top on route change
 const ScrollToTopHelper = () => {
   ScrollToTop();
@@ -25,6 +27,7 @@ const App: React.FC = () => {
   return (
     <Router>
       <ScrollToTopHelper />
+      <BookPopup />
       <div className="flex flex-col min-h-screen font-sans text-slate-900 selection:bg-purple-200 selection:text-purple-900">
         <Navbar />
         <main className="flex-grow">

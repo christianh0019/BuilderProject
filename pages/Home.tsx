@@ -158,6 +158,27 @@ const Home: React.FC = () => {
                   See Our Work
                 </Link>
               </div>
+
+              <div className="mt-10 flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 text-sm md:text-base font-medium text-slate-600">
+                <div className="flex items-center gap-2">
+                  <div className="bg-green-100 text-green-700 rounded-full p-1">
+                    <ChevronDown size={14} className="stroke-[4]" />
+                  </div>
+                  <span>Guaranteed Or We Work For Free</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div className="bg-green-100 text-green-700 rounded-full p-1">
+                    <ChevronDown size={14} className="stroke-[4]" />
+                  </div>
+                  <span>30-Day Money Back Guarantee</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div className="bg-green-100 text-green-700 rounded-full p-1">
+                    <ChevronDown size={14} className="stroke-[4]" />
+                  </div>
+                  <span>You Own Every Asset</span>
+                </div>
+              </div>
             </RevealOnScroll>
           </div>
         </div>
