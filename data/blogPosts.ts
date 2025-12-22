@@ -153,7 +153,7 @@ export const blogPosts: BlogPost[] = [
         <a href="/contact" class="inline-block bg-white text-slate-900 font-bold px-8 py-3 rounded-full hover:bg-purple-50 transition-colors">Book Your Audit</a>
       </div>
     `
-  }
+  },
   {
     id: '4',
     slug: 'home-builder-sales-reps-lose-1-million-per-year-prevent-it',
