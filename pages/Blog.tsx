@@ -31,55 +31,57 @@ const Blog: React.FC = () => {
 
                 {/* Blog Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-                    {blogPosts.map((post) => (
-                        <Link
-                            key={post.id}
-                            to={`/blog/${post.slug}`}
-                            className="group flex flex-col items-start"
-                        >
-                            {/* Thumbnail Container */}
-                            <div className="w-full aspect-video rounded-2xl overflow-hidden mb-6 relative shadow-lg group-hover:shadow-2xl transition-all duration-300 group-hover:-translate-y-2">
-                                <img
-                                    src={post.thumbnail}
-                                    alt={post.title}
-                                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                                />
-                                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors"></div>
+                    {[...blogPosts]
+                        .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+                        .map((post) => (
+                            <Link
+                                key={post.id}
+                                to={`/blog/${post.slug}`}
+                                className="group flex flex-col items-start"
+                            >
+                                {/* Thumbnail Container */}
+                                <div className="w-full aspect-video rounded-2xl overflow-hidden mb-6 relative shadow-lg group-hover:shadow-2xl transition-all duration-300 group-hover:-translate-y-2">
+                                    <img
+                                        src={post.thumbnail}
+                                        alt={post.title}
+                                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                    />
+                                    <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors"></div>
 
-                                {/* Play Button Overlay */}
-                                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                    <div className="w-16 h-16 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center border border-white/40">
-                                        <Play fill="white" className="text-white ml-1" size={32} />
+                                    {/* Play Button Overlay */}
+                                    <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                        <div className="w-16 h-16 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center border border-white/40">
+                                            <Play fill="white" className="text-white ml-1" size={32} />
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
 
-                            {/* Meta */}
-                            <div className="flex items-center gap-4 text-sm text-slate-500 mb-4 font-medium uppercase tracking-wide">
-                                <div className="flex items-center gap-1">
-                                    <Calendar size={14} />
-                                    {post.date}
+                                {/* Meta */}
+                                <div className="flex items-center gap-4 text-sm text-slate-500 mb-4 font-medium uppercase tracking-wide">
+                                    <div className="flex items-center gap-1">
+                                        <Calendar size={14} />
+                                        {post.date}
+                                    </div>
+                                    <div className="w-1 h-1 bg-slate-300 rounded-full"></div>
+                                    <div className="flex items-center gap-1">
+                                        <Clock size={14} />
+                                        {post.readTime}
+                                    </div>
                                 </div>
-                                <div className="w-1 h-1 bg-slate-300 rounded-full"></div>
-                                <div className="flex items-center gap-1">
-                                    <Clock size={14} />
-                                    {post.readTime}
-                                </div>
-                            </div>
 
-                            {/* Content */}
-                            <h3 className="text-2xl font-serif font-bold text-slate-900 mb-3 leading-tight group-hover:text-purple-700 transition-colors">
-                                {post.title}
-                            </h3>
-                            <p className="text-slate-600 mb-6 line-clamp-3 leading-relaxed">
-                                {post.excerpt}
-                            </p>
+                                {/* Content */}
+                                <h3 className="text-2xl font-serif font-bold text-slate-900 mb-3 leading-tight group-hover:text-purple-700 transition-colors">
+                                    {post.title}
+                                </h3>
+                                <p className="text-slate-600 mb-6 line-clamp-3 leading-relaxed">
+                                    {post.excerpt}
+                                </p>
 
-                            <span className="mt-auto inline-flex items-center font-bold text-purple-700 group-hover:gap-2 transition-all">
-                                Read Article <ArrowRight size={20} className="ml-2" />
-                            </span>
-                        </Link>
-                    ))}
+                                <span className="mt-auto inline-flex items-center font-bold text-purple-700 group-hover:gap-2 transition-all">
+                                    Read Article <ArrowRight size={20} className="ml-2" />
+                                </span>
+                            </Link>
+                        ))}
                 </div>
             </div>
         </div>
