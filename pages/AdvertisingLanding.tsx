@@ -42,6 +42,73 @@ const AdvertisingLanding: React.FC = () => {
                             <SurveyForm />
                         </div>
 
+                        {/* Persuasion / Value Section */}
+                        <div className="mb-24 animate-fadeIn">
+                            <div className="text-center mb-16">
+                                <h2 className="text-3xl md:text-4xl font-serif font-bold text-slate-900 mb-6">
+                                    Stop Gambling With Your Business
+                                </h2>
+                                <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+                                    Most builders rely on "Hope Marketing"—waiting for referrals and praying for good weather. <br className="hidden md:block" />
+                                    To scale, you need a machine that produces results on demand.
+                                </p>
+                            </div>
+
+                            <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                                {/* The Old Way */}
+                                <div className="bg-red-50 p-8 rounded-3xl border border-red-100 relative overflow-hidden">
+                                    <div className="absolute top-0 left-0 w-full h-1 bg-red-200"></div>
+                                    <div className="flex items-center gap-3 mb-6">
+                                        <div className="w-10 h-10 rounded-full bg-red-100 text-red-600 flex items-center justify-center font-bold">
+                                            <span className="text-xl">X</span>
+                                        </div>
+                                        <h3 className="text-xl font-bold text-slate-900">The "Old Way"</h3>
+                                    </div>
+                                    <ul className="space-y-4">
+                                        <li className="flex items-start gap-3">
+                                            <span className="text-red-500 mt-1">✕</span>
+                                            <span className="text-slate-700"><strong>Unpredictable Referrals:</strong> Feasts in the summer, famines in the winter. No control over your own growth.</span>
+                                        </li>
+                                        <li className="flex items-start gap-3">
+                                            <span className="text-red-500 mt-1">✕</span>
+                                            <span className="text-slate-700"><strong>Shared Lead Lists:</strong> Fighting 5 other builders for the same "tire-kicker" who just wants the cheapest price.</span>
+                                        </li>
+                                        <li className="flex items-start gap-3">
+                                            <span className="text-red-500 mt-1">✕</span>
+                                            <span className="text-slate-700"><strong>Time Wasting:</strong> Driving across town for "free estimates" with people who can't afford you.</span>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                {/* The BuilderProject Way */}
+                                <div className="bg-white p-8 rounded-3xl border-2 border-purple-600 shadow-xl relative overflow-hidden transform md:-translate-y-4">
+                                    <div className="absolute top-0 right-0 bg-purple-600 text-white text-xs font-bold px-3 py-1 rounded-bl-lg">
+                                        PREFERRED
+                                    </div>
+                                    <div className="flex items-center gap-3 mb-6">
+                                        <div className="w-10 h-10 rounded-full bg-purple-100 text-purple-600 flex items-center justify-center font-bold">
+                                            <CheckCircle2 size={24} />
+                                        </div>
+                                        <h3 className="text-xl font-bold text-slate-900">The "New Model"</h3>
+                                    </div>
+                                    <ul className="space-y-4">
+                                        <li className="flex items-start gap-3">
+                                            <span className="text-green-500 mt-1">✓</span>
+                                            <span className="text-slate-700"><strong>Exclusive Opportunities:</strong> Homeowners who see YOUR brand and want YOUR specific style. No competition.</span>
+                                        </li>
+                                        <li className="flex items-start gap-3">
+                                            <span className="text-green-500 mt-1">✓</span>
+                                            <span className="text-slate-700"><strong>Pre-Qualified System:</strong> We filter for budget, land, and timeline before they ever hit your calendar.</span>
+                                        </li>
+                                        <li className="flex items-start gap-3">
+                                            <span className="text-green-500 mt-1">✓</span>
+                                            <span className="text-slate-700"><strong>Predictable Pipeline:</strong> Know exactly how many projects you'll start next quarter. Guaranteed results.</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
                         {/* Testimonials Section */}
                         <div className="border-t border-slate-200 pt-16">
                             <div className="text-center mb-12">
