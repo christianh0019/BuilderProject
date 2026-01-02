@@ -43,68 +43,135 @@ const AdvertisingLanding: React.FC = () => {
                         </div>
 
                         {/* Persuasion / Value Section */}
-                        <div className="mb-24 animate-fadeIn">
-                            <div className="text-center mb-16">
-                                <h2 className="text-3xl md:text-4xl font-serif font-bold text-slate-900 mb-6">
-                                    Stop Gambling With Your Business
+                        {/* Expanded Persuasion Section */}
+                        <div className="mb-24 animate-fadeIn space-y-24">
+                            {/* Problem Agitation */}
+                            <div className="prose prose-lg prose-slate mx-auto text-slate-600">
+                                <h2 className="text-3xl md:text-4xl font-serif font-bold text-slate-900 mb-8 text-center leading-tight">
+                                    If You're Like 95% of the Builders We Work With, <br className="hidden md:block" />
+                                    Here's What's Probably Happening Right Now
                                 </h2>
-                                <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-                                    Most builders rely on "Hope Marketing"—waiting for referrals and praying for good weather. <br className="hidden md:block" />
-                                    To scale, you need a machine that produces results on demand.
+                                <p>
+                                    You've built your business on referrals. And for years, that worked great. Word-of-mouth kept your pipeline full. Your reputation did the selling for you.
+                                </p>
+                                <p className="font-bold text-slate-800">
+                                    But something changed in the last few years.
+                                </p>
+                                <p>
+                                    Your revenue either hit a wall or it's actually going backwards. The phone isn't ringing like it used to. The referrals are slowing down. And you're sitting there wondering what the hell happened.
+                                </p>
+                                <p>
+                                    Here's what happened: COVID changed everything. In 2020, the world moved online and never came back. The average person now spends 7 hours a day on their phone. When someone wants to build a house, they don't ask their neighbor for a referral anymore - they open Instagram and Google and start searching.
+                                </p>
+                                <p className="italic">
+                                    And if you're not there, you're invisible.
+                                </p>
+                                <p>
+                                    You probably already know this. That's either why you're here right now, or you've already tried to fix it and got burned.
+                                </p>
+                                <ul className="list-disc pl-6 space-y-2">
+                                    <li>Maybe you hired an agency to run some Facebook ads. They charged you 5 grand a month, showed you some fancy dashboards with "impressions" and "reach," but you never got a single qualified lead.</li>
+                                    <li>Or maybe you paid 10,000 dollars for a new website. It looks pretty, but the only form submissions you get are subcontractors begging for work.</li>
+                                    <li>Or worse - you actually got leads, but they were all price shoppers who can't afford you. Or they're so early in the process that you spend 6 months doing free consulting, sending them concepts and ballpark numbers, and then they ghost you or say "we decided to wait."</li>
+                                </ul>
+                                <p>
+                                    Meanwhile, your competitor down the street is booked out for 2 years.
+                                </p>
+                                <p className="font-bold text-slate-900">
+                                    And you're thinking, "What the fuck do I do?"
                                 </p>
                             </div>
 
-                            <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-                                {/* The Old Way */}
-                                <div className="bg-red-50 p-8 rounded-3xl border border-red-100 relative overflow-hidden">
-                                    <div className="absolute top-0 left-0 w-full h-1 bg-red-200"></div>
-                                    <div className="flex items-center gap-3 mb-6">
-                                        <div className="w-10 h-10 rounded-full bg-red-100 text-red-600 flex items-center justify-center font-bold">
-                                            <span className="text-xl">X</span>
+                            {/* The Truth */}
+                            <div className="bg-slate-900 text-white p-8 md:p-12 rounded-3xl text-center shadow-2xl relative overflow-hidden">
+                                <div className="relative z-10 max-w-3xl mx-auto">
+                                    <h2 className="text-3xl md:text-4xl font-serif font-bold mb-8">
+                                        Here's The Truth: <span className="text-purple-400">Your Work Isn't The Problem</span>
+                                    </h2>
+                                    <p className="text-lg text-slate-300 mb-8 leading-relaxed">
+                                        You're a great builder. Your projects look incredible. Your clients love the final product.
+                                        The problem is two things:
+                                    </p>
+                                    <div className="grid md:grid-cols-2 gap-8 text-left mb-8">
+                                        <div className="bg-white/10 p-6 rounded-2xl backdrop-blur-sm border border-white/10">
+                                            <span className="text-3xl font-bold text-purple-400 block mb-2">1.</span>
+                                            <h3 className="text-xl font-bold mb-2">People can't find you</h3>
+                                            <p className="text-slate-400 text-sm">When someone searches "custom home builder near me", you're not showing up. Your competitor is.</p>
                                         </div>
-                                        <h3 className="text-xl font-bold text-slate-900">The "Old Way"</h3>
+                                        <div className="bg-white/10 p-6 rounded-2xl backdrop-blur-sm border border-white/10">
+                                            <span className="text-3xl font-bold text-purple-400 block mb-2">2.</span>
+                                            <h3 className="text-xl font-bold mb-2">You're not connecting</h3>
+                                            <p className="text-slate-400 text-sm">When they do find you, there's nothing that builds trust. Your site looks dated. Your Instagram is a ghost town.</p>
+                                        </div>
                                     </div>
-                                    <ul className="space-y-4">
-                                        <li className="flex items-start gap-3">
-                                            <span className="text-red-500 mt-1">✕</span>
-                                            <span className="text-slate-700"><strong>Unpredictable Referrals:</strong> Feasts in the summer, famines in the winter. No control over your own growth.</span>
-                                        </li>
-                                        <li className="flex items-start gap-3">
-                                            <span className="text-red-500 mt-1">✕</span>
-                                            <span className="text-slate-700"><strong>Shared Lead Lists:</strong> Fighting 5 other builders for the same "tire-kicker" who just wants the cheapest price.</span>
-                                        </li>
-                                        <li className="flex items-start gap-3">
-                                            <span className="text-red-500 mt-1">✕</span>
-                                            <span className="text-slate-700"><strong>Time Wasting:</strong> Driving across town for "free estimates" with people who can't afford you.</span>
-                                        </li>
-                                    </ul>
+                                    <p className="text-slate-300">
+                                        So they keep searching. And they find someone else.
+                                    </p>
+                                </div>
+                                {/* Background decoration */}
+                                <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
+                                    <div className="absolute -top-24 -left-24 w-64 h-64 bg-purple-500 rounded-full blur-3xl"></div>
+                                    <div className="absolute -bottom-24 -right-24 w-64 h-64 bg-pink-500 rounded-full blur-3xl"></div>
+                                </div>
+                            </div>
+
+                            {/* The Solution / System */}
+                            <div>
+                                <div className="text-center mb-16">
+                                    <span className="text-purple-600 font-bold tracking-wider text-sm uppercase mb-3 block">The Solution</span>
+                                    <h2 className="text-3xl md:text-4xl font-serif font-bold text-slate-900 mb-6">
+                                        Here's How We Fix It
+                                    </h2>
+                                    <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+                                        We build you a complete system that puts you in front of qualified buyers and actually converts them into signed contracts.
+                                    </p>
                                 </div>
 
-                                {/* The BuilderProject Way */}
-                                <div className="bg-white p-8 rounded-3xl border-2 border-purple-600 shadow-xl relative overflow-hidden transform md:-translate-y-4">
-                                    <div className="absolute top-0 right-0 bg-purple-600 text-white text-xs font-bold px-3 py-1 rounded-bl-lg">
-                                        PREFERRED
-                                    </div>
-                                    <div className="flex items-center gap-3 mb-6">
-                                        <div className="w-10 h-10 rounded-full bg-purple-100 text-purple-600 flex items-center justify-center font-bold">
-                                            <CheckCircle2 size={24} />
+                                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                                    {[
+                                        {
+                                            title: "A Website That Works",
+                                            desc: "Not just pretty. It ranks on Google, explains your process, and converts visitors into leads. No more subcontractor spam."
+                                        },
+                                        {
+                                            title: "Fix Your Online Presence",
+                                            desc: "We optimize your Google Profile, Instagram, and Facebook. You look like the established, premium builder you are."
+                                        },
+                                        {
+                                            title: "Targeted Ads",
+                                            desc: "We put your work in front of homeowners with the budget to build. Targeted campaigns, not generic 'we build houses' ads."
+                                        },
+                                        {
+                                            title: "Educational Content",
+                                            desc: "We produce content that answers questions and builds trust before they ever call you. No more 6 months of free consulting."
+                                        },
+                                        {
+                                            title: "CRM & Follow-Up",
+                                            desc: "We implement a system that captures every lead and nurtures them automatically. Nothing falls through the cracks."
+                                        },
+                                        {
+                                            title: "Proven Pricing",
+                                            desc: "Implement paid concept agreements and preconstruction packages. Get paid for your time and filter out tire kickers early."
+                                        }
+                                    ].map((feature, i) => (
+                                        <div key={i} className="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-all group">
+                                            <div className="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center text-purple-600 mb-4 group-hover:scale-110 transition-transform">
+                                                <CheckCircle2 size={20} />
+                                            </div>
+                                            <h3 className="font-bold text-slate-900 text-lg mb-3">{feature.title}</h3>
+                                            <p className="text-slate-600 text-sm leading-relaxed">{feature.desc}</p>
                                         </div>
-                                        <h3 className="text-xl font-bold text-slate-900">The "New Model"</h3>
-                                    </div>
-                                    <ul className="space-y-4">
-                                        <li className="flex items-start gap-3">
-                                            <span className="text-green-500 mt-1">✓</span>
-                                            <span className="text-slate-700"><strong>Exclusive Opportunities:</strong> Homeowners who see YOUR brand and want YOUR specific style. No competition.</span>
-                                        </li>
-                                        <li className="flex items-start gap-3">
-                                            <span className="text-green-500 mt-1">✓</span>
-                                            <span className="text-slate-700"><strong>Pre-Qualified System:</strong> We filter for budget, land, and timeline before they ever hit your calendar.</span>
-                                        </li>
-                                        <li className="flex items-start gap-3">
-                                            <span className="text-green-500 mt-1">✓</span>
-                                            <span className="text-slate-700"><strong>Predictable Pipeline:</strong> Know exactly how many projects you'll start next quarter. Guaranteed results.</span>
-                                        </li>
-                                    </ul>
+                                    ))}
+                                </div>
+
+                                <div className="mt-16 text-center bg-purple-50 rounded-3xl p-8 md:p-12 border border-purple-100">
+                                    <h3 className="text-2xl font-serif font-bold text-slate-900 mb-4">The Result?</h3>
+                                    <p className="text-lg text-slate-700 max-w-3xl mx-auto mb-6">
+                                        You go from hoping your phone rings to controlling a predictable pipeline of qualified prospects who are ready to build, understand your value, and can actually afford you.
+                                    </p>
+                                    <p className="font-bold text-purple-700 text-xl">
+                                        That's how you scale from 5 million to 15 million.
+                                    </p>
                                 </div>
                             </div>
                         </div>
