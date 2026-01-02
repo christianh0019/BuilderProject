@@ -70,7 +70,7 @@ export const caseStudies: CaseStudy[] = [
             { label: 'Ad Spend', value: '$7k' },
             { label: 'Top Project', value: '$1.5M' }
         ],
-        imageUrl: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80',
+        imageUrl: '/images/open-prairie-poster.jpg',
         videoUrl: 'https://storage.googleapis.com/msgsndr/HllUVzV8V6VFH4nUuq4W/media/686e860d9334981695b5ec1d.mp4',
         content: {
             overview: "Dan, the founder of Open Prairie Custom Homes in North Texas, isn’t new to high-end home building. He’s built stunning, estate-level custom homes for years — but he was stuck relying on referrals. He knew there were more $1M+ clients out there, he just didn’t have a predictable system to reach them.",
@@ -107,7 +107,7 @@ export const caseStudies: CaseStudy[] = [
             { label: 'Ad Spend', value: '$6k' },
             { label: 'ROI', value: '113x' }
         ],
-        imageUrl: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80',
+        imageUrl: '/images/schwanz-poster.jpg',
         videoUrl: 'https://storage.googleapis.com/msgsndr/HllUVzV8V6VFH4nUuq4W/media/6866c7145143a2f20901e957.mp4',
         content: {
             overview: "For years, Schwanz Custom Homes was booked out 12-18 months in advance with word-of-mouth alone. But as leads slowed, they had open calendar space for the first time. They reached out to BuilderProject not to grow fast, but to get back to normal.",
