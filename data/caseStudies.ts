@@ -37,7 +37,7 @@ export const caseStudies: CaseStudy[] = [
             { label: 'Ad Spend', value: '$8k' },
             { label: 'Homes Closed', value: '2' }
         ],
-        imageUrl: 'https://images.unsplash.com/photo-1613545325278-f24b0cae1224?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80',
+        imageUrl: '/images/homestead-poster.jpg',
         videoUrl: 'https://storage.googleapis.com/msgsndr/HllUVzV8V6VFH4nUuq4W/media/68a889645f2e6e7e3e8ad82a.mp4',
         content: {
             overview: "Herm runs Homestead Home Builders in Denver. When we first spoke, he was honest: he’d been burned before. Big fees, noisy dashboards, and “leads” that never showed up. Referrals kept the lights on, but they also kept him guessing. He didn’t want another pitch—he wanted steady, qualified conversations he could see on his calendar and trace back to a clear system.",
