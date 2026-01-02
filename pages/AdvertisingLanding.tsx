@@ -416,9 +416,34 @@ That's the difference. We're not figuring this out as we go. We already know exa
                 </div>
             </div>
 
-            {/* Simple Footer */}
-            <footer className="py-6 text-center text-slate-400 text-sm">
-                &copy; {new Date().getFullYear()} BuilderProject Agency. All rights reserved.
+            {/* Legal Footer */}
+            <footer className="py-12 bg-slate-50 border-t border-slate-200">
+                <div className="container mx-auto px-6">
+                    <div className="max-w-4xl mx-auto text-xs text-slate-400 space-y-4 text-center leading-relaxed">
+                        <p>Copyright © {new Date().getFullYear()} BuildSurge Collectives LLC All rights reserved.</p>
+                        <p>
+                            This website is operated and maintained by BuildSurge Collectives LLC DBA BuilderProject. Use of the website is governed by its Terms Of Service and Privacy Policy.
+                        </p>
+                        <p>
+                            BuildSurge Collectives LLC DBA BuilderProject is a sales and marketing education and training company. We do not sell a business opportunity, "get rich quick" program or money-making system. We believe, with education, individuals can be better prepared to make investment decisions, but we do not guarantee success in our training. We do not make earnings claims, efforts claims, or claims that our training will make you any money. All material is intellectual property and protected by copyright. Any duplication, reproduction, or distribution is strictly prohibited. Please see our Full Disclosure for important details.
+                        </p>
+                        <p>
+                            Investing of any kind carries risk and it is possible to lose some or all of your money. The training provided is general in nature, and some strategies may not be appropriate for all individuals or all situations. We make no representation regarding the likelihood or probability that any actual or hypothetical investment will achieve a particular outcome or perform in any predictable manner.
+                        </p>
+                        <p>
+                            Statements and depictions are the opinions, findings, or experiences of individuals who generally have purchased education and training. Results vary, are not typical, and rely on individual effort, time, and skill, as well as unknown conditions and other factors. We do not measure earnings or financial performance. Instead, we track completed transactions and satisfaction of services by voluntary surveys. You should not, however, equate reported sales transactions with financially successful transactions. Further, many customers do not continue with the program, do not apply what they learn, or do attempt to apply what they learn but nonetheless have difficulty in making sales successful for them.
+                        </p>
+                        <p>
+                            The Company may link to content or refer to content and/or services created by or provided by third parties that are not affiliated with the Company. The Company is not responsible for such content and does not endorse or approve it. The Company may provide services by or refer you to third-party businesses. Some of these businesses have common interest and ownership with the Company.
+                        </p>
+                        <p>
+                            This site is not a part of the YouTube, Bing Google or Facebook website; Google Inc, Microsoft INC or Meta Inc. Additionally, This site is NOT endorsed by YouTube, Google, Bing or Facebook in any way. FACEBOOK is a trademark of FACEBOOK, Inc. YOUTUBE is a trademark of GOOGLE Inc. BING is a trademark of MICROSOFT Inc.
+                        </p>
+                        <p className="pt-4 font-bold">
+                            BuildSurge Collectives LLC DBA BuilderProject, 50 Brattleboro Dr Greensburg Pa 15601
+                        </p>
+                    </div>
+                </div>
             </footer>
         </div>
     );
