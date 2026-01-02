@@ -1,5 +1,5 @@
 import React from 'react';
-import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, Outlet } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
@@ -19,6 +19,7 @@ import BookPopup from './components/BookPopup';
 import { HelmetProvider } from 'react-helmet-async';
 import Blog from './pages/Blog';
 import BlogPost from './pages/BlogPost';
+import AdvertisingLanding from './pages/AdvertisingLanding';
 
 // Helper component to scroll to top on route change
 const ScrollToTopHelper = () => {
@@ -26,34 +27,46 @@ const ScrollToTopHelper = () => {
   return null;
 };
 
+const MainLayout = () => {
+  return (
+    <div className="flex flex-col min-h-screen font-sans text-slate-900 selection:bg-purple-200 selection:text-purple-900">
+      <Navbar />
+      <main className="flex-grow">
+        <Outlet />
+      </main>
+      <Footer />
+      <BookPopup />
+    </div>
+  );
+};
+
 const App: React.FC = () => {
   return (
     <HelmetProvider>
       <Router>
         <ScrollToTopHelper />
-        <BookPopup />
-        <div className="flex flex-col min-h-screen font-sans text-slate-900 selection:bg-purple-200 selection:text-purple-900">
-          <Navbar />
-          <main className="flex-grow">
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/services" element={<Services />} />
-              <Route path="/programs" element={<Programs />} />
-              <Route path="/blog" element={<Blog />} />
-              <Route path="/blog/:slug" element={<BlogPost />} />
-              <Route path="/services/website-design" element={<WebsiteDesign />} />
-              <Route path="/services/content-marketing" element={<ContentMarketing />} />
-              <Route path="/services/paid-advertising" element={<PaidAdvertising />} />
-              <Route path="/book" element={<Book />} />
-              <Route path="/booking" element={<Booking />} />
-              <Route path="/thank-you" element={<ThankYou />} />
-              <Route path="/case-studies" element={<CaseStudies />} />
-              <Route path="/case-studies/:slug" element={<CaseStudyDetail />} />
-              <Route path="/contact" element={<Contact />} />
-            </Routes>
-          </main>
-          <Footer />
-        </div>
+        <Routes>
+          {/* Main Website Routes (with Nav & Footer) */}
+          <Route element={<MainLayout />}>
+            <Route path="/" element={<Home />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/programs" element={<Programs />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/:slug" element={<BlogPost />} />
+            <Route path="/services/website-design" element={<WebsiteDesign />} />
+            <Route path="/services/content-marketing" element={<ContentMarketing />} />
+            <Route path="/services/paid-advertising" element={<PaidAdvertising />} />
+            <Route path="/book" element={<Book />} />
+            <Route path="/booking" element={<Booking />} />
+            <Route path="/thank-you" element={<ThankYou />} />
+            <Route path="/case-studies" element={<CaseStudies />} />
+            <Route path="/case-studies/:slug" element={<CaseStudyDetail />} />
+            <Route path="/contact" element={<Contact />} />
+          </Route>
+
+          {/* Dedicated Landing Pages (No Nav/Footer) */}
+          <Route path="/partner-application" element={<AdvertisingLanding />} />
+        </Routes>
       </Router>
     </HelmetProvider>
   );
