@@ -1,9 +1,27 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import SurveyForm from '../components/SurveyForm';
-import { CheckCircle2 } from 'lucide-react';
+import { CheckCircle2, ArrowRight } from 'lucide-react';
 import { caseStudies } from '../data/caseStudies';
 
 const AdvertisingLanding: React.FC = () => {
+    const surveyRef = useRef<HTMLDivElement>(null);
+
+    const scrollToSurvey = () => {
+        surveyRef.current?.scrollIntoView({ behavior: 'smooth' });
+    };
+
+    const CTAButton = () => (
+        <div className="text-center mt-12 mb-12">
+            <button
+                onClick={scrollToSurvey}
+                className="group relative inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white transition-all duration-200 bg-gradient-to-r from-purple-700 to-pink-600 rounded-full hover:scale-105 hover:shadow-xl hover:shadow-purple-500/30 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 animate-pulse hover:animate-none"
+            >
+                Book Your Free Strategy Session
+                <ArrowRight className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" />
+            </button>
+        </div>
+    );
+
     return (
         <div className="min-h-screen bg-slate-50 flex flex-col">
             {/* Simple Header */}
@@ -61,7 +79,7 @@ const AdvertisingLanding: React.FC = () => {
                         </div>
 
                         {/* Form Container */}
-                        <div className="max-w-2xl mx-auto mb-20">
+                        <div ref={surveyRef} className="max-w-2xl mx-auto mb-20 scroll-mt-24">
                             <SurveyForm />
                         </div>
 
@@ -152,6 +170,7 @@ const AdvertisingLanding: React.FC = () => {
                                         And you're thinking, "What the **** do I do?"
                                     </p>
                                 </div>
+                                <CTAButton />
                             </div>
 
                             {/* The Truth */}
@@ -245,6 +264,7 @@ const AdvertisingLanding: React.FC = () => {
                                         That's how you scale from 5 million to 15 million.
                                     </p>
                                 </div>
+                                <CTAButton />
                             </div>
                         </div>
 
@@ -308,6 +328,7 @@ const AdvertisingLanding: React.FC = () => {
                                     ))}
                             </div>
                         </div>
+                        <CTAButton />
 
                         {/* FAQ Section */}
                         <div className="py-24 border-t border-slate-200">
@@ -389,6 +410,7 @@ That's the difference. We're not figuring this out as we go. We already know exa
                                 ))}
                             </div>
                         </div>
+                        <CTAButton />
                     </div>
                 </div>
             </div>
