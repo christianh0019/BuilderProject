@@ -46,40 +46,69 @@ const AdvertisingLanding: React.FC = () => {
                         {/* Expanded Persuasion Section */}
                         <div className="mb-24 animate-fadeIn space-y-24">
                             {/* Problem Agitation */}
-                            <div className="prose prose-lg prose-slate mx-auto text-slate-600">
-                                <h2 className="text-3xl md:text-4xl font-serif font-bold text-slate-900 mb-8 text-center leading-tight">
-                                    If You're Like 95% of the Builders We Work With, <br className="hidden md:block" />
-                                    Here's What's Probably Happening Right Now
+                            {/* Problem Agitation - Redesigned */}
+                            <div className="max-w-4xl mx-auto">
+                                <h2 className="text-3xl md:text-4xl font-serif font-bold text-slate-900 mb-12 text-center leading-tight">
+                                    If You're Like 95% of Builders, <br className="hidden md:block" />
+                                    Here's What's Probably Happening
                                 </h2>
-                                <p>
-                                    You've built your business on referrals. And for years, that worked great. Word-of-mouth kept your pipeline full. Your reputation did the selling for you.
-                                </p>
-                                <p className="font-bold text-slate-800">
-                                    But something changed in the last few years.
-                                </p>
-                                <p>
-                                    Your revenue either hit a wall or it's actually going backwards. The phone isn't ringing like it used to. The referrals are slowing down. And you're sitting there wondering what the hell happened.
-                                </p>
-                                <p>
-                                    Here's what happened: COVID changed everything. In 2020, the world moved online and never came back. The average person now spends 7 hours a day on their phone. When someone wants to build a house, they don't ask their neighbor for a referral anymore - they open Instagram and Google and start searching.
-                                </p>
-                                <p className="italic">
-                                    And if you're not there, you're invisible.
-                                </p>
-                                <p>
-                                    You probably already know this. That's either why you're here right now, or you've already tried to fix it and got burned.
-                                </p>
-                                <ul className="list-disc pl-6 space-y-2">
-                                    <li>Maybe you hired an agency to run some Facebook ads. They charged you 5 grand a month, showed you some fancy dashboards with "impressions" and "reach," but you never got a single qualified lead.</li>
-                                    <li>Or maybe you paid 10,000 dollars for a new website. It looks pretty, but the only form submissions you get are subcontractors begging for work.</li>
-                                    <li>Or worse - you actually got leads, but they were all price shoppers who can't afford you. Or they're so early in the process that you spend 6 months doing free consulting, sending them concepts and ballpark numbers, and then they ghost you or say "we decided to wait."</li>
-                                </ul>
-                                <p>
-                                    Meanwhile, your competitor down the street is booked out for 2 years.
-                                </p>
-                                <p className="font-bold text-slate-900">
-                                    And you're thinking, "What the fuck do I do?"
-                                </p>
+
+                                {/* The Shift */}
+                                <div className="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm mb-12">
+                                    <div className="flex flex-col md:flex-row gap-8 items-start">
+                                        <div className="flex-1">
+                                            <h3 className="text-xl font-bold text-slate-900 mb-4 flex items-center gap-3">
+                                                <span className="w-8 h-8 bg-green-100 text-green-600 rounded-full flex items-center justify-center text-sm">1</span>
+                                                The "Good Old Days"
+                                            </h3>
+                                            <p className="text-slate-600">
+                                                You built your business on referrals. Word-of-mouth kept your pipeline full, and your reputation did the selling for you. It was predictable and effective.
+                                            </p>
+                                        </div>
+                                        <div className="hidden md:block w-px bg-slate-100 self-stretch"></div>
+                                        <div className="flex-1">
+                                            <h3 className="text-xl font-bold text-slate-900 mb-4 flex items-center gap-3">
+                                                <span className="w-8 h-8 bg-orange-100 text-orange-600 rounded-full flex items-center justify-center text-sm">2</span>
+                                                The Shift
+                                            </h3>
+                                            <p className="text-slate-600">
+                                                Then 2020 changed everything. The world moved online. Homeowners stopped asking neighbors for referrals and started searching Instagram and Google.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div className="mt-8 pt-8 border-t border-slate-100 text-center">
+                                        <p className="text-lg font-medium text-slate-800">
+                                            If you're not visible where they are looking, <span className="text-red-500 font-bold">you are invisible.</span>
+                                        </p>
+                                    </div>
+                                </div>
+
+                                {/* The 3 Common Failures */}
+                                <div className="grid md:grid-cols-3 gap-6 mb-12">
+                                    <div className="bg-slate-50 p-6 rounded-2xl border border-slate-100">
+                                        <div className="text-3xl mb-4">📉</div>
+                                        <h4 className="font-bold text-slate-900 mb-2">The Agency Trap</h4>
+                                        <p className="text-sm text-slate-600">You paid $5k/mo for "brand awareness" and got zero qualified leads, just fancy charts.</p>
+                                    </div>
+                                    <div className="bg-slate-50 p-6 rounded-2xl border border-slate-100">
+                                        <div className="text-3xl mb-4">🕸️</div>
+                                        <h4 className="font-bold text-slate-900 mb-2">The Silent Website</h4>
+                                        <p className="text-sm text-slate-600">You spent $10k on a site that looks pretty but only attracts spam and subcontractors.</p>
+                                    </div>
+                                    <div className="bg-slate-50 p-6 rounded-2xl border border-slate-100">
+                                        <div className="text-3xl mb-4">👻</div>
+                                        <h4 className="font-bold text-slate-900 mb-2">The Price Shoppers</h4>
+                                        <p className="text-sm text-slate-600">You get leads, but they can't afford you. You do 6 months of free consulting, then they ghost.</p>
+                                    </div>
+                                </div>
+
+                                <div className="text-center">
+                                    <p className="text-xl text-slate-900 font-serif italic">
+                                        Meanwhile, your competitor down the street is booked out for 2 years.
+                                        <br />
+                                        <span className="font-bold not-italic mt-2 block text-purple-700">So, what do you do?</span>
+                                    </p>
+                                </div>
                             </div>
 
                             {/* The Truth */}
