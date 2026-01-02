@@ -32,6 +32,7 @@ const AdvertisingLanding: React.FC = () => {
                                 </span>
                             </h1>
                             <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+                                We help Builders, Remodelers, and Design-Build Firms acquire high-value projects consistently.
                                 Fill out the quick survey below to get access to our full 2026 marketing playbook and book a free complimentary strategy session.
                             </p>
                         </div>
