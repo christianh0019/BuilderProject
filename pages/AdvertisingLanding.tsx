@@ -284,6 +284,7 @@ const AdvertisingLanding: React.FC = () => {
                                                 <div className="mb-6 rounded-xl overflow-hidden bg-slate-100 shadow-inner block">
                                                     <video
                                                         src={study.videoUrl}
+                                                        poster={study.imageUrl}
                                                         controls
                                                         playsInline
                                                         className="w-full h-auto"
