@@ -9,6 +9,7 @@ export interface CaseStudy {
         value: string;
     }[];
     imageUrl: string;
+    videoUrl?: string;
     content: {
         overview: string;
         challenge: string;
@@ -37,6 +38,7 @@ export const caseStudies: CaseStudy[] = [
             { label: 'Homes Closed', value: '2' }
         ],
         imageUrl: 'https://images.unsplash.com/photo-1613545325278-f24b0cae1224?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80',
+        videoUrl: 'https://storage.googleapis.com/msgsndr/HllUVzV8V6VFH4nUuq4W/media/68a889645f2e6e7e3e8ad82a.mp4',
         content: {
             overview: "Herm runs Homestead Home Builders in Denver. When we first spoke, he was honest: he’d been burned before. Big fees, noisy dashboards, and “leads” that never showed up. Referrals kept the lights on, but they also kept him guessing. He didn’t want another pitch—he wanted steady, qualified conversations he could see on his calendar and trace back to a clear system.",
             challenge: "Wasting time on folks who were just price-shopping. Leads going cold, no-shows, and paying for activity without knowing if it produced revenue.",
@@ -69,6 +71,7 @@ export const caseStudies: CaseStudy[] = [
             { label: 'Top Project', value: '$1.5M' }
         ],
         imageUrl: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80',
+        videoUrl: 'https://storage.googleapis.com/msgsndr/HllUVzV8V6VFH4nUuq4W/media/686e860d9334981695b5ec1d.mp4',
         content: {
             overview: "Dan, the founder of Open Prairie Custom Homes in North Texas, isn’t new to high-end home building. He’s built stunning, estate-level custom homes for years — but he was stuck relying on referrals. He knew there were more $1M+ clients out there, he just didn’t have a predictable system to reach them.",
             challenge: "He needed qualified, design-focused homeowners ready to build now — and a brand experience that matched the caliber of his craftsmanship, not tire-kickers or lowball inquiries.",
@@ -105,6 +108,7 @@ export const caseStudies: CaseStudy[] = [
             { label: 'ROI', value: '113x' }
         ],
         imageUrl: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80',
+        videoUrl: 'https://storage.googleapis.com/msgsndr/HllUVzV8V6VFH4nUuq4W/media/6866c7145143a2f20901e957.mp4',
         content: {
             overview: "For years, Schwanz Custom Homes was booked out 12-18 months in advance with word-of-mouth alone. But as leads slowed, they had open calendar space for the first time. They reached out to BuilderProject not to grow fast, but to get back to normal.",
             challenge: "The goal wasn’t just more leads. It was to deliver serious, build-ready homeowners who would restore momentum and re-fill their once overflowing schedule.",

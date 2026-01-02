@@ -50,36 +50,56 @@ const AdvertisingLanding: React.FC = () => {
                             </div>
 
                             <div className="grid md:grid-cols-2 gap-6 text-left">
-                                {caseStudies.map((study) => (
-                                    <div key={study.id} className="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
-                                        <div className="flex items-center gap-4 mb-4">
-                                            <div className="w-12 h-12 rounded-full overflow-hidden bg-slate-100 shrink-0">
-                                                <img src={study.imageUrl} alt={study.builderName} className="w-full h-full object-cover" />
-                                            </div>
-                                            <div>
-                                                <div className="font-bold text-slate-900 leading-tight">{study.builderName}</div>
-                                                <div className="text-sm text-slate-500">{study.location}</div>
-                                            </div>
-                                        </div>
-
-                                        <h3 className="font-serif font-bold text-lg text-slate-900 mb-3">{study.title}</h3>
-
-                                        <div className="grid grid-cols-2 gap-x-4 gap-y-2 mb-4 bg-slate-50 p-3 rounded-lg">
-                                            {study.results.slice(0, 2).map((res, i) => (
-                                                <div key={i}>
-                                                    <div className="text-[10px] text-slate-500 uppercase tracking-wide font-bold">{res.label}</div>
-                                                    <div className="font-bold text-slate-800">{res.value}</div>
+                                {caseStudies
+                                    .filter(study => study.id !== 'eagle-rock')
+                                    .map((study) => (
+                                        <div key={study.id} className="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
+                                            {study.videoUrl ? (
+                                                <div className="mb-6 rounded-xl overflow-hidden bg-slate-100 shadow-inner block">
+                                                    <video
+                                                        src={study.videoUrl}
+                                                        controls
+                                                        playsInline
+                                                        className="w-full h-auto"
+                                                    />
                                                 </div>
-                                            ))}
-                                        </div>
+                                            ) : (
+                                                <div className="flex items-center gap-4 mb-4">
+                                                    <div className="w-12 h-12 rounded-full overflow-hidden bg-slate-100 shrink-0">
+                                                        <img src={study.imageUrl} alt={study.builderName} className="w-full h-full object-cover" />
+                                                    </div>
+                                                    <div>
+                                                        <div className="font-bold text-slate-900 leading-tight">{study.builderName}</div>
+                                                        <div className="text-sm text-slate-500">{study.location}</div>
+                                                    </div>
+                                                </div>
+                                            )}
 
-                                        {study.testimonial && (
-                                            <blockquote className="text-slate-600 text-sm italic border-l-2 border-purple-200 pl-3">
-                                                "{study.testimonial.quote}"
-                                            </blockquote>
-                                        )}
-                                    </div>
-                                ))}
+                                            {study.videoUrl && (
+                                                <div className="mb-3">
+                                                    <div className="font-bold text-slate-900 leading-tight text-lg">{study.builderName}</div>
+                                                    <div className="text-sm text-slate-500">{study.location}</div>
+                                                </div>
+                                            )}
+
+                                            <h3 className="font-serif font-bold text-lg text-slate-900 mb-3">{study.title}</h3>
+
+                                            <div className="grid grid-cols-2 gap-x-4 gap-y-2 mb-4 bg-slate-50 p-3 rounded-lg">
+                                                {study.results.slice(0, 2).map((res, i) => (
+                                                    <div key={i}>
+                                                        <div className="text-[10px] text-slate-500 uppercase tracking-wide font-bold">{res.label}</div>
+                                                        <div className="font-bold text-slate-800">{res.value}</div>
+                                                    </div>
+                                                ))}
+                                            </div>
+
+                                            {study.testimonial && (
+                                                <blockquote className="text-slate-600 text-sm italic border-l-2 border-purple-200 pl-3">
+                                                    "{study.testimonial.quote}"
+                                                </blockquote>
+                                            )}
+                                        </div>
+                                    ))}
                             </div>
                         </div>
                     </div>
