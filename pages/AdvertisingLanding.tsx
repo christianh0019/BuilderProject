@@ -12,9 +12,24 @@ const AdvertisingLanding: React.FC = () => {
 
     const CTAButton = () => (
         <div className="text-center mt-12 mb-12">
+            <style>
+                {`
+                    @keyframes heartbeat {
+                        0%, 100% { transform: scale(1); }
+                        50% { transform: scale(1.05); }
+                    }
+                    .animate-heartbeat {
+                        animation: heartbeat 2s infinite;
+                    }
+                    .animate-heartbeat:hover {
+                        animation: none;
+                        transform: scale(1.05);
+                    }
+                `}
+            </style>
             <button
                 onClick={scrollToSurvey}
-                className="group relative inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white transition-all duration-200 bg-gradient-to-r from-purple-700 to-pink-600 rounded-full hover:scale-105 hover:shadow-xl hover:shadow-purple-500/30 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 animate-pulse hover:animate-none"
+                className="group relative inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white transition-all duration-200 bg-gradient-to-r from-purple-700 to-pink-600 rounded-full hover:shadow-xl hover:shadow-purple-500/30 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 animate-heartbeat shadow-lg shadow-purple-500/20"
             >
                 Book Your Free Strategy Session
                 <ArrowRight className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" />
