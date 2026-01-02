@@ -199,7 +199,7 @@ const SurveyForm: React.FC = () => {
                         </div>
                         <div>
                             <h2 className="text-2xl font-serif font-bold text-slate-900">Last step.</h2>
-                            <p className="text-slate-600">Where should we send your audit?</p>
+                            <p className="text-slate-600">Where do we send our trainings?</p>
                         </div>
                     </div>
 
