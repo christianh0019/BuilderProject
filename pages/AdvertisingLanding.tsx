@@ -22,13 +22,13 @@ const AdvertisingLanding: React.FC = () => {
                         {/* Hero Section */}
                         <div className="text-center mb-12">
                             <h1 className="text-4xl md:text-5xl font-serif font-bold text-slate-900 mb-6 leading-tight">
-                                Scale Your Custom Home Business <br className="hidden md:block" />
+                                Scale Your Business <br className="hidden md:block" />
                                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-700 to-pink-600">
                                     Without The Guesswork
                                 </span>
                             </h1>
                             <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-                                We help premier Builders, Remodelers, and Developers acquire high-value projects consistently.
+                                We help premier Builders, Remodelers, and Design-Build Firms acquire high-value projects consistently.
                                 Fill out the form below to see if you qualify for our partnership program.
                             </p>
                         </div>

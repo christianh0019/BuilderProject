@@ -78,7 +78,7 @@ const SurveyForm: React.FC = () => {
                 </div>
                 <h2 className="text-2xl font-serif font-bold text-slate-900 mb-4">We might not be the best fit.</h2>
                 <p className="text-slate-600 mb-8">
-                    We specialize exclusively in helping Custom Home Builders, Remodelers, and Developers scale. Based on your selection, our services might not align with your current needs.
+                    We specialize exclusively in helping Custom Home Builders, Remodelers, and Design-Build Firms scale. Based on your selection, our services might not align with your current needs.
                 </p>
                 <button
                     onClick={goBack}
@@ -121,7 +121,7 @@ const SurveyForm: React.FC = () => {
                     </div>
 
                     <div className="space-y-4">
-                        {['Custom Home Builder', 'Remodeler', 'Developer'].map((option) => (
+                        {['Custom Home Builder', 'Remodeler', 'Design-Build Firm'].map((option) => (
                             <button
                                 key={option}
                                 onClick={() => handleRoleSelect(option)}
