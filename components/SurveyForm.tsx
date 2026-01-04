@@ -48,7 +48,17 @@ const SurveyForm: React.FC = () => {
             });
 
             if (response.ok) {
-                navigate('/booking', { state: formData });
+                // Pass data via URL parameters so the Booking page (and potential scripts) can read them
+                const params = new URLSearchParams();
+                if (formData.firstName) params.append('first_name', formData.firstName);
+                if (formData.lastName) params.append('last_name', formData.lastName);
+                if (formData.email) params.append('email', formData.email);
+                if (formData.phone) params.append('phone', formData.phone);
+
+                navigate({
+                    pathname: '/booking',
+                    search: params.toString()
+                });
             } else {
                 console.error('Submission failed');
                 alert('Something went wrong. Please try again.');

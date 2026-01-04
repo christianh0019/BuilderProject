@@ -1,11 +1,28 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useMemo } from 'react';
 import { CheckCircle } from 'lucide-react';
 import { useLocation } from 'react-router-dom';
 import SimpleHeader from '../components/SimpleHeader';
 
 const Booking: React.FC = () => {
     const location = useLocation();
-    const formData = location.state as { firstName?: string; lastName?: string; email?: string; phone?: string } | null;
+
+    // Construct the booking URL with prefill parameters from the current URL query params
+    const bookingUrl = useMemo(() => {
+        const baseUrl = "https://api.leadconnectorhq.com/widget/booking/UTKipcTwyAOAwQ8etiGK";
+        const searchParams = new URLSearchParams(location.search);
+
+        // Ensure we only pass relevant params if they exist to keep the URL clean
+        const widgetParams = new URLSearchParams();
+        const fieldsToPass = ['first_name', 'last_name', 'email', 'phone'];
+
+        fieldsToPass.forEach(field => {
+            const value = searchParams.get(field);
+            if (value) widgetParams.append(field, value);
+        });
+
+        const queryString = widgetParams.toString();
+        return queryString ? `${baseUrl}?${queryString}` : baseUrl;
+    }, [location.search]);
 
     useEffect(() => {
         const script = document.createElement('script');
@@ -17,20 +34,6 @@ const Booking: React.FC = () => {
             document.body.removeChild(script);
         };
     }, []);
-
-    // Construct the booking URL with prefill parameters
-    let bookingUrl = "https://api.leadconnectorhq.com/widget/booking/UTKipcTwyAOAwQ8etiGK";
-    if (formData) {
-        const params = new URLSearchParams();
-        if (formData.firstName) params.append('first_name', formData.firstName);
-        if (formData.lastName) params.append('last_name', formData.lastName);
-        if (formData.email) params.append('email', formData.email);
-        if (formData.phone) params.append('phone', formData.phone);
-        // Only append query string if we have params
-        if (params.toString()) {
-            bookingUrl += `?${params.toString()}`;
-        }
-    }
 
     return (
         <div className="min-h-screen pt-24 pb-20 bg-slate-50 relative overflow-hidden">
