@@ -44,8 +44,7 @@ const Booking: React.FC = () => {
                         <div className="p-4 md:p-8 min-h-[800px]">
                             <iframe
                                 src="https://api.leadconnectorhq.com/widget/booking/UTKipcTwyAOAwQ8etiGK"
-                                style={{ width: '100%', border: 'none', overflow: 'hidden', minHeight: '800px' }}
-                                scrolling="no"
+                                style={{ width: '100%', border: 'none', minHeight: '800px' }}
                                 id="1SwWuvjoJauKd9ZHYlpp_1766260844042"
                             ></iframe>
                         </div>
