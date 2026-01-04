@@ -11,37 +11,32 @@ const ThankYou: React.FC = () => {
         <div className="min-h-screen bg-slate-50 flex flex-col">
             <SimpleHeader />
 
-            {/* Dark Hero Section containing Video for Mobile Visibility */}
-            <div className="pt-20 pb-12 md:pt-28 md:pb-24 bg-slate-900 relative overflow-hidden">
-                {/* Background Effects */}
-                <div className="absolute top-0 left-0 w-full h-full bg-[url('https://images.unsplash.com/photo-1557683316-973673baf926?auto=format&fit=crop&q=80')] opacity-10 bg-cover bg-center mix-blend-overlay pointer-events-none"></div>
-                <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-purple-500/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 opacity-50 pointer-events-none"></div>
-                <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-pink-500/20 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2 opacity-50 pointer-events-none"></div>
-
-                <div className="container mx-auto px-4 sm:px-6 relative z-10">
+            {/* Hero Section containing Video for Mobile Visibility */}
+            <div className="pt-24 pb-12 px-6">
+                <div className="container mx-auto">
                     <div className="max-w-4xl mx-auto text-center">
 
                         {/* Status Badge */}
-                        <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-green-500/10 border border-green-500/20 rounded-full text-green-400 text-sm font-semibold mb-6 backdrop-blur-sm">
+                        <div className="inline-flex items-center gap-2 px-4 py-2 bg-green-100 text-green-700 rounded-full text-sm font-bold mb-6 border border-green-200 animate-fadeIn">
                             <CheckCircle size={16} />
                             <span>Strategy Session Confirmed</span>
                         </div>
 
-                        <h1 className="text-3xl md:text-5xl font-serif font-bold text-white mb-4 leading-tight">
+                        <h1 className="text-3xl md:text-5xl font-serif font-bold text-slate-900 mb-6 leading-tight">
                             You're All Set!
                         </h1>
-                        <p className="text-slate-400 text-base md:text-xl mb-8 max-w-2xl mx-auto">
-                            Check for a calendar invite. In the meantime, <span className="text-white font-semibold">watch this specific instruction video:</span>
+                        <p className="text-slate-600 text-base md:text-xl mb-8 max-w-2xl mx-auto">
+                            Check for a calendar invite. In the meantime, <span className="text-slate-900 font-bold">watch this specific instruction video:</span>
                         </p>
 
                         {/* Critical Alert Bar */}
-                        <div className="bg-amber-500 text-slate-900 px-4 py-3 rounded-t-2xl font-bold text-sm md:text-base flex items-center justify-center gap-2 mx-auto max-w-3xl">
-                            <AlertTriangle size={20} className="stroke-[2.5]" />
+                        <div className="bg-amber-100 text-amber-900 px-4 py-3 rounded-t-2xl font-bold text-sm md:text-base flex items-center justify-center gap-2 mx-auto max-w-3xl border-t border-x border-amber-200">
+                            <AlertTriangle size={20} className="text-amber-600" />
                             IMPORTANT: Watch Before Our Call
                         </div>
 
                         {/* Video Container - Lifted into Hero */}
-                        <div className="max-w-3xl mx-auto rounded-b-2xl rounded-tr-none overflow-hidden shadow-2xl shadow-black/50 border-4 border-amber-500 border-t-0 bg-slate-900 aspect-video relative group">
+                        <div className="max-w-3xl mx-auto rounded-b-2xl rounded-tr-none overflow-hidden shadow-2xl shadow-slate-200 border border-slate-200 border-t-0 bg-white aspect-video relative group">
                             <iframe
                                 className="w-full h-full"
                                 src="https://www.youtube.com/embed/jZ3cUnBZvs8?si=_U9hVObC9VmpaHsP"
@@ -57,12 +52,12 @@ const ThankYou: React.FC = () => {
             </div>
 
             {/* Content Section */}
-            <div className="bg-slate-50 flex-grow py-12 px-6">
+            <div className="bg-white flex-grow py-12 px-6 border-t border-slate-100">
                 <div className="container mx-auto">
 
                     {/* Calendar Reminder */}
                     <div className="max-w-xl mx-auto mb-16">
-                        <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 flex items-center gap-4">
+                        <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200 flex items-center gap-4">
                             <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center text-purple-600 shrink-0">
                                 <Calendar size={24} />
                             </div>
@@ -82,7 +77,7 @@ const ThankYou: React.FC = () => {
 
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                             {caseStudies.slice(0, 3).map((study) => (
-                                <div key={study.id} className="bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-200 hover:shadow-xl transition-all duration-300 group">
+                                <div key={study.id} className="bg-white rounded-2xl overflow-hidden shadow-lg border border-slate-100 hover:shadow-xl transition-all duration-300 group">
                                     <div className="aspect-[4/3] overflow-hidden relative">
                                         <img
                                             src={study.imageUrl}
