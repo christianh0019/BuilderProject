@@ -7,6 +7,13 @@ import SimpleHeader from '../components/SimpleHeader';
 const ThankYou: React.FC = () => {
     const navigate = useNavigate();
 
+    React.useEffect(() => {
+        // Track 'Schedule' event when user lands on Thank You page
+        if (typeof window !== 'undefined' && (window as any).fbq) {
+            (window as any).fbq('track', 'Schedule');
+        }
+    }, []);
+
     return (
         <div className="min-h-screen bg-slate-50 flex flex-col">
             <SimpleHeader />

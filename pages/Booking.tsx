@@ -48,6 +48,12 @@ const Booking: React.FC = () => {
     }, [location.search]);
 
     useEffect(() => {
+        // Track 'Lead' event when user lands on Booking page
+        // (Use type check to avoid TS errors if types aren't defined)
+        if (typeof window !== 'undefined' && (window as any).fbq) {
+            (window as any).fbq('track', 'Lead');
+        }
+
         const script = document.createElement('script');
         script.src = "https://link.msgsndr.com/js/form_embed.js";
         script.async = true;

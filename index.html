@@ -1,41 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>BuilderProject - Marketing for Custom Home Builders</title>
-    <link rel="icon" type="image/png" href="/images/logo_icon.png" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Funnel+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: {
-              sans: ['"Funnel Sans"', 'sans-serif'],
-              serif: ['"Cormorant Garamond"', 'serif'],
-            },
-            colors: {
-              brand: {
-                purple: '#7e22ce',
-                magenta: '#d946ef',
-                dark: '#0f172a',
-              }
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BuilderProject - Marketing for Custom Home Builders</title>
+  <link rel="icon" type="image/png" href="/images/logo_icon.png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Funnel+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+    rel="stylesheet">
+
+  <!-- Meta Pixel Code -->
+  <script>
+    !function (f, b, e, v, n, t, s) {
+      if (f.fbq) return; n = f.fbq = function () {
+        n.callMethod ?
+          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      };
+      if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+      n.queue = []; t = b.createElement(e); t.async = !0;
+      t.src = v; s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s)
+    }(window, document, 'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1421648206348781');
+    fbq('track', 'PageView');
+  </script>
+  <!-- End Meta Pixel Code -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Funnel Sans"', 'sans-serif'],
+            serif: ['"Cormorant Garamond"', 'serif'],
+          },
+          colors: {
+            brand: {
+              purple: '#7e22ce',
+              magenta: '#d946ef',
+              dark: '#0f172a',
             }
           }
         }
       }
-    </script>
-    <style>
-      body {
-        font-family: 'Funnel Sans', sans-serif;
-      }
-      h1, h2, h3, h4, h5, h6 {
-        font-family: 'Cormorant Garamond', serif;
-      }
-    </style>
+    }
+  </script>
+  <style>
+    body {
+      font-family: 'Funnel Sans', sans-serif;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: 'Cormorant Garamond', serif;
+    }
+  </style>
   <script type="importmap">
 {
   "imports": {
@@ -47,10 +74,16 @@
   }
 }
 </script>
-<link rel="stylesheet" href="/index.css">
+  <link rel="stylesheet" href="/index.css">
 </head>
-  <body>
-    <div id="root"></div>
+
+<body>
+  <!-- Meta Pixel NoScript -->
+  <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=1421648206348781&ev=PageView&noscript=1" /></noscript>
+  <!-- End Meta Pixel NoScript -->
+  <div id="root"></div>
   <script type="module" src="/index.tsx"></script>
 </body>
+
 </html>
