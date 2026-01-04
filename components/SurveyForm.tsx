@@ -50,8 +50,13 @@ const SurveyForm: React.FC = () => {
             if (response.ok) {
                 // Pass data via URL parameters so the Booking page (and potential scripts) can read them
                 const params = new URLSearchParams();
-                if (formData.firstName) params.append('first_name', formData.firstName);
-                if (formData.lastName) params.append('last_name', formData.lastName);
+
+                // Combine first and last name for GHL widget 'full_name' field
+                if (formData.firstName || formData.lastName) {
+                    const fullName = [formData.firstName, formData.lastName].filter(Boolean).join(' ');
+                    params.append('full_name', fullName);
+                }
+
                 if (formData.email) params.append('email', formData.email);
                 if (formData.phone) params.append('phone', formData.phone);
 

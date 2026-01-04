@@ -13,7 +13,8 @@ const Booking: React.FC = () => {
 
         // Ensure we only pass relevant params if they exist to keep the URL clean
         const widgetParams = new URLSearchParams();
-        const fieldsToPass = ['first_name', 'last_name', 'email', 'phone'];
+        // 'full_name' is required for the single name field in this GHL widget
+        const fieldsToPass = ['full_name', 'first_name', 'last_name', 'email', 'phone'];
 
         fieldsToPass.forEach(field => {
             const value = searchParams.get(field);
