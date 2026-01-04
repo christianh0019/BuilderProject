@@ -14,8 +14,8 @@ const Booking: React.FC = () => {
         // Ensure we only pass relevant params if they exist to keep the URL clean
         const widgetParams = new URLSearchParams();
 
-        // Strategy: "Shotgun" approach. Pass standard and GHL-specific keys to ensure capture.
-        // GHL often uses 'email' but sometimes 'contact_email'. Same for phone.
+        // Verified: The GHL widget natively supports 'email' and 'full_name'.
+        // Passing duplicates like 'contact_email' can cause issues, so we stick to the proven keys.
 
         // Handle Name
         const fullName = searchParams.get('full_name');
@@ -24,29 +24,23 @@ const Booking: React.FC = () => {
 
         if (fullName) {
             widgetParams.append('full_name', fullName);
-            // Redundant backup just in case
-            if (!firstName && !lastName) {
-                // Try to split full name if we don't have parts
-                const parts = fullName.split(' ');
-                if (parts.length > 0) widgetParams.append('first_name', parts[0]);
-                if (parts.length > 1) widgetParams.append('last_name', parts.slice(1).join(' '));
-            }
+        } else if (firstName || lastName) {
+            // Construct full_name if missing
+            const parts = [firstName, lastName].filter(Boolean);
+            if (parts.length > 0) widgetParams.append('full_name', parts.join(' '));
         }
-        if (firstName) widgetParams.append('first_name', firstName);
-        if (lastName) widgetParams.append('last_name', lastName);
 
         // Handle Email
+        // Verified via direct URL test that '?email=...' successfully autofills the field.
         const email = searchParams.get('email');
         if (email) {
             widgetParams.append('email', email);
-            widgetParams.append('contact_email', email); // GHL variation
         }
 
         // Handle Phone
         const phone = searchParams.get('phone');
         if (phone) {
             widgetParams.append('phone', phone);
-            widgetParams.append('contact_phone', phone); // GHL variation
         }
 
         const queryString = widgetParams.toString();
@@ -92,7 +86,9 @@ const Booking: React.FC = () => {
                     {/* Booking Widget Container */}
                     <div className="bg-white rounded-3xl shadow-xl overflow-hidden border border-slate-200">
                         <div className="p-4 md:p-8 min-h-[800px]">
+                            {/* Key prop ensures iframe remounts if URL changes, forcing a fresh load with new params */}
                             <iframe
+                                key={bookingUrl}
                                 src={bookingUrl}
                                 style={{ width: '100%', border: 'none', minHeight: '800px' }}
                                 id="1SwWuvjoJauKd9ZHYlpp_1766260844042"
