@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
-import { CheckCircle, Calendar } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
+import SimpleHeader from '../components/SimpleHeader';
 
 const Booking: React.FC = () => {
     useEffect(() => {
@@ -15,6 +16,7 @@ const Booking: React.FC = () => {
 
     return (
         <div className="min-h-screen pt-32 pb-20 bg-slate-50 relative overflow-hidden">
+            <SimpleHeader />
             {/* Background Gradients */}
             <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-purple-200/50 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 opacity-60"></div>
             <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-pink-200/50 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2 opacity-60"></div>

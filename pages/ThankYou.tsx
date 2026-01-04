@@ -1,13 +1,15 @@
-import React, { useEffect } from 'react';
-import { CheckCircle, Calendar, PlayCircle, ArrowRight } from 'lucide-react';
+import React from 'react';
+import { CheckCircle, Calendar, ArrowRight } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { caseStudies } from '../data/caseStudies';
+import SimpleHeader from '../components/SimpleHeader';
 
 const ThankYou: React.FC = () => {
     const navigate = useNavigate();
 
     return (
         <div className="min-h-screen pt-32 pb-20 bg-slate-50">
+            <SimpleHeader />
             <div className="container mx-auto px-6">
 
                 {/* Hero Section */}

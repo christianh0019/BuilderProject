@@ -57,8 +57,6 @@ const App: React.FC = () => {
             <Route path="/services/content-marketing" element={<ContentMarketing />} />
             <Route path="/services/paid-advertising" element={<PaidAdvertising />} />
             <Route path="/book" element={<Book />} />
-            <Route path="/booking" element={<Booking />} />
-            <Route path="/thank-you" element={<ThankYou />} />
             <Route path="/case-studies" element={<CaseStudies />} />
             <Route path="/case-studies/:slug" element={<CaseStudyDetail />} />
             <Route path="/contact" element={<Contact />} />
@@ -66,6 +64,8 @@ const App: React.FC = () => {
 
           {/* Dedicated Landing Pages (No Nav/Footer) */}
           <Route path="/partner-application" element={<AdvertisingLanding />} />
+          <Route path="/booking" element={<Booking />} />
+          <Route path="/thank-you" element={<ThankYou />} />
         </Routes>
       </Router>
     </HelmetProvider>
