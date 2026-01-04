@@ -1,8 +1,12 @@
 import React, { useEffect } from 'react';
 import { CheckCircle } from 'lucide-react';
+import { useLocation } from 'react-router-dom';
 import SimpleHeader from '../components/SimpleHeader';
 
 const Booking: React.FC = () => {
+    const location = useLocation();
+    const formData = location.state as { firstName?: string; lastName?: string; email?: string; phone?: string } | null;
+
     useEffect(() => {
         const script = document.createElement('script');
         script.src = "https://link.msgsndr.com/js/form_embed.js";
@@ -13,6 +17,20 @@ const Booking: React.FC = () => {
             document.body.removeChild(script);
         };
     }, []);
+
+    // Construct the booking URL with prefill parameters
+    let bookingUrl = "https://api.leadconnectorhq.com/widget/booking/UTKipcTwyAOAwQ8etiGK";
+    if (formData) {
+        const params = new URLSearchParams();
+        if (formData.firstName) params.append('first_name', formData.firstName);
+        if (formData.lastName) params.append('last_name', formData.lastName);
+        if (formData.email) params.append('email', formData.email);
+        if (formData.phone) params.append('phone', formData.phone);
+        // Only append query string if we have params
+        if (params.toString()) {
+            bookingUrl += `?${params.toString()}`;
+        }
+    }
 
     return (
         <div className="min-h-screen pt-24 pb-20 bg-slate-50 relative overflow-hidden">
@@ -43,7 +61,7 @@ const Booking: React.FC = () => {
                     <div className="bg-white rounded-3xl shadow-xl overflow-hidden border border-slate-200">
                         <div className="p-4 md:p-8 min-h-[800px]">
                             <iframe
-                                src="https://api.leadconnectorhq.com/widget/booking/UTKipcTwyAOAwQ8etiGK"
+                                src={bookingUrl}
                                 style={{ width: '100%', border: 'none', minHeight: '800px' }}
                                 id="1SwWuvjoJauKd9ZHYlpp_1766260844042"
                             ></iframe>

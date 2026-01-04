@@ -48,7 +48,7 @@ const SurveyForm: React.FC = () => {
             });
 
             if (response.ok) {
-                navigate('/booking');
+                navigate('/booking', { state: formData });
             } else {
                 console.error('Submission failed');
                 alert('Something went wrong. Please try again.');
