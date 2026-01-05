@@ -35,6 +35,16 @@ const SurveyForm: React.FC<SurveyFormProps> = ({ webhookUrl = 'https://services.
 
     const handleSelection = (field: string, value: string) => {
         setFormData({ ...formData, [field]: value });
+
+        // Immediate Downsell Redirect for Revenue
+        if (field === 'revenue') {
+            const lowRevenueOptions = ["I'm just starting", "Under $1M"];
+            if (lowRevenueOptions.includes(value)) {
+                navigate('/quickstart');
+                return;
+            }
+        }
+
         setStep(prev => prev + 1);
     };
 
@@ -82,19 +92,10 @@ const SurveyForm: React.FC<SurveyFormProps> = ({ webhookUrl = 'https://services.
                 if (formData.email) params.append('email', formData.email);
                 if (formData.phone) params.append('phone', formData.phone);
 
-                // Downsell Logic: Redirect "Just starting" and "Under $1M" to Quickstart
-                const lowRevenueOptions = ["I'm just starting", "Under $1M"];
-                if (lowRevenueOptions.includes(formData.revenue)) {
-                    navigate({
-                        pathname: '/quickstart',
-                        search: params.toString() // Pass params to Quickstart too, just in case we need them later
-                    });
-                } else {
-                    navigate({
-                        pathname: '/booking',
-                        search: params.toString()
-                    });
-                }
+                navigate({
+                    pathname: '/booking',
+                    search: params.toString()
+                });
             } else {
                 console.error('Submission failed');
                 alert('Something went wrong. Please try again.');
