@@ -57,7 +57,7 @@ const SurveyForm: React.FC = () => {
         };
 
         try {
-            const response = await fetch('https://services.leadconnectorhq.com/hooks/HllUVzV8V6VFH4nUuq4W/webhook-trigger/fad0a645-e084-4b96-8216-6e72e76b8f98', {
+            const response = await fetch('https://services.leadconnectorhq.com/hooks/HllUVzV8V6VFH4nUuq4W/webhook-trigger/c397bff5-2f73-41ac-934a-563e075311b0', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
