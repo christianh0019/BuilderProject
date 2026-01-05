@@ -19,17 +19,20 @@ const Quickstart: React.FC = () => {
                         </div>
 
                         <h1 className="text-4xl md:text-5xl font-serif font-bold text-slate-900 mb-6 leading-tight">
-                            Not Quite Ready for Full Service? <br />
+                            Your Digital Model Home. <br />
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-700 to-pink-600">
-                                Start With The Essentials.
+                                Built to Win Projects.
                             </span>
                         </h1>
 
-                        <p className="text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
-                            Based on your revenue, our Full-Service Partnership might be overkill right now.
-                            But you still need looking professional to win better jobs.
-                            That's why we built the <strong>Online Presence Quickstart</strong>.
-                        </p>
+                        <div className="max-w-3xl mx-auto space-y-6">
+                            <p className="text-xl font-medium text-slate-800">
+                                You build quality homes. It's time your online presence reflected that quality. This is the one-time investment you need to build brand credibility, attract better clients, and charge what you're worth.
+                            </p>
+                            <p className="text-lg text-slate-600 leading-relaxed">
+                                Our Full-Service Partnership is for builders and remodelers doing over $1M/yr. in revenue. If you're not there yet, you don't need the complexity or the monthly retainers. You need a powerful first impression. The <strong>Online Presence Quickstart</strong> is a focused buildout of your critical digital assets—a high-converting website, Google visibility, and professional branding—to turn your growing reputation into reliable revenue.
+                            </p>
+                        </div>
                     </div>
 
                     <div className="bg-white rounded-3xl shadow-xl overflow-hidden border border-slate-200 mb-24">
@@ -134,13 +137,13 @@ const Quickstart: React.FC = () => {
                                                 <Star fill="currentColor" size={14} />
                                                 <span className="text-slate-500 ml-1">(48)</span>
                                             </div>
-                                            <div className="text-xs text-slate-500">Custom home builder in Pittsburgh, PA</div>
+                                            <div className="text-xs text-slate-500">Custom home builder in Hingham, MA</div>
                                         </div>
                                     </div>
                                     <div className="space-y-2">
                                         <div className="flex items-center gap-3 text-sm text-slate-600">
                                             <MapPin size={16} className="text-blue-500" />
-                                            <span>Serving Greater Pittsburgh Area</span>
+                                            <span>Serving Greater Hingham Area</span>
                                         </div>
                                         <div className="flex gap-2 mt-4">
                                             <div className="flex-1 bg-blue-600 text-white text-center py-2 rounded-lg font-bold text-sm">Website</div>
@@ -261,9 +264,9 @@ const Quickstart: React.FC = () => {
                                             <div className="text-[10px] text-slate-500">https://versobuilders.com</div>
                                         </div>
                                     </div>
-                                    <div className="text-purple-700 text-lg hover:underline cursor-pointer mb-1 text-left">Custom Home Builders in Pittsburgh | Luxury Design</div>
+                                    <div className="text-purple-700 text-lg hover:underline cursor-pointer mb-1 text-left">Custom Home Builders in Hingham | Luxury Design</div>
                                     <div className="text-sm text-slate-600 text-left">
-                                        Award-winning custom home builders serving the Greater Pittsburgh area. Start your dream home project today with Verso Builders.
+                                        Award-winning custom home builders serving the Greater Hingham area. Start your dream home project today with Verso Builders.
                                     </div>
                                 </div>
                                 <div className="bg-white w-full max-w-md mx-auto p-4 rounded-xl border border-slate-100 shadow-sm opacity-50">
