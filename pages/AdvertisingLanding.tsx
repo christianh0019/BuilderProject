@@ -84,7 +84,7 @@ const AdvertisingLanding: React.FC = () => {
 
                         {/* Form Container */}
                         <div ref={surveyRef} className="max-w-2xl mx-auto mb-20 scroll-mt-24">
-                            <SurveyForm />
+                            <SurveyForm webhookUrl="https://services.leadconnectorhq.com/hooks/HllUVzV8V6VFH4nUuq4W/webhook-trigger/c397bff5-2f73-41ac-934a-563e075311b0" />
                         </div>
 
                         {/* Persuasion / Value Section */}

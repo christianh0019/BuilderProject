@@ -2,7 +2,11 @@ import React, { useState } from 'react';
 import { ArrowRight, ArrowLeft, Check, AlertCircle, Building2, Wallet, PieChart, User, Loader2 } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
-const SurveyForm: React.FC = () => {
+interface SurveyFormProps {
+    webhookUrl?: string;
+}
+
+const SurveyForm: React.FC<SurveyFormProps> = ({ webhookUrl = 'https://services.leadconnectorhq.com/hooks/HllUVzV8V6VFH4nUuq4W/webhook-trigger/fad0a645-e084-4b96-8216-6e72e76b8f98' }) => {
     const [step, setStep] = useState(1);
     const [disqualified, setDisqualified] = useState(false);
     const [formData, setFormData] = useState({
@@ -57,7 +61,7 @@ const SurveyForm: React.FC = () => {
         };
 
         try {
-            const response = await fetch('https://services.leadconnectorhq.com/hooks/HllUVzV8V6VFH4nUuq4W/webhook-trigger/c397bff5-2f73-41ac-934a-563e075311b0', {
+            const response = await fetch(webhookUrl, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
