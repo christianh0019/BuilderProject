@@ -8,6 +8,16 @@ import VersoShowcase from '../components/website/VersoShowcase';
 const Quickstart: React.FC = () => {
     const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
 
+    const SectionCTA = () => (
+        <button
+            onClick={() => setIsBookingModalOpen(true)}
+            className="mt-8 bg-slate-900 text-white font-bold py-3 px-8 rounded-xl hover:bg-gradient-to-r hover:from-purple-700 hover:to-pink-600 transition-all duration-300 shadow-lg shadow-purple-500/20 flex items-center gap-2 group text-sm"
+        >
+            Get Started
+            <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+        </button>
+    );
+
     return (
         <div className="min-h-screen bg-slate-50 font-sans text-slate-900 selection:bg-purple-100 selection:text-purple-900">
             <SimpleHeader />
@@ -99,6 +109,7 @@ const Quickstart: React.FC = () => {
                                         Lead-capture focused layout
                                     </li>
                                 </ul>
+                                <SectionCTA />
                             </div>
                             <div className="md:w-1/2">
                                 <div className="transform scale-95 hover:scale-100 transition-transform duration-500">
@@ -127,6 +138,7 @@ const Quickstart: React.FC = () => {
                                         Display reviews and credibility
                                     </li>
                                 </ul>
+                                <SectionCTA />
                             </div>
                             <div className="md:w-1/2 bg-slate-100 rounded-3xl p-8 border border-slate-200 flex items-center justify-center relative overflow-hidden group">
                                 <div className="absolute inset-0 bg-[#eef0f3] z-0"></div>
@@ -181,6 +193,7 @@ const Quickstart: React.FC = () => {
                                         Ready-to-use posting templates
                                     </li>
                                 </ul>
+                                <SectionCTA />
                             </div>
                             <div className="md:w-1/2 bg-slate-50 rounded-3xl p-8 border border-slate-100 flex items-center justify-center">
                                 {/* Instagram Mock */}
@@ -228,6 +241,7 @@ const Quickstart: React.FC = () => {
                                         High-end gallery layout
                                     </li>
                                 </ul>
+                                <SectionCTA />
                             </div>
                             <div className="md:w-1/2 bg-slate-900 rounded-3xl p-8 border border-slate-800 flex items-center justify-center">
                                 {/* Masonry Grid Mock */}
@@ -274,6 +288,7 @@ const Quickstart: React.FC = () => {
                                         Technical SEO best practices
                                     </li>
                                 </ul>
+                                <SectionCTA />
                             </div>
                             <div className="md:w-1/2 bg-white rounded-3xl p-8 border border-slate-200 shadow-sm flex flex-col justify-center">
                                 {/* SEO Result Mock */}
@@ -300,6 +315,34 @@ const Quickstart: React.FC = () => {
                     </div>
                 </div>
             </div>
+
+            {/* Final CTA Section */}
+            <div className="bg-slate-900 py-24 px-6 text-center">
+                <div className="max-w-4xl mx-auto">
+                    <h2 className="text-3xl md:text-5xl font-serif font-bold text-white mb-6">
+                        Ready to Build Your Online Presence?
+                    </h2>
+                    <p className="text-xl text-slate-400 mb-10 max-w-2xl mx-auto">
+                        Stop losing projects to competitors who just look better online. Get the professional foundation you need to attract high-value clients.
+                    </p>
+                    <button
+                        onClick={() => setIsBookingModalOpen(true)}
+                        className="bg-white text-slate-900 font-bold py-4 px-10 rounded-xl hover:bg-slate-100 transition-all duration-300 shadow-xl shadow-white/10 text-lg flex items-center justify-center gap-3 mx-auto group"
+                    >
+                        Get Started - $3,997
+                        <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
+                    </button>
+                    <div className="mt-8 flex items-center justify-center gap-6 text-sm text-slate-500">
+                        <span className="flex items-center gap-2"><CheckCircle2 size={14} className="text-green-500" /> One-time payment</span>
+                        <span className="flex items-center gap-2"><CheckCircle2 size={14} className="text-green-500" /> No monthly fees</span>
+                        <span className="flex items-center gap-2"><CheckCircle2 size={14} className="text-green-500" /> 100% Ownership</span>
+                    </div>
+                </div>
+            </div>
+
+            <footer className="py-8 text-center text-slate-400 text-sm bg-slate-950">
+                <p>© {new Date().getFullYear()} BuildSurge Collectives LLC DBA BuilderProject</p>
+            </footer>
 
             {/* Booking Modal */}
             <Modal isOpen={isBookingModalOpen} onClose={() => setIsBookingModalOpen(false)}>
