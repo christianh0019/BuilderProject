@@ -126,7 +126,9 @@ const Quickstart: React.FC = () => {
                                 {/* Map Mock */}
                                 <div className="bg-white rounded-xl shadow-xl p-4 w-full max-w-sm relative z-10 transform group-hover:-translate-y-2 transition-transform duration-300">
                                     <div className="flex gap-4 mb-4">
-                                        <div className="w-16 h-16 bg-blue-600 rounded-lg flex items-center justify-center text-white font-bold text-2xl">V</div>
+                                        <div className="w-16 h-16 bg-stone-900 rounded-lg flex items-center justify-center text-white font-bold text-2xl overflow-hidden shrink-0">
+                                            <img src="/verso-logo.png" alt="Verso Builders" className="w-full h-full object-cover" />
+                                        </div>
                                         <div>
                                             <h4 className="font-bold text-lg text-slate-900">Verso Custom Builders</h4>
                                             <div className="flex items-center gap-1 text-orange-400 text-sm mb-1">
@@ -177,25 +179,25 @@ const Quickstart: React.FC = () => {
                                 {/* Instagram Mock */}
                                 <div className="bg-white rounded-3xl shadow-2xl border border-slate-200 p-4 w-64 transform rotate-1 hover:rotate-0 transition-transform duration-300">
                                     <div className="flex items-center gap-3 mb-6">
-                                        <div className="w-12 h-12 rounded-full bg-gradient-to-tr from-yellow-400 via-red-500 to-purple-600 p-[2px]">
-                                            <div className="w-full h-full rounded-full bg-white p-[2px]">
-                                                <div className="w-full h-full bg-slate-200 rounded-full"></div>
+                                        <div className="w-12 h-12 rounded-full bg-gradient-to-tr from-yellow-400 via-red-500 to-purple-600 p-[2px] shrink-0">
+                                            <div className="w-full h-full rounded-full bg-white p-[2px] overflow-hidden">
+                                                <img src="/verso-logo.png" alt="Profile" className="w-full h-full object-cover rounded-full" />
                                             </div>
                                         </div>
                                         <div>
-                                            <div className="h-3 w-24 bg-slate-900 rounded mb-1"></div>
-                                            <div className="h-2 w-16 bg-slate-300 rounded"></div>
+                                            <div className="h-3 w-24 bg-slate-900 rounded mb-1 text-[10px] font-bold leading-3">versobuilders</div>
+                                            <div className="h-3 w-16 text-[8px] text-slate-500">Custom Homes</div>
                                         </div>
                                     </div>
-                                    <div className="grid grid-cols-3 gap-1 mb-1">
-                                        <div className="aspect-square bg-slate-100 rounded-sm"></div>
-                                        <div className="aspect-square bg-slate-200 rounded-sm"></div>
-                                        <div className="aspect-square bg-slate-100 rounded-sm"></div>
+                                    <div className="grid grid-cols-3 gap-0.5 mb-0.5">
+                                        <img src="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?auto=format&fit=crop&w=150&q=80" className="aspect-square object-cover" />
+                                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=150&q=80" className="aspect-square object-cover" />
+                                        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=150&q=80" className="aspect-square object-cover" />
                                     </div>
-                                    <div className="grid grid-cols-3 gap-1">
-                                        <div className="aspect-square bg-slate-200 rounded-sm"></div>
-                                        <div className="aspect-square bg-slate-100 rounded-sm"></div>
-                                        <div className="aspect-square bg-slate-200 rounded-sm"></div>
+                                    <div className="grid grid-cols-3 gap-0.5">
+                                        <img src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&fit=crop&w=150&q=80" className="aspect-square object-cover" />
+                                        <img src="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?auto=format&fit=crop&w=150&q=80" className="aspect-square object-cover grayscale opacity-50" />
+                                        <div className="aspect-square bg-slate-100 flex items-center justify-center text-[8px] text-slate-400">More...</div>
                                     </div>
                                 </div>
                             </div>
@@ -224,12 +226,24 @@ const Quickstart: React.FC = () => {
                                 {/* Masonry Grid Mock */}
                                 <div className="grid grid-cols-2 gap-4 w-full max-w-sm rotate-1 hover:rotate-0 transition-transform duration-500">
                                     <div className="space-y-4">
-                                        <div className="h-40 bg-slate-800 rounded-lg w-full"></div>
-                                        <div className="h-24 bg-slate-700 rounded-lg w-full"></div>
+                                        <img
+                                            src="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?auto=format&fit=crop&w=400&q=80"
+                                            className="h-40 object-cover rounded-lg w-full shadow-lg"
+                                        />
+                                        <img
+                                            src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&fit=crop&w=400&q=80"
+                                            className="h-24 object-cover rounded-lg w-full shadow-lg"
+                                        />
                                     </div>
                                     <div className="space-y-4 pt-8">
-                                        <div className="h-24 bg-slate-700 rounded-lg w-full"></div>
-                                        <div className="h-40 bg-slate-800 rounded-lg w-full"></div>
+                                        <img
+                                            src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=400&q=80"
+                                            className="h-24 object-cover rounded-lg w-full shadow-lg"
+                                        />
+                                        <img
+                                            src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=400&q=80"
+                                            className="h-40 object-cover rounded-lg w-full shadow-lg"
+                                        />
                                     </div>
                                 </div>
                             </div>
