@@ -5,6 +5,14 @@ import { CheckCircle2, ArrowRight, Star, MapPin, Search, Users, MessageSquare } 
 import BrowserFrame from '../components/ui/BrowserFrame';
 import VersoShowcase from '../components/website/VersoShowcase';
 
+// Import Images
+import versoLogo from '../assets/images/verso-logo.png';
+import interiorKitchen from '../assets/images/interior-kitchen.png';
+import exteriorFront from '../assets/images/exterior-front.png';
+import interiorLiving from '../assets/images/interior-living.jpg';
+import exteriorRear from '../assets/images/exterior-rear.jpg';
+import exteriorSide from '../assets/images/exterior-side.png';
+
 const Quickstart: React.FC = () => {
     const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
 
@@ -211,7 +219,7 @@ const Quickstart: React.FC = () => {
                                 <div className="bg-white rounded-xl shadow-xl p-4 w-full max-w-sm relative z-10 transform group-hover:-translate-y-2 transition-transform duration-300">
                                     <div className="flex gap-4 mb-4">
                                         <div className="w-16 h-16 bg-stone-900 rounded-lg flex items-center justify-center text-white font-bold text-2xl overflow-hidden shrink-0">
-                                            <img src="/verso-logo.png" alt="Verso Builders" className="w-full h-full object-cover" />
+                                            <img src={versoLogo} alt="Verso Builders" className="w-full h-full object-cover" />
                                         </div>
                                         <div>
                                             <h4 className="font-bold text-lg text-slate-900">Verso Custom Builders</h4>
@@ -266,7 +274,7 @@ const Quickstart: React.FC = () => {
                                     <div className="flex items-center gap-3 mb-6">
                                         <div className="w-12 h-12 rounded-full bg-gradient-to-tr from-yellow-400 via-red-500 to-purple-600 p-[2px] shrink-0">
                                             <div className="w-full h-full rounded-full bg-white p-[2px] overflow-hidden">
-                                                <img src="/verso-logo.png" alt="Profile" className="w-full h-full object-cover rounded-full" />
+                                                <img src={versoLogo} alt="Profile" className="w-full h-full object-cover rounded-full" />
                                             </div>
                                         </div>
                                         <div>
@@ -275,13 +283,13 @@ const Quickstart: React.FC = () => {
                                         </div>
                                     </div>
                                     <div className="grid grid-cols-3 gap-0.5 mb-0.5">
-                                        <img src="/project-images/interior-kitchen.png" className="aspect-square object-cover" />
-                                        <img src="/project-images/exterior-front.png" className="aspect-square object-cover" />
-                                        <img src="/project-images/interior-living.jpg" className="aspect-square object-cover" />
+                                        <img src={interiorKitchen} className="aspect-square object-cover" />
+                                        <img src={exteriorFront} className="aspect-square object-cover" />
+                                        <img src={interiorLiving} className="aspect-square object-cover" />
                                     </div>
                                     <div className="grid grid-cols-3 gap-0.5">
-                                        <img src="/project-images/exterior-rear.jpg" className="aspect-square object-cover" />
-                                        <img src="/project-images/exterior-side.png" className="aspect-square object-cover grayscale opacity-50" />
+                                        <img src={exteriorRear} className="aspect-square object-cover" />
+                                        <img src={exteriorSide} className="aspect-square object-cover grayscale opacity-50" />
                                         <div className="aspect-square bg-slate-100 flex items-center justify-center text-[8px] text-slate-400">More...</div>
                                     </div>
                                 </div>
@@ -313,21 +321,21 @@ const Quickstart: React.FC = () => {
                                 <div className="grid grid-cols-2 gap-4 w-full max-w-sm rotate-1 hover:rotate-0 transition-transform duration-500">
                                     <div className="space-y-4">
                                         <img
-                                            src="/project-images/interior-living.jpg"
+                                            src={interiorLiving}
                                             className="h-40 object-cover rounded-lg w-full shadow-lg"
                                         />
                                         <img
-                                            src="/project-images/exterior-front.png"
+                                            src={exteriorFront}
                                             className="h-24 object-cover rounded-lg w-full shadow-lg"
                                         />
                                     </div>
                                     <div className="space-y-4 pt-8">
                                         <img
-                                            src="/project-images/interior-kitchen.png"
+                                            src={interiorKitchen}
                                             className="h-24 object-cover rounded-lg w-full shadow-lg"
                                         />
                                         <img
-                                            src="/project-images/exterior-rear.jpg"
+                                            src={exteriorRear}
                                             className="h-40 object-cover rounded-lg w-full shadow-lg"
                                         />
                                     </div>
