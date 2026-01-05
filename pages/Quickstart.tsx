@@ -6,12 +6,12 @@ import BrowserFrame from '../components/ui/BrowserFrame';
 import VersoShowcase from '../components/website/VersoShowcase';
 
 // Import Images
-import versoLogo from '../assets/images/verso-logo.png';
-import interiorKitchen from '../assets/images/interior-kitchen.png';
-import exteriorFront from '../assets/images/exterior-front.png';
-import interiorLiving from '../assets/images/interior-living.jpg';
-import exteriorRear from '../assets/images/exterior-rear.jpg';
-import exteriorSide from '../assets/images/exterior-side.png';
+import versoLogo from '../src/assets/images/verso-logo.png';
+import interiorKitchen from '../src/assets/images/interior-kitchen.png';
+import exteriorFront from '../src/assets/images/exterior-front.png';
+import interiorLiving from '../src/assets/images/interior-living.jpg';
+import exteriorRear from '../src/assets/images/exterior-rear.jpg';
+import exteriorSide from '../src/assets/images/exterior-side.png';
 
 const Quickstart: React.FC = () => {
     const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
