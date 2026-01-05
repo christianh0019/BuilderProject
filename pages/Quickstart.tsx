@@ -35,8 +35,7 @@ const Quickstart: React.FC = () => {
                     {/* Hero Section */}
                     <div className="text-center mb-24 max-w-4xl mx-auto">
                         <div className="inline-flex items-center gap-2 px-4 py-2 bg-purple-100 text-purple-700 rounded-full text-sm font-bold mb-8 border border-purple-200 shadow-sm animate-fadeIn">
-                            <Star size={16} fill="currentColor" />
-                            <span>New Service Launch</span>
+                            <span>For Growing Builders/ Remodelers</span>
                         </div>
 
                         <h1 className="text-4xl md:text-5xl font-serif font-bold text-slate-900 mb-6 leading-tight">
@@ -49,10 +48,10 @@ const Quickstart: React.FC = () => {
                         <div className="max-w-3xl mx-auto space-y-8">
 
                             <p className="text-lg text-slate-600 leading-relaxed">
-                                Our Full-Service Partnership is for builders and remodelers doing $1M+/yr. If you're not there yet, you don't need the complexity or monthly retainers—you need a powerful first impression.
+                                Our Full-Service Partnership is for builders and remodelers doing $1M+/yr. If you're not there yet, you don't need the complexity or monthly retainers—you need a powerful first impression and backend selling system.
                             </p>
                             <p className="text-lg text-slate-600 leading-relaxed">
-                                The <strong>Online Presence Quickstart</strong> is a one-time investment in your critical digital assets: a high-converting website, Google visibility, and professional branding. Build credibility, attract better clients, and charge what you're worth.
+                                <strong>The Foundation</strong> is a one-time investment in your critical digital assets: a high-converting website, Google visibility, and professional branding. Build credibility, attract better clients, and charge what you're worth.
                             </p>
                         </div>
                     </div>
