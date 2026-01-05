@@ -29,9 +29,7 @@ const Quickstart: React.FC = () => {
                         </h1>
 
                         <div className="max-w-3xl mx-auto space-y-8">
-                            <p className="text-2xl md:text-3xl font-medium text-slate-800 font-serif leading-tight">
-                                You build quality homes. It's time your online presence reflected that quality.
-                            </p>
+
                             <p className="text-lg text-slate-600 leading-relaxed">
                                 Our Full-Service Partnership is for builders and remodelers doing $1M+/yr. If you're not there yet, you don't need the complexity or monthly retainers—you need a powerful first impression.
                             </p>
