@@ -190,13 +190,13 @@ const Quickstart: React.FC = () => {
                                         </div>
                                     </div>
                                     <div className="grid grid-cols-3 gap-0.5 mb-0.5">
-                                        <img src="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?auto=format&fit=crop&w=150&q=80" className="aspect-square object-cover" />
-                                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=150&q=80" className="aspect-square object-cover" />
-                                        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=150&q=80" className="aspect-square object-cover" />
+                                        <img src="/project-images/interior-kitchen.png" className="aspect-square object-cover" />
+                                        <img src="/project-images/exterior-front.png" className="aspect-square object-cover" />
+                                        <img src="/project-images/interior-living.jpg" className="aspect-square object-cover" />
                                     </div>
                                     <div className="grid grid-cols-3 gap-0.5">
-                                        <img src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&fit=crop&w=150&q=80" className="aspect-square object-cover" />
-                                        <img src="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?auto=format&fit=crop&w=150&q=80" className="aspect-square object-cover grayscale opacity-50" />
+                                        <img src="/project-images/exterior-rear.jpg" className="aspect-square object-cover" />
+                                        <img src="/project-images/exterior-side.png" className="aspect-square object-cover grayscale opacity-50" />
                                         <div className="aspect-square bg-slate-100 flex items-center justify-center text-[8px] text-slate-400">More...</div>
                                     </div>
                                 </div>
@@ -227,21 +227,21 @@ const Quickstart: React.FC = () => {
                                 <div className="grid grid-cols-2 gap-4 w-full max-w-sm rotate-1 hover:rotate-0 transition-transform duration-500">
                                     <div className="space-y-4">
                                         <img
-                                            src="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?auto=format&fit=crop&w=400&q=80"
+                                            src="/project-images/interior-living.jpg"
                                             className="h-40 object-cover rounded-lg w-full shadow-lg"
                                         />
                                         <img
-                                            src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&fit=crop&w=400&q=80"
+                                            src="/project-images/exterior-front.png"
                                             className="h-24 object-cover rounded-lg w-full shadow-lg"
                                         />
                                     </div>
                                     <div className="space-y-4 pt-8">
                                         <img
-                                            src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=400&q=80"
+                                            src="/project-images/interior-kitchen.png"
                                             className="h-24 object-cover rounded-lg w-full shadow-lg"
                                         />
                                         <img
-                                            src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=400&q=80"
+                                            src="/project-images/exterior-rear.jpg"
                                             className="h-40 object-cover rounded-lg w-full shadow-lg"
                                         />
                                     </div>
