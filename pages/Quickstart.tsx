@@ -25,12 +25,15 @@ const Quickstart: React.FC = () => {
                             </span>
                         </h1>
 
-                        <div className="max-w-3xl mx-auto space-y-6">
-                            <p className="text-xl font-medium text-slate-800">
-                                You build quality homes. It's time your online presence reflected that quality. This is the one-time investment you need to build brand credibility, attract better clients, and charge what you're worth.
+                        <div className="max-w-3xl mx-auto space-y-8">
+                            <p className="text-2xl md:text-3xl font-medium text-slate-800 font-serif leading-tight">
+                                You build quality homes. It's time your online presence reflected that quality.
                             </p>
                             <p className="text-lg text-slate-600 leading-relaxed">
-                                Our Full-Service Partnership is for builders and remodelers doing over $1M/yr. in revenue. If you're not there yet, you don't need the complexity or the monthly retainers. You need a powerful first impression. The <strong>Online Presence Quickstart</strong> is a focused buildout of your critical digital assets—a high-converting website, Google visibility, and professional branding—to turn your growing reputation into reliable revenue.
+                                Our Full-Service Partnership is for builders and remodelers doing $1M+/yr. If you're not there yet, you don't need the complexity or monthly retainers—you need a powerful first impression.
+                            </p>
+                            <p className="text-lg text-slate-600 leading-relaxed">
+                                The <strong>Online Presence Quickstart</strong> is a one-time investment in your critical digital assets: a high-converting website, Google visibility, and professional branding. Build credibility, attract better clients, and charge what you're worth.
                             </p>
                         </div>
                     </div>
