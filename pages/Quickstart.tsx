@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import SimpleHeader from '../components/SimpleHeader';
 import Modal from '../components/ui/Modal';
-import { CheckCircle2, ArrowRight, Star, MapPin, Search } from 'lucide-react';
+import { CheckCircle2, ArrowRight, Star, MapPin, Search, Users, MessageSquare } from 'lucide-react';
 import BrowserFrame from '../components/ui/BrowserFrame';
 import VersoShowcase from '../components/website/VersoShowcase';
 
@@ -57,6 +57,7 @@ const Quickstart: React.FC = () => {
                                     <ul className="space-y-4">
                                         {[
                                             "Professional High-Converting Website",
+                                            "BuilderProject CRM Setup (GHL)",
                                             "Google Business Profile Optimization",
                                             "Social Media Branding Kit",
                                             "Project Portfolio Setup",
@@ -74,7 +75,7 @@ const Quickstart: React.FC = () => {
 
                                 <div className="bg-slate-50 p-8 rounded-2xl border border-slate-100 text-center">
                                     <p className="text-slate-500 text-sm font-bold uppercase tracking-wider mb-2">One-Time Investment</p>
-                                    <div className="text-4xl font-serif font-bold text-slate-900 mb-6">$3,997</div>
+                                    <div className="text-4xl font-serif font-bold text-slate-900 mb-6">$4,997</div>
                                     <button
                                         onClick={() => setIsBookingModalOpen(true)}
                                         className="w-full bg-slate-900 text-white font-bold py-4 rounded-xl hover:bg-gradient-to-r hover:from-purple-700 hover:to-pink-600 transition-all duration-300 shadow-lg shadow-purple-500/20 flex items-center justify-center gap-2 group"
@@ -120,8 +121,72 @@ const Quickstart: React.FC = () => {
                             </div>
                         </div>
 
-                        {/* Feature 2: GBP (Visual Update) */}
+                        {/* Feature 2: CRM (New) */}
                         <div className="flex flex-col md:flex-row-reverse gap-12 items-center">
+                            <div className="md:w-1/2">
+                                <span className="text-indigo-600 font-bold tracking-wider text-sm uppercase mb-2 block">Lead Engine</span>
+                                <h3 className="text-3xl font-serif font-bold text-slate-900 mb-6">BuilderProject CRM Setup</h3>
+                                <p className="text-lg text-slate-600 mb-6 leading-relaxed">
+                                    Stop using spreadsheets and sticky notes. We set you up with the full power of the BuilderProject CRM (powered by GoHighLevel). Automated lead capture, text/email follow-ups, and a clear pipeline dashboard so you never lose a potential project again.
+                                </p>
+                                <ul className="space-y-3">
+                                    <li className="flex items-center gap-3 text-slate-700 font-medium">
+                                        <div className="bg-green-100 p-1 rounded-full text-green-600"><CheckCircle2 size={16} /></div>
+                                        Automated speed-to-lead follow-up
+                                    </li>
+                                    <li className="flex items-center gap-3 text-slate-700 font-medium">
+                                        <div className="bg-green-100 p-1 rounded-full text-green-600"><CheckCircle2 size={16} /></div>
+                                        Centralized Communication Hub
+                                    </li>
+                                </ul>
+                                <SectionCTA />
+                            </div>
+                            <div className="md:w-1/2 bg-slate-900 rounded-3xl p-8 border border-slate-800 flex items-center justify-center">
+                                {/* CRM Pipeline Mock */}
+                                <div className="bg-slate-800 w-full max-w-sm rounded-xl border border-slate-700 p-4 shadow-2xl">
+                                    <div className="flex items-center justify-between mb-4 border-b border-slate-700 pb-2">
+                                        <span className="text-slate-200 font-bold text-sm">Opportunities</span>
+                                        <div className="flex gap-2">
+                                            <div className="w-16 h-2 bg-green-500 rounded-full"></div>
+                                            <div className="w-8 h-2 bg-slate-600 rounded-full"></div>
+                                        </div>
+                                    </div>
+                                    <div className="flex gap-3 overflow-hidden">
+                                        {/* Column 1 */}
+                                        <div className="flex-1 bg-slate-900/50 rounded-lg p-2 space-y-2">
+                                            <div className="text-[10px] uppercase text-slate-500 font-bold mb-1">New Leads (3)</div>
+                                            <div className="bg-white p-2 rounded shadow-sm border-l-4 border-blue-500">
+                                                <div className="text-xs font-bold text-slate-900">John Smith</div>
+                                                <div className="text-[10px] text-slate-500">$1.2M Custom</div>
+                                            </div>
+                                            <div className="bg-white p-2 rounded shadow-sm border-l-4 border-blue-500">
+                                                <div className="text-xs font-bold text-slate-900">Sarah Jones</div>
+                                                <div className="text-[10px] text-slate-500">Kitchen Remodel</div>
+                                            </div>
+                                        </div>
+                                        {/* Column 2 */}
+                                        <div className="flex-1 bg-slate-900/50 rounded-lg p-2 space-y-2 opacity-75">
+                                            <div className="text-[10px] uppercase text-slate-500 font-bold mb-1">Contacted (1)</div>
+                                            <div className="bg-white p-2 rounded shadow-sm border-l-4 border-orange-500">
+                                                <div className="text-xs font-bold text-slate-900">Mike Miller</div>
+                                                <div className="text-[10px] text-slate-500">Site Visit</div>
+                                            </div>
+                                        </div>
+                                        {/* Column 3 */}
+                                        <div className="flex-1 bg-slate-900/50 rounded-lg p-2 space-y-2 opacity-50">
+                                            <div className="text-[10px] uppercase text-slate-500 font-bold mb-1">Proposal</div>
+                                        </div>
+                                    </div>
+                                    <div className="mt-4 flex items-center gap-2 text-xs text-slate-400">
+                                        <MessageSquare size={12} />
+                                        <span>Automated SMS: "Hi John, saw you requested..."</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Feature 3: GBP (Visual Update) */}
+                        <div className="flex flex-col md:flex-row gap-12 items-center">
                             <div className="md:w-1/2">
                                 <span className="text-blue-600 font-bold tracking-wider text-sm uppercase mb-2 block">Local Visibility</span>
                                 <h3 className="text-3xl font-serif font-bold text-slate-900 mb-6">Google Business Profile Optimization</h3>
@@ -175,8 +240,8 @@ const Quickstart: React.FC = () => {
                             </div>
                         </div>
 
-                        {/* Feature 3: Social Branding (Visual Update) */}
-                        <div className="flex flex-col md:flex-row gap-12 items-center">
+                        {/* Feature 4: Social Branding (Visual Update) */}
+                        <div className="flex flex-col md:flex-row-reverse gap-12 items-center">
                             <div className="md:w-1/2">
                                 <span className="text-pink-600 font-bold tracking-wider text-sm uppercase mb-2 block">Brand Perception</span>
                                 <h3 className="text-3xl font-serif font-bold text-slate-900 mb-6">Social Media Branding Kit</h3>
@@ -223,8 +288,8 @@ const Quickstart: React.FC = () => {
                             </div>
                         </div>
 
-                        {/* Feature 4: Portfolio (Visual Update) */}
-                        <div className="flex flex-col md:flex-row-reverse gap-12 items-center">
+                        {/* Feature 5: Portfolio (Visual Update) */}
+                        <div className="flex flex-col md:flex-row gap-12 items-center">
                             <div className="md:w-1/2">
                                 <span className="text-orange-600 font-bold tracking-wider text-sm uppercase mb-2 block">Showcase</span>
                                 <h3 className="text-3xl font-serif font-bold text-slate-900 mb-6">Project Portfolio Setup</h3>
@@ -270,8 +335,8 @@ const Quickstart: React.FC = () => {
                             </div>
                         </div>
 
-                        {/* Feature 5: SEO (Visual Update) */}
-                        <div className="flex flex-col md:flex-row gap-12 items-center">
+                        {/* Feature 6: SEO (Visual Update) */}
+                        <div className="flex flex-col md:flex-row-reverse gap-12 items-center">
                             <div className="md:w-1/2">
                                 <span className="text-green-600 font-bold tracking-wider text-sm uppercase mb-2 block">Long-Term Growth</span>
                                 <h3 className="text-3xl font-serif font-bold text-slate-900 mb-6">Basic SEO Foundation</h3>
@@ -329,7 +394,7 @@ const Quickstart: React.FC = () => {
                         onClick={() => setIsBookingModalOpen(true)}
                         className="bg-white text-slate-900 font-bold py-4 px-10 rounded-xl hover:bg-slate-100 transition-all duration-300 shadow-xl shadow-white/10 text-lg flex items-center justify-center gap-3 mx-auto group"
                     >
-                        Get Started - $3,997
+                        Get Started - $4,997
                         <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
                     </button>
                     <div className="mt-8 flex items-center justify-center gap-6 text-sm text-slate-500">
