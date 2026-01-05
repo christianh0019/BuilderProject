@@ -1,6 +1,9 @@
+
 import React from 'react';
 import SimpleHeader from '../components/SimpleHeader';
-import { CheckCircle2, ArrowRight } from 'lucide-react';
+import { CheckCircle2, ArrowRight, Star, MapPin, Search } from 'lucide-react';
+import BrowserFrame from '../components/ui/BrowserFrame';
+import VersoShowcase from '../components/website/VersoShowcase';
 
 const Quickstart: React.FC = () => {
     return (
@@ -87,16 +90,16 @@ const Quickstart: React.FC = () => {
                                     </li>
                                 </ul>
                             </div>
-                            <div className="md:w-1/2 bg-slate-100 rounded-3xl p-8 border border-slate-200 aspect-video flex items-center justify-center">
-                                {/* Placeholder for visual or simplified browser frame */}
-                                <div className="text-center">
-                                    <div className="text-6xl mb-4">🖥️</div>
-                                    <div className="font-bold text-slate-400 uppercase tracking-widest text-sm">Visual Representation</div>
+                            <div className="md:w-1/2">
+                                <div className="transform scale-95 hover:scale-100 transition-transform duration-500">
+                                    <BrowserFrame url="versobuilders.com">
+                                        <VersoShowcase />
+                                    </BrowserFrame>
                                 </div>
                             </div>
                         </div>
 
-                        {/* Feature 2: GBP */}
+                        {/* Feature 2: GBP (Visual Update) */}
                         <div className="flex flex-col md:flex-row-reverse gap-12 items-center">
                             <div className="md:w-1/2">
                                 <span className="text-blue-600 font-bold tracking-wider text-sm uppercase mb-2 block">Local Visibility</span>
@@ -115,15 +118,40 @@ const Quickstart: React.FC = () => {
                                     </li>
                                 </ul>
                             </div>
-                            <div className="md:w-1/2 bg-blue-50 rounded-3xl p-8 border border-blue-100 aspect-video flex items-center justify-center">
-                                <div className="text-center">
-                                    <div className="text-6xl mb-4">📍</div>
-                                    <div className="font-bold text-blue-300 uppercase tracking-widest text-sm">Map Dominance</div>
+                            <div className="md:w-1/2 bg-slate-100 rounded-3xl p-8 border border-slate-200 flex items-center justify-center relative overflow-hidden group">
+                                <div className="absolute inset-0 bg-[#eef0f3] z-0"></div>
+                                {/* Map Mock */}
+                                <div className="bg-white rounded-xl shadow-xl p-4 w-full max-w-sm relative z-10 transform group-hover:-translate-y-2 transition-transform duration-300">
+                                    <div className="flex gap-4 mb-4">
+                                        <div className="w-16 h-16 bg-blue-600 rounded-lg flex items-center justify-center text-white font-bold text-2xl">V</div>
+                                        <div>
+                                            <h4 className="font-bold text-lg text-slate-900">Verso Custom Builders</h4>
+                                            <div className="flex items-center gap-1 text-orange-400 text-sm mb-1">
+                                                <Star fill="currentColor" size={14} />
+                                                <Star fill="currentColor" size={14} />
+                                                <Star fill="currentColor" size={14} />
+                                                <Star fill="currentColor" size={14} />
+                                                <Star fill="currentColor" size={14} />
+                                                <span className="text-slate-500 ml-1">(48)</span>
+                                            </div>
+                                            <div className="text-xs text-slate-500">Custom home builder in Pittsburgh, PA</div>
+                                        </div>
+                                    </div>
+                                    <div className="space-y-2">
+                                        <div className="flex items-center gap-3 text-sm text-slate-600">
+                                            <MapPin size={16} className="text-blue-500" />
+                                            <span>Serving Greater Pittsburgh Area</span>
+                                        </div>
+                                        <div className="flex gap-2 mt-4">
+                                            <div className="flex-1 bg-blue-600 text-white text-center py-2 rounded-lg font-bold text-sm">Website</div>
+                                            <div className="flex-1 bg-slate-100 text-slate-700 text-center py-2 rounded-lg font-bold text-sm">Call</div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
-                        {/* Feature 3: Social Branding */}
+                        {/* Feature 3: Social Branding (Visual Update) */}
                         <div className="flex flex-col md:flex-row gap-12 items-center">
                             <div className="md:w-1/2">
                                 <span className="text-pink-600 font-bold tracking-wider text-sm uppercase mb-2 block">Brand Perception</span>
@@ -142,15 +170,35 @@ const Quickstart: React.FC = () => {
                                     </li>
                                 </ul>
                             </div>
-                            <div className="md:w-1/2 bg-pink-50 rounded-3xl p-8 border border-pink-100 aspect-video flex items-center justify-center">
-                                <div className="text-center">
-                                    <div className="text-6xl mb-4">📱</div>
-                                    <div className="font-bold text-pink-300 uppercase tracking-widest text-sm">Instant Authority</div>
+                            <div className="md:w-1/2 bg-slate-50 rounded-3xl p-8 border border-slate-100 flex items-center justify-center">
+                                {/* Instagram Mock */}
+                                <div className="bg-white rounded-3xl shadow-2xl border border-slate-200 p-4 w-64 transform rotate-1 hover:rotate-0 transition-transform duration-300">
+                                    <div className="flex items-center gap-3 mb-6">
+                                        <div className="w-12 h-12 rounded-full bg-gradient-to-tr from-yellow-400 via-red-500 to-purple-600 p-[2px]">
+                                            <div className="w-full h-full rounded-full bg-white p-[2px]">
+                                                <div className="w-full h-full bg-slate-200 rounded-full"></div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div className="h-3 w-24 bg-slate-900 rounded mb-1"></div>
+                                            <div className="h-2 w-16 bg-slate-300 rounded"></div>
+                                        </div>
+                                    </div>
+                                    <div className="grid grid-cols-3 gap-1 mb-1">
+                                        <div className="aspect-square bg-slate-100 rounded-sm"></div>
+                                        <div className="aspect-square bg-slate-200 rounded-sm"></div>
+                                        <div className="aspect-square bg-slate-100 rounded-sm"></div>
+                                    </div>
+                                    <div className="grid grid-cols-3 gap-1">
+                                        <div className="aspect-square bg-slate-200 rounded-sm"></div>
+                                        <div className="aspect-square bg-slate-100 rounded-sm"></div>
+                                        <div className="aspect-square bg-slate-200 rounded-sm"></div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
-                        {/* Feature 4: Portfolio */}
+                        {/* Feature 4: Portfolio (Visual Update) */}
                         <div className="flex flex-col md:flex-row-reverse gap-12 items-center">
                             <div className="md:w-1/2">
                                 <span className="text-orange-600 font-bold tracking-wider text-sm uppercase mb-2 block">Showcase</span>
@@ -169,15 +217,22 @@ const Quickstart: React.FC = () => {
                                     </li>
                                 </ul>
                             </div>
-                            <div className="md:w-1/2 bg-orange-50 rounded-3xl p-8 border border-orange-100 aspect-video flex items-center justify-center">
-                                <div className="text-center">
-                                    <div className="text-6xl mb-4">📸</div>
-                                    <div className="font-bold text-orange-300 uppercase tracking-widest text-sm">SEO Gold</div>
+                            <div className="md:w-1/2 bg-slate-900 rounded-3xl p-8 border border-slate-800 flex items-center justify-center">
+                                {/* Masonry Grid Mock */}
+                                <div className="grid grid-cols-2 gap-4 w-full max-w-sm rotate-1 hover:rotate-0 transition-transform duration-500">
+                                    <div className="space-y-4">
+                                        <div className="h-40 bg-slate-800 rounded-lg w-full"></div>
+                                        <div className="h-24 bg-slate-700 rounded-lg w-full"></div>
+                                    </div>
+                                    <div className="space-y-4 pt-8">
+                                        <div className="h-24 bg-slate-700 rounded-lg w-full"></div>
+                                        <div className="h-40 bg-slate-800 rounded-lg w-full"></div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
-                        {/* Feature 5: SEO Foundation */}
+                        {/* Feature 5: SEO (Visual Update) */}
                         <div className="flex flex-col md:flex-row gap-12 items-center">
                             <div className="md:w-1/2">
                                 <span className="text-green-600 font-bold tracking-wider text-sm uppercase mb-2 block">Long-Term Growth</span>
@@ -196,10 +251,25 @@ const Quickstart: React.FC = () => {
                                     </li>
                                 </ul>
                             </div>
-                            <div className="md:w-1/2 bg-green-50 rounded-3xl p-8 border border-green-100 aspect-video flex items-center justify-center">
-                                <div className="text-center">
-                                    <div className="text-6xl mb-4">🚀</div>
-                                    <div className="font-bold text-green-300 uppercase tracking-widest text-sm">Ranking Power</div>
+                            <div className="md:w-1/2 bg-white rounded-3xl p-8 border border-slate-200 shadow-sm flex flex-col justify-center">
+                                {/* SEO Result Mock */}
+                                <div className="bg-white w-full max-w-md mx-auto p-4 rounded-xl border border-slate-100 shadow-sm mb-4">
+                                    <div className="flex items-center gap-2 mb-2">
+                                        <div className="w-6 h-6 bg-slate-200 rounded-full"></div>
+                                        <div className="flex flex-col">
+                                            <div className="text-xs text-slate-800 font-medium">Verso Builders</div>
+                                            <div className="text-[10px] text-slate-500">https://versobuilders.com</div>
+                                        </div>
+                                    </div>
+                                    <div className="text-purple-700 text-lg hover:underline cursor-pointer mb-1 text-left">Custom Home Builders in Pittsburgh | Luxury Design</div>
+                                    <div className="text-sm text-slate-600 text-left">
+                                        Award-winning custom home builders serving the Greater Pittsburgh area. Start your dream home project today with Verso Builders.
+                                    </div>
+                                </div>
+                                <div className="bg-white w-full max-w-md mx-auto p-4 rounded-xl border border-slate-100 shadow-sm opacity-50">
+                                    <div className="h-4 w-32 bg-slate-100 rounded mb-2"></div>
+                                    <div className="h-4 w-56 bg-slate-200 rounded mb-2"></div>
+                                    <div className="h-12 w-full bg-slate-50 rounded"></div>
                                 </div>
                             </div>
                         </div>
