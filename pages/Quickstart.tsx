@@ -1,21 +1,24 @@
-
-import React from 'react';
+import React, { useState } from 'react';
 import SimpleHeader from '../components/SimpleHeader';
+import Modal from '../components/ui/Modal';
 import { CheckCircle2, ArrowRight, Star, MapPin, Search } from 'lucide-react';
 import BrowserFrame from '../components/ui/BrowserFrame';
 import VersoShowcase from '../components/website/VersoShowcase';
 
 const Quickstart: React.FC = () => {
+    const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
+
     return (
-        <div className="min-h-screen bg-slate-50 flex flex-col">
+        <div className="min-h-screen bg-slate-50 font-sans text-slate-900 selection:bg-purple-100 selection:text-purple-900">
             <SimpleHeader />
 
-            <div className="flex-grow pt-24 pb-20 px-6">
-                <div className="container mx-auto max-w-4xl">
-                    <div className="text-center mb-16">
-                        <div className="inline-flex items-center gap-2 px-4 py-2 bg-purple-100 text-purple-700 rounded-full text-sm font-bold mb-6 border border-purple-200 animate-fadeIn">
-                            <span className="w-2 h-2 rounded-full bg-purple-600 animate-pulse"></span>
-                            <span>Perfect For Growing Builders</span>
+            <div className="pt-32 pb-20 px-6">
+                <div className="max-w-7xl mx-auto">
+                    {/* Hero Section */}
+                    <div className="text-center mb-24 max-w-4xl mx-auto">
+                        <div className="inline-flex items-center gap-2 px-4 py-2 bg-purple-100 text-purple-700 rounded-full text-sm font-bold mb-8 border border-purple-200 shadow-sm animate-fadeIn">
+                            <Star size={16} fill="currentColor" />
+                            <span>New Service Launch</span>
                         </div>
 
                         <h1 className="text-4xl md:text-5xl font-serif font-bold text-slate-900 mb-6 leading-tight">
@@ -63,8 +66,11 @@ const Quickstart: React.FC = () => {
 
                                 <div className="bg-slate-50 p-8 rounded-2xl border border-slate-100 text-center">
                                     <p className="text-slate-500 text-sm font-bold uppercase tracking-wider mb-2">One-Time Investment</p>
-                                    <div className="text-4xl font-serif font-bold text-slate-900 mb-6">$4,970</div>
-                                    <button className="w-full bg-slate-900 text-white font-bold py-4 rounded-xl hover:bg-gradient-to-r hover:from-purple-700 hover:to-pink-600 transition-all duration-300 shadow-lg shadow-purple-500/20 flex items-center justify-center gap-2 group">
+                                    <div className="text-4xl font-serif font-bold text-slate-900 mb-6">$3,997</div>
+                                    <button
+                                        onClick={() => setIsBookingModalOpen(true)}
+                                        className="w-full bg-slate-900 text-white font-bold py-4 rounded-xl hover:bg-gradient-to-r hover:from-purple-700 hover:to-pink-600 transition-all duration-300 shadow-lg shadow-purple-500/20 flex items-center justify-center gap-2 group"
+                                    >
                                         Get Started
                                         <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
                                     </button>
@@ -293,14 +299,19 @@ const Quickstart: React.FC = () => {
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
 
-            <footer className="py-8 text-center text-slate-400 text-sm">
-                <p>© {new Date().getFullYear()} BuildSurge Collectives LLC DBA BuilderProject</p>
-            </footer>
+            {/* Booking Modal */}
+            <Modal isOpen={isBookingModalOpen} onClose={() => setIsBookingModalOpen(false)}>
+                <iframe
+                    src="https://api.leadconnectorhq.com/widget/booking/IBPe3yYeYt197wsoyG1r"
+                    style={{ width: '100%', height: '800px', border: 'none' }}
+                    id="booking-widget"
+                    title="Booking Calendar"
+                ></iframe>
+            </Modal>
         </div>
     );
 };
