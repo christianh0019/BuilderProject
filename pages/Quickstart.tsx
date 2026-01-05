@@ -65,35 +65,145 @@ const Quickstart: React.FC = () => {
                         </div>
                     </div>
 
-                    {/* Benefit Sections */}
-                    <div className="space-y-24">
-                        <div className="text-center mb-16">
-                            <h2 className="text-3xl font-serif font-bold text-slate-900 mb-6">Why You Need This Now</h2>
+                    {/* Detailed Feature Sections */}
+                    <div className="space-y-32">
+
+                        {/* Feature 1: Website */}
+                        <div className="flex flex-col md:flex-row gap-12 items-center">
+                            <div className="md:w-1/2">
+                                <span className="text-purple-600 font-bold tracking-wider text-sm uppercase mb-2 block">The Core</span>
+                                <h3 className="text-3xl font-serif font-bold text-slate-900 mb-6">Professional High-Converting Website</h3>
+                                <p className="text-lg text-slate-600 mb-6 leading-relaxed">
+                                    Your website is your "Digital Model Home". If it feels cheap, potential clients assume your work is cheap. We build you a high-performance site designed specifically for construction—showcasing your portfolio, establishing authority, and converting visitors into leads.
+                                </p>
+                                <ul className="space-y-3">
+                                    <li className="flex items-center gap-3 text-slate-700 font-medium">
+                                        <div className="bg-green-100 p-1 rounded-full text-green-600"><CheckCircle2 size={16} /></div>
+                                        Fast-loading mobile optimization
+                                    </li>
+                                    <li className="flex items-center gap-3 text-slate-700 font-medium">
+                                        <div className="bg-green-100 p-1 rounded-full text-green-600"><CheckCircle2 size={16} /></div>
+                                        Lead-capture focused layout
+                                    </li>
+                                </ul>
+                            </div>
+                            <div className="md:w-1/2 bg-slate-100 rounded-3xl p-8 border border-slate-200 aspect-video flex items-center justify-center">
+                                {/* Placeholder for visual or simplified browser frame */}
+                                <div className="text-center">
+                                    <div className="text-6xl mb-4">🖥️</div>
+                                    <div className="font-bold text-slate-400 uppercase tracking-widest text-sm">Visual Representation</div>
+                                </div>
+                            </div>
                         </div>
 
-                        <div className="grid md:grid-cols-3 gap-8">
-                            <div className="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm">
-                                <div className="text-4xl mb-6">🏗️</div>
-                                <h3 className="text-xl font-bold text-slate-900 mb-4">Look Like A Pro</h3>
-                                <p className="text-slate-600 leading-relaxed">
-                                    Stop losing jobs because your website looks like it was built in 1999. We build you a modern, credible site that proves you handle high-end projects.
+                        {/* Feature 2: GBP */}
+                        <div className="flex flex-col md:flex-row-reverse gap-12 items-center">
+                            <div className="md:w-1/2">
+                                <span className="text-blue-600 font-bold tracking-wider text-sm uppercase mb-2 block">Local Visibility</span>
+                                <h3 className="text-3xl font-serif font-bold text-slate-900 mb-6">Google Business Profile Optimization</h3>
+                                <p className="text-lg text-slate-600 mb-6 leading-relaxed">
+                                    When someone types "custom builder near me", you need to show up in the Map Pack. We claim, verify, and fully optimize your Google Business Profile to ensure you capture that high-intent local traffic.
                                 </p>
+                                <ul className="space-y-3">
+                                    <li className="flex items-center gap-3 text-slate-700 font-medium">
+                                        <div className="bg-green-100 p-1 rounded-full text-green-600"><CheckCircle2 size={16} /></div>
+                                        Rank in local map searches
+                                    </li>
+                                    <li className="flex items-center gap-3 text-slate-700 font-medium">
+                                        <div className="bg-green-100 p-1 rounded-full text-green-600"><CheckCircle2 size={16} /></div>
+                                        Display reviews and credibility
+                                    </li>
+                                </ul>
                             </div>
-                            <div className="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm">
-                                <div className="text-4xl mb-6">📍</div>
-                                <h3 className="text-xl font-bold text-slate-900 mb-4">Get Found Locally</h3>
-                                <p className="text-slate-600 leading-relaxed">
-                                    We optimize your Google Business Profile so when people search "custom builder near me", you actually show up on the map.
-                                </p>
-                            </div>
-                            <div className="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm">
-                                <div className="text-4xl mb-6">📱</div>
-                                <h3 className="text-xl font-bold text-slate-900 mb-4">Social Proof</h3>
-                                <p className="text-slate-600 leading-relaxed">
-                                    We set up your Instagram and Facebook with branded templates so every photo you post looks polished and professional.
-                                </p>
+                            <div className="md:w-1/2 bg-blue-50 rounded-3xl p-8 border border-blue-100 aspect-video flex items-center justify-center">
+                                <div className="text-center">
+                                    <div className="text-6xl mb-4">📍</div>
+                                    <div className="font-bold text-blue-300 uppercase tracking-widest text-sm">Map Dominance</div>
+                                </div>
                             </div>
                         </div>
+
+                        {/* Feature 3: Social Branding */}
+                        <div className="flex flex-col md:flex-row gap-12 items-center">
+                            <div className="md:w-1/2">
+                                <span className="text-pink-600 font-bold tracking-wider text-sm uppercase mb-2 block">Brand Perception</span>
+                                <h3 className="text-3xl font-serif font-bold text-slate-900 mb-6">Social Media Branding Kit</h3>
+                                <p className="text-lg text-slate-600 mb-6 leading-relaxed">
+                                    Inconsistent or ugly social channels scream "amateur". We provide you with professional bio setups, profile graphics, and a template system so every project photo you post looks like it belongs in a magazine.
+                                </p>
+                                <ul className="space-y-3">
+                                    <li className="flex items-center gap-3 text-slate-700 font-medium">
+                                        <div className="bg-green-100 p-1 rounded-full text-green-600"><CheckCircle2 size={16} /></div>
+                                        Cohesive cross-platform identity
+                                    </li>
+                                    <li className="flex items-center gap-3 text-slate-700 font-medium">
+                                        <div className="bg-green-100 p-1 rounded-full text-green-600"><CheckCircle2 size={16} /></div>
+                                        Ready-to-use posting templates
+                                    </li>
+                                </ul>
+                            </div>
+                            <div className="md:w-1/2 bg-pink-50 rounded-3xl p-8 border border-pink-100 aspect-video flex items-center justify-center">
+                                <div className="text-center">
+                                    <div className="text-6xl mb-4">📱</div>
+                                    <div className="font-bold text-pink-300 uppercase tracking-widest text-sm">Instant Authority</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Feature 4: Portfolio */}
+                        <div className="flex flex-col md:flex-row-reverse gap-12 items-center">
+                            <div className="md:w-1/2">
+                                <span className="text-orange-600 font-bold tracking-wider text-sm uppercase mb-2 block">Showcase</span>
+                                <h3 className="text-3xl font-serif font-bold text-slate-900 mb-6">Project Portfolio Setup</h3>
+                                <p className="text-lg text-slate-600 mb-6 leading-relaxed">
+                                    Turn your past projects into SEO gold. We don't just dump photo galleries online; we structure your project pages to rank for specific terms like "Modern Farmhouse in [City]" so your work sells itself 24/7.
+                                </p>
+                                <ul className="space-y-3">
+                                    <li className="flex items-center gap-3 text-slate-700 font-medium">
+                                        <div className="bg-green-100 p-1 rounded-full text-green-600"><CheckCircle2 size={16} /></div>
+                                        SEO-optimized project descriptions
+                                    </li>
+                                    <li className="flex items-center gap-3 text-slate-700 font-medium">
+                                        <div className="bg-green-100 p-1 rounded-full text-green-600"><CheckCircle2 size={16} /></div>
+                                        High-end gallery layout
+                                    </li>
+                                </ul>
+                            </div>
+                            <div className="md:w-1/2 bg-orange-50 rounded-3xl p-8 border border-orange-100 aspect-video flex items-center justify-center">
+                                <div className="text-center">
+                                    <div className="text-6xl mb-4">📸</div>
+                                    <div className="font-bold text-orange-300 uppercase tracking-widest text-sm">SEO Gold</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Feature 5: SEO Foundation */}
+                        <div className="flex flex-col md:flex-row gap-12 items-center">
+                            <div className="md:w-1/2">
+                                <span className="text-green-600 font-bold tracking-wider text-sm uppercase mb-2 block">Long-Term Growth</span>
+                                <h3 className="text-3xl font-serif font-bold text-slate-900 mb-6">Basic SEO Foundation</h3>
+                                <p className="text-lg text-slate-600 mb-6 leading-relaxed">
+                                    We bake SEO into the core of your new site. Proper schema markup, site speed optimization, and keyword-targeted architecture ensure that you start climbing the rankings from Day 1.
+                                </p>
+                                <ul className="space-y-3">
+                                    <li className="flex items-center gap-3 text-slate-700 font-medium">
+                                        <div className="bg-green-100 p-1 rounded-full text-green-600"><CheckCircle2 size={16} /></div>
+                                        Google-ready site architecture
+                                    </li>
+                                    <li className="flex items-center gap-3 text-slate-700 font-medium">
+                                        <div className="bg-green-100 p-1 rounded-full text-green-600"><CheckCircle2 size={16} /></div>
+                                        Technical SEO best practices
+                                    </li>
+                                </ul>
+                            </div>
+                            <div className="md:w-1/2 bg-green-50 rounded-3xl p-8 border border-green-100 aspect-video flex items-center justify-center">
+                                <div className="text-center">
+                                    <div className="text-6xl mb-4">🚀</div>
+                                    <div className="font-bold text-green-300 uppercase tracking-widest text-sm">Ranking Power</div>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
