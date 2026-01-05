@@ -184,7 +184,7 @@ const Quickstart: React.FC = () => {
                             </div>
                             <div className="md:w-1/2 bg-slate-50 rounded-3xl p-8 border border-slate-100 flex items-center justify-center">
                                 {/* Instagram Mock */}
-                                <div className="bg-white rounded-3xl shadow-2xl border border-slate-200 p-4 w-64 transform rotate-1 hover:rotate-0 transition-transform duration-300">
+                                <div className="bg-white rounded-3xl shadow-2xl border border-slate-200 p-4 w-full max-w-sm transform rotate-1 hover:rotate-0 transition-transform duration-300">
                                     <div className="flex items-center gap-3 mb-6">
                                         <div className="w-12 h-12 rounded-full bg-gradient-to-tr from-yellow-400 via-red-500 to-purple-600 p-[2px] shrink-0">
                                             <div className="w-full h-full rounded-full bg-white p-[2px] overflow-hidden">
