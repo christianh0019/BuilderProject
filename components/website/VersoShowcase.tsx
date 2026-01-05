@@ -117,7 +117,7 @@ const VersoShowcase: React.FC = () => {
                 <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
                     <div className="relative group cursor-pointer overflow-hidden aspect-[4/3]">
                         <img
-                            src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+                            src="/project-images/exterior-front.png"
                             alt="Hingham Coastal"
                             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                         />
@@ -129,7 +129,7 @@ const VersoShowcase: React.FC = () => {
                     </div>
                     <div className="relative group cursor-pointer overflow-hidden aspect-[4/3]">
                         <img
-                            src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+                            src="/project-images/exterior-rear.jpg"
                             alt="Cohasset Farmhouse"
                             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                         />
@@ -180,7 +180,7 @@ const VersoShowcase: React.FC = () => {
                     </div>
                     <div className="relative h-[600px]">
                         <img
-                            src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                            src="/project-images/interior-living.jpg"
                             alt="Interior Detail"
                             className="w-full h-full object-cover"
                         />
