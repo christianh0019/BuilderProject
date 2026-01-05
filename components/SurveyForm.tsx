@@ -34,9 +34,27 @@ const SurveyForm: React.FC = () => {
         setStep(prev => prev + 1);
     };
 
+    // Helper to get cookie by name without external dependencies
+    const getCookie = (name: string) => {
+        const value = `; ${document.cookie}`;
+        const parts = value.split(`; ${name}=`);
+        if (parts.length === 2) return parts.pop()?.split(';').shift();
+    };
+
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         setLoading(true);
+
+        // Capture Facebook cookies for CAPI
+        const fbp = getCookie('_fbp');
+        const fbc = getCookie('_fbc');
+
+        // Create payload with form data + Facebook external IDs
+        const payload = {
+            ...formData,
+            fbp,
+            fbc
+        };
 
         try {
             const response = await fetch('https://services.leadconnectorhq.com/hooks/HllUVzV8V6VFH4nUuq4W/webhook-trigger/fad0a645-e084-4b96-8216-6e72e76b8f98', {
@@ -44,7 +62,7 @@ const SurveyForm: React.FC = () => {
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify(formData),
+                body: JSON.stringify(payload),
             });
 
             if (response.ok) {
