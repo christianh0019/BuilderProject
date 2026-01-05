@@ -82,10 +82,19 @@ const SurveyForm: React.FC<SurveyFormProps> = ({ webhookUrl = 'https://services.
                 if (formData.email) params.append('email', formData.email);
                 if (formData.phone) params.append('phone', formData.phone);
 
-                navigate({
-                    pathname: '/booking',
-                    search: params.toString()
-                });
+                // Downsell Logic: Redirect "Just starting" and "Under $1M" to Quickstart
+                const lowRevenueOptions = ["I'm just starting", "Under $1M"];
+                if (lowRevenueOptions.includes(formData.revenue)) {
+                    navigate({
+                        pathname: '/quickstart',
+                        search: params.toString() // Pass params to Quickstart too, just in case we need them later
+                    });
+                } else {
+                    navigate({
+                        pathname: '/booking',
+                        search: params.toString()
+                    });
+                }
             } else {
                 console.error('Submission failed');
                 alert('Something went wrong. Please try again.');
@@ -188,7 +197,7 @@ const SurveyForm: React.FC<SurveyFormProps> = ({ webhookUrl = 'https://services.
                         <h2 className="text-3xl font-serif font-bold text-slate-900">What is your current yearly revenue?</h2>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        {["I'm just starting", "$100k - $500k", "$500k - $1M", "$1M - $3M", "$3M - $10M", "$10M+"].map((option) => (
+                        {["I'm just starting", "Under $1M", "$1M - $2M", "$2M - $5M", "$5M - $10M", "$10M+"].map((option) => (
                             <button
                                 key={option}
                                 onClick={() => handleSelection('revenue', option)}

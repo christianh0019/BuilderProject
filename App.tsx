@@ -20,6 +20,7 @@ import { HelmetProvider } from 'react-helmet-async';
 import Blog from './pages/Blog';
 import BlogPost from './pages/BlogPost';
 import AdvertisingLanding from './pages/AdvertisingLanding';
+import Quickstart from './pages/Quickstart';
 
 // Helper component to scroll to top on route change
 const ScrollToTopHelper = () => {
@@ -66,6 +67,7 @@ const App: React.FC = () => {
           <Route path="/partner-application" element={<AdvertisingLanding />} />
           <Route path="/booking" element={<Booking />} />
           <Route path="/thank-you" element={<ThankYou />} />
+          <Route path="/quickstart" element={<Quickstart />} />
         </Routes>
       </Router>
     </HelmetProvider>
