@@ -170,7 +170,7 @@ const Programs: React.FC = () => {
             {/* Tier 3: The Partner Program */}
             <div className="bg-slate-900 rounded-2xl shadow-2xl border border-purple-500/50 flex flex-col relative">
               <div className="absolute top-0 right-0 bg-gradient-to-l from-purple-600 to-pink-600 text-white text-xs font-bold px-4 py-1 rounded-bl-xl rounded-tr-2xl">
-                MOST POPULAR
+                BEST VALUE
               </div>
               <div className="p-8 bg-slate-800/50 rounded-t-2xl">
                 <div className="flex items-center gap-3 mb-4">
