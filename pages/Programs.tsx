@@ -106,8 +106,8 @@ const Programs: React.FC = () => {
 
             {/* Tier 2: The Pipeline */}
             <div className="bg-white rounded-2xl shadow-xl border border-purple-100 flex flex-col relative">
-              <div className="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-purple-700 to-pink-600 rounded-t-2xl"></div>
-              <div className="p-8 bg-purple-50/30 rounded-t-2xl">
+              <div className="p-8 bg-purple-50/30 rounded-t-2xl relative overflow-hidden">
+                <div className="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-purple-700 to-pink-600"></div>
                 <div className="flex items-center gap-3 mb-4">
                   <div className="p-2 bg-purple-100 rounded-lg shadow-sm text-purple-600">
                     <TrendingUp size={24} />
@@ -168,11 +168,11 @@ const Programs: React.FC = () => {
             </div>
 
             {/* Tier 3: The Partner Program */}
-            <div className="bg-slate-900 rounded-2xl shadow-2xl border border-purple-500/50 flex flex-col relative transform lg:-translate-y-4">
-              <div className="absolute top-0 right-0 bg-gradient-to-l from-purple-600 to-pink-600 text-white text-xs font-bold px-4 py-1 rounded-bl-xl rounded-tr-xl">
+            <div className="bg-slate-900 rounded-2xl shadow-2xl border border-purple-500/50 flex flex-col relative">
+              <div className="absolute top-0 right-0 bg-gradient-to-l from-purple-600 to-pink-600 text-white text-xs font-bold px-4 py-1 rounded-bl-xl rounded-tr-2xl">
                 MOST POPULAR
               </div>
-              <div className="p-8 bg-slate-800/50 rounded-t-xl">
+              <div className="p-8 bg-slate-800/50 rounded-t-2xl">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="p-2 bg-gradient-to-br from-purple-600 to-pink-600 rounded-lg shadow-lg text-white">
                     <Users size={24} />
@@ -189,14 +189,6 @@ const Programs: React.FC = () => {
                 <p className="text-xs text-slate-500 mt-2">+ ad spend budget</p>
               </div>
               <div className="p-8 flex-1">
-                <div className="bg-purple-900/20 border border-purple-500/30 rounded-xl p-4 mb-6">
-                  <div className="flex items-center gap-2 mb-2 text-purple-300 font-bold text-sm uppercase tracking-wider">
-                    <Globe size={16} /> Website Included
-                  </div>
-                  <p className="text-xs text-slate-300">
-                    The <span className="text-white font-bold">$5,000 Website Build</span> is included for $0 upfront when you join this program.
-                  </p>
-                </div>
 
                 <div className="space-y-6 mb-8">
                   <div>
