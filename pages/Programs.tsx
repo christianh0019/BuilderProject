@@ -37,13 +37,13 @@ const Programs: React.FC = () => {
                   <div className="p-2 bg-white rounded-lg shadow-sm">
                     <Layout className="text-slate-700" size={24} />
                   </div>
-                  <h3 className="font-bold text-xl text-slate-900">Just The Build</h3>
+                  <h3 className="font-bold text-xl text-slate-900">The Foundation</h3>
                 </div>
                 <p className="text-slate-500 text-sm mb-6 h-10">
-                  For builders who just need to look professional. A premium asset you own forever.
+                  A one-time investment in your critical digital assets: a high-converting website, Google visibility, and professional branding.
                 </p>
                 <div className="flex items-baseline gap-1">
-                  <span className="text-4xl font-bold text-slate-900">$5,000</span>
+                  <span className="text-4xl font-bold text-slate-900">$4,997</span>
                   <span className="text-slate-500 font-medium">/ one-time</span>
                 </div>
               </div>
@@ -51,19 +51,27 @@ const Programs: React.FC = () => {
                 <ul className="space-y-4 mb-8">
                   <li className="flex gap-3 text-slate-700 text-sm">
                     <Check className="text-green-500 flex-shrink-0" size={18} />
-                    <span>Up to 20 Pages Custom Premium Website</span>
+                    <span>Professional High-Converting Website</span>
                   </li>
                   <li className="flex gap-3 text-slate-700 text-sm">
                     <Check className="text-green-500 flex-shrink-0" size={18} />
-                    <span>Mobile Optimized Design</span>
+                    <span>BuilderProject CRM Setup (GHL)</span>
                   </li>
                   <li className="flex gap-3 text-slate-700 text-sm">
                     <Check className="text-green-500 flex-shrink-0" size={18} />
-                    <span>Enterprise Hosting Setup</span>
+                    <span>Google Business Profile Optimization</span>
                   </li>
                   <li className="flex gap-3 text-slate-700 text-sm">
                     <Check className="text-green-500 flex-shrink-0" size={18} />
-                    <span>Advanced On-Page SEO</span>
+                    <span>Social Media Branding Kit</span>
+                  </li>
+                  <li className="flex gap-3 text-slate-700 text-sm">
+                    <Check className="text-green-500 flex-shrink-0" size={18} />
+                    <span>Project Portfolio Setup</span>
+                  </li>
+                  <li className="flex gap-3 text-slate-700 text-sm">
+                    <Check className="text-green-500 flex-shrink-0" size={18} />
+                    <span>Basic SEO Foundation</span>
                   </li>
                 </ul>
                 <Link to="/contact" className="block w-full py-3 rounded-lg border-2 border-slate-900 text-slate-900 text-center font-bold hover:bg-slate-50 transition-colors">
