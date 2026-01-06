@@ -7,7 +7,7 @@ export interface BlogPost {
   thumbnail: string;
   youtubeUrl: string;
   excerpt: string;
-  content: React.ReactNode;
+  content: string;
 }
 
 export const blogPosts: BlogPost[] = [
@@ -154,7 +154,7 @@ export const blogPosts: BlogPost[] = [
       </div>
     `
   }
-,  {
+  , {
     id: '4',
     slug: 'home-builder-sales-reps-lose-1m-annually',
     title: "Home Builder Sales Reps Lose $1M+ Per Year... Here's How To Prevent It",
@@ -176,7 +176,7 @@ export const blogPosts: BlogPost[] = [
     slug: 'website-generates-1m-custom-home-builders',
     title: "This Website Generates $1M/mo For Custom Home Builders",
     date: 'January 06, 2026',
-    readTime: '8',
+    readTime: '8 min read',
     thumbnail: 'https://img.youtube.com/vi/JidBma-T1fc/maxresdefault.jpg',
     youtubeUrl: 'https://www.youtube.com/watch?v=JidBma-T1fc&t=1s',
     excerpt: "Discover why a high-performing website is crucial for custom home builders and how to transform yours into a lead-generating machine. Learn key elements like strategic SEO, showcasing projects, and dynamic contact methods.",
@@ -209,5 +209,5 @@ export const blogPosts: BlogPost[] = [
         <a href="/contact" class="inline-block bg-white text-slate-900 font-bold px-8 py-3 rounded-full hover:bg-purple-50 transition-colors">Book Your Audit</a>
       </div>
         `
-  },
+  }
 ];
