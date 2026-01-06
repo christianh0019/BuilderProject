@@ -201,33 +201,47 @@ const Programs: React.FC = () => {
                   </div>
 
                   <div>
-                    <h4 className="text-white font-bold text-sm mb-3 border-b border-slate-700 pb-2">Done-For-You Content Engine</h4>
+                    <h4 className="text-white font-bold text-sm mb-3 border-b border-slate-700 pb-2">Complete Digital Dominance</h4>
                     <ul className="space-y-3">
                       <li className="flex gap-3 text-slate-300 text-sm items-center">
-                        <Video className="text-purple-400 flex-shrink-0" size={18} />
-                        <span><strong>4 Long-Form Videos</strong> (Project Tours/Edu)</span>
-                        <Tooltip content="We make 4 big videos that show off your best projects and teach people about what you do.">
+                        <PenTool className="text-purple-400 flex-shrink-0" size={18} />
+                        <span><strong>Website SEO Management</strong> (4 Blogs + Off-Page)</span>
+                        <Tooltip content="We write 4 helpful articles every month and get other sites to trust yours so you rank higher on Google.">
                           <Info size={14} className="text-slate-500 hover:text-slate-300 transition-colors" />
                         </Tooltip>
                       </li>
                       <li className="flex gap-3 text-slate-300 text-sm items-center">
-                        <Smartphone className="text-purple-400 flex-shrink-0" size={18} />
-                        <span><strong>28 Short-Form Videos</strong> (Daily Reels/TikToks)</span>
-                        <Tooltip content="We make 28 short, fun videos for Instagram and TikTok to keep people watching.">
+                        <Globe className="text-purple-400 flex-shrink-0" size={18} />
+                        <span><strong>Google Business Profile Posting</strong></span>
+                        <Tooltip content="We post updates on your Google Maps profile to show Google you're active and help locals find you.">
+                          <Info size={14} className="text-slate-500 hover:text-slate-300 transition-colors" />
+                        </Tooltip>
+                      </li>
+                      <li className="flex gap-3 text-slate-300 text-sm items-center">
+                        <Check className="text-purple-400 flex-shrink-0" size={18} />
+                        <span><strong>Reputation Management</strong></span>
+                        <Tooltip content="We help you get more 5-star reviews and handle any bad ones to keep your name spotless.">
+                          <Info size={14} className="text-slate-500 hover:text-slate-300 transition-colors" />
+                        </Tooltip>
+                      </li>
+                      <li className="flex gap-3 text-slate-300 text-sm items-center">
+                        <Zap className="text-purple-400 flex-shrink-0" size={18} />
+                        <span><strong>Email Newsletter Sending</strong></span>
+                        <Tooltip content="We send helpful emails to everyone you know to keep them interested until they are ready to build.">
+                          <Info size={14} className="text-slate-500 hover:text-slate-300 transition-colors" />
+                        </Tooltip>
+                      </li>
+                      <li className="flex gap-3 text-slate-300 text-sm items-center">
+                        <Video className="text-purple-400 flex-shrink-0" size={18} />
+                        <span><strong>Content Production</strong> (32 Pieces/Month)</span>
+                        <Tooltip content="We create 32 videos and posts for you every single month—enough to post every day.">
                           <Info size={14} className="text-slate-500 hover:text-slate-300 transition-colors" />
                         </Tooltip>
                       </li>
                       <li className="flex gap-3 text-slate-300 text-sm items-center">
                         <Users className="text-purple-400 flex-shrink-0" size={18} />
-                        <span>Social Media Management (We Post For You)</span>
-                        <Tooltip content="We post everything for you so you don't have to worry about social media at all.">
-                          <Info size={14} className="text-slate-500 hover:text-slate-300 transition-colors" />
-                        </Tooltip>
-                      </li>
-                      <li className="flex gap-3 text-slate-300 text-sm items-center">
-                        <PenTool className="text-purple-400 flex-shrink-0" size={18} />
-                        <span>4 SEO Blogs & Newsletter Blasts</span>
-                        <Tooltip content="We write 4 articles for your website to help more people find you on Google.">
+                        <span><strong>Social Media Management</strong></span>
+                        <Tooltip content="We post all that content for you and reply to comments so you can focus on building.">
                           <Info size={14} className="text-slate-500 hover:text-slate-300 transition-colors" />
                         </Tooltip>
                       </li>
