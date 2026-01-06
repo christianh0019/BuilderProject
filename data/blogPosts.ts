@@ -171,4 +171,43 @@ export const blogPosts: BlogPost[] = [
       </div>
         `
   },
+  {
+    id: '5',
+    slug: 'website-generates-1m-custom-home-builders',
+    title: "This Website Generates $1M/mo For Custom Home Builders",
+    date: 'January 06, 2026',
+    readTime: '8',
+    thumbnail: 'https://img.youtube.com/vi/JidBma-T1fc/maxresdefault.jpg',
+    youtubeUrl: 'https://www.youtube.com/watch?v=JidBma-T1fc&t=1s',
+    excerpt: "Discover why a high-performing website is crucial for custom home builders and how to transform yours into a lead-generating machine. Learn key elements like strategic SEO, showcasing projects, and dynamic contact methods.",
+    content: `<h2 class='text-2xl font-bold text-slate-900 mt-10 mb-4 font-serif'>Why Your Custom Home Builder Website Should Be More Than Just a Brochure</h2>
+<p class='mb-6'>Have you ever wondered why your custom home building business isn't getting enough leads from your website? Well, you're not alone. Many builders rely on simple, brochure-like websites that fail to capture interest. In 2026 and beyond, just having a five-page site won't cut it. Let's break down why a high-performing website is crucial and how you can transform yours to drive more business.</p>
+<h2 class='text-2xl font-bold text-slate-900 mt-10 mb-4 font-serif'>From Brochure to Lead-Generating Machine</h2>
+<p class='mb-6'>Many custom home builder websites have the basics—homepage, about us, services, and contact pages. While these are essential, they're just the starting point. If your site feels more like an online business card, you're missing out on major opportunities. A good website does so much more. It attracts potential clients and guides them to take action, like viewing your projects or contacting you for a consultation.</p>
+<div class='bg-purple-50 border-l-4 border-purple-500 p-6 my-8 rounded-r-lg'> <p class='font-medium text-purple-900 italic'>"A website isn't just a virtual brochure. It's a powerful tool that can transform visitors into future clients if used right."</p> </div>
+<p class='mb-6'>So, how do you make your website work for you? First, think of it as an advertising funnel rather than just an info page. You want visitors to discover your work and know exactly what steps to take next. This approach not only captures interest but also contact information, turning visitors into leads.</p>
+<h2 class='text-2xl font-bold text-slate-900 mt-10 mb-4 font-serif'>Strategic Elements Your Website Needs</h2>
+<p class='mb-6'>Let's look at the essentials for a top-performing custom home builder website:</p>
+<ul class='list-disc pl-6 mb-6 space-y-2 text-slate-700'>
+<li>Strong Location-Based Keywords: Use clear and strategic keywords related to your area, like "Northern Colorado." This expands your reach and improves your visibility on Google.</li>
+<li>Calls to Action Everywhere: Encourage visitors to take action. Options like "Request a Discovery Call" or "View Our Work" guide users and increase conversions.</li>
+<li>Featured Projects: Showcasing your real work builds more interest than generic galleries. Tell a story with each project.</li>
+<li>Process and About Pages: These build credibility and trust. Highlight your years of experience, awards, and transparent pricing.</li>
+<li>FAQs: Common questions boost your SEO and AI visibility.</li>
+<li>Dynamic Contact Methods: Replace generic forms with a survey-based project start form. It filters leads, collecting quality contacts.</li>
+</ul>
+<h2 class='text-2xl font-bold text-slate-900 mt-10 mb-4 font-serif'>Maximize Local and SEO Opportunities</h2>
+<p class='mb-6'>SEO isn't just a buzzword. It's key to making your website visible. Location pages are especially powerful. They shouldn't be generic; instead, they should be tailored to each city you serve. Include Google Maps, explanations of local challenges, and specific FAQs. This boosts your site's visibility in local searches.</p>
+<p class='mb-6'>Even your contact page can be optimized. Use forms that act like surveys to pre-qualify leads and book appointments directly onto your calendar. This way, you're gathering quality leads right from the start.</p>
+<h2 class='text-2xl font-bold text-slate-900 mt-10 mb-4 font-serif'>Connect All Marketing Back to Your Website</h2>
+<p class='mb-6'>Your website should sit at the center of all your marketing efforts. Whether it's through ads, QR codes, social media, or direct mail, everything should point back to your website. When done right, this strategy turns your website into a significant lead generator.</p>
+<p class='mb-6'>Want a high-performance website that drives results? We specialize in creating such sites for custom home builders and remodelers. Let us help you build a lead-generating machine that captures and converts visitors into customers.</p>
+<p class='mb-6'>Interested? Click the link below to get in touch and start transforming your online presence.</p>
+      <div class="bg-slate-900 text-white p-8 rounded-2xl my-10 text-center">
+        <h3 class="text-2xl font-bold mb-4 font-serif">Free Marketing Audit</h3>
+        <p class="text-slate-300 mb-6">We will audit your current marketing systems—or lack thereof—and show you hidden opportunities. No strings attached.</p>
+        <a href="/contact" class="inline-block bg-white text-slate-900 font-bold px-8 py-3 rounded-full hover:bg-purple-50 transition-colors">Book Your Audit</a>
+      </div>
+        `
+  },
 ];
