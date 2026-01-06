@@ -19,7 +19,7 @@ const BlogPost: React.FC = () => {
     if (!post) return null;
 
     // Extract Video ID for Embed
-    const videoId = post.youtubeUrl.split('v=')[1];
+    const videoId = post.youtubeUrl.split('v=')[1]?.split('&')[0];
 
     return (
         <div className="bg-white font-sans text-slate-900 selection:bg-purple-200 selection:text-purple-900 pt-32 pb-20">
