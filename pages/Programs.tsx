@@ -53,7 +53,7 @@ const Programs: React.FC = () => {
                   <li className="flex gap-3 text-slate-700 text-sm items-center">
                     <Check className="text-green-500 flex-shrink-0" size={18} />
                     <span>Professional High-Converting Website</span>
-                    <Tooltip content="We build you a website that looks amazing on phones and gets people to call you.">
+                    <Tooltip content="We build a massive 20-page asset designed to dominate Google rankings and convert visitors into high-quality leads—not just a static online brochure.">
                       <Info size={14} className="text-slate-400 hover:text-slate-600 transition-colors" />
                     </Tooltip>
                   </li>
@@ -200,6 +200,9 @@ const Programs: React.FC = () => {
 
                 <div className="space-y-6 mb-8">
                   <div>
+                    <h4 className="text-white font-bold text-sm mb-3 flex items-center gap-2">
+                      <Zap size={16} className="text-yellow-400" /> Everything in Foundation +
+                    </h4>
                     <h4 className="text-white font-bold text-sm mb-3 flex items-center gap-2">
                       <Zap size={16} className="text-yellow-400" /> Everything in Pipeline +
                     </h4>
