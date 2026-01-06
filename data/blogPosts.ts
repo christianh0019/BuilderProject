@@ -177,7 +177,7 @@ export const blogPosts: BlogPost[] = [
     title: "This Website Generates $1M/mo For Custom Home Builders",
     date: 'January 06, 2026',
     readTime: '8 min read',
-    thumbnail: 'https://img.youtube.com/vi/JidBma-T1fc/maxresdefault.jpg',
+    thumbnail: 'https://img.youtube.com/vi/JidBma-T1fc/hqdefault.jpg',
     youtubeUrl: 'https://www.youtube.com/watch?v=JidBma-T1fc&t=1s',
     excerpt: "Discover why a high-performing website is crucial for custom home builders and how to transform yours into a lead-generating machine. Learn key elements like strategic SEO, showcasing projects, and dynamic contact methods.",
     content: `<h2 class='text-2xl font-bold text-slate-900 mt-10 mb-4 font-serif'>Why Your Custom Home Builder Website Should Be More Than Just a Brochure</h2>
