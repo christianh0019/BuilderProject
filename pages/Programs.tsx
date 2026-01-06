@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Check, Video, Smartphone, PenTool, Globe, Zap, ArrowRight, Layout, TrendingUp, Users } from 'lucide-react';
+import { Check, Video, Smartphone, PenTool, Globe, Zap, ArrowRight, Layout, TrendingUp, Users, Info } from 'lucide-react';
 import SEO from '../components/SEO';
+import Tooltip from '../components/ui/Tooltip';
 
 const Programs: React.FC = () => {
   return (
@@ -49,29 +50,47 @@ const Programs: React.FC = () => {
               </div>
               <div className="p-8 flex-1">
                 <ul className="space-y-4 mb-8">
-                  <li className="flex gap-3 text-slate-700 text-sm">
+                  <li className="flex gap-3 text-slate-700 text-sm items-center">
                     <Check className="text-green-500 flex-shrink-0" size={18} />
                     <span>Professional High-Converting Website</span>
+                    <Tooltip content="Mobile-optimized, lead-capture focused design built to convert traffic.">
+                      <Info size={14} className="text-slate-400 hover:text-slate-600 transition-colors" />
+                    </Tooltip>
                   </li>
-                  <li className="flex gap-3 text-slate-700 text-sm">
+                  <li className="flex gap-3 text-slate-700 text-sm items-center">
                     <Check className="text-green-500 flex-shrink-0" size={18} />
                     <span>BuilderProject CRM Setup (GHL)</span>
+                    <Tooltip content="Automated follow-up system (email/SMS) to capture and nurture leads instantly.">
+                      <Info size={14} className="text-slate-400 hover:text-slate-600 transition-colors" />
+                    </Tooltip>
                   </li>
-                  <li className="flex gap-3 text-slate-700 text-sm">
+                  <li className="flex gap-3 text-slate-700 text-sm items-center">
                     <Check className="text-green-500 flex-shrink-0" size={18} />
                     <span>Google Business Profile Optimization</span>
+                    <Tooltip content="Rank higher in Google Maps 'near me' searches to capture local traffic.">
+                      <Info size={14} className="text-slate-400 hover:text-slate-600 transition-colors" />
+                    </Tooltip>
                   </li>
-                  <li className="flex gap-3 text-slate-700 text-sm">
+                  <li className="flex gap-3 text-slate-700 text-sm items-center">
                     <Check className="text-green-500 flex-shrink-0" size={18} />
                     <span>Social Media Branding Kit</span>
+                    <Tooltip content="Professional bio setups and posting templates for a cohesive brand.">
+                      <Info size={14} className="text-slate-400 hover:text-slate-600 transition-colors" />
+                    </Tooltip>
                   </li>
-                  <li className="flex gap-3 text-slate-700 text-sm">
+                  <li className="flex gap-3 text-slate-700 text-sm items-center">
                     <Check className="text-green-500 flex-shrink-0" size={18} />
                     <span>Project Portfolio Setup</span>
+                    <Tooltip content="SEO-optimized project pages that showcase your work and rank locally.">
+                      <Info size={14} className="text-slate-400 hover:text-slate-600 transition-colors" />
+                    </Tooltip>
                   </li>
-                  <li className="flex gap-3 text-slate-700 text-sm">
+                  <li className="flex gap-3 text-slate-700 text-sm items-center">
                     <Check className="text-green-500 flex-shrink-0" size={18} />
                     <span>Basic SEO Foundation</span>
+                    <Tooltip content="Technical setup and site architecture to start ranking on Google.">
+                      <Info size={14} className="text-slate-400 hover:text-slate-600 transition-colors" />
+                    </Tooltip>
                   </li>
                 </ul>
                 <div className="space-y-3">
@@ -106,25 +125,40 @@ const Programs: React.FC = () => {
               </div>
               <div className="p-8 flex-1">
                 <ul className="space-y-4 mb-8">
-                  <li className="flex gap-3 text-slate-700 text-sm">
+                  <li className="flex gap-3 text-slate-700 text-sm items-center">
                     <Check className="text-purple-500 flex-shrink-0" size={18} />
                     <span>Google & Meta Ads Management</span>
+                    <Tooltip content="Targeted ad campaigns on Google and Social Media to drive traffic.">
+                      <Info size={14} className="text-slate-400 hover:text-slate-600 transition-colors" />
+                    </Tooltip>
                   </li>
-                  <li className="flex gap-3 text-slate-700 text-sm">
+                  <li className="flex gap-3 text-slate-700 text-sm items-center">
                     <Check className="text-purple-500 flex-shrink-0" size={18} />
                     <span>"Tire-Kicker" Filtering System</span>
+                    <Tooltip content="Qualifying forms and scripts to ensure you only speak to serious leads.">
+                      <Info size={14} className="text-slate-400 hover:text-slate-600 transition-colors" />
+                    </Tooltip>
                   </li>
-                  <li className="flex gap-3 text-slate-700 text-sm">
+                  <li className="flex gap-3 text-slate-700 text-sm items-center">
                     <Check className="text-purple-500 flex-shrink-0" size={18} />
                     <span>Weekly Performance Reports</span>
+                    <Tooltip content="Transparent reporting on spend, leads, and cost-per-acquisition.">
+                      <Info size={14} className="text-slate-400 hover:text-slate-600 transition-colors" />
+                    </Tooltip>
                   </li>
-                  <li className="flex gap-3 text-slate-700 text-sm">
+                  <li className="flex gap-3 text-slate-700 text-sm items-center">
                     <Check className="text-purple-500 flex-shrink-0" size={18} />
                     <span>CRM Integration</span>
+                    <Tooltip content="Seamless connection between ads and your follow-up system.">
+                      <Info size={14} className="text-slate-400 hover:text-slate-600 transition-colors" />
+                    </Tooltip>
                   </li>
-                  <li className="flex gap-3 text-slate-700 text-sm">
+                  <li className="flex gap-3 text-slate-700 text-sm items-center">
                     <Check className="text-purple-500 flex-shrink-0" size={18} />
                     <span>Dedicated Project Manager</span>
+                    <Tooltip content="Your personal point of contact for strategy and updates.">
+                      <Info size={14} className="text-slate-400 hover:text-slate-600 transition-colors" />
+                    </Tooltip>
                   </li>
                 </ul>
                 <Link to="/contact" className="block w-full py-3 rounded-lg bg-slate-900 text-white text-center font-bold hover:bg-gradient-to-r hover:from-purple-700 hover:to-pink-600 transition-all duration-300">
@@ -173,21 +207,33 @@ const Programs: React.FC = () => {
                   <div>
                     <h4 className="text-white font-bold text-sm mb-3 border-b border-slate-700 pb-2">Done-For-You Content Engine</h4>
                     <ul className="space-y-3">
-                      <li className="flex gap-3 text-slate-300 text-sm">
+                      <li className="flex gap-3 text-slate-300 text-sm items-center">
                         <Video className="text-purple-400 flex-shrink-0" size={18} />
                         <span><strong>4 Long-Form Videos</strong> (Project Tours/Edu)</span>
+                        <Tooltip content="In-depth project tours or educational content to build authority.">
+                          <Info size={14} className="text-slate-500 hover:text-slate-300 transition-colors" />
+                        </Tooltip>
                       </li>
-                      <li className="flex gap-3 text-slate-300 text-sm">
+                      <li className="flex gap-3 text-slate-300 text-sm items-center">
                         <Smartphone className="text-purple-400 flex-shrink-0" size={18} />
                         <span><strong>28 Short-Form Videos</strong> (Daily Reels/TikToks)</span>
+                        <Tooltip content="Daily content for Reels/TikTok to stay top-of-mind.">
+                          <Info size={14} className="text-slate-500 hover:text-slate-300 transition-colors" />
+                        </Tooltip>
                       </li>
-                      <li className="flex gap-3 text-slate-300 text-sm">
+                      <li className="flex gap-3 text-slate-300 text-sm items-center">
                         <Users className="text-purple-400 flex-shrink-0" size={18} />
                         <span>Social Media Management (We Post For You)</span>
+                        <Tooltip content="We handle the posting and engagement so you don't have to.">
+                          <Info size={14} className="text-slate-500 hover:text-slate-300 transition-colors" />
+                        </Tooltip>
                       </li>
-                      <li className="flex gap-3 text-slate-300 text-sm">
+                      <li className="flex gap-3 text-slate-300 text-sm items-center">
                         <PenTool className="text-purple-400 flex-shrink-0" size={18} />
                         <span>4 SEO Blogs & Newsletter Blasts</span>
+                        <Tooltip content="Content to drive organic traffic and nurture your database.">
+                          <Info size={14} className="text-slate-500 hover:text-slate-300 transition-colors" />
+                        </Tooltip>
                       </li>
                     </ul>
                   </div>
