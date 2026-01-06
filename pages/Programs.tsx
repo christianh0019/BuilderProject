@@ -128,7 +128,7 @@ const Programs: React.FC = () => {
                   <li className="flex gap-3 text-slate-700 text-sm items-center">
                     <Check className="text-purple-500 flex-shrink-0" size={18} />
                     <span>Google & Meta Ads Management</span>
-                    <Tooltip content="We pay Google and Facebook to show your business to people looking for builders.">
+                    <Tooltip content="We run advertisements on Google and Facebook to show your business to people looking for builders.">
                       <Info size={14} className="text-slate-400 hover:text-slate-600 transition-colors" />
                     </Tooltip>
                   </li>
@@ -186,6 +186,7 @@ const Programs: React.FC = () => {
                   <span className="text-4xl font-bold text-white">$2,997</span>
                   <span className="text-purple-300 font-medium">/ month</span>
                 </div>
+                <p className="text-xs text-slate-500 mt-2">+ ad spend budget</p>
               </div>
               <div className="p-8 flex-1">
                 <div className="bg-purple-900/20 border border-purple-500/30 rounded-xl p-4 mb-6">
