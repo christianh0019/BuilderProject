@@ -193,7 +193,7 @@ const Programs: React.FC = () => {
                 <div className="space-y-6 mb-8">
                   <div>
                     <h4 className="text-white font-bold text-sm mb-3 flex items-center gap-2">
-                      <Zap size={16} className="text-yellow-400" /> Everything in Foundation +
+                      <Zap size={16} className="text-yellow-400" /> Everything in Foundation + <span className="text-purple-300">($5,000 Value)</span>
                     </h4>
                     <h4 className="text-white font-bold text-sm mb-3 flex items-center gap-2">
                       <Zap size={16} className="text-yellow-400" /> Everything in Pipeline +
@@ -205,7 +205,7 @@ const Programs: React.FC = () => {
                     <ul className="space-y-3">
                       <li className="flex gap-3 text-slate-300 text-sm items-center">
                         <PenTool className="text-purple-400 flex-shrink-0" size={18} />
-                        <span><strong>Website SEO Management</strong> (4 Blogs + Off-Page)</span>
+                        <span><strong>Website SEO Management</strong></span>
                         <Tooltip content="We write 4 helpful articles every month and get other sites to trust yours so you rank higher on Google.">
                           <Info size={14} className="text-slate-500 hover:text-slate-300 transition-colors" />
                         </Tooltip>
