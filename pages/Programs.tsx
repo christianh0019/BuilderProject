@@ -74,9 +74,14 @@ const Programs: React.FC = () => {
                     <span>Basic SEO Foundation</span>
                   </li>
                 </ul>
-                <Link to="/contact" className="block w-full py-3 rounded-lg border-2 border-slate-900 text-slate-900 text-center font-bold hover:bg-slate-50 transition-colors">
-                  Get Started
-                </Link>
+                <div className="space-y-3">
+                  <Link to="/quickstart" className="block w-full py-3 rounded-lg border border-slate-200 text-slate-600 text-center font-bold hover:bg-slate-50 transition-colors text-sm">
+                    Learn More
+                  </Link>
+                  <Link to="/contact" className="block w-full py-3 rounded-lg border-2 border-slate-900 text-slate-900 text-center font-bold hover:bg-slate-50 transition-colors">
+                    Get Started
+                  </Link>
+                </div>
               </div>
             </div>
 
@@ -94,7 +99,7 @@ const Programs: React.FC = () => {
                   For builders who need leads now. We run the ads, you get the appointments.
                 </p>
                 <div className="flex items-baseline gap-1">
-                  <span className="text-4xl font-bold text-slate-900">$2,000</span>
+                  <span className="text-4xl font-bold text-slate-900">$1,997</span>
                   <span className="text-slate-500 font-medium">/ month</span>
                 </div>
                 <p className="text-xs text-slate-400 mt-2">+ ad spend budget</p>
@@ -144,7 +149,7 @@ const Programs: React.FC = () => {
                   Dominate your market. We become your entire marketing & media departments for a fraction of the cost.
                 </p>
                 <div className="flex items-baseline gap-1">
-                  <span className="text-4xl font-bold text-white">$3,000</span>
+                  <span className="text-4xl font-bold text-white">$2,997</span>
                   <span className="text-purple-300 font-medium">/ month</span>
                 </div>
               </div>
