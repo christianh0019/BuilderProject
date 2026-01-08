@@ -210,13 +210,13 @@ export const blogPosts: BlogPost[] = [
       </div>
         `
   }
-,  {
+  , {
     id: '6',
     slug: 'the-exact-system-to-get-100-qualified-custom-home-leads',
     title: "The EXACT System to Get 100 Qualified Custom Home Leads",
     date: 'January 08, 2026',
     readTime: '8',
-    thumbnail: 'https://img.youtube.com/vi/P7Bmpjid9ts/maxresdefault.jpg',
+    thumbnail: 'https://img.youtube.com/vi/P7Bmpjid9ts/hqdefault.jpg',
     youtubeUrl: 'https://www.youtube.com/watch?v=P7Bmpjid9ts',
     excerpt: "Discover the exact system to convert dreamers into planners and get 100 qualified custom home leads. Flip the script with personalized value tools.",
     content: `<h2 class='text-2xl font-bold text-slate-900 mt-10 mb-4 font-serif'>Hook: Stop Getting Ghosted by Leads</h2>
