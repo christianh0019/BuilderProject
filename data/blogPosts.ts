@@ -210,4 +210,43 @@ export const blogPosts: BlogPost[] = [
       </div>
         `
   }
+,  {
+    id: '6',
+    slug: 'the-exact-system-to-get-100-qualified-custom-home-leads',
+    title: "The EXACT System to Get 100 Qualified Custom Home Leads",
+    date: 'January 08, 2026',
+    readTime: '8',
+    thumbnail: 'https://img.youtube.com/vi/P7Bmpjid9ts/maxresdefault.jpg',
+    youtubeUrl: 'https://www.youtube.com/watch?v=P7Bmpjid9ts',
+    excerpt: "Discover the exact system to convert dreamers into planners and get 100 qualified custom home leads. Flip the script with personalized value tools.",
+    content: `<h2 class='text-2xl font-bold text-slate-900 mt-10 mb-4 font-serif'>Hook: Stop Getting Ghosted by Leads</h2>
+<p class='mb-6'>Ever feel like you’re throwing darts in the dark when it comes to finding the right leads for your custom home building business? You're not alone. The biggest mistake builders make is treating every lead the same. That’s why they often get ghosted. But imagine knowing a lead’s budget, timeline, and seriousness before even picking up the phone. Here’s how.</p>
+<h2 class='text-2xl font-bold text-slate-900 mt-10 mb-4 font-serif'>Understanding the Qualified Lead Illusion</h2>
+<p class='mb-6'>Hey, I'm Christian with BuilderProject, and we help custom home builders install predictable project pipelines. Let's tackle an old problem: the clunky way of getting leads. Advertising for names and emails usually results in wasted time and effort on people who aren’t serious. Getting “more leads” as a mere number fact does nothing for your bottom line. What you really need is a pipeline of qualified projects.</p>
+<p class='mb-6'>In any market, 90% of people looking at your content are "dreamers." These folks pin things on Pinterest and watch YouTube videos, but are far from building. The next 9% are "planners," closer to commitment. Finally, the 1% have plans and land, ready to hire a builder immediately.</p>
+<p class='mb-6'>Most marketing aims at dreamers, and many builders waste time on the 1%, who are often aggressive price shoppers holding all the leverage. The goldmine? The 9% planners. Attract and educate them, and you will dominate your market.</p>
+<h2 class='text-2xl font-bold text-slate-900 mt-10 mb-4 font-serif'>Flipping the Traditional Model</h2>
+<p class='mb-6'>Ever heard of lead magnets? They bring little real value. A PDF with "10 Tips for Building a Custom Home" might sound good but often attracts the 90% dreamers. Offering free consultations? They can fill your calendar with time-wasting dreamers or price-shopping 1%'ers.</p>
+<div class='bg-purple-50 border-l-4 border-purple-500 p-6 my-8 rounded-r-lg'><p class='font-medium text-purple-900 italic'>"Provide massive, personalized value first, then the prospects will give you the information you need."</p></div>
+<p class='mb-6'>The key is offering personalized value first. This flips the script. Instead of a static PDF, introduce an interactive lead magnet like a Custom Home Budget Calculator.</p>
+<h2 class='text-2xl font-bold text-slate-900 mt-10 mb-4 font-serif'>How the Custom Home Budget Calculator Works</h2>
+<p class='mb-6'>Imagine, instead of a vague "Contact Us" form, a visitor on your site sees an invitation to get a realistic picture of their project budget. They enter their name, email, and some essential details. As they use the calculator, they’re asked about their dream home specifics like square footage, bedroom count, and finish quality.</p>
+<ul class='list-disc pl-6 mb-6 space-y-2 text-slate-700'>
+<li>Gather crucial information upfront</li>
+<li>Clients actively engage by designing their project</li>
+<li>Gain insight into their budget and expectation levels</li>
+<li>Understand the build feasibility immediately</li>
+</ul>
+<p class='mb-6'>The calculator produces a detailed, AI-generated report with a budget range, feasibility, and next steps, transitioning prospects from "dreaming" to "planning." This isn't just a lead; it’s an intelligence report packed with value.</p>
+<h2 class='text-2xl font-bold text-slate-900 mt-10 mb-4 font-serif'>From Chasing Leads to Reviewing Applications</h2>
+<p class='mb-6'>This system turns leads into detailed profiles. You know who’s merely dreaming versus seriously planning. No more wasting precious time on tire-kickers. With these personalized insights, your sales team reviews serious applicants only.</p>
+<p class='mb-6'>By attracting the 9% planners, you've become a trusted advisor even before conversation begins. This is how you generate 100 qualified leads. It’s about value creation, not just lead generation. Interested in knowing more? Schedule a call through our link or comment "BUILD IT" if you'd like this tool available for everyone.</p>
+
+      <div class="bg-slate-900 text-white p-8 rounded-2xl my-10 text-center">
+        <h3 class="text-2xl font-bold mb-4 font-serif">Free Marketing Audit</h3>
+        <p class="text-slate-300 mb-6">We will audit your current marketing systems—or lack thereof—and show you hidden opportunities. No strings attached.</p>
+        <a href="/contact" class="inline-block bg-white text-slate-900 font-bold px-8 py-3 rounded-full hover:bg-purple-50 transition-colors">Book Your Audit</a>
+      </div>
+        `
+  },
 ];
