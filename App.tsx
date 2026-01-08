@@ -21,6 +21,7 @@ import Blog from './pages/Blog';
 import BlogPost from './pages/BlogPost';
 import AdvertisingLanding from './pages/AdvertisingLanding';
 import Quickstart from './pages/Quickstart';
+import NotFound from './pages/NotFound';
 
 // Helper component to scroll to top on route change
 const ScrollToTopHelper = () => {
@@ -61,6 +62,7 @@ const App: React.FC = () => {
             <Route path="/case-studies" element={<CaseStudies />} />
             <Route path="/case-studies/:slug" element={<CaseStudyDetail />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="*" element={<NotFound />} />
           </Route>
 
           {/* Dedicated Landing Pages (No Nav/Footer) */}
