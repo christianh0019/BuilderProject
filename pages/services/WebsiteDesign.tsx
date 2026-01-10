@@ -69,7 +69,7 @@ const WebsiteDesign: React.FC = () => {
                     </div>
 
                     <div className="max-w-6xl mx-auto mb-20">
-                        <BrowserFrame url="stonebrookconstruction.com">
+                        <BrowserFrame url="stonebrookconstruction.com" contentClassName="h-auto">
                             <img
                                 src="/images/stonebrook-hero.png"
                                 alt="Stonebrook Construction Website Design"
@@ -88,7 +88,7 @@ const WebsiteDesign: React.FC = () => {
                     </div>
 
                     <div className="max-w-6xl mx-auto">
-                        <BrowserFrame url="homesteadhomebuilders.com">
+                        <BrowserFrame url="homesteadhomebuilders.com" contentClassName="h-auto">
                             <img
                                 src="/images/homestead-hero.png"
                                 alt="Homestead Home Builders Website Design"

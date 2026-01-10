@@ -3,9 +3,10 @@ import React from 'react';
 interface BrowserFrameProps {
     url: string;
     children: React.ReactNode;
+    contentClassName?: string;
 }
 
-const BrowserFrame: React.FC<BrowserFrameProps> = ({ url, children }) => {
+const BrowserFrame: React.FC<BrowserFrameProps> = ({ url, children, contentClassName = "h-[600px]" }) => {
     return (
         <div className="w-full rounded-xl overflow-hidden shadow-2xl border border-slate-200 bg-white">
             {/* Browser Toolbar */}
@@ -27,7 +28,7 @@ const BrowserFrame: React.FC<BrowserFrameProps> = ({ url, children }) => {
             </div>
 
             {/* Content Area - Scrollable Container */}
-            <div className="relative h-[600px] w-full overflow-y-auto overflow-x-hidden scrollbar-thin scrollbar-thumb-slate-300 scrollbar-track-transparent">
+            <div className={`relative w-full overflow-y-auto overflow-x-hidden scrollbar-thin scrollbar-thumb-slate-300 scrollbar-track-transparent ${contentClassName}`}>
                 {children}
             </div>
         </div>
