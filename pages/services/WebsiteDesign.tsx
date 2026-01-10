@@ -68,11 +68,30 @@ const WebsiteDesign: React.FC = () => {
                         </p>
                     </div>
 
-                    <div className="max-w-6xl mx-auto">
+                    <div className="max-w-6xl mx-auto mb-20">
                         <BrowserFrame url="stonebrookconstruction.com">
                             <img
                                 src="/images/stonebrook-hero.png"
                                 alt="Stonebrook Construction Website Design"
+                                className="w-full h-auto"
+                            />
+                        </BrowserFrame>
+                    </div>
+
+                    <div className="max-w-4xl mx-auto text-center mb-16">
+                        <h2 className="text-3xl md:text-4xl font-serif font-bold text-slate-900 mb-6">
+                            Homestead Home Builders
+                        </h2>
+                        <p className="text-lg text-slate-600">
+                            Sustainable design-build services in Loveland, CO. Clean, modern interface emphasizing local connection.
+                        </p>
+                    </div>
+
+                    <div className="max-w-6xl mx-auto">
+                        <BrowserFrame url="homesteadhomebuilders.com">
+                            <img
+                                src="/images/homestead-hero.png"
+                                alt="Homestead Home Builders Website Design"
                                 className="w-full h-auto"
                             />
                         </BrowserFrame>
