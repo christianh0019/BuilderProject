@@ -96,6 +96,10 @@ const Navbar: React.FC = () => {
                   </span>
                   <span className="text-sm text-slate-500">Video tutorials & tips</span>
                 </a>
+                <Link to="/careers" className="block px-6 py-4 hover:bg-slate-50 border-t border-slate-50">
+                  <span className="block font-semibold text-slate-800">Careers</span>
+                  <span className="text-sm text-slate-500">Join our team</span>
+                </Link>
               </div>
             </div>
           </div>
@@ -158,6 +162,7 @@ const Navbar: React.FC = () => {
                 <a href="https://www.youtube.com/@BuilderProjectCo" target="_blank" rel="noopener noreferrer" className="text-slate-600 flex items-center gap-2">
                   YouTube Channel <ExternalLink size={14} />
                 </a>
+                <Link to="/careers" className="text-slate-600">Careers</Link>
               </div>
             )}
           </div>
