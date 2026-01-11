@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Briefcase, Send, CheckCircle, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Briefcase, Send, CheckCircle, ArrowRight, Star, Users, Zap, Layout } from 'lucide-react';
 import SimpleHeader from '../components/SimpleHeader';
 import { Helmet } from 'react-helmet-async';
 
@@ -12,38 +12,77 @@ const Careers: React.FC = () => {
         coverLetter: ''
     });
     const [submitted, setSubmitted] = useState(false);
-    const [currentJobIndex, setCurrentJobIndex] = useState(0);
 
     const positions = [
         {
             title: "Client Media Buyer",
             type: "Contractor / Full-Time",
-            description: "You live in Ads Manager and obsess over ROAS. You'll manage high-budget campaigns for custom home builders, ensuring every dollar spent brings in a qualified lead. We need someone who treats client budgets like their own."
+            icon: <Zap className="text-yellow-500" size={24} />,
+            overview: "You live in Ads Manager and obsess over ROAS. You'll manage high-budget campaigns for custom home builders, ensuring every dollar spent brings in a qualified lead.",
+            responsibilities: [
+                "Manage $50k+/mo in ad spend across Meta & Google Ads",
+                "Conduct daily optimizations and A/B testing on creatives/audiences",
+                "Build comprehensive weekly reports for clients",
+                "Collaborate with the creative team to request high-converting assets"
+            ],
+            requirements: [
+                "3+ years experience with Lead Gen (Real Estate/Construction preferred)",
+                "Deep understanding of CAPI, pixel tracking, and attribution",
+                "Ability to communicate complex data simply to clients"
+            ]
         },
         {
             title: "Client Success Manager",
             type: "Contractor / Full-Time",
-            description: "You're the friendly face and the strategic brain for our builder clients. Your job is to make sure they feel supported, understand the incredible results we're getting them, and know exactly what to do next."
+            icon: <Users className="text-blue-500" size={24} />,
+            overview: "You're the strategic partner for our builder clients. You ensure they feel supported, understand the results we're getting them, and know exactly what to do next to close deals.",
+            responsibilities: [
+                "Lead client onboarding and strategy calls",
+                "Proactively communicate wins and updates via Slack/Email",
+                "Identify upsell opportunities and retention risks",
+                "Coordinate with the fulfillment team to ensure seamless delivery"
+            ],
+            requirements: [
+                "Excellent written and verbal communication skills",
+                "Experience in an agency environment",
+                "High emotional intelligence and conflict resolution skills"
+            ]
         },
         {
             title: "Video Editor",
             type: "Contractor / Full-Time",
-            description: "Turn raw site-visit footage into cinematic, high-converting content. You understand pacing, hooks, and how to make a dusty job site look like a masterpiece. Speed and creativity are your best friends."
+            icon: <Star className="text-purple-500" size={24} />,
+            overview: "Turn raw site-visit footage into cinematic, high-converting content. You understand pacing, hooks, and how to make a dusty job site look like a masterpiece.",
+            responsibilities: [
+                "Edit 3-5 short-form videos per week for social organic/paid",
+                "Create 1 long-form YouTube video per week",
+                "Add dynamic captions, B-roll, and sound design",
+                "Stay ahead of social media trends and formats"
+            ],
+            requirements: [
+                "Proficiency in Premiere Pro or DaVinci Resolve",
+                "Strong storytelling ability",
+                "Portfolio demonstrating high-retention editing style"
+            ]
         },
         {
             title: "Website Designer",
             type: "Contractor / Full-Time",
-            description: "Create stunning, high-performance websites that tell a builder's story. You have an eye for luxury aesthetics and know how to design for conversion. No templates—just pure, custom excellence."
+            icon: <Layout className="text-pink-500" size={24} />,
+            overview: "Create stunning, high-performance websites that tell a builder's story. You have an eye for luxury aesthetics and know how to design for conversion.",
+            responsibilities: [
+                "Design high-fidelity mockups in Figma",
+                "Create responsive landing pages optimized for mobile",
+                "Develop comprehensive style guides for development",
+                "Audit existing client sites for UX improvements"
+            ],
+            requirements: [
+                "Strong portfolio of modern, luxury web design",
+                "Understanding of CRO principles",
+                "Basic knowledge of HTML/CSS is a plus"
+            ]
         }
     ];
-
-    const nextJob = () => {
-        setCurrentJobIndex((prev) => (prev + 1) % positions.length);
-    };
-
-    const prevJob = () => {
-        setCurrentJobIndex((prev) => (prev - 1 + positions.length) % positions.length);
-    };
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -64,162 +103,208 @@ const Careers: React.FC = () => {
 
             <SimpleHeader />
 
-            <div className="container mx-auto px-6 py-20 max-w-5xl">
-                <div className="text-center mb-16">
-                    <span className="inline-block py-1 px-3 rounded-full bg-purple-100 text-purple-700 text-xs font-bold tracking-wider uppercase mb-4">
-                        We're Hiring
-                    </span>
-                    <h1 className="text-4xl md:text-5xl font-serif font-bold text-slate-900 mb-6">
-                        Join the A-Team
-                    </h1>
-                    <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-                        We're not just building websites; we're building the future of construction marketing. If you love great design, smart strategy, and working with good people, you belong here.
-                    </p>
-                </div>
+            {/* Hero Section */}
+            <section className="pt-20 pb-20 px-6 text-center max-w-4xl mx-auto">
+                <span className="inline-block py-1 px-3 rounded-full bg-purple-100 text-purple-700 text-xs font-bold tracking-wider uppercase mb-6">
+                    We're Hiring
+                </span>
+                <h1 className="text-5xl md:text-6xl font-serif font-bold text-slate-900 mb-8 leading-tight">
+                    Build the Future of <br className="hidden md:block" /> Construction Marketing
+                </h1>
+                <p className="text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed">
+                    We serve the top 1% of custom home builders. Our standard is excellence. If you're ready to do the best work of your career, you're in the right place.
+                </p>
+            </section>
 
-                <div className="grid lg:grid-cols-2 gap-12 items-start">
-                    {/* Job Carousel */}
-                    <div className="bg-white p-8 rounded-2xl shadow-lg border border-slate-100 relative min-h-[400px] flex flex-col justify-between">
-                        <div className="absolute top-4 right-4 text-purple-200">
-                            <Briefcase size={48} opacity={0.2} />
-                        </div>
+            {/* Open Positions - Full Width Stack */}
+            <section className="px-6 pb-24 container mx-auto max-w-5xl">
+                <h2 className="text-3xl font-serif font-bold text-slate-900 mb-12 flex items-center gap-3">
+                    <Briefcase className="text-purple-600" /> Open Positions
+                </h2>
 
-                        <div>
-                            <div className="flex justify-between items-start mb-4">
-                                <h2 className="text-2xl font-bold font-serif text-slate-900">{positions[currentJobIndex].title}</h2>
+                <div className="space-y-8">
+                    {positions.map((job, index) => (
+                        <div key={index} className="bg-white rounded-3xl p-8 md:p-10 shadow-lg border border-slate-100 hover:shadow-xl transition-all duration-300 group">
+                            <div className="flex flex-col md:flex-row md:items-start justify-between gap-6 mb-8">
+                                <div className="flex gap-4">
+                                    <div className="p-3 bg-slate-50 rounded-2xl h-fit group-hover:bg-purple-50 transition-colors">
+                                        {job.icon}
+                                    </div>
+                                    <div>
+                                        <h3 className="text-2xl font-bold text-slate-900 mb-2">{job.title}</h3>
+                                        <span className="inline-block bg-slate-100 text-slate-600 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">
+                                            {job.type}
+                                        </span>
+                                    </div>
+                                </div>
+                                <button
+                                    onClick={() => document.getElementById('application-form')?.scrollIntoView({ behavior: 'smooth' })}
+                                    className="hidden md:flex items-center gap-2 text-purple-600 font-bold hover:text-purple-800 transition-colors"
+                                >
+                                    Apply Now <ArrowRight size={18} />
+                                </button>
                             </div>
-                            <span className="inline-block bg-slate-100 text-slate-600 text-xs font-bold px-3 py-1 rounded-full mb-6">
-                                {positions[currentJobIndex].type}
-                            </span>
-                            <p className="text-slate-600 text-lg leading-relaxed mb-8">
-                                {positions[currentJobIndex].description}
+
+                            <p className="text-lg text-slate-700 mb-8 leading-relaxed border-b border-slate-100 pb-8">
+                                {job.overview}
                             </p>
-                        </div>
 
-                        <div className="flex items-center justify-between mt-auto pt-6 border-t border-slate-50">
-                            <div className="flex gap-2">
-                                {positions.map((_, idx) => (
-                                    <div
-                                        key={idx}
-                                        className={`w-2 h-2 rounded-full transition-all ${idx === currentJobIndex ? 'bg-purple-600 w-4' : 'bg-slate-200'}`}
-                                    />
-                                ))}
+                            <div className="grid md:grid-cols-2 gap-10">
+                                <div>
+                                    <h4 className="font-bold text-slate-900 mb-4 flex items-center gap-2 text-sm uppercase tracking-wider text-slate-400">
+                                        What You'll Do
+                                    </h4>
+                                    <ul className="space-y-3">
+                                        {job.responsibilities.map((item, i) => (
+                                            <li key={i} className="flex items-start gap-3 text-slate-600">
+                                                <span className="mt-1.5 w-1.5 h-1.5 bg-purple-500 rounded-full flex-shrink-0"></span>
+                                                {item}
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 className="font-bold text-slate-900 mb-4 flex items-center gap-2 text-sm uppercase tracking-wider text-slate-400">
+                                        Who You Are
+                                    </h4>
+                                    <ul className="space-y-3">
+                                        {job.requirements.map((item, i) => (
+                                            <li key={i} className="flex items-start gap-3 text-slate-600">
+                                                <span className="mt-1.5 w-1.5 h-1.5 bg-purple-500 rounded-full flex-shrink-0"></span>
+                                                {item}
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
                             </div>
-                            <div className="flex gap-2">
-                                <button onClick={prevJob} className="p-2 rounded-full hover:bg-slate-100 text-slate-600 transition-colors">
-                                    <ChevronLeft size={24} />
-                                </button>
-                                <button onClick={nextJob} className="p-2 rounded-full hover:bg-slate-100 text-slate-600 transition-colors">
-                                    <ChevronRight size={24} />
-                                </button>
-                            </div>
+
+                            <button
+                                onClick={() => document.getElementById('application-form')?.scrollIntoView({ behavior: 'smooth' })}
+                                className="md:hidden w-full mt-8 bg-slate-50 text-slate-900 font-bold py-3 rounded-xl hover:bg-slate-100 transition-colors"
+                            >
+                                Apply for this role
+                            </button>
                         </div>
+                    ))}
+                </div>
+            </section>
+
+            {/* Application Form Section */}
+            <section id="application-form" className="bg-white py-24 border-t border-slate-100">
+                <div className="container mx-auto px-6 max-w-3xl">
+                    <div className="text-center mb-12">
+                        <h2 className="text-3xl md:text-4xl font-serif font-bold text-slate-900 mb-4">
+                            Ready to Apply?
+                        </h2>
+                        <p className="text-slate-600 text-lg">
+                            We value skill and character over resumes. Show us what you can do.
+                        </p>
                     </div>
 
-                    {/* Application Form */}
-                    <div className="bg-white p-8 rounded-3xl shadow-xl border border-slate-100 relative overflow-hidden">
+                    <div className="bg-slate-50 p-8 md:p-12 rounded-3xl shadow-inner border border-slate-100">
                         {submitted ? (
                             <div className="text-center py-20">
-                                <div className="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-6">
-                                    <CheckCircle size={32} />
+                                <div className="w-20 h-20 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-sm">
+                                    <CheckCircle size={40} />
                                 </div>
-                                <h3 className="text-2xl font-serif font-bold text-slate-900 mb-2">You're In!</h3>
-                                <p className="text-slate-600">We've got your info. If it looks like a match, we'll reach out soon.</p>
+                                <h3 className="text-3xl font-serif font-bold text-slate-900 mb-4">Application Sent!</h3>
+                                <p className="text-slate-600 text-lg max-w-md mx-auto">
+                                    We've received your details. Our team will review your application and get back to you within 48 hours if it's a match.
+                                </p>
                                 <button
                                     onClick={() => setSubmitted(false)}
-                                    className="mt-8 text-purple-600 font-bold hover:underline"
+                                    className="mt-10 text-purple-600 font-bold hover:text-purple-800 transition-colors"
                                 >
-                                    Submit another one?
+                                    Submit another application
                                 </button>
                             </div>
                         ) : (
-                            <form onSubmit={handleSubmit} className="space-y-6 relative z-10">
-                                <h2 className="text-2xl font-bold font-serif mb-6">Let's Do This</h2>
-
+                            <form onSubmit={handleSubmit} className="space-y-8">
                                 <div>
-                                    <label className="block text-sm font-bold text-slate-700 mb-2">Role Applying For</label>
-                                    <select
-                                        name="position"
-                                        value={formData.position}
-                                        onChange={handleChange}
-                                        required
-                                        className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-purple-500 focus:ring-1 focus:ring-purple-500 outline-none transition-all"
-                                    >
-                                        <option value="" disabled>Select your role...</option>
-                                        {positions.map((job, i) => (
-                                            <option key={i} value={job.title}>{job.title}</option>
-                                        ))}
-                                        <option value="General Application">Something else?</option>
-                                    </select>
+                                    <label className="block text-sm font-bold text-slate-700 mb-2 uppercase tracking-wide">Role Applying For</label>
+                                    <div className="relative">
+                                        <select
+                                            name="position"
+                                            value={formData.position}
+                                            onChange={handleChange}
+                                            required
+                                            className="w-full px-5 py-4 rounded-xl border border-slate-200 bg-white focus:border-purple-500 focus:ring-4 focus:ring-purple-500/10 outline-none transition-all appearance-none font-medium text-slate-900"
+                                        >
+                                            <option value="" disabled>Select your role...</option>
+                                            {positions.map((job, i) => (
+                                                <option key={i} value={job.title}>{job.title}</option>
+                                            ))}
+                                            <option value="General Application">General Application</option>
+                                        </select>
+                                        <div className="absolute right-5 top-1/2 -translate-y-1/2 pointer-events-none text-slate-400">
+                                            <ArrowRight size={20} className="rotate-90" />
+                                        </div>
+                                    </div>
                                 </div>
 
-                                <div className="grid md:grid-cols-2 gap-6">
+                                <div className="grid md:grid-cols-2 gap-8">
                                     <div>
-                                        <label className="block text-sm font-bold text-slate-700 mb-2">Name</label>
+                                        <label className="block text-sm font-bold text-slate-700 mb-2 uppercase tracking-wide">Full Name</label>
                                         <input
                                             type="text"
                                             name="name"
                                             value={formData.name}
                                             onChange={handleChange}
                                             required
-                                            placeholder="Your name"
-                                            className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-purple-500 focus:ring-1 focus:ring-purple-500 outline-none transition-all"
+                                            placeholder="Jane Doe"
+                                            className="w-full px-5 py-4 rounded-xl border border-slate-200 bg-white focus:border-purple-500 focus:ring-4 focus:ring-purple-500/10 outline-none transition-all"
                                         />
                                     </div>
                                     <div>
-                                        <label className="block text-sm font-bold text-slate-700 mb-2">Email</label>
+                                        <label className="block text-sm font-bold text-slate-700 mb-2 uppercase tracking-wide">Email Address</label>
                                         <input
                                             type="email"
                                             name="email"
                                             value={formData.email}
                                             onChange={handleChange}
                                             required
-                                            placeholder="you@example.com"
-                                            className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-purple-500 focus:ring-1 focus:ring-purple-500 outline-none transition-all"
+                                            placeholder="jane@example.com"
+                                            className="w-full px-5 py-4 rounded-xl border border-slate-200 bg-white focus:border-purple-500 focus:ring-4 focus:ring-purple-500/10 outline-none transition-all"
                                         />
                                     </div>
                                 </div>
 
                                 <div>
-                                    <label className="block text-sm font-bold text-slate-700 mb-2">Portfolio / LinkedIn</label>
+                                    <label className="block text-sm font-bold text-slate-700 mb-2 uppercase tracking-wide">Portfolio / LinkedIn / Case Studies</label>
                                     <input
                                         type="url"
                                         name="portfolio"
                                         value={formData.portfolio}
                                         onChange={handleChange}
-                                        placeholder="https://..."
-                                        className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-purple-500 focus:ring-1 focus:ring-purple-500 outline-none transition-all"
+                                        placeholder="https://"
+                                        className="w-full px-5 py-4 rounded-xl border border-slate-200 bg-white focus:border-purple-500 focus:ring-4 focus:ring-purple-500/10 outline-none transition-all"
                                     />
                                 </div>
 
                                 <div>
-                                    <label className="block text-sm font-bold text-slate-700 mb-2">Why you?</label>
+                                    <label className="block text-sm font-bold text-slate-700 mb-2 uppercase tracking-wide">Why You?</label>
                                     <textarea
                                         name="coverLetter"
                                         value={formData.coverLetter}
                                         onChange={handleChange}
                                         required
-                                        rows={4}
-                                        placeholder="Show us what you've got. No formal cover letters needed—just be real."
-                                        className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-purple-500 focus:ring-1 focus:ring-purple-500 outline-none transition-all"
+                                        rows={6}
+                                        placeholder="Tell us about a big win, your work philosophy, or why you want to work with us. Keep it real."
+                                        className="w-full px-5 py-4 rounded-xl border border-slate-200 bg-white focus:border-purple-500 focus:ring-4 focus:ring-purple-500/10 outline-none transition-all resize-y"
                                     ></textarea>
                                 </div>
 
                                 <button
                                     type="submit"
-                                    className="w-full bg-slate-900 text-white font-bold py-4 rounded-xl hover:bg-purple-700 transition-all duration-300 shadow-lg hover:shadow-purple-500/20 flex items-center justify-center gap-2"
+                                    className="w-full bg-slate-900 text-white font-bold text-lg py-5 rounded-xl hover:bg-slate-800 transition-all duration-300 shadow-xl hover:shadow-2xl hover:-translate-y-1 flex items-center justify-center gap-3"
                                 >
-                                    Send It <Send size={18} />
+                                    Submit Application <Send size={20} />
                                 </button>
                             </form>
                         )}
-
-                        {/* Decorative Background Blob */}
-                        <div className="absolute -top-20 -right-20 w-64 h-64 bg-purple-100 rounded-full blur-3xl opacity-50 pointer-events-none"></div>
-                        <div className="absolute -bottom-20 -left-20 w-64 h-64 bg-blue-100 rounded-full blur-3xl opacity-50 pointer-events-none"></div>
                     </div>
                 </div>
-            </div>
+            </section>
         </div>
     );
 };
