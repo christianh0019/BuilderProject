@@ -27,7 +27,7 @@ const Navbar: React.FC = () => {
       className={`fixed w-full z-50 transition-all duration-300 ${isOpen || scrolled ? 'bg-white shadow-sm py-4' : 'bg-transparent py-6'
         }`}
     >
-      <div className="container mx-auto px-6 flex justify-between items-center">
+      <div className="container mx-auto px-6 flex justify-between items-center relative z-50">
         {/* Logo */}
         <Link to="/" className="text-2xl font-bold font-serif tracking-tight flex items-center gap-2">
           <img src="/images/logo_icon.png" alt="BuilderProject Logo" className="w-8 h-8 rounded-lg" />
