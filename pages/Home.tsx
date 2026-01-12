@@ -167,7 +167,7 @@ const Home: React.FC = () => {
 
             <RevealOnScroll delay={200}>
               <p className="text-xl lg:text-2xl text-slate-500 mb-14 max-w-3xl mx-auto leading-relaxed font-light">
-                BuilderProject combines elite strategy, design, and digital innovation to help you stop chasing leads and start building your backlog.
+                Stop relying on referrals and build your project pipeline with marketing that gets results every time.
               </p>
             </RevealOnScroll>
 
