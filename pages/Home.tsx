@@ -172,26 +172,28 @@ const Home: React.FC = () => {
             </RevealOnScroll>
 
             <RevealOnScroll delay={300}>
-              <div className="mb-12 flex flex-col lg:flex-row items-center justify-center gap-4 lg:gap-8 text-base md:text-lg font-medium text-slate-700">
-                <div className="flex items-center gap-3">
-                  <div className="bg-green-100 text-green-700 rounded-full p-1.5 shadow-sm">
-                    <ChevronDown size={20} className="stroke-[3]" />
-                  </div>
-                  <span>Guaranteed Results</span>
-                </div>
-                <div className="hidden lg:block w-px h-6 bg-slate-300"></div>
-                <div className="flex items-center gap-3">
-                  <div className="bg-green-100 text-green-700 rounded-full p-1.5 shadow-sm">
-                    <ChevronDown size={20} className="stroke-[3]" />
-                  </div>
-                  <span>30-Day Money Back</span>
-                </div>
-                <div className="hidden lg:block w-px h-6 bg-slate-300"></div>
-                <div className="flex items-center gap-3">
-                  <div className="bg-green-100 text-green-700 rounded-full p-1.5 shadow-sm">
-                    <ChevronDown size={20} className="stroke-[3]" />
-                  </div>
-                  <span>You Own Every Asset</span>
+              <div className="mb-14 relative max-w-6xl mx-auto overflow-hidden">
+                {/* Gradient Fades - using white to match background request */}
+                <div className="absolute top-0 left-0 w-24 h-full bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
+                <div className="absolute top-0 right-0 w-24 h-full bg-gradient-to-l from-white to-transparent z-10 pointer-events-none"></div>
+
+                <div className="flex gap-12 w-max hover:[animation-play-state:paused] group">
+                  {[...Array(2)].map((_, groupIndex) => (
+                    <div key={groupIndex} className="flex items-center gap-12 animate-marquee will-change-transform">
+                      {[
+                        "Return on Investment Guaranteed",
+                        "30-Day No-Questions-Asked Money-Back Guarantee",
+                        "You Own Every Asset 100%"
+                      ].map((text, i) => (
+                        <div key={i} className="flex items-center gap-3 whitespace-nowrap">
+                          <div className="bg-green-100 text-green-700 rounded-full p-1.5 shadow-sm flex-shrink-0">
+                            <ChevronDown size={20} className="stroke-[3]" />
+                          </div>
+                          <span className="text-lg md:text-xl font-medium text-slate-700">{text}</span>
+                        </div>
+                      ))}
+                    </div>
+                  ))}
                 </div>
               </div>
 
