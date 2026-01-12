@@ -20,6 +20,8 @@ import { HelmetProvider } from 'react-helmet-async';
 import Blog from './pages/Blog';
 import BlogPost from './pages/BlogPost';
 import Careers from './pages/Careers';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import TermsOfService from './pages/TermsOfService';
 import AdvertisingLanding from './pages/AdvertisingLanding';
 import Quickstart from './pages/Quickstart';
 import NotFound from './pages/NotFound';
@@ -64,6 +66,8 @@ const App: React.FC = () => {
             <Route path="/case-studies/:slug" element={<CaseStudyDetail />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/careers" element={<Careers />} />
+            <Route path="/privacy" element={<PrivacyPolicy />} />
+            <Route path="/terms" element={<TermsOfService />} />
             <Route path="*" element={<NotFound />} />
           </Route>
 
