@@ -1,5 +1,4 @@
 import React from 'react';
-import SimpleHeader from '../components/SimpleHeader';
 import { Helmet } from 'react-helmet-async';
 
 const PrivacyPolicy: React.FC = () => {
@@ -10,9 +9,7 @@ const PrivacyPolicy: React.FC = () => {
                 <meta name="description" content="Privacy Policy for BuilderProject." />
             </Helmet>
 
-            <SimpleHeader />
-
-            <div className="container mx-auto px-6 py-20 max-w-4xl">
+            <div className="container mx-auto px-6 py-40 max-w-4xl">
                 <h1 className="text-4xl font-serif font-bold text-slate-900 mb-8">Privacy Policy</h1>
                 <p className="mb-4">Last Updated: {new Date().toLocaleDateString()}</p>
 
