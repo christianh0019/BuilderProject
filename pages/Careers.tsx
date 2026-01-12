@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { Briefcase, Send, CheckCircle, ArrowRight, Star, Users, Zap, Layout } from 'lucide-react';
-import SimpleHeader from '../components/SimpleHeader';
+import { Briefcase, Send, CheckCircle, ArrowRight, Star, Users, Zap, Layout, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 
 const Careers: React.FC = () => {
@@ -12,6 +11,7 @@ const Careers: React.FC = () => {
         coverLetter: ''
     });
     const [submitted, setSubmitted] = useState(false);
+    const [currentJobIndex, setCurrentJobIndex] = useState(0);
 
     const positions = [
         {
@@ -84,6 +84,14 @@ const Careers: React.FC = () => {
         }
     ];
 
+    const nextJob = () => {
+        setCurrentJobIndex((prev) => (prev + 1) % positions.length);
+    };
+
+    const prevJob = () => {
+        setCurrentJobIndex((prev) => (prev - 1 + positions.length) % positions.length);
+    };
+
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
@@ -94,6 +102,8 @@ const Careers: React.FC = () => {
         setSubmitted(true);
     };
 
+    const currentJob = positions[currentJobIndex];
+
     return (
         <div className="min-h-screen bg-slate-50 font-sans text-slate-900">
             <Helmet>
@@ -101,10 +111,8 @@ const Careers: React.FC = () => {
                 <meta name="description" content="Join our team of elite marketers and creatives helping custom home builders dominate their markets." />
             </Helmet>
 
-            <SimpleHeader />
-
             {/* Hero Section */}
-            <section className="pt-20 pb-20 px-6 text-center max-w-4xl mx-auto">
+            <section className="pt-40 pb-20 px-6 text-center max-w-4xl mx-auto">
                 <span className="inline-block py-1 px-3 rounded-full bg-purple-100 text-purple-700 text-xs font-bold tracking-wider uppercase mb-6">
                     We're Hiring
                 </span>
@@ -116,76 +124,91 @@ const Careers: React.FC = () => {
                 </p>
             </section>
 
-            {/* Open Positions - Full Width Stack */}
+            {/* Open Positions - Carousel */}
             <section className="px-6 pb-24 container mx-auto max-w-5xl">
-                <h2 className="text-3xl font-serif font-bold text-slate-900 mb-12 flex items-center gap-3">
-                    <Briefcase className="text-purple-600" /> Open Positions
-                </h2>
+                <div className="flex items-center justify-between mb-12">
+                    <h2 className="text-3xl font-serif font-bold text-slate-900 flex items-center gap-3">
+                        <Briefcase className="text-purple-600" /> Open Positions
+                    </h2>
+                    <div className="flex gap-2">
+                        <button onClick={prevJob} className="p-3 bg-white rounded-full shadow-sm border border-slate-200 hover:bg-slate-50 text-slate-600 transition-colors">
+                            <ChevronLeft size={24} />
+                        </button>
+                        <button onClick={nextJob} className="p-3 bg-white rounded-full shadow-sm border border-slate-200 hover:bg-slate-50 text-slate-600 transition-colors">
+                            <ChevronRight size={24} />
+                        </button>
+                    </div>
+                </div>
 
-                <div className="space-y-8">
-                    {positions.map((job, index) => (
-                        <div key={index} className="bg-white rounded-3xl p-8 md:p-10 shadow-lg border border-slate-100 hover:shadow-xl transition-all duration-300 group">
-                            <div className="flex flex-col md:flex-row md:items-start justify-between gap-6 mb-8">
-                                <div className="flex gap-4">
-                                    <div className="p-3 bg-slate-50 rounded-2xl h-fit group-hover:bg-purple-50 transition-colors">
-                                        {job.icon}
-                                    </div>
-                                    <div>
-                                        <h3 className="text-2xl font-bold text-slate-900 mb-2">{job.title}</h3>
-                                        <span className="inline-block bg-slate-100 text-slate-600 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">
-                                            {job.type}
-                                        </span>
-                                    </div>
-                                </div>
-                                <button
-                                    onClick={() => document.getElementById('application-form')?.scrollIntoView({ behavior: 'smooth' })}
-                                    className="hidden md:flex items-center gap-2 text-purple-600 font-bold hover:text-purple-800 transition-colors"
-                                >
-                                    Apply Now <ArrowRight size={18} />
-                                </button>
+                <div className="bg-white rounded-3xl p-8 md:p-10 shadow-lg border border-slate-100 hover:shadow-xl transition-all duration-300 relative min-h-[600px]">
+                    <div className="flex flex-col md:flex-row md:items-start justify-between gap-6 mb-8">
+                        <div className="flex gap-4">
+                            <div className="p-3 bg-slate-50 rounded-2xl h-fit">
+                                {currentJob.icon}
                             </div>
-
-                            <p className="text-lg text-slate-700 mb-8 leading-relaxed border-b border-slate-100 pb-8">
-                                {job.overview}
-                            </p>
-
-                            <div className="grid md:grid-cols-2 gap-10">
-                                <div>
-                                    <h4 className="font-bold text-slate-900 mb-4 flex items-center gap-2 text-sm uppercase tracking-wider text-slate-400">
-                                        What You'll Do
-                                    </h4>
-                                    <ul className="space-y-3">
-                                        {job.responsibilities.map((item, i) => (
-                                            <li key={i} className="flex items-start gap-3 text-slate-600">
-                                                <span className="mt-1.5 w-1.5 h-1.5 bg-purple-500 rounded-full flex-shrink-0"></span>
-                                                {item}
-                                            </li>
-                                        ))}
-                                    </ul>
-                                </div>
-                                <div>
-                                    <h4 className="font-bold text-slate-900 mb-4 flex items-center gap-2 text-sm uppercase tracking-wider text-slate-400">
-                                        Who You Are
-                                    </h4>
-                                    <ul className="space-y-3">
-                                        {job.requirements.map((item, i) => (
-                                            <li key={i} className="flex items-start gap-3 text-slate-600">
-                                                <span className="mt-1.5 w-1.5 h-1.5 bg-purple-500 rounded-full flex-shrink-0"></span>
-                                                {item}
-                                            </li>
-                                        ))}
-                                    </ul>
-                                </div>
+                            <div>
+                                <h3 className="text-3xl font-bold text-slate-900 mb-2">{currentJob.title}</h3>
+                                <span className="inline-block bg-slate-100 text-slate-600 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">
+                                    {currentJob.type}
+                                </span>
                             </div>
-
-                            <button
-                                onClick={() => document.getElementById('application-form')?.scrollIntoView({ behavior: 'smooth' })}
-                                className="md:hidden w-full mt-8 bg-slate-50 text-slate-900 font-bold py-3 rounded-xl hover:bg-slate-100 transition-colors"
-                            >
-                                Apply for this role
-                            </button>
                         </div>
-                    ))}
+                        <button
+                            onClick={() => document.getElementById('application-form')?.scrollIntoView({ behavior: 'smooth' })}
+                            className="hidden md:flex items-center gap-2 text-purple-600 font-bold hover:text-purple-800 transition-colors bg-purple-50 px-6 py-3 rounded-xl hover:bg-purple-100"
+                        >
+                            Apply Now <ArrowRight size={18} />
+                        </button>
+                    </div>
+
+                    <p className="text-xl text-slate-700 mb-10 leading-relaxed border-b border-slate-100 pb-10 max-w-3xl">
+                        {currentJob.overview}
+                    </p>
+
+                    <div className="grid md:grid-cols-2 gap-12">
+                        <div>
+                            <h4 className="font-bold text-slate-900 mb-6 flex items-center gap-2 text-sm uppercase tracking-wider text-slate-400">
+                                What You'll Do
+                            </h4>
+                            <ul className="space-y-4">
+                                {currentJob.responsibilities.map((item, i) => (
+                                    <li key={i} className="flex items-start gap-3 text-slate-600">
+                                        <span className="mt-1.5 w-1.5 h-1.5 bg-purple-500 rounded-full flex-shrink-0"></span>
+                                        {item}
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 className="font-bold text-slate-900 mb-6 flex items-center gap-2 text-sm uppercase tracking-wider text-slate-400">
+                                Who You Are
+                            </h4>
+                            <ul className="space-y-4">
+                                {currentJob.requirements.map((item, i) => (
+                                    <li key={i} className="flex items-start gap-3 text-slate-600">
+                                        <span className="mt-1.5 w-1.5 h-1.5 bg-purple-500 rounded-full flex-shrink-0"></span>
+                                        {item}
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    </div>
+
+                    <button
+                        onClick={() => document.getElementById('application-form')?.scrollIntoView({ behavior: 'smooth' })}
+                        className="md:hidden w-full mt-10 bg-slate-900 text-white font-bold py-4 rounded-xl hover:bg-slate-800 transition-colors shadow-lg"
+                    >
+                        Apply for this role
+                    </button>
+
+                    <div className="flex justify-center mt-12 gap-2">
+                        {positions.map((_, idx) => (
+                            <div
+                                key={idx}
+                                className={`w-2 h-2 rounded-full transition-all duration-300 ${idx === currentJobIndex ? 'bg-purple-600 w-8' : 'bg-slate-200'}`}
+                            />
+                        ))}
+                    </div>
                 </div>
             </section>
 
