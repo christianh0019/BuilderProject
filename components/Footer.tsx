@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Instagram, Facebook, Linkedin, Twitter } from 'lucide-react';
+import { Instagram, Facebook, Linkedin } from 'lucide-react';
 
 const Footer: React.FC = () => {
   return (
@@ -71,10 +71,9 @@ const Footer: React.FC = () => {
             © {new Date().getFullYear()} BuilderProject. All Rights Reserved.
           </p>
           <div className="flex space-x-6">
-            <a href="#" className="text-slate-400 hover:text-purple-400 transition-colors"><Facebook size={20} /></a>
-            <a href="#" className="text-slate-400 hover:text-purple-400 transition-colors"><Instagram size={20} /></a>
-            <a href="#" className="text-slate-400 hover:text-purple-400 transition-colors"><Twitter size={20} /></a>
-            <a href="#" className="text-slate-400 hover:text-purple-400 transition-colors"><Linkedin size={20} /></a>
+            <a href="https://www.facebook.com/builderproject.co/" target="_blank" rel="noreferrer" className="text-slate-400 hover:text-purple-400 transition-colors"><Facebook size={20} /></a>
+            <a href="https://www.instagram.com/builderproject.co/" target="_blank" rel="noreferrer" className="text-slate-400 hover:text-purple-400 transition-colors"><Instagram size={20} /></a>
+            <a href="https://www.linkedin.com/company/builderproject/" target="_blank" rel="noreferrer" className="text-slate-400 hover:text-purple-400 transition-colors"><Linkedin size={20} /></a>
           </div>
         </div>
       </div>
