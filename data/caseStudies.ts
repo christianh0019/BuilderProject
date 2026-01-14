@@ -141,6 +141,7 @@ export const caseStudies: CaseStudy[] = [
             { label: 'Leads', value: '1,300+' }
         ],
         imageUrl: '/images/eagle-rock-update.png',
+        videoUrl: 'https://storage.googleapis.com/msgsndr/HllUVzV8V6VFH4nUuq4W/media/69678674d473d851664ab847.mp4',
         content: {
             overview: "Eagle Rock Custom Homes provides premium custom home material packages nationwide. Despite a solid offering, founder Bill was doing all the sales himself and struggling with inconsistent lead flow.",
             challenge: "Bill needed a way to generate consistent, qualified leads and remove himself from the manual sales grind to scale the business.",

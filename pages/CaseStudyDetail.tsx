@@ -59,6 +59,37 @@ const CaseStudyDetail: React.FC = () => {
 
                     {/* Main Content */}
                     <div className="lg:col-span-8">
+                        {study.videoUrl && (
+                            <div className="mb-12">
+                                <h3 className="text-xl font-bold text-slate-900 mb-4 flex items-center">
+                                    <div className="bg-red-500 text-white p-1 rounded-md mr-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4">
+                                            <path fillRule="evenodd" d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.348c1.295.712 1.295 2.573 0 3.285L7.28 19.991c-1.25.687-2.779-.217-2.779-1.643V5.653z" clipRule="evenodd" />
+                                        </svg>
+                                    </div>
+                                    Watch The Breakdown
+                                </h3>
+                                <div className="rounded-2xl overflow-hidden shadow-xl bg-black aspect-video relative group cursor-pointer" onClick={(e) => {
+                                    const video = e.currentTarget.querySelector('video');
+                                    if (video) {
+                                        if (video.paused) {
+                                            video.play();
+                                            e.currentTarget.querySelector('.play-overlay')?.classList.add('opacity-0');
+                                        } else {
+                                            video.pause();
+                                            e.currentTarget.querySelector('.play-overlay')?.classList.remove('opacity-0');
+                                        }
+                                    }
+                                }}>
+                                    <video
+                                        src={study.videoUrl}
+                                        className="w-full h-full object-cover"
+                                        controls
+                                        playsInline
+                                    ></video>
+                                </div>
+                            </div>
+                        )}
                         <div className="prose prose-lg prose-slate max-w-none">
                             <h2 className="text-3xl font-serif font-bold text-slate-900 mb-6">Overview</h2>
                             <p className="text-slate-600 leading-relaxed mb-12 text-lg">
