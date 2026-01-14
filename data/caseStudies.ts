@@ -29,7 +29,7 @@ export const caseStudies: CaseStudy[] = [
     {
         id: 'homestead',
         slug: 'homestead',
-        title: 'Closed 2 Homes Resulting in $500k In Profits Off $8k Of Ad Spend',
+        title: 'Generated $2.5M In Revenue Off $8k Of Ad Spend',
         builderName: 'Homestead Home Builders',
         location: 'Denver, CO',
         results: [
@@ -99,7 +99,7 @@ export const caseStudies: CaseStudy[] = [
     {
         id: 'schwanz',
         slug: 'schwanz-custom',
-        title: 'Filled Build Slots & Closed $680K in Projects Off $6K Spend',
+        title: 'Filled Build Slots & Generated $680K in Revenue Off $6K Spend',
         builderName: 'Schwanz Custom Homes',
         location: 'Wisconsin',
         results: [
@@ -132,7 +132,7 @@ export const caseStudies: CaseStudy[] = [
     {
         id: 'eagle-rock',
         slug: 'eagle-rock',
-        title: 'Turned $5.5K Ad Spend into $3.2M Pipeline',
+        title: 'Generated $3.2M Revenue from Just $5.5K Ad Spend',
         builderName: 'Eagle Rock Custom Homes',
         location: 'Nationwide / PA & GA',
         results: [
