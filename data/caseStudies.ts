@@ -33,7 +33,7 @@ export const caseStudies: CaseStudy[] = [
         builderName: 'Homestead Home Builders',
         location: 'Denver, CO',
         results: [
-            { label: 'Profit Generated', value: '$500k' },
+            { label: 'Revenue', value: '$2.5M' },
             { label: 'Ad Spend', value: '$8k' },
             { label: 'Homes Closed', value: '2' }
         ],
@@ -66,7 +66,7 @@ export const caseStudies: CaseStudy[] = [
         builderName: 'Open Prairie Custom Homes',
         location: 'Dallas, TX',
         results: [
-            { label: 'Contract Value', value: '$2.8M' },
+            { label: 'Revenue', value: '$2.8M' },
             { label: 'Ad Spend', value: '$7k' },
             { label: 'Top Project', value: '$1.5M' }
         ],
@@ -136,7 +136,7 @@ export const caseStudies: CaseStudy[] = [
         builderName: 'Eagle Rock Custom Homes',
         location: 'Nationwide / PA & GA',
         results: [
-            { label: 'Pipeline', value: '$3.2M' },
+            { label: 'Revenue', value: '$3.2M' },
             { label: 'Ad Spend', value: '$5.5k' },
             { label: 'Leads', value: '1,300+' }
         ],
