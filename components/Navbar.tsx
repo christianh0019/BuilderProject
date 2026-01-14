@@ -36,7 +36,7 @@ const Navbar: React.FC = () => {
 
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center space-x-8">
-          <Link to="/" className="text-slate-700 hover:text-purple-700 font-medium transition-colors">Home</Link>
+
 
           {/* Services Dropdown */}
           <div className="relative group">
@@ -127,7 +127,7 @@ const Navbar: React.FC = () => {
           }`}
       >
         <div className="flex flex-col space-y-6 text-lg">
-          <Link to="/" className="text-slate-900 font-semibold border-b border-slate-100 pb-4">Home</Link>
+
 
           <div>
             <button

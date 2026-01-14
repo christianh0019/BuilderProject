@@ -8,7 +8,9 @@ const CaseStudies: React.FC = () => {
     <div className="pt-32 pb-20 bg-slate-50">
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto text-center mb-20">
-          <span className="text-purple-600 font-bold tracking-wider text-sm uppercase mb-4 block">Success Stories</span>
+          <span className="inline-block py-2 px-6 rounded-full bg-purple-100 text-purple-700 text-sm font-bold tracking-widest uppercase mb-6">
+            Success Stories
+          </span>
           <h1 className="text-5xl md:text-6xl font-serif font-bold text-slate-900 mb-6">
             Real Results for <br />Real Builders
           </h1>
