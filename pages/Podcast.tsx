@@ -29,8 +29,12 @@ const Podcast: React.FC = () => {
 
                 {/* Coming Soon / Placeholder Content */}
                 <div className="max-w-4xl mx-auto bg-slate-50 rounded-2xl p-12 text-center border border-slate-100">
-                    <div className="w-20 h-20 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6 text-purple-600">
-                        <Mic size={40} />
+                    <div className="w-64 h-64 mx-auto mb-8 rounded-2xl overflow-hidden shadow-2xl border-4 border-white/50">
+                        <img
+                            src="/images/podcast-cover.png"
+                            alt="The Builder Backstage Podcast"
+                            className="w-full h-full object-cover"
+                        />
                     </div>
                     <h2 className="text-3xl font-serif font-bold text-slate-900 mb-4">First Episodes Dropping Soon</h2>
                     <p className="text-lg text-slate-600 mb-8 max-w-xl mx-auto">
