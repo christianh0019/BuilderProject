@@ -19,6 +19,7 @@ import BookPopup from './components/BookPopup';
 import { HelmetProvider } from 'react-helmet-async';
 import Blog from './pages/Blog';
 import BlogPost from './pages/BlogPost';
+import Podcast from './pages/Podcast';
 import Careers from './pages/Careers';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsOfService from './pages/TermsOfService';
@@ -58,6 +59,7 @@ const App: React.FC = () => {
             <Route path="/programs" element={<Programs />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/:slug" element={<BlogPost />} />
+            <Route path="/podcast" element={<Podcast />} />
             <Route path="/services/website-design" element={<WebsiteDesign />} />
             <Route path="/services/content-marketing" element={<ContentMarketing />} />
             <Route path="/services/paid-advertising" element={<PaidAdvertising />} />
