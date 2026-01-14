@@ -281,7 +281,6 @@ const AdvertisingLanding: React.FC = () => {
 
                             <div className="grid md:grid-cols-2 gap-6 text-left">
                                 {caseStudies
-                                    .filter(study => study.id !== 'eagle-rock')
                                     .map((study) => (
                                         <div key={study.id} className="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
                                             {study.videoUrl ? (
