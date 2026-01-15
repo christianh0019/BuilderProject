@@ -40,6 +40,7 @@ const Footer: React.FC = () => {
               <li><Link to="/programs" className="text-slate-400 hover:text-white transition-colors">Programs</Link></li>
               <li><Link to="/case-studies" className="text-slate-400 hover:text-white transition-colors">Case Studies</Link></li>
               <li><Link to="/contact" className="text-slate-400 hover:text-white transition-colors">Contact</Link></li>
+              <li><a href="https://app.buildsurge.co" target="_blank" rel="noreferrer" className="text-slate-400 hover:text-white transition-colors">Login</a></li>
             </ul>
           </div>
           <div>

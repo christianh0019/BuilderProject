@@ -112,6 +112,10 @@ const Navbar: React.FC = () => {
             </div>
           </div>
 
+          <a href="https://app.buildsurge.co" target="_blank" rel="noreferrer" className="text-slate-700 hover:text-purple-700 font-medium transition-colors">
+            Login
+          </a>
+
           <Link
             to="/contact"
             className="px-6 py-2.5 rounded-full bg-slate-900 text-white font-medium hover:bg-gradient-to-r hover:from-purple-700 hover:to-pink-600 transition-all duration-300 shadow-lg hover:shadow-purple-500/25"
@@ -176,6 +180,10 @@ const Navbar: React.FC = () => {
               </div>
             )}
           </div>
+
+          <a href="https://app.buildsurge.co" target="_blank" rel="noreferrer" className="text-slate-900 font-semibold border-b border-slate-100 pb-4 block">
+            Login
+          </a>
 
           <Link
             to="/contact"
