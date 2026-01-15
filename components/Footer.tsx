@@ -45,6 +45,9 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="text-lg font-bold mb-6 font-serif text-slate-200">Resources</h4>
             <ul className="space-y-4">
+              <li><Link to="/about" className="text-slate-400 hover:text-white transition-colors">About Us</Link></li>
+              <li><Link to="/podcast" className="text-slate-400 hover:text-white transition-colors">Podcast</Link></li>
+              <li><Link to="/careers" className="text-slate-400 hover:text-white transition-colors">Careers</Link></li>
               <li><Link to="/book" className="text-slate-400 hover:text-white transition-colors">Free Book</Link></li>
               <li><a href="https://www.youtube.com/@BuilderProjectCo" target="_blank" rel="noreferrer" className="text-slate-400 hover:text-white transition-colors">YouTube Channel</a></li>
             </ul>
