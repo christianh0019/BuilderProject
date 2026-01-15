@@ -85,6 +85,10 @@ const Navbar: React.FC = () => {
                   <span className="block font-semibold text-slate-800">Our Book</span>
                   <span className="text-sm text-slate-500">The Builder's Marketing Playbook</span>
                 </Link>
+                <Link to="/about" className="block px-6 py-4 hover:bg-slate-50 border-b border-slate-50">
+                  <span className="block font-semibold text-slate-800">About Us</span>
+                  <span className="text-sm text-slate-500">Mission & Team</span>
+                </Link>
                 <Link to="/podcast" className="block px-6 py-4 hover:bg-slate-50 border-b border-slate-50">
                   <span className="block font-semibold text-slate-800">Podcast</span>
                   <span className="text-sm text-slate-500">The Builder Backstage</span>
@@ -163,6 +167,7 @@ const Navbar: React.FC = () => {
             {resourceOpen && (
               <div className="pl-4 mt-4 flex flex-col space-y-4">
                 <Link to="/book" className="text-slate-600">Our Book</Link>
+                <Link to="/about" className="text-slate-600">About Us</Link>
                 <Link to="/podcast" className="text-slate-600">Podcast</Link>
                 <a href="https://www.youtube.com/@BuilderProjectCo" target="_blank" rel="noopener noreferrer" className="text-slate-600 flex items-center gap-2">
                   YouTube Channel <ExternalLink size={14} />
