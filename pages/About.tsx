@@ -28,42 +28,41 @@ const About: React.FC = () => {
                 </div>
 
                 {/* Mission Section */}
-                <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 mb-32 items-center">
-                    <div>
-                        <div className="w-12 h-12 bg-purple-100 rounded-2xl flex items-center justify-center text-purple-600 mb-6">
-                            <Target size={28} />
+                <div className="max-w-4xl mx-auto mb-32">
+                    <div className="text-center mb-16">
+                        <div className="w-16 h-16 bg-purple-100 rounded-2xl flex items-center justify-center text-purple-600 mx-auto mb-6">
+                            <Target size={32} />
                         </div>
-                        <h2 className="text-3xl font-serif font-bold text-slate-900 mb-6">Our Mission</h2>
-                        <div className="space-y-4 text-lg text-slate-600 leading-relaxed">
+                        <h2 className="text-4xl font-serif font-bold text-slate-900 mb-8">Our Mission</h2>
+                        <div className="text-xl text-slate-600 leading-relaxed space-y-6">
                             <p>
                                 The construction industry is full of incredible craftsmen who struggle to get the recognition (and revenue) they deserve. They rely on "word of mouth" while their inferior competitors dominate online.
                             </p>
-                            <p>
-                                <strong>We're here to change that.</strong>
+                            <p className="font-medium text-slate-900">
+                                We're here to change that.
                             </p>
                             <p>
                                 We build specialized, predictable marketing systems that give high-quality builders control over their pipeline. No more hoping for referrals. No more "slow seasons". Just consistent, high-value projects on demand.
                             </p>
                         </div>
                     </div>
-                    <div className="bg-slate-50 rounded-3xl p-8 border border-slate-100">
-                        <div className="grid grid-cols-2 gap-6">
-                            <div className="bg-white p-6 rounded-2xl shadow-sm">
-                                <div className="text-4xl font-bold text-purple-600 mb-2">100+</div>
-                                <div className="text-sm font-bold text-slate-600 uppercase tracking-wide">Builders Partnered</div>
-                            </div>
-                            <div className="bg-white p-6 rounded-2xl shadow-sm">
-                                <div className="text-4xl font-bold text-purple-600 mb-2">$100M+</div>
-                                <div className="text-sm font-bold text-slate-600 uppercase tracking-wide">Revenue Generated</div>
-                            </div>
-                            <div className="bg-white p-6 rounded-2xl shadow-sm">
-                                <div className="text-4xl font-bold text-purple-600 mb-2">4</div>
-                                <div className="text-sm font-bold text-slate-600 uppercase tracking-wide">Years Specialized</div>
-                            </div>
-                            <div className="bg-white p-6 rounded-2xl shadow-sm">
-                                <div className="text-4xl font-bold text-purple-600 mb-2">100%</div>
-                                <div className="text-sm font-bold text-slate-600 uppercase tracking-wide">Construction Focused</div>
-                            </div>
+
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+                        <div className="bg-slate-50 p-6 rounded-2xl border border-slate-100 text-center hover:border-purple-200 transition-colors group">
+                            <div className="text-3xl font-bold text-purple-600 mb-2 group-hover:scale-110 transition-transform duration-300">100+</div>
+                            <div className="text-xs font-bold text-slate-500 uppercase tracking-wide">Builders Partnered</div>
+                        </div>
+                        <div className="bg-slate-50 p-6 rounded-2xl border border-slate-100 text-center hover:border-purple-200 transition-colors group">
+                            <div className="text-3xl font-bold text-purple-600 mb-2 group-hover:scale-110 transition-transform duration-300">$100M+</div>
+                            <div className="text-xs font-bold text-slate-500 uppercase tracking-wide">Revenue Generated</div>
+                        </div>
+                        <div className="bg-slate-50 p-6 rounded-2xl border border-slate-100 text-center hover:border-purple-200 transition-colors group">
+                            <div className="text-3xl font-bold text-purple-600 mb-2 group-hover:scale-110 transition-transform duration-300">4</div>
+                            <div className="text-xs font-bold text-slate-500 uppercase tracking-wide">Years Specialized</div>
+                        </div>
+                        <div className="bg-slate-50 p-6 rounded-2xl border border-slate-100 text-center hover:border-purple-200 transition-colors group">
+                            <div className="text-3xl font-bold text-purple-600 mb-2 group-hover:scale-110 transition-transform duration-300">100%</div>
+                            <div className="text-xs font-bold text-slate-500 uppercase tracking-wide">Construction Focused</div>
                         </div>
                     </div>
                 </div>
@@ -108,46 +107,46 @@ const About: React.FC = () => {
                     <h2 className="text-4xl font-serif font-bold text-slate-900 mb-16">Meet The Team</h2>
 
                     <div className="grid md:grid-cols-3 gap-8">
-                        {/* Team Member 1 */}
-                        <div className="group">
-                            <div className="bg-slate-100 rounded-2xl aspect-[3/4] mb-6 overflow-hidden relative shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:-translate-y-2">
-                                <img
-                                    src="/images/team-1.jpg"
-                                    alt="Process & Strategy Director"
-                                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                                />
-                            </div>
-                            <h3 className="text-xl font-bold text-slate-900">Process & Strategy</h3>
-                            <p className="text-purple-600 font-medium text-sm mb-2">Leadership</p>
-                            <p className="text-slate-500 text-sm max-w-xs mx-auto">Ensuring every partner has a clear roadmap to growth.</p>
-                        </div>
-
-                        {/* Team Member 2 */}
-                        <div className="group">
-                            <div className="bg-slate-100 rounded-2xl aspect-[3/4] mb-6 overflow-hidden relative shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:-translate-y-2">
-                                <img
-                                    src="/images/team-2.png"
-                                    alt="Creative Director"
-                                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                                />
-                            </div>
-                            <h3 className="text-xl font-bold text-slate-900">Creative & Design</h3>
-                            <p className="text-purple-600 font-medium text-sm mb-2">Production</p>
-                            <p className="text-slate-500 text-sm max-w-xs mx-auto">Building brands that command premium prices.</p>
-                        </div>
-
-                        {/* Team Member 3 */}
+                        {/* Founder (White Guy - team-3.jpg) */}
                         <div className="group">
                             <div className="bg-slate-100 rounded-2xl aspect-[3/4] mb-6 overflow-hidden relative shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:-translate-y-2">
                                 <img
                                     src="/images/team-3.jpg"
-                                    alt="Client Success Manager"
+                                    alt="Founder"
                                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                                 />
                             </div>
-                            <h3 className="text-xl font-bold text-slate-900">Client Success</h3>
-                            <p className="text-purple-600 font-medium text-sm mb-2">Operations</p>
-                            <p className="text-slate-500 text-sm max-w-xs mx-auto">Dedicated to your day-to-day wins and long-term scaling.</p>
+                            <h3 className="text-xl font-bold text-slate-900">Founder</h3>
+                            <p className="text-purple-600 font-medium text-sm mb-2">Leadership</p>
+                            <p className="text-slate-500 text-sm max-w-xs mx-auto">Building the vision and ensuring client success.</p>
+                        </div>
+
+                        {/* Marketing Strategist (Black Guy - team-2.png) */}
+                        <div className="group">
+                            <div className="bg-slate-100 rounded-2xl aspect-[3/4] mb-6 overflow-hidden relative shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:-translate-y-2">
+                                <img
+                                    src="/images/team-2.png"
+                                    alt="Marketing Strategist"
+                                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                />
+                            </div>
+                            <h3 className="text-xl font-bold text-slate-900">Marketing Strategist</h3>
+                            <p className="text-purple-600 font-medium text-sm mb-2">Strategy</p>
+                            <p className="text-slate-500 text-sm max-w-xs mx-auto">Ensuring every partner has a clear roadmap to growth.</p>
+                        </div>
+
+                        {/* Creative & Design (Asian Guy - team-1.jpg) */}
+                        <div className="group">
+                            <div className="bg-slate-100 rounded-2xl aspect-[3/4] mb-6 overflow-hidden relative shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:-translate-y-2">
+                                <img
+                                    src="/images/team-1.jpg"
+                                    alt="Creative Director"
+                                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                />
+                            </div>
+                            <h3 className="text-xl font-bold text-slate-900">Creative Director</h3>
+                            <p className="text-purple-600 font-medium text-sm mb-2">Creative</p>
+                            <p className="text-slate-500 text-sm max-w-xs mx-auto">Building brands that command premium prices.</p>
                         </div>
                     </div>
                 </div>
