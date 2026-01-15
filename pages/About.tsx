@@ -12,7 +12,7 @@ const About: React.FC = () => {
 
             <div className="container mx-auto px-6">
                 {/* Hero / Header */}
-                <div className="max-w-6xl mx-auto text-center mb-20">
+                <div className="max-w-4xl mx-auto text-center mb-20">
                     <span className="inline-block py-2 px-6 rounded-full bg-purple-100 text-purple-700 text-sm font-bold tracking-widest uppercase mb-6">
                         About Us
                     </span>
@@ -29,21 +29,40 @@ const About: React.FC = () => {
 
                 {/* Mission Section */}
                 <div className="max-w-6xl mx-auto mb-32">
-                    <div className="text-center mb-16 max-w-3xl mx-auto">
-                        <div className="w-16 h-16 bg-purple-100 rounded-2xl flex items-center justify-center text-purple-600 mx-auto mb-6">
-                            <Target size={32} />
-                        </div>
-                        <h2 className="text-4xl font-serif font-bold text-slate-900 mb-8">Our Mission</h2>
-                        <div className="text-xl text-slate-600 leading-relaxed space-y-6">
-                            <p>
-                                The construction industry is full of incredible craftsmen who struggle to get the recognition (and revenue) they deserve. They rely on "word of mouth" while their inferior competitors dominate online.
-                            </p>
-                            <p className="font-medium text-slate-900">
-                                We're here to change that.
-                            </p>
-                            <p>
-                                We build specialized, predictable marketing systems that give high-quality builders control over their pipeline. No more hoping for referrals. No more "slow seasons". Just consistent, high-value projects on demand.
-                            </p>
+                    {/* Mission Widget */}
+                    <div className="bg-white rounded-[2rem] p-8 md:p-12 shadow-2xl shadow-slate-200/50 border border-slate-100 relative overflow-hidden mb-12">
+                        {/* Decorative Elements */}
+                        <div className="absolute top-0 right-0 -mr-20 -mt-20 w-80 h-80 bg-purple-50 rounded-full blur-3xl opacity-60 pointer-events-none"></div>
+                        <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-64 h-64 bg-pink-50 rounded-full blur-3xl opacity-60 pointer-events-none"></div>
+
+                        <div className="relative z-10 flex flex-col md:flex-row gap-10 md:gap-16 items-center">
+                            <div className="md:w-5/12 text-center md:text-left">
+                                <div className="inline-flex items-center justify-center w-16 h-16 bg-purple-100 text-purple-600 rounded-2xl mb-6">
+                                    <Target size={32} />
+                                </div>
+                                <h2 className="text-4xl md:text-5xl font-serif font-bold text-slate-900 mb-4 leading-tight">
+                                    Our Mission
+                                </h2>
+                                <p className="text-purple-600 font-medium text-lg">
+                                    Empowering the builders who<br className="hidden md:block" /> build our world.
+                                </p>
+                            </div>
+
+                            <div className="md:w-7/12">
+                                <div className="prose prose-lg text-slate-600 leading-relaxed font-light">
+                                    <p className="mb-6">
+                                        The construction industry is full of incredible craftsmen who struggle to get the recognition (and revenue) they deserve. They rely on "word of mouth" while their inferior competitors dominate online.
+                                    </p>
+                                    <div className="flex items-center gap-4 my-6">
+                                        <div className="h-px flex-1 bg-slate-200"></div>
+                                        <span className="font-serif text-slate-900 text-xl italic font-bold whitespace-nowrap">We're here to change that.</span>
+                                        <div className="h-px flex-1 bg-slate-200"></div>
+                                    </div>
+                                    <p>
+                                        We build specialized, predictable marketing systems that give high-quality builders control over their pipeline. No more hoping for referrals. No more "slow seasons". Just consistent, high-value projects on demand.
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -68,7 +87,7 @@ const About: React.FC = () => {
                 </div>
 
                 {/* Values / Distinction */}
-                <div className="max-w-6xl mx-auto bg-slate-900 text-white rounded-3xl p-12 md:p-20 mb-32 text-center">
+                <div className="bg-slate-900 text-white rounded-3xl p-12 md:p-20 mb-32 text-center">
                     <h2 className="text-3xl md:text-4xl font-serif font-bold mb-16">Why We're Different</h2>
                     <div className="grid md:grid-cols-3 gap-12">
                         <div>
