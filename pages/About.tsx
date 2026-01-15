@@ -12,7 +12,7 @@ const About: React.FC = () => {
 
             <div className="container mx-auto px-6">
                 {/* Hero / Header */}
-                <div className="max-w-4xl mx-auto text-center mb-20">
+                <div className="max-w-6xl mx-auto text-center mb-20">
                     <span className="inline-block py-2 px-6 rounded-full bg-purple-100 text-purple-700 text-sm font-bold tracking-widest uppercase mb-6">
                         About Us
                     </span>
@@ -28,8 +28,8 @@ const About: React.FC = () => {
                 </div>
 
                 {/* Mission Section */}
-                <div className="max-w-4xl mx-auto mb-32">
-                    <div className="text-center mb-16">
+                <div className="max-w-6xl mx-auto mb-32">
+                    <div className="text-center mb-16 max-w-3xl mx-auto">
                         <div className="w-16 h-16 bg-purple-100 rounded-2xl flex items-center justify-center text-purple-600 mx-auto mb-6">
                             <Target size={32} />
                         </div>
@@ -68,7 +68,7 @@ const About: React.FC = () => {
                 </div>
 
                 {/* Values / Distinction */}
-                <div className="bg-slate-900 text-white rounded-3xl p-12 md:p-20 mb-32 text-center">
+                <div className="max-w-6xl mx-auto bg-slate-900 text-white rounded-3xl p-12 md:p-20 mb-32 text-center">
                     <h2 className="text-3xl md:text-4xl font-serif font-bold mb-16">Why We're Different</h2>
                     <div className="grid md:grid-cols-3 gap-12">
                         <div>
