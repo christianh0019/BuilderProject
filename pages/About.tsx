@@ -113,12 +113,14 @@ const About: React.FC = () => {
                                 <img
                                     src="/images/team-3.jpg"
                                     alt="Founder"
-                                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                    className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
                                 />
                             </div>
                             <h3 className="text-xl font-bold text-slate-900">Founder</h3>
-                            <p className="text-purple-600 font-medium text-sm mb-2">Leadership</p>
-                            <p className="text-slate-500 text-sm max-w-xs mx-auto">Building the vision and ensuring client success.</p>
+                            <p className="text-purple-600 font-medium text-sm mb-4">Leadership</p>
+                            <p className="text-slate-500 text-sm leading-relaxed px-4">
+                                With over a decade in construction marketing, he leads the agency's vision, ensuring every partner builder achieves sustainable, scalable growth through systems-driven client acquisition.
+                            </p>
                         </div>
 
                         {/* Marketing Strategist (Black Guy - team-2.png) */}
@@ -127,12 +129,14 @@ const About: React.FC = () => {
                                 <img
                                     src="/images/team-2.png"
                                     alt="Marketing Strategist"
-                                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                    className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
                                 />
                             </div>
                             <h3 className="text-xl font-bold text-slate-900">Marketing Strategist</h3>
-                            <p className="text-purple-600 font-medium text-sm mb-2">Strategy</p>
-                            <p className="text-slate-500 text-sm max-w-xs mx-auto">Ensuring every partner has a clear roadmap to growth.</p>
+                            <p className="text-purple-600 font-medium text-sm mb-4">Strategy</p>
+                            <p className="text-slate-500 text-sm leading-relaxed px-4">
+                                The architect behind our client campaigns. He develops data-driven roadmaps that turn cold traffic into qualified home-buyer leads, ensuring your pipeline is never empty.
+                            </p>
                         </div>
 
                         {/* Creative & Design (Asian Guy - team-1.jpg) */}
@@ -141,12 +145,14 @@ const About: React.FC = () => {
                                 <img
                                     src="/images/team-1.jpg"
                                     alt="Creative Director"
-                                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                    className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
                                 />
                             </div>
                             <h3 className="text-xl font-bold text-slate-900">Creative Director</h3>
-                            <p className="text-purple-600 font-medium text-sm mb-2">Creative</p>
-                            <p className="text-slate-500 text-sm max-w-xs mx-auto">Building brands that command premium prices.</p>
+                            <p className="text-purple-600 font-medium text-sm mb-4">Creative</p>
+                            <p className="text-slate-500 text-sm leading-relaxed px-4">
+                                A visionary designer who translates your craftsmanship into a premium digital presence. He ensures your brand aesthetic matches the high quality of the homes you build.
+                            </p>
                         </div>
                     </div>
                 </div>
