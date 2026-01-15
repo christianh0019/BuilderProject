@@ -108,39 +108,46 @@ const About: React.FC = () => {
                     <h2 className="text-4xl font-serif font-bold text-slate-900 mb-16">Meet The Team</h2>
 
                     <div className="grid md:grid-cols-3 gap-8">
-                        {/* Placeholder Team Members - Replace with real data if available */}
+                        {/* Team Member 1 */}
                         <div className="group">
-                            <div className="bg-slate-100 rounded-2xl aspect-[3/4] mb-6 overflow-hidden relative">
-                                {/* Replace src with actual team photos */}
-                                <div className="absolute inset-0 bg-slate-200 flex items-center justify-center text-slate-400">
-                                    <Users size={48} />
-                                </div>
+                            <div className="bg-slate-100 rounded-2xl aspect-[3/4] mb-6 overflow-hidden relative shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:-translate-y-2">
+                                <img
+                                    src="/images/team-1.jpg"
+                                    alt="Process & Strategy Director"
+                                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                />
                             </div>
                             <h3 className="text-xl font-bold text-slate-900">Process & Strategy</h3>
                             <p className="text-purple-600 font-medium text-sm mb-2">Leadership</p>
-                            <p className="text-slate-500 text-sm">Ensuring every partner has a clear roadmap to growth.</p>
+                            <p className="text-slate-500 text-sm max-w-xs mx-auto">Ensuring every partner has a clear roadmap to growth.</p>
                         </div>
 
+                        {/* Team Member 2 */}
                         <div className="group">
-                            <div className="bg-slate-100 rounded-2xl aspect-[3/4] mb-6 overflow-hidden relative">
-                                <div className="absolute inset-0 bg-slate-200 flex items-center justify-center text-slate-400">
-                                    <Users size={48} />
-                                </div>
+                            <div className="bg-slate-100 rounded-2xl aspect-[3/4] mb-6 overflow-hidden relative shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:-translate-y-2">
+                                <img
+                                    src="/images/team-2.png"
+                                    alt="Creative Director"
+                                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                />
                             </div>
                             <h3 className="text-xl font-bold text-slate-900">Creative & Design</h3>
                             <p className="text-purple-600 font-medium text-sm mb-2">Production</p>
-                            <p className="text-slate-500 text-sm">Building brands that command premium prices.</p>
+                            <p className="text-slate-500 text-sm max-w-xs mx-auto">Building brands that command premium prices.</p>
                         </div>
 
+                        {/* Team Member 3 */}
                         <div className="group">
-                            <div className="bg-slate-100 rounded-2xl aspect-[3/4] mb-6 overflow-hidden relative">
-                                <div className="absolute inset-0 bg-slate-200 flex items-center justify-center text-slate-400">
-                                    <Users size={48} />
-                                </div>
+                            <div className="bg-slate-100 rounded-2xl aspect-[3/4] mb-6 overflow-hidden relative shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:-translate-y-2">
+                                <img
+                                    src="/images/team-3.jpg"
+                                    alt="Client Success Manager"
+                                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                />
                             </div>
                             <h3 className="text-xl font-bold text-slate-900">Client Success</h3>
                             <p className="text-purple-600 font-medium text-sm mb-2">Operations</p>
-                            <p className="text-slate-500 text-sm">Dedicated to your day-to-day wins and long-term scaling.</p>
+                            <p className="text-slate-500 text-sm max-w-xs mx-auto">Dedicated to your day-to-day wins and long-term scaling.</p>
                         </div>
                     </div>
                 </div>
