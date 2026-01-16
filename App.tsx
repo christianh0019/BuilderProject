@@ -27,6 +27,7 @@ import TermsOfService from './pages/TermsOfService';
 import AdvertisingLanding from './pages/AdvertisingLanding';
 import Quickstart from './pages/Quickstart';
 import NotFound from './pages/NotFound';
+import ChatWidget from './components/ChatWidget';
 
 // Helper component to scroll to top on route change
 const ScrollToTopHelper = () => {
@@ -43,6 +44,7 @@ const MainLayout = () => {
       </main>
       <Footer />
       <BookPopup />
+      <ChatWidget />
     </div>
   );
 };
