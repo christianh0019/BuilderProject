@@ -3,12 +3,7 @@ import { MessageCircle, X, Send, Sparkles, Loader2, Minimize2 } from 'lucide-rea
 import { OpenAI } from 'openai';
 import { siteContext } from '../data/siteContext';
 
-// Initialize OpenAI client
-// Note: In a production app, API calls should go through a backend to protect the key.
-const openai = new OpenAI({
-    apiKey: import.meta.env.VITE_OPENAI_API_KEY,
-    dangerouslyAllowBrowser: true
-});
+// OpenAI Client safely initialized on demand
 
 interface Message {
     role: 'user' | 'assistant';
@@ -42,6 +37,18 @@ const ChatWidget: React.FC = () => {
         setIsLoading(true);
 
         try {
+            // Safely initialize OpenAI client
+            const apiKey = import.meta.env.VITE_OPENAI_API_KEY;
+
+            if (!apiKey) {
+                throw new Error("API Key configuration missing");
+            }
+
+            const openai = new OpenAI({
+                apiKey: apiKey,
+                dangerouslyAllowBrowser: true,
+            });
+
             const completion = await openai.chat.completions.create({
                 messages: [
                     { role: 'system', content: siteContext },
@@ -55,7 +62,11 @@ const ChatWidget: React.FC = () => {
             setMessages(prev => [...prev, { role: 'assistant', content: aiResponse }]);
         } catch (error) {
             console.error('Error calling OpenAI:', error);
-            setMessages(prev => [...prev, { role: 'assistant', content: "Sorry, I'm having trouble connecting right now. Please try again later." }]);
+            const errorMessage = error instanceof Error && error.message === "API Key configuration missing"
+                ? "I'm currently undergoing maintenance. Please try again later."
+                : "Sorry, I'm having trouble connecting right now. Please try again later.";
+
+            setMessages(prev => [...prev, { role: 'assistant', content: errorMessage }]);
         } finally {
             setIsLoading(false);
         }
@@ -111,8 +122,8 @@ const ChatWidget: React.FC = () => {
                             >
                                 <div
                                     className={`max-w-[80%] p-3 rounded-2xl text-sm leading-relaxed shadow-sm ${message.role === 'user'
-                                            ? 'bg-purple-600 text-white rounded-br-none'
-                                            : 'bg-white text-slate-700 border border-slate-200 rounded-bl-none'
+                                        ? 'bg-purple-600 text-white rounded-br-none'
+                                        : 'bg-white text-slate-700 border border-slate-200 rounded-bl-none'
                                         }`}
                                 >
                                     {message.content}
