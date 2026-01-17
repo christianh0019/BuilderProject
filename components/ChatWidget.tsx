@@ -130,7 +130,32 @@ const ChatWidget: React.FC = () => {
                                         : 'bg-white text-slate-700 border border-slate-200 rounded-bl-none'
                                         }`}
                                 >
-                                    {message.content}
+                                    {(() => {
+                                        const actionMatch = message.content.match(/\|\|ACTION:(.*?)\|(.*?)\|\|/);
+                                        if (actionMatch) {
+                                            const [fullMatch, url, label] = actionMatch;
+                                            const cleanContent = message.content.replace(fullMatch, '').trim();
+                                            return (
+                                                <div className="flex flex-col gap-3">
+                                                    <span>{cleanContent}</span>
+                                                    <button
+                                                        onClick={() => {
+                                                            if (url.startsWith('http')) {
+                                                                window.open(url, '_blank');
+                                                            } else {
+                                                                window.location.href = url;
+                                                            }
+                                                        }}
+                                                        className="self-start text-xs font-bold bg-white text-purple-600 border border-purple-200 px-4 py-2 rounded-full hover:bg-purple-50 transition-colors shadow-sm flex items-center gap-1 group"
+                                                    >
+                                                        {label}
+                                                        <span className="group-hover:translate-x-0.5 transition-transform">→</span>
+                                                    </button>
+                                                </div>
+                                            );
+                                        }
+                                        return message.content;
+                                    })()}
                                 </div>
                             </div>
                         ))}
