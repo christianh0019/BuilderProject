@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { MessageCircle, X, Send, Sparkles, Loader2, Minimize2 } from 'lucide-react';
 import { OpenAI } from 'openai';
 import { siteContext } from '../data/siteContext';
@@ -11,6 +12,7 @@ interface Message {
 }
 
 const ChatWidget: React.FC = () => {
+    const navigate = useNavigate();
     const [isOpen, setIsOpen] = useState(false);
     const [messages, setMessages] = useState<Message[]>([
         { role: 'assistant', content: "Hi! I'm the BuilderProject AI. Ask me anything about our marketing systems for builders." }
@@ -143,7 +145,10 @@ const ChatWidget: React.FC = () => {
                                                             if (url.startsWith('http')) {
                                                                 window.open(url, '_blank');
                                                             } else {
-                                                                window.location.href = url;
+                                                                navigate(url);
+                                                                setIsOpen(false); // Optional: close chat on navigation? Maybe better to keep open or minimize. Let's just navigate for now, user can close. 
+                                                                // Actually, usually beneficial to close or minimize on mobile, but on desktop maybe leave open. 
+                                                                // Let's just navigate.
                                                             }
                                                         }}
                                                         className="self-start text-xs font-bold bg-white text-purple-600 border border-purple-200 px-4 py-2 rounded-full hover:bg-purple-50 transition-colors shadow-sm flex items-center gap-1 group"
