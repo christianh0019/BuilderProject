@@ -28,6 +28,7 @@ import AdvertisingLanding from './pages/AdvertisingLanding';
 import Quickstart from './pages/Quickstart';
 import NotFound from './pages/NotFound';
 import ChatWidget from './components/ChatWidget';
+import SocialProofWidget from './components/SocialProofWidget';
 
 // Helper component to scroll to top on route change
 const ScrollToTopHelper = () => {
@@ -44,6 +45,7 @@ const MainLayout = () => {
       </main>
       <Footer />
       <BookPopup />
+      <SocialProofWidget />
       <ChatWidget />
     </div>
   );
