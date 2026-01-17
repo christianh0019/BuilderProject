@@ -37,7 +37,7 @@ const ChatWidget: React.FC = () => {
 
         try {
             // Safely initialize OpenAI client
-            const apiKey = import.meta.env.VITE_OPENAI_API_KEY;
+            const apiKey = import.meta.env.VITE_OPENAI_API;
 
             if (!apiKey) {
                 throw new Error("API Key configuration missing");
