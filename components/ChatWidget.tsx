@@ -27,11 +27,10 @@ const ChatWidget: React.FC = () => {
         scrollToBottom();
     }, [messages, isOpen]);
 
-    const handleSubmit = async (e: React.FormEvent) => {
-        e.preventDefault();
-        if (!input.trim() || isLoading) return;
+    const handleSend = async (text: string) => {
+        if (!text.trim() || isLoading) return;
 
-        const userMessage = input.trim();
+        const userMessage = text.trim();
         setInput('');
         setMessages(prev => [...prev, { role: 'user', content: userMessage }]);
         setIsLoading(true);
@@ -70,6 +69,11 @@ const ChatWidget: React.FC = () => {
         } finally {
             setIsLoading(false);
         }
+    };
+
+    const handleSubmit = async (e: React.FormEvent) => {
+        e.preventDefault();
+        handleSend(input);
     };
 
     return (
@@ -140,6 +144,21 @@ const ChatWidget: React.FC = () => {
                         )}
                         <div ref={messagesEndRef} />
                     </div>
+
+                    {/* Suggested Questions */}
+                    {messages.length === 1 && (
+                        <div className="px-4 pb-2 bg-slate-50 flex gap-2 flex-wrap">
+                            {["How much does it cost?", "What is The Foundation?", "How do I get more leads?", "Do you work with remodelers?"].map((q, i) => (
+                                <button
+                                    key={i}
+                                    onClick={() => handleSend(q)}
+                                    className="text-xs bg-white border border-purple-200 text-purple-700 px-3 py-1.5 rounded-full hover:bg-purple-50 transition-colors shadow-sm whitespace-nowrap"
+                                >
+                                    {q}
+                                </button>
+                            ))}
+                        </div>
+                    )}
 
                     {/* Input Area */}
                     <div className="p-4 bg-white border-t border-slate-100 shrink-0">
