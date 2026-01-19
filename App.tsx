@@ -21,6 +21,7 @@ import Blog from './pages/Blog';
 import BlogPost from './pages/BlogPost';
 import About from './pages/About';
 import Podcast from './pages/Podcast';
+import PodcastEpisode from './pages/PodcastEpisode';
 import Careers from './pages/Careers';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsOfService from './pages/TermsOfService';
@@ -66,6 +67,7 @@ const App: React.FC = () => {
             <Route path="/blog/:slug" element={<BlogPost />} />
             <Route path="/about" element={<About />} />
             <Route path="/podcast" element={<Podcast />} />
+            <Route path="/podcast/001" element={<PodcastEpisode />} />
             <Route path="/services/website-design" element={<WebsiteDesign />} />
             <Route path="/services/content-marketing" element={<ContentMarketing />} />
             <Route path="/services/paid-advertising" element={<PaidAdvertising />} />
