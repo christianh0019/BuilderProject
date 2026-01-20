@@ -26,7 +26,7 @@ const PodcastEpisode: React.FC = () => {
                     </div>
 
                     <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6 leading-tight">
-                        The Shift: From <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">Word-of-Mouth</span> to <span className="text-white">Predictable Growth</span>
+                        The Shift: From <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">Word-of-Mouth</span> to <span className="text-slate-900">Predictable Growth</span>
                     </h1>
 
                     <p className="text-lg text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed">
