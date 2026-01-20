@@ -16,8 +16,8 @@ const PodcastEpisode: React.FC = () => {
             </Helmet>
 
             {/* Hero Section */}
-            <section className="relative pt-32 pb-20 px-6 overflow-hidden bg-slate-900 text-white">
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-purple-900/40 via-slate-900 to-slate-900"></div>
+            <section className="relative pt-32 pb-20 px-6 overflow-hidden bg-white text-slate-900">
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-purple-100/40 via-white to-white"></div>
 
                 <div className="max-w-4xl mx-auto relative z-10 text-center">
                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-300 text-xs font-bold uppercase tracking-wider mb-6">
@@ -94,7 +94,7 @@ const PodcastEpisode: React.FC = () => {
                             <div className="bg-slate-900 rounded-3xl p-8 text-white relative overflow-hidden group">
                                 <div className="absolute top-0 right-0 w-32 h-32 bg-purple-500/20 rounded-full blur-3xl -mr-16 -mt-16 group-hover:bg-purple-500/30 transition-colors"></div>
 
-                                <h3 className="text-xl font-bold mb-4 relative z-10">implement This System</h3>
+                                <h3 className="text-xl font-bold mb-4 relative z-10">Implement This System</h3>
                                 <p className="text-slate-400 text-sm mb-6 relative z-10 leading-relaxed">
                                     Want to build the "Digital Model Home" we talked about in this episode? Let's audit your current setup.
                                 </p>
