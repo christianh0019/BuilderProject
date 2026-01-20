@@ -19,14 +19,16 @@ const PodcastEpisode: React.FC = () => {
             <section className="relative pt-32 pb-20 px-6 overflow-hidden bg-white text-slate-900">
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-purple-100/40 via-white to-white"></div>
 
-                <div className="max-w-4xl mx-auto relative z-10 text-center">
-                    <Link to="/podcast" className="inline-flex items-center text-slate-500 hover:text-purple-600 font-bold mb-8 transition-colors group text-sm uppercase tracking-wide">
+                <div className="max-w-6xl mx-auto relative z-10 px-4 mb-4">
+                    <Link to="/podcast" className="inline-flex items-center text-slate-500 hover:text-purple-600 font-bold transition-colors group text-sm uppercase tracking-wide">
                         <ArrowLeft size={16} className="mr-2 group-hover:-translate-x-1 transition-transform" />
                         Back to Episodes
                     </Link>
+                </div>
 
-                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-300 text-xs font-bold uppercase tracking-wider mb-6 block mx-auto w-fit">
-                        <span className="w-2 h-2 rounded-full bg-purple-500 animate-pulse"></span>
+                <div className="max-w-4xl mx-auto relative z-10 text-center">
+                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-100 border border-purple-200 text-purple-700 text-xs font-bold uppercase tracking-wider mb-6">
+                        <span className="w-2 h-2 rounded-full bg-purple-600 animate-pulse"></span>
                         Episode 001 Now Live
                     </div>
 
