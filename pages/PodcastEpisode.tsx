@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import VideoPlayer from '../components/VideoPlayer';
-import { Play, Calendar, Clock, ArrowRight, CheckCircle2 } from 'lucide-react';
+import { Play, Calendar, Clock, ArrowRight, ArrowLeft, CheckCircle2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const PodcastEpisode: React.FC = () => {
