@@ -20,7 +20,12 @@ const PodcastEpisode: React.FC = () => {
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-purple-100/40 via-white to-white"></div>
 
                 <div className="max-w-4xl mx-auto relative z-10 text-center">
-                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-300 text-xs font-bold uppercase tracking-wider mb-6">
+                    <Link to="/podcast" className="inline-flex items-center text-slate-500 hover:text-purple-600 font-bold mb-8 transition-colors group text-sm uppercase tracking-wide">
+                        <ArrowLeft size={16} className="mr-2 group-hover:-translate-x-1 transition-transform" />
+                        Back to Episodes
+                    </Link>
+
+                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-300 text-xs font-bold uppercase tracking-wider mb-6 block mx-auto w-fit">
                         <span className="w-2 h-2 rounded-full bg-purple-500 animate-pulse"></span>
                         Episode 001 Now Live
                     </div>
