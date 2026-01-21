@@ -47,18 +47,17 @@ const Book: React.FC = () => {
 
           <div className="relative flex justify-center">
             {/* Book Representation */}
-            <div className="relative w-[340px] shadow-2xl transform rotate-y-12 transition-transform hover:rotate-0 duration-500">
+            {/* Book Representation */}
+            <div className="relative w-full max-w-md shadow-2xl rounded-2xl overflow-hidden">
               <img
                 src="/images/book-cover-mockup.png"
                 alt="The Secrets of Home Builder Marketing"
-                className="w-full h-auto rounded-r-xl rounded-l-sm"
+                className="w-full h-auto"
               />
-              {/* Spine Effect Overlay */}
-              <div className="absolute left-0 top-0 bottom-0 w-2 bg-gradient-to-r from-black/20 to-transparent rounded-l-sm pointer-events-none"></div>
             </div>
 
             {/* Decor */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-gradient-to-tr from-purple-200 to-pink-200 rounded-full mix-blend-multiply filter blur-[60px] opacity-50 -z-10"></div>
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-gradient-to-tr from-purple-200 to-pink-200 rounded-full mix-blend-multiply filter blur-[80px] opacity-40 -z-10"></div>
           </div>
         </div>
       </div>
