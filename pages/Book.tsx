@@ -49,7 +49,7 @@ const Book: React.FC = () => {
             {/* Book Representation */}
             <div className="relative w-[340px] shadow-2xl transform rotate-y-12 transition-transform hover:rotate-0 duration-500">
               <img
-                src="/book-cover.jpg"
+                src="/images/book-cover-mockup.png"
                 alt="The Secrets of Home Builder Marketing"
                 className="w-full h-auto rounded-r-xl rounded-l-sm"
               />
