@@ -71,14 +71,10 @@ const AdvertisingLanding: React.FC = () => {
                             </div>
 
                             <h1 className="text-4xl md:text-5xl font-serif font-bold text-slate-900 mb-6 leading-tight">
-                                Land 1-10 New Projects In The Next Year <br className="hidden md:block" />
-                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-700 to-pink-600">
-                                    Guaranteed
-                                </span>
+                                Get more high-margin custom home builds or remodels in 2026
                             </h1>
                             <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-                                We help Builders, Remodelers, and Design-Build Firms acquire high-value projects consistently.
-                                Fill out the quick survey below to get access to our full 2026 marketing playbook and book a free complimentary strategy session.
+                                We help Builders and Remodelers break free from the inconsistency of word of mouth by implementing our proven marketing systems. Fill out the quick survey below to book a short discovery call. (Not a sales call)
                             </p>
                         </div>
 
