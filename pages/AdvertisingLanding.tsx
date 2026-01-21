@@ -71,7 +71,7 @@ const AdvertisingLanding: React.FC = () => {
                             </div>
 
                             <h1 className="text-4xl md:text-5xl font-serif font-bold text-slate-900 mb-6 leading-tight">
-                                Get more high-margin custom home builds or remodels in 2026
+                                Get More High-Margin <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-700 to-pink-600">Custom Home Builds or Remodels</span> in 2026
                             </h1>
                             <p className="text-lg text-slate-600 max-w-2xl mx-auto">
                                 We help Builders and Remodelers break free from the inconsistency of word of mouth by implementing our proven marketing systems. Fill out the quick survey below to book a short discovery call. (Not a sales call)
@@ -83,9 +83,9 @@ const AdvertisingLanding: React.FC = () => {
                             <SurveyForm webhookUrl="https://services.leadconnectorhq.com/hooks/HllUVzV8V6VFH4nUuq4W/webhook-trigger/c397bff5-2f73-41ac-934a-563e075311b0" />
                         </div>
 
-                        {/* Persuasion / Value Section */}
+                        {/* Persuasion / Value Section - HIDDEN per user request 2026-01-21 */}
                         {/* Expanded Persuasion Section */}
-                        <div className="mb-24 animate-fadeIn space-y-24">
+                        <div className="mb-24 animate-fadeIn space-y-24 hidden">
                             {/* Problem Agitation */}
                             {/* Problem Agitation - Redesigned */}
                             <div className="max-w-4xl mx-auto">
