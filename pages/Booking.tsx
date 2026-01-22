@@ -59,8 +59,18 @@ const Booking: React.FC = () => {
         script.async = true;
         document.body.appendChild(script);
 
+        const trackingScript = document.createElement('script');
+        trackingScript.src = "https://link.msgsndr.com/js/external-tracking.js";
+        trackingScript.setAttribute('data-tracking-id', 'tk_583915685a934ea98e0d72d5a4ef7f83');
+        document.body.appendChild(trackingScript);
+
         return () => {
-            document.body.removeChild(script);
+            if (document.body.contains(script)) {
+                document.body.removeChild(script);
+            }
+            if (document.body.contains(trackingScript)) {
+                document.body.removeChild(trackingScript);
+            }
         };
     }, []);
 

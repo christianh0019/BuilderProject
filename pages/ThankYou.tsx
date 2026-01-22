@@ -12,6 +12,17 @@ const ThankYou: React.FC = () => {
         if (typeof window !== 'undefined' && (window as any).fbq) {
             (window as any).fbq('track', 'Schedule');
         }
+
+        const script = document.createElement('script');
+        script.src = "https://link.msgsndr.com/js/external-tracking.js";
+        script.setAttribute('data-tracking-id', 'tk_583915685a934ea98e0d72d5a4ef7f83');
+        document.body.appendChild(script);
+
+        return () => {
+            if (document.body.contains(script)) {
+                document.body.removeChild(script);
+            }
+        };
     }, []);
 
     return (

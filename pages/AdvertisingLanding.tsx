@@ -11,6 +11,20 @@ const AdvertisingLanding: React.FC = () => {
         surveyRef.current?.scrollIntoView({ behavior: 'smooth' });
     };
 
+    React.useEffect(() => {
+        const script = document.createElement('script');
+        script.src = "https://link.msgsndr.com/js/external-tracking.js";
+        script.setAttribute('data-tracking-id', 'tk_583915685a934ea98e0d72d5a4ef7f83');
+        document.body.appendChild(script);
+
+        return () => {
+            // Check if script is still in body before removing (safety check)
+            if (document.body.contains(script)) {
+                document.body.removeChild(script);
+            }
+        };
+    }, []);
+
     const CTAButton = () => (
         <div className="text-center mt-12 mb-12">
             <style>
