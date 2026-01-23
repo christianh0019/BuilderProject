@@ -82,6 +82,7 @@ const SurveyForm: React.FC<SurveyFormProps> = ({ webhookUrl = 'https://services.
         };
 
         try {
+            console.log('Sending webhook payload:', payload); // Debug log
             const response = await fetch(webhookUrl, {
                 method: 'POST',
                 headers: {
@@ -89,6 +90,8 @@ const SurveyForm: React.FC<SurveyFormProps> = ({ webhookUrl = 'https://services.
                 },
                 body: JSON.stringify(payload),
             });
+
+            console.log('Webhook response status:', response.status); // Debug log
 
             if (response.ok) {
                 // Pass data via URL parameters so the Booking page (and potential scripts) can read them
@@ -108,7 +111,8 @@ const SurveyForm: React.FC<SurveyFormProps> = ({ webhookUrl = 'https://services.
                     search: params.toString()
                 });
             } else {
-                console.error('Submission failed');
+                const errorText = await response.text();
+                console.error('Submission failed. Status:', response.status, 'Response:', errorText);
                 alert('Something went wrong. Please try again.');
             }
         } catch (error) {
