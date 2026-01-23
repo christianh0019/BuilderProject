@@ -64,10 +64,21 @@ const SurveyForm: React.FC<SurveyFormProps> = ({ webhookUrl = 'https://services.
         const fbc = getCookie('_fbc');
 
         // Create payload with form data + Facebook external IDs
+        // Create payload with form data + Facebook external IDs (mapped to snake_case for GHL)
         const payload = {
-            ...formData,
+            first_name: formData.firstName,
+            last_name: formData.lastName,
+            full_name: `${formData.firstName} ${formData.lastName}`.trim(),
+            email: formData.email,
+            phone: formData.phone,
+            company_name: formData.companyName,
+            website: formData.website,
+            role: formData.role,
+            revenue: formData.revenue,
+            marketing_spend: formData.marketingSpend,
             fbp,
-            fbc
+            fbc,
+            source: 'partner_application_survey'
         };
 
         try {
