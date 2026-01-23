@@ -83,22 +83,17 @@ const SurveyForm: React.FC<SurveyFormProps> = ({ webhookUrl = 'https://services.
 
         try {
             console.log('Sending webhook payload:', payload); // Debug log
-            // Use 'no-cors' mode to bypass CORS restrictions.
-            // Note: This makes the response 'opaque' (status 0), so we can't check response.ok.
-            // We assume success and proceed.
-            await fetch(webhookUrl, {
+            const response = await fetch(webhookUrl, {
                 method: 'POST',
-                mode: 'no-cors',
                 headers: {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify(payload),
             });
 
-            console.log('Webhook sent (no-cors mode)'); // Debug log
+            console.log('Webhook response status:', response.status); // Debug log
 
-            // Since response is opaque, we always proceed
-            if (true) {
+            if (response.ok) {
                 // Pass data via URL parameters so the Booking page (and potential scripts) can read them
                 const params = new URLSearchParams();
 
