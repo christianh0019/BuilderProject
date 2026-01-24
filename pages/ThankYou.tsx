@@ -57,7 +57,7 @@ const ThankYou: React.FC = () => {
                         <div className="max-w-3xl mx-auto rounded-b-2xl rounded-tr-none overflow-hidden shadow-2xl shadow-slate-200 border border-slate-200 border-t-0 bg-white aspect-video relative group">
                             <iframe
                                 className="w-full h-full"
-                                src="https://www.youtube.com/embed/jZ3cUnBZvs8?si=_U9hVObC9VmpaHsP"
+                                src="https://www.youtube.com/embed/CNngG1p-HQQ?si=aOk84JEwMYWrQURq"
                                 title="How to get a proper audit and strategy"
                                 frameBorder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
