@@ -30,6 +30,11 @@ import Quickstart from './pages/Quickstart';
 import NotFound from './pages/NotFound';
 import ChatWidget from './components/ChatWidget';
 import SocialProofWidget from './components/SocialProofWidget';
+// Onboarding
+import Welcome from './pages/onboarding/Welcome';
+import Intake from './pages/onboarding/Intake';
+import OnboardingBooking from './pages/onboarding/OnboardingBooking';
+import Expectations from './pages/onboarding/Expectations';
 
 // Helper component to scroll to top on route change
 const ScrollToTopHelper = () => {
@@ -83,6 +88,12 @@ const App: React.FC = () => {
 
           {/* Dedicated Landing Pages (No Nav/Footer) */}
           <Route path="/partner-application" element={<AdvertisingLanding />} />
+
+          {/* Onboarding Funnel */}
+          <Route path="/onboarding/welcome" element={<Welcome />} />
+          <Route path="/onboarding/intake" element={<Intake />} />
+          <Route path="/onboarding/booking" element={<OnboardingBooking />} />
+          <Route path="/onboarding/expectations" element={<Expectations />} />
           <Route path="/booking" element={<Booking />} />
           <Route path="/thank-you" element={<ThankYou />} />
           <Route path="/quickstart" element={<Quickstart />} />
