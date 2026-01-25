@@ -42,7 +42,7 @@ const Podcast: React.FC = () => {
                                 {/* Thumbnail */}
                                 <div className="w-full md:w-48 aspect-video rounded-xl overflow-hidden shadow-sm relative shrink-0 group">
                                     <img
-                                        src="https://img.youtube.com/vi/Dt8TQAFBKHs/maxresdefault.jpg"
+                                        src="https://img.youtube.com/vi/Dt8TQAFBKHs/hqdefault.jpg"
                                         alt="How Peter Fallon Built A 50+ Employee Custom Home Building Business"
                                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                                     />
