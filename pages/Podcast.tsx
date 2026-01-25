@@ -40,14 +40,16 @@ const Podcast: React.FC = () => {
                         <div className="group relative bg-white rounded-2xl p-4 md:p-6 transition-all duration-300 hover:bg-slate-50 border border-transparent hover:border-slate-100">
                             <div className="flex flex-col md:flex-row gap-6 md:items-center">
                                 {/* Thumbnail */}
-                                <div className="w-full md:w-48 aspect-video rounded-xl overflow-hidden shadow-sm relative shrink-0">
-                                    <div className="absolute inset-0 bg-slate-900 group-hover:scale-105 transition-transform duration-700">
-                                        <div className="w-full h-full flex items-center justify-center bg-slate-800 text-slate-600">
-                                            <Play size={32} className="text-white/20 group-hover:text-white/40 transition-colors" />
+                                <div className="w-full md:w-48 aspect-video rounded-xl overflow-hidden shadow-sm relative shrink-0 group">
+                                    <img
+                                        src="https://img.youtube.com/vi/Dt8TQAFBKHs/maxresdefault.jpg"
+                                        alt="How Peter Fallon Built A 50+ Employee Custom Home Building Business"
+                                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                                    />
+                                    <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors">
+                                        <div className="absolute top-2 left-2 bg-black/60 backdrop-blur-md text-white text-[10px] font-bold px-2 py-0.5 rounded-full border border-white/10">
+                                            EP 001
                                         </div>
-                                    </div>
-                                    <div className="absolute top-2 left-2 bg-black/60 backdrop-blur-md text-white text-[10px] font-bold px-2 py-0.5 rounded-full border border-white/10">
-                                        EP 001
                                     </div>
                                 </div>
 
@@ -60,7 +62,7 @@ const Podcast: React.FC = () => {
                                     </div>
 
                                     <h2 className="text-xl font-bold text-slate-900 mb-2 group-hover:text-purple-700 transition-colors line-clamp-1">
-                                        The Shift: From Word-of-Mouth to Predictable Growth
+                                        How Peter Fallon Built A 50+ Employee Custom Home Building Business
                                     </h2>
 
                                     <p className="text-slate-600 text-sm mb-4 leading-relaxed line-clamp-2 md:line-clamp-1">
