@@ -26,7 +26,30 @@ const Intake: React.FC = () => {
         primaryContactName: '',
         primaryContactEmail: '',
         primaryContactPhone: '',
-        marketingBudget: ''
+        marketingBudget: '',
+        // Strategy
+        serviceArea: '',
+        idealClient: '',
+        competitors: '',
+        usp: '',
+        avgProjectValue: '',
+        targetRevenue12mo: '',
+        // Creative
+        logoLink: '',
+        photosLink: '', // "Upload files" handled via link for now
+        brandColors: '',
+        brandVoice: '',
+        // Technical
+        domainRegistrar: '',
+        existingWebsite: '',
+        gbpAccess: '',
+        currentCrm: '',
+        adHistory: '',
+        // Social
+        fbLink: '',
+        igLink: '',
+        linkedinLink: '',
+        postingFreq: ''
     });
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
@@ -54,6 +77,34 @@ const Intake: React.FC = () => {
             email: formData.primaryContactEmail,
             phone: formData.primaryContactPhone,
             marketing_spend: formData.marketingBudget,
+
+            // Strategy
+            service_area: formData.serviceArea,
+            ideal_client: formData.idealClient,
+            competitors: formData.competitors,
+            usp: formData.usp,
+            avg_project_value: formData.avgProjectValue,
+            target_revenue_12m: formData.targetRevenue12mo,
+
+            // Creative
+            logo_assets_link: formData.logoLink,
+            project_photos_link: formData.photosLink,
+            brand_colors: formData.brandColors,
+            brand_voice: formData.brandVoice,
+
+            // Technical
+            domain_registrar: formData.domainRegistrar,
+            existing_website: formData.existingWebsite,
+            gbp_access: formData.gbpAccess,
+            current_crm: formData.currentCrm,
+            ad_history: formData.adHistory,
+
+            // Social
+            facebook_url: formData.fbLink,
+            instagram_url: formData.igLink,
+            linkedin_url: formData.linkedinLink,
+            posting_frequency: formData.postingFreq,
+
             source: 'onboarding_intake'
         };
 
@@ -210,6 +261,152 @@ const Intake: React.FC = () => {
                                         <option value="$3k - $5k">$3,000 - $5,000</option>
                                         <option value="$5k - $10k">$5,000 - $10,000</option>
                                         <option value="$10k+">$10,000+</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Section 4: Strategy & Market */}
+                        <div className="space-y-6">
+                            <div className="flex items-center gap-3 text-slate-900 font-bold text-xl border-b border-slate-100 pb-4">
+                                <Target className="text-purple-600" />
+                                <h3>Strategy & Market</h3>
+                            </div>
+                            <div className="grid md:grid-cols-2 gap-6">
+                                <div className="col-span-2">
+                                    <label className="block text-sm font-bold text-slate-700 mb-2">Primary Service Area</label>
+                                    <input name="serviceArea" value={formData.serviceArea} onChange={handleChange} type="text" className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-purple-500 bg-slate-50 focus:bg-white transition-colors" placeholder="e.g. Phoenix Metro Area, 50 mile radius of 15601" />
+                                </div>
+                                <div className="col-span-2">
+                                    <label className="block text-sm font-bold text-slate-700 mb-2">Ideal Client Avatar</label>
+                                    <textarea name="idealClient" value={formData.idealClient} onChange={(e) => setFormData({ ...formData, idealClient: e.target.value })} className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-purple-500 bg-slate-50 focus:bg-white transition-colors h-24" placeholder="Who is your dream customer? (e.g. Professionals building forever homes, $1M+ budgets)" />
+                                </div>
+                                <div className="col-span-2">
+                                    <label className="block text-sm font-bold text-slate-700 mb-2">Top 3 Competitors</label>
+                                    <input name="competitors" value={formData.competitors} onChange={handleChange} type="text" className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-purple-500 bg-slate-50 focus:bg-white transition-colors" placeholder="Who do you lose jobs to?" />
+                                </div>
+                                <div className="col-span-2">
+                                    <label className="block text-sm font-bold text-slate-700 mb-2">Unique Value Proposition</label>
+                                    <textarea name="usp" value={formData.usp} onChange={(e) => setFormData({ ...formData, usp: e.target.value })} className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-purple-500 bg-slate-50 focus:bg-white transition-colors h-24" placeholder="Why do clients choose you? (e.g. Fixed price contracts, 3D design)" />
+                                </div>
+                                <div>
+                                    <label className="block text-sm font-bold text-slate-700 mb-2">Average Project Value</label>
+                                    <div className="relative">
+                                        <DollarSign className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400" size={16} />
+                                        <input name="avgProjectValue" value={formData.avgProjectValue} onChange={handleChange} type="text" className="w-full pl-10 pr-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-purple-500 bg-slate-50 focus:bg-white transition-colors" placeholder="750,000" />
+                                    </div>
+                                </div>
+                                <div>
+                                    <label className="block text-sm font-bold text-slate-700 mb-2">Target Revenue (Next 12 Mos)</label>
+                                    <div className="relative">
+                                        <DollarSign className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400" size={16} />
+                                        <input name="targetRevenue12mo" value={formData.targetRevenue12mo} onChange={handleChange} type="text" className="w-full pl-10 pr-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-purple-500 bg-slate-50 focus:bg-white transition-colors" placeholder="5,000,000" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Section 5: Brand & Creative (File Uploads) */}
+                        <div className="space-y-6">
+                            <div className="flex items-center gap-3 text-slate-900 font-bold text-xl border-b border-slate-100 pb-4">
+                                <Building2 className="text-purple-600" />
+                                <h3>Brand & Assets</h3>
+                            </div>
+                            <div className="grid md:grid-cols-2 gap-6">
+                                <div className="col-span-2">
+                                    <div className="bg-purple-50 border border-purple-100 rounded-xl p-6 mb-4">
+                                        <h4 className="font-bold text-purple-900 mb-2">📸 Uploading Large Files</h4>
+                                        <p className="text-sm text-purple-800">For Logos and Project Photos, please upload them to a folder (Google Drive, Dropbox, WeTransfer) and paste the shareable link below.</p>
+                                    </div>
+                                </div>
+                                <div className="col-span-2">
+                                    <label className="block text-sm font-bold text-slate-700 mb-2">Link to Logo Files</label>
+                                    <input name="logoLink" value={formData.logoLink} onChange={handleChange} type="text" className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-purple-500 bg-slate-50 focus:bg-white transition-colors" placeholder="https://drive.google.com/..." />
+                                </div>
+                                <div className="col-span-2">
+                                    <label className="block text-sm font-bold text-slate-700 mb-2">Link to Project Photos</label>
+                                    <input name="photosLink" value={formData.photosLink} onChange={handleChange} type="text" className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-purple-500 bg-slate-50 focus:bg-white transition-colors" placeholder="https://dropbox.com/..." />
+                                </div>
+                                <div>
+                                    <label className="block text-sm font-bold text-slate-700 mb-2">Brand Colors</label>
+                                    <input name="brandColors" value={formData.brandColors} onChange={handleChange} type="text" className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-purple-500 bg-slate-50 focus:bg-white transition-colors" placeholder="Hex codes or 'Match Logo'" />
+                                </div>
+                                <div>
+                                    <label className="block text-sm font-bold text-slate-700 mb-2">Brand Voice</label>
+                                    <select name="brandVoice" value={formData.brandVoice} onChange={handleChange} className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-purple-500 bg-slate-50 focus:bg-white transition-colors">
+                                        <option value="">Select style...</option>
+                                        <option value="luxury">Luxury / High-End</option>
+                                        <option value="professional">Professional / Corporate</option>
+                                        <option value="friendly">Friendly / Local</option>
+                                        <option value="modern">Modern / Edgy</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Section 6: Technical */}
+                        <div className="space-y-6">
+                            <div className="flex items-center gap-3 text-slate-900 font-bold text-xl border-b border-slate-100 pb-4">
+                                <Globe className="text-purple-600" />
+                                <h3>Technical Access</h3>
+                            </div>
+                            <div className="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <label className="block text-sm font-bold text-slate-700 mb-2">Domain Registrar</label>
+                                    <input name="domainRegistrar" value={formData.domainRegistrar} onChange={handleChange} type="text" className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-purple-500 bg-slate-50 focus:bg-white transition-colors" placeholder="e.g. GoDaddy, Namecheap" />
+                                </div>
+                                <div>
+                                    <label className="block text-sm font-bold text-slate-700 mb-2">Have Google Business Profile Access?</label>
+                                    <select name="gbpAccess" value={formData.gbpAccess} onChange={handleChange} className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-purple-500 bg-slate-50 focus:bg-white transition-colors">
+                                        <option value="">Select...</option>
+                                        <option value="yes">Yes, I am an owner/manager</option>
+                                        <option value="no">No / Not sure</option>
+                                        <option value="needs_setup">Need help setting it up</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label className="block text-sm font-bold text-slate-700 mb-2">Current CRM</label>
+                                    <input name="currentCrm" value={formData.currentCrm} onChange={handleChange} type="text" className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-purple-500 bg-slate-50 focus:bg-white transition-colors" placeholder="e.g. HubSpot, Buildertrend" />
+                                </div>
+                                <div>
+                                    <label className="block text-sm font-bold text-slate-700 mb-2">Ad Account History</label>
+                                    <select name="adHistory" value={formData.adHistory} onChange={handleChange} className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-purple-500 bg-slate-50 focus:bg-white transition-colors">
+                                        <option value="">Select status...</option>
+                                        <option value="never">Never ran ads</option>
+                                        <option value="active">Active accounts exist</option>
+                                        <option value="banned">Accounts are restricted/banned</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Section 7: Social */}
+                        <div className="space-y-6">
+                            <div className="flex items-center gap-3 text-slate-900 font-bold text-xl border-b border-slate-100 pb-4">
+                                <Users className="text-purple-600" />
+                                <h3>Social Media</h3>
+                            </div>
+                            <div className="grid md:grid-cols-2 gap-6">
+                                <div className="col-span-2">
+                                    <label className="block text-sm font-bold text-slate-700 mb-2">Facebook Page URL</label>
+                                    <input name="fbLink" value={formData.fbLink} onChange={handleChange} type="text" className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-purple-500 bg-slate-50 focus:bg-white transition-colors" />
+                                </div>
+                                <div className="col-span-2">
+                                    <label className="block text-sm font-bold text-slate-700 mb-2">Instagram Handle / URL</label>
+                                    <input name="igLink" value={formData.igLink} onChange={handleChange} type="text" className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-purple-500 bg-slate-50 focus:bg-white transition-colors" />
+                                </div>
+                                <div className="col-span-2">
+                                    <label className="block text-sm font-bold text-slate-700 mb-2">LinkedIn Page URL</label>
+                                    <input name="linkedinLink" value={formData.linkedinLink} onChange={handleChange} type="text" className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-purple-500 bg-slate-50 focus:bg-white transition-colors" />
+                                </div>
+                                <div className="col-span-2">
+                                    <label className="block text-sm font-bold text-slate-700 mb-2">Current Posting Frequency</label>
+                                    <select name="postingFreq" value={formData.postingFreq} onChange={handleChange} className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-purple-500 bg-slate-50 focus:bg-white transition-colors">
+                                        <option value="">Select...</option>
+                                        <option value="daily">Daily</option>
+                                        <option value="weekly">Weekly</option>
+                                        <option value="monthly">Monthly</option>
+                                        <option value="never">Sporadic / Never</option>
                                     </select>
                                 </div>
                             </div>
