@@ -13,6 +13,9 @@ const Intake: React.FC = () => {
 
     const [formData, setFormData] = useState({
         businessName: '',
+        friendlyBusinessName: '',
+        ein: '',
+        businessType: '',
         website: '',
         address: '',
         city: '',
@@ -37,8 +40,11 @@ const Intake: React.FC = () => {
         // Map to snake_case for GHL
         const payload = {
             company_name: formData.businessName,
+            friendly_business_name: formData.friendlyBusinessName,
+            ein: formData.ein,
+            business_type: formData.businessType,
             website: formData.website,
-            address: formData.address,
+            address: formData.address, // Matches EIN Document address
             city: formData.city,
             state: formData.state,
             zip: formData.zip,
@@ -98,9 +104,29 @@ const Intake: React.FC = () => {
 
                             <div className="grid md:grid-cols-2 gap-6">
                                 <div className="col-span-2">
-                                    <label className="block text-sm font-bold text-slate-700 mb-2">Legal Business Name</label>
+                                    <label className="block text-sm font-bold text-slate-700 mb-2">Legal Business Name (as on EIN)</label>
                                     <input required name="businessName" value={formData.businessName} onChange={handleChange} type="text" className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-purple-500 bg-slate-50 focus:bg-white transition-colors" placeholder="e.g. Acme Builders LLC" />
                                 </div>
+                                <div className="col-span-2">
+                                    <label className="block text-sm font-bold text-slate-700 mb-2">Friendly Business Name (DBA)</label>
+                                    <input name="friendlyBusinessName" value={formData.friendlyBusinessName} onChange={handleChange} type="text" className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-purple-500 bg-slate-50 focus:bg-white transition-colors" placeholder="e.g. Acme Homes" />
+                                </div>
+                                <div>
+                                    <label className="block text-sm font-bold text-slate-700 mb-2">Registered Business Type</label>
+                                    <select required name="businessType" value={formData.businessType} onChange={handleChange} className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-purple-500 bg-slate-50 focus:bg-white transition-colors">
+                                        <option value="">Select type...</option>
+                                        <option value="LLC">LLC</option>
+                                        <option value="Corporation">Corporation</option>
+                                        <option value="Sole Proprietorship">Sole Proprietorship</option>
+                                        <option value="Partnership">Partnership</option>
+                                        <option value="Non-Profit">Non-Profit</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label className="block text-sm font-bold text-slate-700 mb-2">EIN / CCN / BN Number</label>
+                                    <input required name="ein" value={formData.ein} onChange={handleChange} type="text" className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-purple-500 bg-slate-50 focus:bg-white transition-colors" placeholder="For A2P Verification" />
+                                </div>
+
                                 <div className="col-span-2">
                                     <label className="block text-sm font-bold text-slate-700 mb-2">Website URL</label>
                                     <div className="relative">
@@ -109,7 +135,9 @@ const Intake: React.FC = () => {
                                     </div>
                                 </div>
                                 <div className="col-span-2">
-                                    <label className="block text-sm font-bold text-slate-700 mb-2">Mailing Address</label>
+                                    <label className="block text-sm font-bold text-slate-700 mb-2">
+                                        Mailing Address <span className="text-slate-400 font-normal ml-1">(Must match EIN Document)</span>
+                                    </label>
                                     <input required name="address" value={formData.address} onChange={handleChange} type="text" className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-purple-500 bg-slate-50 focus:bg-white transition-colors" placeholder="Street Address" />
                                 </div>
                                 <div>
