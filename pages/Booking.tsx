@@ -1,4 +1,5 @@
-import React, { useEffect, useMemo } from 'react';
+import React, { useEffect } from 'react';
+import BookingWidget from '../components/BookingWidget';
 import { CheckCircle } from 'lucide-react';
 import { useLocation } from 'react-router-dom';
 import SimpleHeader from '../components/SimpleHeader';
@@ -6,46 +7,7 @@ import SimpleHeader from '../components/SimpleHeader';
 const Booking: React.FC = () => {
     const location = useLocation();
 
-    // Construct the booking URL with prefill parameters from the current URL query params
-    const bookingUrl = useMemo(() => {
-        const baseUrl = "https://api.leadconnectorhq.com/widget/booking/UTKipcTwyAOAwQ8etiGK";
-        const searchParams = new URLSearchParams(location.search);
 
-        // Ensure we only pass relevant params if they exist to keep the URL clean
-        const widgetParams = new URLSearchParams();
-
-        // Verified: The GHL widget natively supports 'email' and 'full_name'.
-        // Passing duplicates like 'contact_email' can cause issues, so we stick to the proven keys.
-
-        // Handle Name
-        const fullName = searchParams.get('full_name');
-        const firstName = searchParams.get('first_name');
-        const lastName = searchParams.get('last_name');
-
-        if (fullName) {
-            widgetParams.append('full_name', fullName);
-        } else if (firstName || lastName) {
-            // Construct full_name if missing
-            const parts = [firstName, lastName].filter(Boolean);
-            if (parts.length > 0) widgetParams.append('full_name', parts.join(' '));
-        }
-
-        // Handle Email
-        // Verified via direct URL test that '?email=...' successfully autofills the field.
-        const email = searchParams.get('email');
-        if (email) {
-            widgetParams.append('email', email);
-        }
-
-        // Handle Phone
-        const phone = searchParams.get('phone');
-        if (phone) {
-            widgetParams.append('phone', phone);
-        }
-
-        const queryString = widgetParams.toString();
-        return queryString ? `${baseUrl}?${queryString}` : baseUrl;
-    }, [location.search]);
 
     useEffect(() => {
         // Track 'Lead' event when user lands on Booking page
@@ -102,13 +64,7 @@ const Booking: React.FC = () => {
                     {/* Booking Widget Container */}
                     <div className="bg-white rounded-3xl shadow-xl overflow-hidden border border-slate-200">
                         <div className="p-4 md:p-8 min-h-[800px]">
-                            {/* Key prop ensures iframe remounts if URL changes, forcing a fresh load with new params */}
-                            <iframe
-                                key={bookingUrl}
-                                src={bookingUrl}
-                                style={{ width: '100%', border: 'none', minHeight: '800px' }}
-                                id="1SwWuvjoJauKd9ZHYlpp_1766260844042"
-                            ></iframe>
+                            <BookingWidget calendarId="UTKipcTwyAOAwQ8etiGK" />
                         </div>
                     </div>
                 </div>
