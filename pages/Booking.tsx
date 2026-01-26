@@ -12,7 +12,7 @@ const Booking: React.FC = () => {
     const program = searchParams.get('program') || 'foundation';
 
     // Calendar IDs for different programs
-    const SHARED_CALENDAR_ID = 'rvMuKekaDunKYTEab0LZ';
+    const SHARED_CALENDAR_ID = 'UTKipcTwyAOAwQ8etiGK';
 
     const CALENDAR_IDS: Record<string, string> = {
         'foundation': SHARED_CALENDAR_ID,
