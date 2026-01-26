@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle, X, ChevronDown, ChevronUp } from 'lucide-react';
+import { ArrowRight, CheckCircle, X, ChevronDown, ChevronUp, Compass, PenTool, Rocket } from 'lucide-react';
 import BrowserFrame from '../../components/ui/BrowserFrame';
 
 const WebsiteDesign: React.FC = () => {
@@ -382,36 +382,82 @@ const WebsiteDesign: React.FC = () => {
                 </div>
             </section>
 
-            {/* Process 2-3 Weeks */}
-            <section className="py-24 bg-slate-50 border-y border-slate-200">
-                <div className="container mx-auto px-6 max-w-4xl">
-                    <div className="text-center mb-16">
-                        <h2 className="text-3xl md:text-5xl font-serif font-bold text-slate-900 mb-6">
+            {/* Process 2-3 Weeks (Dark Premium Timeline) */}
+            <section className="py-24 bg-slate-900 text-white relative overflow-hidden">
+                {/* Background Accents */}
+                <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-slate-700 to-transparent"></div>
+                <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-purple-900/20 rounded-full blur-[100px] pointer-events-none"></div>
+                <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-blue-900/10 rounded-full blur-[100px] pointer-events-none"></div>
+
+                <div className="container mx-auto px-6 max-w-6xl relative z-10">
+                    <div className="text-center mb-20">
+                        <span className="text-purple-400 font-bold tracking-wider text-sm uppercase mb-4 block">The Sprint</span>
+                        <h2 className="text-3xl md:text-5xl font-serif font-bold text-white mb-6">
                             How Our 2-3 Week Process Works
                         </h2>
-                        <p className="text-lg text-slate-600">
+                        <p className="text-lg text-slate-400 max-w-2xl mx-auto">
                             Most agencies takes 6-8 weeks. We take 2-3 weeks. Fast enough to launch quickly, strategic enough to convert.
                         </p>
                     </div>
 
-                    <div className="space-y-12">
-                        <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100">
-                            <h3 className="text-xl font-bold text-slate-900 mb-2">Week 1: Discovery, Strategy & Initial Build</h3>
-                            <p className="text-slate-600 mb-4">We learn your business, identify your unique differentiators, and map your customer journey. Our dev team builds simultaneously using AI.</p>
-                            <div className="p-4 bg-slate-50 rounded-lg text-sm text-slate-500">
-                                <strong>Calls:</strong> Kickoff (60m), Brand Deep Dive (60m), Mid-week Check-in.
+                    <div className="relative">
+                        {/* Connecting Line (Desktop) */}
+                        <div className="hidden md:block absolute top-12 left-0 w-full h-0.5 bg-slate-800"></div>
+
+                        <div className="grid md:grid-cols-3 gap-12">
+                            {/* Step 1 */}
+                            <div className="relative group">
+                                <div className="hidden md:flex absolute -top-12 left-1/2 -translate-x-1/2 w-6 h-6 bg-slate-900 border-4 border-slate-800 rounded-full items-center justify-center z-10 group-hover:border-purple-500 transition-colors duration-500">
+                                    <div className="w-1.5 h-1.5 bg-slate-600 rounded-full group-hover:bg-purple-400 transition-colors"></div>
+                                </div>
+                                <div className="bg-slate-800/50 p-8 rounded-2xl border border-slate-700 hover:border-purple-500/50 transition-all duration-500 hover:shadow-[0_0_30px_rgba(168,85,247,0.1)] h-full">
+                                    <div className="w-14 h-14 bg-slate-800 rounded-xl flex items-center justify-center text-purple-400 mb-6 border border-slate-700 group-hover:scale-110 transition-transform duration-500 shadow-lg">
+                                        <Compass size={28} />
+                                    </div>
+                                    <h3 className="text-xl font-bold text-white mb-2">Week 1: Discovery & Build</h3>
+                                    <p className="text-slate-400 mb-6 text-sm leading-relaxed">We learn your business, identify your unique differentiators, and map your customer journey. Our dev team builds simultaneously using AI.</p>
+                                    <div className="p-4 bg-slate-900/50 rounded-lg text-xs font-mono text-purple-300 border border-slate-800 flex items-center gap-2">
+                                        <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
+                                        Calls: Kickoff, Brand Deep Dive
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100">
-                            <h3 className="text-xl font-bold text-slate-900 mb-2">Week 2: Design Refinement & Content Integration</h3>
-                            <p className="text-slate-600 mb-4">We write all copy in your voice, integrate photos, and build featured project pages. You get daily updates.</p>
-                            <div className="p-4 bg-slate-50 rounded-lg text-sm text-slate-500">
-                                <strong>Your Time:</strong> 30-60 mins for feedback.
+
+                            {/* Step 2 */}
+                            <div className="relative group">
+                                <div className="hidden md:flex absolute -top-12 left-1/2 -translate-x-1/2 w-6 h-6 bg-slate-900 border-4 border-slate-800 rounded-full items-center justify-center z-10 group-hover:border-blue-500 transition-colors duration-500 delay-100">
+                                    <div className="w-1.5 h-1.5 bg-slate-600 rounded-full group-hover:bg-blue-400 transition-colors"></div>
+                                </div>
+                                <div className="bg-slate-800/50 p-8 rounded-2xl border border-slate-700 hover:border-blue-500/50 transition-all duration-500 hover:shadow-[0_0_30px_rgba(59,130,246,0.1)] h-full">
+                                    <div className="w-14 h-14 bg-slate-800 rounded-xl flex items-center justify-center text-blue-400 mb-6 border border-slate-700 group-hover:scale-110 transition-transform duration-500 shadow-lg">
+                                        <PenTool size={28} />
+                                    </div>
+                                    <h3 className="text-xl font-bold text-white mb-2">Week 2: Refinement</h3>
+                                    <p className="text-slate-400 mb-6 text-sm leading-relaxed">We write all copy in your voice, integrate photos, and build featured project pages. You get daily updates regarding progress.</p>
+                                    <div className="p-4 bg-slate-900/50 rounded-lg text-xs font-mono text-blue-300 border border-slate-800 flex items-center gap-2">
+                                        <div className="w-2 h-2 rounded-full bg-yellow-500"></div>
+                                        Your Time: 30-60 mins feedback
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100">
-                            <h3 className="text-xl font-bold text-slate-900 mb-2">Week 2-3: Review, Revisions & Launch</h3>
-                            <p className="text-slate-600 mb-4">We send a video walkthrough. You review, we revise, and then we launch.</p>
+
+                            {/* Step 3 */}
+                            <div className="relative group">
+                                <div className="hidden md:flex absolute -top-12 left-1/2 -translate-x-1/2 w-6 h-6 bg-slate-900 border-4 border-slate-800 rounded-full items-center justify-center z-10 group-hover:border-green-500 transition-colors duration-500 delay-200">
+                                    <div className="w-1.5 h-1.5 bg-slate-600 rounded-full group-hover:bg-green-400 transition-colors"></div>
+                                </div>
+                                <div className="bg-slate-800/50 p-8 rounded-2xl border border-slate-700 hover:border-green-500/50 transition-all duration-500 hover:shadow-[0_0_30px_rgba(34,197,94,0.1)] h-full">
+                                    <div className="w-14 h-14 bg-slate-800 rounded-xl flex items-center justify-center text-green-400 mb-6 border border-slate-700 group-hover:scale-110 transition-transform duration-500 shadow-lg">
+                                        <Rocket size={28} />
+                                    </div>
+                                    <h3 className="text-xl font-bold text-white mb-2">Week 3: Launch</h3>
+                                    <p className="text-slate-400 mb-6 text-sm leading-relaxed">We send a video walkthrough. You review, we make final tweaks, and then we launch your new sales engine.</p>
+                                    <div className="p-4 bg-slate-900/50 rounded-lg text-xs font-mono text-green-300 border border-slate-800 flex items-center gap-2">
+                                        <div className="w-2 h-2 rounded-full bg-purple-500"></div>
+                                        Outcome: Live Site
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
