@@ -27,13 +27,15 @@ const Intake: React.FC = () => {
         primaryContactEmail: '',
         primaryContactPhone: '',
         marketingBudget: '',
+        marketingBudget: '',
         // Strategy
+        mainService: '',
+        serviceInterests: [] as string[],
         serviceArea: '',
         idealClient: '',
         competitors: '',
         usp: '',
         avgProjectValue: '',
-        targetRevenue12mo: '',
         // Creative
         logoLink: '',
         photosLink: '', // "Upload files" handled via link for now
@@ -49,11 +51,23 @@ const Intake: React.FC = () => {
         fbLink: '',
         igLink: '',
         linkedinLink: '',
+        youtubeLink: '',
         postingFreq: ''
     });
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
+    };
+
+    const handleCheckboxChange = (value: string) => {
+        setFormData(prev => {
+            const current = prev.serviceInterests;
+            if (current.includes(value)) {
+                return { ...prev, serviceInterests: current.filter(i => i !== value) };
+            } else {
+                return { ...prev, serviceInterests: [...current, value] };
+            }
+        });
     };
 
     const handleSubmit = async (e: React.FormEvent) => {
@@ -79,12 +93,14 @@ const Intake: React.FC = () => {
             marketing_spend: formData.marketingBudget,
 
             // Strategy
+            main_service: formData.mainService,
+            service_interests: formData.serviceInterests.join(', '),
             service_area: formData.serviceArea,
             ideal_client: formData.idealClient,
             competitors: formData.competitors,
             usp: formData.usp,
             avg_project_value: formData.avgProjectValue,
-            target_revenue_12m: formData.targetRevenue12mo,
+            // Removed duplicate target_revenue_12m
 
             // Creative
             logo_assets_link: formData.logoLink,
@@ -103,6 +119,7 @@ const Intake: React.FC = () => {
             facebook_url: formData.fbLink,
             instagram_url: formData.igLink,
             linkedin_url: formData.linkedinLink,
+            youtube_url: formData.youtubeLink,
             posting_frequency: formData.postingFreq,
 
             source: 'onboarding_intake'
@@ -177,6 +194,17 @@ const Intake: React.FC = () => {
                                     <label className="block text-sm font-bold text-slate-700 mb-2">EIN / CCN / BN Number</label>
                                     <input required name="ein" value={formData.ein} onChange={handleChange} type="text" className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-purple-500 bg-slate-50 focus:bg-white transition-colors" placeholder="For A2P Verification" />
                                 </div>
+                                <div className="col-span-2">
+                                    <label className="block text-sm font-bold text-slate-700 mb-2">Primary Service Type</label>
+                                    <select required name="mainService" value={formData.mainService} onChange={handleChange} className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-purple-500 bg-slate-50 focus:bg-white transition-colors">
+                                        <option value="">Select service...</option>
+                                        <option value="Custom Home Builder">Custom Home Builder</option>
+                                        <option value="Remodeler">Remodeler</option>
+                                        <option value="Design-Build Firm">Design-Build Firm</option>
+                                        <option value="Specialty Contractor">Specialty Contractor</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                </div>
 
                                 <div className="col-span-2">
                                     <label className="block text-sm font-bold text-slate-700 mb-2">Website URL</label>
@@ -195,7 +223,7 @@ const Intake: React.FC = () => {
                                     <label className="block text-sm font-bold text-slate-700 mb-2">City</label>
                                     <input required name="city" value={formData.city} onChange={handleChange} type="text" className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-purple-500 bg-slate-50 focus:bg-white transition-colors" />
                                 </div>
-                                <div className="grid grid-cols-2 gap-4">
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                     <div>
                                         <label className="block text-sm font-bold text-slate-700 mb-2">State</label>
                                         <input required name="state" value={formData.state} onChange={handleChange} type="text" className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-purple-500 bg-slate-50 focus:bg-white transition-colors" />
@@ -296,11 +324,20 @@ const Intake: React.FC = () => {
                                         <input name="avgProjectValue" value={formData.avgProjectValue} onChange={handleChange} type="text" className="w-full pl-10 pr-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-purple-500 bg-slate-50 focus:bg-white transition-colors" placeholder="750,000" />
                                     </div>
                                 </div>
-                                <div>
-                                    <label className="block text-sm font-bold text-slate-700 mb-2">Target Revenue (Next 12 Mos)</label>
-                                    <div className="relative">
-                                        <DollarSign className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400" size={16} />
-                                        <input name="targetRevenue12mo" value={formData.targetRevenue12mo} onChange={handleChange} type="text" className="w-full pl-10 pr-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-purple-500 bg-slate-50 focus:bg-white transition-colors" placeholder="5,000,000" />
+                                <div className="col-span-2">
+                                    <label className="block text-sm font-bold text-slate-700 mb-2">Desired Job Types (Check all that apply)</label>
+                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-3 bg-slate-50 p-4 rounded-xl border border-slate-100">
+                                        {['New Home Builds', 'Large Additions', 'Whole Home Remodels', 'ADUs', 'Kitchens/Baths', 'Commercial'].map((job) => (
+                                            <label key={job} className="flex items-center gap-3 cursor-pointer">
+                                                <input
+                                                    type="checkbox"
+                                                    checked={formData.serviceInterests.includes(job)}
+                                                    onChange={() => handleCheckboxChange(job)}
+                                                    className="w-5 h-5 text-purple-600 rounded border-slate-300 focus:ring-purple-500"
+                                                />
+                                                <span className="text-slate-700 font-medium">{job}</span>
+                                            </label>
+                                        ))}
                                     </div>
                                 </div>
                             </div>
@@ -398,6 +435,10 @@ const Intake: React.FC = () => {
                                 <div className="col-span-2">
                                     <label className="block text-sm font-bold text-slate-700 mb-2">LinkedIn Page URL</label>
                                     <input name="linkedinLink" value={formData.linkedinLink} onChange={handleChange} type="text" className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-purple-500 bg-slate-50 focus:bg-white transition-colors" />
+                                </div>
+                                <div className="col-span-2">
+                                    <label className="block text-sm font-bold text-slate-700 mb-2">YouTube Channel URL <span className="text-slate-400 font-normal ml-1">(Leave blank if none)</span></label>
+                                    <input name="youtubeLink" value={formData.youtubeLink} onChange={handleChange} type="text" className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-purple-500 bg-slate-50 focus:bg-white transition-colors" />
                                 </div>
                                 <div className="col-span-2">
                                     <label className="block text-sm font-bold text-slate-700 mb-2">Current Posting Frequency</label>
