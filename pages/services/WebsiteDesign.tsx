@@ -186,25 +186,66 @@ const WebsiteDesign: React.FC = () => {
                         <h3 className="text-2xl font-bold text-slate-900 mb-8 border-b border-slate-200 pb-4">Featured Project Pages That Tell the Full Story</h3>
                         <p className="text-slate-600 mb-8 max-w-3xl">Most builders have a portfolio page with a bunch of photos. We build featured project pages that walk prospects through the story of each project, just like a referral would in person.</p>
 
-                        <div className="grid md:grid-cols-3 gap-8 mb-16">
-                            {[
-                                { title: "Modern Farmhouse Build", desc: "4,200 sq ft custom home, Austin, TX", image: "/images/stonebrook-hero.png" },
-                                { title: "Luxury Lakefront Home", desc: "6,800 sq ft, design-build project with boat dock", image: "/images/homestead-hero.png" },
-                                { title: "Whole-Home Remodel", desc: "Historic renovation with modern updates, $450K transformation", image: "/images/verso-showcase.png" }
-                            ].map((item, i) => (
-                                <div key={i} className="group cursor-pointer">
-                                    <div className="aspect-video bg-slate-100 rounded-xl overflow-hidden mb-4 border border-slate-200 shadow-sm group-hover:shadow-md transition-all">
-                                        <div className="w-full h-full bg-slate-200 flex items-center justify-center text-slate-400">
-                                            {/* Placeholder for real images if not available, falling back to gray */}
-                                            <span className="text-xs font-bold uppercase tracking-wider">Project Image</span>
-                                        </div>
+                        <div className="grid lg:grid-cols-3 gap-8 mb-16">
+                            {/* Project 1 */}
+                            <div className="group cursor-pointer">
+                                <div className="aspect-[4/3] rounded-2xl overflow-hidden mb-6 relative shadow-lg group-hover:shadow-xl transition-all duration-500">
+                                    <div className="absolute inset-0 bg-slate-900/0 group-hover:bg-slate-900/10 transition-colors z-10"></div>
+                                    <img
+                                        src="/images/horizon-retreat.png"
+                                        alt="The Horizon Retreat - Luxe Builders"
+                                        className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
+                                    />
+                                    <div className="absolute bottom-4 left-4 right-4 z-20">
+                                        <span className="inline-block bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-slate-900 uppercase tracking-wider mb-2">Custom Build</span>
                                     </div>
-                                    <h4 className="font-bold text-slate-900 group-hover:text-purple-600 transition-colors flex items-center gap-2">
-                                        {item.title} <ArrowRight size={16} />
-                                    </h4>
-                                    <p className="text-sm text-slate-500">{item.desc}</p>
                                 </div>
-                            ))}
+                                <h4 className="text-xl font-serif font-bold text-slate-900 group-hover:text-purple-600 transition-colors flex items-center gap-2 mb-2">
+                                    The Horizon Retreat <ArrowRight size={18} className="transform group-hover:translate-x-1 transition-transform" />
+                                </h4>
+                                <p className="text-slate-500 text-sm mb-1">Luxe Builders • Austin, TX</p>
+                                <p className="text-slate-400 text-xs uppercase tracking-wider font-medium">4,500 sq ft • Modern Luxury</p>
+                            </div>
+
+                            {/* Project 2 */}
+                            <div className="group cursor-pointer">
+                                <div className="aspect-[4/3] rounded-2xl overflow-hidden mb-6 relative shadow-lg group-hover:shadow-xl transition-all duration-500">
+                                    <div className="absolute inset-0 bg-slate-900/0 group-hover:bg-slate-900/10 transition-colors z-10"></div>
+                                    <img
+                                        src="/images/johnson-home.png"
+                                        alt="The Johnson Family Home - Hearth & Home"
+                                        className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
+                                    />
+                                    <div className="absolute bottom-4 left-4 right-4 z-20">
+                                        <span className="inline-block bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-slate-900 uppercase tracking-wider mb-2">Design-Build</span>
+                                    </div>
+                                </div>
+                                <h4 className="text-xl font-serif font-bold text-slate-900 group-hover:text-purple-600 transition-colors flex items-center gap-2 mb-2">
+                                    The Johnson Family Home <ArrowRight size={18} className="transform group-hover:translate-x-1 transition-transform" />
+                                </h4>
+                                <p className="text-slate-500 text-sm mb-1">Hearth & Home • Wauwatosa, WI</p>
+                                <p className="text-slate-400 text-xs uppercase tracking-wider font-medium">3,800 sq ft • Modern Craftsman</p>
+                            </div>
+
+                            {/* Project 3 */}
+                            <div className="group cursor-pointer">
+                                <div className="aspect-[4/3] rounded-2xl overflow-hidden mb-6 relative shadow-lg group-hover:shadow-xl transition-all duration-500">
+                                    <div className="absolute inset-0 bg-slate-900/0 group-hover:bg-slate-900/10 transition-colors z-10"></div>
+                                    <img
+                                        src="/images/coastal-retreat.png"
+                                        alt="Coastal Modern Retreat"
+                                        className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
+                                    />
+                                    <div className="absolute bottom-4 left-4 right-4 z-20">
+                                        <span className="inline-block bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-slate-900 uppercase tracking-wider mb-2">Luxury Remodel</span>
+                                    </div>
+                                </div>
+                                <h4 className="text-xl font-serif font-bold text-slate-900 group-hover:text-purple-600 transition-colors flex items-center gap-2 mb-2">
+                                    Coastal Modern Retreat <ArrowRight size={18} className="transform group-hover:translate-x-1 transition-transform" />
+                                </h4>
+                                <p className="text-slate-500 text-sm mb-1">Cape Cod, Massachusetts</p>
+                                <p className="text-slate-400 text-xs uppercase tracking-wider font-medium">5,400 sq ft • Waterfront</p>
+                            </div>
                         </div>
 
                         <h3 className="text-2xl font-bold text-slate-900 mb-8 border-b border-slate-200 pb-4">Custom Pages Built Around What Makes You Unique</h3>
