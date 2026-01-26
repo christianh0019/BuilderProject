@@ -9,7 +9,8 @@ const OnboardingBooking: React.FC = () => {
     // Reusing the same calendar ID or a placeholder. User said "onboarding call booking page".
     // I'll stick with the existing calendar ID for now, as it's the valid one we have. 
     // If they have a specific onboarding calendar, they can swap the ID.
-    const CALENDAR_ID = "IBPe3yYeYt197wsoyG1r";
+    // Updated to the global onboarding calendar ID
+    const CALENDAR_ID = "rvMuKekaDunKYTEab0LZ";
 
     return (
         <div className="min-h-screen bg-slate-50 font-sans selection:bg-purple-200 selection:text-purple-900 flex flex-col">
