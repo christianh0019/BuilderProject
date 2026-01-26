@@ -6,7 +6,7 @@ import { useLocation, useSearchParams, useNavigate } from 'react-router-dom';
 import SimpleHeader from '../components/SimpleHeader';
 
 const Booking: React.FC = () => {
-    const location = useLocation(); // Keep useLocation if it's used elsewhere, otherwise remove. For now, it's not used after the change.
+    // const location = useLocation(); // Keep useLocation if it's used elsewhere, otherwise remove. For now, it's not used after the change.
     const [searchParams] = useSearchParams();
     const navigate = useNavigate(); // Initialize useNavigate hook
     const program = searchParams.get('program') || 'foundation';
@@ -83,7 +83,7 @@ const Booking: React.FC = () => {
                     {/* Booking Widget Container */}
                     <div className="bg-white rounded-3xl shadow-xl overflow-hidden border border-slate-200">
                         <div className="p-4 md:p-8 min-h-[800px]">
-                            <BookingWidget calendarId="UTKipcTwyAOAwQ8etiGK" />
+                            <BookingWidget calendarId={calendarId} />
                         </div>
                     </div>
                 </div>

@@ -172,7 +172,7 @@ const Intake: React.FC = () => {
                                 <h3>Business Details</h3>
                             </div>
 
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div className="flex flex-col md:grid md:grid-cols-2 gap-6">
                                 <div className="col-span-2">
                                     <label className="block text-sm font-bold text-slate-700 mb-2">Legal Business Name (as on EIN)</label>
                                     <input required name="businessName" value={formData.businessName} onChange={handleChange} type="text" className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-purple-500 bg-slate-50 focus:bg-white transition-colors" placeholder="e.g. Acme Builders LLC" />
@@ -245,7 +245,7 @@ const Intake: React.FC = () => {
                                 <h3>Primary Contact</h3>
                             </div>
 
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div className="flex flex-col md:grid md:grid-cols-2 gap-6">
                                 <div className="col-span-2">
                                     <label className="block text-sm font-bold text-slate-700 mb-2">Full Name</label>
                                     <input required name="primaryContactName" value={formData.primaryContactName} onChange={handleChange} type="text" className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-purple-500 bg-slate-50 focus:bg-white transition-colors" placeholder="John Doe" />
@@ -268,7 +268,7 @@ const Intake: React.FC = () => {
                                 <h3>Goals & Metrics</h3>
                             </div>
 
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div className="flex flex-col md:grid md:grid-cols-2 gap-6">
                                 <div>
                                     <label className="block text-sm font-bold text-slate-700 mb-2">Current Annual Revenue</label>
                                     <div className="relative">
@@ -302,7 +302,7 @@ const Intake: React.FC = () => {
                                 <Target className="text-purple-600" />
                                 <h3>Strategy & Market</h3>
                             </div>
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div className="flex flex-col md:grid md:grid-cols-2 gap-6">
                                 <div className="col-span-2">
                                     <label className="block text-sm font-bold text-slate-700 mb-2">Primary Service Area</label>
                                     <input name="serviceArea" value={formData.serviceArea} onChange={handleChange} type="text" className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-purple-500 bg-slate-50 focus:bg-white transition-colors" placeholder="e.g. Phoenix Metro Area, 50 mile radius of 15601" />
@@ -351,7 +351,7 @@ const Intake: React.FC = () => {
                                 <Building2 className="text-purple-600" />
                                 <h3>Brand & Assets</h3>
                             </div>
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div className="flex flex-col md:grid md:grid-cols-2 gap-6">
                                 <div className="col-span-2">
                                     <div className="bg-purple-50 border border-purple-100 rounded-xl p-6 mb-4">
                                         <h4 className="font-bold text-purple-900 mb-2">📸 Uploading Large Files</h4>
@@ -389,7 +389,7 @@ const Intake: React.FC = () => {
                                 <Globe className="text-purple-600" />
                                 <h3>Technical Access</h3>
                             </div>
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div className="flex flex-col md:grid md:grid-cols-2 gap-6">
                                 <div>
                                     <label className="block text-sm font-bold text-slate-700 mb-2">Domain Registrar</label>
                                     <input name="domainRegistrar" value={formData.domainRegistrar} onChange={handleChange} type="text" className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-purple-500 bg-slate-50 focus:bg-white transition-colors" placeholder="e.g. GoDaddy, Namecheap" />
@@ -425,7 +425,7 @@ const Intake: React.FC = () => {
                                 <Users className="text-purple-600" />
                                 <h3>Social Media</h3>
                             </div>
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div className="flex flex-col md:grid md:grid-cols-2 gap-6">
                                 <div className="col-span-2">
                                     <label className="block text-sm font-bold text-slate-700 mb-2">Facebook Page URL</label>
                                     <input name="fbLink" value={formData.fbLink} onChange={handleChange} type="text" className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-purple-500 bg-slate-50 focus:bg-white transition-colors" />
