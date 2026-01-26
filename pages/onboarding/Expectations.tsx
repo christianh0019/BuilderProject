@@ -5,24 +5,7 @@ import SimpleHeader from '../../components/SimpleHeader';
 
 const Expectations: React.FC = () => {
     const [searchParams] = useSearchParams();
-    const program = searchParams.get('program') || 'foundation';
-
-    const nextStepsMap: Record<string, { title: string, desc: string }> = {
-        'foundation': {
-            title: 'Gather Your Brand Assets',
-            desc: 'Have your logo files, current offer details, and list of past projects ready.'
-        },
-        'pipeline': {
-            title: 'Connect Your Ad Accounts',
-            desc: 'Make sure you have admin access to your Facebook and Google ad accounts.'
-        },
-        'partner': {
-            title: 'Prepare for Deep-Dive Audit',
-            desc: 'We will be reviewing your entire business structure, so please have your financials handy.'
-        }
-    };
-
-    const nextStep = nextStepsMap[program] || nextStepsMap['foundation'];
+    // const program = searchParams.get('program') || 'foundation'; // Program no longer dictates content here
 
     return (
         <div className="min-h-screen bg-slate-50 font-sans selection:bg-purple-200 selection:text-purple-900 flex flex-col">
@@ -32,14 +15,14 @@ const Expectations: React.FC = () => {
                 <div className="max-w-4xl mx-auto text-center">
 
                     {/* Progress Header */}
-                    <div className="mb-8">
-                        <div className="inline-flex items-center gap-2 text-slate-400 text-sm font-bold uppercase tracking-wider mb-4">
+                    <div className="flex flex-col items-center gap-4 mb-8">
+                        <div className="inline-flex items-center gap-2 text-slate-400 text-sm font-bold uppercase tracking-wider">
                             <span className="text-purple-600">Step 3 of 3</span>
                             <span>•</span>
                             <span>You're All Set</span>
                         </div>
 
-                        <div className="inline-flex items-center gap-2 px-4 py-2 bg-green-100 text-green-700 rounded-full text-sm font-bold mb-6 border border-green-200 animate-fadeIn">
+                        <div className="inline-flex items-center gap-2 px-4 py-2 bg-green-100 text-green-700 rounded-full text-sm font-bold border border-green-200 animate-fadeIn">
                             <CheckCircle size={16} />
                             <span>Onboarding Complete</span>
                         </div>
@@ -83,8 +66,8 @@ const Expectations: React.FC = () => {
                                 <FileText size={24} />
                             </div>
                             <div>
-                                <h3 className="font-bold text-slate-900 mb-1">{nextStep.title}</h3>
-                                <p className="text-slate-500 text-sm">{nextStep.desc}</p>
+                                <h3 className="font-bold text-slate-900 mb-1">Prepare Your Materials</h3>
+                                <p className="text-slate-500 text-sm">Make sure you are logged into all your accounts (Ads, DNS, Socials) and have any assets ready for our call.</p>
                             </div>
                         </div>
                     </div>
