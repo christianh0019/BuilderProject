@@ -67,8 +67,9 @@ const BookingWidget: React.FC<BookingWidgetProps> = ({ calendarId }) => {
             <iframe
                 key={bookingUrl}
                 src={bookingUrl}
-                style={{ width: '100%', border: 'none', minHeight: '800px' }}
-                id={`booking-widget-${calendarId}`}
+                style={{ width: '100%', border: 'none', overflow: 'hidden' }}
+                scrolling="no"
+                id="IC5Phy1UDFFehjOJhEN6_1769389012013"
                 title="Booking Calendar"
             ></iframe>
         </div>
