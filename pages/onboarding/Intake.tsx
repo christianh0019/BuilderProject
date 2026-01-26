@@ -9,8 +9,8 @@ const Intake: React.FC = () => {
     const program = searchParams.get('program') || 'foundation';
     const [loading, setLoading] = useState(false);
 
-    // We can reuse the existing webhook or a new one. Using the functional one for now.
-    const WEBHOOK_URL = 'https://services.leadconnectorhq.com/hooks/HllUVzV8V6VFH4nUuq4W/webhook-trigger/fad0a645-e084-4b96-8216-6e72e76b8f98';
+    // Updated to Make.com webhook as per user request
+    const WEBHOOK_URL = 'https://hook.us2.make.com/m280cqpzyuq4vw9wcly20ti4vd4btuaj';
 
     const [formData, setFormData] = useState({
         businessName: '',
