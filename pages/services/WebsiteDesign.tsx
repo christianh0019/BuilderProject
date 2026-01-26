@@ -96,79 +96,78 @@ const WebsiteDesign: React.FC = () => {
             {/* Why Visual (Referral Analogy) */}
             <section className="py-24 bg-slate-50 border-y border-slate-200">
                 <div className="container mx-auto px-6">
-                    <div className="max-w-4xl mx-auto mb-16">
-                        <div className="max-w-4xl mx-auto mb-16 text-center">
-                            <span className="text-purple-600 font-bold tracking-wider text-sm uppercase mb-4 block">The "Trust Gap"</span>
-                            <h2 className="text-3xl md:text-5xl font-serif font-bold text-slate-900 mb-6">
-                                Why Your Website Isn't Converting <br />(And What Actually Works)
-                            </h2>
-                            <p className="text-lg text-slate-600 mb-8">
-                                So what makes the difference between a website that converts at less than 1% and one that converts at 3.2%? It comes down to <strong>replicating what happens when a referral walks someone through your work.</strong>
-                            </p>
-                        </div>
+                    <div className="max-w-4xl mx-auto mb-16 text-center">
+                        <span className="text-purple-600 font-bold tracking-wider text-sm uppercase mb-4 block">The "Trust Gap"</span>
+                        <h2 className="text-3xl md:text-5xl font-serif font-bold text-slate-900 mb-6">
+                            Why Your Website Isn't Converting <br />(And What Actually Works)
+                        </h2>
+                        <p className="text-lg text-slate-600 mb-8">
+                            So what makes the difference between a website that converts at less than 1% and one that converts at 3.2%? It comes down to <strong>replicating what happens when a referral walks someone through your work.</strong>
+                        </p>
+                    </div>
 
-                        <div className="max-w-6xl mx-auto">
-                            <div className="grid md:grid-cols-2 gap-8 relative">
-                                {/* VS Badge (Desktop) */}
-                                <div className="hidden md:flex absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-white rounded-full items-center justify-center font-black text-slate-900 shadow-xl border-4 border-slate-50 z-10 text-xl">
-                                    VS
+                    <div className="max-w-6xl mx-auto">
+                        <div className="grid md:grid-cols-2 gap-8 relative">
+                            {/* VS Badge (Desktop) */}
+                            <div className="hidden md:flex absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-white rounded-full items-center justify-center font-black text-slate-900 shadow-xl border-4 border-slate-50 z-10 text-xl">
+                                VS
+                            </div>
+
+                            {/* Card 1: Offline Referral */}
+                            <div className="bg-white p-10 rounded-[2.5rem] shadow-xl border border-slate-100 flex flex-col relative overflow-hidden group hover:-translate-y-2 transition-transform duration-500">
+                                <div className="absolute top-0 left-0 w-full h-2 bg-slate-200 group-hover:bg-slate-300 transition-colors"></div>
+                                <div className="w-16 h-16 bg-slate-100 rounded-2xl flex items-center justify-center text-slate-500 mb-8 group-hover:scale-110 transition-transform duration-500">
+                                    <Users size={32} />
                                 </div>
+                                <h3 className="text-2xl font-serif font-bold text-slate-900 mb-2">1. The Referral Experience</h3>
+                                <p className="text-slate-500 mb-8 text-sm uppercase tracking-wider font-bold">Offline / In-Person</p>
 
-                                {/* Card 1: Offline Referral */}
-                                <div className="bg-white p-10 rounded-[2.5rem] shadow-xl border border-slate-100 flex flex-col relative overflow-hidden group hover:-translate-y-2 transition-transform duration-500">
-                                    <div className="absolute top-0 left-0 w-full h-2 bg-slate-200 group-hover:bg-slate-300 transition-colors"></div>
-                                    <div className="w-16 h-16 bg-slate-100 rounded-2xl flex items-center justify-center text-slate-500 mb-8 group-hover:scale-110 transition-transform duration-500">
-                                        <Users size={32} />
-                                    </div>
-                                    <h3 className="text-2xl font-serif font-bold text-slate-900 mb-2">1. The Referral Experience</h3>
-                                    <p className="text-slate-500 mb-8 text-sm uppercase tracking-wider font-bold">Offline / In-Person</p>
+                                <ul className="space-y-6 flex-1">
+                                    <li className="flex gap-4 items-start">
+                                        <div className="w-6 h-6 rounded-full bg-slate-100 flex items-center justify-center text-slate-500 shrink-0 mt-0.5"><CheckCircle size={14} /></div>
+                                        <p className="text-slate-600"><strong>Friend walks them through.</strong> They see the craftsmanship up close, notice the details, understand the quality.</p>
+                                    </li>
+                                    <li className="flex gap-4 items-start">
+                                        <div className="w-6 h-6 rounded-full bg-slate-100 flex items-center justify-center text-slate-500 shrink-0 mt-0.5"><CheckCircle size={14} /></div>
+                                        <p className="text-slate-600"><strong>Friend vouches for you.</strong> They trust the recommendation because someone they trust is standing right there.</p>
+                                    </li>
+                                    <li className="flex gap-4 items-start">
+                                        <div className="w-6 h-6 rounded-full bg-slate-100 flex items-center justify-center text-slate-500 shrink-0 mt-0.5"><CheckCircle size={14} /></div>
+                                        <p className="text-slate-600"><strong>Prospect asks questions:</strong> Cost? Timeline? Experience? Challenges?</p>
+                                    </li>
+                                </ul>
+                            </div>
 
-                                    <ul className="space-y-6 flex-1">
-                                        <li className="flex gap-4 items-start">
-                                            <div className="w-6 h-6 rounded-full bg-slate-100 flex items-center justify-center text-slate-500 shrink-0 mt-0.5"><CheckCircle size={14} /></div>
-                                            <p className="text-slate-600"><strong>Friend walks them through.</strong> They see the craftsmanship up close, notice the details, understand the quality.</p>
-                                        </li>
-                                        <li className="flex gap-4 items-start">
-                                            <div className="w-6 h-6 rounded-full bg-slate-100 flex items-center justify-center text-slate-500 shrink-0 mt-0.5"><CheckCircle size={14} /></div>
-                                            <p className="text-slate-600"><strong>Friend vouches for you.</strong> They trust the recommendation because someone they trust is standing right there.</p>
-                                        </li>
-                                        <li className="flex gap-4 items-start">
-                                            <div className="w-6 h-6 rounded-full bg-slate-100 flex items-center justify-center text-slate-500 shrink-0 mt-0.5"><CheckCircle size={14} /></div>
-                                            <p className="text-slate-600"><strong>Prospect asks questions:</strong> Cost? Timeline? Experience? Challenges?</p>
-                                        </li>
-                                    </ul>
+                            {/* Card 2: Digital Referral */}
+                            <div className="bg-slate-900 p-10 rounded-[2.5rem] shadow-2xl shadow-purple-900/20 border border-slate-800 flex flex-col relative overflow-hidden group hover:-translate-y-2 transition-transform duration-500">
+                                <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-purple-500 to-pink-500"></div>
+                                {/* Shine Effect */}
+                                <div className="absolute top-0 right-0 w-[300px] h-[300px] bg-purple-500/10 rounded-full blur-[80px] pointer-events-none"></div>
+
+                                <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center text-white mb-8 border border-white/10 group-hover:scale-110 transition-transform duration-500">
+                                    <Layout size={32} />
                                 </div>
+                                <h3 className="text-2xl font-serif font-bold text-white mb-2">2. What Your Website Should Do</h3>
+                                <p className="text-purple-300 mb-8 text-sm uppercase tracking-wider font-bold">Online / 24-7 Sales Asset</p>
 
-                                {/* Card 2: Digital Referral */}
-                                <div className="bg-slate-900 p-10 rounded-[2.5rem] shadow-2xl shadow-purple-900/20 border border-slate-800 flex flex-col relative overflow-hidden group hover:-translate-y-2 transition-transform duration-500">
-                                    <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-purple-500 to-pink-500"></div>
-                                    {/* Shine Effect */}
-                                    <div className="absolute top-0 right-0 w-[300px] h-[300px] bg-purple-500/10 rounded-full blur-[80px] pointer-events-none"></div>
-
-                                    <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center text-white mb-8 border border-white/10 group-hover:scale-110 transition-transform duration-500">
-                                        <Layout size={32} />
-                                    </div>
-                                    <h3 className="text-2xl font-serif font-bold text-white mb-2">2. What Your Website Should Do</h3>
-                                    <p className="text-purple-300 mb-8 text-sm uppercase tracking-wider font-bold">Online / 24-7 Sales Asset</p>
-
-                                    <ul className="space-y-6 flex-1 relative z-10">
-                                        <li className="flex gap-4 items-start">
-                                            <div className="w-6 h-6 rounded-full bg-green-500 flex items-center justify-center text-white shrink-0 mt-0.5 shadow-lg shadow-green-500/30"><CheckCircle size={14} /></div>
-                                            <p className="text-slate-300"><strong>Featured Project Pages walk them through.</strong> Photos, videos, and callouts replicate the physical tour.</p>
-                                        </li>
-                                        <li className="flex gap-4 items-start">
-                                            <div className="w-6 h-6 rounded-full bg-green-500 flex items-center justify-center text-white shrink-0 mt-0.5 shadow-lg shadow-green-500/30"><CheckCircle size={14} /></div>
-                                            <p className="text-slate-300"><strong>Storytelling builds trust.</strong> They see the problem, solution, and outcome. "That's exactly my situation."</p>
-                                        </li>
-                                        <li className="flex gap-4 items-start">
-                                            <div className="w-6 h-6 rounded-full bg-green-500 flex items-center justify-center text-white shrink-0 mt-0.5 shadow-lg shadow-green-500/30"><CheckCircle size={14} /></div>
-                                            <p className="text-slate-300"><strong>Answers are right there.</strong> Pricing, timelines, process. No guessing. They're educated before the call.</p>
-                                        </li>
-                                    </ul>
-                                </div>
+                                <ul className="space-y-6 flex-1 relative z-10">
+                                    <li className="flex gap-4 items-start">
+                                        <div className="w-6 h-6 rounded-full bg-green-500 flex items-center justify-center text-white shrink-0 mt-0.5 shadow-lg shadow-green-500/30"><CheckCircle size={14} /></div>
+                                        <p className="text-slate-300"><strong>Featured Project Pages walk them through.</strong> Photos, videos, and callouts replicate the physical tour.</p>
+                                    </li>
+                                    <li className="flex gap-4 items-start">
+                                        <div className="w-6 h-6 rounded-full bg-green-500 flex items-center justify-center text-white shrink-0 mt-0.5 shadow-lg shadow-green-500/30"><CheckCircle size={14} /></div>
+                                        <p className="text-slate-300"><strong>Storytelling builds trust.</strong> They see the problem, solution, and outcome. "That's exactly my situation."</p>
+                                    </li>
+                                    <li className="flex gap-4 items-start">
+                                        <div className="w-6 h-6 rounded-full bg-green-500 flex items-center justify-center text-white shrink-0 mt-0.5 shadow-lg shadow-green-500/30"><CheckCircle size={14} /></div>
+                                        <p className="text-slate-300"><strong>Answers are right there.</strong> Pricing, timelines, process. No guessing. They're educated before the call.</p>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>
+                </div>
             </section>
 
             {/* Live Examples */}
