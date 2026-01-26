@@ -12,12 +12,13 @@ const Booking: React.FC = () => {
     const program = searchParams.get('program') || 'foundation';
 
     // Calendar IDs for different programs
-    // TODO: Update these with the actual GHL Calendar IDs for each program
+    const SHARED_CALENDAR_ID = 'rvMuKekaDunKYTEab0LZ';
+
     const CALENDAR_IDS: Record<string, string> = {
-        'foundation': 'foundation_calendar_id_placeholder', // Foundation Onboarding
-        'pipeline': 'pipeline_calendar_id_placeholder',     // Pipeline Onboarding
-        'partner': 'partner_calendar_id_placeholder',       // Partner Kickoff
-        'default': 'consultation-call-booking'              // Fallback/Default
+        'foundation': SHARED_CALENDAR_ID,
+        'pipeline': SHARED_CALENDAR_ID,
+        'partner': SHARED_CALENDAR_ID,
+        'default': SHARED_CALENDAR_ID
     };
 
     const calendarId = CALENDAR_IDS[program] || CALENDAR_IDS['default'];
