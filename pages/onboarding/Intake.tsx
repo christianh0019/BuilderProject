@@ -130,12 +130,14 @@ const Intake: React.FC = () => {
         try {
             await fetch(WEBHOOK_URL, {
                 method: 'POST',
-                mode: 'no-cors', // Ensure delivery even if opaque
-                headers: { 'Content-Type': 'application/json' },
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
                 body: JSON.stringify(payload)
             });
 
-            // Always proceed on no-cors
+            // Navigate to the next step
             navigate(`/onboarding/booking?program=${program}`);
         } catch (error) {
             console.error('Error submitting intake:', error);
