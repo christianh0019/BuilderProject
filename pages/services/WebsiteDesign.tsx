@@ -1,11 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Monitor, Smartphone, Gauge, Search, ArrowRight, CheckCircle, Database, Layers, Lock, Zap } from 'lucide-react';
-import PortfolioSection from '../../components/website/PortfolioSection';
+import { ArrowRight, CheckCircle, X, ChevronDown, ChevronUp } from 'lucide-react';
 import BrowserFrame from '../../components/ui/BrowserFrame';
-import VersoShowcase from '../../components/website/VersoShowcase';
 
 const WebsiteDesign: React.FC = () => {
+    const [openFaq, setOpenFaq] = React.useState<number | null>(null);
+
+    const toggleFaq = (index: number) => {
+        setOpenFaq(openFaq === index ? null : index);
+    };
+
     return (
         <div className="pt-20">
             {/* Hero Section */}
@@ -15,406 +19,478 @@ const WebsiteDesign: React.FC = () => {
                 <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-blue-900/20 rounded-full blur-[100px] pointer-events-none"></div>
 
                 <div className="container mx-auto px-6 relative z-10">
-                    <div className="max-w-4xl mx-auto text-center">
-                        <span className="inline-block py-1 px-3 rounded-full bg-purple-900/50 border border-purple-500 text-purple-300 text-xs font-bold tracking-wider uppercase mb-6">
-                            Custom Home Builder Website Design
-                        </span>
-                        <h1 className="text-5xl md:text-7xl font-serif font-bold mb-8 leading-tight">
-                            Build a Digital Model Home <br /> <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">That Sells Itself</span>
+                    <div className="max-w-5xl mx-auto text-center">
+                        <h1 className="text-4xl md:text-6xl font-serif font-bold mb-8 leading-tight">
+                            Custom Home Builder & Remodeler Website Design & Development <br />
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">That Actually Generates Leads</span>
                         </h1>
-                        <p className="text-xl text-slate-300 mb-10 max-w-2xl mx-auto leading-relaxed">
-                            We don't just build "brochure" sites. We deliver **high-performance construction website development** on a foundation tested across 50+ successful builder websites.
+                        <p className="text-xl text-slate-300 mb-10 max-w-3xl mx-auto leading-relaxed">
+                            Stop losing $1M+ projects because prospects land on your site and think "this looks like it was built in 2010" instead of "this is exactly who I need to build my dream home."
                         </p>
+
+                        <div className="grid md:grid-cols-3 gap-6 text-left max-w-4xl mx-auto mb-12">
+                            <div className="flex gap-3">
+                                <CheckCircle className="text-purple-400 shrink-0" />
+                                <span className="text-slate-200 text-sm">Featured project pages that showcase your best builds and remodels with the story behind them</span>
+                            </div>
+                            <div className="flex gap-3">
+                                <CheckCircle className="text-purple-400 shrink-0" />
+                                <span className="text-slate-200 text-sm">Custom pages built around what makes you different (your process, design approach, past client experiences)</span>
+                            </div>
+                            <div className="flex gap-3">
+                                <CheckCircle className="text-purple-400 shrink-0" />
+                                <span className="text-slate-200 text-sm">Professional design that matches the quality of homes you build and projects you complete</span>
+                            </div>
+                        </div>
+
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                            <Link to="/contact" className="bg-white text-slate-900 px-8 py-4 rounded-full font-bold hover:bg-purple-50 transition-colors">
-                                Start Your Project
+                            <Link to="/contact" className="bg-white text-slate-900 px-8 py-4 rounded-full font-bold hover:bg-purple-50 transition-colors shadow-[0_0_20px_rgba(255,255,255,0.3)] hover:shadow-[0_0_30px_rgba(255,255,255,0.5)]">
+                                Work With Us
                             </Link>
                             <Link to="/case-studies" className="border border-slate-600 text-white px-8 py-4 rounded-full font-bold hover:bg-slate-800 transition-colors">
-                                View Our Work
+                                See Website Examples
                             </Link>
                         </div>
                     </div>
                 </div>
             </section>
 
-            {/* Interactive Portfolio */}
-            <PortfolioSection />
+            {/* Conversion Stats Section */}
+            <section className="py-24 bg-white">
+                <div className="container mx-auto px-6">
+                    <div className="max-w-4xl mx-auto">
+                        <h2 className="text-3xl md:text-4xl font-serif font-bold text-slate-900 mb-8 text-center">
+                            What Happens When Your Website Is Built to Convert
+                        </h2>
 
-            {/* Live Preview Section */}
+                        <div className="grid md:grid-cols-2 gap-12 items-center mb-12">
+                            <div className="bg-slate-50 p-8 rounded-2xl border border-slate-100">
+                                <p className="text-lg text-slate-600 mb-6">
+                                    When builders and remodelers come to us, their websites typically convert at less than 1%, meaning 99%+ of visitors leave without reaching out.
+                                </p>
+                                <div className="text-4xl font-bold text-slate-400 mb-2">0.38%</div>
+                                <div className="text-sm uppercase tracking-wider text-slate-500 font-bold">Industry Average</div>
+                            </div>
+                            <div className="bg-purple-50 p-8 rounded-2xl border border-purple-100 relative overflow-hidden">
+                                <div className="absolute top-0 right-0 p-4 opacity-10">
+                                    <svg width="100" height="100" viewBox="0 0 24 24" fill="currentColor" className="text-purple-600"><path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z" /></svg>
+                                </div>
+                                <p className="text-lg text-slate-900 font-medium mb-6">
+                                    Our websites convert at an average of 3.2%. That's 3x higher.
+                                </p>
+                                <div className="text-4xl font-bold text-purple-600 mb-2">3.2%</div>
+                                <div className="text-sm uppercase tracking-wider text-purple-700 font-bold">BuilderProject Average</div>
+                            </div>
+                        </div>
+
+                        <p className="text-lg text-slate-600 leading-relaxed text-center">
+                            Visitors also spend 3x as long on our sites, not because we're tricking them into staying, but because the content actually engages them. They're reading project stories, understanding your process, seeing what it's like to work with you, and self-qualifying before they reach out.
+                        </p>
+                        <p className="text-lg text-slate-600 leading-relaxed text-center mt-6 font-bold">
+                            We've built this exact system for 100+ custom home builders and remodelers. And the result is the same: websites that don't just look good, but actually generate qualified leads.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            {/* Why Visual (Referral Analogy) */}
             <section className="py-24 bg-slate-50 border-y border-slate-200">
                 <div className="container mx-auto px-6">
-                    <div className="max-w-4xl mx-auto text-center mb-16">
-                        <span className="text-purple-600 font-bold tracking-wider text-sm uppercase mb-4 block">The "Premium" Difference</span>
-                        <h2 className="text-3xl md:text-5xl font-serif font-bold text-slate-900 mb-6">
-                            See A Real Example
+                    <div className="max-w-4xl mx-auto mb-16">
+                        <h2 className="text-3xl md:text-4xl font-serif font-bold text-slate-900 mb-6 text-center">
+                            Why Your Builder Website Isn't Converting <br />(And What Actually Works)
                         </h2>
-                        <p className="text-lg text-slate-600">
-                            Interact with "Verso Builders" below. This is the caliber of design we deliver as a baseline.
+                        <p className="text-lg text-slate-600 text-center mb-12">
+                            So what makes the difference between a website that converts at less than 1% and one that converts at 3.2%? It comes down to <strong>replicating what happens when a referral walks someone through your work.</strong>
                         </p>
-                    </div>
 
-                    <div className="max-w-6xl mx-auto mb-20">
-                        <BrowserFrame url="versobuilders.com">
-                            <VersoShowcase />
-                        </BrowserFrame>
-                    </div>
-
-                    <div className="max-w-4xl mx-auto text-center mb-16">
-                        <h2 className="text-3xl md:text-4xl font-serif font-bold text-slate-900 mb-6">
-                            Stonebrook Construction
-                        </h2>
-                        <p className="text-lg text-slate-600">
-                            A luxury custom home builder in Phoenix, AZ. High-end aesthetic with clear conversion paths.
-                        </p>
-                    </div>
-
-                    <div className="max-w-6xl mx-auto mb-20">
-                        <BrowserFrame url="stonebrookconstruction.com" contentClassName="h-auto">
-                            <img
-                                src="/images/stonebrook-hero.png"
-                                alt="Stonebrook Construction Website Design"
-                                className="w-full h-auto"
-                            />
-                        </BrowserFrame>
-                    </div>
-
-                    <div className="max-w-4xl mx-auto text-center mb-16">
-                        <h2 className="text-3xl md:text-4xl font-serif font-bold text-slate-900 mb-6">
-                            Homestead Home Builders
-                        </h2>
-                        <p className="text-lg text-slate-600">
-                            Sustainable design-build services in Loveland, CO. Clean, modern interface emphasizing local connection.
-                        </p>
-                    </div>
-
-                    <div className="max-w-6xl mx-auto">
-                        <BrowserFrame url="homesteadhomebuilders.com" contentClassName="h-auto">
-                            <img
-                                src="/images/homestead-hero.png"
-                                alt="Homestead Home Builders Website Design"
-                                className="w-full h-auto"
-                            />
-                        </BrowserFrame>
-                    </div>
-                </div>
-
-                {/* Project Page vs Gallery Differentiation */}
-                <div className="max-w-6xl mx-auto px-6 mt-24">
-                    <div className="bg-white rounded-3xl p-8 md:p-12 shadow-xl border border-slate-100">
-                        <div className="text-center mb-12">
-                            <h3 className="text-3xl font-serif font-bold text-slate-900 mb-4">Stop Hiding Your Best Work in a "Gallery"</h3>
-                            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-                                Most builder websites dump photos into a grid without context. We turn every project into a sales asset.
+                        <div className="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 mb-12">
+                            <h3 className="font-bold text-xl mb-4">The Referral Experience</h3>
+                            <p className="text-slate-600 mb-4">
+                                Think about how your best referrals actually happen. A past client doesn't just say, "call this builder." They walk their friend through your recently completed home or remodel. They show them the kitchen. They point out the details you built into the design. They explain what it was like to work with you. They talk about how you handled challenges during the build.
+                            </p>
+                            <p className="text-slate-900 font-bold">
+                                The homeowner gets to be in the space. They see the craftsmanship. They feel the quality. They trust you because someone they trust is vouching for you. You need to replicate that experience digitally.
                             </p>
                         </div>
-
-                        <div className="grid md:grid-cols-2 gap-12 items-center">
-                            {/* The Old Way */}
-                            <div className="space-y-6 opacity-75 grayscale transition-all hover:grayscale-0 hover:opacity-100 duration-500">
-                                <div className="bg-slate-100 rounded-xl p-8 border border-slate-200">
-                                    <h4 className="font-bold text-slate-500 mb-4 flex items-center gap-2">
-                                        <div className="w-2 h-2 rounded-full bg-red-400"></div>
-                                        The Standard "Gallery"
-                                    </h4>
-                                    <div className="grid grid-cols-3 gap-2 mb-4">
-                                        <div className="aspect-square bg-slate-300 rounded"></div>
-                                        <div className="aspect-square bg-slate-300 rounded"></div>
-                                        <div className="aspect-square bg-slate-300 rounded"></div>
-                                        <div className="aspect-square bg-slate-300 rounded"></div>
-                                        <div className="aspect-square bg-slate-300 rounded"></div>
-                                        <div className="aspect-square bg-slate-300 rounded"></div>
-                                    </div>
-                                    <ul className="space-y-2 text-sm text-slate-500">
-                                        <li className="flex gap-2"><span className="text-red-400">×</span> No context or story</li>
-                                        <li className="flex gap-2"><span className="text-red-400">×</span> "How much did this cost?" (Unqualified leads)</li>
-                                        <li className="flex gap-2"><span className="text-red-400">×</span> Invisible to Google</li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            {/* The BuilderProject Way */}
-                            <div className="relative">
-                                <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl blur opacity-20"></div>
-                                <div className="relative bg-white rounded-xl p-8 border border-purple-100 shadow-lg">
-                                    <h4 className="font-bold text-slate-900 mb-4 flex items-center gap-2">
-                                        <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
-                                        Our "Featured Project" Page
-                                    </h4>
-                                    <div className="bg-slate-50 rounded-lg p-4 mb-4 border border-slate-100">
-                                        <div className="h-4 w-3/4 bg-slate-200 rounded mb-2"></div>
-                                        <div className="h-20 bg-slate-200 rounded mb-2"></div>
-                                        <div className="flex gap-2">
-                                            <div className="h-6 w-20 bg-green-100 text-green-700 text-[10px] flex items-center justify-center font-bold rounded">BUDGET REVEALED</div>
-                                            <div className="h-6 w-20 bg-purple-100 text-purple-700 text-[10px] flex items-center justify-center font-bold rounded">TIMELINE</div>
-                                        </div>
-                                    </div>
-                                    <ul className="space-y-3 text-sm text-slate-700 font-medium">
-                                        <li className="flex gap-2 items-center"><CheckCircle size={16} className="text-green-500" /> Tells the "Challenge & Solution" story</li>
-                                        <li className="flex gap-2 items-center"><CheckCircle size={16} className="text-green-500" /> Pre-qualifies via Budget ranges</li>
-                                        <li className="flex gap-2 items-center"><CheckCircle size={16} className="text-green-500" /> Ranks for "Modern Farmhouse [City]"</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
                     </div>
-                </div>
-            </section>
 
-            {/* The Foundation Section */}
-            <section className="py-24 bg-white overflow-hidden">
-                <div className="container mx-auto px-6">
-                    <div className="grid lg:grid-cols-2 gap-20 items-center">
+                    <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12">
                         <div>
-                            <span className="text-purple-600 font-bold tracking-wider text-sm uppercase mb-4 block">The Foundation</span>
-                            <h2 className="text-4xl font-serif font-bold text-slate-900 mb-6">
-                                Why Our 50+ Sites <br />Outrank the Competition
-                            </h2>
-                            <p className="text-lg text-slate-600 mb-8 leading-relaxed">
-                                Most agencies slap a WordPress template together and call it a day. We've spent years refining a proprietary tech stack designed specifically for the construction industry. It's not just code; it's a lead generation engine.
-                            </p>
-
-                            <div className="space-y-6">
-                                <div className="flex gap-4">
-                                    <div className="w-12 h-12 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center flex-shrink-0 border border-blue-100">
-                                        <Zap size={24} />
-                                    </div>
-                                    <div>
-                                        <h3 className="font-bold text-slate-900 text-lg">Built for Speed</h3>
-                                        <p className="text-slate-600">Your site loads instantly. No spinning wheels means customers don't bounce, and you get more leads.</p>
-                                    </div>
-                                </div>
-                                <div className="flex gap-4">
-                                    <div className="w-12 h-12 rounded-xl bg-green-50 text-green-600 flex items-center justify-center flex-shrink-0 border border-green-100">
-                                        <Search size={24} />
-                                    </div>
-                                    <div>
-                                        <h3 className="font-bold text-slate-900 text-lg">Google-Ready Architecture</h3>
-                                        <p className="text-slate-600">We structure your site so Google knows exactly where you build and what you do. No extra "SEO plugins" needed.</p>
-                                    </div>
-                                </div>
-                                <div className="flex gap-4">
-                                    <div className="w-12 h-12 rounded-xl bg-purple-50 text-purple-600 flex items-center justify-center flex-shrink-0 border border-purple-100">
-                                        <Lock size={24} />
-                                    </div>
-                                    <div>
-                                        <h3 className="font-bold text-slate-900 text-lg">Fail-Safe Reliability</h3>
-                                        <p className="text-slate-600">Your site never goes down. Period. We use enterprise-grade hosting that handles traffic spikes without breaking a sweat.</p>
-                                    </div>
-                                </div>
-                            </div>
+                            <h3 className="text-2xl font-serif font-bold text-slate-900 mb-6 flex items-center gap-3">
+                                <span className="w-8 h-8 rounded-full bg-slate-200 flex items-center justify-center text-slate-600 text-sm font-bold">1</span>
+                                How Referrals Work
+                            </h3>
+                            <ul className="space-y-6">
+                                <li className="flex gap-4">
+                                    <div className="w-1.5 h-1.5 rounded-full bg-slate-400 mt-2.5"></div>
+                                    <p className="text-slate-600"><strong>Friend walks them through your completed project.</strong> They see the craftsmanship up close, notice the details, understand the quality of your work</p>
+                                </li>
+                                <li className="flex gap-4">
+                                    <div className="w-1.5 h-1.5 rounded-full bg-slate-400 mt-2.5"></div>
+                                    <p className="text-slate-600"><strong>Their friend vouches for you the entire time.</strong> They trust the recommendation because someone they trust is standing right there</p>
+                                </li>
+                                <li className="flex gap-4">
+                                    <div className="w-1.5 h-1.5 rounded-full bg-slate-400 mt-2.5"></div>
+                                    <p className="text-slate-600"><strong>Prospect starts asking questions:</strong> How long did it take? What did it cost? What was it like working with them? What challenges came up?</p>
+                                </li>
+                            </ul>
                         </div>
-
-                        {/* Comparison Table */}
-                        <div className="relative">
-                            <div className="absolute -inset-4 bg-gradient-to-tr from-purple-100 to-blue-100 rounded-[2rem] blur-xl opacity-50"></div>
-                            <div className="relative bg-white rounded-2xl border border-slate-200 shadow-xl overflow-hidden">
-                                <div className="bg-slate-900 text-white p-6 text-center">
-                                    <h3 className="font-bold text-xl">The "Model Home" Difference</h3>
-                                </div>
-                                <div className="p-8">
-                                    <div className="grid grid-cols-3 gap-4 border-b border-slate-100 pb-4 mb-4 text-sm font-bold text-slate-400 uppercase tracking-wider">
-                                        <div>Feature</div>
-                                        <div className="text-center">Typical Agency</div>
-                                        <div className="text-center text-purple-600">BuilderProject</div>
-                                    </div>
-
-                                    <div className="space-y-6">
-                                        <div className="grid grid-cols-3 gap-4 items-center">
-                                            <div className="font-bold text-slate-700 text-sm md:text-base">Focus</div>
-                                            <div className="text-center text-slate-500 text-sm">"Pretty Design"</div>
-                                            <div className="text-center font-bold text-green-600 text-sm md:text-base">Lead Generation</div>
-                                        </div>
-                                        <div className="grid grid-cols-3 gap-4 items-center">
-                                            <div className="font-bold text-slate-700 text-sm md:text-base">SEO</div>
-                                            <div className="text-center text-slate-500 text-sm">Basic Plugin</div>
-                                            <div className="text-center font-bold text-green-600 text-sm md:text-base">Built-in Local Architecture</div>
-                                        </div>
-                                        <div className="grid grid-cols-3 gap-4 items-center">
-                                            <div className="font-bold text-slate-700 text-sm md:text-base">Portfolio</div>
-                                            <div className="text-center text-slate-500 text-sm">Image Grid</div>
-                                            <div className="text-center font-bold text-green-600 text-sm md:text-base">Story-Driven Case Studies</div>
-                                        </div>
-                                        <div className="grid grid-cols-3 gap-4 items-center">
-                                            <div className="font-bold text-slate-700 text-sm md:text-base">Speed</div>
-                                            <div className="text-center text-slate-500 text-sm">Slow WordPress</div>
-                                            <div className="text-center font-bold text-green-600 text-sm md:text-base">
-                                                <span className="inline-flex items-center gap-1"><Zap size={14} fill="currentColor" /> Instant Load</span>
-                                            </div>
-                                        </div>
-                                        <div className="grid grid-cols-3 gap-4 items-center">
-                                            <div className="font-bold text-slate-700 text-sm md:text-base">Cost</div>
-                                            <div className="text-center text-slate-500 text-sm">Hidden Fees</div>
-                                            <div className="text-center font-bold text-green-600 text-sm md:text-base">Flat & Transparent</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="bg-purple-50 p-4 text-center border-t border-purple-100">
-                                    <p className="text-purple-900 font-medium text-sm">Stop building "Brochure Sites". Build a Sales Engine.</p>
-                                </div>
-                            </div>
+                        <div>
+                            <h3 className="text-2xl font-serif font-bold text-purple-600 mb-6 flex items-center gap-3">
+                                <span className="w-8 h-8 rounded-full bg-purple-100 flex items-center justify-center text-purple-600 text-sm font-bold">2</span>
+                                What Your Website Should Do
+                            </h3>
+                            <ul className="space-y-6">
+                                <li className="flex gap-4">
+                                    <div className="w-1.5 h-1.5 rounded-full bg-purple-400 mt-2.5"></div>
+                                    <p className="text-slate-600"><strong>Featured project pages walk them through your work the same way.</strong> Professional photos, video walkthroughs, callouts on the details you built into the home, testimonial from that homeowner</p>
+                                </li>
+                                <li className="flex gap-4">
+                                    <div className="w-1.5 h-1.5 rounded-full bg-purple-400 mt-2.5"></div>
+                                    <p className="text-slate-600"><strong>They learn the story behind each project.</strong> The prospect sees the challenge, your solution, the outcome, and thinks "that's exactly my situation, I could see myself hiring them"</p>
+                                </li>
+                                <li className="flex gap-4">
+                                    <div className="w-1.5 h-1.5 rounded-full bg-purple-400 mt-2.5"></div>
+                                    <p className="text-slate-600"><strong>Pricing ranges, timelines, and what the process looks like are right there.</strong> No guessing. No surprises. They're educated before they ever call you</p>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </section>
 
-            {/* SEO Deep Dive */}
-            <section className="py-24 bg-slate-50">
-                <div className="container mx-auto px-6 max-w-6xl text-center">
-                    <h2 className="text-3xl font-serif font-bold text-slate-900 mb-8">Rank on Google. Dominate Your Market.</h2>
-                    <p className="text-lg text-slate-600 mb-12 leading-relaxed max-w-4xl mx-auto">
-                        A pretty website that no one visits is a billboard in the desert. We bake Local SEO into every line of code. From <strong>Service Area Pages</strong> that capture traffic from neighboring towns to <strong>Project Galleries</strong> that rank for "Custom Home [City Name]", we engineer your site to be found by the people ready to build.
-                    </p>
-
-                    <div className="grid md:grid-cols-3 gap-8 text-left max-w-6xl mx-auto">
-                        <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
-                            <div className="bg-green-100 w-12 h-12 rounded-full flex items-center justify-center text-green-600 mb-6 font-bold text-sm group-hover:scale-110 transition-transform">01</div>
-                            <h4 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-purple-700 transition-colors">Local Dominance</h4>
-                            <p className="text-slate-600 leading-relaxed">We create dedicated pages for every city and neighborhood you build in tailored to that specific market.</p>
-                        </div>
-                        <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
-                            <div className="bg-green-100 w-12 h-12 rounded-full flex items-center justify-center text-green-600 mb-6 font-bold text-sm group-hover:scale-110 transition-transform">02</div>
-                            <h4 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-purple-700 transition-colors">Project Showcases</h4>
-                            <p className="text-slate-600 leading-relaxed">Turn your portfolio into SEO gold. Each project page ranks for specific renovation types and locations.</p>
-                        </div>
-                        <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
-                            <div className="bg-green-100 w-12 h-12 rounded-full flex items-center justify-center text-green-600 mb-6 font-bold text-sm group-hover:scale-110 transition-transform">03</div>
-                            <h4 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-purple-700 transition-colors">Speed Signals</h4>
-                            <p className="text-slate-600 leading-relaxed">Core Web Vitals are now a ranking factor. Our sites ace them by default, giving you an unfair advantage.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* Process Timeline */}
-            <section className="py-24 bg-white border-y border-slate-100">
+            {/* Live Examples */}
+            <section className="py-24 bg-white">
                 <div className="container mx-auto px-6">
                     <div className="max-w-4xl mx-auto text-center mb-16">
                         <h2 className="text-3xl md:text-5xl font-serif font-bold text-slate-900 mb-6">
-                            From "Discovery" to "Done" <br /> in 4 Weeks
+                            See What a Conversion-Focused Builder Website Actually Looks Like
                         </h2>
                         <p className="text-lg text-slate-600">
-                            We don't drag projects out for months. Our streamlined system gets your new sales engine live fast.
+                            Most builder and remodeler websites aren't built with strategy. Ours are. Visitors spend 3+ minutes on our sites vs. less than 1 minute on typical builder sites. That's not by accident. It's by design.
                         </p>
                     </div>
 
-                    <div className="max-w-6xl mx-auto">
-                        <div className="grid md:grid-cols-4 gap-8">
+                    <div className="max-w-6xl mx-auto mb-20">
+                        <h3 className="text-2xl font-bold text-slate-900 mb-8 border-b border-slate-200 pb-4">Featured Project Pages That Tell the Full Story</h3>
+                        <p className="text-slate-600 mb-8 max-w-3xl">Most builders have a portfolio page with a bunch of photos. We build featured project pages that walk prospects through the story of each project, just like a referral would in person.</p>
+
+                        <div className="grid md:grid-cols-3 gap-8 mb-16">
                             {[
-                                {
-                                    step: "01",
-                                    title: "Discovery",
-                                    desc: "We interview you to extract your brand voice, best projects, and ideal client profile.",
-                                    week: "Week 1"
-                                },
-                                {
-                                    step: "02",
-                                    title: "Architecture",
-                                    desc: "We map out your SEO sitemap and wireframe the perfect conversion path.",
-                                    week: "Week 2"
-                                },
-                                {
-                                    step: "03",
-                                    title: "Design & Build",
-                                    desc: "We code your Digital Model Home, optimizing every pixel for speed and SEO.",
-                                    week: "Weeks 3"
-                                },
-                                {
-                                    step: "04",
-                                    title: "Launch",
-                                    desc: "Final walkthrough, feedback round, and we take your new site live to the world.",
-                                    week: "Week 4"
-                                }
+                                { title: "Modern Farmhouse Build", desc: "4,200 sq ft custom home, Austin, TX", image: "/images/stonebrook-hero.png" },
+                                { title: "Luxury Lakefront Home", desc: "6,800 sq ft, design-build project with boat dock", image: "/images/homestead-hero.png" },
+                                { title: "Whole-Home Remodel", desc: "Historic renovation with modern updates, $450K transformation", image: "/images/verso-showcase.png" }
                             ].map((item, i) => (
-                                <div key={i} className="relative group">
-                                    <div className="bg-slate-50 rounded-2xl p-8 h-full border border-slate-100 hover:border-purple-200 hover:shadow-lg transition-all duration-300">
-                                        <div className="text-xs font-bold text-purple-600 uppercase tracking-wider mb-4">{item.week}</div>
-                                        <div className="text-4xl font-serif font-bold text-slate-200 mb-4 group-hover:text-purple-100 transition-colors">{item.step}</div>
-                                        <h3 className="text-xl font-bold text-slate-900 mb-2">{item.title}</h3>
-                                        <p className="text-slate-600 text-sm leading-relaxed">{item.desc}</p>
-                                    </div>
-                                    {i < 3 && (
-                                        <div className="hidden md:block absolute top-1/2 -right-4 translate-x-1/2 text-slate-300 z-10">
-                                            <ArrowRight />
+                                <div key={i} className="group cursor-pointer">
+                                    <div className="aspect-video bg-slate-100 rounded-xl overflow-hidden mb-4 border border-slate-200 shadow-sm group-hover:shadow-md transition-all">
+                                        <div className="w-full h-full bg-slate-200 flex items-center justify-center text-slate-400">
+                                            {/* Placeholder for real images if not available, falling back to gray */}
+                                            <span className="text-xs font-bold uppercase tracking-wider">Project Image</span>
                                         </div>
-                                    )}
+                                    </div>
+                                    <h4 className="font-bold text-slate-900 group-hover:text-purple-600 transition-colors flex items-center gap-2">
+                                        {item.title} <ArrowRight size={16} />
+                                    </h4>
+                                    <p className="text-sm text-slate-500">{item.desc}</p>
                                 </div>
                             ))}
                         </div>
+
+                        <h3 className="text-2xl font-bold text-slate-900 mb-8 border-b border-slate-200 pb-4">Custom Pages Built Around What Makes You Unique</h3>
+                        <p className="text-slate-600 mb-8">Every builder is different. These pages are designed to showcase what makes YOUR business special.</p>
+
+                        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                            <div className="p-6 bg-slate-50 rounded-xl border border-slate-100 hover:border-purple-200 transition-colors">
+                                <h4 className="font-bold text-slate-900 mb-2">Homepage That Makes the Perfect First Impression</h4>
+                                <p className="text-sm text-slate-500 mb-4">Clean, professional, immediately communicates what you do and who you serve</p>
+                                <span className="text-purple-600 text-sm font-bold flex items-center gap-1">View Example <ArrowRight size={14} /></span>
+                            </div>
+                            <div className="p-6 bg-slate-50 rounded-xl border border-slate-100 hover:border-purple-200 transition-colors">
+                                <h4 className="font-bold text-slate-900 mb-2">Process Page That Builds Trust</h4>
+                                <p className="text-sm text-slate-500 mb-4">Step-by-step breakdown of what it's like to build or remodel with you</p>
+                                <span className="text-purple-600 text-sm font-bold flex items-center gap-1">View Example <ArrowRight size={14} /></span>
+                            </div>
+                            <div className="p-6 bg-slate-50 rounded-xl border border-slate-100 hover:border-purple-200 transition-colors">
+                                <h4 className="font-bold text-slate-900 mb-2">About Page That Connects</h4>
+                                <p className="text-sm text-slate-500 mb-4">Your story, your team, why you do this work</p>
+                                <span className="text-purple-600 text-sm font-bold flex items-center gap-1">View Example <ArrowRight size={14} /></span>
+                            </div>
+                            <div className="p-6 bg-slate-50 rounded-xl border border-slate-100 hover:border-purple-200 transition-colors">
+                                <h4 className="font-bold text-slate-900 mb-2">Service Pages That Educate</h4>
+                                <p className="text-sm text-slate-500 mb-4">Custom homes, remodels, design-build explained in detail</p>
+                                <span className="text-purple-600 text-sm font-bold flex items-center gap-1">View Example <ArrowRight size={14} /></span>
+                            </div>
+                        </div>
+
+                        <div className="mt-16 text-center">
+                            <p className="text-xl text-slate-900 font-bold mb-6">Ready to see your work showcased like this?</p>
+                            <Link to="/contact" className="inline-flex items-center bg-purple-600 text-white px-8 py-4 rounded-full font-bold hover:bg-purple-700 transition-colors">
+                                Work With Us <ArrowRight className="ml-2" />
+                            </Link>
+                        </div>
                     </div>
                 </div>
             </section>
 
-            {/* Qualifier Section */}
-            <section className="py-24 bg-slate-50">
+            {/* AI Coding Tech */}
+            <section className="py-24 bg-slate-900 text-white">
                 <div className="container mx-auto px-6">
-                    <div className="max-w-5xl mx-auto">
-                        <div className="text-center mb-16">
-                            <h2 className="text-3xl md:text-5xl font-serif font-bold text-slate-900 mb-6">
-                                Is This Right For You?
-                            </h2>
-                            <p className="text-lg text-slate-600">
-                                We are not a volume agency. We partner with serious builders who want to dominate their specific market.
+                    <div className="max-w-4xl mx-auto text-center mb-16">
+                        <span className="text-purple-400 font-bold tracking-wider text-sm uppercase mb-4 block">Our Advantage</span>
+                        <h2 className="text-3xl md:text-5xl font-serif font-bold mb-6">
+                            Built With the Most Advanced Technology, Not Templates
+                        </h2>
+                        <p className="text-lg text-slate-300">
+                            Here's what makes our websites different from every other agency out there.
+                        </p>
+                    </div>
+
+                    <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+                        <div className="space-y-6 text-slate-300">
+                            <p>
+                                Most web agencies use WordPress templates or page builders. They pick a theme, swap your logo in, change some colors, and call it custom. It's not. It's a template that hundreds of other businesses are using.
                             </p>
+                            <p className="text-white font-bold text-xl">
+                                We use the newest AI-powered coding technology to build truly custom websites from scratch.
+                            </p>
+                            <p>
+                                This is the same technology that would normally require a $50,000+ budget and a team of developers. We're able to deliver it for a fraction of that cost because AI handles the heavy lifting while we focus on strategy and design.
+                            </p>
+
+                            <ul className="space-y-4 pt-4">
+                                {[
+                                    "Truly custom design - Not limited by template constraints",
+                                    "Lightning-fast loading speed - Hand-coded sites load 3-5x faster",
+                                    "Mobile-optimized from scratch - Built mobile-first",
+                                    "Scalable and flexible - Easy to add features as you grow",
+                                    "Clean, modern code - SEO-friendly, secure, and future-proof"
+                                ].map((item, i) => (
+                                    <li key={i} className="flex gap-3 text-slate-200">
+                                        <CheckCircle className="text-purple-500 shrink-0" size={20} />
+                                        <span>{item}</span>
+                                    </li>
+                                ))}
+                            </ul>
                         </div>
-
-                        <div className="grid md:grid-cols-2 gap-8">
-                            <div className="bg-white p-10 rounded-3xl border border-green-100 shadow-sm relative overflow-hidden">
-                                <div className="absolute top-0 left-0 w-full h-2 bg-green-500"></div>
-                                <h3 className="text-2xl font-serif font-bold text-slate-900 mb-6 flex items-center gap-3">
-                                    <CheckCircle className="text-green-500" fill="currentColor" className="text-white" />
-                                    We're A Perfect Fit If...
-                                </h3>
-                                <ul className="space-y-4">
-                                    {[
-                                        "You do $2M+ in annual revenue",
-                                        "You build high-end custom homes or large-scale remodels",
-                                        "You value brand reputation over being the 'cheapest'",
-                                        "You want a long-term partner, not a one-off vendor",
-                                        "You have professional photography of your work"
-                                    ].map((item, i) => (
-                                        <li key={i} className="flex items-start gap-3 text-slate-700">
-                                            <div className="min-w-6 mt-1"><CheckCircle size={18} className="text-green-500" /></div>
-                                            <span>{item}</span>
-                                        </li>
-                                    ))}
-                                </ul>
+                        <div className="bg-slate-800 rounded-2xl p-8 border border-slate-700 relative">
+                            {/* Abstract Code Visualization */}
+                            <div className="font-mono text-sm space-y-2 opacity-80">
+                                <div className="text-blue-400">import <span className="text-white">React</span> from <span className="text-green-400">'react'</span>;</div>
+                                <div className="text-purple-400">const <span className="text-yellow-400">CustomSite</span> = () ={'>'} {'{'}</div>
+                                <div className="pl-4 text-slate-400">// AI-Optimized Architecture</div>
+                                <div className="pl-4 text-blue-400">return (</div>
+                                <div className="pl-8 text-white">{'<div className="performance-optimized">'}</div>
+                                <div className="pl-12 text-white">{'<SEO structure="perfect" />'}</div>
+                                <div className="pl-12 text-white">{'<LeadGen mode="active" />'}</div>
+                                <div className="pl-8 text-white">{'</div>'}</div>
+                                <div className="pl-4 text-blue-400">);</div>
+                                <div className="text-purple-400">{'}'};</div>
                             </div>
-
-                            <div className="bg-slate-100 p-10 rounded-3xl border border-slate-200 relative overflow-hidden opacity-75">
-                                <h3 className="text-2xl font-serif font-bold text-slate-500 mb-6 flex items-center gap-3">
-                                    <div className="w-8 h-8 rounded-full bg-slate-300 flex items-center justify-center text-white text-lg font-bold">×</div>
-                                    We're NOT a Match If...
-                                </h3>
-                                <ul className="space-y-4">
-                                    {[
-                                        "You are just starting out (under $500k revenue)",
-                                        "You just want a 'brochure' site to show mom",
-                                        "You are looking for the cheapest option possible",
-                                        "You need a site launched in 48 hours",
-                                        "You don't care about ranking on Google"
-                                    ].map((item, i) => (
-                                        <li key={i} className="flex items-start gap-3 text-slate-500">
-                                            <div className="min-w-6 mt-1 text-slate-400">×</div>
-                                            <span>{item}</span>
-                                        </li>
-                                    ))}
-                                </ul>
+                            <div className="absolute -bottom-6 -right-6 bg-gradient-to-r from-purple-600 to-blue-600 px-6 py-3 rounded-lg shadow-xl text-white font-bold">
+                                $50K Quality for a Fraction of the Cost
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            {/* CTA */}
+            {/* Comparison Table */}
+            <section className="py-24 bg-slate-50">
+                <div className="container mx-auto px-6 max-w-6xl">
+                    <h2 className="text-3xl font-serif font-bold text-slate-900 mb-12 text-center">Why Work With a Builder-Focused Agency?</h2>
+
+                    <div className="overflow-x-auto">
+                        <table className="w-full text-left bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-200">
+                            <thead className="bg-slate-50 border-b border-slate-200">
+                                <tr>
+                                    <th className="p-6 text-slate-500 font-bold uppercase text-sm tracking-wider">Criteria</th>
+                                    <th className="p-6 text-slate-500 font-bold uppercase text-sm tracking-wider">Generic Local Agency</th>
+                                    <th className="p-6 text-purple-600 font-bold uppercase text-sm tracking-wider bg-purple-50">BuilderProject</th>
+                                </tr>
+                            </thead>
+                            <tbody className="divide-y divide-slate-100">
+                                <tr>
+                                    <td className="p-6 font-bold text-slate-900">Point of Contact</td>
+                                    <td className="p-6 text-slate-600">No dedicated contact or shuffled between team members</td>
+                                    <td className="p-6 text-slate-900 font-medium bg-purple-50/30">Dedicated Account Manager throughout the entire process</td>
+                                </tr>
+                                <tr>
+                                    <td className="p-6 font-bold text-slate-900">Will They Get Your Industry?</td>
+                                    <td className="p-6 text-slate-600">Generic discovery. They work with dentists, lawyers, everyone</td>
+                                    <td className="p-6 text-slate-900 font-medium bg-purple-50/30">We only work with residential builders and remodelers. 4 years exclusively</td>
+                                </tr>
+                                <tr>
+                                    <td className="p-6 font-bold text-slate-900">How Involved Will I Be?</td>
+                                    <td className="p-6 text-slate-600">You're doing most of the work: writing copy, gathering photos</td>
+                                    <td className="p-6 text-slate-900 font-medium bg-purple-50/30">We guide you through everything. You provide raw materials, we handle the rest</td>
+                                </tr>
+                                <tr>
+                                    <td className="p-6 font-bold text-slate-900">What Technology?</td>
+                                    <td className="p-6 text-slate-600">WordPress templates or page builders</td>
+                                    <td className="p-6 text-slate-900 font-medium bg-purple-50/30">Advanced AI-powered custom coding. $50K quality for a fraction of the cost</td>
+                                </tr>
+                                <tr>
+                                    <td className="p-6 font-bold text-slate-900">Communication</td>
+                                    <td className="p-6 text-slate-600">Sporadic updates. You're often wondering what's happening</td>
+                                    <td className="p-6 text-slate-900 font-medium bg-purple-50/30">Scheduled calls throughout. You always know what's next</td>
+                                </tr>
+                                <tr>
+                                    <td className="p-6 font-bold text-slate-900">After Launch?</td>
+                                    <td className="p-6 text-slate-600">They hand off the site and disappear</td>
+                                    <td className="p-6 text-slate-900 font-medium bg-purple-50/30">30-day post-launch monitoring and adjustments</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            {/* Inclusions */}
+            <section className="py-24 bg-white">
+                <div className="container mx-auto px-6 max-w-6xl">
+                    <h2 className="text-3xl font-serif font-bold text-slate-900 mb-12 text-center">What's Included in Every Website</h2>
+                    <div className="grid md:grid-cols-3 gap-8">
+                        <div className="bg-slate-50 p-8 rounded-2xl border border-slate-100">
+                            <h3 className="text-xl font-bold text-slate-900 mb-4 text-purple-600">Strategic Foundation</h3>
+                            <ul className="space-y-3 text-sm text-slate-600">
+                                <li>• 1 week of discovery and strategy work</li>
+                                <li>• Multiple discovery calls</li>
+                                <li>• We extract what makes you different</li>
+                                <li>• Guidance on project selection</li>
+                            </ul>
+                        </div>
+                        <div className="bg-slate-50 p-8 rounded-2xl border border-slate-100">
+                            <h3 className="text-xl font-bold text-slate-900 mb-4 text-purple-600">Design & Development</h3>
+                            <ul className="space-y-3 text-sm text-slate-600">
+                                <li>• All website copy written in your voice</li>
+                                <li>• Custom design (AI-powered coding)</li>
+                                <li>• Mobile-responsive, lightning-fast</li>
+                                <li>• Foundational SEO included</li>
+                            </ul>
+                        </div>
+                        <div className="bg-slate-50 p-8 rounded-2xl border border-slate-100">
+                            <h3 className="text-xl font-bold text-slate-900 mb-4 text-purple-600">Support & Management</h3>
+                            <ul className="space-y-3 text-sm text-slate-600">
+                                <li>• Dedicated Account Manager</li>
+                                <li>• Video walkthrough of completed site</li>
+                                <li>• 1 round of revisions included</li>
+                                <li>• 30-day post-launch monitoring</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Process 2-3 Weeks */}
+            <section className="py-24 bg-slate-50 border-y border-slate-200">
+                <div className="container mx-auto px-6 max-w-4xl">
+                    <div className="text-center mb-16">
+                        <h2 className="text-3xl md:text-5xl font-serif font-bold text-slate-900 mb-6">
+                            How Our 2-3 Week Process Works
+                        </h2>
+                        <p className="text-lg text-slate-600">
+                            Most agencies takes 6-8 weeks. We take 2-3 weeks. Fast enough to launch quickly, strategic enough to convert.
+                        </p>
+                    </div>
+
+                    <div className="space-y-12">
+                        <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100">
+                            <h3 className="text-xl font-bold text-slate-900 mb-2">Week 1: Discovery, Strategy & Initial Build</h3>
+                            <p className="text-slate-600 mb-4">We learn your business, identify your unique differentiators, and map your customer journey. Our dev team builds simultaneously using AI.</p>
+                            <div className="p-4 bg-slate-50 rounded-lg text-sm text-slate-500">
+                                <strong>Calls:</strong> Kickoff (60m), Brand Deep Dive (60m), Mid-week Check-in.
+                            </div>
+                        </div>
+                        <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100">
+                            <h3 className="text-xl font-bold text-slate-900 mb-2">Week 2: Design Refinement & Content Integration</h3>
+                            <p className="text-slate-600 mb-4">We write all copy in your voice, integrate photos, and build featured project pages. You get daily updates.</p>
+                            <div className="p-4 bg-slate-50 rounded-lg text-sm text-slate-500">
+                                <strong>Your Time:</strong> 30-60 mins for feedback.
+                            </div>
+                        </div>
+                        <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100">
+                            <h3 className="text-xl font-bold text-slate-900 mb-2">Week 2-3: Review, Revisions & Launch</h3>
+                            <p className="text-slate-600 mb-4">We send a video walkthrough. You review, we revise, and then we launch.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* FAQ */}
+            <section className="py-24 bg-white">
+                <div className="container mx-auto px-6 max-w-3xl">
+                    <h2 className="text-3xl font-serif font-bold text-slate-900 mb-12 text-center">Have Questions? We Got You</h2>
+                    <div className="space-y-4">
+                        {[
+                            { q: "How can you build a custom website in 2-3 weeks?", a: "Two reasons. First, we use advanced AI-powered coding that builds 5-10x faster. Second, we've built this system for 100+ builders, so we know exactly what works." },
+                            { q: "If you use AI, will my site look generic?", a: "The opposite. AI handles the code, allowing us to spend MORE time on custom design and storytelling. It's like a factory-built wall vs hand-framed; same result, just faster." },
+                            { q: "Why does professional photography matter?", a: "Your website needs to showcase quality. Blurry phone photos say 'we cut corners'. Professional photos say 'we are high-end'." },
+                            { q: "Can I just update my existing website?", a: "Sometimes. We'll audit it. If it's on old tech (slow WordPress), rebuilding is usually faster and better." },
+                            { q: "Do you work with remodelers too?", a: "Yes. We work effectively with custom home builders AND whole-home remodelers doing $3M+ per year." }
+                        ].map((faq, i) => (
+                            <div key={i} className="border border-slate-200 rounded-xl overflow-hidden">
+                                <button onClick={() => toggleFaq(i)} className="w-full flex items-center justify-between p-6 bg-slate-50 text-left font-bold text-slate-900 hover:bg-slate-100 transition-colors">
+                                    {faq.q}
+                                    {openFaq === i ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
+                                </button>
+                                {openFaq === i && (
+                                    <div className="p-6 bg-white text-slate-600 leading-relaxed border-t border-slate-100">
+                                        {faq.a}
+                                    </div>
+                                )}
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* Qualifier */}
+            <section className="py-24 bg-slate-50">
+                <div className="container mx-auto px-6 max-w-5xl">
+                    <h2 className="text-3xl font-serif font-bold text-slate-900 mb-12 text-center">Who This Is For (And Who It's Not)</h2>
+                    <div className="grid md:grid-cols-2 gap-8">
+                        <div className="bg-white p-8 rounded-2xl border border-green-200 shadow-sm">
+                            <h3 className="text-xl font-bold text-slate-900 mb-6 flex items-center gap-2">
+                                <CheckCircle className="text-green-500" /> This is a good fit if:
+                            </h3>
+                            <ul className="space-y-3 text-slate-600">
+                                <li>• You have completed projects you're proud of</li>
+                                <li>• You're willing to invest 2-3 hours in discovery</li>
+                                <li>• You want a custom site, not a template</li>
+                                <li>• You're doing at least $3M/year</li>
+                            </ul>
+                        </div>
+                        <div className="bg-slate-100 p-8 rounded-2xl border border-slate-200 opacity-75">
+                            <h3 className="text-xl font-bold text-slate-500 mb-6 flex items-center gap-2">
+                                <X className="text-red-400" /> This isn't a good fit if:
+                            </h3>
+                            <ul className="space-y-3 text-slate-500">
+                                <li>• You're looking for the cheapest option</li>
+                                <li>• You haven't defined your ideal client</li>
+                                <li>• You refuse to invest in photography</li>
+                                <li>• You want to micromanage every pixel</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Final CTA */}
             <section className="py-24 bg-slate-900 text-white text-center">
                 <div className="container mx-auto px-6 max-w-4xl">
-                    <h2 className="text-4xl font-serif font-bold mb-6">Ready to upgrade your digital presence?</h2>
+                    <h2 className="text-4xl font-serif font-bold mb-6">Ready to Transform Your Website Into Your Best Sales Tool?</h2>
                     <p className="text-xl text-slate-400 mb-10">
-                        Stop losing leads to competitors with better websites. Let's build your new site in as little as 4 weeks.
+                        If you're tired of your website not reflecting the quality of your work, let's talk.
                     </p>
-                    <Link to="/contact" className="inline-flex items-center bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-full font-bold transition-all hover:scale-105">
-                        Schedule a Demo <ArrowRight className="ml-2" />
-                    </Link>
+                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                        <Link to="/contact" className="inline-flex items-center bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-full font-bold transition-all hover:scale-105 shadow-[0_0_20px_rgba(147,51,234,0.3)]">
+                            Schedule Strategy Call <ArrowRight className="ml-2" />
+                        </Link>
+                        <Link to="/case-studies" className="inline-flex items-center border border-slate-600 hover:bg-slate-800 text-white px-8 py-4 rounded-full font-bold transition-all">
+                            See More Examples
+                        </Link>
+                    </div>
                 </div>
             </section>
         </div>
