@@ -27,7 +27,7 @@ const Intake: React.FC = () => {
         primaryContactEmail: '',
         primaryContactPhone: '',
         marketingBudget: '',
-        marketingBudget: '',
+
         // Strategy
         mainService: '',
         serviceInterests: [] as string[],
