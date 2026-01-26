@@ -1,10 +1,20 @@
 import React from 'react';
 import { ArrowRight, Play } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useSearchParams } from 'react-router-dom';
 import SimpleHeader from '../../components/SimpleHeader';
 
 const Welcome: React.FC = () => {
     const navigate = useNavigate();
+    const [searchParams] = useSearchParams();
+    const program = searchParams.get('program') || 'foundation'; // Default to foundation
+
+    const programNames: Record<string, string> = {
+        'foundation': 'Foundation',
+        'pipeline': 'Pipeline',
+        'partner': 'Partner Program'
+    };
+
+    const displayName = programNames[program] || 'BuilderProject Family';
 
     return (
         <div className="min-h-screen bg-slate-50 flex flex-col font-sans selection:bg-purple-200 selection:text-purple-900">
@@ -21,7 +31,9 @@ const Welcome: React.FC = () => {
 
                     <h1 className="text-4xl md:text-6xl font-serif font-bold text-slate-900 mb-6 leading-tight">
                         Welcome to the <br />
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-700 to-pink-600">BuilderProject Family.</span>
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-700 to-pink-600">
+                            {displayName === 'BuilderProject Family' ? displayName : `BuilderProject ${displayName}.`}
+                        </span>
                     </h1>
 
                     <p className="text-lg md:text-xl text-slate-500 mb-12 max-w-2xl mx-auto leading-relaxed">
@@ -45,7 +57,7 @@ const Welcome: React.FC = () => {
 
                     {/* CTA */}
                     <button
-                        onClick={() => navigate('/onboarding/intake')}
+                        onClick={() => navigate(`/onboarding/intake?program=${program}`)}
                         className="group relative inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white transition-all duration-200 bg-slate-900 rounded-xl hover:bg-gradient-to-r hover:from-purple-700 hover:to-pink-600 hover:shadow-lg hover:shadow-purple-500/25 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2"
                     >
                         Let's Get Started

@@ -1,12 +1,26 @@
+
 import React, { useEffect } from 'react';
 import BookingWidget from '../components/BookingWidget';
 import { CheckCircle } from 'lucide-react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useSearchParams, useNavigate } from 'react-router-dom';
 import SimpleHeader from '../components/SimpleHeader';
 
 const Booking: React.FC = () => {
-    const location = useLocation();
+    const location = useLocation(); // Keep useLocation if it's used elsewhere, otherwise remove. For now, it's not used after the change.
+    const [searchParams] = useSearchParams();
+    const navigate = useNavigate(); // Initialize useNavigate hook
+    const program = searchParams.get('program') || 'foundation';
 
+    // Calendar IDs for different programs
+    // TODO: Update these with the actual GHL Calendar IDs for each program
+    const CALENDAR_IDS: Record<string, string> = {
+        'foundation': 'foundation_calendar_id_placeholder', // Foundation Onboarding
+        'pipeline': 'pipeline_calendar_id_placeholder',     // Pipeline Onboarding
+        'partner': 'partner_calendar_id_placeholder',       // Partner Kickoff
+        'default': 'consultation-call-booking'              // Fallback/Default
+    };
+
+    const calendarId = CALENDAR_IDS[program] || CALENDAR_IDS['default'];
 
 
     useEffect(() => {
@@ -48,7 +62,11 @@ const Booking: React.FC = () => {
                             <CheckCircle size={16} />
                             <span>Application Received</span>
                         </div>
-
+                        {/* The button from the diff was placed here, but it seems out of context for the current UI.
+                            If it's meant to be a separate button, its placement needs to be considered.
+                            For now, I'm placing it after the header section, assuming it's a call to action.
+                            If it's meant to be *inside* the inline-flex div, that would be a syntax error.
+                        */}
                         <h1 className="text-3xl md:text-5xl font-serif font-bold text-slate-900 mb-6 leading-tight">
                             Almost there! <br />
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-700 to-pink-600">

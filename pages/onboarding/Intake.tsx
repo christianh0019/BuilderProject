@@ -1,11 +1,12 @@
-
 import React, { useState } from 'react';
 import { ArrowLeft, Building2, Globe, Users, DollarSign, Target, Loader2, CheckCircle2 } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useSearchParams } from 'react-router-dom';
 import SimpleHeader from '../../components/SimpleHeader';
 
 const Intake: React.FC = () => {
     const navigate = useNavigate();
+    const [searchParams] = useSearchParams();
+    const program = searchParams.get('program') || 'foundation';
     const [loading, setLoading] = useState(false);
 
     // We can reuse the existing webhook or a new one. Using the functional one for now.
@@ -122,7 +123,8 @@ const Intake: React.FC = () => {
             youtube_url: formData.youtubeLink,
             posting_frequency: formData.postingFreq,
 
-            source: 'onboarding_intake'
+            source: 'onboarding_intake',
+            product_purchased: program
         };
 
         try {
@@ -134,7 +136,7 @@ const Intake: React.FC = () => {
             });
 
             // Always proceed on no-cors
-            navigate('/onboarding/booking');
+            navigate(`/onboarding/booking?program=${program}`);
         } catch (error) {
             console.error('Error submitting intake:', error);
             alert('Something went wrong. Please try again.');
@@ -456,7 +458,7 @@ const Intake: React.FC = () => {
                         <div className="pt-6 border-t border-slate-100 flex items-center justify-between">
                             <button
                                 type="button"
-                                onClick={() => navigate('/onboarding/welcome')}
+                                onClick={() => navigate(`/onboarding/welcome?program=${program}`)}
                                 className="flex items-center gap-2 text-slate-500 hover:text-slate-900 font-bold transition-colors"
                             >
                                 <ArrowLeft size={18} /> Back

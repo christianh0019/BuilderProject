@@ -1,8 +1,29 @@
 import React from 'react';
 import { CheckCircle, Play, Calendar, FileText, ArrowRight } from 'lucide-react';
+import { useSearchParams } from 'react-router-dom';
 import SimpleHeader from '../../components/SimpleHeader';
 
 const Expectations: React.FC = () => {
+    const [searchParams] = useSearchParams();
+    const program = searchParams.get('program') || 'foundation';
+
+    const nextStepsMap: Record<string, { title: string, desc: string }> = {
+        'foundation': {
+            title: 'Gather Your Brand Assets',
+            desc: 'Have your logo files, current offer details, and list of past projects ready.'
+        },
+        'pipeline': {
+            title: 'Connect Your Ad Accounts',
+            desc: 'Make sure you have admin access to your Facebook and Google ad accounts.'
+        },
+        'partner': {
+            title: 'Prepare for Deep-Dive Audit',
+            desc: 'We will be reviewing your entire business structure, so please have your financials handy.'
+        }
+    };
+
+    const nextStep = nextStepsMap[program] || nextStepsMap['foundation'];
+
     return (
         <div className="min-h-screen bg-slate-50 font-sans selection:bg-purple-200 selection:text-purple-900 flex flex-col">
             <SimpleHeader />
@@ -62,8 +83,8 @@ const Expectations: React.FC = () => {
                                 <FileText size={24} />
                             </div>
                             <div>
-                                <h3 className="font-bold text-slate-900 mb-1">Prepare Your Assets</h3>
-                                <p className="text-slate-500 text-sm">Have your logo files, current offer details, and list of past projects ready.</p>
+                                <h3 className="font-bold text-slate-900 mb-1">{nextStep.title}</h3>
+                                <p className="text-slate-500 text-sm">{nextStep.desc}</p>
                             </div>
                         </div>
                     </div>
