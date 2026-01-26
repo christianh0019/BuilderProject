@@ -97,6 +97,67 @@ const WebsiteDesign: React.FC = () => {
                         </BrowserFrame>
                     </div>
                 </div>
+
+                {/* Project Page vs Gallery Differentiation */}
+                <div className="max-w-6xl mx-auto px-6 mt-24">
+                    <div className="bg-white rounded-3xl p-8 md:p-12 shadow-xl border border-slate-100">
+                        <div className="text-center mb-12">
+                            <h3 className="text-3xl font-serif font-bold text-slate-900 mb-4">Stop Hiding Your Best Work in a "Gallery"</h3>
+                            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+                                Most builder websites dump photos into a grid without context. We turn every project into a sales asset.
+                            </p>
+                        </div>
+
+                        <div className="grid md:grid-cols-2 gap-12 items-center">
+                            {/* The Old Way */}
+                            <div className="space-y-6 opacity-75 grayscale transition-all hover:grayscale-0 hover:opacity-100 duration-500">
+                                <div className="bg-slate-100 rounded-xl p-8 border border-slate-200">
+                                    <h4 className="font-bold text-slate-500 mb-4 flex items-center gap-2">
+                                        <div className="w-2 h-2 rounded-full bg-red-400"></div>
+                                        The Standard "Gallery"
+                                    </h4>
+                                    <div className="grid grid-cols-3 gap-2 mb-4">
+                                        <div className="aspect-square bg-slate-300 rounded"></div>
+                                        <div className="aspect-square bg-slate-300 rounded"></div>
+                                        <div className="aspect-square bg-slate-300 rounded"></div>
+                                        <div className="aspect-square bg-slate-300 rounded"></div>
+                                        <div className="aspect-square bg-slate-300 rounded"></div>
+                                        <div className="aspect-square bg-slate-300 rounded"></div>
+                                    </div>
+                                    <ul className="space-y-2 text-sm text-slate-500">
+                                        <li className="flex gap-2"><span className="text-red-400">×</span> No context or story</li>
+                                        <li className="flex gap-2"><span className="text-red-400">×</span> "How much did this cost?" (Unqualified leads)</li>
+                                        <li className="flex gap-2"><span className="text-red-400">×</span> Invisible to Google</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            {/* The BuilderProject Way */}
+                            <div className="relative">
+                                <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl blur opacity-20"></div>
+                                <div className="relative bg-white rounded-xl p-8 border border-purple-100 shadow-lg">
+                                    <h4 className="font-bold text-slate-900 mb-4 flex items-center gap-2">
+                                        <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
+                                        Our "Featured Project" Page
+                                    </h4>
+                                    <div className="bg-slate-50 rounded-lg p-4 mb-4 border border-slate-100">
+                                        <div className="h-4 w-3/4 bg-slate-200 rounded mb-2"></div>
+                                        <div className="h-20 bg-slate-200 rounded mb-2"></div>
+                                        <div className="flex gap-2">
+                                            <div className="h-6 w-20 bg-green-100 text-green-700 text-[10px] flex items-center justify-center font-bold rounded">BUDGET REVEALED</div>
+                                            <div className="h-6 w-20 bg-purple-100 text-purple-700 text-[10px] flex items-center justify-center font-bold rounded">TIMELINE</div>
+                                        </div>
+                                    </div>
+                                    <ul className="space-y-3 text-sm text-slate-700 font-medium">
+                                        <li className="flex gap-2 items-center"><CheckCircle size={16} className="text-green-500" /> Tells the "Challenge & Solution" story</li>
+                                        <li className="flex gap-2 items-center"><CheckCircle size={16} className="text-green-500" /> Pre-qualifies via Budget ranges</li>
+                                        <li className="flex gap-2 items-center"><CheckCircle size={16} className="text-green-500" /> Ranks for "Modern Farmhouse [City]"</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
 
             {/* The Foundation Section */}
@@ -143,41 +204,52 @@ const WebsiteDesign: React.FC = () => {
                             </div>
                         </div>
 
-                        {/* Visual Tech Stack Representation */}
+                        {/* Comparison Table */}
                         <div className="relative">
-                            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-gradient-to-tr from-purple-200 to-blue-200 rounded-full filter blur-[100px] opacity-50"></div>
-                            <div className="relative bg-slate-900 rounded-2xl p-8 border border-slate-700 shadow-2xl transform rotate-1 hover:rotate-0 transition-transform duration-500">
-                                <div className="flex items-center gap-2 mb-6 border-b border-slate-800 pb-4">
-                                    <div className="w-3 h-3 rounded-full bg-red-500"></div>
-                                    <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
-                                    <div className="w-3 h-3 rounded-full bg-green-500"></div>
-                                    <div className="ml-auto text-slate-500 text-xs font-mono">performance_audit.json</div>
+                            <div className="absolute -inset-4 bg-gradient-to-tr from-purple-100 to-blue-100 rounded-[2rem] blur-xl opacity-50"></div>
+                            <div className="relative bg-white rounded-2xl border border-slate-200 shadow-xl overflow-hidden">
+                                <div className="bg-slate-900 text-white p-6 text-center">
+                                    <h3 className="font-bold text-xl">The "Model Home" Difference</h3>
                                 </div>
-                                <div className="space-y-4 font-mono text-sm">
-                                    <div className="flex justify-between text-green-400">
-                                        <span>"firstContentfulPaint"</span>
-                                        <span>"0.4s"</span>
+                                <div className="p-8">
+                                    <div className="grid grid-cols-3 gap-4 border-b border-slate-100 pb-4 mb-4 text-sm font-bold text-slate-400 uppercase tracking-wider">
+                                        <div>Feature</div>
+                                        <div className="text-center">Typical Agency</div>
+                                        <div className="text-center text-purple-600">BuilderProject</div>
                                     </div>
-                                    <div className="flex justify-between text-green-400">
-                                        <span>"interactive"</span>
-                                        <span>"0.8s"</span>
+
+                                    <div className="space-y-6">
+                                        <div className="grid grid-cols-3 gap-4 items-center">
+                                            <div className="font-bold text-slate-700 text-sm md:text-base">Focus</div>
+                                            <div className="text-center text-slate-500 text-sm">"Pretty Design"</div>
+                                            <div className="text-center font-bold text-green-600 text-sm md:text-base">Lead Generation</div>
+                                        </div>
+                                        <div className="grid grid-cols-3 gap-4 items-center">
+                                            <div className="font-bold text-slate-700 text-sm md:text-base">SEO</div>
+                                            <div className="text-center text-slate-500 text-sm">Basic Plugin</div>
+                                            <div className="text-center font-bold text-green-600 text-sm md:text-base">Built-in Local Architecture</div>
+                                        </div>
+                                        <div className="grid grid-cols-3 gap-4 items-center">
+                                            <div className="font-bold text-slate-700 text-sm md:text-base">Portfolio</div>
+                                            <div className="text-center text-slate-500 text-sm">Image Grid</div>
+                                            <div className="text-center font-bold text-green-600 text-sm md:text-base">Story-Driven Case Studies</div>
+                                        </div>
+                                        <div className="grid grid-cols-3 gap-4 items-center">
+                                            <div className="font-bold text-slate-700 text-sm md:text-base">Speed</div>
+                                            <div className="text-center text-slate-500 text-sm">Slow WordPress</div>
+                                            <div className="text-center font-bold text-green-600 text-sm md:text-base">
+                                                <span className="inline-flex items-center gap-1"><Zap size={14} fill="currentColor" /> Instant Load</span>
+                                            </div>
+                                        </div>
+                                        <div className="grid grid-cols-3 gap-4 items-center">
+                                            <div className="font-bold text-slate-700 text-sm md:text-base">Cost</div>
+                                            <div className="text-center text-slate-500 text-sm">Hidden Fees</div>
+                                            <div className="text-center font-bold text-green-600 text-sm md:text-base">Flat & Transparent</div>
+                                        </div>
                                     </div>
-                                    <div className="flex justify-between text-green-400">
-                                        <span>"accessibility"</span>
-                                        <span>100</span>
-                                    </div>
-                                    <div className="flex justify-between text-green-400">
-                                        <span>"seo_score"</span>
-                                        <span>100</span>
-                                    </div>
-                                    <div className="h-px bg-slate-800 my-4"></div>
-                                    <div className="text-slate-400">
-                          // The BuilderProject Difference<br />
-                                        <span className="text-purple-400">const</span> <span className="text-blue-400">conversion</span> = <span className="text-yellow-300">true</span>;<br />
-                                        <span className="text-purple-400">if</span> (visitor.isQualified) {'{'}<br />
-                                        &nbsp;&nbsp;scheduleCall();<br />
-                                        {'}'}
-                                    </div>
+                                </div>
+                                <div className="bg-purple-50 p-4 text-center border-t border-purple-100">
+                                    <p className="text-purple-900 font-medium text-sm">Stop building "Brochure Sites". Build a Sales Engine.</p>
                                 </div>
                             </div>
                         </div>
@@ -208,6 +280,126 @@ const WebsiteDesign: React.FC = () => {
                             <div className="bg-green-100 w-12 h-12 rounded-full flex items-center justify-center text-green-600 mb-6 font-bold text-sm group-hover:scale-110 transition-transform">03</div>
                             <h4 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-purple-700 transition-colors">Speed Signals</h4>
                             <p className="text-slate-600 leading-relaxed">Core Web Vitals are now a ranking factor. Our sites ace them by default, giving you an unfair advantage.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Process Timeline */}
+            <section className="py-24 bg-white border-y border-slate-100">
+                <div className="container mx-auto px-6">
+                    <div className="max-w-4xl mx-auto text-center mb-16">
+                        <h2 className="text-3xl md:text-5xl font-serif font-bold text-slate-900 mb-6">
+                            From "Discovery" to "Done" <br /> in 4 Weeks
+                        </h2>
+                        <p className="text-lg text-slate-600">
+                            We don't drag projects out for months. Our streamlined system gets your new sales engine live fast.
+                        </p>
+                    </div>
+
+                    <div className="max-w-6xl mx-auto">
+                        <div className="grid md:grid-cols-4 gap-8">
+                            {[
+                                {
+                                    step: "01",
+                                    title: "Discovery",
+                                    desc: "We interview you to extract your brand voice, best projects, and ideal client profile.",
+                                    week: "Week 1"
+                                },
+                                {
+                                    step: "02",
+                                    title: "Architecture",
+                                    desc: "We map out your SEO sitemap and wireframe the perfect conversion path.",
+                                    week: "Week 2"
+                                },
+                                {
+                                    step: "03",
+                                    title: "Design & Build",
+                                    desc: "We code your Digital Model Home, optimizing every pixel for speed and SEO.",
+                                    week: "Weeks 3"
+                                },
+                                {
+                                    step: "04",
+                                    title: "Launch",
+                                    desc: "Final walkthrough, feedback round, and we take your new site live to the world.",
+                                    week: "Week 4"
+                                }
+                            ].map((item, i) => (
+                                <div key={i} className="relative group">
+                                    <div className="bg-slate-50 rounded-2xl p-8 h-full border border-slate-100 hover:border-purple-200 hover:shadow-lg transition-all duration-300">
+                                        <div className="text-xs font-bold text-purple-600 uppercase tracking-wider mb-4">{item.week}</div>
+                                        <div className="text-4xl font-serif font-bold text-slate-200 mb-4 group-hover:text-purple-100 transition-colors">{item.step}</div>
+                                        <h3 className="text-xl font-bold text-slate-900 mb-2">{item.title}</h3>
+                                        <p className="text-slate-600 text-sm leading-relaxed">{item.desc}</p>
+                                    </div>
+                                    {i < 3 && (
+                                        <div className="hidden md:block absolute top-1/2 -right-4 translate-x-1/2 text-slate-300 z-10">
+                                            <ArrowRight />
+                                        </div>
+                                    )}
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Qualifier Section */}
+            <section className="py-24 bg-slate-50">
+                <div className="container mx-auto px-6">
+                    <div className="max-w-5xl mx-auto">
+                        <div className="text-center mb-16">
+                            <h2 className="text-3xl md:text-5xl font-serif font-bold text-slate-900 mb-6">
+                                Is This Right For You?
+                            </h2>
+                            <p className="text-lg text-slate-600">
+                                We are not a volume agency. We partner with serious builders who want to dominate their specific market.
+                            </p>
+                        </div>
+
+                        <div className="grid md:grid-cols-2 gap-8">
+                            <div className="bg-white p-10 rounded-3xl border border-green-100 shadow-sm relative overflow-hidden">
+                                <div className="absolute top-0 left-0 w-full h-2 bg-green-500"></div>
+                                <h3 className="text-2xl font-serif font-bold text-slate-900 mb-6 flex items-center gap-3">
+                                    <CheckCircle className="text-green-500" fill="currentColor" className="text-white" />
+                                    We're A Perfect Fit If...
+                                </h3>
+                                <ul className="space-y-4">
+                                    {[
+                                        "You do $2M+ in annual revenue",
+                                        "You build high-end custom homes or large-scale remodels",
+                                        "You value brand reputation over being the 'cheapest'",
+                                        "You want a long-term partner, not a one-off vendor",
+                                        "You have professional photography of your work"
+                                    ].map((item, i) => (
+                                        <li key={i} className="flex items-start gap-3 text-slate-700">
+                                            <div className="min-w-6 mt-1"><CheckCircle size={18} className="text-green-500" /></div>
+                                            <span>{item}</span>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+
+                            <div className="bg-slate-100 p-10 rounded-3xl border border-slate-200 relative overflow-hidden opacity-75">
+                                <h3 className="text-2xl font-serif font-bold text-slate-500 mb-6 flex items-center gap-3">
+                                    <div className="w-8 h-8 rounded-full bg-slate-300 flex items-center justify-center text-white text-lg font-bold">×</div>
+                                    We're NOT a Match If...
+                                </h3>
+                                <ul className="space-y-4">
+                                    {[
+                                        "You are just starting out (under $500k revenue)",
+                                        "You just want a 'brochure' site to show mom",
+                                        "You are looking for the cheapest option possible",
+                                        "You need a site launched in 48 hours",
+                                        "You don't care about ranking on Google"
+                                    ].map((item, i) => (
+                                        <li key={i} className="flex items-start gap-3 text-slate-500">
+                                            <div className="min-w-6 mt-1 text-slate-400">×</div>
+                                            <span>{item}</span>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
