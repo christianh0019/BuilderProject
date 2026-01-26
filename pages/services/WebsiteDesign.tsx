@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle, X, ChevronDown, ChevronUp, Compass, PenTool, Rocket } from 'lucide-react';
+import { ArrowRight, CheckCircle, X, ChevronDown, ChevronUp, Compass, PenTool, Rocket, Users, Layout } from 'lucide-react';
 import BrowserFrame from '../../components/ui/BrowserFrame';
 
 const WebsiteDesign: React.FC = () => {
