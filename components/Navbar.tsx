@@ -206,7 +206,18 @@ const Navbar: React.FC = () => {
                 <Link to="/services/content-marketing" className="text-slate-600">Content Marketing</Link>
                 <Link to="/services/paid-advertising" className="text-slate-600">Paid Advertising</Link>
                 <Link to="/services/funnel-development" className="text-slate-600">Funnel Development</Link>
-                <Link to="/programs" className="text-purple-600 font-bold text-sm">View Our Programs &rarr;</Link>
+                <Link to="/services/crm-deployment" className="text-slate-600">CRM Deployment</Link>
+                <Link to="/services/sales-processes" className="text-slate-600">Sales Processes</Link>
+
+                <div className="pt-2 border-t border-slate-100 mt-2">
+                  <div className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3">Growth Programs</div>
+                  <div className="flex flex-col space-y-3 pl-2">
+                    <Link to="/programs/foundation" className="text-slate-800 font-medium">1. The Foundation</Link>
+                    <Link to="/programs/pipeline" className="text-slate-800 font-medium">2. The Pipeline</Link>
+                    <Link to="/programs/partner" className="text-slate-800 font-medium">3. The Partner Program</Link>
+                    <Link to="/programs" className="text-purple-600 font-bold text-sm mt-2">View All Programs &rarr;</Link>
+                  </div>
+                </div>
               </div>
             )}
           </div>
