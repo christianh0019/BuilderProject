@@ -213,22 +213,19 @@ const FunnelDevelopment: React.FC = () => {
             {/* Live Examples */}
             <section className="py-24 bg-slate-50">
                 <div className="container mx-auto px-6">
-                    <div className="max-w-4xl mx-auto text-center mb-16">
+                    <div className="max-w-4xl mx-auto text-center mb-20">
                         <h2 className="text-3xl md:text-5xl font-serif font-bold text-slate-900 mb-6">
-                            See It In Action
+                            Nurture Engine Examples
                         </h2>
                         <p className="text-lg text-slate-600">
-                            Tools that your prospects actually want to use.
+                            Tools that capture early-stage researchers who aren't ready to talk yet.
                         </p>
                     </div>
 
                     <div className="max-w-6xl mx-auto mb-20">
-                        <div className="grid lg:grid-cols-3 gap-8 mb-16">
-                            {/* Project 1 - Lead Magnet */}
+                        <div className="grid lg:grid-cols-3 gap-8">
+                            {/* Nurture 1: Budget Calculator */}
                             <div className="group cursor-pointer relative bg-white p-6 rounded-3xl shadow-sm border border-slate-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
-                                <div className="absolute top-4 right-4 bg-blue-100 text-blue-700 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
-                                    Nurture
-                                </div>
                                 <div className="aspect-video rounded-xl overflow-hidden mb-6 relative bg-slate-100 flex items-center justify-center">
                                     <BarChart size={48} className="text-slate-300" />
                                 </div>
@@ -236,17 +233,17 @@ const FunnelDevelopment: React.FC = () => {
                                     <h4 className="text-xl font-serif font-bold text-slate-900 group-hover:text-purple-600 transition-colors mb-2">
                                         Budget Calculator
                                     </h4>
-                                    <p className="text-slate-500 text-sm leading-relaxed">
-                                        Prospects input size/finishes to get a cost estimate. Use this to capture early-stage leads.
+                                    <p className="text-slate-500 text-sm leading-relaxed mb-6">
+                                        Prospects input size/finishes to get instant cost estimate. Captures people figuring out if they can afford to build.
                                     </p>
+                                    <span className="text-purple-600 font-bold text-sm flex items-center">
+                                        View Live Example <ArrowRight size={14} className="ml-2" />
+                                    </span>
                                 </div>
                             </div>
 
-                            {/* Project 2 - Lead Magnet */}
+                            {/* Nurture 2: Style Quiz */}
                             <div className="group cursor-pointer relative bg-white p-6 rounded-3xl shadow-sm border border-slate-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
-                                <div className="absolute top-4 right-4 bg-blue-100 text-blue-700 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
-                                    Nurture
-                                </div>
                                 <div className="aspect-video rounded-xl overflow-hidden mb-6 relative bg-slate-100 flex items-center justify-center">
                                     <Layout size={48} className="text-slate-300" />
                                 </div>
@@ -254,27 +251,97 @@ const FunnelDevelopment: React.FC = () => {
                                     <h4 className="text-xl font-serif font-bold text-slate-900 group-hover:text-purple-600 transition-colors mb-2">
                                         Design Style Quiz
                                     </h4>
-                                    <p className="text-slate-500 text-sm leading-relaxed">
-                                        "What's My Home Style?" Fun, interactive quiz that recommends architectural styles.
+                                    <p className="text-slate-500 text-sm leading-relaxed mb-6">
+                                        "What Custom Home Style Fits Your Lifestyle?" Interactive quiz recommends styles and shows your portfolio.
                                     </p>
+                                    <span className="text-purple-600 font-bold text-sm flex items-center">
+                                        View Live Example <ArrowRight size={14} className="ml-2" />
+                                    </span>
                                 </div>
                             </div>
 
-                            {/* Project 3 - Qualification */}
-                            <div className="group cursor-pointer relative bg-white p-6 rounded-3xl shadow-sm border border-slate-100 ring-2 ring-purple-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
-                                <div className="absolute top-4 right-4 bg-purple-100 text-purple-700 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
-                                    Qualifier
-                                </div>
+                            {/* Nurture 3: Planning Guide */}
+                            <div className="group cursor-pointer relative bg-white p-6 rounded-3xl shadow-sm border border-slate-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
                                 <div className="aspect-video rounded-xl overflow-hidden mb-6 relative bg-slate-100 flex items-center justify-center">
                                     <FileText size={48} className="text-slate-300" />
                                 </div>
                                 <div className="pl-2">
                                     <h4 className="text-xl font-serif font-bold text-slate-900 group-hover:text-purple-600 transition-colors mb-2">
+                                        Custom Home Planning Guide
+                                    </h4>
+                                    <p className="text-slate-500 text-sm leading-relaxed mb-6">
+                                        Comprehensive PDF download walking through the entire process from land to move-in.
+                                    </p>
+                                    <span className="text-purple-600 font-bold text-sm flex items-center">
+                                        View Live Example <ArrowRight size={14} className="ml-2" />
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="max-w-4xl mx-auto text-center mb-16 mt-32">
+                        <h2 className="text-3xl md:text-5xl font-serif font-bold text-slate-900 mb-6">
+                            Qualification Engine Examples
+                        </h2>
+                        <p className="text-lg text-slate-600">
+                            Applications that pre-screen serious prospects and book them directly to your calendar.
+                        </p>
+                    </div>
+
+                    <div className="max-w-6xl mx-auto mb-20">
+                        <div className="grid lg:grid-cols-3 gap-8">
+                            {/* Qual 1: Project App */}
+                            <div className="group cursor-pointer relative bg-white p-6 rounded-3xl shadow-sm border border-slate-100 ring-1 ring-slate-200 hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+                                <div className="aspect-video rounded-xl overflow-hidden mb-6 relative bg-slate-900 flex items-center justify-center">
+                                    <CheckCircle size={48} className="text-purple-400" />
+                                </div>
+                                <div className="pl-2">
+                                    <h4 className="text-xl font-serif font-bold text-slate-900 group-hover:text-purple-600 transition-colors mb-2">
                                         Project Application
                                     </h4>
-                                    <p className="text-slate-500 text-sm leading-relaxed">
-                                        Deep-dive survey for ready-to-build leads. Asks about land, timeline, and budget.
+                                    <p className="text-slate-500 text-sm leading-relaxed mb-6">
+                                        Full qualification survey asking budget, land status, timeline, location. Only qualified prospects see your calendar.
                                     </p>
+                                    <span className="text-purple-600 font-bold text-sm flex items-center">
+                                        View Live Example <ArrowRight size={14} className="ml-2" />
+                                    </span>
+                                </div>
+                            </div>
+
+                            {/* Qual 2: Remodel App */}
+                            <div className="group cursor-pointer relative bg-white p-6 rounded-3xl shadow-sm border border-slate-100 ring-1 ring-slate-200 hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+                                <div className="aspect-video rounded-xl overflow-hidden mb-6 relative bg-slate-900 flex items-center justify-center">
+                                    <PenTool size={48} className="text-blue-400" />
+                                </div>
+                                <div className="pl-2">
+                                    <h4 className="text-xl font-serif font-bold text-slate-900 group-hover:text-purple-600 transition-colors mb-2">
+                                        Remodel Application
+                                    </h4>
+                                    <p className="text-slate-500 text-sm leading-relaxed mb-6">
+                                        Tailored for remodelers. Qualifies on project scope, budget, timeline, and property ownership.
+                                    </p>
+                                    <span className="text-purple-600 font-bold text-sm flex items-center">
+                                        View Live Example <ArrowRight size={14} className="ml-2" />
+                                    </span>
+                                </div>
+                            </div>
+
+                            {/* Qual 3: Design-Build App */}
+                            <div className="group cursor-pointer relative bg-white p-6 rounded-3xl shadow-sm border border-slate-100 ring-1 ring-slate-200 hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+                                <div className="aspect-video rounded-xl overflow-hidden mb-6 relative bg-slate-900 flex items-center justify-center">
+                                    <Compass size={48} className="text-green-400" />
+                                </div>
+                                <div className="pl-2">
+                                    <h4 className="text-xl font-serif font-bold text-slate-900 group-hover:text-purple-600 transition-colors mb-2">
+                                        Design-Build Application
+                                    </h4>
+                                    <p className="text-slate-500 text-sm leading-relaxed mb-6">
+                                        Combined qualification for builders offering design services. Filters on budget, design preferences, timeline.
+                                    </p>
+                                    <span className="text-purple-600 font-bold text-sm flex items-center">
+                                        View Live Example <ArrowRight size={14} className="ml-2" />
+                                    </span>
                                 </div>
                             </div>
                         </div>
@@ -309,10 +376,10 @@ const FunnelDevelopment: React.FC = () => {
 
                             <ul className="space-y-4 pt-4">
                                 {[
-                                    "Conditional Logic - Ask questions based on previous answers",
-                                    "Instant Calculations - Give them a budget estimate in real-time",
-                                    "Automatic Qualification - Filter out leads that don't meet your criteria",
-                                    "CRM Integration - Push data directly to your sales pipeline",
+                                    "Conditional Logic - Asks questions based on previous answers",
+                                    "Instant Calculations - Gives budget estimates in real-time",
+                                    "Automatic Qualification - Filters out leads that don't meet your criteria",
+                                    "CRM Integration - Pushes data directly to your sales pipeline",
                                     "Mobile Optimized - Works perfectly on phones"
                                 ].map((item, i) => (
                                     <li key={i} className="flex gap-3 text-slate-200">
@@ -359,29 +426,29 @@ const FunnelDevelopment: React.FC = () => {
                             </thead>
                             <tbody className="divide-y divide-slate-100">
                                 <tr>
-                                    <td className="p-6 font-bold text-slate-900">Lead Capture Rate</td>
-                                    <td className="p-6 text-slate-600">0.5% (Most leave without submitting)</td>
+                                    <td className="p-6 font-bold text-slate-900">Capture Rate</td>
+                                    <td className="p-6 text-slate-600">0.5% (Most leave)</td>
                                     <td className="p-6 text-slate-900 font-medium bg-purple-50/30">5-8% (High engagement)</td>
                                 </tr>
                                 <tr>
-                                    <td className="p-6 font-bold text-slate-900">Qualification Logic</td>
-                                    <td className="p-6 text-slate-600">None. You get spam and unqualified leads.</td>
-                                    <td className="p-6 text-slate-900 font-medium bg-purple-50/30">Advanced. Filters out bad leads automatically.</td>
+                                    <td className="p-6 font-bold text-slate-900">Qualification</td>
+                                    <td className="p-6 text-slate-600">None. Spam + unqualified leads</td>
+                                    <td className="p-6 text-slate-900 font-medium bg-purple-50/30">Advanced filtering automatically</td>
                                 </tr>
                                 <tr>
                                     <td className="p-6 font-bold text-slate-900">CRM Integration</td>
-                                    <td className="p-6 text-slate-600">Basic email notification.</td>
-                                    <td className="p-6 text-slate-900 font-medium bg-purple-50/30">Direct sync to HubSpot, HighLevel, Buildertrend.</td>
+                                    <td className="p-6 text-slate-600">Basic email notification</td>
+                                    <td className="p-6 text-slate-900 font-medium bg-purple-50/30">Direct sync to HubSpot, HighLevel, Buildertrend</td>
                                 </tr>
                                 <tr>
-                                    <td className="p-6 font-bold text-slate-900">Follow-up Speed</td>
-                                    <td className="p-6 text-slate-600">Manual (When you get to it).</td>
-                                    <td className="p-6 text-slate-900 font-medium bg-purple-50/30">Instant. Automated SMS & Email nurture.</td>
+                                    <td className="p-6 font-bold text-slate-900">Follow-up</td>
+                                    <td className="p-6 text-slate-600">Manual (When you get to it)</td>
+                                    <td className="p-6 text-slate-900 font-medium bg-purple-50/30">Instant automated SMS & Email</td>
                                 </tr>
                                 <tr>
-                                    <td className="p-6 font-bold text-slate-900">Mobile Experience</td>
-                                    <td className="p-6 text-slate-600">Tiny form fields, hard to type.</td>
-                                    <td className="p-6 text-slate-900 font-medium bg-purple-50/30">Tap-friendly, app-like experience.</td>
+                                    <td className="p-6 font-bold text-slate-900">Mobile</td>
+                                    <td className="p-6 text-slate-600">Tiny fields, hard to type</td>
+                                    <td className="p-6 text-slate-900 font-medium bg-purple-50/30">Tap-friendly, app-like experience</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -422,7 +489,7 @@ const FunnelDevelopment: React.FC = () => {
                                 {[
                                     "Hook Discovery - What will they trade info for?",
                                     "Value Proposition Crafting",
-                                    "Logic & Branching Map",
+                                    "Logic Mapping",
                                     "Offer Creation (PDF/Calculator/Quiz)"
                                 ].map((item, i) => (
                                     <li key={i} className="flex gap-3 text-slate-600 text-sm font-medium items-start">
@@ -446,8 +513,8 @@ const FunnelDevelopment: React.FC = () => {
                             <h3 className="text-2xl font-serif font-bold text-white mb-6">Custom Development</h3>
                             <ul className="space-y-4">
                                 {[
-                                    "Custom React-based application logic",
-                                    "Mobile-first, tap-friendly interface",
+                                    "Custom React-based application",
+                                    "Mobile-first interface",
                                     "Lightning fast performance",
                                     "Seamless brand integration"
                                 ].map((item, i) => (
@@ -472,10 +539,10 @@ const FunnelDevelopment: React.FC = () => {
                             <h3 className="text-2xl font-serif font-bold text-slate-900 mb-6">CRM Integration & Nurture</h3>
                             <ul className="space-y-4">
                                 {[
-                                    "Direct connection to your CRM",
-                                    "Admin notification setup",
-                                    "Auto-reply email templates",
-                                    "Lead data routing & tagging"
+                                    "Direct CRM connection",
+                                    "Admin notifications",
+                                    "Auto-reply templates",
+                                    "Lead routing & tagging"
                                 ].map((item, i) => (
                                     <li key={i} className="flex gap-3 text-slate-600 text-sm font-medium items-start">
                                         <div className="w-5 h-5 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 shrink-0 mt-0.5">
@@ -523,7 +590,7 @@ const FunnelDevelopment: React.FC = () => {
                                         <Compass size={28} />
                                     </div>
                                     <h3 className="text-xl font-bold text-white mb-2">Week 1: Strategy & Logic</h3>
-                                    <p className="text-slate-400 mb-6 text-sm leading-relaxed">We map out the entire conversion flow, define the qualifying questions, and design the "hook" that stops the scroll.</p>
+                                    <p className="text-slate-400 mb-6 text-sm leading-relaxed">Map conversion flow, define qualifying questions, design the hook.</p>
                                     <div className="p-4 bg-slate-900/50 rounded-lg text-xs font-mono text-purple-300 border border-slate-800 flex items-center gap-2">
                                         <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
                                         Output: Flow Diagram
@@ -541,7 +608,7 @@ const FunnelDevelopment: React.FC = () => {
                                         <PenTool size={28} />
                                     </div>
                                     <h3 className="text-xl font-bold text-white mb-2">Week 2: Build & Integrate</h3>
-                                    <p className="text-slate-400 mb-6 text-sm leading-relaxed">Our team builds the custom application, styles it to match your brand, and hooks it up to your CRM.</p>
+                                    <p className="text-slate-400 mb-6 text-sm leading-relaxed">Build custom application, style to brand, connect to CRM.</p>
                                     <div className="p-4 bg-slate-900/50 rounded-lg text-xs font-mono text-blue-300 border border-slate-800 flex items-center gap-2">
                                         <div className="w-2 h-2 rounded-full bg-yellow-500"></div>
                                         Output: Staging Link
@@ -559,7 +626,7 @@ const FunnelDevelopment: React.FC = () => {
                                         <Rocket size={28} />
                                     </div>
                                     <h3 className="text-xl font-bold text-white mb-2">Week 3: Testing & Launch</h3>
-                                    <p className="text-slate-400 mb-6 text-sm leading-relaxed">We test every scenario, verify lead routing, and push it live. Then we show you how to monitor the results.</p>
+                                    <p className="text-slate-400 mb-6 text-sm leading-relaxed">Test every scenario, verify lead routing, push live.</p>
                                     <div className="p-4 bg-slate-900/50 rounded-lg text-xs font-mono text-green-300 border border-slate-800 flex items-center gap-2">
                                         <div className="w-2 h-2 rounded-full bg-purple-500"></div>
                                         Output: Live Funnel
@@ -577,11 +644,11 @@ const FunnelDevelopment: React.FC = () => {
                     <h2 className="text-3xl font-serif font-bold text-slate-900 mb-12 text-center">Have Questions? We Got You</h2>
                     <div className="space-y-4">
                         {[
-                            { q: "Will this replace my contact form?", a: "No, it supplements it. You still need a general contact form for vendors, partners, and general inquiries. This funnel is specifically for capturing new leads who might not be ready to book a call yet, or for pre-qualifying those who are." },
-                            { q: "Do I need to write the nurture emails?", a: "We provide proven templates for the email auto-replies. You can customize them if you want, but you don't have to start from scratch." },
-                            { q: "Does it work on mobile?", a: "Absolutely. In fact, it shines on mobile. 60% of traffic comes from phones, and our funnels are designed with large, tap-friendly buttons that make it easy to convert on a small screen." },
-                            { q: "What CRM does it connect to?", a: "We can connect to almost any CRM (HubSpot, GoHighLevel, Buildertrend, etc.) via Zapier or direct integration. We set this connection up for you during the build." },
-                            { q: "Can I change the questions later?", a: "Yes. The system is flexible. If you find you need to ask about 'lot location' instead of 'timeline', we can adjust the funnel logic for you." }
+                            { q: "Will this replace my contact form?", a: "No, it complements it. You'll keep your standard form for general inquiries. These funnels capture and qualify serious prospects who are evaluating builders." },
+                            { q: "Do I need to write the nurture emails?", a: "No. We write all automated email sequences based on discovery calls about your business. You review and approve before they go live." },
+                            { q: "Does it work on mobile?", a: "Yes. Built mobile-first. Over 60% of your traffic is mobile, so this is critical." },
+                            { q: "What CRM does it connect to?", a: "All major platforms: HubSpot, HighLevel, Buildertrend, CoConstruct, Salesforce, and others." },
+                            { q: "Can I change the questions later?", a: "Yes. Updates billed at $100/hour. Most changes take 30-60 minutes." }
                         ].map((faq, i) => (
                             <div key={i} className="border border-slate-200 rounded-xl overflow-hidden">
                                 <button onClick={() => toggleFaq(i)} className="w-full flex items-center justify-between p-6 bg-slate-50 text-left font-bold text-slate-900 hover:bg-slate-100 transition-colors">
@@ -604,16 +671,16 @@ const FunnelDevelopment: React.FC = () => {
             {/* Final CTA */}
             <section className="py-24 bg-slate-900 text-white text-center">
                 <div className="container mx-auto px-6 max-w-4xl">
-                    <h2 className="text-4xl font-serif font-bold mb-6">Ready to Automate Your Lead Gen?</h2>
+                    <h2 className="text-4xl font-serif font-bold mb-6">Ready to Capture Every Visitor?</h2>
                     <p className="text-xl text-slate-400 mb-10">
-                        Stop letting qualified leads slip through the cracks.
+                        Stop watching potential clients leave your site without a trace. Let's build you a funnel system that actually works.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                         <Link to="/contact" className="inline-flex items-center bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-full font-bold transition-all hover:scale-105 shadow-[0_0_20px_rgba(147,51,234,0.3)]">
-                            Build My Funnel <ArrowRight className="ml-2" />
+                            Schedule Strategy Call <ArrowRight className="ml-2" />
                         </Link>
                         <Link to="/case-studies" className="inline-flex items-center border border-slate-600 hover:bg-slate-800 text-white px-8 py-4 rounded-full font-bold transition-all">
-                            View Examples
+                            See Examples
                         </Link>
                     </div>
                 </div>
