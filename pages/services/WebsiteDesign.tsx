@@ -498,35 +498,100 @@ const WebsiteDesign: React.FC = () => {
             </section>
 
             {/* Inclusions */}
-            <section className="py-24 bg-white">
-                <div className="container mx-auto px-6 max-w-6xl">
-                    <h2 className="text-3xl font-serif font-bold text-slate-900 mb-12 text-center">What's Included in Every Website</h2>
-                    <div className="grid md:grid-cols-3 gap-8">
-                        <div className="bg-slate-50 p-8 rounded-2xl border border-slate-100">
-                            <h3 className="text-xl font-bold text-slate-900 mb-4 text-purple-600">Strategic Foundation</h3>
-                            <ul className="space-y-3 text-sm text-slate-600">
-                                <li>• 1 week of discovery and strategy work</li>
-                                <li>• Multiple discovery calls</li>
-                                <li>• We extract what makes you different</li>
-                                <li>• Guidance on project selection</li>
+            <section className="py-32 bg-white relative overflow-hidden">
+                {/* Background decoration */}
+                <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
+                    <div className="absolute -top-24 -right-24 w-96 h-96 bg-purple-50 rounded-full blur-3xl opacity-50"></div>
+                    <div className="absolute top-1/2 -left-24 w-72 h-72 bg-blue-50 rounded-full blur-3xl opacity-50"></div>
+                </div>
+
+                <div className="container mx-auto px-6 relative z-10">
+                    <div className="text-center mb-20">
+                        <span className="text-purple-600 font-bold tracking-wider text-sm uppercase mb-4 block">Everything You Need</span>
+                        <h2 className="text-4xl md:text-5xl font-serif font-bold text-slate-900 mb-6">
+                            Included in Every Website
+                        </h2>
+                        <p className="text-xl text-slate-500 max-w-2xl mx-auto">
+                            We don't nickel and dime. You get a complete, high-performance sales asset ready to generate leads.
+                        </p>
+                    </div>
+
+                    <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+                        {/* Card 1 */}
+                        <div className="group bg-white p-10 rounded-[2rem] border border-slate-100 shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 relative overflow-hidden">
+                            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-purple-500 to-indigo-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 bg-origin-border"></div>
+
+                            <div className="w-16 h-16 bg-purple-50 rounded-2xl flex items-center justify-center text-purple-600 mb-8 group-hover:scale-110 transition-transform duration-500">
+                                <Compass size={32} />
+                            </div>
+
+                            <h3 className="text-2xl font-serif font-bold text-slate-900 mb-6">Strategic Foundation</h3>
+                            <ul className="space-y-4">
+                                {[
+                                    "Deep-dive discovery & strategy session",
+                                    "Competitor analysis & positioning",
+                                    "Unique Value Proposition refinement",
+                                    "Customer journey mapping"
+                                ].map((item, i) => (
+                                    <li key={i} className="flex gap-3 text-slate-600 text-sm font-medium items-start">
+                                        <div className="w-5 h-5 rounded-full bg-purple-100 flex items-center justify-center text-purple-600 shrink-0 mt-0.5">
+                                            <CheckCircle size={12} strokeWidth={3} />
+                                        </div>
+                                        {item}
+                                    </li>
+                                ))}
                             </ul>
                         </div>
-                        <div className="bg-slate-50 p-8 rounded-2xl border border-slate-100">
-                            <h3 className="text-xl font-bold text-slate-900 mb-4 text-purple-600">Design & Development</h3>
-                            <ul className="space-y-3 text-sm text-slate-600">
-                                <li>• All website copy written in your voice</li>
-                                <li>• Custom design (AI-powered coding)</li>
-                                <li>• Mobile-responsive, lightning-fast</li>
-                                <li>• Foundational SEO included</li>
+
+                        {/* Card 2 */}
+                        <div className="group bg-slate-900 p-10 rounded-[2rem] shadow-2xl hover:-translate-y-2 transition-all duration-500 relative overflow-hidden text-white ring-1 ring-white/10">
+                            <div className="absolute top-0 right-0 w-64 h-64 bg-purple-500/10 rounded-full blur-[60px] pointer-events-none"></div>
+
+                            <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center text-white mb-8 border border-white/10 group-hover:scale-110 transition-transform duration-500">
+                                <Layout size={32} />
+                            </div>
+
+                            <h3 className="text-2xl font-serif font-bold text-white mb-6">Premium Design & Dev</h3>
+                            <ul className="space-y-4">
+                                {[
+                                    "Custom AI-coded architecture (No templates)",
+                                    "Professional copywriting in your voice",
+                                    "Mobile-first responsive design",
+                                    "Ultra-fast loading speeds (90+ Google Score)"
+                                ].map((item, i) => (
+                                    <li key={i} className="flex gap-3 text-slate-300 text-sm font-medium items-start">
+                                        <div className="w-5 h-5 rounded-full bg-green-500 flex items-center justify-center text-white shrink-0 mt-0.5 shadow-lg shadow-green-500/20">
+                                            <CheckCircle size={12} strokeWidth={3} />
+                                        </div>
+                                        {item}
+                                    </li>
+                                ))}
                             </ul>
                         </div>
-                        <div className="bg-slate-50 p-8 rounded-2xl border border-slate-100">
-                            <h3 className="text-xl font-bold text-slate-900 mb-4 text-purple-600">Support & Management</h3>
-                            <ul className="space-y-3 text-sm text-slate-600">
-                                <li>• Dedicated Account Manager</li>
-                                <li>• Video walkthrough of completed site</li>
-                                <li>• 1 round of revisions included</li>
-                                <li>• 30-day post-launch monitoring</li>
+
+                        {/* Card 3 */}
+                        <div className="group bg-white p-10 rounded-[2rem] border border-slate-100 shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 relative overflow-hidden">
+                            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-cyan-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 bg-origin-border"></div>
+
+                            <div className="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center text-blue-600 mb-8 group-hover:scale-110 transition-transform duration-500">
+                                <Users size={32} />
+                            </div>
+
+                            <h3 className="text-2xl font-serif font-bold text-slate-900 mb-6">Launch & Support</h3>
+                            <ul className="space-y-4">
+                                {[
+                                    "Dedicated Account Manager",
+                                    "Personalized video walkthrough of your site",
+                                    "Foundational SEO setup & indexing",
+                                    "30-day post-launch hyper-care & updates"
+                                ].map((item, i) => (
+                                    <li key={i} className="flex gap-3 text-slate-600 text-sm font-medium items-start">
+                                        <div className="w-5 h-5 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 shrink-0 mt-0.5">
+                                            <CheckCircle size={12} strokeWidth={3} />
+                                        </div>
+                                        {item}
+                                    </li>
+                                ))}
                             </ul>
                         </div>
                     </div>
@@ -642,36 +707,7 @@ const WebsiteDesign: React.FC = () => {
                 </div>
             </section>
 
-            {/* Qualifier */}
-            <section className="py-24 bg-slate-50">
-                <div className="container mx-auto px-6 max-w-5xl">
-                    <h2 className="text-3xl font-serif font-bold text-slate-900 mb-12 text-center">Who This Is For (And Who It's Not)</h2>
-                    <div className="grid md:grid-cols-2 gap-8">
-                        <div className="bg-white p-8 rounded-2xl border border-green-200 shadow-sm">
-                            <h3 className="text-xl font-bold text-slate-900 mb-6 flex items-center gap-2">
-                                <CheckCircle className="text-green-500" /> This is a good fit if:
-                            </h3>
-                            <ul className="space-y-3 text-slate-600">
-                                <li>• You have completed projects you're proud of</li>
-                                <li>• You're willing to invest 2-3 hours in discovery</li>
-                                <li>• You want a custom site, not a template</li>
-                                <li>• You're doing at least $3M/year</li>
-                            </ul>
-                        </div>
-                        <div className="bg-slate-100 p-8 rounded-2xl border border-slate-200 opacity-75">
-                            <h3 className="text-xl font-bold text-slate-500 mb-6 flex items-center gap-2">
-                                <X className="text-red-400" /> This isn't a good fit if:
-                            </h3>
-                            <ul className="space-y-3 text-slate-500">
-                                <li>• You're looking for the cheapest option</li>
-                                <li>• You haven't defined your ideal client</li>
-                                <li>• You refuse to invest in photography</li>
-                                <li>• You want to micromanage every pixel</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </section>
+
 
             {/* Final CTA */}
             <section className="py-24 bg-slate-900 text-white text-center">
