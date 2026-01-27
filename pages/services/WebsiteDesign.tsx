@@ -13,44 +13,65 @@ const WebsiteDesign: React.FC = () => {
     return (
         <div className="pt-20">
             {/* Hero Section */}
-            <section className="relative bg-[#0F172A] text-white pt-20 pb-32 overflow-hidden">
-                {/* Abstract Background */}
-                <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-purple-900/30 rounded-full blur-[120px] pointer-events-none"></div>
-                <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-blue-900/20 rounded-full blur-[100px] pointer-events-none"></div>
+            {/* Hero Section */}
+            <section className="relative bg-[#0F172A] text-white pt-32 pb-32 overflow-hidden">
+                {/* Background Effects */}
+                <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-purple-900/20 rounded-full blur-[120px] pointer-events-none mix-blend-screen animate-pulse"></div>
+                <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-blue-900/10 rounded-full blur-[100px] pointer-events-none mix-blend-screen"></div>
 
                 <div className="container mx-auto px-6 relative z-10">
-                    <div className="max-w-5xl mx-auto text-center">
-                        <h1 className="text-4xl md:text-6xl font-serif font-bold mb-8 leading-tight">
-                            Custom Home Builder & Remodeler Website Design & Development <br />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">That Actually Generates Leads</span>
+                    <div className="max-w-5xl mx-auto text-center mb-20">
+                        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-900/30 border border-purple-500/30 mb-8 backdrop-blur-sm">
+                            <span className="flex h-2 w-2 rounded-full bg-purple-400 animate-pulse"></span>
+                            <span className="text-sm font-medium text-purple-200 uppercase tracking-widest">For Custom Builders & Remodelers</span>
+                        </div>
+
+                        <h1 className="text-5xl md:text-7xl font-serif font-bold mb-8 leading-tight tracking-tight">
+                            Website Design & Development <br />
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400">That Actually Generates Leads</span>
                         </h1>
-                        <p className="text-xl text-slate-300 mb-10 max-w-3xl mx-auto leading-relaxed">
-                            Stop losing $1M+ projects because prospects land on your site and think "this looks like it was built in 2010" instead of "this is exactly who I need to build my dream home."
+
+                        <p className="text-xl md:text-2xl text-slate-300 mb-10 max-w-3xl mx-auto leading-relaxed font-light">
+                            Stop losing $1M+ projects because prospects judge your book by its cover. We build websites that position you as the premium choice in your market.
                         </p>
 
-                        <div className="grid md:grid-cols-3 gap-6 text-left max-w-4xl mx-auto mb-12">
-                            <div className="flex gap-3">
-                                <CheckCircle className="text-purple-400 shrink-0" />
-                                <span className="text-slate-200 text-sm">Featured project pages that showcase your best builds and remodels with the story behind them</span>
+                        <div className="flex flex-col sm:flex-row gap-5 justify-center items-center">
+                            <Link to="/contact" className="group relative inline-flex items-center justify-center px-8 py-4 text-base font-bold text-white transition-all duration-200 bg-purple-600 font-pj rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-600 hover:bg-purple-700 shadow-[0_0_20px_rgba(168,85,247,0.4)] hover:shadow-[0_0_30px_rgba(168,85,247,0.6)]">
+                                Start Your Project
+                                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                            </Link>
+                            <Link to="/case-studies" className="inline-flex items-center justify-center px-8 py-4 text-base font-bold text-slate-300 transition-all duration-200 bg-transparent border border-slate-700 rounded-full hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-slate-700 hover:text-white hover:border-slate-500">
+                                View Examples
+                            </Link>
+                        </div>
+                    </div>
+
+                    {/* Device Mockup Graphic */}
+                    <div className="relative max-w-6xl mx-auto perspective-[1000px] group">
+                        {/* Laptop */}
+                        <div className="relative z-10 transform transition-all duration-700 hover:scale-[1.01]">
+                            <div className="relative mx-auto bg-slate-900 rounded-t-[1rem] md:rounded-t-[1.5rem] p-2 shadow-[0_20px_50px_-12px_rgba(0,0,0,0.5)] border border-slate-800 ring-1 ring-white/10 w-[90%] md:w-full">
+                                <div className="bg-slate-950 rounded-[0.5rem] md:rounded-[1rem] overflow-hidden aspect-[16/10] relative">
+                                    <img src="/images/hero-desktop-1.png" alt="Desktop Website Preview" className="w-full h-full object-cover object-top" />
+                                    {/* Reflection/Sheen */}
+                                    <div className="absolute inset-0 bg-gradient-to-tr from-white/5 to-transparent pointer-events-none"></div>
+                                </div>
                             </div>
-                            <div className="flex gap-3">
-                                <CheckCircle className="text-purple-400 shrink-0" />
-                                <span className="text-slate-200 text-sm">Custom pages built around what makes you different (your process, design approach, past client experiences)</span>
-                            </div>
-                            <div className="flex gap-3">
-                                <CheckCircle className="text-purple-400 shrink-0" />
-                                <span className="text-slate-200 text-sm">Professional design that matches the quality of homes you build and projects you complete</span>
+                            {/* Base */}
+                            <div className="h-4 md:h-6 bg-slate-800 rounded-b-xl mx-auto w-[98%] md:w-[102%] shadow-lg mt-[-1px]"></div>
+                        </div>
+
+                        {/* Phone Overlay */}
+                        <div className="absolute -bottom-6 -right-2 md:-bottom-12 md:-right-8 w-[100px] md:w-[220px] z-20 transform rotate-[-3deg] group-hover:rotate-0 transition-all duration-500 group-hover:scale-105 group-hover:translate-y-[-10px]">
+                            <div className="bg-slate-900 rounded-[1.5rem] md:rounded-[2.5rem] p-1 md:p-2 shadow-[0_20px_40px_-12px_rgba(0,0,0,0.5)] border border-slate-800 ring-1 ring-white/10">
+                                <div className="bg-slate-950 rounded-[1rem] md:rounded-[2rem] overflow-hidden aspect-[9/19] relative">
+                                    <img src="/images/hero-mobile-1.png" alt="Mobile Website Preview" className="w-full h-full object-cover object-top" />
+                                </div>
                             </div>
                         </div>
 
-                        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                            <Link to="/contact" className="bg-white text-slate-900 px-8 py-4 rounded-full font-bold hover:bg-purple-50 transition-colors shadow-[0_0_20px_rgba(255,255,255,0.3)] hover:shadow-[0_0_30px_rgba(255,255,255,0.5)]">
-                                Work With Us
-                            </Link>
-                            <Link to="/case-studies" className="border border-slate-600 text-white px-8 py-4 rounded-full font-bold hover:bg-slate-800 transition-colors">
-                                See Website Examples
-                            </Link>
-                        </div>
+                        {/* Abstract background glow */}
+                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-full bg-purple-500/10 blur-[120px] -z-10 rounded-full pointer-events-none"></div>
                     </div>
                 </div>
             </section>
