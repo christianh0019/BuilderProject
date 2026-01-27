@@ -301,13 +301,18 @@ const WebsiteDesign: React.FC = () => {
                                 <p className="text-sm text-slate-500">Clean, professional, immediately communicates what you do and who you serve</p>
                             </div>
 
-                            {/* Card 2: Process Page (Placeholder) */}
-                            <div className="group cursor-pointer relative opacity-60 hover:opacity-100 transition-opacity">
-                                <div className="aspect-video rounded-2xl overflow-hidden mb-5 bg-slate-50 relative shadow-sm border-2 border-dashed border-slate-200 flex flex-col items-center justify-center group-hover:border-purple-200 transition-colors">
-                                    <div className="w-12 h-12 rounded-full bg-slate-100 flex items-center justify-center text-slate-400 mb-3 group-hover:text-purple-500 group-hover:bg-purple-50 transition-colors">
-                                        <Layout size={24} />
+                            {/* Card 2: Process Page (Image Ready) */}
+                            <div className="group cursor-pointer relative">
+                                <div className="aspect-video rounded-2xl overflow-hidden mb-5 bg-slate-100 relative shadow-md group-hover:shadow-xl group-hover:-translate-y-1 transition-all duration-500 border border-slate-200">
+                                    <div className="absolute inset-0 bg-slate-900/0 group-hover:bg-slate-900/10 transition-colors z-10"></div>
+                                    <img
+                                        src="/images/prestige-process.png"
+                                        alt="Prestige Build Process Page"
+                                        className="w-full h-full object-cover object-top transform group-hover:scale-105 transition-transform duration-700"
+                                    />
+                                    <div className="absolute bottom-4 right-4 z-20 w-8 h-8 bg-white/90 backdrop-blur rounded-full flex items-center justify-center text-slate-900 opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-2 group-hover:translate-y-0 shadow-sm">
+                                        <ArrowRight size={14} />
                                     </div>
-                                    <span className="text-xs font-bold uppercase tracking-widest text-slate-400">Awaiting Image</span>
                                 </div>
                                 <h4 className="font-bold text-slate-900 mb-1 group-hover:text-purple-600 transition-colors text-lg">Process Page That Builds Trust</h4>
                                 <p className="text-sm text-slate-500">Step-by-step breakdown of what it's like to build or remodel with you</p>
