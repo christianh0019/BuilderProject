@@ -38,7 +38,7 @@ const Navbar: React.FC = () => {
         <div className="hidden md:flex items-center space-x-8">
 
 
-          {/* Services Dropdown */}
+          {/* Services Mega Menu */}
           <div className="relative group">
             <Link
               to="/services"
@@ -46,29 +46,77 @@ const Navbar: React.FC = () => {
             >
               Services <ChevronDown size={16} className="group-hover:rotate-180 transition-transform duration-200" />
             </Link>
-            <div className="absolute top-full -left-4 w-64 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0">
-              <div className="bg-white rounded-xl shadow-xl border border-slate-100 overflow-hidden py-2">
-                <Link to="/services/website-design" className="block px-6 py-3 hover:bg-slate-50 transition-colors">
-                  <span className="block font-semibold text-slate-800">Website Design</span>
-                  <span className="text-xs text-slate-500">Premium custom builds</span>
-                </Link>
-                <Link to="/services/content-marketing" className="block px-6 py-3 hover:bg-slate-50 transition-colors">
-                  <span className="block font-semibold text-slate-800">Content Marketing</span>
-                  <span className="text-xs text-slate-500">SEO & Email Nurture</span>
-                </Link>
-                <Link to="/services/paid-advertising" className="block px-6 py-3 hover:bg-slate-50 transition-colors">
-                  <span className="block font-semibold text-slate-800">Paid Advertising</span>
-                  <span className="text-xs text-slate-500">Google & Meta Ads</span>
-                </Link>
-                <Link to="/services/funnel-development" className="block px-6 py-3 hover:bg-slate-50 transition-colors">
-                  <span className="block font-semibold text-slate-800">Funnel Development</span>
-                  <span className="text-xs text-slate-500">Qualify & Convert Leads</span>
-                </Link>
-                <div className="border-t border-slate-50 mt-2 pt-2">
-                  <Link to="/programs" className="block px-6 py-2 text-sm text-purple-600 font-bold hover:text-purple-800">
-                    View Our Programs &rarr;
-                  </Link>
+
+            <div className="absolute top-full -left-20 w-[800px] pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0">
+              <div className="bg-white rounded-2xl shadow-xl border border-slate-100 overflow-hidden grid grid-cols-12">
+
+                {/* Left Column: Services (4 cols) -> Expanded to 5 cols for better spacing */}
+                <div className="col-span-5 p-6 border-r border-slate-50 bg-slate-50/50">
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="text-xs font-bold text-slate-400 uppercase tracking-wider">Services</span>
+                    <Link to="/services" className="text-xs font-bold text-purple-600 hover:text-purple-700">View All</Link>
+                  </div>
+
+                  <div className="space-y-1">
+                    {[
+                      { name: "Website Design", desc: "Custom builds", link: "/services/website-design" },
+                      { name: "Content Marketing", desc: "SEO & Nurture", link: "/services/content-marketing" },
+                      { name: "Paid Advertising", desc: "Google & Meta Ads", link: "/services/paid-advertising" },
+                      { name: "Funnel Development", desc: "Lead Capture", link: "/services/funnel-development" },
+                      { name: "CRM Deployment", desc: "System Setup", link: "/services/crm-deployment" },
+                      { name: "Sales Processes", desc: "Closing Systems", link: "/services/sales-processes" },
+                    ].map((service, i) => (
+                      <Link key={i} to={service.link} className="block px-4 py-3 rounded-lg hover:bg-white hover:shadow-sm transition-all group/item">
+                        <span className="block font-semibold text-slate-800 group-hover/item:text-purple-700 transition-colors">{service.name}</span>
+                        <span className="text-xs text-slate-500">{service.desc}</span>
+                      </Link>
+                    ))}
+                  </div>
                 </div>
+
+                {/* Right Column: Programs (8 cols) -> 7 cols */}
+                <div className="col-span-7 p-8">
+                  <div className="flex items-center justify-between mb-6">
+                    <span className="text-xs font-bold text-slate-400 uppercase tracking-wider">Growth Programs</span>
+                    <Link to="/programs" className="text-xs font-bold text-purple-600 hover:text-purple-700">View All Programs</Link>
+                  </div>
+
+                  <div className="grid gap-4">
+                    {/* Program 1 */}
+                    <Link to="/programs/foundation" className="flex items-start gap-4 p-4 rounded-xl border border-slate-100 hover:border-purple-200 hover:bg-purple-50/30 transition-all group/card">
+                      <div className="w-10 h-10 rounded-lg bg-blue-50 flex items-center justify-center text-blue-600 group-hover/card:bg-blue-100 transition-colors shrink-0">
+                        <div className="font-bold">01</div>
+                      </div>
+                      <div>
+                        <h4 className="font-bold text-slate-900 mb-1 group-hover/card:text-purple-700">The Foundation</h4>
+                        <p className="text-sm text-slate-500 leading-snug">Complete digital infrastructure setup for builders starting to scale.</p>
+                      </div>
+                    </Link>
+
+                    {/* Program 2 */}
+                    <Link to="/programs/pipeline" className="flex items-start gap-4 p-4 rounded-xl border border-slate-100 hover:border-purple-200 hover:bg-purple-50/30 transition-all group/card">
+                      <div className="w-10 h-10 rounded-lg bg-purple-50 flex items-center justify-center text-purple-600 group-hover/card:bg-purple-100 transition-colors shrink-0">
+                        <div className="font-bold">02</div>
+                      </div>
+                      <div>
+                        <h4 className="font-bold text-slate-900 mb-1 group-hover/card:text-purple-700">The Pipeline</h4>
+                        <p className="text-sm text-slate-500 leading-snug">Aggressive lead generation and sales system for established firms.</p>
+                      </div>
+                    </Link>
+
+                    {/* Program 3 */}
+                    <Link to="/programs/partner" className="flex items-start gap-4 p-4 rounded-xl border border-slate-100 hover:border-purple-200 hover:bg-purple-50/30 transition-all group/card">
+                      <div className="w-10 h-10 rounded-lg bg-slate-900 flex items-center justify-center text-white group-hover/card:bg-slate-800 transition-colors shrink-0">
+                        <div className="font-bold">03</div>
+                      </div>
+                      <div>
+                        <h4 className="font-bold text-slate-900 mb-1 group-hover/card:text-purple-700">The Partner Program</h4>
+                        <p className="text-sm text-slate-500 leading-snug">Full-service fractional CMO & growth team integration.</p>
+                      </div>
+                    </Link>
+                  </div>
+                </div>
+
               </div>
             </div>
           </div>
