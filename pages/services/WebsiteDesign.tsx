@@ -97,9 +97,9 @@ const WebsiteDesign: React.FC = () => {
                                     <svg width="100" height="100" viewBox="0 0 24 24" fill="currentColor" className="text-purple-600"><path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z" /></svg>
                                 </div>
                                 <p className="text-lg text-slate-900 font-medium mb-6">
-                                    Our websites convert at an average of 3.2%. That's 3x higher.
+                                    Our websites convert at an average of 2.5%. That's 6x higher.
                                 </p>
-                                <div className="text-4xl font-bold text-purple-600 mb-2">3.2%</div>
+                                <div className="text-4xl font-bold text-purple-600 mb-2">2.5%</div>
                                 <div className="text-sm uppercase tracking-wider text-purple-700 font-bold">BuilderProject Average</div>
                             </div>
                         </div>
@@ -123,7 +123,7 @@ const WebsiteDesign: React.FC = () => {
                             Why Your Website Isn't Converting <br />(And What Actually Works)
                         </h2>
                         <p className="text-lg text-slate-600 mb-8">
-                            So what makes the difference between a website that converts at less than 1% and one that converts at 3.2%? It comes down to <strong>replicating what happens when a referral walks someone through your work.</strong>
+                            So what makes the difference between a website that converts at less than 1% and one that converts at 2.5%? It comes down to <strong>replicating what happens when a referral walks someone through your work.</strong>
                         </p>
                     </div>
 
