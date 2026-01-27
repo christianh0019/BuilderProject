@@ -298,8 +298,17 @@ const FunnelDevelopment: React.FC = () => {
                         <div className="grid md:grid-cols-2 gap-10">
                             {/* Qual 1: Custom Home App (Was Project App) */}
                             <div className="group relative bg-white p-8 rounded-3xl shadow-sm border border-slate-100 ring-1 ring-slate-200 hover:shadow-xl transition-all duration-300">
-                                <div className="aspect-[16/9] rounded-xl overflow-hidden mb-8 relative bg-slate-900 flex items-center justify-center shadow-inner">
-                                    <CheckCircle size={64} className="text-purple-400" />
+                                <div className="aspect-[16/9] rounded-xl overflow-hidden mb-8 relative bg-slate-900 shadow-inner group-hover:shadow-md transition-all">
+                                    <iframe
+                                        width="100%"
+                                        height="100%"
+                                        src="https://www.youtube.com/embed/5yOT5oYsd3g"
+                                        title="Custom Home App Preview"
+                                        frameBorder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowFullScreen
+                                        className="absolute inset-0 w-full h-full"
+                                    ></iframe>
                                 </div>
                                 <div className="pl-2">
                                     <h4 className="text-2xl font-serif font-bold text-slate-900 mb-3">
