@@ -50,8 +50,8 @@ const MainLayout = () => {
         <Outlet />
       </main>
       <Footer />
-      <BookPopup />
-      <SocialProofWidget />
+      {/* <BookPopup /> */}
+      {/* <SocialProofWidget /> */}
       <ChatWidget />
     </div>
   );
