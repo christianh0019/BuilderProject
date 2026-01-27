@@ -158,9 +158,9 @@ const Home: React.FC = () => {
 
             <RevealOnScroll delay={100}>
               <h1 className="text-5xl lg:text-7xl font-serif font-bold text-slate-900 leading-[1.1] mb-10 tracking-tight">
-                We help custom home builders <br className="hidden md:block" /> and remodelers <br className="hidden md:block" />
+                Digital Marketing For <br className="hidden md:block" />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-700 via-fuchsia-600 to-pink-600">
-                  land premium projects.
+                  Custom Home Builders & Remodelers
                 </span>
               </h1>
             </RevealOnScroll>
