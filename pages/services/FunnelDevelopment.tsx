@@ -13,7 +13,6 @@ const FunnelDevelopment: React.FC = () => {
     return (
         <div className="pt-20">
             {/* Hero Section */}
-            {/* Hero Section */}
             <section className="relative bg-[#0F172A] text-white pt-32 pb-32 overflow-hidden">
                 {/* Background Effects */}
                 <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-purple-900/20 rounded-full blur-[120px] pointer-events-none mix-blend-screen animate-pulse"></div>
@@ -52,7 +51,7 @@ const FunnelDevelopment: React.FC = () => {
                         <div className="relative z-10 transform transition-all duration-700 hover:scale-[1.01]">
                             <div className="relative mx-auto bg-slate-900 rounded-t-[1rem] md:rounded-t-[1.5rem] p-2 shadow-[0_20px_50px_-12px_rgba(0,0,0,0.5)] border border-slate-800 ring-1 ring-white/10 w-[90%] md:w-full">
                                 <div className="bg-slate-950 rounded-[0.5rem] md:rounded-[1rem] overflow-hidden aspect-[16/10] relative">
-                                    <img src="/images/funnel-hero-desktop-v2.png" alt="Desktop Website Preview" className="w-full h-full object-cover object-top" />
+                                    <img src="/images/funnel-hero-desktop-v3.png" alt="Desktop Website Preview" className="w-full h-full object-cover object-top" />
                                     {/* Reflection/Sheen */}
                                     <div className="absolute inset-0 bg-gradient-to-tr from-white/5 to-transparent pointer-events-none"></div>
                                 </div>
@@ -238,8 +237,17 @@ const FunnelDevelopment: React.FC = () => {
                         <div className="grid md:grid-cols-2 gap-10">
                             {/* Nurture 1: Budget Calculator */}
                             <div className="group relative bg-white p-8 rounded-3xl shadow-sm border border-slate-100 hover:shadow-xl transition-all duration-300">
-                                <div className="aspect-[16/9] rounded-xl overflow-hidden mb-8 relative bg-slate-100 flex items-center justify-center shadow-inner">
-                                    <BarChart size={64} className="text-slate-300" />
+                                <div className="aspect-[16/9] rounded-xl overflow-hidden mb-8 relative bg-slate-100 shadow-inner group-hover:shadow-md transition-all">
+                                    <iframe
+                                        width="100%"
+                                        height="100%"
+                                        src="https://www.youtube.com/embed/O3z4Eg-j8eg"
+                                        title="Budget Calculator Demo"
+                                        frameBorder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowFullScreen
+                                        className="absolute inset-0 w-full h-full"
+                                    ></iframe>
                                 </div>
                                 <div className="pl-2">
                                     <h4 className="text-2xl font-serif font-bold text-slate-900 mb-3">
