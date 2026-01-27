@@ -383,21 +383,59 @@ const FunnelDevelopment: React.FC = () => {
                                 ))}
                             </ul>
                         </div>
-                        <div className="bg-slate-800 rounded-2xl p-8 border border-slate-700 relative">
-                            {/* Abstract Code Visualization */}
-                            <div className="font-mono text-sm space-y-2 opacity-80">
-                                <div className="text-purple-400">const <span className="text-yellow-400">handleLead</span> = (prospect) ={'>'} {'{'}</div>
-                                <div className="pl-4 text-blue-400">if (prospect.isReadyToBuild) {'{'}</div>
-                                <div className="pl-8 text-green-400">return redirect("/booking");</div>
-                                <div className="pl-4 text-blue-400">{'}'} else {'{'}</div>
-                                <div className="pl-8 text-slate-400">{/* Nurture the research phase */}</div>
-                                <div className="pl-8 text-white">sendEmail("Budget_Guide_PDF");</div>
-                                <div className="pl-8 text-white">addToAudience("Remarketing_30_Days");</div>
-                                <div className="pl-4 text-blue-400">{'}'}</div>
-                                <div className="text-purple-400">{'}'};</div>
+                        <div className="relative">
+                            {/* Comparison Container */}
+                            <div className="grid grid-cols-2 gap-4">
+                                {/* Left: Generic Form */}
+                                <div className="bg-slate-800 rounded-xl p-4 border border-slate-700 opacity-50 scale-90 origin-right">
+                                    <div className="h-4 w-24 bg-slate-700 rounded mb-4"></div>
+                                    <div className="space-y-3">
+                                        <div className="h-8 bg-slate-700/50 rounded border border-slate-700 w-full"></div>
+                                        <div className="h-8 bg-slate-700/50 rounded border border-slate-700 w-full"></div>
+                                        <div className="h-20 bg-slate-700/50 rounded border border-slate-700 w-full"></div>
+                                        <div className="h-8 bg-slate-600 rounded w-full mt-2"></div>
+                                    </div>
+                                    <div className="mt-4 text-center">
+                                        <span className="text-red-400 text-xs font-bold uppercase tracking-wider">Generic Form</span>
+                                    </div>
+                                </div>
+
+                                {/* Right: Funnel */}
+                                <div className="bg-white rounded-xl p-4 border-2 border-purple-500 shadow-[0_0_30px_rgba(168,85,247,0.2)] relative z-10 transform scale-110 -translate-x-4">
+                                    <div className="flex justify-between items-center mb-6">
+                                        <div className="h-2 w-16 bg-purple-200 rounded-full overflow-hidden">
+                                            <div className="h-full w-2/3 bg-purple-600"></div>
+                                        </div>
+                                        <span className="text-xs font-bold text-purple-600">Step 2 of 3</span>
+                                    </div>
+
+                                    <div className="mb-6">
+                                        <div className="text-slate-900 font-bold mb-4 text-sm">What's your project budget?</div>
+                                        <div className="space-y-2">
+                                            <div className="p-3 rounded-lg border border-purple-200 bg-purple-50 text-purple-700 text-sm font-medium flex justify-between items-center cursor-pointer">
+                                                $1M - $2M
+                                                <div className="w-4 h-4 rounded-full bg-purple-600 border border-purple-600 flex items-center justify-center">
+                                                    <div className="w-1.5 h-1.5 bg-white rounded-full"></div>
+                                                </div>
+                                            </div>
+                                            <div className="p-3 rounded-lg border border-slate-200 text-slate-500 text-sm hover:border-purple-200 transition-colors cursor-pointer">
+                                                $2M - $5M
+                                            </div>
+                                            <div className="p-3 rounded-lg border border-slate-200 text-slate-500 text-sm hover:border-purple-200 transition-colors cursor-pointer">
+                                                $5M+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div className="text-center">
+                                        <span className="text-purple-600 text-xs font-bold uppercase tracking-wider">Smart Funnel</span>
+                                    </div>
+                                </div>
                             </div>
-                            <div className="absolute -bottom-6 -right-6 bg-gradient-to-r from-purple-600 to-blue-600 px-6 py-3 rounded-lg shadow-xl text-white font-bold">
-                                Automated Sales Logic
+
+                            {/* Arrow */}
+                            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 bg-slate-900 rounded-full p-2 border border-slate-700">
+                                <ArrowRight className="text-white w-4 h-4" />
                             </div>
                         </div>
                     </div>
