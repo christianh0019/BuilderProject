@@ -251,23 +251,8 @@ const FunnelDevelopment: React.FC = () => {
                                 </div>
                             </div>
 
-                            {/* Nurture 2: Style Quiz */}
+                            {/* Nurture 2: Planning Guide */}
                             <div className="group relative bg-white p-8 rounded-3xl shadow-sm border border-slate-100 hover:shadow-xl transition-all duration-300">
-                                <div className="aspect-[16/9] rounded-xl overflow-hidden mb-8 relative bg-slate-100 flex items-center justify-center shadow-inner">
-                                    <Layout size={64} className="text-slate-300" />
-                                </div>
-                                <div className="pl-2">
-                                    <h4 className="text-2xl font-serif font-bold text-slate-900 mb-3">
-                                        Design Style Quiz
-                                    </h4>
-                                    <p className="text-slate-500 leading-relaxed">
-                                        "What Custom Home Style Fits Your Lifestyle?" Interactive quiz recommends styles and shows your portfolio.
-                                    </p>
-                                </div>
-                            </div>
-
-                            {/* Nurture 3: Planning Guide */}
-                            <div className="group relative bg-white p-8 rounded-3xl shadow-sm border border-slate-100 hover:shadow-xl transition-all duration-300 md:col-span-2 md:w-1/2 md:mx-auto">
                                 <div className="aspect-[16/9] rounded-xl overflow-hidden mb-8 relative bg-slate-100 flex items-center justify-center shadow-inner">
                                     <FileText size={64} className="text-slate-300" />
                                 </div>
@@ -294,14 +279,14 @@ const FunnelDevelopment: React.FC = () => {
 
                     <div className="max-w-6xl mx-auto mb-20">
                         <div className="grid md:grid-cols-2 gap-10">
-                            {/* Qual 1: Project App */}
+                            {/* Qual 1: Custom Home App (Was Project App) */}
                             <div className="group relative bg-white p-8 rounded-3xl shadow-sm border border-slate-100 ring-1 ring-slate-200 hover:shadow-xl transition-all duration-300">
                                 <div className="aspect-[16/9] rounded-xl overflow-hidden mb-8 relative bg-slate-900 flex items-center justify-center shadow-inner">
                                     <CheckCircle size={64} className="text-purple-400" />
                                 </div>
                                 <div className="pl-2">
                                     <h4 className="text-2xl font-serif font-bold text-slate-900 mb-3">
-                                        Project Application
+                                        Custom Home Application
                                     </h4>
                                     <p className="text-slate-500 leading-relaxed">
                                         Full qualification survey asking budget, land status, timeline, location. Only qualified prospects see your calendar.
@@ -320,21 +305,6 @@ const FunnelDevelopment: React.FC = () => {
                                     </h4>
                                     <p className="text-slate-500 leading-relaxed">
                                         Tailored for remodelers. Qualifies on project scope, budget, timeline, and property ownership.
-                                    </p>
-                                </div>
-                            </div>
-
-                            {/* Qual 3: Design-Build App */}
-                            <div className="group relative bg-white p-8 rounded-3xl shadow-sm border border-slate-100 ring-1 ring-slate-200 hover:shadow-xl transition-all duration-300 md:col-span-2 md:w-1/2 md:mx-auto">
-                                <div className="aspect-[16/9] rounded-xl overflow-hidden mb-8 relative bg-slate-900 flex items-center justify-center shadow-inner">
-                                    <Compass size={64} className="text-green-400" />
-                                </div>
-                                <div className="pl-2">
-                                    <h4 className="text-2xl font-serif font-bold text-slate-900 mb-3">
-                                        Design-Build Application
-                                    </h4>
-                                    <p className="text-slate-500 leading-relaxed">
-                                        Combined qualification for builders offering design services. Filters on budget, design preferences, timeline.
                                     </p>
                                 </div>
                             </div>
