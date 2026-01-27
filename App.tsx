@@ -14,6 +14,7 @@ import Contact from './pages/Contact';
 import WebsiteDesign from './pages/services/WebsiteDesign';
 import ContentMarketing from './pages/services/ContentMarketing';
 import PaidAdvertising from './pages/services/PaidAdvertising';
+import FunnelDevelopment from './pages/services/FunnelDevelopment';
 import ScrollToTop from './components/ScrollToTop';
 import BookPopup from './components/BookPopup';
 import { HelmetProvider } from 'react-helmet-async';
@@ -76,6 +77,7 @@ const App: React.FC = () => {
             <Route path="/services/website-design" element={<WebsiteDesign />} />
             <Route path="/services/content-marketing" element={<ContentMarketing />} />
             <Route path="/services/paid-advertising" element={<PaidAdvertising />} />
+            <Route path="/services/funnel-development" element={<FunnelDevelopment />} />
             <Route path="/book" element={<Book />} />
             <Route path="/case-studies" element={<CaseStudies />} />
             <Route path="/case-studies/:slug" element={<CaseStudyDetail />} />

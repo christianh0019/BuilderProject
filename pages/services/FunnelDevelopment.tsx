@@ -1,0 +1,595 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { ArrowRight, CheckCircle, X, ChevronDown, ChevronUp, Compass, PenTool, Rocket, Users, Layout, Mail, Magnet, Filter, BarChart, FileText } from 'lucide-react';
+import BrowserFrame from '../../components/ui/BrowserFrame';
+
+const FunnelDevelopment: React.FC = () => {
+    const [openFaq, setOpenFaq] = React.useState<number | null>(null);
+
+    const toggleFaq = (index: number) => {
+        setOpenFaq(openFaq === index ? null : index);
+    };
+
+    return (
+        <div className="pt-20">
+            {/* Hero Section */}
+            {/* Hero Section */}
+            <section className="relative bg-[#0F172A] text-white pt-32 pb-32 overflow-hidden">
+                {/* Background Effects */}
+                <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-purple-900/20 rounded-full blur-[120px] pointer-events-none mix-blend-screen animate-pulse"></div>
+                <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-blue-900/10 rounded-full blur-[100px] pointer-events-none mix-blend-screen"></div>
+
+                <div className="container mx-auto px-6 relative z-10">
+                    <div className="max-w-5xl mx-auto text-center mb-20">
+                        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-900/30 border border-purple-500/30 mb-8 backdrop-blur-sm">
+                            <span className="flex h-2 w-2 rounded-full bg-purple-400 animate-pulse"></span>
+                            <span className="text-sm font-medium text-purple-200 uppercase tracking-widest">Lead Capture & Qualification</span>
+                        </div>
+
+                        <h1 className="text-5xl md:text-7xl font-serif font-bold mb-8 leading-tight tracking-tight">
+                            Funnel Development & Lead Capture Systems <br />
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400">That Fill Your Pipeline Automatically</span>
+                        </h1>
+
+                        <p className="text-xl md:text-2xl text-slate-300 mb-10 max-w-3xl mx-auto leading-relaxed font-light">
+                            Stop losing 98% of your website visitors. Capture early-stage researchers and filter for high-value ready-to-build clients.
+                        </p>
+
+                        <div className="flex flex-col sm:flex-row gap-5 justify-center items-center">
+                            <Link to="/contact" className="group relative inline-flex items-center justify-center px-8 py-4 text-base font-bold text-white transition-all duration-200 bg-purple-600 font-pj rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-600 hover:bg-purple-700 shadow-[0_0_20px_rgba(168,85,247,0.4)] hover:shadow-[0_0_30px_rgba(168,85,247,0.6)]">
+                                Start Your Project
+                                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                            </Link>
+                            <Link to="/case-studies" className="inline-flex items-center justify-center px-8 py-4 text-base font-bold text-slate-300 transition-all duration-200 bg-transparent border border-slate-700 rounded-full hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-slate-700 hover:text-white hover:border-slate-500">
+                                View Examples
+                            </Link>
+                        </div>
+                    </div>
+
+                    {/* Device Mockup Graphic */}
+                    <div className="relative max-w-6xl mx-auto perspective-[1000px] group">
+                        {/* Laptop */}
+                        <div className="relative z-10 transform transition-all duration-700 hover:scale-[1.01]">
+                            <div className="relative mx-auto bg-slate-900 rounded-t-[1rem] md:rounded-t-[1.5rem] p-2 shadow-[0_20px_50px_-12px_rgba(0,0,0,0.5)] border border-slate-800 ring-1 ring-white/10 w-[90%] md:w-full">
+                                <div className="bg-slate-950 rounded-[0.5rem] md:rounded-[1rem] overflow-hidden aspect-[16/10] relative">
+                                    <img src="/images/hero-desktop-new.png" alt="Desktop Website Preview" className="w-full h-full object-cover object-top" />
+                                    {/* Reflection/Sheen */}
+                                    <div className="absolute inset-0 bg-gradient-to-tr from-white/5 to-transparent pointer-events-none"></div>
+                                </div>
+                            </div>
+                            {/* Base */}
+                            <div className="h-4 md:h-6 bg-slate-800 rounded-b-xl mx-auto w-[98%] md:w-[102%] shadow-lg mt-[-1px]"></div>
+                        </div>
+
+                        {/* Phone Overlay */}
+                        <div className="absolute -bottom-6 -right-2 md:-bottom-12 md:-right-8 w-[100px] md:w-[220px] z-20 transform rotate-[-3deg] group-hover:rotate-0 transition-all duration-500 group-hover:scale-105 group-hover:translate-y-[-10px]">
+                            <div className="bg-slate-900 rounded-[1.5rem] md:rounded-[2.5rem] p-1 md:p-2 shadow-[0_20px_40px_-12px_rgba(0,0,0,0.5)] border border-slate-800 ring-1 ring-white/10">
+                                <div className="bg-slate-950 rounded-[1rem] md:rounded-[2rem] overflow-hidden aspect-[9/19] relative">
+                                    <img src="/images/hero-mobile-1.png" alt="Mobile Website Preview" className="w-full h-full object-cover object-top" />
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Abstract background glow */}
+                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-full bg-purple-500/10 blur-[120px] -z-10 rounded-full pointer-events-none"></div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Conversion Stats Section */}
+            <section className="py-24 bg-white">
+                <div className="container mx-auto px-6">
+                    <div className="max-w-4xl mx-auto">
+                        <h2 className="text-3xl md:text-4xl font-serif font-bold text-slate-900 mb-8 text-center">
+                            Stop Hoping, Start Capturing
+                        </h2>
+
+                        <div className="grid md:grid-cols-2 gap-12 items-center mb-12">
+                            <div className="bg-slate-50 p-8 rounded-2xl border border-slate-100">
+                                <p className="text-lg text-slate-600 mb-6">
+                                    Typical "Contact Us" forms convert at less than 1%. Visitors aren't ready to commit to a meeting yet, so they leave.
+                                </p>
+                                <div className="text-4xl font-bold text-slate-400 mb-2">0.5%</div>
+                                <div className="text-sm uppercase tracking-wider text-slate-500 font-bold">Generic Contact Form</div>
+                            </div>
+                            <div className="bg-purple-50 p-8 rounded-2xl border border-purple-100 relative overflow-hidden">
+                                <div className="absolute top-0 right-0 p-4 opacity-10">
+                                    <svg width="100" height="100" viewBox="0 0 24 24" fill="currentColor" className="text-purple-600"><path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z" /></svg>
+                                </div>
+                                <p className="text-lg text-slate-900 font-medium mb-6">
+                                    Interactive value-first funnels engage researchers & convert them into leads.
+                                </p>
+                                <div className="text-4xl font-bold text-purple-600 mb-2">5-8%</div>
+                                <div className="text-sm uppercase tracking-wider text-purple-700 font-bold">Interactive Funnel</div>
+                            </div>
+                        </div>
+
+                        <p className="text-lg text-slate-600 leading-relaxed text-center">
+                            Visitors spend <strong>4x longer</strong> engaging with interactive tools (like budget calculators or quizzes) than they do reading static text. By giving value first, you earn the right to ask for their contact info.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            {/* Why Visual (Trust Gap) */}
+            <section className="py-24 bg-slate-50 border-y border-slate-200">
+                <div className="container mx-auto px-6">
+                    <div className="max-w-4xl mx-auto mb-16 text-center">
+                        <span className="text-purple-600 font-bold tracking-wider text-sm uppercase mb-4 block">The "Trust Gap"</span>
+                        <h2 className="text-3xl md:text-5xl font-serif font-bold text-slate-900 mb-6">
+                            Why Your "Contact Us" Page Is Failing <br />(And What Actually Works)
+                        </h2>
+                        <p className="text-lg text-slate-600 mb-8">
+                            Most prospects aren't ready to "book a consultation" yet. They are researching. When you force them to fill out a generic form, you lose them.
+                        </p>
+                    </div>
+
+                    <div className="max-w-6xl mx-auto">
+                        <div className="grid md:grid-cols-2 gap-8 relative">
+                            {/* VS Badge (Desktop) */}
+                            <div className="hidden md:flex absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-white rounded-full items-center justify-center font-black text-slate-900 shadow-xl border-4 border-slate-50 z-10 text-xl">
+                                VS
+                            </div>
+
+                            {/* Card 1: Generic Form */}
+                            <div className="bg-white p-10 rounded-[2.5rem] shadow-xl border border-slate-100 flex flex-col relative overflow-hidden group hover:-translate-y-2 transition-transform duration-500">
+                                <div className="absolute top-0 left-0 w-full h-2 bg-slate-200 group-hover:bg-slate-300 transition-colors"></div>
+                                <div className="w-16 h-16 bg-slate-100 rounded-2xl flex items-center justify-center text-slate-500 mb-8 group-hover:scale-110 transition-transform duration-500">
+                                    <Mail size={32} />
+                                </div>
+                                <h3 className="text-2xl font-serif font-bold text-slate-900 mb-2">1. The "Contact Us" Black Hole</h3>
+                                <p className="text-slate-500 mb-8 text-sm uppercase tracking-wider font-bold">Standard Agency Approach</p>
+
+                                <ul className="space-y-6 flex-1">
+                                    <li className="flex gap-4 items-start">
+                                        <div className="w-6 h-6 rounded-full bg-slate-100 flex items-center justify-center text-slate-500 shrink-0 mt-0.5"><X size={14} /></div>
+                                        <p className="text-slate-600"><strong>Asks for too much too soon.</strong> Expects a marriage proposal on the first date.</p>
+                                    </li>
+                                    <li className="flex gap-4 items-start">
+                                        <div className="w-6 h-6 rounded-full bg-slate-100 flex items-center justify-center text-slate-500 shrink-0 mt-0.5"><X size={14} /></div>
+                                        <p className="text-slate-600"><strong>Zero immediate value.</strong> The user gives their info and gets nothing but "we'll get back to you".</p>
+                                    </li>
+                                    <li className="flex gap-4 items-start">
+                                        <div className="w-6 h-6 rounded-full bg-slate-100 flex items-center justify-center text-slate-500 shrink-0 mt-0.5"><X size={14} /></div>
+                                        <p className="text-slate-600"><strong>High friction.</strong> Open text fields make prospects anxious about what to write.</p>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            {/* Card 2: Interactive Funnel */}
+                            <div className="bg-slate-900 p-10 rounded-[2.5rem] shadow-2xl shadow-purple-900/20 border border-slate-800 flex flex-col relative overflow-hidden group hover:-translate-y-2 transition-transform duration-500">
+                                <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-purple-500 to-pink-500"></div>
+                                {/* Shine Effect */}
+                                <div className="absolute top-0 right-0 w-[300px] h-[300px] bg-purple-500/10 rounded-full blur-[80px] pointer-events-none"></div>
+
+                                <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center text-white mb-8 border border-white/10 group-hover:scale-110 transition-transform duration-500">
+                                    <Magnet size={32} />
+                                </div>
+                                <h3 className="text-2xl font-serif font-bold text-white mb-2">2. The Value-First Exchange</h3>
+                                <p className="text-purple-300 mb-8 text-sm uppercase tracking-wider font-bold">BuilderProject Funnel Approach</p>
+
+                                <ul className="space-y-6 flex-1 relative z-10">
+                                    <li className="flex gap-4 items-start">
+                                        <div className="w-6 h-6 rounded-full bg-green-500 flex items-center justify-center text-white shrink-0 mt-0.5 shadow-lg shadow-green-500/30"><CheckCircle size={14} /></div>
+                                        <p className="text-slate-300"><strong>Gives value first.</strong> Calculators, guides, and assessments give them a reason to engage.</p>
+                                    </li>
+                                    <li className="flex gap-4 items-start">
+                                        <div className="w-6 h-6 rounded-full bg-green-500 flex items-center justify-center text-white shrink-0 mt-0.5 shadow-lg shadow-green-500/30"><CheckCircle size={14} /></div>
+                                        <p className="text-slate-300"><strong>Captures naturally.</strong> Contact info is just the final step to get their results.</p>
+                                    </li>
+                                    <li className="flex gap-4 items-start">
+                                        <div className="w-6 h-6 rounded-full bg-green-500 flex items-center justify-center text-white shrink-0 mt-0.5 shadow-lg shadow-green-500/30"><CheckCircle size={14} /></div>
+                                        <p className="text-slate-300"><strong>Qualifies automatically.</strong> We know their budget, timeline, and lot status before you ever speak.</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Live Examples */}
+            <section className="py-24 bg-white">
+                <div className="container mx-auto px-6">
+                    <div className="max-w-4xl mx-auto text-center mb-16">
+                        <h2 className="text-3xl md:text-5xl font-serif font-bold text-slate-900 mb-6">
+                            See High-Converting Funnels in Action
+                        </h2>
+                        <p className="text-lg text-slate-600">
+                            We build tools that your prospects actually want to use.
+                        </p>
+                    </div>
+
+                    <div className="max-w-6xl mx-auto mb-20">
+                        <div className="grid lg:grid-cols-3 gap-8 mb-16">
+                            {/* Project 1 */}
+                            <div className="group cursor-pointer relative">
+                                <div className="aspect-video rounded-2xl overflow-hidden mb-6 relative shadow-lg group-hover:shadow-2xl group-hover:-translate-y-2 transition-all duration-500 ease-out bg-slate-100 flex items-center justify-center">
+                                    <FileText size={48} className="text-slate-300" />
+                                </div>
+                                {/* Meta Info Below */}
+                                <div className="pl-2">
+                                    <h4 className="text-xl font-serif font-bold text-slate-900 group-hover:text-purple-600 transition-colors mb-2">
+                                        Custom Home Budget Calculator
+                                    </h4>
+                                    <p className="text-slate-500 text-sm">
+                                        Instant value finding out what they can afford.
+                                    </p>
+                                </div>
+                            </div>
+
+                            {/* Project 2 */}
+                            <div className="group cursor-pointer relative">
+                                <div className="aspect-video rounded-2xl overflow-hidden mb-6 relative shadow-lg group-hover:shadow-2xl group-hover:-translate-y-2 transition-all duration-500 ease-out bg-slate-100 flex items-center justify-center">
+                                    <Filter size={48} className="text-slate-300" />
+                                </div>
+                                <div className="pl-2">
+                                    <h4 className="text-xl font-serif font-bold text-slate-900 group-hover:text-purple-600 transition-colors mb-2">
+                                        Lot Fit Assessment
+                                    </h4>
+                                    <p className="text-slate-500 text-sm">
+                                        "Does this floor plan fit on my lot?" Interactive tool.
+                                    </p>
+                                </div>
+                            </div>
+
+                            {/* Project 3 */}
+                            <div className="group cursor-pointer relative">
+                                <div className="aspect-video rounded-2xl overflow-hidden mb-6 relative shadow-lg group-hover:shadow-2xl group-hover:-translate-y-2 transition-all duration-500 ease-out bg-slate-100 flex items-center justify-center">
+                                    <BarChart size={48} className="text-slate-300" />
+                                </div>
+                                <div className="pl-2">
+                                    <h4 className="text-xl font-serif font-bold text-slate-900 group-hover:text-purple-600 transition-colors mb-2">
+                                        Renovation ROI Estimator
+                                    </h4>
+                                    <p className="text-slate-500 text-sm">
+                                        Shows the potential value add of their remodel.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* AI Coding Tech */}
+            <section className="py-24 bg-slate-900 text-white">
+                <div className="container mx-auto px-6">
+                    <div className="max-w-4xl mx-auto text-center mb-16">
+                        <span className="text-purple-400 font-bold tracking-wider text-sm uppercase mb-4 block">Our Advantage</span>
+                        <h2 className="text-3xl md:text-5xl font-serif font-bold mb-6">
+                            Built With Logic, Not Just Form Fields
+                        </h2>
+                        <p className="text-lg text-slate-300">
+                            Stop using "dumb" contact forms. Our funnels are intelligent tools that think like your best salesperson.
+                        </p>
+                    </div>
+
+                    <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+                        <div className="space-y-6 text-slate-300">
+                            <p>
+                                Most agencies slap a generic WordPress contact form on your site and call it a day. That form creates friction and asks too much too soon.
+                            </p>
+                            <p className="text-white font-bold text-xl">
+                                We custom-code logic-based applications that guide the user through a qualification journey.
+                            </p>
+                            <p>
+                                This increases conversion rates because the user feels like they are using a helpful tool, not just submitting a request.
+                            </p>
+
+                            <ul className="space-y-4 pt-4">
+                                {[
+                                    "Conditional Logic - Ask questions based on previous answers",
+                                    "Instant Calculations - Give them a budget estimate in real-time",
+                                    "Automatic Qualification - Filter out leads that don't meet your criteria",
+                                    "CRM Integration - Push data directly to your sales pipeline",
+                                    "Mobile Optimized - Works perfectly on phones"
+                                ].map((item, i) => (
+                                    <li key={i} className="flex gap-3 text-slate-200">
+                                        <CheckCircle className="text-purple-500 shrink-0" size={20} />
+                                        <span>{item}</span>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                        <div className="bg-slate-800 rounded-2xl p-8 border border-slate-700 relative">
+                            {/* Abstract Code Visualization */}
+                            <div className="font-mono text-sm space-y-2 opacity-80">
+                                <div className="text-purple-400">const <span className="text-yellow-400">qualifyLead</span> = (prospect) ={'>'} {'{'}</div>
+                                <div className="pl-4 text-blue-400">if (prospect.budget {'>'} 1000000) {'{'}</div>
+                                <div className="pl-8 text-green-400">return "High Priority";</div>
+                                <div className="pl-4 text-blue-400">{'}'} else if (!prospect.hasLand) {'{'}</div>
+                                <div className="pl-8 text-white">sendNurtureSequence("Land Guide");</div>
+                                <div className="pl-4 text-blue-400">{'}'} else {'{'}</div>
+                                <div className="pl-8 text-white">bookConsultation();</div>
+                                <div className="pl-4 text-blue-400">{'}'}</div>
+                                <div className="text-purple-400">{'}'};</div>
+                            </div>
+                            <div className="absolute -bottom-6 -right-6 bg-gradient-to-r from-purple-600 to-blue-600 px-6 py-3 rounded-lg shadow-xl text-white font-bold">
+                                Automated Sales Logic
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Comparison Table */}
+            <section className="py-24 bg-slate-50">
+                <div className="container mx-auto px-6 max-w-6xl">
+                    <h2 className="text-3xl font-serif font-bold text-slate-900 mb-12 text-center">Why Funnels Beat Forms</h2>
+
+                    <div className="overflow-x-auto">
+                        <table className="w-full text-left bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-200">
+                            <thead className="bg-slate-50 border-b border-slate-200">
+                                <tr>
+                                    <th className="p-6 text-slate-500 font-bold uppercase text-sm tracking-wider">Criteria</th>
+                                    <th className="p-6 text-slate-500 font-bold uppercase text-sm tracking-wider">Generic Contact Form</th>
+                                    <th className="p-6 text-purple-600 font-bold uppercase text-sm tracking-wider bg-purple-50">BuilderProject Funnel</th>
+                                </tr>
+                            </thead>
+                            <tbody className="divide-y divide-slate-100">
+                                <tr>
+                                    <td className="p-6 font-bold text-slate-900">Lead Capture Rate</td>
+                                    <td className="p-6 text-slate-600">0.5% (Most leave without submitting)</td>
+                                    <td className="p-6 text-slate-900 font-medium bg-purple-50/30">5-8% (High engagement)</td>
+                                </tr>
+                                <tr>
+                                    <td className="p-6 font-bold text-slate-900">Qualification Logic</td>
+                                    <td className="p-6 text-slate-600">None. You get spam and unqualified leads.</td>
+                                    <td className="p-6 text-slate-900 font-medium bg-purple-50/30">Advanced. Filters out bad leads automatically.</td>
+                                </tr>
+                                <tr>
+                                    <td className="p-6 font-bold text-slate-900">CRM Integration</td>
+                                    <td className="p-6 text-slate-600">Basic email notification.</td>
+                                    <td className="p-6 text-slate-900 font-medium bg-purple-50/30">Direct sync to HubSpot, HighLevel, Buildertrend.</td>
+                                </tr>
+                                <tr>
+                                    <td className="p-6 font-bold text-slate-900">Follow-up Speed</td>
+                                    <td className="p-6 text-slate-600">Manual (When you get to it).</td>
+                                    <td className="p-6 text-slate-900 font-medium bg-purple-50/30">Instant. Automated SMS & Email nurture.</td>
+                                </tr>
+                                <tr>
+                                    <td className="p-6 font-bold text-slate-900">Mobile Experience</td>
+                                    <td className="p-6 text-slate-600">Tiny form fields, hard to type.</td>
+                                    <td className="p-6 text-slate-900 font-medium bg-purple-50/30">Tap-friendly, app-like experience.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            {/* Inclusions */}
+            <section className="py-32 bg-white relative overflow-hidden">
+                {/* Background decoration */}
+                <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
+                    <div className="absolute -top-24 -right-24 w-96 h-96 bg-purple-50 rounded-full blur-3xl opacity-50"></div>
+                    <div className="absolute top-1/2 -left-24 w-72 h-72 bg-blue-50 rounded-full blur-3xl opacity-50"></div>
+                </div>
+
+                <div className="container mx-auto px-6 relative z-10">
+                    <div className="text-center mb-20">
+                        <span className="text-purple-600 font-bold tracking-wider text-sm uppercase mb-4 block">Everything You Need</span>
+                        <h2 className="text-4xl md:text-5xl font-serif font-bold text-slate-900 mb-6">
+                            Included in Every Funnel Build
+                        </h2>
+                        <p className="text-xl text-slate-500 max-w-2xl mx-auto">
+                            We don't just build the form. We build the entire lead generation system.
+                        </p>
+                    </div>
+
+                    <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+                        {/* Card 1 */}
+                        <div className="group bg-white p-10 rounded-[2rem] border border-slate-100 shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 relative overflow-hidden">
+                            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-purple-500 to-indigo-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 bg-origin-border"></div>
+
+                            <div className="w-16 h-16 bg-purple-50 rounded-2xl flex items-center justify-center text-purple-600 mb-8 group-hover:scale-110 transition-transform duration-500">
+                                <Compass size={32} />
+                            </div>
+
+                            <h3 className="text-2xl font-serif font-bold text-slate-900 mb-6">Strategy & Offer Design</h3>
+                            <ul className="space-y-4">
+                                {[
+                                    "Hook Discovery - What will they trade info for?",
+                                    "Value Proposition Crafting",
+                                    "Logic & Branching Map",
+                                    "Offer Creation (PDF/Calculator/Quiz)"
+                                ].map((item, i) => (
+                                    <li key={i} className="flex gap-3 text-slate-600 text-sm font-medium items-start">
+                                        <div className="w-5 h-5 rounded-full bg-purple-100 flex items-center justify-center text-purple-600 shrink-0 mt-0.5">
+                                            <CheckCircle size={12} strokeWidth={3} />
+                                        </div>
+                                        {item}
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+
+                        {/* Card 2 */}
+                        <div className="group bg-slate-900 p-10 rounded-[2rem] shadow-2xl hover:-translate-y-2 transition-all duration-500 relative overflow-hidden text-white ring-1 ring-white/10">
+                            <div className="absolute top-0 right-0 w-64 h-64 bg-purple-500/10 rounded-full blur-[60px] pointer-events-none"></div>
+
+                            <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center text-white mb-8 border border-white/10 group-hover:scale-110 transition-transform duration-500">
+                                <Layout size={32} />
+                            </div>
+
+                            <h3 className="text-2xl font-serif font-bold text-white mb-6">Custom Development</h3>
+                            <ul className="space-y-4">
+                                {[
+                                    "Custom React-based application logic",
+                                    "Mobile-first, tap-friendly interface",
+                                    "Lightning fast performance",
+                                    "Seamless brand integration"
+                                ].map((item, i) => (
+                                    <li key={i} className="flex gap-3 text-slate-300 text-sm font-medium items-start">
+                                        <div className="w-5 h-5 rounded-full bg-green-500 flex items-center justify-center text-white shrink-0 mt-0.5 shadow-lg shadow-green-500/20">
+                                            <CheckCircle size={12} strokeWidth={3} />
+                                        </div>
+                                        {item}
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+
+                        {/* Card 3 */}
+                        <div className="group bg-white p-10 rounded-[2rem] border border-slate-100 shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 relative overflow-hidden">
+                            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-cyan-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 bg-origin-border"></div>
+
+                            <div className="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center text-blue-600 mb-8 group-hover:scale-110 transition-transform duration-500">
+                                <Users size={32} />
+                            </div>
+
+                            <h3 className="text-2xl font-serif font-bold text-slate-900 mb-6">CRM Integration & Nurture</h3>
+                            <ul className="space-y-4">
+                                {[
+                                    "Direct connection to your CRM",
+                                    "Admin notification setup",
+                                    "Auto-reply email templates",
+                                    "Lead data routing & tagging"
+                                ].map((item, i) => (
+                                    <li key={i} className="flex gap-3 text-slate-600 text-sm font-medium items-start">
+                                        <div className="w-5 h-5 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 shrink-0 mt-0.5">
+                                            <CheckCircle size={12} strokeWidth={3} />
+                                        </div>
+                                        {item}
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Process 2-3 Weeks (Dark Premium Timeline) */}
+            <section className="py-24 bg-slate-900 text-white relative overflow-hidden">
+                {/* Background Accents */}
+                <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-slate-700 to-transparent"></div>
+                <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-purple-900/20 rounded-full blur-[100px] pointer-events-none"></div>
+                <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-blue-900/10 rounded-full blur-[100px] pointer-events-none"></div>
+
+                <div className="container mx-auto px-6 max-w-6xl relative z-10">
+                    <div className="text-center mb-20">
+                        <span className="text-purple-400 font-bold tracking-wider text-sm uppercase mb-4 block">The Sprint</span>
+                        <h2 className="text-3xl md:text-5xl font-serif font-bold text-white mb-6">
+                            From Idea to Leads in 3 Weeks
+                        </h2>
+                        <p className="text-lg text-slate-400 max-w-2xl mx-auto">
+                            We move fast. You get a working funnel ready to fill your pipeline in less than a month.
+                        </p>
+                    </div>
+
+                    <div className="relative">
+                        {/* Connecting Line (Desktop) */}
+                        <div className="hidden md:block absolute top-12 left-0 w-full h-0.5 bg-slate-800"></div>
+
+                        <div className="grid md:grid-cols-3 gap-12">
+                            {/* Step 1 */}
+                            <div className="relative group">
+                                <div className="hidden md:flex absolute -top-12 left-1/2 -translate-x-1/2 w-6 h-6 bg-slate-900 border-4 border-slate-800 rounded-full items-center justify-center z-10 group-hover:border-purple-500 transition-colors duration-500">
+                                    <div className="w-1.5 h-1.5 bg-slate-600 rounded-full group-hover:bg-purple-400 transition-colors"></div>
+                                </div>
+                                <div className="bg-slate-800/50 p-8 rounded-2xl border border-slate-700 hover:border-purple-500/50 transition-all duration-500 hover:shadow-[0_0_30px_rgba(168,85,247,0.1)] h-full">
+                                    <div className="w-14 h-14 bg-slate-800 rounded-xl flex items-center justify-center text-purple-400 mb-6 border border-slate-700 group-hover:scale-110 transition-transform duration-500 shadow-lg">
+                                        <Compass size={28} />
+                                    </div>
+                                    <h3 className="text-xl font-bold text-white mb-2">Week 1: Strategy & Logic</h3>
+                                    <p className="text-slate-400 mb-6 text-sm leading-relaxed">We map out the entire conversion flow, define the qualifying questions, and design the "hook" that stops the scroll.</p>
+                                    <div className="p-4 bg-slate-900/50 rounded-lg text-xs font-mono text-purple-300 border border-slate-800 flex items-center gap-2">
+                                        <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
+                                        Output: Flow Diagram
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Step 2 */}
+                            <div className="relative group">
+                                <div className="hidden md:flex absolute -top-12 left-1/2 -translate-x-1/2 w-6 h-6 bg-slate-900 border-4 border-slate-800 rounded-full items-center justify-center z-10 group-hover:border-blue-500 transition-colors duration-500 delay-100">
+                                    <div className="w-1.5 h-1.5 bg-slate-600 rounded-full group-hover:bg-blue-400 transition-colors"></div>
+                                </div>
+                                <div className="bg-slate-800/50 p-8 rounded-2xl border border-slate-700 hover:border-blue-500/50 transition-all duration-500 hover:shadow-[0_0_30px_rgba(59,130,246,0.1)] h-full">
+                                    <div className="w-14 h-14 bg-slate-800 rounded-xl flex items-center justify-center text-blue-400 mb-6 border border-slate-700 group-hover:scale-110 transition-transform duration-500 shadow-lg">
+                                        <PenTool size={28} />
+                                    </div>
+                                    <h3 className="text-xl font-bold text-white mb-2">Week 2: Build & Integrate</h3>
+                                    <p className="text-slate-400 mb-6 text-sm leading-relaxed">Our team builds the custom application, styles it to match your brand, and hooks it up to your CRM.</p>
+                                    <div className="p-4 bg-slate-900/50 rounded-lg text-xs font-mono text-blue-300 border border-slate-800 flex items-center gap-2">
+                                        <div className="w-2 h-2 rounded-full bg-yellow-500"></div>
+                                        Output: Staging Link
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Step 3 */}
+                            <div className="relative group">
+                                <div className="hidden md:flex absolute -top-12 left-1/2 -translate-x-1/2 w-6 h-6 bg-slate-900 border-4 border-slate-800 rounded-full items-center justify-center z-10 group-hover:border-green-500 transition-colors duration-500 delay-200">
+                                    <div className="w-1.5 h-1.5 bg-slate-600 rounded-full group-hover:bg-green-400 transition-colors"></div>
+                                </div>
+                                <div className="bg-slate-800/50 p-8 rounded-2xl border border-slate-700 hover:border-green-500/50 transition-all duration-500 hover:shadow-[0_0_30px_rgba(34,197,94,0.1)] h-full">
+                                    <div className="w-14 h-14 bg-slate-800 rounded-xl flex items-center justify-center text-green-400 mb-6 border border-slate-700 group-hover:scale-110 transition-transform duration-500 shadow-lg">
+                                        <Rocket size={28} />
+                                    </div>
+                                    <h3 className="text-xl font-bold text-white mb-2">Week 3: Testing & Launch</h3>
+                                    <p className="text-slate-400 mb-6 text-sm leading-relaxed">We test every scenario, verify lead routing, and push it live. Then we show you how to monitor the results.</p>
+                                    <div className="p-4 bg-slate-900/50 rounded-lg text-xs font-mono text-green-300 border border-slate-800 flex items-center gap-2">
+                                        <div className="w-2 h-2 rounded-full bg-purple-500"></div>
+                                        Output: Live Funnel
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* FAQ */}
+            <section className="py-24 bg-white">
+                <div className="container mx-auto px-6 max-w-3xl">
+                    <h2 className="text-3xl font-serif font-bold text-slate-900 mb-12 text-center">Have Questions? We Got You</h2>
+                    <div className="space-y-4">
+                        {[
+                            { q: "Will this replace my contact form?", a: "No, it supplements it. You still need a general contact form for vendors, partners, and general inquiries. This funnel is specifically for capturing new leads who might not be ready to book a call yet, or for pre-qualifying those who are." },
+                            { q: "Do I need to write the nurture emails?", a: "We provide proven templates for the email auto-replies. You can customize them if you want, but you don't have to start from scratch." },
+                            { q: "Does it work on mobile?", a: "Absolutely. In fact, it shines on mobile. 60% of traffic comes from phones, and our funnels are designed with large, tap-friendly buttons that make it easy to convert on a small screen." },
+                            { q: "What CRM does it connect to?", a: "We can connect to almost any CRM (HubSpot, GoHighLevel, Buildertrend, etc.) via Zapier or direct integration. We set this connection up for you during the build." },
+                            { q: "Can I change the questions later?", a: "Yes. The system is flexible. If you find you need to ask about 'lot location' instead of 'timeline', we can adjust the funnel logic for you." }
+                        ].map((faq, i) => (
+                            <div key={i} className="border border-slate-200 rounded-xl overflow-hidden">
+                                <button onClick={() => toggleFaq(i)} className="w-full flex items-center justify-between p-6 bg-slate-50 text-left font-bold text-slate-900 hover:bg-slate-100 transition-colors">
+                                    {faq.q}
+                                    {openFaq === i ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
+                                </button>
+                                {openFaq === i && (
+                                    <div className="p-6 bg-white text-slate-600 leading-relaxed border-t border-slate-100">
+                                        {faq.a}
+                                    </div>
+                                )}
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+
+
+            {/* Final CTA */}
+            <section className="py-24 bg-slate-900 text-white text-center">
+                <div className="container mx-auto px-6 max-w-4xl">
+                    <h2 className="text-4xl font-serif font-bold mb-6">Ready to Automate Your Lead Gen?</h2>
+                    <p className="text-xl text-slate-400 mb-10">
+                        Stop letting qualified leads slip through the cracks.
+                    </p>
+                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                        <Link to="/contact" className="inline-flex items-center bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-full font-bold transition-all hover:scale-105 shadow-[0_0_20px_rgba(147,51,234,0.3)]">
+                            Build My Funnel <ArrowRight className="ml-2" />
+                        </Link>
+                        <Link to="/case-studies" className="inline-flex items-center border border-slate-600 hover:bg-slate-800 text-white px-8 py-4 rounded-full font-bold transition-all">
+                            View Examples
+                        </Link>
+                    </div>
+                </div>
+            </section>
+        </div>
+    );
+};
+
+export default FunnelDevelopment;
