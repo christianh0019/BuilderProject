@@ -50,16 +50,13 @@ const CRMDeployment: React.FC = () => {
                     <div className="relative max-w-6xl mx-auto perspective-[1000px] group">
                         <div className="relative z-10 transform transition-all duration-700 hover:scale-[1.01]">
                             <div className="relative mx-auto bg-slate-900 rounded-xl p-2 shadow-2xl border border-slate-700 ring-1 ring-white/10 w-full">
-                                <div className="bg-slate-950 rounded-lg overflow-hidden aspect-[16/9] relative flex items-center justify-center">
-                                    {/* Placeholder for CRM Dashboard Image */}
-                                    <div className="text-center p-12">
-                                        <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-purple-900/30 text-purple-400 mb-6 animate-pulse">
-                                            <BarChart2 size={40} />
-                                        </div>
-                                        <h3 className="text-2xl font-bold text-slate-300 mb-2">Interactive CRM Dashboard</h3>
-                                        <p className="text-slate-500">Visual pipeline tracking every deal stage</p>
-                                    </div>
-                                    <div className="absolute inset-0 bg-gradient-to-tr from-purple-500/5 to-transparent pointer-events-none"></div>
+                                <div className="bg-slate-950 rounded-lg overflow-hidden aspect-[16/9] relative">
+                                    <img
+                                        src="https://storage.googleapis.com/msgsndr/HllUVzV8V6VFH4nUuq4W/media/69791340eb0d1a92a4c53499.png"
+                                        alt="CRM Pipeline Dashboard"
+                                        className="w-full h-full object-cover object-top"
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-tr from-purple-500/10 to-transparent pointer-events-none"></div>
                                 </div>
                             </div>
                         </div>
