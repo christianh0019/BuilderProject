@@ -261,8 +261,17 @@ const FunnelDevelopment: React.FC = () => {
 
                             {/* Nurture 2: Planning Guide */}
                             <div className="group relative bg-white p-8 rounded-3xl shadow-sm border border-slate-100 hover:shadow-xl transition-all duration-300">
-                                <div className="aspect-[16/9] rounded-xl overflow-hidden mb-8 relative bg-slate-100 flex items-center justify-center shadow-inner">
-                                    <FileText size={64} className="text-slate-300" />
+                                <div className="aspect-[16/9] rounded-xl overflow-hidden mb-8 relative bg-slate-100 shadow-inner group-hover:shadow-md transition-all">
+                                    <iframe
+                                        width="100%"
+                                        height="100%"
+                                        src="https://www.youtube.com/embed/qkvjNAa_ybQ"
+                                        title="Planning Guide Preview"
+                                        frameBorder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowFullScreen
+                                        className="absolute inset-0 w-full h-full"
+                                    ></iframe>
                                 </div>
                                 <div className="pl-2">
                                     <h4 className="text-2xl font-serif font-bold text-slate-900 mb-3">
