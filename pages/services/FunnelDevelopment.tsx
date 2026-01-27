@@ -104,9 +104,21 @@ const FunnelDevelopment: React.FC = () => {
                             </div>
                         </div>
 
-                        <p className="text-lg text-slate-600 leading-relaxed text-center">
+                        <p className="text-lg text-slate-600 leading-relaxed text-center mb-12">
                             Visitors spend <strong>4x longer</strong> engaging with interactive tools (like budget calculators or quizzes) than they do reading static text. By giving value first, you earn the right to ask for their contact info.
                         </p>
+
+                        <div className="bg-slate-900 text-slate-300 p-8 md:p-10 rounded-2xl leading-relaxed border border-slate-800 shadow-xl">
+                            <p className="mb-4">
+                                <span className="text-white font-bold">Here's the problem with generic contact forms:</span> They don't speak to your prospect. They just sit there asking for information without giving anything in return.
+                            </p>
+                            <p className="mb-4">
+                                A funnel, on the other hand, has a conversation. It asks questions that help prospects understand if they're a fit. It provides value like instant budget estimates or helpful guides.
+                            </p>
+                            <p>
+                                It feels like using a tool, not just submitting a request to a stranger. That's why funnels convert 10x better.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -215,7 +227,7 @@ const FunnelDevelopment: React.FC = () => {
                 <div className="container mx-auto px-6">
                     <div className="max-w-4xl mx-auto text-center mb-20">
                         <h2 className="text-3xl md:text-5xl font-serif font-bold text-slate-900 mb-6">
-                            Nurture Engine Examples
+                            Lead Magnet Funnel Examples
                         </h2>
                         <p className="text-lg text-slate-600">
                             Tools that capture early-stage researchers who aren't ready to talk yet.
@@ -223,58 +235,49 @@ const FunnelDevelopment: React.FC = () => {
                     </div>
 
                     <div className="max-w-6xl mx-auto mb-20">
-                        <div className="grid lg:grid-cols-3 gap-8">
+                        <div className="grid md:grid-cols-2 gap-10">
                             {/* Nurture 1: Budget Calculator */}
-                            <div className="group cursor-pointer relative bg-white p-6 rounded-3xl shadow-sm border border-slate-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
-                                <div className="aspect-video rounded-xl overflow-hidden mb-6 relative bg-slate-100 flex items-center justify-center">
-                                    <BarChart size={48} className="text-slate-300" />
+                            <div className="group relative bg-white p-8 rounded-3xl shadow-sm border border-slate-100 hover:shadow-xl transition-all duration-300">
+                                <div className="aspect-[16/9] rounded-xl overflow-hidden mb-8 relative bg-slate-100 flex items-center justify-center shadow-inner">
+                                    <BarChart size={64} className="text-slate-300" />
                                 </div>
                                 <div className="pl-2">
-                                    <h4 className="text-xl font-serif font-bold text-slate-900 group-hover:text-purple-600 transition-colors mb-2">
+                                    <h4 className="text-2xl font-serif font-bold text-slate-900 mb-3">
                                         Budget Calculator
                                     </h4>
-                                    <p className="text-slate-500 text-sm leading-relaxed mb-6">
+                                    <p className="text-slate-500 leading-relaxed">
                                         Prospects input size/finishes to get instant cost estimate. Captures people figuring out if they can afford to build.
                                     </p>
-                                    <span className="text-purple-600 font-bold text-sm flex items-center">
-                                        View Live Example <ArrowRight size={14} className="ml-2" />
-                                    </span>
                                 </div>
                             </div>
 
                             {/* Nurture 2: Style Quiz */}
-                            <div className="group cursor-pointer relative bg-white p-6 rounded-3xl shadow-sm border border-slate-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
-                                <div className="aspect-video rounded-xl overflow-hidden mb-6 relative bg-slate-100 flex items-center justify-center">
-                                    <Layout size={48} className="text-slate-300" />
+                            <div className="group relative bg-white p-8 rounded-3xl shadow-sm border border-slate-100 hover:shadow-xl transition-all duration-300">
+                                <div className="aspect-[16/9] rounded-xl overflow-hidden mb-8 relative bg-slate-100 flex items-center justify-center shadow-inner">
+                                    <Layout size={64} className="text-slate-300" />
                                 </div>
                                 <div className="pl-2">
-                                    <h4 className="text-xl font-serif font-bold text-slate-900 group-hover:text-purple-600 transition-colors mb-2">
+                                    <h4 className="text-2xl font-serif font-bold text-slate-900 mb-3">
                                         Design Style Quiz
                                     </h4>
-                                    <p className="text-slate-500 text-sm leading-relaxed mb-6">
+                                    <p className="text-slate-500 leading-relaxed">
                                         "What Custom Home Style Fits Your Lifestyle?" Interactive quiz recommends styles and shows your portfolio.
                                     </p>
-                                    <span className="text-purple-600 font-bold text-sm flex items-center">
-                                        View Live Example <ArrowRight size={14} className="ml-2" />
-                                    </span>
                                 </div>
                             </div>
 
                             {/* Nurture 3: Planning Guide */}
-                            <div className="group cursor-pointer relative bg-white p-6 rounded-3xl shadow-sm border border-slate-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
-                                <div className="aspect-video rounded-xl overflow-hidden mb-6 relative bg-slate-100 flex items-center justify-center">
-                                    <FileText size={48} className="text-slate-300" />
+                            <div className="group relative bg-white p-8 rounded-3xl shadow-sm border border-slate-100 hover:shadow-xl transition-all duration-300 md:col-span-2 md:w-1/2 md:mx-auto">
+                                <div className="aspect-[16/9] rounded-xl overflow-hidden mb-8 relative bg-slate-100 flex items-center justify-center shadow-inner">
+                                    <FileText size={64} className="text-slate-300" />
                                 </div>
                                 <div className="pl-2">
-                                    <h4 className="text-xl font-serif font-bold text-slate-900 group-hover:text-purple-600 transition-colors mb-2">
+                                    <h4 className="text-2xl font-serif font-bold text-slate-900 mb-3">
                                         Custom Home Planning Guide
                                     </h4>
-                                    <p className="text-slate-500 text-sm leading-relaxed mb-6">
+                                    <p className="text-slate-500 leading-relaxed">
                                         Comprehensive PDF download walking through the entire process from land to move-in.
                                     </p>
-                                    <span className="text-purple-600 font-bold text-sm flex items-center">
-                                        View Live Example <ArrowRight size={14} className="ml-2" />
-                                    </span>
                                 </div>
                             </div>
                         </div>
@@ -282,7 +285,7 @@ const FunnelDevelopment: React.FC = () => {
 
                     <div className="max-w-4xl mx-auto text-center mb-16 mt-32">
                         <h2 className="text-3xl md:text-5xl font-serif font-bold text-slate-900 mb-6">
-                            Qualification Engine Examples
+                            Qualification Funnel Examples
                         </h2>
                         <p className="text-lg text-slate-600">
                             Applications that pre-screen serious prospects and book them directly to your calendar.
@@ -290,58 +293,49 @@ const FunnelDevelopment: React.FC = () => {
                     </div>
 
                     <div className="max-w-6xl mx-auto mb-20">
-                        <div className="grid lg:grid-cols-3 gap-8">
+                        <div className="grid md:grid-cols-2 gap-10">
                             {/* Qual 1: Project App */}
-                            <div className="group cursor-pointer relative bg-white p-6 rounded-3xl shadow-sm border border-slate-100 ring-1 ring-slate-200 hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
-                                <div className="aspect-video rounded-xl overflow-hidden mb-6 relative bg-slate-900 flex items-center justify-center">
-                                    <CheckCircle size={48} className="text-purple-400" />
+                            <div className="group relative bg-white p-8 rounded-3xl shadow-sm border border-slate-100 ring-1 ring-slate-200 hover:shadow-xl transition-all duration-300">
+                                <div className="aspect-[16/9] rounded-xl overflow-hidden mb-8 relative bg-slate-900 flex items-center justify-center shadow-inner">
+                                    <CheckCircle size={64} className="text-purple-400" />
                                 </div>
                                 <div className="pl-2">
-                                    <h4 className="text-xl font-serif font-bold text-slate-900 group-hover:text-purple-600 transition-colors mb-2">
+                                    <h4 className="text-2xl font-serif font-bold text-slate-900 mb-3">
                                         Project Application
                                     </h4>
-                                    <p className="text-slate-500 text-sm leading-relaxed mb-6">
+                                    <p className="text-slate-500 leading-relaxed">
                                         Full qualification survey asking budget, land status, timeline, location. Only qualified prospects see your calendar.
                                     </p>
-                                    <span className="text-purple-600 font-bold text-sm flex items-center">
-                                        View Live Example <ArrowRight size={14} className="ml-2" />
-                                    </span>
                                 </div>
                             </div>
 
                             {/* Qual 2: Remodel App */}
-                            <div className="group cursor-pointer relative bg-white p-6 rounded-3xl shadow-sm border border-slate-100 ring-1 ring-slate-200 hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
-                                <div className="aspect-video rounded-xl overflow-hidden mb-6 relative bg-slate-900 flex items-center justify-center">
-                                    <PenTool size={48} className="text-blue-400" />
+                            <div className="group relative bg-white p-8 rounded-3xl shadow-sm border border-slate-100 ring-1 ring-slate-200 hover:shadow-xl transition-all duration-300">
+                                <div className="aspect-[16/9] rounded-xl overflow-hidden mb-8 relative bg-slate-900 flex items-center justify-center shadow-inner">
+                                    <PenTool size={64} className="text-blue-400" />
                                 </div>
                                 <div className="pl-2">
-                                    <h4 className="text-xl font-serif font-bold text-slate-900 group-hover:text-purple-600 transition-colors mb-2">
+                                    <h4 className="text-2xl font-serif font-bold text-slate-900 mb-3">
                                         Remodel Application
                                     </h4>
-                                    <p className="text-slate-500 text-sm leading-relaxed mb-6">
+                                    <p className="text-slate-500 leading-relaxed">
                                         Tailored for remodelers. Qualifies on project scope, budget, timeline, and property ownership.
                                     </p>
-                                    <span className="text-purple-600 font-bold text-sm flex items-center">
-                                        View Live Example <ArrowRight size={14} className="ml-2" />
-                                    </span>
                                 </div>
                             </div>
 
                             {/* Qual 3: Design-Build App */}
-                            <div className="group cursor-pointer relative bg-white p-6 rounded-3xl shadow-sm border border-slate-100 ring-1 ring-slate-200 hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
-                                <div className="aspect-video rounded-xl overflow-hidden mb-6 relative bg-slate-900 flex items-center justify-center">
-                                    <Compass size={48} className="text-green-400" />
+                            <div className="group relative bg-white p-8 rounded-3xl shadow-sm border border-slate-100 ring-1 ring-slate-200 hover:shadow-xl transition-all duration-300 md:col-span-2 md:w-1/2 md:mx-auto">
+                                <div className="aspect-[16/9] rounded-xl overflow-hidden mb-8 relative bg-slate-900 flex items-center justify-center shadow-inner">
+                                    <Compass size={64} className="text-green-400" />
                                 </div>
                                 <div className="pl-2">
-                                    <h4 className="text-xl font-serif font-bold text-slate-900 group-hover:text-purple-600 transition-colors mb-2">
+                                    <h4 className="text-2xl font-serif font-bold text-slate-900 mb-3">
                                         Design-Build Application
                                     </h4>
-                                    <p className="text-slate-500 text-sm leading-relaxed mb-6">
+                                    <p className="text-slate-500 leading-relaxed">
                                         Combined qualification for builders offering design services. Filters on budget, design preferences, timeline.
                                     </p>
-                                    <span className="text-purple-600 font-bold text-sm flex items-center">
-                                        View Live Example <ArrowRight size={14} className="ml-2" />
-                                    </span>
                                 </div>
                             </div>
                         </div>
