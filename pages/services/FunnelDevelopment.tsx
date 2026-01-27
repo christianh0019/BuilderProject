@@ -111,77 +111,99 @@ const FunnelDevelopment: React.FC = () => {
                 </div>
             </section>
 
-            {/* Why Visual (Trust Gap) */}
-            <section className="py-24 bg-slate-50 border-y border-slate-200">
-                <div className="container mx-auto px-6">
-                    <div className="max-w-4xl mx-auto mb-16 text-center">
-                        <span className="text-purple-600 font-bold tracking-wider text-sm uppercase mb-4 block">The "Trust Gap"</span>
+            {/* The Two Funnels (Qualification vs Lead Magnet) */}
+            <section className="py-24 bg-white relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-slate-50 rounded-full blur-3xl opacity-50 pointer-events-none"></div>
+
+                <div className="container mx-auto px-6 max-w-6xl relative z-10">
+                    <div className="text-center mb-20 max-w-4xl mx-auto">
+                        <span className="text-purple-600 font-bold tracking-wider text-sm uppercase mb-4 block">The Ecosystem</span>
                         <h2 className="text-3xl md:text-5xl font-serif font-bold text-slate-900 mb-6">
-                            Why Your "Contact Us" Page Is Failing <br />(And What Actually Works)
+                            You Need Two Types of Funnels
                         </h2>
-                        <p className="text-lg text-slate-600 mb-8">
-                            Most prospects aren't ready to "book a consultation" yet. They are researching. When you force them to fill out a generic form, you lose them.
+                        <p className="text-xl text-slate-500">
+                            If you only have one way to engage (like "Book a Call"), you're losing 95% of your traffic.
                         </p>
                     </div>
 
-                    <div className="max-w-6xl mx-auto">
-                        <div className="grid md:grid-cols-2 gap-8 relative">
-                            {/* VS Badge (Desktop) */}
-                            <div className="hidden md:flex absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-white rounded-full items-center justify-center font-black text-slate-900 shadow-xl border-4 border-slate-50 z-10 text-xl">
-                                VS
+                    <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
+                        {/* 1. Qualification Funnel */}
+                        <div className="bg-slate-900 rounded-[2.5rem] p-8 md:p-12 text-white relative overflow-hidden group hover:-translate-y-1 transition-transform duration-300">
+                            <div className="absolute top-0 right-0 p-8 opacity-10">
+                                <Filter size={120} />
                             </div>
 
-                            {/* Card 1: Generic Form */}
-                            <div className="bg-white p-10 rounded-[2.5rem] shadow-xl border border-slate-100 flex flex-col relative overflow-hidden group hover:-translate-y-2 transition-transform duration-500">
-                                <div className="absolute top-0 left-0 w-full h-2 bg-slate-200 group-hover:bg-slate-300 transition-colors"></div>
-                                <div className="w-16 h-16 bg-slate-100 rounded-2xl flex items-center justify-center text-slate-500 mb-8 group-hover:scale-110 transition-transform duration-500">
-                                    <Mail size={32} />
+                            <div className="relative z-10">
+                                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-900/50 border border-purple-500/30 mb-8">
+                                    <div className="w-2 h-2 rounded-full bg-green-400 animate-pulse"></div>
+                                    <span className="text-xs font-bold text-purple-200 uppercase tracking-wider">For The Top 5%</span>
                                 </div>
-                                <h3 className="text-2xl font-serif font-bold text-slate-900 mb-2">1. The "Contact Us" Black Hole</h3>
-                                <p className="text-slate-500 mb-8 text-sm uppercase tracking-wider font-bold">Standard Agency Approach</p>
 
-                                <ul className="space-y-6 flex-1">
-                                    <li className="flex gap-4 items-start">
-                                        <div className="w-6 h-6 rounded-full bg-slate-100 flex items-center justify-center text-slate-500 shrink-0 mt-0.5"><X size={14} /></div>
-                                        <p className="text-slate-600"><strong>Asks for too much too soon.</strong> Expects a marriage proposal on the first date.</p>
-                                    </li>
-                                    <li className="flex gap-4 items-start">
-                                        <div className="w-6 h-6 rounded-full bg-slate-100 flex items-center justify-center text-slate-500 shrink-0 mt-0.5"><X size={14} /></div>
-                                        <p className="text-slate-600"><strong>Zero immediate value.</strong> The user gives their info and gets nothing but "we'll get back to you".</p>
-                                    </li>
-                                    <li className="flex gap-4 items-start">
-                                        <div className="w-6 h-6 rounded-full bg-slate-100 flex items-center justify-center text-slate-500 shrink-0 mt-0.5"><X size={14} /></div>
-                                        <p className="text-slate-600"><strong>High friction.</strong> Open text fields make prospects anxious about what to write.</p>
-                                    </li>
-                                </ul>
+                                <h3 className="text-3xl font-serif font-bold mb-4">The Qualification Engine</h3>
+                                <p className="text-slate-400 mb-8 leading-relaxed h-14">
+                                    Filters out tire kickers and delivers only high-intent, budget-qualified leads to your calendar.
+                                </p>
+
+                                <div className="space-y-4 mb-10">
+                                    {[
+                                        "Verifies Budget ($1M+)",
+                                        "Confirms Land Ownership",
+                                        "Validates Timeline",
+                                        "Auto-Books Appointments"
+                                    ].map((item, i) => (
+                                        <div key={i} className="flex gap-3 items-center text-slate-200">
+                                            <div className="w-6 h-6 rounded-full bg-slate-800 flex items-center justify-center text-purple-400 shadow-inner">
+                                                <CheckCircle size={14} />
+                                            </div>
+                                            <span className="font-medium">{item}</span>
+                                        </div>
+                                    ))}
+                                </div>
+
+                                <div className="bg-slate-800 rounded-xl p-6 border border-slate-700">
+                                    <div className="text-xs text-slate-400 uppercase tracking-wider font-bold mb-2">Ideal For:</div>
+                                    <div className="text-white font-medium">Google Ads, Re-Targeting, Referral Traffic</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* 2. Lead Magnet Funnel */}
+                        <div className="bg-white rounded-[2.5rem] p-8 md:p-12 border border-slate-200 shadow-xl relative overflow-hidden group hover:-translate-y-1 transition-transform duration-300">
+                            <div className="absolute top-0 right-0 p-8 opacity-5">
+                                <Magnet size={120} className="text-slate-900" />
                             </div>
 
-                            {/* Card 2: Interactive Funnel */}
-                            <div className="bg-slate-900 p-10 rounded-[2.5rem] shadow-2xl shadow-purple-900/20 border border-slate-800 flex flex-col relative overflow-hidden group hover:-translate-y-2 transition-transform duration-500">
-                                <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-purple-500 to-pink-500"></div>
-                                {/* Shine Effect */}
-                                <div className="absolute top-0 right-0 w-[300px] h-[300px] bg-purple-500/10 rounded-full blur-[80px] pointer-events-none"></div>
-
-                                <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center text-white mb-8 border border-white/10 group-hover:scale-110 transition-transform duration-500">
-                                    <Magnet size={32} />
+                            <div className="relative z-10">
+                                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-100 border border-slate-200 mb-8">
+                                    <div className="w-2 h-2 rounded-full bg-blue-400"></div>
+                                    <span className="text-xs font-bold text-slate-600 uppercase tracking-wider">For The Other 95%</span>
                                 </div>
-                                <h3 className="text-2xl font-serif font-bold text-white mb-2">2. The Value-First Exchange</h3>
-                                <p className="text-purple-300 mb-8 text-sm uppercase tracking-wider font-bold">BuilderProject Funnel Approach</p>
 
-                                <ul className="space-y-6 flex-1 relative z-10">
-                                    <li className="flex gap-4 items-start">
-                                        <div className="w-6 h-6 rounded-full bg-green-500 flex items-center justify-center text-white shrink-0 mt-0.5 shadow-lg shadow-green-500/30"><CheckCircle size={14} /></div>
-                                        <p className="text-slate-300"><strong>Gives value first.</strong> Calculators, guides, and assessments give them a reason to engage.</p>
-                                    </li>
-                                    <li className="flex gap-4 items-start">
-                                        <div className="w-6 h-6 rounded-full bg-green-500 flex items-center justify-center text-white shrink-0 mt-0.5 shadow-lg shadow-green-500/30"><CheckCircle size={14} /></div>
-                                        <p className="text-slate-300"><strong>Captures naturally.</strong> Contact info is just the final step to get their results.</p>
-                                    </li>
-                                    <li className="flex gap-4 items-start">
-                                        <div className="w-6 h-6 rounded-full bg-green-500 flex items-center justify-center text-white shrink-0 mt-0.5 shadow-lg shadow-green-500/30"><CheckCircle size={14} /></div>
-                                        <p className="text-slate-300"><strong>Qualifies automatically.</strong> We know their budget, timeline, and lot status before you ever speak.</p>
-                                    </li>
-                                </ul>
+                                <h3 className="text-3xl font-serif font-bold text-slate-900 mb-4">The Nurture Engine</h3>
+                                <p className="text-slate-500 mb-8 leading-relaxed h-14">
+                                    Captures research-phase prospects with value, then nurtures them automatically until they are ready to build.
+                                </p>
+
+                                <div className="space-y-4 mb-10">
+                                    {[
+                                        "Promotes Budget Calculators",
+                                        "Offers Planning Guides",
+                                        "Captures Emails Instantly",
+                                        "Sends 6-Month Nurture Seq"
+                                    ].map((item, i) => (
+                                        <div key={i} className="flex gap-3 items-center text-slate-700">
+                                            <div className="w-6 h-6 rounded-full bg-purple-50 flex items-center justify-center text-purple-600">
+                                                <CheckCircle size={14} />
+                                            </div>
+                                            <span className="font-medium">{item}</span>
+                                        </div>
+                                    ))}
+                                </div>
+
+                                <div className="bg-slate-50 rounded-xl p-6 border border-slate-100">
+                                    <div className="text-xs text-slate-400 uppercase tracking-wider font-bold mb-2">Ideal For:</div>
+                                    <div className="text-slate-900 font-medium">Facebook/Instagram Ads, Cold Traffic</div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -189,61 +211,69 @@ const FunnelDevelopment: React.FC = () => {
             </section>
 
             {/* Live Examples */}
-            <section className="py-24 bg-white">
+            <section className="py-24 bg-slate-50">
                 <div className="container mx-auto px-6">
                     <div className="max-w-4xl mx-auto text-center mb-16">
                         <h2 className="text-3xl md:text-5xl font-serif font-bold text-slate-900 mb-6">
-                            See High-Converting Funnels in Action
+                            See It In Action
                         </h2>
                         <p className="text-lg text-slate-600">
-                            We build tools that your prospects actually want to use.
+                            Tools that your prospects actually want to use.
                         </p>
                     </div>
 
                     <div className="max-w-6xl mx-auto mb-20">
                         <div className="grid lg:grid-cols-3 gap-8 mb-16">
-                            {/* Project 1 */}
-                            <div className="group cursor-pointer relative">
-                                <div className="aspect-video rounded-2xl overflow-hidden mb-6 relative shadow-lg group-hover:shadow-2xl group-hover:-translate-y-2 transition-all duration-500 ease-out bg-slate-100 flex items-center justify-center">
-                                    <FileText size={48} className="text-slate-300" />
+                            {/* Project 1 - Lead Magnet */}
+                            <div className="group cursor-pointer relative bg-white p-6 rounded-3xl shadow-sm border border-slate-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+                                <div className="absolute top-4 right-4 bg-blue-100 text-blue-700 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+                                    Nurture
                                 </div>
-                                {/* Meta Info Below */}
-                                <div className="pl-2">
-                                    <h4 className="text-xl font-serif font-bold text-slate-900 group-hover:text-purple-600 transition-colors mb-2">
-                                        Custom Home Budget Calculator
-                                    </h4>
-                                    <p className="text-slate-500 text-sm">
-                                        Instant value finding out what they can afford.
-                                    </p>
-                                </div>
-                            </div>
-
-                            {/* Project 2 */}
-                            <div className="group cursor-pointer relative">
-                                <div className="aspect-video rounded-2xl overflow-hidden mb-6 relative shadow-lg group-hover:shadow-2xl group-hover:-translate-y-2 transition-all duration-500 ease-out bg-slate-100 flex items-center justify-center">
-                                    <Filter size={48} className="text-slate-300" />
-                                </div>
-                                <div className="pl-2">
-                                    <h4 className="text-xl font-serif font-bold text-slate-900 group-hover:text-purple-600 transition-colors mb-2">
-                                        Lot Fit Assessment
-                                    </h4>
-                                    <p className="text-slate-500 text-sm">
-                                        "Does this floor plan fit on my lot?" Interactive tool.
-                                    </p>
-                                </div>
-                            </div>
-
-                            {/* Project 3 */}
-                            <div className="group cursor-pointer relative">
-                                <div className="aspect-video rounded-2xl overflow-hidden mb-6 relative shadow-lg group-hover:shadow-2xl group-hover:-translate-y-2 transition-all duration-500 ease-out bg-slate-100 flex items-center justify-center">
+                                <div className="aspect-video rounded-xl overflow-hidden mb-6 relative bg-slate-100 flex items-center justify-center">
                                     <BarChart size={48} className="text-slate-300" />
                                 </div>
                                 <div className="pl-2">
                                     <h4 className="text-xl font-serif font-bold text-slate-900 group-hover:text-purple-600 transition-colors mb-2">
-                                        Renovation ROI Estimator
+                                        Budget Calculator
                                     </h4>
-                                    <p className="text-slate-500 text-sm">
-                                        Shows the potential value add of their remodel.
+                                    <p className="text-slate-500 text-sm leading-relaxed">
+                                        Prospects input size/finishes to get a cost estimate. Use this to capture early-stage leads.
+                                    </p>
+                                </div>
+                            </div>
+
+                            {/* Project 2 - Lead Magnet */}
+                            <div className="group cursor-pointer relative bg-white p-6 rounded-3xl shadow-sm border border-slate-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+                                <div className="absolute top-4 right-4 bg-blue-100 text-blue-700 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+                                    Nurture
+                                </div>
+                                <div className="aspect-video rounded-xl overflow-hidden mb-6 relative bg-slate-100 flex items-center justify-center">
+                                    <Layout size={48} className="text-slate-300" />
+                                </div>
+                                <div className="pl-2">
+                                    <h4 className="text-xl font-serif font-bold text-slate-900 group-hover:text-purple-600 transition-colors mb-2">
+                                        Design Style Quiz
+                                    </h4>
+                                    <p className="text-slate-500 text-sm leading-relaxed">
+                                        "What's My Home Style?" Fun, interactive quiz that recommends architectural styles.
+                                    </p>
+                                </div>
+                            </div>
+
+                            {/* Project 3 - Qualification */}
+                            <div className="group cursor-pointer relative bg-white p-6 rounded-3xl shadow-sm border border-slate-100 ring-2 ring-purple-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+                                <div className="absolute top-4 right-4 bg-purple-100 text-purple-700 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+                                    Qualifier
+                                </div>
+                                <div className="aspect-video rounded-xl overflow-hidden mb-6 relative bg-slate-100 flex items-center justify-center">
+                                    <FileText size={48} className="text-slate-300" />
+                                </div>
+                                <div className="pl-2">
+                                    <h4 className="text-xl font-serif font-bold text-slate-900 group-hover:text-purple-600 transition-colors mb-2">
+                                        Project Application
+                                    </h4>
+                                    <p className="text-slate-500 text-sm leading-relaxed">
+                                        Deep-dive survey for ready-to-build leads. Asks about land, timeline, and budget.
                                     </p>
                                 </div>
                             </div>
@@ -295,13 +325,13 @@ const FunnelDevelopment: React.FC = () => {
                         <div className="bg-slate-800 rounded-2xl p-8 border border-slate-700 relative">
                             {/* Abstract Code Visualization */}
                             <div className="font-mono text-sm space-y-2 opacity-80">
-                                <div className="text-purple-400">const <span className="text-yellow-400">qualifyLead</span> = (prospect) ={'>'} {'{'}</div>
-                                <div className="pl-4 text-blue-400">if (prospect.budget {'>'} 1000000) {'{'}</div>
-                                <div className="pl-8 text-green-400">return "High Priority";</div>
-                                <div className="pl-4 text-blue-400">{'}'} else if (!prospect.hasLand) {'{'}</div>
-                                <div className="pl-8 text-white">sendNurtureSequence("Land Guide");</div>
+                                <div className="text-purple-400">const <span className="text-yellow-400">handleLead</span> = (prospect) ={'>'} {'{'}</div>
+                                <div className="pl-4 text-blue-400">if (prospect.isReadyToBuild) {'{'}</div>
+                                <div className="pl-8 text-green-400">return redirect("/booking");</div>
                                 <div className="pl-4 text-blue-400">{'}'} else {'{'}</div>
-                                <div className="pl-8 text-white">bookConsultation();</div>
+                                <div className="pl-8 text-slate-400">{/* Nurture the research phase */}</div>
+                                <div className="pl-8 text-white">sendEmail("Budget_Guide_PDF");</div>
+                                <div className="pl-8 text-white">addToAudience("Remarketing_30_Days");</div>
                                 <div className="pl-4 text-blue-400">{'}'}</div>
                                 <div className="text-purple-400">{'}'};</div>
                             </div>
