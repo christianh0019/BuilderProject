@@ -50,11 +50,11 @@ const CRMDeployment: React.FC = () => {
                     <div className="relative max-w-6xl mx-auto perspective-[1000px] group">
                         <div className="relative z-10 transform transition-all duration-700 hover:scale-[1.01]">
                             <div className="relative mx-auto bg-slate-900 rounded-xl p-2 shadow-2xl border border-slate-700 ring-1 ring-white/10 w-full">
-                                <div className="bg-slate-950 rounded-lg overflow-hidden aspect-[16/9] relative">
+                                <div className="bg-slate-950 rounded-lg overflow-hidden relative">
                                     <img
                                         src="https://storage.googleapis.com/msgsndr/HllUVzV8V6VFH4nUuq4W/media/69791340eb0d1a92a4c53499.png"
                                         alt="CRM Pipeline Dashboard"
-                                        className="w-full h-full object-cover object-top"
+                                        className="w-full h-auto"
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-tr from-purple-500/10 to-transparent pointer-events-none"></div>
                                 </div>
