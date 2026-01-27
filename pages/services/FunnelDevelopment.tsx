@@ -379,51 +379,96 @@ const FunnelDevelopment: React.FC = () => {
                         </p>
                     </div>
 
-                    <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-                        <div className="space-y-6 text-slate-300">
-                            <div className="bg-slate-800 p-6 rounded-xl border border-slate-700">
-                                <h4 className="text-white font-bold mb-3">With A Funnel:</h4>
-                                <p>
-                                    They land on "See If You Qualify For A Custom Home." They're curious. They fill out the survey. Budget is $1.5M. They own land. Timeline is 6 months. <span className="text-green-400 font-bold">Boom—they're qualified.</span> Your calendar pops up. They book Tuesday at 2pm.
+                    <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+                        <div className="space-y-8 text-slate-300">
+                            <div className="relative pl-6 border-l-2 border-purple-500/30">
+                                <h4 className="text-white font-bold mb-3 text-lg">The "Aha" Moment:</h4>
+                                <p className="leading-relaxed text-slate-400">
+                                    They land on "See If You Qualify For A Custom Home." They're curious. They fill out the survey. Budget is $1.5M. They own land. Timeline is 6 months.
+                                </p>
+                                <div className="mt-4 flex items-center gap-3 text-green-400 font-bold bg-green-500/10 p-3 rounded-lg w-fit">
+                                    <CheckCircle size={18} />
+                                    Boom—they're qualified.
+                                </div>
+                                <p className="mt-4 text-slate-400">
+                                    Your calendar pops up. They book Tuesday at 2pm.
                                 </p>
                             </div>
 
-                            <p className="text-xl font-bold text-white">
-                                You just spent $47 on that click. With a contact form, you got nothing. With a qualification funnel, you got a booked call.
-                            </p>
+                            <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700/50">
+                                <p className="text-xl font-bold text-white mb-2">
+                                    You just spent $47 on that click.
+                                </p>
+                                <div className="grid grid-cols-2 gap-4 mt-4">
+                                    <div className="p-3 bg-red-500/10 rounded-lg border border-red-500/20 text-center">
+                                        <div className="text-xs text-red-300 uppercase tracking-wider mb-1">Old Way</div>
+                                        <div className="text-red-400 font-bold">Nothing</div>
+                                    </div>
+                                    <div className="p-3 bg-green-500/10 rounded-lg border border-green-500/20 text-center">
+                                        <div className="text-xs text-green-300 uppercase tracking-wider mb-1">New Way</div>
+                                        <div className="text-green-400 font-bold">Booked Call</div>
+                                    </div>
+                                </div>
+                            </div>
 
-                            <p>
-                                Or someone sees your Facebook ad. They're 8 months out. With a contact form, they leave. With a budget calculator, they engage. You get their email. <span className="text-purple-400">8 months later when they're ready, you've been nurturing them the whole time.</span>
-                            </p>
-
-                            <p className="text-lg text-slate-200 italic border-l-4 border-slate-600 pl-4">
-                                "That's how you turn 10K in ad spend into 1M in contracts. You capture everyone at every stage."
+                            <p className="text-slate-400 leading-relaxed">
+                                Or someone sees your Facebook ad. They're 8 months out. With a contact form, they leave. With a budget calculator, they engage. You get their email. <span className="text-purple-400 font-medium">8 months later when they're ready, you've been nurturing them the whole time.</span>
                             </p>
                         </div>
 
-                        <div className="bg-slate-800/50 p-8 rounded-2xl border border-slate-700">
-                            <h3 className="text-2xl font-serif text-white mb-6">Built With Intelligence, Not Just Forms</h3>
-                            <p className="text-slate-400 mb-6">Most agencies install a basic contact form plugin. We custom-code intelligent applications.</p>
+                        <div className="relative">
+                            {/* Comparison Container */}
+                            <div className="grid grid-cols-2 gap-4">
+                                {/* Left: Generic Form */}
+                                <div className="bg-slate-800 rounded-xl p-4 border border-slate-700 opacity-50 scale-90 origin-right">
+                                    <div className="h-4 w-24 bg-slate-700 rounded mb-4"></div>
+                                    <div className="space-y-3">
+                                        <div className="h-8 bg-slate-700/50 rounded border border-slate-700 w-full"></div>
+                                        <div className="h-8 bg-slate-700/50 rounded border border-slate-700 w-full"></div>
+                                        <div className="h-20 bg-slate-700/50 rounded border border-slate-700 w-full"></div>
+                                        <div className="h-8 bg-slate-600 rounded w-full mt-2"></div>
+                                    </div>
+                                    <div className="mt-4 text-center">
+                                        <span className="text-red-400 text-xs font-bold uppercase tracking-wider">Generic Form</span>
+                                    </div>
+                                </div>
 
-                            <ul className="space-y-4">
-                                {[
-                                    { title: "Conditional Logic", desc: "Asks different questions based on their answers" },
-                                    { title: "Instant Calculations", desc: "Budget estimates in real-time as they input info" },
-                                    { title: "Automatic Qualification", desc: "System filters out bad leads, you never see them" },
-                                    { title: "CRM Integration", desc: "Everything flows directly to your pipeline automatically" },
-                                    { title: "Mobile Optimized", desc: "App-like experience on phones (where 60%+ of traffic comes from)" }
-                                ].map((item, i) => (
-                                    <li key={i} className="flex gap-3 text-slate-300">
-                                        <CheckCircle className="text-purple-500 shrink-0 mt-0.5" size={20} />
-                                        <div>
-                                            <span className="font-bold text-white">{item.title} - </span>
-                                            <span>{item.desc}</span>
+                                {/* Right: Funnel */}
+                                <div className="bg-white rounded-xl p-4 border-2 border-purple-500 shadow-[0_0_30px_rgba(168,85,247,0.2)] relative z-10 transform scale-110 -translate-x-4">
+                                    <div className="flex justify-between items-center mb-6">
+                                        <div className="h-2 w-16 bg-purple-200 rounded-full overflow-hidden">
+                                            <div className="h-full w-2/3 bg-purple-600"></div>
                                         </div>
-                                    </li>
-                                ))}
-                            </ul>
-                            <div className="mt-8 pt-8 border-t border-slate-700 text-center text-purple-300 font-medium">
-                                It's not just better conversion. It's smarter lead capture.
+                                        <span className="text-xs font-bold text-purple-600">Step 2 of 3</span>
+                                    </div>
+
+                                    <div className="mb-6">
+                                        <div className="text-slate-900 font-bold mb-4 text-sm">What's your project budget?</div>
+                                        <div className="space-y-2">
+                                            <div className="p-3 rounded-lg border border-purple-200 bg-purple-50 text-purple-700 text-sm font-medium flex justify-between items-center cursor-pointer">
+                                                $1M - $2M
+                                                <div className="w-4 h-4 rounded-full bg-purple-600 border border-purple-600 flex items-center justify-center">
+                                                    <div className="w-1.5 h-1.5 bg-white rounded-full"></div>
+                                                </div>
+                                            </div>
+                                            <div className="p-3 rounded-lg border border-slate-200 text-slate-500 text-sm hover:border-purple-200 transition-colors cursor-pointer">
+                                                $2M - $5M
+                                            </div>
+                                            <div className="p-3 rounded-lg border border-slate-200 text-slate-500 text-sm hover:border-purple-200 transition-colors cursor-pointer">
+                                                $5M+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div className="text-center">
+                                        <span className="text-purple-600 text-xs font-bold uppercase tracking-wider">Smart Funnel</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Arrow */}
+                            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 bg-slate-900 rounded-full p-2 border border-slate-700">
+                                <ArrowRight className="text-white w-4 h-4" />
                             </div>
                         </div>
                     </div>
