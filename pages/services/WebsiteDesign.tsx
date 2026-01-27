@@ -281,28 +281,60 @@ const WebsiteDesign: React.FC = () => {
                         </div>
 
                         <h3 className="text-2xl font-bold text-slate-900 mb-8 border-b border-slate-200 pb-4">Custom Pages Built Around What Makes You Unique</h3>
-                        <p className="text-slate-600 mb-8">Every builder is different. These pages are designed to showcase what makes YOUR business special.</p>
+                        <p className="text-slate-600 mb-10">Every builder is different. These pages are designed to showcase what makes YOUR business special.</p>
 
-                        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                            <div className="p-6 bg-slate-50 rounded-xl border border-slate-100 hover:border-purple-200 transition-colors">
-                                <h4 className="font-bold text-slate-900 mb-2">Homepage That Makes the Perfect First Impression</h4>
-                                <p className="text-sm text-slate-500 mb-4">Clean, professional, immediately communicates what you do and who you serve</p>
-                                <span className="text-purple-600 text-sm font-bold flex items-center gap-1">View Example <ArrowRight size={14} /></span>
+                        <div className="grid md:grid-cols-2 gap-8">
+                            {/* Card 1: Homepage (Image Ready) */}
+                            <div className="group cursor-pointer relative">
+                                <div className="aspect-video rounded-2xl overflow-hidden mb-5 bg-slate-100 relative shadow-md group-hover:shadow-xl group-hover:-translate-y-1 transition-all duration-500 border border-slate-200">
+                                    <div className="absolute inset-0 bg-slate-900/0 group-hover:bg-slate-900/10 transition-colors z-10"></div>
+                                    <img
+                                        src="/images/stonebrook-home.png"
+                                        alt="Stonebrook Construction Homepage"
+                                        className="w-full h-full object-cover object-top transform group-hover:scale-105 transition-transform duration-700"
+                                    />
+                                    <div className="absolute bottom-4 right-4 z-20 w-8 h-8 bg-white/90 backdrop-blur rounded-full flex items-center justify-center text-slate-900 opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-2 group-hover:translate-y-0 shadow-sm">
+                                        <ArrowRight size={14} />
+                                    </div>
+                                </div>
+                                <h4 className="font-bold text-slate-900 mb-1 group-hover:text-purple-600 transition-colors text-lg">Homepage That Makes the Perfect First Impression</h4>
+                                <p className="text-sm text-slate-500">Clean, professional, immediately communicates what you do and who you serve</p>
                             </div>
-                            <div className="p-6 bg-slate-50 rounded-xl border border-slate-100 hover:border-purple-200 transition-colors">
-                                <h4 className="font-bold text-slate-900 mb-2">Process Page That Builds Trust</h4>
-                                <p className="text-sm text-slate-500 mb-4">Step-by-step breakdown of what it's like to build or remodel with you</p>
-                                <span className="text-purple-600 text-sm font-bold flex items-center gap-1">View Example <ArrowRight size={14} /></span>
+
+                            {/* Card 2: Process Page (Placeholder) */}
+                            <div className="group cursor-pointer relative opacity-60 hover:opacity-100 transition-opacity">
+                                <div className="aspect-video rounded-2xl overflow-hidden mb-5 bg-slate-50 relative shadow-sm border-2 border-dashed border-slate-200 flex flex-col items-center justify-center group-hover:border-purple-200 transition-colors">
+                                    <div className="w-12 h-12 rounded-full bg-slate-100 flex items-center justify-center text-slate-400 mb-3 group-hover:text-purple-500 group-hover:bg-purple-50 transition-colors">
+                                        <Layout size={24} />
+                                    </div>
+                                    <span className="text-xs font-bold uppercase tracking-widest text-slate-400">Awaiting Image</span>
+                                </div>
+                                <h4 className="font-bold text-slate-900 mb-1 group-hover:text-purple-600 transition-colors text-lg">Process Page That Builds Trust</h4>
+                                <p className="text-sm text-slate-500">Step-by-step breakdown of what it's like to build or remodel with you</p>
                             </div>
-                            <div className="p-6 bg-slate-50 rounded-xl border border-slate-100 hover:border-purple-200 transition-colors">
-                                <h4 className="font-bold text-slate-900 mb-2">About Page That Connects</h4>
-                                <p className="text-sm text-slate-500 mb-4">Your story, your team, why you do this work</p>
-                                <span className="text-purple-600 text-sm font-bold flex items-center gap-1">View Example <ArrowRight size={14} /></span>
+
+                            {/* Card 3: About Page (Placeholder) */}
+                            <div className="group cursor-pointer relative opacity-60 hover:opacity-100 transition-opacity">
+                                <div className="aspect-video rounded-2xl overflow-hidden mb-5 bg-slate-50 relative shadow-sm border-2 border-dashed border-slate-200 flex flex-col items-center justify-center group-hover:border-purple-200 transition-colors">
+                                    <div className="w-12 h-12 rounded-full bg-slate-100 flex items-center justify-center text-slate-400 mb-3 group-hover:text-purple-500 group-hover:bg-purple-50 transition-colors">
+                                        <Users size={24} />
+                                    </div>
+                                    <span className="text-xs font-bold uppercase tracking-widest text-slate-400">Awaiting Image</span>
+                                </div>
+                                <h4 className="font-bold text-slate-900 mb-1 group-hover:text-purple-600 transition-colors text-lg">About Page That Connects</h4>
+                                <p className="text-sm text-slate-500">Your story, your team, why you do this work</p>
                             </div>
-                            <div className="p-6 bg-slate-50 rounded-xl border border-slate-100 hover:border-purple-200 transition-colors">
-                                <h4 className="font-bold text-slate-900 mb-2">Service Pages That Educate</h4>
-                                <p className="text-sm text-slate-500 mb-4">Custom homes, remodels, design-build explained in detail</p>
-                                <span className="text-purple-600 text-sm font-bold flex items-center gap-1">View Example <ArrowRight size={14} /></span>
+
+                            {/* Card 4: Service Pages (Placeholder) */}
+                            <div className="group cursor-pointer relative opacity-60 hover:opacity-100 transition-opacity">
+                                <div className="aspect-video rounded-2xl overflow-hidden mb-5 bg-slate-50 relative shadow-sm border-2 border-dashed border-slate-200 flex flex-col items-center justify-center group-hover:border-purple-200 transition-colors">
+                                    <div className="w-12 h-12 rounded-full bg-slate-100 flex items-center justify-center text-slate-400 mb-3 group-hover:text-purple-500 group-hover:bg-purple-50 transition-colors">
+                                        <PenTool size={24} />
+                                    </div>
+                                    <span className="text-xs font-bold uppercase tracking-widest text-slate-400">Awaiting Image</span>
+                                </div>
+                                <h4 className="font-bold text-slate-900 mb-1 group-hover:text-purple-600 transition-colors text-lg">Service Pages That Educate</h4>
+                                <p className="text-sm text-slate-500">Custom homes, remodels, design-build explained in detail</p>
                             </div>
                         </div>
 
