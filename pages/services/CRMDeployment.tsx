@@ -16,19 +16,19 @@ const CRMDeployment: React.FC = () => {
             {/* Hero Section */}
             <section className="relative bg-[#0F172A] text-white pt-32 pb-32 overflow-hidden">
                 {/* Background Effects */}
-                <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-blue-900/20 rounded-full blur-[120px] pointer-events-none mix-blend-screen animate-pulse"></div>
+                <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-purple-900/20 rounded-full blur-[120px] pointer-events-none mix-blend-screen animate-pulse"></div>
                 <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-purple-900/10 rounded-full blur-[100px] pointer-events-none mix-blend-screen"></div>
 
                 <div className="container mx-auto px-6 relative z-10">
                     <div className="max-w-7xl mx-auto text-center mb-20">
-                        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-900/30 border border-blue-500/30 mb-8 backdrop-blur-sm">
-                            <span className="flex h-2 w-2 rounded-full bg-blue-400 animate-pulse"></span>
-                            <span className="text-sm font-medium text-blue-200 uppercase tracking-widest">Pipeline Management</span>
+                        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-900/30 border border-purple-500/30 mb-8 backdrop-blur-sm">
+                            <span className="flex h-2 w-2 rounded-full bg-purple-400 animate-pulse"></span>
+                            <span className="text-sm font-medium text-purple-200 uppercase tracking-widest">Pipeline Management</span>
                         </div>
 
                         <h1 className="text-5xl md:text-7xl font-serif font-bold mb-8 leading-tight tracking-tight">
                             CRM Deployment & Pipeline Management
-                            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-400 mt-2">For Custom Home Builders & Remodelers</span>
+                            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 mt-2">For Custom Home Builders & Remodelers</span>
                         </h1>
 
                         <p className="text-xl md:text-2xl text-slate-300 mb-10 max-w-3xl mx-auto leading-relaxed font-light">
@@ -36,7 +36,7 @@ const CRMDeployment: React.FC = () => {
                         </p>
 
                         <div className="flex flex-col sm:flex-row gap-5 justify-center items-center">
-                            <Link to="/contact" className="group relative inline-flex items-center justify-center px-8 py-4 text-base font-bold text-white transition-all duration-200 bg-blue-600 font-pj rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-600 hover:bg-blue-700 shadow-[0_0_20px_rgba(37,99,235,0.4)] hover:shadow-[0_0_30px_rgba(37,99,235,0.6)]">
+                            <Link to="/contact" className="group relative inline-flex items-center justify-center px-8 py-4 text-base font-bold text-white transition-all duration-200 bg-purple-600 font-pj rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-600 hover:bg-purple-700 shadow-[0_0_20px_rgba(168,85,247,0.4)] hover:shadow-[0_0_30px_rgba(168,85,247,0.6)]">
                                 Start Your Project
                                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                             </Link>
@@ -53,18 +53,18 @@ const CRMDeployment: React.FC = () => {
                                 <div className="bg-slate-950 rounded-lg overflow-hidden aspect-[16/9] relative flex items-center justify-center">
                                     {/* Placeholder for CRM Dashboard Image */}
                                     <div className="text-center p-12">
-                                        <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-blue-900/30 text-blue-400 mb-6 animate-pulse">
+                                        <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-purple-900/30 text-purple-400 mb-6 animate-pulse">
                                             <BarChart2 size={40} />
                                         </div>
                                         <h3 className="text-2xl font-bold text-slate-300 mb-2">Interactive CRM Dashboard</h3>
                                         <p className="text-slate-500">Visual pipeline tracking every deal stage</p>
                                     </div>
-                                    <div className="absolute inset-0 bg-gradient-to-tr from-blue-500/5 to-transparent pointer-events-none"></div>
+                                    <div className="absolute inset-0 bg-gradient-to-tr from-purple-500/5 to-transparent pointer-events-none"></div>
                                 </div>
                             </div>
                         </div>
                         {/* Abstract background glow */}
-                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-full bg-blue-500/10 blur-[120px] -z-10 rounded-full pointer-events-none"></div>
+                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-full bg-purple-500/10 blur-[120px] -z-10 rounded-full pointer-events-none"></div>
                     </div>
                 </div>
             </section>
@@ -139,7 +139,7 @@ const CRMDeployment: React.FC = () => {
             {/* What You Actually Need */}
             <section className="py-24 bg-slate-900 text-white relative overflow-hidden">
                 {/* Background Accents */}
-                <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-blue-500 to-transparent opacity-20"></div>
+                <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-purple-500 to-transparent opacity-20"></div>
 
                 <div className="container mx-auto px-6 relative z-10">
                     <div className="text-center mb-20">
@@ -150,7 +150,7 @@ const CRMDeployment: React.FC = () => {
                     <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                         {[
                             {
-                                icon: <Database className="text-blue-400" size={32} />,
+                                icon: <Database className="text-purple-400" size={32} />,
                                 title: "Lead Capture",
                                 desc: "Every website form, call, text, and DM flows into one central system automatically."
                             },
@@ -170,7 +170,7 @@ const CRMDeployment: React.FC = () => {
                                 desc: "Know your cost per lead, ROI by channel, and close rates based on hard data."
                             }
                         ].map((feature, i) => (
-                            <div key={i} className="bg-slate-800 p-8 rounded-2xl border border-slate-700 hover:border-blue-500/30 transition-colors group">
+                            <div key={i} className="bg-slate-800 p-8 rounded-2xl border border-slate-700 hover:border-purple-500/30 transition-colors group">
                                 <div className="w-16 h-16 bg-slate-900 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
                                     {feature.icon}
                                 </div>
@@ -200,12 +200,12 @@ const CRMDeployment: React.FC = () => {
                                 </div>
                             </div>
                             <div className="order-1 md:order-2">
-                                <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 font-bold mb-6">01</div>
+                                <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center text-purple-600 font-bold mb-6">01</div>
                                 <h3 className="text-3xl font-bold text-slate-900 mb-4">Lead Capture Dashboard</h3>
                                 <p className="text-slate-600 text-lg leading-relaxed mb-6">
                                     All leads in one place. Tagged with source, qualification status, and stage in your pipeline. Never lose a sticky note again.
                                 </p>
-                                <Link to="#" className="text-blue-600 font-bold hover:text-blue-800 flex items-center gap-2">
+                                <Link to="#" className="text-purple-600 font-bold hover:text-purple-800 flex items-center gap-2">
                                     View Example <ArrowRight size={16} />
                                 </Link>
                             </div>
@@ -325,7 +325,7 @@ const CRMDeployment: React.FC = () => {
                             <div className="space-y-8">
                                 <div>
                                     <h4 className="text-xl font-bold text-white mb-2 flex items-center gap-2">
-                                        <Briefcase size={20} className="text-blue-400" /> Custom Pipeline Stages
+                                        <Briefcase size={20} className="text-purple-400" /> Custom Pipeline Stages
                                     </h4>
                                     <p className="text-slate-400 text-sm">
                                         New Lead → Contacted → Qualified → Discovery Call → Proposal Sent → Contract Signed → Project Started
@@ -333,7 +333,7 @@ const CRMDeployment: React.FC = () => {
                                 </div>
                                 <div>
                                     <h4 className="text-xl font-bold text-white mb-2 flex items-center gap-2">
-                                        <MessageSquare size={20} className="text-cyan-400" /> Builder-Specific Automations
+                                        <MessageSquare size={20} className="text-pink-400" /> Builder-Specific Automations
                                     </h4>
                                     <p className="text-slate-400 text-sm">
                                         Nurture sequences for long cycles. Milestone reminders (land acquisition, financing checks).
@@ -350,7 +350,7 @@ const CRMDeployment: React.FC = () => {
                             </div>
                         </div>
                         <div className="bg-slate-800/50 rounded-2xl p-8 border border-slate-700">
-                            <h3 className="text-2xl font-bold mb-8 text-center text-blue-100">Included In Deployment</h3>
+                            <h3 className="text-2xl font-bold mb-8 text-center text-purple-100">Included In Deployment</h3>
                             <ul className="space-y-4">
                                 {[
                                     "CRM Setup & Configuration",
@@ -377,7 +377,7 @@ const CRMDeployment: React.FC = () => {
             {/* Timeline */}
             <section className="py-24 bg-white">
                 <div className="container mx-auto px-6 max-w-4xl text-center">
-                    <span className="text-blue-600 font-bold tracking-wider text-sm uppercase mb-4 block">Speed to Value</span>
+                    <span className="text-purple-600 font-bold tracking-wider text-sm uppercase mb-4 block">Speed to Value</span>
                     <h2 className="text-3xl md:text-5xl font-serif font-bold text-slate-900 mb-12">2 Weeks to Launch</h2>
 
                     <div className="grid md:grid-cols-2 gap-8 text-left">
@@ -387,22 +387,22 @@ const CRMDeployment: React.FC = () => {
                             <p className="text-slate-600">Platform setup, pipeline configuration, connecting website forms and phone lines.</p>
                             <div className="mt-4 text-xs font-bold text-slate-400 uppercase">Deliverable: Staging Environment</div>
                         </div>
-                        <div className="p-8 border-2 border-blue-100 rounded-2xl bg-blue-50/50 relative hover:shadow-lg transition-shadow">
-                            <div className="absolute -top-4 -left-4 w-10 h-10 bg-blue-600 text-white rounded-lg flex items-center justify-center font-bold">2</div>
+                        <div className="p-8 border-2 border-purple-100 rounded-2xl bg-purple-50/50 relative hover:shadow-lg transition-shadow">
+                            <div className="absolute -top-4 -left-4 w-10 h-10 bg-purple-600 text-white rounded-lg flex items-center justify-center font-bold">2</div>
                             <h3 className="text-xl font-bold text-slate-900 mb-4">Week 2: Automation & Training</h3>
                             <p className="text-slate-600">Loading nurture sequences, activating workflows, and training your team.</p>
-                            <div className="mt-4 text-xs font-bold text-blue-600 uppercase">Deliverable: Live CRM System</div>
+                            <div className="mt-4 text-xs font-bold text-purple-600 uppercase">Deliverable: Live CRM System</div>
                         </div>
                     </div>
                 </div>
             </section>
 
             {/* Funnel + CRM Synergy */}
-            <section className="py-24 bg-blue-900 text-white text-center relative overflow-hidden">
+            <section className="py-24 bg-purple-900 text-white text-center relative overflow-hidden">
                 <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
                 <div className="container mx-auto px-6 max-w-3xl relative z-10">
                     <h2 className="text-3xl md:text-4xl font-serif font-bold mb-6">Why Funnels + CRM Work Together</h2>
-                    <p className="text-xl text-blue-200 mb-10 leading-relaxed">
+                    <p className="text-xl text-purple-200 mb-10 leading-relaxed">
                         Your funnels capture the data. Your CRM manages the relationship.
                     </p>
                     <div className="bg-white/10 p-8 rounded-2xl backdrop-blur-sm border border-white/10 text-left">
@@ -452,7 +452,7 @@ const CRMDeployment: React.FC = () => {
                         If leads are scattered across email, texts, and sticky notes, you're leaving money on the table. Let's build a system that works.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <Link to="/contact" className="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full font-bold transition-all hover:scale-105 shadow-[0_0_20px_rgba(37,99,235,0.3)]">
+                        <Link to="/contact" className="inline-flex items-center bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-full font-bold transition-all hover:scale-105 shadow-[0_0_20px_rgba(168,85,247,0.3)]">
                             Schedule Strategy Call <ArrowRight className="ml-2" />
                         </Link>
                         <Link to="/case-studies" className="inline-flex items-center border border-slate-600 hover:bg-slate-800 text-white px-8 py-4 rounded-full font-bold transition-all">
