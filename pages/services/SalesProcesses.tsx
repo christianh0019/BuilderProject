@@ -61,7 +61,7 @@ const SalesProcesses: React.FC = () => {
                                         </div>
                                         {/* Floating Elements */}
                                         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center p-8">
-                                            <div className="text-4xl font-bold text-white mb-2">Systems > Memory</div>
+                                            <div className="text-4xl font-bold text-white mb-2">Systems &gt; Memory</div>
                                             <div className="text-purple-400">Tracking every interaction from Click to Close</div>
                                         </div>
                                     </div>
