@@ -48,23 +48,12 @@ const SalesProcesses: React.FC = () => {
                     <div className="relative max-w-6xl mx-auto perspective-[1000px] group">
                         <div className="relative z-10 transform transition-all duration-700 hover:scale-[1.01]">
                             <div className="relative mx-auto bg-slate-900 rounded-xl p-2 shadow-2xl border border-slate-700 ring-1 ring-white/10 w-full">
-                                <div className="bg-slate-950 rounded-lg overflow-hidden relative aspect-video flex items-center justify-center">
-                                    {/* This is a placeholder for a Sales Pipeline Visual - keeping it code-based for now or generic dark UI */}
-                                    <div className="w-full h-full bg-slate-900 relative overflow-hidden">
-                                        <div className="absolute inset-0 bg-gradient-to-br from-slate-900 to-slate-800"></div>
-                                        {/* Abstract columns representing pipeline */}
-                                        <div className="absolute inset-4 flex gap-4 opacity-50">
-                                            <div className="flex-1 bg-slate-800/50 rounded-lg border border-slate-700/50"></div>
-                                            <div className="flex-1 bg-slate-800/50 rounded-lg border border-slate-700/50"></div>
-                                            <div className="flex-1 bg-slate-800/50 rounded-lg border border-slate-700/50"></div>
-                                            <div className="flex-1 bg-slate-800/50 rounded-lg border border-slate-700/50"></div>
-                                        </div>
-                                        {/* Floating Elements */}
-                                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center p-8">
-                                            <div className="text-4xl font-bold text-white mb-2">Systems &gt; Memory</div>
-                                            <div className="text-purple-400">Tracking every interaction from Click to Close</div>
-                                        </div>
-                                    </div>
+                                <div className="bg-slate-950 rounded-lg overflow-hidden relative">
+                                    <img
+                                        src="https://storage.googleapis.com/msgsndr/bH5sQz691OWPQdZXU6N2/media/697a0b891d09826b2e7df3c3.png"
+                                        alt="Sales Pipeline Dashboard"
+                                        className="w-full h-auto"
+                                    />
                                     <div className="absolute inset-0 bg-gradient-to-tr from-purple-500/10 to-transparent pointer-events-none"></div>
                                 </div>
                             </div>
@@ -113,7 +102,7 @@ const SalesProcesses: React.FC = () => {
                         <div className="relative z-10">
                             <h3 className="text-2xl md:text-3xl font-bold mb-6">The Math That Matters</h3>
                             <p className="text-lg md:text-xl text-purple-100 mb-8 leading-relaxed">
-                                Even at $50 per lead, 100 leads costs you $5,000. Close just ONE project—whether that's a $1.5M custom home or a $400K whole-home remodel—and you're making $100K to $500K in profit.
+                                Even at $50 per lead, 100 leads costs you $5,000. Close just ONE project—whether that's a $1.5M custom home or a $400K whole-home remodel—and you're making $100K to $300K in profit.
                             </p>
                             <div className="inline-block bg-white/10 backdrop-blur-md px-8 py-4 rounded-xl border border-white/20">
                                 <span className="font-bold text-white">The Difference? Not better leads. Better systems.</span>
@@ -307,49 +296,33 @@ const SalesProcesses: React.FC = () => {
 
             {/* Implementation Timeline */}
             <section className="py-24 bg-white">
-                <div className="container mx-auto px-6 max-w-4xl">
+                <div className="container mx-auto px-6 max-w-6xl">
                     <div className="text-center mb-16">
                         <h2 className="text-3xl md:text-5xl font-serif font-bold text-slate-900 mb-6">Implementation in 3 Weeks</h2>
                         <p className="text-xl text-slate-500">Rapid deployment so you can start closing.</p>
                     </div>
 
-                    <div className="relative">
-                        {/* Connecting Line */}
-                        <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-slate-100 md:left-1/2 md:-ml-px"></div>
+                    <div className="grid md:grid-cols-3 gap-8">
+                        <div className="p-8 border border-slate-200 rounded-2xl bg-white relative hover:shadow-lg transition-shadow">
+                            <div className="w-12 h-12 bg-slate-100 rounded-xl flex items-center justify-center font-bold text-slate-400 text-xl mb-6">1</div>
+                            <h3 className="text-xl font-bold text-slate-900 mb-3">Process Mapping</h3>
+                            <p className="text-slate-600 mb-4">We document your entire sales stage process, scripts, and frameworks.</p>
+                            <span className="inline-block text-xs font-bold text-purple-600 bg-purple-50 px-3 py-1 rounded-full">Week 1</span>
+                        </div>
 
-                        <div className="space-y-12">
-                            {/* Week 1 */}
-                            <div className="relative flex items-center md:justify-between group">
-                                <div className="flex flex-col md:w-[45%] md:items-end md:text-right ml-20 md:ml-0">
-                                    <h3 className="text-xl font-bold text-slate-900">Process Mapping</h3>
-                                    <p className="text-slate-500 mt-2">We document your entire sales stage process, scripts, and frameworks.</p>
-                                    <span className="inline-block mt-3 text-xs font-bold text-purple-600 bg-purple-50 px-3 py-1 rounded-full">Week 1</span>
-                                </div>
-                                <div className="absolute left-0 w-16 h-16 bg-white border-4 border-slate-100 rounded-full flex items-center justify-center font-bold text-slate-300 z-10 md:left-1/2 md:-ml-8 group-hover:border-purple-500 group-hover:text-purple-600 transition-colors">1</div>
-                                <div className="hidden md:block md:w-[45%]"></div>
-                            </div>
+                        <div className="p-8 border-2 border-purple-100 rounded-2xl bg-purple-50/50 relative hover:shadow-xl transition-shadow transform md:-translate-y-4">
+                            <div className="absolute top-0 right-0 px-4 py-1 bg-purple-600 text-white text-xs font-bold uppercase rounded-bl-xl rounded-tr-xl">Most Work</div>
+                            <div className="w-12 h-12 bg-purple-200 rounded-xl flex items-center justify-center font-bold text-purple-700 text-xl mb-6">2</div>
+                            <h3 className="text-xl font-bold text-slate-900 mb-3">Pipeline Setup</h3>
+                            <p className="text-slate-600 mb-4">Configuring the CRM, building dashboards, and setting up automation.</p>
+                            <span className="inline-block text-xs font-bold text-purple-600 bg-white border border-purple-200 px-3 py-1 rounded-full">Week 2</span>
+                        </div>
 
-                            {/* Week 2 */}
-                            <div className="relative flex items-center md:justify-between group">
-                                <div className="hidden md:block md:w-[45%]"></div>
-                                <div className="absolute left-0 w-16 h-16 bg-white border-4 border-slate-100 rounded-full flex items-center justify-center font-bold text-slate-300 z-10 md:left-1/2 md:-ml-8 group-hover:border-purple-500 group-hover:text-purple-600 transition-colors">2</div>
-                                <div className="flex flex-col md:w-[45%] ml-20 md:ml-0">
-                                    <h3 className="text-xl font-bold text-slate-900">Pipeline Setup</h3>
-                                    <p className="text-slate-500 mt-2">Configuring the CRM, building dashboards, and setting up automation.</p>
-                                    <span className="inline-block mt-3 text-xs font-bold text-purple-600 bg-purple-50 px-3 py-1 rounded-full">Week 2</span>
-                                </div>
-                            </div>
-
-                            {/* Week 3 */}
-                            <div className="relative flex items-center md:justify-between group">
-                                <div className="flex flex-col md:w-[45%] md:items-end md:text-right ml-20 md:ml-0">
-                                    <h3 className="text-xl font-bold text-slate-900">Training & Launch</h3>
-                                    <p className="text-slate-500 mt-2">Handing off the system and training your team on daily execution.</p>
-                                    <span className="inline-block mt-3 text-xs font-bold text-purple-600 bg-purple-50 px-3 py-1 rounded-full">Week 3</span>
-                                </div>
-                                <div className="absolute left-0 w-16 h-16 bg-white border-4 border-slate-100 rounded-full flex items-center justify-center font-bold text-slate-300 z-10 md:left-1/2 md:-ml-8 group-hover:border-purple-500 group-hover:text-purple-600 transition-colors">3</div>
-                                <div className="hidden md:block md:w-[45%]"></div>
-                            </div>
+                        <div className="p-8 border border-slate-200 rounded-2xl bg-white relative hover:shadow-lg transition-shadow">
+                            <div className="w-12 h-12 bg-slate-100 rounded-xl flex items-center justify-center font-bold text-slate-400 text-xl mb-6">3</div>
+                            <h3 className="text-xl font-bold text-slate-900 mb-3">Training & Launch</h3>
+                            <p className="text-slate-600 mb-4">Handing off the system and training your team on daily execution.</p>
+                            <span className="inline-block text-xs font-bold text-purple-600 bg-purple-50 px-3 py-1 rounded-full">Week 3</span>
                         </div>
                     </div>
                 </div>
@@ -395,7 +368,7 @@ const SalesProcesses: React.FC = () => {
                             Schedule Strategy Call <ArrowRight className="ml-2" />
                         </Link>
                         <Link to="/case-studies" className="inline-flex items-center border border-slate-600 hover:bg-slate-800 text-white px-8 py-4 rounded-full font-bold transition-all">
-                            See Pipeline Demo
+                            See Results
                         </Link>
                     </div>
                 </div>
