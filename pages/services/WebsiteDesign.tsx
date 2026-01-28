@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, CheckCircle, X, ChevronDown, ChevronUp, Compass, PenTool, Rocket, Users, Layout } from 'lucide-react';
 import BrowserFrame from '../../components/ui/BrowserFrame';
+import SEO from '../../components/SEO';
 
 const WebsiteDesign: React.FC = () => {
     const [openFaq, setOpenFaq] = React.useState<number | null>(null);
@@ -11,9 +12,14 @@ const WebsiteDesign: React.FC = () => {
     };
 
     return (
-        <div className="pt-20">
-            {/* Hero Section */}
-            {/* Hero Section */}
+        <article className="pt-20 font-sans antialiased text-slate-900 bg-white">
+            <SEO
+                title="Custom Home Builder Website Design | BuilderProject"
+                description="High-performance websites that convert. Show your portfolio and build trust with luxury home buyers."
+                canonical="/services/website-design"
+                keywords="builder website design, construction web development, luxury home builder marketing"
+            />
+            {/* SEO Hidden H1 */}
             <section className="relative bg-[#0F172A] text-white pt-32 pb-32 overflow-hidden">
                 {/* Background Effects */}
                 <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-purple-900/20 rounded-full blur-[120px] pointer-events-none mix-blend-screen animate-pulse"></div>
@@ -735,7 +741,7 @@ const WebsiteDesign: React.FC = () => {
                     </div>
                 </div>
             </section>
-        </div>
+        </article>
     );
 };
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, CheckCircle, X, ChevronDown, ChevronUp, Users, MessageSquare, DollarSign, BarChart3, Filter, ShieldCheck, Clock, CheckSquare } from 'lucide-react';
-
+import SEO from '../../components/SEO';
 const SalesProcesses: React.FC = () => {
     const [openFaq, setOpenFaq] = React.useState<number | null>(null);
 
@@ -11,6 +11,12 @@ const SalesProcesses: React.FC = () => {
 
     return (
         <div className="pt-20">
+            <SEO
+                title="Sales Process Consulting for Builders | BuilderProject"
+                description="Optimize your sales cycle. From first call to signed contract, we structure your process to close larger deals."
+                canonical="/services/sales-processes"
+                keywords="construction sales training, builder sales process, closing custom homes"
+            />
             {/* Hero Section */}
             <section className="relative bg-[#0F172A] text-white pt-32 pb-32 overflow-hidden">
                 {/* Background Effects */}

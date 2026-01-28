@@ -3,6 +3,10 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, CheckCircle, X, ChevronDown, ChevronUp, Users, Target, Zap, Layout, Megaphone, BarChart3, Clock, Calendar, ShieldCheck, Crown } from 'lucide-react';
 import { caseStudies } from '../../data/caseStudies';
 
+import SEO from '../../components/SEO';
+
+// ... imports remain the same
+
 const PartnerProgram: React.FC = () => {
     const [openFaq, setOpenFaq] = useState<number | null>(null);
 
@@ -14,6 +18,12 @@ const PartnerProgram: React.FC = () => {
 
     return (
         <div className="pt-20">
+            <SEO
+                title="Growth Partner Program for Builders | BuilderProject"
+                description="We become your entire marketing department. Scale your custom home building business without managing vendors."
+                canonical="/programs/partner"
+                keywords="fractional cmo for builders, marketing partner program, construction marketing agency"
+            />
             {/* 1. Hero Section */}
             <section className="relative bg-[#0F172A] text-white pt-32 pb-32 overflow-hidden">
                 {/* Background Effects */}

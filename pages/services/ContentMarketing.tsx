@@ -2,9 +2,19 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Video, Mic, Smartphone, FileText, Mail, ArrowRight, Play, CheckCircle2, TrendingUp, Users } from 'lucide-react';
 
+import SEO from '../../components/SEO';
+
+// ... imports remain the same
+
 const ContentMarketing: React.FC = () => {
     return (
         <article className="pt-20 font-sans antialiased text-slate-900 bg-white">
+            <SEO
+                title="Content Marketing for Construction | BuilderProject"
+                description="Build authority with video and written content. We plan, edit, and distribute content that attracts your ideal clients."
+                canonical="/services/content-marketing"
+                keywords="construction content marketing, builder social media, video production for builders"
+            />
             {/* SEO Hidden H1 for Structure */}
             <h1 className="sr-only">Content Marketing & Video Production for Custom Home Builders</h1>
 

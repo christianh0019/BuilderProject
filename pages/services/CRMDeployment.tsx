@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, CheckCircle, X, ChevronDown, ChevronUp, Database, Users, TrendingUp, BarChart2, Mail, MessageSquare, Briefcase, Calendar, PenTool, Filter } from 'lucide-react';
-
+import SEO from '../../components/SEO';
 
 
 const CRMDeployment: React.FC = () => {
@@ -13,6 +13,12 @@ const CRMDeployment: React.FC = () => {
 
     return (
         <div className="pt-20">
+            <SEO
+                title="CRM & Sales Automation for Builders | BuilderProject"
+                description="Custom HighLevel setup for builders. Automate follow-ups, manage leads, and close more custom home projects."
+                canonical="/services/crm-deployment"
+                keywords="builder crm, construction sales automation, gohighlevel for builders"
+            />
             {/* Hero Section */}
             <section className="relative bg-[#0F172A] text-white pt-32 pb-32 overflow-hidden">
                 {/* Background Effects */}

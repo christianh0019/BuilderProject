@@ -2,9 +2,19 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Target, Filter, Magnet, ArrowRight, MessageSquare, CheckCircle2, XCircle, Layout, Smartphone, Calendar } from 'lucide-react';
 
+import SEO from '../../components/SEO';
+
+// ... imports remain the same
+
 const PaidAdvertising: React.FC = () => {
     return (
         <article className="pt-20 font-sans antialiased text-slate-900 bg-white">
+            <SEO
+                title="PPC & Paid Ads for Custom Builders | BuilderProject"
+                description="Targeted Facebook & Google ads for custom home builders. Generate exclusive leads with high intent."
+                canonical="/services/paid-advertising"
+                keywords="construction ppc, builder facebook ads, lead generation for home builders"
+            />
             {/* SEO Hidden H1 */}
             <h1 className="sr-only">Paid Advertising, PPC & Lead Generation for Custom Home Builders</h1>
 

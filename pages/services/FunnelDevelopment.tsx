@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, CheckCircle, X, ChevronDown, ChevronUp, Compass, PenTool, Rocket, Users, Layout, Mail, Magnet, Filter, BarChart, FileText } from 'lucide-react';
 import BrowserFrame from '../../components/ui/BrowserFrame';
+import SEO from '../../components/SEO';
 
 const FunnelDevelopment: React.FC = () => {
     const [openFaq, setOpenFaq] = React.useState<number | null>(null);
@@ -12,6 +13,12 @@ const FunnelDevelopment: React.FC = () => {
 
     return (
         <div className="pt-20">
+            <SEO
+                title="Lead Capture Funnels for Home Builders | BuilderProject"
+                description="Convert high-net-worth traffic into appointments with sophisticated lead capture funnels designed for custom builders."
+                canonical="/services/funnel-development"
+                keywords="construction funnels, lead capture for builders, real estate marketing funnels"
+            />
             {/* Hero Section */}
             <section className="relative bg-[#0F172A] text-white pt-32 pb-32 overflow-hidden">
                 {/* Background Effects */}

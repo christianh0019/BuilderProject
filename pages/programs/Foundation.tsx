@@ -12,6 +12,10 @@ const interiorLiving = '/images/stonebrook-hero.png';
 const exteriorRear = '/images/open-prairie-poster.jpg';
 const exteriorSide = '/images/eagle-rock-update.png';
 
+import SEO from '../../components/SEO';
+
+// ... imports remain the same
+
 const FoundationProgram: React.FC = () => {
     const [openFaq, setOpenFaq] = useState<number | null>(null);
     const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
@@ -32,6 +36,12 @@ const FoundationProgram: React.FC = () => {
 
     return (
         <div className="pt-20">
+            <SEO
+                title="Marketing Foundation for Custom Home Builders | BuilderProject"
+                description="Build your digital foundation in 3 weeks. Complete website, branding, and CRM setup for custom home builders."
+                canonical="/programs/foundation"
+                keywords="builder website design, construction branding, crm for builders, marketing foundation"
+            />
             {/* 1. Hero Section */}
             <section className="relative bg-[#0F172A] text-white pt-32 pb-32 overflow-hidden">
                 {/* Background Effects */}

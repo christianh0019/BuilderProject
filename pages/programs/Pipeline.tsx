@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { ArrowRight, CheckCircle2, ChevronDown, ChevronUp, Clock, TrendingUp, AlertTriangle, Filter, Target, CalendarCheck, BarChart3, Smartphone, DollarSign, XCircle, PlayCircle, Lock, ShieldCheck, CheckCircle, MessageSquare, User, Zap } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { caseStudies } from '../../data/caseStudies';
+import SEO from '../../components/SEO';
 
 const PipelineProgram: React.FC = () => {
     const [openFaq, setOpenFaq] = useState<number | null>(null);
@@ -132,6 +133,12 @@ const PipelineProgram: React.FC = () => {
 
     return (
         <div className="pt-20 font-sans text-slate-900 selection:bg-purple-200 selection:text-purple-900">
+            <SEO
+                title="Automated Lead Pipeline for Builders | BuilderProject"
+                description="Predictable lead generation system for custom builders. Fill your calendar with qualified homeowner meetings."
+                canonical="/programs/pipeline"
+                keywords="lead generation for builders, construction sales pipeline, builder crm automation"
+            />
             {/* 1. Hero Section (Centered Match) */}
             <section className="relative bg-[#0F172A] text-white pt-32 pb-32 overflow-hidden">
                 {/* Background Effects */}
