@@ -1,203 +1,240 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import { CheckCircle, ArrowRight, XCircle, Clock, DollarSign, BarChart3, ChevronDown, ChevronUp, AlertCircle } from 'lucide-react';
+import { ArrowRight, CheckCircle, X, ChevronDown, ChevronUp, Users, MessageSquare, DollarSign, BarChart3, Filter, ShieldCheck, Clock, CheckSquare } from 'lucide-react';
 
 const SalesProcesses: React.FC = () => {
-    const [openFaq, setOpenFaq] = useState<number | null>(null);
+    const [openFaq, setOpenFaq] = React.useState<number | null>(null);
 
     const toggleFaq = (index: number) => {
         setOpenFaq(openFaq === index ? null : index);
     };
 
     return (
-        <div className="bg-white">
+        <div className="pt-20">
             {/* Hero Section */}
-            <section className="relative pt-32 pb-20 bg-slate-900 text-white overflow-hidden">
-                <div className="absolute inset-0 bg-[#0B1120]"></div>
-                <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 to-blue-900/20"></div>
+            <section className="relative bg-[#0F172A] text-white pt-32 pb-32 overflow-hidden">
+                {/* Background Effects */}
+                <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-purple-900/20 rounded-full blur-[120px] pointer-events-none mix-blend-screen animate-pulse"></div>
+                <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-blue-900/10 rounded-full blur-[100px] pointer-events-none mix-blend-screen"></div>
 
                 <div className="container mx-auto px-6 relative z-10">
-                    <div className="max-w-4xl mx-auto text-center">
-                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-300 text-sm font-medium mb-6">
-                            <span className="w-2 h-2 rounded-full bg-purple-400 animate-pulse"></span>
-                            Sales Pipeline Systems
+                    <div className="max-w-7xl mx-auto text-center mb-20">
+                        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-900/30 border border-blue-500/30 mb-8 backdrop-blur-sm">
+                            <span className="flex h-2 w-2 rounded-full bg-blue-400 animate-pulse"></span>
+                            <span className="text-sm font-medium text-blue-200 uppercase tracking-widest">Sales Pipeline Systems</span>
                         </div>
-                        <h1 className="text-4xl md:text-6xl font-serif font-bold mb-6 leading-tight">
-                            Complete Sales Pipeline Systems For <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">Custom Home Builders & Remodelers</span>
+
+                        <h1 className="text-5xl md:text-7xl font-serif font-bold mb-8 leading-tight tracking-tight">
+                            Complete Sales Pipeline Systems
+                            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 mt-2">For Custom Home Builders</span>
                         </h1>
-                        <p className="text-xl text-slate-300 mb-10 max-w-2xl mx-auto leading-relaxed">
+
+                        <p className="text-xl md:text-2xl text-slate-300 mb-10 max-w-3xl mx-auto leading-relaxed font-light">
                             Stop losing qualified leads because you forgot to follow up. Build a systematic sales process that closes 3-4x more deals from the same traffic.
                         </p>
-                        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                            <Link to="/contact" className="px-8 py-4 bg-white text-slate-900 rounded-full font-bold hover:bg-slate-100 transition-colors flex items-center gap-2">
-                                Start Your Project <ArrowRight size={18} />
+
+                        <div className="flex flex-col sm:flex-row gap-5 justify-center items-center">
+                            <Link to="/contact" className="group relative inline-flex items-center justify-center px-8 py-4 text-base font-bold text-white transition-all duration-200 bg-purple-600 font-pj rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-600 hover:bg-purple-700 shadow-[0_0_20px_rgba(168,85,247,0.4)] hover:shadow-[0_0_30px_rgba(168,85,247,0.6)]">
+                                Start Your Project
+                                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                             </Link>
-                            <Link to="/case-studies" className="px-8 py-4 bg-transparent border border-slate-700 text-white rounded-full font-bold hover:bg-white/5 transition-colors">
+                            <Link to="/case-studies" className="inline-flex items-center justify-center px-8 py-4 text-base font-bold text-slate-300 transition-all duration-200 bg-transparent border border-slate-700 rounded-full hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-slate-700 hover:text-white hover:border-slate-500">
                                 View Examples
                             </Link>
                         </div>
+                    </div>
+
+                    {/* Dashboard Preview Graphic */}
+                    <div className="relative max-w-6xl mx-auto perspective-[1000px] group">
+                        <div className="relative z-10 transform transition-all duration-700 hover:scale-[1.01]">
+                            <div className="relative mx-auto bg-slate-900 rounded-xl p-2 shadow-2xl border border-slate-700 ring-1 ring-white/10 w-full">
+                                <div className="bg-slate-950 rounded-lg overflow-hidden relative aspect-video flex items-center justify-center">
+                                    {/* This is a placeholder for a Sales Pipeline Visual - keeping it code-based for now or generic dark UI */}
+                                    <div className="w-full h-full bg-slate-900 relative overflow-hidden">
+                                        <div className="absolute inset-0 bg-gradient-to-br from-slate-900 to-slate-800"></div>
+                                        {/* Abstract columns representing pipeline */}
+                                        <div className="absolute inset-4 flex gap-4 opacity-50">
+                                            <div className="flex-1 bg-slate-800/50 rounded-lg border border-slate-700/50"></div>
+                                            <div className="flex-1 bg-slate-800/50 rounded-lg border border-slate-700/50"></div>
+                                            <div className="flex-1 bg-slate-800/50 rounded-lg border border-slate-700/50"></div>
+                                            <div className="flex-1 bg-slate-800/50 rounded-lg border border-slate-700/50"></div>
+                                        </div>
+                                        {/* Floating Elements */}
+                                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center p-8">
+                                            <div className="text-4xl font-bold text-white mb-2">Systems > Memory</div>
+                                            <div className="text-purple-400">Tracking every interaction from Click to Close</div>
+                                        </div>
+                                    </div>
+                                    <div className="absolute inset-0 bg-gradient-to-tr from-purple-500/10 to-transparent pointer-events-none"></div>
+                                </div>
+                            </div>
+                        </div>
+                        {/* Abstract background glow */}
+                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-full bg-purple-500/10 blur-[120px] -z-10 rounded-full pointer-events-none"></div>
                     </div>
                 </div>
             </section>
 
             {/* The Gap Section */}
             <section className="py-24 bg-white">
-                <div className="container mx-auto px-6 max-w-4xl">
-                    <h2 className="text-3xl font-serif font-bold text-slate-900 mb-8">Why Your Marketing Leads Aren't Closing Like Your Referrals</h2>
-                    <div className="prose prose-lg text-slate-600">
-                        <p className="mb-6">
-                            Referrals close at 30-40%. Marketing leads close at 1%.
+                <div className="container mx-auto px-6">
+                    <div className="max-w-4xl mx-auto text-center mb-16">
+                        <h2 className="text-3xl md:text-5xl font-serif font-bold text-slate-900 mb-6">
+                            Why Your Marketing Leads Aren't <br /> Closing Like Your Referrals
+                        </h2>
+                        <p className="text-xl text-slate-600 leading-relaxed max-w-3xl mx-auto">
+                            Referrals close at 30-40%. Marketing leads close at 1%. You see that gap and think "marketing doesn't work for builders." Here's what's actually happening.
                         </p>
-                        <p className="mb-6">
-                            You see that gap and think "marketing doesn't work for builders."
-                        </p>
-                        <p className="font-bold text-slate-900 mb-4">Here's what's actually happening:</p>
-                        <div className="grid md:grid-cols-2 gap-8 mb-8">
-                            <div className="bg-slate-50 p-6 rounded-xl border border-slate-100">
-                                <h3 className="font-bold text-slate-900 mb-2 flex items-center gap-2">
-                                    <CheckCircle className="text-green-500" size={20} /> Referrals
-                                </h3>
-                                <p className="text-sm">Close like crazy because someone the prospect already trusts vouched for you. They show up ready to move forward. Fewer objections. More flexible on price. Faster decisions.</p>
+                    </div>
+
+                    <div className="grid md:grid-cols-2 gap-8 mb-16 max-w-5xl mx-auto">
+                        <div className="bg-slate-50 p-8 rounded-3xl border border-slate-200">
+                            <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center text-green-600 mb-6">
+                                <ShieldCheck size={24} />
                             </div>
-                            <div className="bg-slate-50 p-6 rounded-xl border border-slate-100">
-                                <h3 className="font-bold text-slate-900 mb-2 flex items-center gap-2">
-                                    <XCircle className="text-red-500" size={20} /> Marketing Leads
-                                </h3>
-                                <p className="text-sm">They found you on Google or clicked your ad. They don't know you yet. They're comparing you to 5 other builders. Half of them are just researching and won't be ready for months.</p>
-                            </div>
-                        </div>
-                        <p className="mb-6">
-                            A 1% close rate on cold traffic is normal. Actually, it's healthy.
-                        </p>
-                        <div className="bg-purple-50 p-8 rounded-2xl border border-purple-100 my-8">
-                            <h3 className="text-xl font-bold text-purple-900 mb-4 flex items-center gap-2">
-                                <DollarSign className="text-purple-600" /> The Math That Matters
-                            </h3>
-                            <p className="text-purple-800 mb-0">
-                                Even at $50 per lead, 100 leads costs you $5,000. Close just ONE project—whether that's a $1.5M custom home or a $400K whole-home remodel—and you're making $100K to $500K in profit. The economics work even if lead costs go way up.
+                            <h3 className="text-2xl font-bold text-slate-900 mb-4">Referrals</h3>
+                            <p className="text-slate-600 leading-relaxed">
+                                Close like crazy because someone the prospect already trusts vouched for you. They show up ready to move forward. Fewer objections. More flexible on price. Faster decisions.
                             </p>
                         </div>
-                        <p className="mb-6">
-                            So why do most builders give up on marketing? They expect cold traffic to behave like referrals. They run ads for 2 months, don't close anything immediately, and shut it down.
-                        </p>
-                        <p className="mb-6">
-                            The builders who win? They understand timelines are long. They know tire kickers come with the territory. And they have systems that manage hundreds of conversations without relying on memory and sticky notes.
-                        </p>
-                        <p className="font-bold text-slate-900">
-                            That's the difference. Not better leads. Better systems.
-                        </p>
+                        <div className="bg-slate-50 p-8 rounded-3xl border border-slate-200">
+                            <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center text-red-600 mb-6">
+                                <Users size={24} />
+                            </div>
+                            <h3 className="text-2xl font-bold text-slate-900 mb-4">Marketing Leads</h3>
+                            <p className="text-slate-600 leading-relaxed">
+                                They found you on Google or clicked your ad. They don't know you yet. They're comparing you to 5 other builders. Half of them are just researching and won't be ready for months.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div className="max-w-4xl mx-auto bg-purple-900 rounded-3xl p-8 md:p-12 text-white text-center relative overflow-hidden">
+                        <div className="absolute top-0 right-0 w-64 h-64 bg-purple-600/30 rounded-full blur-3xl -mr-32 -mt-32"></div>
+                        <div className="relative z-10">
+                            <h3 className="text-2xl md:text-3xl font-bold mb-6">The Math That Matters</h3>
+                            <p className="text-lg md:text-xl text-purple-100 mb-8 leading-relaxed">
+                                Even at $50 per lead, 100 leads costs you $5,000. Close just ONE project—whether that's a $1.5M custom home or a $400K whole-home remodel—and you're making $100K to $500K in profit.
+                            </p>
+                            <div className="inline-block bg-white/10 backdrop-blur-md px-8 py-4 rounded-xl border border-white/20">
+                                <span className="font-bold text-white">The Difference? Not better leads. Better systems.</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
 
             {/* The Problem: Memory Management */}
             <section className="py-24 bg-slate-50">
-                <div className="container mx-auto px-6 max-w-5xl">
-                    <div className="text-center mb-16">
+                <div className="container mx-auto px-6 max-w-6xl">
+                    <div className="text-center mb-20">
                         <span className="text-purple-600 font-bold tracking-wider uppercase text-sm">The Real Problem</span>
-                        <h2 className="text-3xl md:text-4xl font-serif font-bold text-slate-900 mt-2">You're Managing 600+ Conversations Per Year With Your Memory</h2>
-                        <p className="text-slate-600 mt-4 max-w-2xl mx-auto">
-                            If you're generating 50 leads per month, that's 600 conversations over a year. Some are qualified. Some aren't. Some are ready now. Some are 8 months out.
-                        </p>
+                        <h2 className="text-3xl md:text-5xl font-serif font-bold text-slate-900 mt-2 mb-6">You're Managing 600+ Conversations <br /> Per Year With Your Memory</h2>
                     </div>
 
                     <div className="grid md:grid-cols-2 gap-12 items-center">
-                        <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-200 relative overflow-hidden">
+                        <div className="bg-white p-8 md:p-12 rounded-3xl shadow-sm border border-red-100 relative overflow-hidden">
                             <div className="absolute top-0 left-0 w-full h-1 bg-red-500"></div>
-                            <h3 className="text-2xl font-bold text-slate-900 mb-6">Without a System</h3>
-                            <ul className="space-y-4">
-                                <li className="flex items-start gap-3 text-slate-600">
-                                    <XCircle className="text-red-500 shrink-0 mt-1" size={18} />
-                                    <span>They're scattered across email, texts, Instagram DMs, sticky notes</span>
-                                </li>
-                                <li className="flex items-start gap-3 text-slate-600">
-                                    <XCircle className="text-red-500 shrink-0 mt-1" size={18} />
-                                    <span>You forget who's who when they call back</span>
-                                </li>
-                                <li className="flex items-start gap-3 text-slate-600">
-                                    <XCircle className="text-red-500 shrink-0 mt-1" size={18} />
-                                    <span>You miss follow-ups because you're busy running jobs</span>
-                                </li>
-                                <li className="flex items-start gap-3 text-slate-600">
-                                    <XCircle className="text-red-500 shrink-0 mt-1" size={18} />
-                                    <span>Qualified prospects slip away because someone else stayed organized</span>
-                                </li>
+                            <h3 className="text-2xl font-bold text-slate-900 mb-8">Without a System</h3>
+                            <ul className="space-y-6">
+                                {[
+                                    "Leads scattered across email, texts, DMs",
+                                    "You forget who needs a callback",
+                                    "Missed follow-ups because you're busy",
+                                    "Qualified prospects slip away"
+                                ].map((item, i) => (
+                                    <li key={i} className="flex items-start gap-4 text-slate-600">
+                                        <div className="w-6 h-6 rounded-full bg-red-50 flex items-center justify-center text-red-500 shrink-0 mt-0.5">
+                                            <X size={14} />
+                                        </div>
+                                        <span className="text-lg">{item}</span>
+                                    </li>
+                                ))}
                             </ul>
-                            <div className="mt-8 pt-8 border-t border-slate-100">
-                                <div className="text-sm font-bold text-slate-500 uppercase mb-2">Result</div>
-                                <p className="text-lg font-bold text-slate-900">You close <span className="text-red-600">0-1</span> out of every 10 qualified leads.</p>
+                            <div className="mt-10 pt-8 border-t border-slate-100">
+                                <div className="flex items-end gap-2">
+                                    <span className="text-5xl font-bold text-red-500 mb-[-6px]">0-1</span>
+                                    <span className="text-slate-500 font-medium">closed per 10 leads</span>
+                                </div>
                             </div>
                         </div>
 
-                        <div className="bg-white p-8 rounded-2xl shadow-xl border border-purple-100 relative overflow-hidden transform md:-translate-y-4">
+                        <div className="bg-white p-8 md:p-12 rounded-3xl shadow-xl border border-green-100 relative overflow-hidden transform md:-translate-y-4">
                             <div className="absolute top-0 left-0 w-full h-1 bg-green-500"></div>
-                            <h3 className="text-2xl font-bold text-slate-900 mb-6">With a System</h3>
-                            <ul className="space-y-4">
-                                <li className="flex items-start gap-3 text-slate-600">
-                                    <CheckCircle className="text-green-500 shrink-0 mt-1" size={18} />
-                                    <span>Every lead captured in one place automatically</span>
-                                </li>
-                                <li className="flex items-start gap-3 text-slate-600">
-                                    <CheckCircle className="text-green-500 shrink-0 mt-1" size={18} />
-                                    <span>You know exactly where each deal stands</span>
-                                </li>
-                                <li className="flex items-start gap-3 text-slate-600">
-                                    <CheckCircle className="text-green-500 shrink-0 mt-1" size={18} />
-                                    <span>Follow-up happens automatically at the right times</span>
-                                </li>
-                                <li className="flex items-start gap-3 text-slate-600">
-                                    <CheckCircle className="text-green-500 shrink-0 mt-1" size={18} />
-                                    <span>You only focus on the conversations that need your personal attention</span>
-                                </li>
+                            <h3 className="text-2xl font-bold text-slate-900 mb-8">With a System</h3>
+                            <ul className="space-y-6">
+                                {[
+                                    "Every lead captured in one place",
+                                    "Instant status of every deal",
+                                    "Automated follow-up at right times",
+                                    "Focus only on hot conversations"
+                                ].map((item, i) => (
+                                    <li key={i} className="flex items-start gap-4 text-slate-600">
+                                        <div className="w-6 h-6 rounded-full bg-green-50 flex items-center justify-center text-green-500 shrink-0 mt-0.5">
+                                            <CheckCircle size={14} />
+                                        </div>
+                                        <span className="text-lg">{item}</span>
+                                    </li>
+                                ))}
                             </ul>
-                            <div className="mt-8 pt-8 border-t border-slate-100">
-                                <div className="text-sm font-bold text-slate-500 uppercase mb-2">Result</div>
-                                <p className="text-lg font-bold text-slate-900">You close <span className="text-green-600">3-4</span> out of every 10 qualified leads.</p>
-                                <p className="text-sm text-purple-600 font-bold mt-2">That's 3-4x more revenue from the exact same spend.</p>
+                            <div className="mt-10 pt-8 border-t border-slate-100">
+                                <div className="flex items-end gap-2">
+                                    <span className="text-5xl font-bold text-green-500 mb-[-6px]">3-4</span>
+                                    <span className="text-slate-500 font-medium">closed per 10 leads</span>
+                                </div>
+                                <p className="text-green-600 font-bold mt-4 text-sm uppercase tracking-wide">3-4x Revenue Multiplier</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            {/* What We Build */}
+            {/* What We Build For You */}
             <section className="py-24 bg-white">
-                <div className="container mx-auto px-6 max-w-5xl">
-                    <h2 className="text-3xl font-serif font-bold text-slate-900 mb-16 text-center">What We Build For You</h2>
+                <div className="container mx-auto px-6 max-w-6xl">
+                    <div className="text-center mb-20">
+                        <h2 className="text-3xl md:text-5xl font-serif font-bold text-slate-900 mb-6">What We Build For You</h2>
+                        <p className="text-xl text-slate-500">A complete ecosystem to manage your sales pipeline.</p>
+                    </div>
+
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {[
                             {
                                 title: "Qualification System",
-                                desc: "Fast filtering process that screens prospects before they waste your time. Only qualified people with the right budget, timeline, and project scope get through to real conversations.",
-                                icon: Filter
+                                desc: "Fast filtering process that screens prospects before they waste your time. Only qualified people with the right budget, timeline, and project scope get through.",
+                                icon: <Filter size={32} className="text-blue-500" />
                             },
                             {
                                 title: "Discovery Framework",
                                 desc: "Structured first conversation that uncovers what they actually want, what's frustrating them, and gives you everything you need to present the right solution.",
-                                icon: MessageSquare
+                                icon: <MessageSquare size={32} className="text-purple-500" />
                             },
                             {
                                 title: "Consultation Process",
                                 desc: "How to run meetings that close. Not generic presentations—specific solutions tied to what they told you matters most.",
-                                icon: Users
+                                icon: <Users size={32} className="text-pink-500" />
                             },
                             {
                                 title: "Early Payment Strategy",
-                                desc: "Stop doing free work hoping they sign eventually. Get paid for design and planning upfront. It filters serious buyers and increases close rates dramatically.",
-                                icon: DollarSign
+                                desc: "Stop doing free work hoping they sign eventually. Get paid for design and planning upfront. It filters serious buyers and increases close rates.",
+                                icon: <DollarSign size={32} className="text-green-500" />
                             },
                             {
                                 title: "Pipeline Management",
-                                desc: "Visual tracking showing every deal, what stage they're in, who needs follow-up, what's stalled, and your total pipeline value. Review it weekly in 30 minutes.",
-                                icon: BarChart3
+                                desc: "Visual tracking showing every deal, what stage they're in, who needs follow-up, and total pipeline value. Review it weekly in 30 minutes.",
+                                icon: <BarChart3 size={32} className="text-orange-500" />
+                            },
+                            {
+                                title: "Implementation Support",
+                                desc: "We don't just dump documents on you. We help you set it up, train your team, and ensure you're actually using the system daily.",
+                                icon: <CheckSquare size={32} className="text-slate-500" />
                             }
                         ].map((feature, i) => (
-                            <div key={i} className="p-6 rounded-xl border border-slate-100 bg-slate-50 hover:shadow-lg transition-shadow">
-                                <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center text-purple-600 mb-6">
-                                    <feature.icon size={24} />
+                            <div key={i} className="group p-8 rounded-2xl border border-slate-200 bg-white hover:border-purple-200 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                                <div className="w-16 h-16 bg-slate-50 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                                    {feature.icon}
                                 </div>
                                 <h3 className="text-xl font-bold text-slate-900 mb-3">{feature.title}</h3>
-                                <p className="text-slate-600 text-sm leading-relaxed">{feature.desc}</p>
+                                <p className="text-slate-600 leading-relaxed">{feature.desc}</p>
                             </div>
                         ))}
                     </div>
@@ -206,162 +243,112 @@ const SalesProcesses: React.FC = () => {
 
             {/* Before vs After Detailed */}
             <section className="py-24 bg-slate-900 text-white">
-                <div className="container mx-auto px-6 max-w-5xl">
-                    <h2 className="text-3xl font-serif font-bold mb-12 text-center">What Changes When You Have This</h2>
-                    <div className="grid md:grid-cols-2 gap-px bg-slate-700 rounded-2xl overflow-hidden border border-slate-700">
-                        <div className="p-10 bg-[#0F172A]">
-                            <h3 className="text-xl font-bold text-red-400 mb-6 uppercase tracking-wider text-sm">Before System</h3>
-                            <div className="space-y-6 relative">
-                                <div className="absolute left-[11px] top-2 bottom-2 w-0.5 bg-slate-800"></div>
-                                <div className="relative flex items-center gap-4 text-slate-400">
-                                    <div className="w-6 h-6 rounded-full bg-slate-800 border border-slate-700 flex items-center justify-center text-xs shrink-0">1</div>
-                                    <p>Qualified lead comes in</p>
+                <div className="container mx-auto px-6 max-w-6xl">
+                    <div className="grid lg:grid-cols-2 gap-16 items-center">
+                        <div>
+                            <h2 className="text-3xl md:text-5xl font-serif font-bold mb-6">What Changes With A System</h2>
+                            <p className="text-slate-400 text-lg leading-relaxed mb-8">
+                                Same leads. Same person running sales. The system just keeps everything from falling apart.
+                            </p>
+
+                            <div className="space-y-8">
+                                <div className="flex gap-4">
+                                    <div className="w-10 h-10 rounded-full bg-purple-900/50 flex items-center justify-center text-purple-400 font-bold shrink-0">1</div>
+                                    <div>
+                                        <h4 className="font-bold text-white text-lg">Instant Qualification</h4>
+                                        <p className="text-slate-400 mt-1">Lead comes in and is filtered within an hour. Only qualified ones move forward.</p>
+                                    </div>
                                 </div>
-                                <div className="relative flex items-center gap-4 text-slate-400">
-                                    <div className="w-6 h-6 rounded-full bg-slate-800 border border-slate-700 flex items-center justify-center text-xs shrink-0">2</div>
-                                    <p>You respond when you remember</p>
+                                <div className="flex gap-4">
+                                    <div className="w-10 h-10 rounded-full bg-purple-900/50 flex items-center justify-center text-purple-400 font-bold shrink-0">2</div>
+                                    <div>
+                                        <h4 className="font-bold text-white text-lg">Automated Scheduling</h4>
+                                        <p className="text-slate-400 mt-1">Discovery calls get booked automatically without email tag.</p>
+                                    </div>
                                 </div>
-                                <div className="relative flex items-center gap-4 text-slate-400">
-                                    <div className="w-6 h-6 rounded-full bg-slate-800 border border-slate-700 flex items-center justify-center text-xs shrink-0">3</div>
-                                    <p>Have conversation, forget to follow up</p>
+                                <div className="flex gap-4">
+                                    <div className="w-10 h-10 rounded-full bg-purple-900/50 flex items-center justify-center text-purple-400 font-bold shrink-0">3</div>
+                                    <div>
+                                        <h4 className="font-bold text-white text-lg">Contextual Meetings</h4>
+                                        <p className="text-slate-400 mt-1">Every meeting is prepped with exactly what they told you they want.</p>
+                                    </div>
                                 </div>
-                                <div className="relative flex items-center gap-4 text-slate-400">
-                                    <div className="w-6 h-6 rounded-full bg-slate-800 border border-slate-700 flex items-center justify-center text-xs shrink-0">4</div>
-                                    <p>Three months later they sign with competitor</p>
+                                <div className="flex gap-4">
+                                    <div className="w-10 h-10 rounded-full bg-purple-900/50 flex items-center justify-center text-purple-400 font-bold shrink-0">4</div>
+                                    <div>
+                                        <h4 className="font-bold text-white text-lg">Paid Design</h4>
+                                        <p className="text-slate-400 mt-1">Serious prospects pay for concept design, filtering out tire kickers.</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div className="p-10 bg-slate-800/50">
-                            <h3 className="text-xl font-bold text-green-400 mb-6 uppercase tracking-wider text-sm">After System</h3>
-                            <div className="space-y-6 relative">
-                                <div className="absolute left-[11px] top-2 bottom-2 w-0.5 bg-green-500/20"></div>
-                                <div className="relative flex items-center gap-4 text-white">
-                                    <div className="w-6 h-6 rounded-full bg-green-500 flex items-center justify-center text-xs font-bold text-slate-900 shrink-0">1</div>
-                                    <p>Lead comes in, qualification happens within an hour</p>
-                                </div>
-                                <div className="relative flex items-center gap-4 text-white">
-                                    <div className="w-6 h-6 rounded-full bg-green-500 flex items-center justify-center text-xs font-bold text-slate-900 shrink-0">2</div>
-                                    <p>They're filtered and only qualified ones move forward</p>
-                                </div>
-                                <div className="relative flex items-center gap-4 text-white">
-                                    <div className="w-6 h-6 rounded-full bg-green-500 flex items-center justify-center text-xs font-bold text-slate-900 shrink-0">3</div>
-                                    <p>Discovery call gets scheduled automatically</p>
-                                </div>
-                                <div className="relative flex items-center gap-4 text-white">
-                                    <div className="w-6 h-6 rounded-full bg-green-500 flex items-center justify-center text-xs font-bold text-slate-900 shrink-0">4</div>
-                                    <p>Meetings prepped with full context</p>
-                                </div>
-                                <div className="relative flex items-center gap-4 text-white">
-                                    <div className="w-6 h-6 rounded-full bg-green-500 flex items-center justify-center text-xs font-bold text-slate-900 shrink-0">5</div>
-                                    <p>System tracks milestones & reminders</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* Long Sales Cycle & Math */}
-            <section className="py-24 bg-white">
-                <div className="container mx-auto px-6 max-w-4xl">
-                    <div className="mb-16">
-                        <h2 className="text-3xl font-serif font-bold text-slate-900 mb-6">Built For The Reality of Long Sales Cycles</h2>
-                        <p className="text-lg text-slate-600 mb-8">
-                            Projects take 6-18 months from inquiry to signed contract. That's just reality. Your system needs to handle that without you manually remembering everyone.
-                        </p>
-                        <div className="bg-slate-50 p-6 rounded-xl border border-slate-100">
-                            <h4 className="font-bold text-slate-900 mb-4">We build:</h4>
-                            <ul className="grid sm:grid-cols-2 gap-4">
+                        <div className="bg-slate-800 rounded-3xl p-8 border border-slate-700">
+                            <h3 className="text-2xl font-bold mb-8 text-center border-b border-slate-700 pb-4">Built For Long Sales Cycles</h3>
+                            <p className="text-slate-300 text-center mb-8">Projects take 6-18 months. We handle the wait.</p>
+                            <div className="space-y-4">
                                 {[
                                     "Automated follow-up between conversations",
-                                    "Milestone reminders based on their timeline",
+                                    "Milestone reminders (Land, Financing)",
                                     "Manual touch-points at key moments",
-                                    "Context documentation for every lead"
+                                    "Documentation so you remember context",
+                                    "Deal aging alerts"
                                 ].map((item, i) => (
-                                    <li key={i} className="flex items-start gap-2 text-slate-600 text-sm">
-                                        <CheckCircle size={16} className="text-purple-600 shrink-0 mt-0.5" />
-                                        <span>{item}</span>
-                                    </li>
+                                    <div key={i} className="flex items-center gap-3 bg-slate-900/50 p-4 rounded-xl border border-slate-700/50">
+                                        <CheckCircle className="text-green-400 shrink-0" size={20} />
+                                        <span className="text-slate-200">{item}</span>
+                                    </div>
                                 ))}
-                            </ul>
-                            <p className="text-slate-500 text-sm mt-6 italic">This keeps deals alive while your competitors forget about people after one conversation.</p>
-                        </div>
-                    </div>
-
-                    <div className="bg-purple-900 text-white rounded-3xl p-10 md:p-16 text-center">
-                        <h2 className="text-3xl font-serif font-bold mb-6">The Math That Makes This Worth It</h2>
-                        <p className="text-xl text-purple-200 mb-8 max-w-2xl mx-auto">
-                            One additional project pays for this entire system multiple times over.
-                        </p>
-                        <div className="bg-white/10 rounded-xl p-8 backdrop-blur-sm max-w-2xl mx-auto mb-8">
-                            <p className="text-lg font-medium leading-relaxed">
-                                If this system helps you close just <span className="text-white font-bold">2 more deals per year</span> that you would have otherwise lost to disorganization, and those deals are worth $1M each with $200K profit...
-                            </p>
-                            <div className="text-4xl font-bold text-green-400 mt-6 md:mt-4">
-                                +$400,000 Profit
                             </div>
                         </div>
-                        <p className="text-purple-300">The system costs a fraction of one project. And works for years.</p>
                     </div>
                 </div>
             </section>
 
-            {/* What You Get / Timeline */}
-            <section className="py-24 bg-slate-50">
-                <div className="container mx-auto px-6 max-w-5xl">
-                    <div className="grid md:grid-cols-2 gap-16">
-                        <div>
-                            <h2 className="text-3xl font-serif font-bold text-slate-900 mb-8">What You Get</h2>
-                            <div className="space-y-8">
-                                <div>
-                                    <div className="flex items-center gap-3 mb-2">
-                                        <div className="w-8 h-8 rounded-full bg-purple-100 flex items-center justify-center text-purple-600 font-bold">1</div>
-                                        <h3 className="text-xl font-bold text-slate-900">Complete Process Documentation</h3>
-                                    </div>
-                                    <p className="text-slate-600 pl-11">Frameworks for every stage. Scripts that work. Structures your team follows. Everything documented so execution is consistent.</p>
+            {/* Implementation Timeline */}
+            <section className="py-24 bg-white">
+                <div className="container mx-auto px-6 max-w-4xl">
+                    <div className="text-center mb-16">
+                        <h2 className="text-3xl md:text-5xl font-serif font-bold text-slate-900 mb-6">Implementation in 3 Weeks</h2>
+                        <p className="text-xl text-slate-500">Rapid deployment so you can start closing.</p>
+                    </div>
+
+                    <div className="relative">
+                        {/* Connecting Line */}
+                        <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-slate-100 md:left-1/2 md:-ml-px"></div>
+
+                        <div className="space-y-12">
+                            {/* Week 1 */}
+                            <div className="relative flex items-center md:justify-between group">
+                                <div className="flex flex-col md:w-[45%] md:items-end md:text-right ml-20 md:ml-0">
+                                    <h3 className="text-xl font-bold text-slate-900">Process Mapping</h3>
+                                    <p className="text-slate-500 mt-2">We document your entire sales stage process, scripts, and frameworks.</p>
+                                    <span className="inline-block mt-3 text-xs font-bold text-purple-600 bg-purple-50 px-3 py-1 rounded-full">Week 1</span>
                                 </div>
-                                <div>
-                                    <div className="flex items-center gap-3 mb-2">
-                                        <div className="w-8 h-8 rounded-full bg-purple-100 flex items-center justify-center text-purple-600 font-bold">2</div>
-                                        <h3 className="text-xl font-bold text-slate-900">Pipeline Setup</h3>
-                                    </div>
-                                    <p className="text-slate-600 pl-11">CRM configured with your sales stages. Dashboards. Tracking. Team training. Ready to use day one.</p>
-                                </div>
-                                <div>
-                                    <div className="flex items-center gap-3 mb-2">
-                                        <div className="w-8 h-8 rounded-full bg-purple-100 flex items-center justify-center text-purple-600 font-bold">3</div>
-                                        <h3 className="text-xl font-bold text-slate-900">Automation & Follow-Up</h3>
-                                    </div>
-                                    <p className="text-slate-600 pl-11">Sequences for each stage. Reminders when deals need attention. Your team knows exactly what to do and when.</p>
+                                <div className="absolute left-0 w-16 h-16 bg-white border-4 border-slate-100 rounded-full flex items-center justify-center font-bold text-slate-300 z-10 md:left-1/2 md:-ml-8 group-hover:border-purple-500 group-hover:text-purple-600 transition-colors">1</div>
+                                <div className="hidden md:block md:w-[45%]"></div>
+                            </div>
+
+                            {/* Week 2 */}
+                            <div className="relative flex items-center md:justify-between group">
+                                <div className="hidden md:block md:w-[45%]"></div>
+                                <div className="absolute left-0 w-16 h-16 bg-white border-4 border-slate-100 rounded-full flex items-center justify-center font-bold text-slate-300 z-10 md:left-1/2 md:-ml-8 group-hover:border-purple-500 group-hover:text-purple-600 transition-colors">2</div>
+                                <div className="flex flex-col md:w-[45%] ml-20 md:ml-0">
+                                    <h3 className="text-xl font-bold text-slate-900">Pipeline Setup</h3>
+                                    <p className="text-slate-500 mt-2">Configuring the CRM, building dashboards, and setting up automation.</p>
+                                    <span className="inline-block mt-3 text-xs font-bold text-purple-600 bg-purple-50 px-3 py-1 rounded-full">Week 2</span>
                                 </div>
                             </div>
-                        </div>
-                        <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-200">
-                            <h3 className="text-xl font-bold text-slate-900 mb-6">Implementation in 3 Weeks</h3>
-                            <div className="space-y-6 relative">
-                                <div className="absolute left-[15px] top-4 bottom-4 w-0.5 bg-slate-100"></div>
-                                <div className="relative flex items-start gap-4">
-                                    <div className="w-8 h-8 rounded-full bg-slate-900 text-white flex items-center justify-center text-sm font-bold shrink-0 z-10">W1</div>
-                                    <div>
-                                        <h4 className="font-bold text-slate-900">Process Mapping</h4>
-                                        <p className="text-sm text-slate-500">Documentation & Strategy</p>
-                                    </div>
+
+                            {/* Week 3 */}
+                            <div className="relative flex items-center md:justify-between group">
+                                <div className="flex flex-col md:w-[45%] md:items-end md:text-right ml-20 md:ml-0">
+                                    <h3 className="text-xl font-bold text-slate-900">Training & Launch</h3>
+                                    <p className="text-slate-500 mt-2">Handing off the system and training your team on daily execution.</p>
+                                    <span className="inline-block mt-3 text-xs font-bold text-purple-600 bg-purple-50 px-3 py-1 rounded-full">Week 3</span>
                                 </div>
-                                <div className="relative flex items-start gap-4">
-                                    <div className="w-8 h-8 rounded-full bg-slate-900 text-white flex items-center justify-center text-sm font-bold shrink-0 z-10">W2</div>
-                                    <div>
-                                        <h4 className="font-bold text-slate-900">Pipeline Setup</h4>
-                                        <p className="text-sm text-slate-500">Configuration & Automation</p>
-                                    </div>
-                                </div>
-                                <div className="relative flex items-start gap-4">
-                                    <div className="w-8 h-8 rounded-full bg-slate-900 text-white flex items-center justify-center text-sm font-bold shrink-0 z-10">W3</div>
-                                    <div>
-                                        <h4 className="font-bold text-slate-900">Training & Launch</h4>
-                                        <p className="text-sm text-slate-500">Team Handoff</p>
-                                    </div>
-                                </div>
+                                <div className="absolute left-0 w-16 h-16 bg-white border-4 border-slate-100 rounded-full flex items-center justify-center font-bold text-slate-300 z-10 md:left-1/2 md:-ml-8 group-hover:border-purple-500 group-hover:text-purple-600 transition-colors">3</div>
+                                <div className="hidden md:block md:w-[45%]"></div>
                             </div>
                         </div>
                     </div>
@@ -369,7 +356,7 @@ const SalesProcesses: React.FC = () => {
             </section>
 
             {/* FAQ */}
-            <section className="py-24 bg-white">
+            <section className="py-24 bg-slate-50">
                 <div className="container mx-auto px-6 max-w-3xl">
                     <h2 className="text-3xl font-serif font-bold text-slate-900 mb-12 text-center">Questions?</h2>
                     <div className="space-y-4">
@@ -380,13 +367,13 @@ const SalesProcesses: React.FC = () => {
                             { q: "What if I'm doing sales myself?", a: "Perfect. This system frees your time by filtering bad leads and automating follow-up so you only focus on real conversations." },
                             { q: "How is this different from hiring a sales consultant?", a: "Consultants talk. We build. You get actual documentation, pipeline setup, automation configured, and systems ready to execute. Not advice—implementation." }
                         ].map((faq, i) => (
-                            <div key={i} className="border border-slate-200 rounded-xl overflow-hidden">
-                                <button onClick={() => toggleFaq(i)} className="w-full flex items-center justify-between p-6 bg-slate-50 text-left font-bold text-slate-900 hover:bg-slate-100 transition-colors">
+                            <div key={i} className="bg-white border border-slate-200 rounded-xl overflow-hidden">
+                                <button onClick={() => toggleFaq(i)} className="w-full flex items-center justify-between p-6 text-left font-bold text-slate-900 hover:bg-slate-50 transition-colors">
                                     {faq.q}
                                     {openFaq === i ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
                                 </button>
                                 {openFaq === i && (
-                                    <div className="p-6 bg-white text-slate-600 leading-relaxed border-t border-slate-100">
+                                    <div className="p-6 pt-0 text-slate-600 leading-relaxed">
                                         {faq.a}
                                     </div>
                                 )}
@@ -398,22 +385,16 @@ const SalesProcesses: React.FC = () => {
 
             {/* Final CTA */}
             <section className="py-24 bg-slate-900 text-white text-center">
-                <div className="container mx-auto px-6 max-w-3xl">
+                <div className="container mx-auto px-6 max-w-4xl">
                     <h2 className="text-4xl font-serif font-bold mb-6">Stop Losing Deals to Chaos</h2>
-                    <p className="text-xl text-slate-300 mb-10">
+                    <p className="text-xl text-slate-400 mb-10">
                         If qualified leads are slipping away because you don't have systems, let's fix that.
                     </p>
-                    <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-                        <Link
-                            to="/contact"
-                            className="px-8 py-5 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold text-lg hover:shadow-lg hover:shadow-purple-500/25 transition-all w-full sm:w-auto"
-                        >
-                            Schedule Strategy Call
+                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                        <Link to="/contact" className="inline-flex items-center bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-full font-bold transition-all hover:scale-105 shadow-[0_0_20px_rgba(168,85,247,0.3)]">
+                            Schedule Strategy Call <ArrowRight className="ml-2" />
                         </Link>
-                        <Link
-                            to="/case-studies"
-                            className="px-8 py-5 rounded-full bg-white text-slate-900 font-bold text-lg hover:bg-slate-100 transition-all w-full sm:w-auto"
-                        >
+                        <Link to="/case-studies" className="inline-flex items-center border border-slate-600 hover:bg-slate-800 text-white px-8 py-4 rounded-full font-bold transition-all">
                             See Pipeline Demo
                         </Link>
                     </div>
@@ -422,8 +403,5 @@ const SalesProcesses: React.FC = () => {
         </div>
     );
 };
-
-// Icon imports for the features section
-import { Filter, MessageSquare, Users } from 'lucide-react';
 
 export default SalesProcesses;
