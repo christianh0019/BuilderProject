@@ -146,8 +146,7 @@ const PipelineProgram: React.FC = () => {
                         </div>
 
                         <h1 className="text-[36px] md:text-6xl lg:text-7xl font-serif font-bold mb-8 leading-tight tracking-tight">
-                            Fill Your Pipeline While You're <br />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400">On The Job Site</span>
+                            Fill Your Pipeline While You're <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400">On The Job Site</span>
                         </h1>
 
                         <p className="text-xl md:text-2xl text-slate-300 mb-10 max-w-3xl mx-auto leading-relaxed font-light">
