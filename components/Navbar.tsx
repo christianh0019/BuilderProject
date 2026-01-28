@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, ChevronDown, ExternalLink, Monitor, PenTool, Target, Filter, Database, Briefcase, Rocket, TrendingUp, Handshake } from 'lucide-react';
+import { Menu, X, ChevronDown, ExternalLink, Monitor, PenTool, Target, Filter, Database, Briefcase, Rocket, TrendingUp, Handshake, ArrowRight } from 'lucide-react';
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -207,20 +207,58 @@ const Navbar: React.FC = () => {
             </button>
             {servicesOpen && (
               <div className="pl-4 mt-4 flex flex-col space-y-4">
-                <Link to="/services/website-design" className="text-slate-600">Website Design</Link>
-                <Link to="/services/content-marketing" className="text-slate-600">Content Marketing</Link>
-                <Link to="/services/paid-advertising" className="text-slate-600">Paid Advertising</Link>
-                <Link to="/services/funnel-development" className="text-slate-600">Funnel Development</Link>
-                <Link to="/services/crm-deployment" className="text-slate-600">CRM Deployment</Link>
-                <Link to="/services/sales-processes" className="text-slate-600">Sales Processes</Link>
+                <Link to="/services/website-design" className="flex items-center gap-3 text-slate-600 p-2 rounded-lg hover:bg-slate-50">
+                  <div className="w-8 h-8 rounded-md bg-blue-50 flex items-center justify-center text-blue-600 shrink-0"><Monitor size={16} /></div>
+                  <span className="font-medium">Website Design</span>
+                </Link>
+                <Link to="/services/content-marketing" className="flex items-center gap-3 text-slate-600 p-2 rounded-lg hover:bg-slate-50">
+                  <div className="w-8 h-8 rounded-md bg-purple-50 flex items-center justify-center text-purple-600 shrink-0"><PenTool size={16} /></div>
+                  <span className="font-medium">Content Marketing</span>
+                </Link>
+                <Link to="/services/paid-advertising" className="flex items-center gap-3 text-slate-600 p-2 rounded-lg hover:bg-slate-50">
+                  <div className="w-8 h-8 rounded-md bg-red-50 flex items-center justify-center text-red-600 shrink-0"><Target size={16} /></div>
+                  <span className="font-medium">Paid Advertising</span>
+                </Link>
+                <Link to="/services/funnel-development" className="flex items-center gap-3 text-slate-600 p-2 rounded-lg hover:bg-slate-50">
+                  <div className="w-8 h-8 rounded-md bg-orange-50 flex items-center justify-center text-orange-600 shrink-0"><Filter size={16} /></div>
+                  <span className="font-medium">Funnel Development</span>
+                </Link>
+                <Link to="/services/crm-deployment" className="flex items-center gap-3 text-slate-600 p-2 rounded-lg hover:bg-slate-50">
+                  <div className="w-8 h-8 rounded-md bg-emerald-50 flex items-center justify-center text-emerald-600 shrink-0"><Database size={16} /></div>
+                  <span className="font-medium">CRM Deployment</span>
+                </Link>
+                <Link to="/services/sales-processes" className="flex items-center gap-3 text-slate-600 p-2 rounded-lg hover:bg-slate-50">
+                  <div className="w-8 h-8 rounded-md bg-slate-100 flex items-center justify-center text-slate-600 shrink-0"><Briefcase size={16} /></div>
+                  <span className="font-medium">Sales Processes</span>
+                </Link>
 
-                <div className="pt-2 border-t border-slate-100 mt-2">
+                <div className="pt-4 border-t border-slate-100 mt-2">
                   <div className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3">Growth Programs</div>
-                  <div className="flex flex-col space-y-3 pl-2">
-                    <Link to="/programs/foundation" className="text-slate-800 font-medium">1. The Foundation</Link>
-                    <Link to="/programs/pipeline" className="text-slate-800 font-medium">2. The Pipeline</Link>
-                    <Link to="/programs/partner" className="text-slate-800 font-medium">3. The Partner Program</Link>
-                    <Link to="/programs" className="text-purple-600 font-bold text-sm mt-2">View All Programs &rarr;</Link>
+                  <div className="flex flex-col space-y-3">
+                    <Link to="/programs/foundation" className="flex items-center gap-3 p-3 rounded-xl border border-slate-100 bg-slate-50/50">
+                      <div className="w-10 h-10 rounded-lg bg-white flex items-center justify-center text-blue-600 shrink-0 shadow-sm"><Rocket size={20} /></div>
+                      <div>
+                        <div className="text-slate-900 font-bold text-sm">The Foundation</div>
+                        <div className="text-slate-500 text-xs">For scaling builders</div>
+                      </div>
+                    </Link>
+                    <Link to="/programs/pipeline" className="flex items-center gap-3 p-3 rounded-xl border border-slate-100 bg-slate-50/50">
+                      <div className="w-10 h-10 rounded-lg bg-white flex items-center justify-center text-purple-600 shrink-0 shadow-sm"><TrendingUp size={20} /></div>
+                      <div>
+                        <div className="text-slate-900 font-bold text-sm">The Pipeline</div>
+                        <div className="text-slate-500 text-xs">For established firms</div>
+                      </div>
+                    </Link>
+                    <Link to="/programs/partner" className="flex items-center gap-3 p-3 rounded-xl border border-slate-100 bg-slate-50/50">
+                      <div className="w-10 h-10 rounded-lg bg-slate-900 flex items-center justify-center text-white shrink-0 shadow-sm"><Handshake size={20} /></div>
+                      <div>
+                        <div className="text-slate-900 font-bold text-sm">The Partner Program</div>
+                        <div className="text-slate-500 text-xs">Fractional CMO</div>
+                      </div>
+                    </Link>
+                    <Link to="/programs" className="text-purple-600 font-bold text-sm mt-2 flex items-center gap-1 justify-center py-2">
+                      View All Programs <ArrowRight size={14} />
+                    </Link>
                   </div>
                 </div>
               </div>
