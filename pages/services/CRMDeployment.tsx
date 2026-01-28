@@ -189,12 +189,32 @@ const CRMDeployment: React.FC = () => {
                         <div className="grid md:grid-cols-2 gap-12 items-center">
                             <div className="order-2 md:order-1">
                                 <div className="bg-slate-50 rounded-2xl p-2 border border-slate-200 shadow-lg -rotate-1 hover:rotate-0 transition-transform duration-500">
-                                    <div className="aspect-[4/3] bg-white rounded-xl overflow-hidden relative">
-                                        <img
-                                            src="/images/crm/lead-capture.png"
-                                            alt="Lead Capture Dashboard"
-                                            className="w-full h-full object-cover"
-                                        />
+                                    <div className="aspect-[4/3] bg-slate-50 rounded-xl overflow-hidden relative p-4 flex flex-col">
+                                        <div className="flex items-center justify-between mb-4 border-b border-slate-200 pb-2">
+                                            <div className="font-bold text-slate-700 text-xs">Recent Leads</div>
+                                            <div className="text-slate-400 text-[10px]">Live Feed</div>
+                                        </div>
+                                        <div className="space-y-2">
+                                            {[
+                                                { name: "Sarah M.", source: "Google Ads", status: "New", color: "bg-blue-100 text-blue-700" },
+                                                { name: "James R.", source: "Referral", status: "Qualified", color: "bg-green-100 text-green-700" },
+                                                { name: "Michael B.", source: "Website", status: "Contacted", color: "bg-purple-100 text-purple-700" },
+                                                { name: "Emily K.", source: "Facebook", status: "New", color: "bg-blue-100 text-blue-700" }
+                                            ].map((lead, i) => (
+                                                <div key={i} className="bg-white p-2 rounded border border-slate-100 flex items-center justify-between shadow-sm">
+                                                    <div className="flex items-center gap-2">
+                                                        <div className="w-6 h-6 rounded-full bg-slate-200 flex items-center justify-center text-[10px] font-bold text-slate-500">
+                                                            {lead.name.charAt(0)}
+                                                        </div>
+                                                        <div className="text-xs font-medium text-slate-700">{lead.name}</div>
+                                                    </div>
+                                                    <div className={`text-[10px] px-1.5 py-0.5 rounded font-medium ${lead.color}`}>
+                                                        {lead.status}
+                                                    </div>
+                                                </div>
+                                            ))}
+                                        </div>
+                                        <div className="absolute inset-x-0 bottom-0 h-8 bg-gradient-to-t from-slate-50 to-transparent"></div>
                                     </div>
                                 </div>
                             </div>
@@ -218,12 +238,35 @@ const CRMDeployment: React.FC = () => {
                             </div>
                             <div>
                                 <div className="bg-slate-50 rounded-2xl p-2 border border-slate-200 shadow-lg rotate-1 hover:rotate-0 transition-transform duration-500">
-                                    <div className="aspect-[4/3] bg-white rounded-xl overflow-hidden relative">
-                                        <img
-                                            src="/images/crm/nurture-sequence.png"
-                                            alt="Automated Nurture Timeline"
-                                            className="w-full h-full object-cover"
-                                        />
+                                    <div className="aspect-[4/3] bg-slate-900 rounded-xl overflow-hidden relative p-6 flex flex-col items-center justify-center">
+                                        <div className="relative z-10 w-full max-w-[200px]">
+                                            <div className="absolute left-4 top-0 bottom-0 w-0.5 bg-slate-700"></div>
+
+                                            <div className="relative flex items-center gap-4 mb-6">
+                                                <div className="w-8 h-8 rounded-full bg-purple-500 flex items-center justify-center border-4 border-slate-900 z-10 shadow-lg shadow-purple-500/50">
+                                                    <Mail size={14} className="text-white" />
+                                                </div>
+                                                <div className="bg-slate-800 p-2 rounded border border-slate-700 text-xs text-slate-300 shadow-sm w-full">
+                                                    Day 0: Welcome
+                                                </div>
+                                            </div>
+
+                                            <div className="relative flex items-center gap-4 mb-6">
+                                                <div className="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center border-4 border-slate-900 z-10">
+                                                    <div className="text-[10px] font-bold text-slate-500">3d</div>
+                                                </div>
+                                                <div className="text-[10px] text-slate-500 font-mono uppercase tracking-widest">Wait 3 Days</div>
+                                            </div>
+
+                                            <div className="relative flex items-center gap-4">
+                                                <div className="w-8 h-8 rounded-full bg-blue-500 flex items-center justify-center border-4 border-slate-900 z-10 shadow-lg shadow-blue-500/50">
+                                                    <Mail size={14} className="text-white" />
+                                                </div>
+                                                <div className="bg-slate-800 p-2 rounded border border-slate-700 text-xs text-slate-300 shadow-sm w-full">
+                                                    Day 3: Case Study
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -233,12 +276,42 @@ const CRMDeployment: React.FC = () => {
                         <div className="grid md:grid-cols-2 gap-12 items-center">
                             <div className="order-2 md:order-1">
                                 <div className="bg-slate-50 rounded-2xl p-2 border border-slate-200 shadow-lg -rotate-1 hover:rotate-0 transition-transform duration-500">
-                                    <div className="aspect-[4/3] bg-white rounded-xl overflow-hidden relative">
-                                        <img
-                                            src="/images/crm/pipeline-kanban.png"
-                                            alt="Pipeline Visual Board"
-                                            className="w-full h-full object-cover"
-                                        />
+                                    <div className="aspect-[4/3] bg-slate-100 rounded-xl overflow-hidden relative p-3">
+                                        <div className="flex gap-2 h-full">
+                                            {/* Column 1 */}
+                                            <div className="flex-1 bg-slate-200/50 rounded-lg p-2 flex flex-col gap-2">
+                                                <div className="text-[10px] font-bold text-slate-500 uppercase">New Lead</div>
+                                                <div className="bg-white p-2 rounded border border-slate-200 shadow-sm">
+                                                    <div className="w-8 h-1 bg-blue-400 rounded-full mb-1"></div>
+                                                    <div className="h-2 w-12 bg-slate-100 rounded mb-1"></div>
+                                                    <div className="text-[10px] text-slate-400 font-mono">$1.2M</div>
+                                                </div>
+                                                <div className="bg-white p-2 rounded border border-slate-200 shadow-sm opacity-60">
+                                                    <div className="w-8 h-1 bg-blue-400 rounded-full mb-1"></div>
+                                                    <div className="h-2 w-10 bg-slate-100 rounded"></div>
+                                                </div>
+                                            </div>
+
+                                            {/* Column 2 */}
+                                            <div className="flex-1 bg-slate-200/50 rounded-lg p-2 flex flex-col gap-2">
+                                                <div className="text-[10px] font-bold text-slate-500 uppercase">Discovery</div>
+                                                <div className="bg-white p-2 rounded border-l-2 border-purple-500 shadow-sm">
+                                                    <div className="text-[10px] font-bold text-slate-700 mb-1">Smith Residence</div>
+                                                    <div className="flex justify-between items-center text-[9px] text-slate-400">
+                                                        <span>Call Tomorrow</span>
+                                                        <span className="text-purple-600 font-bold">$850k</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            {/* Column 3 */}
+                                            <div className="flex-1 bg-slate-200/50 rounded-lg p-2 flex flex-col gap-2 opacity-50">
+                                                <div className="text-[10px] font-bold text-slate-500 uppercase">Proposal</div>
+                                                <div className="bg-white p-2 rounded border border-slate-200 shadow-sm">
+                                                    <div className="h-2 w-12 bg-slate-100 rounded mb-1"></div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
