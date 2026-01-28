@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle, ChevronDown, ChevronUp, Layout, MousePointerClick, Search, Smartphone, Users, Zap, Clock, TrendingUp, AlertTriangle, ShieldCheck } from 'lucide-react';
+import { ArrowRight, CheckCircle, ChevronDown, ChevronUp, Layout, MousePointerClick, Search, Smartphone, Users, Zap, Clock, TrendingUp, AlertTriangle, ShieldCheck, CheckCircle2, Star, MapPin, MessageSquare, BarChart3, Globe, LineChart } from 'lucide-react';
 import BrowserFrame from '../../components/ui/BrowserFrame';
 import VersoShowcase from '../../components/website/VersoShowcase';
 import Modal from '../../components/ui/Modal';
 
-// Components reused from Quickstart
+// Images reused from Quickstart
 const versoLogo = '/verso-logo.png';
 const interiorKitchen = '/images/modern_kitchen.png';
 const exteriorFront = '/images/homestead-hero.png';
@@ -20,6 +19,16 @@ const FoundationProgram: React.FC = () => {
     const toggleFaq = (index: number) => {
         setOpenFaq(openFaq === index ? null : index);
     };
+
+    const SectionCTA = () => (
+        <button
+            onClick={() => setIsBookingModalOpen(true)}
+            className="mt-8 bg-slate-900 text-white font-bold py-3 px-8 rounded-xl hover:bg-gradient-to-r hover:from-blue-700 hover:to-purple-600 transition-all duration-300 shadow-lg shadow-blue-500/20 flex items-center gap-2 group text-sm"
+        >
+            Get Started
+            <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+        </button>
+    );
 
     return (
         <div className="pt-20">
@@ -73,12 +82,57 @@ const FoundationProgram: React.FC = () => {
                             </div>
                         </div>
 
+                        {/* NEW HERO GRAPHIC (Code Generated) */}
                         <div className="bg-slate-800 p-6 rounded-2xl border border-emerald-500/50 relative shadow-2xl transform md:-translate-y-4 ring-1 ring-emerald-500/20">
                             <div className="absolute top-4 right-4 bg-emerald-500 text-white text-xs font-bold px-3 py-1 rounded-full z-20">AFTER</div>
-                            <div className="transform scale-95 origin-top">
-                                <BrowserFrame url="yoursite.com">
-                                    <VersoShowcase />
-                                </BrowserFrame>
+                            <div className="bg-slate-900 rounded-xl p-6 border border-slate-700 relative overflow-hidden">
+                                {/* Dashboard Header */}
+                                <div className="flex items-center justify-between mb-6 pb-4 border-b border-slate-800">
+                                    <div className="flex items-center gap-3">
+                                        <div className="w-8 h-8 rounded bg-blue-600 flex items-center justify-center text-white font-bold">BP</div>
+                                        <span className="text-white font-bold">System Status</span>
+                                    </div>
+                                    <div className="flex items-center gap-2 text-emerald-400 text-xs font-bold bg-emerald-900/30 px-2 py-1 rounded">
+                                        <div className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></div> Active
+                                    </div>
+                                </div>
+                                {/* Main Stats */}
+                                <div className="grid grid-cols-2 gap-4 mb-6">
+                                    <div className="bg-slate-800 p-4 rounded-lg border border-slate-700">
+                                        <div className="text-slate-400 text-xs mb-1">Conversion Rate</div>
+                                        <div className="text-2xl font-bold text-white">2.5%</div>
+                                        <div className="text-emerald-400 text-xs mt-1 flex items-center gap-1"><TrendingUp size={10} /> +400%</div>
+                                    </div>
+                                    <div className="bg-slate-800 p-4 rounded-lg border border-slate-700">
+                                        <div className="text-slate-400 text-xs mb-1">Lead Flow</div>
+                                        <div className="text-2xl font-bold text-white">Steady</div>
+                                        <div className="text-emerald-400 text-xs mt-1 flex items-center gap-1"><CheckCircle size={10} /> Qualified</div>
+                                    </div>
+                                </div>
+                                {/* System Modules */}
+                                <div className="space-y-3">
+                                    <div className="flex items-center justify-between bg-slate-800/50 p-3 rounded-lg border border-slate-700/50">
+                                        <div className="flex items-center gap-3">
+                                            <Globe size={16} className="text-blue-400" />
+                                            <span className="text-slate-300 text-sm">Website</span>
+                                        </div>
+                                        <CheckCircle size={16} className="text-emerald-500" />
+                                    </div>
+                                    <div className="flex items-center justify-between bg-slate-800/50 p-3 rounded-lg border border-slate-700/50">
+                                        <div className="flex items-center gap-3">
+                                            <Search size={16} className="text-purple-400" />
+                                            <span className="text-slate-300 text-sm">SEO & Google</span>
+                                        </div>
+                                        <CheckCircle size={16} className="text-emerald-500" />
+                                    </div>
+                                    <div className="flex items-center justify-between bg-slate-800/50 p-3 rounded-lg border border-slate-700/50">
+                                        <div className="flex items-center gap-3">
+                                            <Users size={16} className="text-orange-400" />
+                                            <span className="text-slate-300 text-sm">CRM & Automation</span>
+                                        </div>
+                                        <CheckCircle size={16} className="text-emerald-500" />
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -163,73 +217,297 @@ const FoundationProgram: React.FC = () => {
                 </div>
             </section>
 
-            {/* 4. What's Included */}
+            {/* 4. What's Included (Visual Sections) */}
             <section className="py-24 bg-white">
                 <div className="container mx-auto px-6 max-w-6xl">
-                    <div className="text-center mb-16">
+                    <div className="text-center mb-24">
                         <h2 className="text-3xl md:text-5xl font-serif font-bold text-slate-900 mb-6">What You Actually Get</h2>
                         <p className="text-xl text-slate-500">We don't just "build a website". We install a revenue system.</p>
                     </div>
 
-                    <div className="grid md:grid-cols-3 gap-8">
-                        {[
-                            {
-                                title: "High-Converting Website",
-                                problem: "Current site looks cheap & converts nobody.",
-                                solution: "Custom site reflecting craftsmanship.",
-                                result: "Visitors become leads (2.5% conversion).",
-                                icon: Layout
-                            },
-                            {
-                                title: "CRM & Lead Capture",
-                                problem: "Leads scattered in texts/emails.",
-                                solution: "Centralized pipeline & automation.",
-                                result: "No lead ever falls through the cracks.",
-                                icon: Users
-                            },
-                            {
-                                title: "Google Domination",
-                                problem: "Invisible when people search 'builder near me'.",
-                                solution: "Optimized Google Business Profile.",
-                                result: "Free traffic from high-intent searchers.",
-                                icon: Search
-                            },
-                            {
-                                title: "Professional Branding",
-                                problem: "Inconsistent logo & social look.",
-                                solution: "Complete brand kit & templates.",
-                                result: "Look like an established $10M company.",
-                                icon: Zap
-                            },
-                            {
-                                title: "Funnel Infrastructure",
-                                problem: "Only 'Contact Us' page exists.",
-                                solution: "Lead magnets & qualification steps.",
-                                result: "Capture 10x more leads from same traffic.",
-                                icon: MousePointerClick
-                            },
-                            {
-                                title: "SEO Foundation",
-                                problem: "Google doesn't know you exist.",
-                                solution: "Technical SEO & site structure.",
-                                result: "Asset that builds free traffic for years.",
-                                icon: TrendingUp
-                            }
-                        ].map((item, i) => (
-                            <div key={i} className="bg-white p-8 rounded-2xl border border-slate-200 hover:shadow-lg transition-shadow">
-                                <div className="w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center mb-6">
-                                    <item.icon size={24} />
+                    <div className="space-y-32">
+                        {/* Feature 1: Website */}
+                        <div className="flex flex-col md:flex-row gap-12 items-center">
+                            <div className="md:w-1/2">
+                                <span className="text-purple-600 font-bold tracking-wider text-sm uppercase mb-2 block">The Core</span>
+                                <h3 className="text-3xl font-serif font-bold text-slate-900 mb-6">Professional High-Converting Website</h3>
+                                <p className="text-lg text-slate-600 mb-6 leading-relaxed">
+                                    Your website is your "Digital Model Home". If it feels cheap, potential clients assume your work is cheap. We build you a high-performance site designed specifically for construction—showcasing your portfolio, establishing authority, and converting visitors into leads.
+                                </p>
+                                <ul className="space-y-3">
+                                    <li className="flex items-center gap-3 text-slate-700 font-medium">
+                                        <div className="bg-green-100 p-1 rounded-full text-green-600"><CheckCircle2 size={16} /></div>
+                                        Fast-loading mobile optimization
+                                    </li>
+                                    <li className="flex items-center gap-3 text-slate-700 font-medium">
+                                        <div className="bg-green-100 p-1 rounded-full text-green-600"><CheckCircle2 size={16} /></div>
+                                        Lead-capture focused layout
+                                    </li>
+                                </ul>
+                                <SectionCTA />
+                            </div>
+                            <div className="md:w-1/2">
+                                <div className="transform scale-95 hover:scale-100 transition-transform duration-500">
+                                    <BrowserFrame url="versobuilders.com">
+                                        <VersoShowcase />
+                                    </BrowserFrame>
                                 </div>
-                                <h3 className="font-bold text-xl text-slate-900 mb-4">{item.title}</h3>
-                                <div className="space-y-3 text-sm">
-                                    <div className="text-red-500 flex gap-2"><AlertTriangle size={14} className="shrink-0 mt-0.5" /> <span className="text-slate-500"><strong className="text-slate-700">Problem:</strong> {item.problem}</span></div>
-                                    <div className="text-emerald-600 flex gap-2"><CheckCircle size={14} className="shrink-0 mt-0.5" /> <span className="text-slate-500"><strong className="text-slate-700">Solution:</strong> {item.solution}</span></div>
-                                    <div className="mt-4 pt-4 border-t border-slate-100 font-bold text-slate-800">
-                                        "{item.result}"
+                            </div>
+                        </div>
+
+                        {/* Feature 2: CRM */}
+                        <div className="flex flex-col md:flex-row-reverse gap-12 items-center">
+                            <div className="md:w-1/2">
+                                <span className="text-indigo-600 font-bold tracking-wider text-sm uppercase mb-2 block">Lead Engine</span>
+                                <h3 className="text-3xl font-serif font-bold text-slate-900 mb-6">BuilderProject CRM Setup</h3>
+                                <p className="text-lg text-slate-600 mb-6 leading-relaxed">
+                                    Stop using spreadsheets and sticky notes. We set you up with the full power of the BuilderProject CRM (powered by GoHighLevel). Automated lead capture, text/email follow-ups, and a clear pipeline dashboard so you never lose a potential project again.
+                                </p>
+                                <ul className="space-y-3">
+                                    <li className="flex items-center gap-3 text-slate-700 font-medium">
+                                        <div className="bg-green-100 p-1 rounded-full text-green-600"><CheckCircle2 size={16} /></div>
+                                        Automated speed-to-lead follow-up
+                                    </li>
+                                    <li className="flex items-center gap-3 text-slate-700 font-medium">
+                                        <div className="bg-green-100 p-1 rounded-full text-green-600"><CheckCircle2 size={16} /></div>
+                                        Centralized Communication Hub
+                                    </li>
+                                </ul>
+                                <SectionCTA />
+                            </div>
+                            <div className="md:w-1/2 bg-slate-900 rounded-3xl p-8 border border-slate-800 flex items-center justify-center">
+                                {/* CRM Pipeline Mock */}
+                                <div className="bg-slate-800 w-full max-w-sm rounded-xl border border-slate-700 p-4 shadow-2xl">
+                                    <div className="flex items-center justify-between mb-4 border-b border-slate-700 pb-2">
+                                        <span className="text-slate-200 font-bold text-sm">Opportunities</span>
+                                        <div className="flex gap-2">
+                                            <div className="w-16 h-2 bg-green-500 rounded-full"></div>
+                                            <div className="w-8 h-2 bg-slate-600 rounded-full"></div>
+                                        </div>
+                                    </div>
+                                    <div className="flex gap-3 overflow-hidden">
+                                        <div className="flex-1 bg-slate-900/50 rounded-lg p-2 space-y-2">
+                                            <div className="text-[10px] uppercase text-slate-500 font-bold mb-1">New Leads (3)</div>
+                                            <div className="bg-white p-2 rounded shadow-sm border-l-4 border-blue-500">
+                                                <div className="text-xs font-bold text-slate-900">John Smith</div>
+                                                <div className="text-[10px] text-slate-500">$1.2M Custom</div>
+                                            </div>
+                                            <div className="bg-white p-2 rounded shadow-sm border-l-4 border-blue-500">
+                                                <div className="text-xs font-bold text-slate-900">Sarah Jones</div>
+                                                <div className="text-[10px] text-slate-500">Kitchen Remodel</div>
+                                            </div>
+                                        </div>
+                                        <div className="flex-1 bg-slate-900/50 rounded-lg p-2 space-y-2 opacity-75">
+                                            <div className="text-[10px] uppercase text-slate-500 font-bold mb-1">Contacted (1)</div>
+                                            <div className="bg-white p-2 rounded shadow-sm border-l-4 border-orange-500">
+                                                <div className="text-xs font-bold text-slate-900">Mike Miller</div>
+                                                <div className="text-[10px] text-slate-500">Site Visit</div>
+                                            </div>
+                                        </div>
+                                        <div className="flex-1 bg-slate-900/50 rounded-lg p-2 space-y-2 opacity-50">
+                                            <div className="text-[10px] uppercase text-slate-500 font-bold mb-1">Proposal</div>
+                                        </div>
+                                    </div>
+                                    <div className="mt-4 flex items-center gap-2 text-xs text-slate-400">
+                                        <MessageSquare size={12} />
+                                        <span>Automated SMS: "Hi John, saw you requested..."</span>
                                     </div>
                                 </div>
                             </div>
-                        ))}
+                        </div>
+
+                        {/* Feature 3: GBP */}
+                        <div className="flex flex-col md:flex-row gap-12 items-center">
+                            <div className="md:w-1/2">
+                                <span className="text-blue-600 font-bold tracking-wider text-sm uppercase mb-2 block">Local Visibility</span>
+                                <h3 className="text-3xl font-serif font-bold text-slate-900 mb-6">Google Business Profile Optimization</h3>
+                                <p className="text-lg text-slate-600 mb-6 leading-relaxed">
+                                    When someone types "custom builder near me", you need to show up in the Map Pack. We claim, verify, and fully optimize your Google Business Profile to ensure you capture that high-intent local traffic.
+                                </p>
+                                <ul className="space-y-3">
+                                    <li className="flex items-center gap-3 text-slate-700 font-medium">
+                                        <div className="bg-green-100 p-1 rounded-full text-green-600"><CheckCircle2 size={16} /></div>
+                                        Rank in local map searches
+                                    </li>
+                                    <li className="flex items-center gap-3 text-slate-700 font-medium">
+                                        <div className="bg-green-100 p-1 rounded-full text-green-600"><CheckCircle2 size={16} /></div>
+                                        Display reviews and credibility
+                                    </li>
+                                </ul>
+                                <SectionCTA />
+                            </div>
+                            <div className="md:w-1/2 bg-slate-100 rounded-3xl p-8 border border-slate-200 flex items-center justify-center relative overflow-hidden group">
+                                <div className="absolute inset-0 bg-[#eef0f3] z-0"></div>
+                                {/* Map Mock */}
+                                <div className="bg-white rounded-xl shadow-xl p-4 w-full max-w-sm relative z-10 transform group-hover:-translate-y-2 transition-transform duration-300">
+                                    <div className="flex gap-4 mb-4">
+                                        <div className="w-16 h-16 bg-stone-900 rounded-lg flex items-center justify-center text-white font-bold text-2xl overflow-hidden shrink-0">
+                                            <img src={versoLogo} alt="Verso Builders" className="w-full h-full object-cover" />
+                                        </div>
+                                        <div>
+                                            <h4 className="font-bold text-lg text-slate-900">Verso Custom Builders</h4>
+                                            <div className="flex items-center gap-1 text-orange-400 text-sm mb-1">
+                                                <Star fill="currentColor" size={14} />
+                                                <Star fill="currentColor" size={14} />
+                                                <Star fill="currentColor" size={14} />
+                                                <Star fill="currentColor" size={14} />
+                                                <Star fill="currentColor" size={14} />
+                                                <span className="text-slate-500 ml-1">(48)</span>
+                                            </div>
+                                            <div className="text-xs text-slate-500">Custom home builder in Hingham, MA</div>
+                                        </div>
+                                    </div>
+                                    <div className="space-y-2">
+                                        <div className="flex items-center gap-3 text-sm text-slate-600">
+                                            <MapPin size={16} className="text-blue-500" />
+                                            <span>Serving Greater Hingham Area</span>
+                                        </div>
+                                        <div className="flex gap-2 mt-4">
+                                            <div className="flex-1 bg-blue-600 text-white text-center py-2 rounded-lg font-bold text-sm">Website</div>
+                                            <div className="flex-1 bg-slate-100 text-slate-700 text-center py-2 rounded-lg font-bold text-sm">Call</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Feature 4: Social Branding */}
+                        <div className="flex flex-col md:flex-row-reverse gap-12 items-center">
+                            <div className="md:w-1/2">
+                                <span className="text-pink-600 font-bold tracking-wider text-sm uppercase mb-2 block">Brand Perception</span>
+                                <h3 className="text-3xl font-serif font-bold text-slate-900 mb-6">Social Media Branding Kit</h3>
+                                <p className="text-lg text-slate-600 mb-6 leading-relaxed">
+                                    Inconsistent or ugly social channels scream "amateur". We provide you with professional bio setups, profile graphics, and a template system so every project photo you post looks like it belongs in a magazine.
+                                </p>
+                                <ul className="space-y-3">
+                                    <li className="flex items-center gap-3 text-slate-700 font-medium">
+                                        <div className="bg-green-100 p-1 rounded-full text-green-600"><CheckCircle2 size={16} /></div>
+                                        Cohesive cross-platform identity
+                                    </li>
+                                    <li className="flex items-center gap-3 text-slate-700 font-medium">
+                                        <div className="bg-green-100 p-1 rounded-full text-green-600"><CheckCircle2 size={16} /></div>
+                                        Ready-to-use posting templates
+                                    </li>
+                                </ul>
+                                <SectionCTA />
+                            </div>
+                            <div className="md:w-1/2 bg-slate-50 rounded-3xl p-8 border border-slate-100 flex items-center justify-center">
+                                {/* Instagram Mock */}
+                                <div className="bg-white rounded-3xl shadow-2xl border border-slate-200 p-4 w-full max-w-sm transform rotate-1 hover:rotate-0 transition-transform duration-300">
+                                    <div className="flex items-center gap-3 mb-6">
+                                        <div className="w-12 h-12 rounded-full bg-gradient-to-tr from-yellow-400 via-red-500 to-purple-600 p-[2px] shrink-0">
+                                            <div className="w-full h-full rounded-full bg-white p-[2px] overflow-hidden">
+                                                <img src={versoLogo} alt="Profile" className="w-full h-full object-cover rounded-full" />
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div className="h-3 w-24 bg-slate-900 rounded mb-1 text-[10px] font-bold leading-3">versobuilders</div>
+                                            <div className="h-3 w-16 text-[8px] text-slate-500">Custom Homes</div>
+                                        </div>
+                                    </div>
+                                    <div className="grid grid-cols-3 gap-0.5 mb-0.5">
+                                        <img src={interiorKitchen} className="aspect-square object-cover" />
+                                        <img src={exteriorFront} className="aspect-square object-cover" />
+                                        <img src={interiorLiving} className="aspect-square object-cover" />
+                                    </div>
+                                    <div className="grid grid-cols-3 gap-0.5">
+                                        <img src={exteriorRear} className="aspect-square object-cover" />
+                                        <img src={exteriorSide} className="aspect-square object-cover grayscale opacity-50" />
+                                        <div className="aspect-square bg-slate-100 flex items-center justify-center text-[8px] text-slate-400">More...</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Feature 5: Portfolio */}
+                        <div className="flex flex-col md:flex-row gap-12 items-center">
+                            <div className="md:w-1/2">
+                                <span className="text-orange-600 font-bold tracking-wider text-sm uppercase mb-2 block">Showcase</span>
+                                <h3 className="text-3xl font-serif font-bold text-slate-900 mb-6">Project Portfolio Setup</h3>
+                                <p className="text-lg text-slate-600 mb-6 leading-relaxed">
+                                    Turn your past projects into SEO gold. We don't just dump photo galleries online; we structure your project pages to rank for specific terms like "Modern Farmhouse in [City]" so your work sells itself 24/7.
+                                </p>
+                                <ul className="space-y-3">
+                                    <li className="flex items-center gap-3 text-slate-700 font-medium">
+                                        <div className="bg-green-100 p-1 rounded-full text-green-600"><CheckCircle2 size={16} /></div>
+                                        SEO-optimized project descriptions
+                                    </li>
+                                    <li className="flex items-center gap-3 text-slate-700 font-medium">
+                                        <div className="bg-green-100 p-1 rounded-full text-green-600"><CheckCircle2 size={16} /></div>
+                                        High-end gallery layout
+                                    </li>
+                                </ul>
+                                <SectionCTA />
+                            </div>
+                            <div className="md:w-1/2 bg-slate-900 rounded-3xl p-8 border border-slate-800 flex items-center justify-center">
+                                {/* Masonry Grid Mock */}
+                                <div className="grid grid-cols-2 gap-4 w-full max-w-sm rotate-1 hover:rotate-0 transition-transform duration-500">
+                                    <div className="space-y-4">
+                                        <img
+                                            src={interiorLiving}
+                                            className="h-40 object-cover rounded-lg w-full shadow-lg"
+                                        />
+                                        <img
+                                            src={exteriorFront}
+                                            className="h-24 object-cover rounded-lg w-full shadow-lg"
+                                        />
+                                    </div>
+                                    <div className="space-y-4 pt-8">
+                                        <img
+                                            src={interiorKitchen}
+                                            className="h-24 object-cover rounded-lg w-full shadow-lg"
+                                        />
+                                        <img
+                                            src={exteriorRear}
+                                            className="h-40 object-cover rounded-lg w-full shadow-lg"
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Feature 6: SEO */}
+                        <div className="flex flex-col md:flex-row-reverse gap-12 items-center">
+                            <div className="md:w-1/2">
+                                <span className="text-green-600 font-bold tracking-wider text-sm uppercase mb-2 block">Long-Term Growth</span>
+                                <h3 className="text-3xl font-serif font-bold text-slate-900 mb-6">Basic SEO Foundation</h3>
+                                <p className="text-lg text-slate-600 mb-6 leading-relaxed">
+                                    We bake SEO into the core of your new site. Proper schema markup, site speed optimization, and keyword-targeted architecture ensure that you start climbing the rankings from Day 1.
+                                </p>
+                                <ul className="space-y-3">
+                                    <li className="flex items-center gap-3 text-slate-700 font-medium">
+                                        <div className="bg-green-100 p-1 rounded-full text-green-600"><CheckCircle2 size={16} /></div>
+                                        Google-ready site architecture
+                                    </li>
+                                    <li className="flex items-center gap-3 text-slate-700 font-medium">
+                                        <div className="bg-green-100 p-1 rounded-full text-green-600"><CheckCircle2 size={16} /></div>
+                                        Technical SEO best practices
+                                    </li>
+                                </ul>
+                                <SectionCTA />
+                            </div>
+                            <div className="md:w-1/2 bg-white rounded-3xl p-8 border border-slate-200 shadow-sm flex flex-col justify-center">
+                                {/* SEO Result Mock */}
+                                <div className="bg-white w-full max-w-md mx-auto p-4 rounded-xl border border-slate-100 shadow-sm mb-4">
+                                    <div className="flex items-center gap-2 mb-2">
+                                        <div className="w-6 h-6 bg-slate-200 rounded-full"></div>
+                                        <div className="flex flex-col">
+                                            <div className="text-xs text-slate-800 font-medium">Verso Builders</div>
+                                            <div className="text-[10px] text-slate-500">https://versobuilders.com</div>
+                                        </div>
+                                    </div>
+                                    <div className="text-purple-700 text-lg hover:underline cursor-pointer mb-1 text-left">Custom Home Builders in Hingham | Luxury Design</div>
+                                    <div className="text-sm text-slate-600 text-left">
+                                        Award-winning custom home builders serving the Greater Hingham area. Start your dream home project today with Verso Builders.
+                                    </div>
+                                </div>
+                                <div className="bg-white w-full max-w-md mx-auto p-4 rounded-xl border border-slate-100 shadow-sm opacity-50">
+                                    <div className="h-4 w-32 bg-slate-100 rounded mb-2"></div>
+                                    <div className="h-4 w-56 bg-slate-200 rounded mb-2"></div>
+                                    <div className="h-12 w-full bg-slate-50 rounded"></div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
