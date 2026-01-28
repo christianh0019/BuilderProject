@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { ArrowRight, CheckCircle2, ChevronDown, ChevronUp, Clock, TrendingUp, AlertTriangle, Filter, Target, CalendarCheck, BarChart3, Smartphone, DollarSign, XCircle, PlayCircle, Lock, ShieldCheck, CheckCircle, MessageSquare, User } from 'lucide-react';
+import { ArrowRight, CheckCircle2, ChevronDown, ChevronUp, Clock, TrendingUp, AlertTriangle, Filter, Target, CalendarCheck, BarChart3, Smartphone, DollarSign, XCircle, PlayCircle, Lock, ShieldCheck, CheckCircle, MessageSquare, User, Zap } from 'lucide-react';
 import Modal from '../../components/ui/Modal';
 import { Link } from 'react-router-dom';
+import { caseStudies } from '../../data/caseStudies';
 
 const PipelineProgram: React.FC = () => {
     const [openFaq, setOpenFaq] = useState<number | null>(null);
@@ -11,12 +12,15 @@ const PipelineProgram: React.FC = () => {
         setOpenFaq(openFaq === index ? null : index);
     };
 
+    // Filter case studies relevant to Pipeline (mostly all of them rely on the pipeline engine)
+    const pipelineStudies = caseStudies.filter(study => ['eagle-rock', 'schwanz', 'homestead'].includes(study.id));
+
     const HeroGraphic = () => (
-        <div className="relative mx-auto w-full max-w-[300px] md:max-w-[340px]">
+        <div className="relative mx-auto w-full max-w-[320px]">
             {/* Phone Frame */}
-            <div className="relative rounded-[2.5rem] border-[8px] border-slate-900 bg-slate-900 overflow-hidden shadow-2xl z-10">
+            <div className="relative rounded-[3rem] border-[8px] border-slate-900 bg-slate-900 overflow-hidden shadow-2xl z-10Ring">
                 {/* Status Bar */}
-                <div className="bg-slate-900 text-white px-6 py-3 flex justify-between items-center text-xs font-medium">
+                <div className="bg-slate-900 text-white px-6 py-4 flex justify-between items-center text-xs font-medium rounded-t-[2.5rem]">
                     <span>9:41</span>
                     <div className="flex gap-1.5">
                         <div className="w-4 h-2.5 bg-white rounded-[2px]" />
@@ -25,7 +29,7 @@ const PipelineProgram: React.FC = () => {
                 </div>
 
                 {/* App Content */}
-                <div className="bg-slate-50 h-[550px] overflow-hidden flex flex-col relative">
+                <div className="bg-slate-50 h-[600px] overflow-hidden flex flex-col relative rounded-b-[2.5rem]">
                     {/* Header */}
                     <div className="bg-white p-4 border-b border-slate-100 shadow-sm z-10">
                         <div className="flex justify-between items-center mb-1">
@@ -99,6 +103,18 @@ const PipelineProgram: React.FC = () => {
                                 <span className="text-[10px] font-bold bg-slate-100 text-slate-500 px-2 py-0.5 rounded-full">Contacted</span>
                             </div>
                         </div>
+                        {/* Lead Card 4 */}
+                        <div className="bg-white p-3 rounded-xl border border-slate-200 shadow-sm opacity-40">
+                            <div className="flex justify-between items-start mb-2">
+                                <div className="flex items-center gap-2">
+                                    <div className="w-8 h-8 rounded-full bg-slate-100 text-slate-600 flex items-center justify-center font-bold text-xs">TB</div>
+                                    <div>
+                                        <div className="font-bold text-slate-900 text-sm">Tom B.</div>
+                                        <div className="text-[10px] text-slate-500">New Build</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                     {/* Bottom Selectors */}
@@ -111,126 +127,141 @@ const PipelineProgram: React.FC = () => {
                 </div>
             </div>
 
-            {/* Background Blob */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[110%] bg-purple-500/20 blur-3xl rounded-full -z-10 pointer-events-none"></div>
+            {/* Background Blob behind phone */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[140%] h-[120%] bg-purple-600/20 blur-[80px] rounded-full -z-10 pointer-events-none"></div>
         </div>
     );
 
     return (
         <div className="pt-20 font-sans text-slate-900 selection:bg-purple-200 selection:text-purple-900">
-            {/* 1. Hero Section */}
-            <section className="relative bg-[#0F172A] text-white pt-24 pb-32 overflow-hidden">
+            {/* 1. Hero Section (Centered Match) */}
+            <section className="relative bg-[#0F172A] text-white pt-32 pb-32 overflow-hidden">
+                {/* Background Effects */}
                 <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-purple-900/20 rounded-full blur-[120px] pointer-events-none mix-blend-screen animate-pulse"></div>
                 <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-blue-900/10 rounded-full blur-[100px] pointer-events-none mix-blend-screen"></div>
 
                 <div className="container mx-auto px-6 relative z-10">
-                    <div className="flex flex-col md:flex-row items-center gap-16">
-                        <div className="md:w-1/2 text-left">
-                            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-900/30 border border-purple-500/30 mb-8 backdrop-blur-sm">
-                                <span className="flex h-2 w-2 rounded-full bg-green-400 animate-pulse"></span>
-                                <span className="text-sm font-medium text-purple-200 uppercase tracking-widest">Active Lead Generation</span>
-                            </div>
+                    <div className="max-w-7xl mx-auto text-center mb-16">
+                        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-900/30 border border-purple-500/30 mb-8 backdrop-blur-sm">
+                            <span className="flex h-2 w-2 rounded-full bg-green-400 animate-pulse"></span>
+                            <span className="text-sm font-medium text-purple-200 uppercase tracking-widest">Active Lead Generation</span>
+                        </div>
 
-                            <h1 className="text-4xl md:text-6xl font-serif font-bold mb-6 leading-tight">
-                                Fill Your Pipeline While You're <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">On The Job Site.</span>
-                            </h1>
+                        <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-bold mb-8 leading-tight tracking-tight">
+                            Fill Your Pipeline While You're <br />
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400">On The Job Site</span>
+                        </h1>
 
-                            <p className="text-xl text-slate-300 mb-8 leading-relaxed font-light">
-                                We run your ads. You take the calls. 60 days to your first booked consultation. That's it.
-                            </p>
+                        <p className="text-xl md:text-2xl text-slate-300 mb-10 max-w-3xl mx-auto leading-relaxed font-light">
+                            We run your ads. You take the calls. 60 days to your first booked consultation. Predictable growth without the agency fluff.
+                        </p>
 
-                            <ul className="space-y-4 mb-10 text-slate-300">
-                                <li className="flex items-center gap-3">
-                                    <CheckCircle2 className="text-green-400 shrink-0" size={20} />
-                                    Google & Facebook ads managed daily
-                                </li>
-                                <li className="flex items-center gap-3">
-                                    <CheckCircle2 className="text-green-400 shrink-0" size={20} />
-                                    Qualified leads delivered weekly
-                                </li>
-                                <li className="flex items-center gap-3">
-                                    <CheckCircle2 className="text-green-400 shrink-0" size={20} />
-                                    You never touch the ads
-                                </li>
-                                <li className="flex items-center gap-3 text-white font-bold">
-                                    <div className="bg-purple-600 rounded-full p-1"><DollarSign size={14} /></div>
-                                    $1,997/month + your ad budget
-                                </li>
-                            </ul>
-
-                            <button onClick={() => setIsBookingModalOpen(true)} className="inline-flex items-center bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-full font-bold transition-all hover:scale-105 shadow-[0_0_20px_rgba(168,85,247,0.4)]">
-                                Start Generating Leads <ArrowRight className="ml-2" />
+                        <div className="flex flex-col sm:flex-row gap-5 justify-center items-center">
+                            <button onClick={() => setIsBookingModalOpen(true)} className="group relative inline-flex items-center justify-center px-8 py-4 text-base font-bold text-white transition-all duration-200 bg-purple-600 font-pj rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-600 hover:bg-purple-700 shadow-[0_0_20px_rgba(168,85,247,0.4)] hover:shadow-[0_0_30px_rgba(168,85,247,0.6)]">
+                                Start Generating Leads
+                                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                             </button>
                         </div>
+                    </div>
 
-                        <div className="md:w-1/2 flex justify-center">
-                            <HeroGraphic />
-                        </div>
+                    {/* Hero Visual: The System */}
+                    <div className="relative mt-20">
+                        <HeroGraphic />
+                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-2xl h-[400px] bg-purple-500/10 blur-[100px] rounded-full -z-10"></div>
                     </div>
                 </div>
             </section>
 
-            {/* 2. The Problem */}
+            {/* 2. The Problem (Comparison Cards) */}
             <section className="py-24 bg-white">
-                <div className="container mx-auto px-6 max-w-4xl text-center">
+                <div className="container mx-auto px-6 max-w-6xl text-center">
                     <h2 className="text-3xl md:text-5xl font-serif font-bold text-slate-900 mb-6">Your Pipeline is a Gamble.</h2>
-                    <p className="text-xl text-slate-600 mb-12">The "Feast or Famine" cycle is killing your ability to plan.</p>
+                    <p className="text-xl text-slate-600 mb-16 max-w-3xl mx-auto">The "Feast or Famine" cycle is killing your ability to plan. You need a lever you can pull.</p>
 
-                    <div className="grid md:grid-cols-2 gap-8 text-left">
-                        <div className="bg-slate-50 p-8 rounded-2xl border border-red-100">
-                            <div className="flex items-center gap-3 mb-4 text-red-600 font-bold uppercase tracking-wider text-sm">
-                                <XCircle size={18} /> The Reality
+                    <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-center text-left">
+                        {/* Chaos Side */}
+                        <div className="bg-slate-50 p-8 rounded-2xl border border-red-200 relative overflow-hidden group hover:border-red-300 transition-all">
+                            <div className="absolute top-0 right-0 p-4 opacity-10">
+                                <XCircle size={80} className="text-red-500" />
                             </div>
-                            <h3 className="font-serif font-bold text-2xl text-slate-900 mb-4">Referral Roulette</h3>
-                            <p className="text-slate-600 mb-6 leading-relaxed">
-                                One quarter you're booked solid. The next? Silence. You have zero control over when the next project comes in. You can't forecast revenue. You can't plan hiring. You're just hoping the phone rings.
-                            </p>
+                            <h3 className="text-xl font-bold text-slate-900 mb-6 flex items-center gap-3">
+                                <span className="bg-red-100 text-red-600 p-2 rounded-lg"><XCircle size={20} /></span>
+                                Referral Roulette
+                            </h3>
+                            <div className="space-y-4">
+                                <div className="flex items-center justify-between bg-white p-3 rounded-lg border border-slate-200">
+                                    <span className="text-slate-500 text-sm">Next Project</span>
+                                    <span className="text-red-500 text-xs font-bold">"Maybe next month?"</span>
+                                </div>
+                                <div className="flex items-center justify-between bg-white p-3 rounded-lg border border-slate-200">
+                                    <span className="text-slate-500 text-sm">Lead Quality</span>
+                                    <span className="text-red-500 text-xs font-bold">"Friends of friends (cheap)"</span>
+                                </div>
+                                <div className="flex items-center justify-between bg-white p-3 rounded-lg border border-slate-200">
+                                    <span className="text-slate-500 text-sm">Control</span>
+                                    <span className="text-red-500 text-xs font-bold">Zero</span>
+                                </div>
+                            </div>
                         </div>
 
-                        <div className="bg-slate-900 p-8 rounded-2xl text-white">
-                            <div className="flex items-center gap-3 mb-4 text-purple-400 font-bold uppercase tracking-wider text-sm">
-                                <AlertTriangle size={18} /> The Truth
+                        {/* Truth Side */}
+                        <div className="bg-slate-900 p-8 rounded-2xl border border-purple-500/50 relative overflow-hidden shadow-2xl transform md:-translate-y-4 ring-1 ring-purple-500/20">
+                            <div className="absolute top-0 right-0 p-4 opacity-10">
+                                <Target size={80} className="text-purple-500" />
                             </div>
-                            <h3 className="font-serif font-bold text-2xl text-white mb-4">The Competitor</h3>
-                            <p className="text-slate-300 mb-6 leading-relaxed">
-                                Qualified homeowners ($1M+ budgets) are Googling builders right now. They're scrolling Instagram. They aren't finding you—they're finding your competitor who runs ads. They have a system. You have hope.
-                            </p>
+                            <h3 className="text-xl font-bold text-white mb-6 flex items-center gap-3">
+                                <span className="bg-purple-500/20 text-purple-500 p-2 rounded-lg"><CheckCircle size={20} /></span>
+                                The Predictable Pipeline
+                            </h3>
+                            <div className="space-y-4">
+                                <div className="bg-purple-900/10 p-4 rounded-xl border border-purple-500/20">
+                                    <div className="flex items-center gap-3 mb-2">
+                                        <div className="w-8 h-8 rounded-full bg-purple-500 flex items-center justify-center text-slate-900 font-bold text-xs">AI</div>
+                                        <span className="font-bold text-purple-400">System Notification</span>
+                                    </div>
+                                    <p className="text-slate-300 text-sm pl-11">"New lead verified: $1.5M Budget, Has Land, Ready to Start. Added to your calendar for Tuesday at 2pm."</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            {/* 3. The Solution */}
-            <section className="py-24 bg-purple-50">
-                <div className="container mx-auto px-6 max-w-5xl">
+            {/* 3. The Solution Benefits */}
+            <section className="py-24 bg-slate-900 text-white">
+                <div className="container mx-auto px-6 max-w-6xl">
                     <div className="text-center mb-16">
-                        <span className="text-purple-600 font-bold uppercase tracking-widest text-sm mb-2 block">The Pipeline Shift</span>
-                        <h2 className="text-3xl md:text-5xl font-serif font-bold text-slate-900 mb-6">What if Qualified Leads Just... Showed Up?</h2>
-                        <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-                            The Pipeline program does one thing: keeps qualified prospects flowing into your calendar every single week. You just take the calls and close the deals.
+                        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-900/30 border border-purple-500/30 mb-6 backdrop-blur-sm">
+                            <span className="text-sm font-medium text-purple-200 uppercase tracking-widest">The Pipeline Shift</span>
+                        </div>
+                        <h2 className="text-3xl md:text-5xl font-serif font-bold mb-6">
+                            What if Qualified Leads Just... <br /> <span className="text-purple-400">Showed Up?</span>
+                        </h2>
+                        <p className="text-xl text-slate-400 max-w-3xl mx-auto">
+                            The Pipeline program does one thing: keeps qualified prospects flowing into your calendar every single week. No managing ads. No chasing tire kickers.
                         </p>
                     </div>
 
-                    <div className="grid md:grid-cols-4 gap-6 text-center">
+                    <div className="grid md:grid-cols-4 gap-6">
                         {[
                             { icon: CalendarCheck, title: "No More Famine", desc: "Consistent lead flow you can count on." },
                             { icon: TrendingUp, title: "Predictable Growth", desc: "Forecast revenue with confidence." },
                             { icon: ShieldCheck, title: "Referral Proof", desc: "Pipeline stays full even when referrals slow." },
                             { icon: Target, title: "You Control It", desc: "Scale up or down on your terms." }
                         ].map((item, i) => (
-                            <div key={i} className="bg-white p-6 rounded-xl shadow-sm border border-purple-100">
-                                <div className="w-12 h-12 mx-auto bg-purple-100 rounded-full flex items-center justify-center text-purple-600 mb-4">
+                            <div key={i} className="bg-slate-800 p-8 rounded-2xl border border-slate-700 text-center hover:bg-slate-750 transition-colors group">
+                                <div className="w-12 h-12 bg-purple-900/50 rounded-xl flex items-center justify-center text-purple-400 mx-auto mb-6 border border-purple-500/20 group-hover:scale-110 transition-transform">
                                     <item.icon size={24} />
                                 </div>
-                                <h3 className="font-bold text-slate-900 mb-2">{item.title}</h3>
-                                <p className="text-sm text-slate-500">{item.desc}</p>
+                                <h3 className="font-bold text-lg mb-2 text-white">{item.title}</h3>
+                                <p className="text-slate-400 text-sm">{item.desc}</p>
                             </div>
                         ))}
                     </div>
                 </div>
             </section>
 
-            {/* 4. How It Works */}
+            {/* 4. How It Works - Cards */}
             <section className="py-24 bg-white">
                 <div className="container mx-auto px-6 max-w-6xl">
                     <div className="text-center mb-20">
@@ -238,42 +269,28 @@ const PipelineProgram: React.FC = () => {
                         <p className="text-xl text-slate-500">Simple. Predictable. Done for you.</p>
                     </div>
 
-                    <div className="grid md:grid-cols-3 gap-12">
-                        <div className="relative">
-                            <div className="text-9xl font-bold text-slate-100 absolute -top-10 -left-6 -z-10">1</div>
-                            <h3 className="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-3">
-                                <div className="w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center text-sm font-bold">1</div>
-                                We Target Ideal Clients
-                            </h3>
-                            <p className="text-slate-600 leading-relaxed">
-                                Facebook & Google ads reach homeowners in your area with the income and intent to build. We capture people searching "custom builder near me" and those browsing design inspiration.
-                            </p>
-                        </div>
-                        <div className="relative">
-                            <div className="text-9xl font-bold text-slate-100 absolute -top-10 -left-6 -z-10">2</div>
-                            <h3 className="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-3">
-                                <div className="w-8 h-8 rounded-full bg-purple-600 text-white flex items-center justify-center text-sm font-bold">2</div>
-                                We Filter The "Junk"
-                            </h3>
-                            <p className="text-slate-600 leading-relaxed">
-                                Not every lead is worth your time. Our system automatically asks qualifying questions: Budget? Timeline? Land ownership? We filter out the tire kickers so you don't have to.
-                            </p>
-                        </div>
-                        <div className="relative">
-                            <div className="text-9xl font-bold text-slate-100 absolute -top-10 -left-6 -z-10">3</div>
-                            <h3 className="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-3">
-                                <div className="w-8 h-8 rounded-full bg-green-600 text-white flex items-center justify-center text-sm font-bold">3</div>
-                                Qualified Leads Book
-                            </h3>
-                            <p className="text-slate-600 leading-relaxed">
-                                When someone is qualified, they book directly to your calendar. No back-and-forth. No chasing. You just show up to the consultation with a qualified prospect.
-                            </p>
-                        </div>
+                    <div className="grid md:grid-cols-3 gap-8">
+                        {[
+                            { number: "01", title: "We Target", desc: "Facebook & Google ads reach homeowners in your area with the income and intent to build." },
+                            { number: "02", title: "We Filter", desc: "Our system asks the awkward questions (Budget? Land?) so you don't have to." },
+                            { number: "03", title: "You Build", desc: "Qualified leads book directly to your calendar. You show up and close." }
+                        ].map((step, i) => (
+                            <div key={i} className="bg-slate-50 p-8 rounded-3xl border border-slate-100 relative overflow-hidden group hover:shadow-lg transition-all">
+                                <div className="text-8xl font-bold text-slate-200/50 absolute -top-4 -right-4 transition-transform group-hover:scale-110">{step.number}</div>
+                                <div className="relative z-10">
+                                    <div className="w-10 h-10 bg-purple-600 rounded-full flex items-center justify-center text-white font-bold mb-6 shadow-lg shadow-purple-500/30">
+                                        {i + 1}
+                                    </div>
+                                    <h3 className="text-2xl font-bold text-slate-900 mb-4">{step.title}</h3>
+                                    <p className="text-slate-600 leading-relaxed">{step.desc}</p>
+                                </div>
+                            </div>
+                        ))}
                     </div>
                 </div>
             </section>
 
-            {/* 5. What's Included (Card Layout like Partner) */}
+            {/* 5. What's Included (Feature Grid) */}
             <section className="py-24 bg-slate-50">
                 <div className="container mx-auto px-6 max-w-6xl">
                     <div className="text-center mb-16">
@@ -295,7 +312,7 @@ const PipelineProgram: React.FC = () => {
                         </div>
 
                         {/* System (Central) */}
-                        <div className="bg-white p-8 rounded-2xl border border-purple-200 shadow-lg relative transform md:-translate-y-4">
+                        <div className="bg-white p-8 rounded-2xl border border-purple-200 shadow-lg relative transform md:-translate-y-4 z-10">
                             <div className="absolute top-0 right-0 bg-purple-600 text-white text-xs font-bold px-3 py-1 rounded-bl-lg rounded-tr-lg">Core Feature</div>
                             <div className="text-sm font-bold text-purple-600 uppercase tracking-widest mb-4">Lead Filtering</div>
                             <h3 className="text-2xl font-bold text-slate-900 mb-4">The "Gatekeeper"</h3>
@@ -322,92 +339,35 @@ const PipelineProgram: React.FC = () => {
                 </div>
             </section>
 
-            {/* 6. The Math */}
+            {/* 6. Real Results (Case Study Popups Match) */}
             <section className="py-24 bg-white">
-                <div className="container mx-auto px-6 max-w-4xl">
-                    <div className="bg-gradient-to-br from-slate-50 to-purple-50 rounded-3xl p-8 md:p-12 border border-purple-100 shadow-lg">
-                        <div className="text-center mb-10">
-                            <h2 className="text-3xl md:text-5xl font-serif font-bold text-slate-900 mb-4">One Project Pays For 12+ Months</h2>
-                            <p className="text-xl text-slate-600">The ROI math is simple.</p>
-                        </div>
-
-                        <div className="grid md:grid-cols-3 gap-8 items-center text-center">
-                            <div>
-                                <div className="text-sm text-slate-500 uppercase tracking-wide font-bold mb-2">Your Cost (Year)</div>
-                                <div className="text-4xl font-bold text-slate-400 line-through decoration-red-500 decoration-2 opacity-60">$60k</div>
-                                <div className="text-xs text-slate-400 mt-1">($5k/mo avg spend)</div>
-                            </div>
-                            <div className="hidden md:block text-slate-300">
-                                <ArrowRight size={32} />
-                            </div>
-                            <div>
-                                <div className="text-sm text-slate-500 uppercase tracking-wide font-bold mb-2">1 Project Profit</div>
-                                <div className="text-5xl font-bold text-green-600">$200k+</div>
-                                <div className="text-xs text-slate-400 mt-1">(Custom Home Avg)</div>
-                            </div>
-                        </div>
-
-                        <div className="mt-10 text-center border-t border-purple-200 pt-8">
-                            <p className="text-lg font-medium text-slate-800">
-                                Most builders close 2-3 projects from pipeline in year 1.<br />
-                                <span className="text-purple-600 font-bold">The real question is: Can you afford NOT to have a predictable lead source?</span>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* 7. Why Beats DIY */}
-            <section className="py-24 bg-slate-50">
-                <div className="container mx-auto px-6 max-w-5xl">
-                    <div className="grid md:grid-cols-2 gap-12">
-                        <div>
-                            <h3 className="text-2xl font-serif font-bold text-slate-900 mb-6">Why Pipeline Beats DIY</h3>
-                            <p className="text-slate-600 mb-4">
-                                You could spend 20 hours learning Facebook Ads Manager, waste $5k testing wrong audiences, get frustrated, and give up.
-                            </p>
-                            <p className="text-slate-600 mb-8 font-bold">
-                                Or you can let us do it.
-                            </p>
-                            <div className="space-y-4">
-                                <div className="flex items-center gap-3 text-slate-800 bg-white p-4 rounded-lg shadow-sm">
-                                    <Clock className="text-purple-600" />
-                                    <span>We save you <span className="font-bold">10+ hours/week</span></span>
-                                </div>
-                                <div className="flex items-center gap-3 text-slate-800 bg-white p-4 rounded-lg shadow-sm">
-                                    <BarChart3 className="text-purple-600" />
-                                    <span>We've spent <span className="font-bold">$2M+ testing</span> what works for builders</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="relative bg-slate-200 rounded-2xl p-8 flex flex-col justify-center">
-                            <div className="absolute inset-0 bg-slate-900/5 rounded-2xl"></div>
-                            <blockquote className="relative italic text-xl text-slate-700 font-serif text-center">
-                                "You're not paying for marketing. You're buying back your time to do what actually makes money: closing deals and running projects."
-                            </blockquote>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* 8. Real Results */}
-            <section className="py-24 bg-white">
-                <div className="container mx-auto px-6 max-w-6xl">
+                <div className="container mx-auto px-6 max-w-7xl">
                     <div className="text-center mb-16">
                         <h2 className="text-3xl md:text-5xl font-serif font-bold text-slate-900 mb-6">Real Results From Real Builders</h2>
+                        <p className="text-xl text-slate-500">Builders just like you are scaling with this system.</p>
                     </div>
-                    <div className="grid md:grid-cols-3 gap-8">
-                        {[
-                            { name: "Eagle Rock Custom Homes", spend: "$5.5k Spend", result: "$3.2M Pipeline", time: "90 Days" },
-                            { name: "Schwanz Custom Homes", spend: "$6k Spend", result: "$680k Closed", time: "Year 1" },
-                            { name: "Homestead Builders", spend: "$8k Spend", result: "$2.5M Closed", time: "6 Months" }
-                        ].map((stat, i) => (
-                            <div key={i} className="text-center p-8 border border-slate-100 rounded-2xl hover:shadow-xl transition-shadow bg-slate-50 flex flex-col justify-center min-h-[300px]">
-                                <h3 className="font-bold text-slate-900 mb-2 text-xl">{stat.name}</h3>
-                                <div className="text-sm text-slate-500 mb-8">{stat.time}</div>
-                                <div className="space-y-4">
-                                    <div className="bg-red-50 text-red-600 py-1.5 px-4 rounded-full inline-block text-sm font-bold border border-red-100">{stat.spend}</div>
-                                    <div className="text-4xl font-bold text-slate-900 block tracking-tight">{stat.result}</div>
+                    <div className="grid lg:grid-cols-3 gap-8">
+                        {pipelineStudies.map((study, i) => (
+                            <div key={i} className="bg-white rounded-2xl border border-slate-200 overflow-hidden hover:shadow-xl transition-shadow flex flex-col h-full group">
+                                <div className="h-48 overflow-hidden relative">
+                                    <img src={study.imageUrl} alt={study.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                                    <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-slate-900">
+                                        {study.builderName}
+                                    </div>
+                                </div>
+                                <div className="p-8 flex flex-col flex-grow">
+                                    <h3 className="text-xl font-bold text-slate-900 mb-4">{study.title}</h3>
+                                    <div className="grid grid-cols-2 gap-4 mb-6">
+                                        {study.results.slice(0, 2).map((res, j) => (
+                                            <div key={j}>
+                                                <div className="text-xs text-slate-500 uppercase tracking-wider">{res.label}</div>
+                                                <div className="font-bold text-slate-900">{res.value}</div>
+                                            </div>
+                                        ))}
+                                    </div>
+                                    <div className="mt-auto">
+                                        <Link to={`/case-studies/${study.slug}`} className="text-purple-600 font-bold text-sm hover:underline flex items-center gap-1">Read Full Story <ArrowRight size={14} /></Link>
+                                    </div>
                                 </div>
                             </div>
                         ))}
@@ -415,8 +375,46 @@ const PipelineProgram: React.FC = () => {
                 </div>
             </section>
 
-            {/* 9. Timeline (Roadmap Style) */}
-            <section className="py-24 bg-white border-t border-slate-100">
+            {/* 7. The Math (Premium Card) */}
+            <section className="py-24 bg-slate-50">
+                <div className="container mx-auto px-6 max-w-4xl">
+                    <div className="relative bg-gradient-to-br from-slate-900 to-slate-800 rounded-3xl p-8 md:p-12 border border-slate-700 shadow-2xl overflow-hidden">
+                        {/* Glow effect */}
+                        <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-purple-600/20 rounded-full blur-[100px] pointer-events-none"></div>
+
+                        <div className="text-center mb-10 relative z-10">
+                            <h2 className="text-3xl md:text-5xl font-serif font-bold text-white mb-4">One Project Pays For 12+ Months</h2>
+                            <p className="text-xl text-slate-400">The ROI math is simple. It's an investment, not an expense.</p>
+                        </div>
+
+                        <div className="grid md:grid-cols-3 gap-8 items-center text-center relative z-10">
+                            <div>
+                                <div className="text-sm text-slate-400 uppercase tracking-wide font-bold mb-2">Your Cost (Year)</div>
+                                <div className="text-4xl font-bold text-slate-500 line-through decoration-red-500 decoration-2 opacity-60">$24k</div>
+                                <div className="text-xs text-slate-500 mt-1">($2k/mo program)</div>
+                            </div>
+                            <div className="hidden md:block text-slate-600">
+                                <ArrowRight size={32} />
+                            </div>
+                            <div>
+                                <div className="text-sm text-purple-400 uppercase tracking-wide font-bold mb-2">1 Project Profit</div>
+                                <div className="text-5xl font-bold text-emerald-400">$200k+</div>
+                                <div className="text-xs text-emerald-500/80 mt-1">(Custom Home Avg)</div>
+                            </div>
+                        </div>
+
+                        <div className="mt-10 text-center border-t border-slate-700 pt-8 relative z-10">
+                            <p className="text-lg font-medium text-slate-300">
+                                Most builders close 2-3 projects from pipeline in year 1.<br />
+                                <span className="text-purple-400 font-bold">Can you afford NOT to have a predictable lead source?</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* 8. Timeline (Roadmap Style) */}
+            <section className="py-24 bg-white">
                 <div className="container mx-auto px-6 max-w-5xl">
                     <div className="text-center mb-16">
                         <h2 className="text-3xl md:text-5xl font-serif font-bold text-slate-900 mb-6">When Will You See Results?</h2>
@@ -429,7 +427,7 @@ const PipelineProgram: React.FC = () => {
                             { month: "Months 1-3", title: "Pipeline Building", desc: "You're taking consultations and sending estimates. Your CRM pipeline is visually filling up with opportunities." },
                             { month: "Months 6-12", title: "Closing & ROI", desc: "Deals mature and close. Revenue hits the bank. The system pays for its entire year cost 5-10x over." }
                         ].map((phase, i) => (
-                            <div key={i} className="flex flex-col md:flex-row gap-6 p-6 rounded-2xl hover:bg-slate-50 border border-transparent hover:border-slate-100 transition-all">
+                            <div key={i} className="flex flex-col md:flex-row gap-6 p-6 rounded-2xl bg-white border border-slate-200 hover:border-purple-200 hover:shadow-lg transition-all">
                                 <div className="md:w-32 shrink-0">
                                     <span className="inline-block px-4 py-2 bg-slate-900 text-white text-sm font-bold rounded-lg w-full text-center">{phase.month}</span>
                                 </div>
@@ -443,46 +441,27 @@ const PipelineProgram: React.FC = () => {
                 </div>
             </section>
 
-            {/* 10. Foundation Callout */}
-            <section className="py-24 bg-slate-900 text-white">
-                <div className="container mx-auto px-6 max-w-4xl text-center">
-                    <div className="inline-flex items-center gap-2 bg-purple-900/50 text-purple-200 border border-purple-500/30 px-4 py-2 rounded-full font-bold text-sm mb-6">
-                        <AlertTriangle size={16} /> Prerequisite Check
-                    </div>
-                    <h2 className="text-3xl font-serif font-bold text-white mb-6">Foundation Required</h2>
-                    <p className="text-slate-300 mb-8 max-w-2xl mx-auto">
-                        The Pipeline only works if your website converts. We drive traffic, but if your site looks amateur, we waste money.
-                    </p>
-                    <div className="bg-slate-800 p-6 rounded-xl shadow-sm border border-slate-700 inline-block text-left">
-                        <div className="font-bold text-white mb-2">The Bundle Offer</div>
-                        <p className="text-sm text-slate-400 mb-4">
-                            Need both? Get Foundation + Pipeline together and save <span className="font-bold text-emerald-400">$1,000</span> on your Foundation investment.
-                        </p>
-                        <Link to="/programs/foundation" className="text-purple-400 font-bold text-sm underline hover:text-purple-300">Check Foundation w/ Bundle</Link>
-                    </div>
-                </div>
-            </section>
-
-            {/* 11. Investment */}
-            <section className="py-24 bg-white">
+            {/* 9. Investment */}
+            <section className="py-24 bg-slate-50">
                 <div className="container mx-auto px-6 max-w-3xl text-center">
-                    <h2 className="text-3xl md:text-5xl font-serif font-bold text-slate-900 mb-4">$1,997<span className="text-2xl text-slate-500 font-sans font-normal">/month</span></h2>
+                    <span className="text-purple-600 font-bold uppercase tracking-widest text-sm mb-4 block">Simple Pricing</span>
+                    <h2 className="text-5xl font-serif font-bold text-slate-900 mb-4">$1,997<span className="text-2xl text-slate-500 font-sans font-normal">/month</span></h2>
                     <p className="text-xl text-slate-500 mb-12">+ Ad Budget (Rec. $3k-$5k/mo)</p>
 
-                    <div className="bg-slate-50 p-8 rounded-3xl border border-slate-100 text-left space-y-4 max-w-lg mx-auto mb-10">
+                    <div className="bg-white p-8 rounded-3xl border border-slate-200 text-left space-y-4 max-w-lg mx-auto mb-10 shadow-sm">
                         <div className="flex gap-3"><CheckCircle2 className="text-green-500 shrink-0" /> Professional Ad Management</div>
                         <div className="flex gap-3"><CheckCircle2 className="text-green-500 shrink-0" /> Lead Filtering & Qualification</div>
-                        <div className="flex gap-3"><CheckCircle2 className="text-green-500 shrink-0" /> Pipeline Integration</div>
-                        <div className="flex gap-3"><CheckCircle2 className="text-green-500 shrink-0" /> Weekly Reporting</div>
+                        <div className="flex gap-3"><CheckCircle2 className="text-green-500 shrink-0" /> Pipeline CRM Software Included</div>
+                        <div className="flex gap-3"><CheckCircle2 className="text-green-500 shrink-0" /> Weekly Performance Reporting</div>
                         <div className="flex gap-3"><CheckCircle2 className="text-green-500 shrink-0" /> Dedicated Account Manager</div>
                     </div>
-                    <button onClick={() => setIsBookingModalOpen(true)} className="w-full max-w-md bg-purple-600 text-white font-bold py-4 rounded-full text-lg shadow-xl hover:bg-purple-700 transition-colors">Start Generating Leads</button>
+                    <button onClick={() => setIsBookingModalOpen(true)} className="w-full max-w-md bg-purple-600 text-white font-bold py-4 rounded-full text-lg shadow-xl shadow-purple-500/30 hover:bg-purple-700 transition-colors">Start Generating Leads</button>
                     <p className="text-xs text-slate-400 mt-4">Minimum 6-month commitment for proper testing/optimization.</p>
                 </div>
             </section>
 
-            {/* 12. FAQ */}
-            <section className="py-24 bg-slate-50">
+            {/* 10. FAQ */}
+            <section className="py-24 bg-white">
                 <div className="container mx-auto px-6 max-w-3xl">
                     <h2 className="text-3xl font-serif font-bold text-slate-900 mb-12 text-center">Common Questions</h2>
                     <div className="space-y-4">
@@ -508,19 +487,38 @@ const PipelineProgram: React.FC = () => {
                 </div>
             </section>
 
-            {/* 13. Final CTA */}
-            <section className="py-24 bg-slate-900 text-white text-center">
+            {/* 11. Foundation Callout */}
+            <section className="py-24 bg-slate-900 text-white">
+                <div className="container mx-auto px-6 max-w-4xl text-center">
+                    <div className="inline-flex items-center gap-2 bg-purple-900/50 text-purple-200 border border-purple-500/30 px-4 py-2 rounded-full font-bold text-sm mb-6">
+                        <AlertTriangle size={16} /> Prerequisite Check
+                    </div>
+                    <h2 className="text-3xl font-serif font-bold text-white mb-6">Foundation Required</h2>
+                    <p className="text-slate-300 mb-8 max-w-2xl mx-auto">
+                        The Pipeline only works if your website converts. We drive traffic, but if your site looks amateur, we waste money.
+                    </p>
+                    <div className="bg-slate-800 p-6 rounded-xl shadow-sm border border-slate-700 inline-block text-left relative overflow-hidden">
+                        <div className="relative z-10">
+                            <div className="font-bold text-white mb-2 text-lg">The Bundle Offer</div>
+                            <p className="text-sm text-slate-400 mb-4">
+                                Need both? Get Foundation + Pipeline together and save <span className="font-bold text-emerald-400">$1,000</span> on your Foundation investment.
+                            </p>
+                            <Link to="/programs/foundation" className="text-purple-400 font-bold text-sm underline hover:text-purple-300">Check Foundation w/ Bundle</Link>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* 12. Final CTA */}
+            <section className="py-24 bg-white text-center">
                 <div className="container mx-auto px-6 max-w-4xl">
-                    <h2 className="text-4xl font-serif font-bold mb-6">Ready For Predictable Leads?</h2>
-                    <p className="text-xl text-slate-400 mb-10">
+                    <h2 className="text-4xl font-serif font-bold text-slate-900 mb-6">Ready For Predictable Leads?</h2>
+                    <p className="text-xl text-slate-500 mb-10">
                         While your competitors wait for referrals, you could be managing a waitlist.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                         <button onClick={() => setIsBookingModalOpen(true)} className="inline-flex items-center bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-full font-bold transition-all hover:scale-105 shadow-[0_0_20px_rgba(168,85,247,0.3)]">
                             Start Generating Leads <ArrowRight className="ml-2" />
-                        </button>
-                        <button onClick={() => setIsBookingModalOpen(true)} className="inline-flex items-center bg-transparent border border-white/20 hover:bg-white/10 text-white px-8 py-4 rounded-full font-bold transition-all">
-                            Talk to Our Team First
                         </button>
                     </div>
                 </div>
