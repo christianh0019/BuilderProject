@@ -9,7 +9,7 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16 border-b border-slate-800 pb-12">
           <div>
             <div className="text-3xl font-serif font-bold mb-6 flex items-center gap-2">
-              <img src="/images/logo_icon.png" alt="BuilderProject Logo" className="w-8 h-8 rounded-lg" />
+              <img src="/images/logo_icon.png" alt="BuilderProject Logo" title="BuilderProject Logo" className="w-8 h-8 rounded-lg" />
               BuilderProject
             </div>
             <p className="text-slate-400 max-w-md text-lg leading-relaxed">

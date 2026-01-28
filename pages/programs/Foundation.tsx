@@ -352,7 +352,7 @@ const FoundationProgram: React.FC = () => {
                                 <div className="bg-white rounded-xl shadow-xl p-4 w-full max-w-sm relative z-10 transform group-hover:-translate-y-2 transition-transform duration-300">
                                     <div className="flex gap-4 mb-4">
                                         <div className="w-16 h-16 bg-stone-900 rounded-lg flex items-center justify-center text-white font-bold text-2xl overflow-hidden shrink-0">
-                                            <img src={versoLogo} alt="Verso Builders" className="w-full h-full object-cover" />
+                                            <img src={versoLogo} alt="Verso Builders" title="Verso Builders" className="w-full h-full object-cover" />
                                         </div>
                                         <div>
                                             <h4 className="font-bold text-lg text-slate-900">Verso Custom Builders</h4>
@@ -407,7 +407,7 @@ const FoundationProgram: React.FC = () => {
                                     <div className="flex items-center gap-3 mb-6">
                                         <div className="w-12 h-12 rounded-full bg-gradient-to-tr from-yellow-400 via-red-500 to-purple-600 p-[2px] shrink-0">
                                             <div className="w-full h-full rounded-full bg-white p-[2px] overflow-hidden">
-                                                <img src={versoLogo} alt="Profile" className="w-full h-full object-cover rounded-full" />
+                                                <img src={versoLogo} alt="Profile" title="Profile" className="w-full h-full object-cover rounded-full" />
                                             </div>
                                         </div>
                                         <div>
@@ -416,13 +416,13 @@ const FoundationProgram: React.FC = () => {
                                         </div>
                                     </div>
                                     <div className="grid grid-cols-3 gap-0.5 mb-0.5">
-                                        <img src={interiorKitchen} className="aspect-square object-cover" />
-                                        <img src={exteriorFront} className="aspect-square object-cover" />
-                                        <img src={interiorLiving} className="aspect-square object-cover" />
+                                        <img src={interiorKitchen} alt="Modern Kitchen" title="Modern Kitchen" className="aspect-square object-cover" />
+                                        <img src={exteriorFront} alt="Homestead Exterior" title="Homestead Exterior" className="aspect-square object-cover" />
+                                        <img src={interiorLiving} alt="Stonebrook Living Room" title="Stonebrook Living Room" className="aspect-square object-cover" />
                                     </div>
                                     <div className="grid grid-cols-3 gap-0.5">
-                                        <img src={exteriorRear} className="aspect-square object-cover" />
-                                        <img src={exteriorSide} className="aspect-square object-cover grayscale opacity-50" />
+                                        <img src={exteriorRear} alt="Open Prairie Rear" title="Open Prairie Rear" className="aspect-square object-cover" />
+                                        <img src={exteriorSide} alt="Eagle Rock Side" title="Eagle Rock Side" className="aspect-square object-cover grayscale opacity-50" />
                                         <div className="aspect-square bg-slate-100 flex items-center justify-center text-[8px] text-slate-400">More...</div>
                                     </div>
                                 </div>
@@ -455,20 +455,28 @@ const FoundationProgram: React.FC = () => {
                                     <div className="space-y-4">
                                         <img
                                             src={interiorLiving}
+                                            alt="Stonebrook Living Room"
+                                            title="Stonebrook Living Room"
                                             className="h-40 object-cover rounded-lg w-full shadow-lg"
                                         />
                                         <img
                                             src={exteriorFront}
+                                            alt="Homestead Exterior"
+                                            title="Homestead Exterior"
                                             className="h-24 object-cover rounded-lg w-full shadow-lg"
                                         />
                                     </div>
                                     <div className="space-y-4 pt-8">
                                         <img
                                             src={interiorKitchen}
+                                            alt="Modern Kitchen"
+                                            title="Modern Kitchen"
                                             className="h-24 object-cover rounded-lg w-full shadow-lg"
                                         />
                                         <img
                                             src={exteriorRear}
+                                            alt="Open Prairie Rear"
+                                            title="Open Prairie Rear"
                                             className="h-40 object-cover rounded-lg w-full shadow-lg"
                                         />
                                     </div>

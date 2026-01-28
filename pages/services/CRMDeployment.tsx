@@ -59,6 +59,7 @@ const CRMDeployment: React.FC = () => {
                                     <img
                                         src="https://storage.googleapis.com/msgsndr/HllUVzV8V6VFH4nUuq4W/media/69791340eb0d1a92a4c53499.png"
                                         alt="CRM Pipeline Dashboard"
+                                        title="CRM Pipeline Dashboard"
                                         className="w-full h-auto"
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-tr from-purple-500/10 to-transparent pointer-events-none"></div>

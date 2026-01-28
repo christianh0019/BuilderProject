@@ -1,6 +1,7 @@
 import React from 'react';
-import { HashRouter as Router, Routes, Route, Outlet } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Outlet } from 'react-router-dom';
 import Navbar from './components/Navbar';
+import HashRedirect from './components/HashRedirect';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import Services from './pages/Services';
@@ -67,6 +68,7 @@ const App: React.FC = () => {
   return (
     <HelmetProvider>
       <Router>
+        <HashRedirect />
         <ScrollToTopHelper />
         <Routes>
           {/* Main Website Routes (with Nav & Footer) */}

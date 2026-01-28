@@ -112,7 +112,7 @@ const ContentMarketing: React.FC = () => {
                                                 <Play fill="white" className="text-white ml-1" size={20} />
                                             </div>
                                         </div>
-                                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Video Recording" className="w-full h-full object-cover" />
+                                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Video Recording" title="Video Recording" className="w-full h-full object-cover" />
                                     </div>
                                 </div>
                                 <h3 className="text-xl font-bold mb-2">The Source</h3>

@@ -372,7 +372,7 @@ const PartnerProgram: React.FC = () => {
                         {partnerStudies.map((study, i) => (
                             <div key={i} className="bg-white rounded-2xl border border-slate-200 overflow-hidden hover:shadow-xl transition-shadow flex flex-col h-full">
                                 <div className="h-48 overflow-hidden relative">
-                                    <img src={study.imageUrl} alt={study.title} className="w-full h-full object-cover" />
+                                    <img src={study.imageUrl} alt={study.title} title={study.title} className="w-full h-full object-cover" />
                                     <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-slate-900">
                                         {study.builderName}
                                     </div>

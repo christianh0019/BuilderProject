@@ -57,7 +57,7 @@ const FunnelDevelopment: React.FC = () => {
                         <div className="relative z-10 transform transition-all duration-700 hover:scale-[1.01]">
                             <div className="relative mx-auto bg-slate-900 rounded-t-[1rem] md:rounded-t-[1.5rem] p-2 shadow-[0_20px_50px_-12px_rgba(0,0,0,0.5)] border border-slate-800 ring-1 ring-white/10 w-[90%] md:w-full">
                                 <div className="bg-slate-950 rounded-[0.5rem] md:rounded-[1rem] overflow-hidden aspect-[16/10] relative">
-                                    <img src="/images/funnel-hero-desktop-v3.png" alt="Desktop Website Preview" className="w-full h-full object-cover object-top" />
+                                    <img src="/images/funnel-hero-desktop-v3.png" alt="Desktop Website Preview" title="Desktop Website Preview" className="w-full h-full object-cover object-top" />
                                     {/* Reflection/Sheen */}
                                     <div className="absolute inset-0 bg-gradient-to-tr from-white/5 to-transparent pointer-events-none"></div>
                                 </div>
@@ -70,7 +70,7 @@ const FunnelDevelopment: React.FC = () => {
                         <div className="absolute -bottom-6 -right-2 md:-bottom-12 md:-right-8 w-[100px] md:w-[220px] z-20 transform rotate-[-3deg] group-hover:rotate-0 transition-all duration-500 group-hover:scale-105 group-hover:translate-y-[-10px]">
                             <div className="bg-slate-900 rounded-[1.5rem] md:rounded-[2.5rem] p-1 md:p-2 shadow-[0_20px_40px_-12px_rgba(0,0,0,0.5)] border border-slate-800 ring-1 ring-white/10">
                                 <div className="bg-slate-950 rounded-[1rem] md:rounded-[2rem] overflow-hidden aspect-[9/19] relative">
-                                    <img src="/images/funnel-hero-mobile-v2.png" alt="Mobile Website Preview" className="w-full h-full object-cover object-top" />
+                                    <img src="/images/funnel-hero-mobile-v2.png" alt="Mobile Website Preview" title="Mobile Website Preview" className="w-full h-full object-cover object-top" />
                                 </div>
                             </div>
                         </div>

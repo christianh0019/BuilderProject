@@ -57,6 +57,7 @@ const SalesProcesses: React.FC = () => {
                                     <img
                                         src="https://storage.googleapis.com/msgsndr/bH5sQz691OWPQdZXU6N2/media/697a0b891d09826b2e7df3c3.png"
                                         alt="Sales Pipeline Dashboard"
+                                        title="Sales Pipeline Dashboard"
                                         className="w-full h-auto"
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-tr from-purple-500/10 to-transparent pointer-events-none"></div>

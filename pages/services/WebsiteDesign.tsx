@@ -57,7 +57,7 @@ const WebsiteDesign: React.FC = () => {
                         <div className="relative z-10 transform transition-all duration-700 hover:scale-[1.01]">
                             <div className="relative mx-auto bg-slate-900 rounded-t-[1rem] md:rounded-t-[1.5rem] p-2 shadow-[0_20px_50px_-12px_rgba(0,0,0,0.5)] border border-slate-800 ring-1 ring-white/10 w-[90%] md:w-full">
                                 <div className="bg-slate-950 rounded-[0.5rem] md:rounded-[1rem] overflow-hidden aspect-[16/10] relative">
-                                    <img src="/images/hero-desktop-new.png" alt="Desktop Website Preview" className="w-full h-full object-cover object-top" />
+                                    <img src="/images/hero-desktop-new.png" alt="Desktop Website Preview" title="Desktop Website Preview" className="w-full h-full object-cover object-top" />
                                     {/* Reflection/Sheen */}
                                     <div className="absolute inset-0 bg-gradient-to-tr from-white/5 to-transparent pointer-events-none"></div>
                                 </div>
@@ -70,7 +70,7 @@ const WebsiteDesign: React.FC = () => {
                         <div className="absolute -bottom-6 -right-2 md:-bottom-12 md:-right-8 w-[100px] md:w-[220px] z-20 transform rotate-[-3deg] group-hover:rotate-0 transition-all duration-500 group-hover:scale-105 group-hover:translate-y-[-10px]">
                             <div className="bg-slate-900 rounded-[1.5rem] md:rounded-[2.5rem] p-1 md:p-2 shadow-[0_20px_40px_-12px_rgba(0,0,0,0.5)] border border-slate-800 ring-1 ring-white/10">
                                 <div className="bg-slate-950 rounded-[1rem] md:rounded-[2rem] overflow-hidden aspect-[9/19] relative">
-                                    <img src="/images/hero-mobile-1.png" alt="Mobile Website Preview" className="w-full h-full object-cover object-top" />
+                                    <img src="/images/hero-mobile-1.png" alt="Mobile Website Preview" title="Mobile Website Preview" className="w-full h-full object-cover object-top" />
                                 </div>
                             </div>
                         </div>
@@ -220,6 +220,7 @@ const WebsiteDesign: React.FC = () => {
                                     <img
                                         src="/images/horizon-retreat.png"
                                         alt="The Horizon Retreat - Luxe Builders"
+                                        title="The Horizon Retreat - Luxe Builders"
                                         className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700 ease-in-out"
                                     />
                                     {/* Overlay Content */}
@@ -252,6 +253,7 @@ const WebsiteDesign: React.FC = () => {
                                     <img
                                         src="/images/johnson-home.png"
                                         alt="The Johnson Family Home - Hearth & Home"
+                                        title="The Johnson Family Home - Hearth & Home"
                                         className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700 ease-in-out"
                                     />
                                     <div className="absolute bottom-4 left-4 right-4 z-20 flex justify-between items-end transform translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
@@ -282,6 +284,7 @@ const WebsiteDesign: React.FC = () => {
                                     <img
                                         src="/images/coastal-retreat.png"
                                         alt="Coastal Modern Retreat"
+                                        title="Coastal Modern Retreat"
                                         className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700 ease-in-out"
                                     />
                                     <div className="absolute bottom-4 left-4 right-4 z-20 flex justify-between items-end transform translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
@@ -317,6 +320,7 @@ const WebsiteDesign: React.FC = () => {
                                     <img
                                         src="/images/stonebrook-home.png"
                                         alt="Stonebrook Construction Homepage"
+                                        title="Stonebrook Construction Homepage"
                                         className="w-full h-full object-cover object-top transform group-hover:scale-105 transition-transform duration-700"
                                     />
                                     <div className="absolute bottom-4 right-4 z-20 w-8 h-8 bg-white/90 backdrop-blur rounded-full flex items-center justify-center text-slate-900 opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-2 group-hover:translate-y-0 shadow-sm">
@@ -334,6 +338,7 @@ const WebsiteDesign: React.FC = () => {
                                     <img
                                         src="/images/prestige-process.png"
                                         alt="Prestige Build Process Page"
+                                        title="Prestige Build Process Page"
                                         className="w-full h-full object-cover object-top transform group-hover:scale-105 transition-transform duration-700"
                                     />
                                     <div className="absolute bottom-4 right-4 z-20 w-8 h-8 bg-white/90 backdrop-blur rounded-full flex items-center justify-center text-slate-900 opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-2 group-hover:translate-y-0 shadow-sm">
@@ -351,6 +356,7 @@ const WebsiteDesign: React.FC = () => {
                                     <img
                                         src="/images/jacob-about.png"
                                         alt="Jacob Building Co About Page"
+                                        title="Jacob Building Co About Page"
                                         className="w-full h-full object-cover object-top transform group-hover:scale-105 transition-transform duration-700"
                                     />
                                     <div className="absolute bottom-4 right-4 z-20 w-8 h-8 bg-white/90 backdrop-blur rounded-full flex items-center justify-center text-slate-900 opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-2 group-hover:translate-y-0 shadow-sm">
@@ -368,6 +374,7 @@ const WebsiteDesign: React.FC = () => {
                                     <img
                                         src="/images/really-good-service.png"
                                         alt="Really Good Construction Service Page"
+                                        title="Really Good Construction Service Page"
                                         className="w-full h-full object-cover object-top transform group-hover:scale-105 transition-transform duration-700"
                                     />
                                     <div className="absolute bottom-4 right-4 z-20 w-8 h-8 bg-white/90 backdrop-blur rounded-full flex items-center justify-center text-slate-900 opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-2 group-hover:translate-y-0 shadow-sm">
