@@ -14,9 +14,10 @@ const PaidAdvertising: React.FC = () => {
                 <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-blue-900/10 rounded-full blur-[100px] pointer-events-none"></div>
 
                 <div className="container mx-auto px-6 relative z-10 text-center max-w-6xl">
-                    <span className="inline-block py-1 px-3 rounded-full bg-purple-900/50 border border-purple-500 text-purple-300 text-xs font-bold tracking-wider uppercase mb-6">
-                        Results You Can Deposit
-                    </span>
+                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-900/30 border border-purple-500/30 mb-8 backdrop-blur-sm">
+                        <span className="flex h-2 w-2 rounded-full bg-green-400 animate-pulse"></span>
+                        <span className="text-sm font-medium text-purple-200 uppercase tracking-widest">PAID ADVERTISING</span>
+                    </div>
                     <h2 className="text-5xl md:text-7xl font-serif font-bold mb-8 leading-tight max-w-5xl mx-auto">
                         Predictable Leads. <br />
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">Guaranteed ROI.</span>

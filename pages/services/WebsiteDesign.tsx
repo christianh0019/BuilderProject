@@ -22,8 +22,8 @@ const WebsiteDesign: React.FC = () => {
                 <div className="container mx-auto px-6 relative z-10">
                     <div className="max-w-5xl mx-auto text-center mb-20">
                         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-900/30 border border-purple-500/30 mb-8 backdrop-blur-sm">
-                            <span className="flex h-2 w-2 rounded-full bg-purple-400 animate-pulse"></span>
-                            <span className="text-sm font-medium text-purple-200 uppercase tracking-widest">For Custom Builders & Remodelers</span>
+                            <span className="flex h-2 w-2 rounded-full bg-green-400 animate-pulse"></span>
+                            <span className="text-sm font-medium text-purple-200 uppercase tracking-widest">WEBSITE DESIGN</span>
                         </div>
 
                         <h1 className="text-5xl md:text-7xl font-serif font-bold mb-8 leading-tight tracking-tight">

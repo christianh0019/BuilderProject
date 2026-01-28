@@ -142,7 +142,7 @@ const PipelineProgram: React.FC = () => {
                     <div className="max-w-7xl mx-auto text-center mb-16">
                         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-900/30 border border-purple-500/30 mb-8 backdrop-blur-sm">
                             <span className="flex h-2 w-2 rounded-full bg-green-400 animate-pulse"></span>
-                            <span className="text-sm font-medium text-purple-200 uppercase tracking-widest">Active Lead Generation</span>
+                            <span className="text-sm font-medium text-purple-200 uppercase tracking-widest">THE PIPELINE</span>
                         </div>
 
                         <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-bold mb-8 leading-tight tracking-tight">

@@ -19,9 +19,9 @@ const SalesProcesses: React.FC = () => {
 
                 <div className="container mx-auto px-6 relative z-10">
                     <div className="max-w-7xl mx-auto text-center mb-20">
-                        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-900/30 border border-blue-500/30 mb-8 backdrop-blur-sm">
-                            <span className="flex h-2 w-2 rounded-full bg-blue-400 animate-pulse"></span>
-                            <span className="text-sm font-medium text-blue-200 uppercase tracking-widest">Sales Pipeline Systems</span>
+                        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-900/30 border border-purple-500/30 mb-8 backdrop-blur-sm">
+                            <span className="flex h-2 w-2 rounded-full bg-green-400 animate-pulse"></span>
+                            <span className="text-sm font-medium text-purple-200 uppercase tracking-widest">SALES PROCESSES</span>
                         </div>
 
                         <h1 className="text-5xl md:text-7xl font-serif font-bold mb-8 leading-tight tracking-tight">
