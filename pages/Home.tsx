@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { Star, ArrowRight, Play, BookOpen, BarChart3, Youtube, ChevronRight, ChevronDown } from 'lucide-react';
 import SEO from '../components/SEO';
 
-const RevealOnScroll = ({ children, className = "", delay = 0 }: { children: React.ReactNode, className?: string, delay?: number }) => {
+const RevealOnScroll: React.FC<{ children: React.ReactNode, className?: string, delay?: number }> = ({ children, className = "", delay = 0 }) => {
   const [isVisible, setIsVisible] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 
@@ -93,18 +93,18 @@ const Home: React.FC = () => {
         {
           "@type": "WebSite",
           "name": "BuilderProject",
-          "url": "https://builderproject.com/",
+          "url": "https://site.builderproject.co/",
           "potentialAction": {
             "@type": "SearchAction",
-            "target": "https://builderproject.com/?s={search_term_string}",
+            "target": "https://site.builderproject.co/?s={search_term_string}",
             "query-input": "required name=search_term_string"
           }
         },
         {
           "@type": "Organization",
           "name": "BuilderProject",
-          "url": "https://builderproject.com",
-          "logo": "https://builderproject.com/images/logo_icon.png",
+          "url": "https://site.builderproject.co",
+          "logo": "https://site.builderproject.co/images/logo_icon.png",
           "sameAs": [
             "https://www.youtube.com/@builderprojectco",
             "https://www.facebook.com/builderproject",

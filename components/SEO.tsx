@@ -21,7 +21,7 @@ const SEO: React.FC<SEOProps> = ({
     ogImage = '/verso-logo.png', // Default image if none provided
     ogType = 'website',
 }) => {
-    const siteUrl = 'https://builderproject.co';
+    const siteUrl = 'https://site.builderproject.co';
     const fullCanonical = canonical ? (canonical.startsWith('http') ? canonical : `${siteUrl}${canonical}`) : undefined;
     const fullOgImage = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogImage}`;
 

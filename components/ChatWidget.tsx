@@ -209,7 +209,7 @@ const ChatWidget: React.FC = () => {
                             </button>
                         </form>
                         <div className="text-center mt-2">
-                            <a href="https://builderproject.co" target="_blank" rel="noreferrer" className="text-[10px] text-slate-400 font-medium hover:text-purple-500 transition-colors">
+                            <a href="https://site.builderproject.co" target="_blank" rel="noreferrer" className="text-[10px] text-slate-400 font-medium hover:text-purple-500 transition-colors">
                                 Powered by BuilderProject AI
                             </a>
                         </div>

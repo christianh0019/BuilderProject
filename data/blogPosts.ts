@@ -58,7 +58,7 @@ export const blogPosts: BlogPost[] = [
       <div class="bg-slate-900 text-white p-8 rounded-2xl my-10 text-center">
         <h3 class="text-2xl font-bold mb-4 font-serif">Free Marketing Audit</h3>
         <p class="text-slate-300 mb-6">We will audit your current marketing at no cost. We will assess messaging, traffic sources, conversion points, and follow-up. We will reveal exactly how much revenue you are leaving on the table.</p>
-        <a href="/#/contact" class="inline-block bg-white text-slate-900 font-bold px-8 py-3 rounded-full hover:bg-purple-50 transition-colors">Book Your Audit</a>
+        <a href="/contact" class="inline-block bg-white text-slate-900 font-bold px-8 py-3 rounded-full hover:bg-purple-50 transition-colors">Book Your Audit</a>
       </div>
     `
   },
@@ -109,7 +109,7 @@ export const blogPosts: BlogPost[] = [
       <div class="bg-slate-900 text-white p-8 rounded-2xl my-10 text-center">
         <h3 class="text-2xl font-bold mb-4 font-serif">Get Your Free Marketing Audit</h3>
         <p class="text-slate-300 mb-6">We will map where you are losing bids, how your online presence converts, and where AI content can deliver instant lift. Spots are limited because we run each audit personally.</p>
-        <a href="/#/contact" class="inline-block bg-white text-slate-900 font-bold px-8 py-3 rounded-full hover:bg-purple-50 transition-colors">Book Your Audit</a>
+        <a href="/contact" class="inline-block bg-white text-slate-900 font-bold px-8 py-3 rounded-full hover:bg-purple-50 transition-colors">Book Your Audit</a>
       </div>
     `
   },
@@ -150,7 +150,7 @@ export const blogPosts: BlogPost[] = [
       <div class="bg-slate-900 text-white p-8 rounded-2xl my-10 text-center">
         <h3 class="text-2xl font-bold mb-4 font-serif">Free Marketing Audit</h3>
         <p class="text-slate-300 mb-6">We will audit your current marketing systems—or lack thereof—and show you hidden opportunities. No strings attached.</p>
-        <a href="/#/contact" class="inline-block bg-white text-slate-900 font-bold px-8 py-3 rounded-full hover:bg-purple-50 transition-colors">Book Your Audit</a>
+        <a href="/contact" class="inline-block bg-white text-slate-900 font-bold px-8 py-3 rounded-full hover:bg-purple-50 transition-colors">Book Your Audit</a>
       </div>
     `
   }
@@ -167,7 +167,7 @@ export const blogPosts: BlogPost[] = [
       <div class="bg-slate-900 text-white p-8 rounded-2xl my-10 text-center">
         <h3 class="text-2xl font-bold mb-4 font-serif">Free Marketing Audit</h3>
         <p class="text-slate-300 mb-6">We will audit your current marketing systems—or lack thereof—and show you hidden opportunities. No strings attached.</p>
-        <a href="/#/contact" class="inline-block bg-white text-slate-900 font-bold px-8 py-3 rounded-full hover:bg-purple-50 transition-colors">Book Your Audit</a>
+        <a href="/contact" class="inline-block bg-white text-slate-900 font-bold px-8 py-3 rounded-full hover:bg-purple-50 transition-colors">Book Your Audit</a>
       </div>
         `
   },
@@ -206,7 +206,7 @@ export const blogPosts: BlogPost[] = [
       <div class="bg-slate-900 text-white p-8 rounded-2xl my-10 text-center">
         <h3 class="text-2xl font-bold mb-4 font-serif">Free Marketing Audit</h3>
         <p class="text-slate-300 mb-6">We will audit your current marketing systems—or lack thereof—and show you hidden opportunities. No strings attached.</p>
-        <a href="/#/contact" class="inline-block bg-white text-slate-900 font-bold px-8 py-3 rounded-full hover:bg-purple-50 transition-colors">Book Your Audit</a>
+        <a href="/contact" class="inline-block bg-white text-slate-900 font-bold px-8 py-3 rounded-full hover:bg-purple-50 transition-colors">Book Your Audit</a>
       </div>
         `
   }
@@ -245,7 +245,7 @@ export const blogPosts: BlogPost[] = [
       <div class="bg-slate-900 text-white p-8 rounded-2xl my-10 text-center">
         <h3 class="text-2xl font-bold mb-4 font-serif">Free Marketing Audit</h3>
         <p class="text-slate-300 mb-6">We will audit your current marketing systems—or lack thereof—and show you hidden opportunities. No strings attached.</p>
-        <a href="/#/contact" class="inline-block bg-white text-slate-900 font-bold px-8 py-3 rounded-full hover:bg-purple-50 transition-colors">Book Your Audit</a>
+        <a href="/contact" class="inline-block bg-white text-slate-900 font-bold px-8 py-3 rounded-full hover:bg-purple-50 transition-colors">Book Your Audit</a>
       </div>
         `
   },
@@ -346,11 +346,11 @@ export const blogPosts: BlogPost[] = [
       <div class="bg-slate-900 text-white p-8 rounded-2xl my-10 text-center">
         <h3 class="text-2xl font-bold mb-4 font-serif">Let Us Build Your Case Studies</h3>
         <p class="text-slate-300 mb-6">We build these case study pages as part of our overall marketing system. We handle the interviews, the copywriting, and the design. Schedule a call to see how we can turn your projects into your best sales tool.</p>
-        <a href="/#/contact" class="inline-block bg-white text-slate-900 font-bold px-8 py-3 rounded-full hover:bg-purple-50 transition-colors">Book Your Strategy Call</a>
+        <a href="/contact" class="inline-block bg-white text-slate-900 font-bold px-8 py-3 rounded-full hover:bg-purple-50 transition-colors">Book Your Strategy Call</a>
       </div>
     `
   }
-,  {
+  , {
     id: '4',
     slug: 'ranking-number-one-google-no-longer-works',
     title: "Ranking #1 on Google No Longer Works... Here's Why [Home Builder/ Remodeler]",
