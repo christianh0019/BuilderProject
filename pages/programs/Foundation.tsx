@@ -23,7 +23,7 @@ const FoundationProgram: React.FC = () => {
     const SectionCTA = () => (
         <button
             onClick={() => setIsBookingModalOpen(true)}
-            className="mt-8 bg-slate-900 text-white font-bold py-3 px-8 rounded-xl hover:bg-gradient-to-r hover:from-blue-700 hover:to-purple-600 transition-all duration-300 shadow-lg shadow-blue-500/20 flex items-center gap-2 group text-sm"
+            className="mt-8 bg-slate-900 text-white font-bold py-3 px-8 rounded-xl hover:bg-gradient-to-r hover:from-purple-700 hover:to-pink-600 transition-all duration-300 shadow-lg shadow-purple-500/20 flex items-center gap-2 group text-sm"
         >
             Get Started
             <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
@@ -35,19 +35,19 @@ const FoundationProgram: React.FC = () => {
             {/* 1. Hero Section */}
             <section className="relative bg-[#0F172A] text-white pt-32 pb-32 overflow-hidden">
                 {/* Background Effects */}
-                <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-blue-900/20 rounded-full blur-[120px] pointer-events-none mix-blend-screen animate-pulse"></div>
-                <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-purple-900/10 rounded-full blur-[100px] pointer-events-none mix-blend-screen"></div>
+                <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-purple-900/20 rounded-full blur-[120px] pointer-events-none mix-blend-screen animate-pulse"></div>
+                <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-blue-900/10 rounded-full blur-[100px] pointer-events-none mix-blend-screen"></div>
 
                 <div className="container mx-auto px-6 relative z-10">
                     <div className="max-w-7xl mx-auto text-center mb-20">
-                        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-900/30 border border-blue-500/30 mb-8 backdrop-blur-sm">
-                            <span className="flex h-2 w-2 rounded-full bg-blue-400 animate-pulse"></span>
-                            <span className="text-sm font-medium text-blue-200 uppercase tracking-widest">Digital Infrastructure</span>
+                        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-900/30 border border-purple-500/30 mb-8 backdrop-blur-sm">
+                            <span className="flex h-2 w-2 rounded-full bg-purple-400 animate-pulse"></span>
+                            <span className="text-sm font-medium text-purple-200 uppercase tracking-widest">Digital Infrastructure</span>
                         </div>
 
                         <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-bold mb-8 leading-tight tracking-tight">
                             Build Your Marketing <br />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-blue-400">Foundation Right. Once.</span> <br />
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400">Foundation Right. Once.</span> <br />
                             Then Scale.
                         </h1>
 
@@ -56,7 +56,7 @@ const FoundationProgram: React.FC = () => {
                         </p>
 
                         <div className="flex flex-col sm:flex-row gap-5 justify-center items-center">
-                            <button onClick={() => setIsBookingModalOpen(true)} className="group relative inline-flex items-center justify-center px-8 py-4 text-base font-bold text-white transition-all duration-200 bg-blue-600 font-pj rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-600 hover:bg-blue-700 shadow-[0_0_20px_rgba(37,99,235,0.4)] hover:shadow-[0_0_30px_rgba(37,99,235,0.6)]">
+                            <button onClick={() => setIsBookingModalOpen(true)} className="group relative inline-flex items-center justify-center px-8 py-4 text-base font-bold text-white transition-all duration-200 bg-purple-600 font-pj rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-600 hover:bg-purple-700 shadow-[0_0_20px_rgba(168,85,247,0.4)] hover:shadow-[0_0_30px_rgba(168,85,247,0.6)]">
                                 Get Started
                                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                             </button>
@@ -89,7 +89,7 @@ const FoundationProgram: React.FC = () => {
                                 {/* Dashboard Header */}
                                 <div className="flex items-center justify-between mb-6 pb-4 border-b border-slate-800">
                                     <div className="flex items-center gap-3">
-                                        <div className="w-8 h-8 rounded bg-blue-600 flex items-center justify-center text-white font-bold">BP</div>
+                                        <div className="w-8 h-8 rounded bg-purple-600 flex items-center justify-center text-white font-bold">BP</div>
                                         <span className="text-white font-bold">System Status</span>
                                     </div>
                                     <div className="flex items-center gap-2 text-emerald-400 text-xs font-bold bg-emerald-900/30 px-2 py-1 rounded">
@@ -113,7 +113,7 @@ const FoundationProgram: React.FC = () => {
                                 <div className="space-y-3">
                                     <div className="flex items-center justify-between bg-slate-800/50 p-3 rounded-lg border border-slate-700/50">
                                         <div className="flex items-center gap-3">
-                                            <Globe size={16} className="text-blue-400" />
+                                            <Globe size={16} className="text-purple-400" />
                                             <span className="text-slate-300 text-sm">Website</span>
                                         </div>
                                         <CheckCircle size={16} className="text-emerald-500" />
@@ -127,7 +127,7 @@ const FoundationProgram: React.FC = () => {
                                     </div>
                                     <div className="flex items-center justify-between bg-slate-800/50 p-3 rounded-lg border border-slate-700/50">
                                         <div className="flex items-center gap-3">
-                                            <Users size={16} className="text-orange-400" />
+                                            <Users size={16} className="text-purple-400" />
                                             <span className="text-slate-300 text-sm">CRM & Automation</span>
                                         </div>
                                         <CheckCircle size={16} className="text-emerald-500" />
@@ -149,7 +149,7 @@ const FoundationProgram: React.FC = () => {
 
                         {/* Path 1 */}
                         <div className="md:pr-12 text-center md:text-right">
-                            <div className="inline-block p-3 bg-blue-50 text-blue-600 rounded-2xl mb-6">
+                            <div className="inline-block p-3 bg-purple-50 text-purple-600 rounded-2xl mb-6">
                                 <TrendingUp size={32} />
                             </div>
                             <h3 className="text-2xl font-bold text-slate-900 mb-4">Starting a New Company</h3>
@@ -579,11 +579,11 @@ const FoundationProgram: React.FC = () => {
                             { week: "Week 3", title: "Optimization & Launch", desc: "Google optimization, technical SEO, training call, and live launch." }
                         ].map((item, i) => (
                             <div key={i} className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
-                                <div className="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-slate-50 group-[.is-active]:bg-blue-600 group-[.is-active]:text-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 text-slate-500 font-bold z-10">
+                                <div className="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-slate-50 group-[.is-active]:bg-purple-600 group-[.is-active]:text-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 text-slate-500 font-bold z-10">
                                     {i + 1}
                                 </div>
                                 <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white p-6 rounded-xl border border-slate-100 shadow-sm">
-                                    <div className="font-bold text-blue-600 text-sm mb-1 uppercase tracking-wider">{item.week}</div>
+                                    <div className="font-bold text-purple-600 text-sm mb-1 uppercase tracking-wider">{item.week}</div>
                                     <div className="font-bold text-slate-900 text-lg mb-2">{item.title}</div>
                                     <p className="text-slate-500 text-sm">{item.desc}</p>
                                 </div>
@@ -633,7 +633,7 @@ const FoundationProgram: React.FC = () => {
                         Whether you're starting fresh or fixing what's broken, your foundation determines everything that comes after.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <button onClick={() => setIsBookingModalOpen(true)} className="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full font-bold transition-all hover:scale-105 shadow-[0_0_20px_rgba(37,99,235,0.3)]">
+                        <button onClick={() => setIsBookingModalOpen(true)} className="inline-flex items-center bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-full font-bold transition-all hover:scale-105 shadow-[0_0_20px_rgba(168,85,247,0.3)]">
                             Get Started <ArrowRight className="ml-2" />
                         </button>
                     </div>
