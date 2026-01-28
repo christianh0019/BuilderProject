@@ -14,10 +14,10 @@ const FunnelDevelopment: React.FC = () => {
     return (
         <div className="pt-20">
             <SEO
-                title="Lead Capture Funnels for Home Builders | BuilderProject"
-                description="Convert high-net-worth traffic into appointments with sophisticated lead capture funnels designed for custom builders."
+                title="Funnels for Custom Home Builders & Remodelers | BuilderProject"
+                description="Convert traffic into contracts with high-converting lead magnet and qualification funnels designed for custom home builders and remodelers. We build sophisticated lead capture systems that nurture high-end prospects and drive them toward booking a consultation."
                 canonical="/services/funnel-development"
-                keywords="construction funnels, lead capture for builders, real estate marketing funnels"
+                keywords="sales funnels for builders, remodeling marketing funnels, lead capture for home builders, construction sales funnels, lead magnets"
             />
             {/* Hero Section */}
             <section className="relative bg-[#0F172A] text-white pt-32 pb-32 overflow-hidden">

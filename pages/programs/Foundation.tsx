@@ -37,10 +37,10 @@ const FoundationProgram: React.FC = () => {
     return (
         <div className="pt-20">
             <SEO
-                title="Marketing Foundation for Custom Home Builders | BuilderProject"
-                description="Build your digital foundation in 3 weeks. Complete website, branding, and CRM setup for custom home builders."
+                title="Marketing Foundation for Custom Builders & Remodelers | BuilderProject"
+                description="Build your digital presence in just 3 weeks. Our Marketing Foundation package provides custom home builders and remodelers with professional branding, a conversion-ready website, and a complete CRM setup to start generating business immediately."
                 canonical="/programs/foundation"
-                keywords="builder website design, construction branding, crm for builders, marketing foundation"
+                keywords="marketing for custom home builders, marketing for remodelers, builder branding, remodeler marketing strategy"
             />
             {/* 1. Hero Section */}
             <section className="relative bg-[#0F172A] text-white pt-32 pb-32 overflow-hidden">

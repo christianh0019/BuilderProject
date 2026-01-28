@@ -10,10 +10,10 @@ const ContentMarketing: React.FC = () => {
     return (
         <article className="pt-20 font-sans antialiased text-slate-900 bg-white">
             <SEO
-                title="Content Marketing for Construction | BuilderProject"
-                description="Build authority with video and written content. We plan, edit, and distribute content that attracts your ideal clients."
+                title="Content Marketing for Custom Builders & Remodelers | BuilderProject"
+                description="Establish yourself as the market leader. We create expert video and written content for custom home builders and remodelers that builds authority, showcases your past projects, and educates homeowners on why they should choose you."
                 canonical="/services/content-marketing"
-                keywords="construction content marketing, builder social media, video production for builders"
+                keywords="content marketing for home builders, video marketing for remodelers, social media for custom builders, construction content strategy"
             />
             {/* SEO Hidden H1 for Structure */}
             <h1 className="sr-only">Content Marketing & Video Production for Custom Home Builders</h1>

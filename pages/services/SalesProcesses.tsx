@@ -12,10 +12,10 @@ const SalesProcesses: React.FC = () => {
     return (
         <div className="pt-20">
             <SEO
-                title="Sales Process Consulting for Builders | BuilderProject"
-                description="Optimize your sales cycle. From first call to signed contract, we structure your process to close larger deals."
+                title="Sales Processes for Custom Builders & Remodelers | BuilderProject"
+                description="Optimize your sales cycle from the first call to the final contract. We help custom home builders and remodelers structure their sales process to close larger deals, improve client communication, and secure higher margins on every project."
                 canonical="/services/sales-processes"
-                keywords="construction sales training, builder sales process, closing custom homes"
+                keywords="sales processes for custom builders, sales system for remodelers, construction sales process, closing custom homes"
             />
             {/* Hero Section */}
             <section className="relative bg-[#0F172A] text-white pt-32 pb-32 overflow-hidden">

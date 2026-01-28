@@ -134,10 +134,10 @@ const PipelineProgram: React.FC = () => {
     return (
         <div className="pt-20 font-sans text-slate-900 selection:bg-purple-200 selection:text-purple-900">
             <SEO
-                title="Automated Lead Pipeline for Builders | BuilderProject"
-                description="Predictable lead generation system for custom builders. Fill your calendar with qualified homeowner meetings."
+                title="Lead Generation for Custom Builders & Remodelers | BuilderProject"
+                description="Stop chasing unqualified leads. Our Automated Lead Pipeline attracts exclusive, high-net-worth homeowners specifically for custom home builders and remodelers. We help you fill your calendar with ready-to-buy clients and eliminate tire-kickers."
                 canonical="/programs/pipeline"
-                keywords="lead generation for builders, construction sales pipeline, builder crm automation"
+                keywords="lead generation for custom home builders, leads for remodelers, construction lead gen, get clients for home builders"
             />
             {/* 1. Hero Section (Centered Match) */}
             <section className="relative bg-[#0F172A] text-white pt-32 pb-32 overflow-hidden">

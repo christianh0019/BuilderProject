@@ -19,10 +19,10 @@ const PartnerProgram: React.FC = () => {
     return (
         <div className="pt-20">
             <SEO
-                title="Growth Partner Program for Builders | BuilderProject"
-                description="We become your entire marketing department. Scale your custom home building business without managing vendors."
+                title="Marketing Department for Custom Builders & Remodelers | BuilderProject"
+                description="Scale your custom home building or remodeling business without the overhead. We act as your Outsourced Marketing Department, handling all marketing strategy and vendor management so you can focus on building luxury homes and managing high-end renovations."
                 canonical="/programs/partner"
-                keywords="fractional cmo for builders, marketing partner program, construction marketing agency"
+                keywords="marketing for builders, marketing agency for remodelers, outsourced marketing director, custom builder growth partner"
             />
             {/* 1. Hero Section */}
             <section className="relative bg-[#0F172A] text-white pt-32 pb-32 overflow-hidden">

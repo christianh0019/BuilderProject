@@ -10,10 +10,10 @@ const PaidAdvertising: React.FC = () => {
     return (
         <article className="pt-20 font-sans antialiased text-slate-900 bg-white">
             <SEO
-                title="PPC & Paid Ads for Custom Builders | BuilderProject"
-                description="Targeted Facebook & Google ads for custom home builders. Generate exclusive leads with high intent."
+                title="Facebook & Google Ads for Custom Builders & Remodelers | BuilderProject"
+                description="Generate immediate leads with targeted Google and Facebook ad campaigns. We specialize in paid advertising for custom home builders and remodelers, ensuring your budget targets only high-intent homeowners looking for luxury builds and major renovations."
                 canonical="/services/paid-advertising"
-                keywords="construction ppc, builder facebook ads, lead generation for home builders"
+                keywords="ppc for custom home builders, google ads for remodelers, facebook ads for builders, paid search for construction"
             />
             {/* SEO Hidden H1 */}
             <h1 className="sr-only">Paid Advertising, PPC & Lead Generation for Custom Home Builders</h1>

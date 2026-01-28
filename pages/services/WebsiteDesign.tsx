@@ -14,10 +14,10 @@ const WebsiteDesign: React.FC = () => {
     return (
         <article className="pt-20 font-sans antialiased text-slate-900 bg-white">
             <SEO
-                title="Custom Home Builder Website Design | BuilderProject"
-                description="High-performance websites that convert. Show your portfolio and build trust with luxury home buyers."
+                title="Website Design for Custom Home Builders & Remodelers | BuilderProject"
+                description="We design high-performance websites specifically for custom home builders and remodelers. Showcase your luxury projects with a portfolio-focused site that builds trust, highlights your craftsmanship, and converts visitors into leads."
                 canonical="/services/website-design"
-                keywords="builder website design, construction web development, luxury home builder marketing"
+                keywords="custom home builder website design, remodeler web design, website for home builders, construction website development"
             />
             {/* SEO Hidden H1 */}
             <section className="relative bg-[#0F172A] text-white pt-32 pb-32 overflow-hidden">

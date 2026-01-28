@@ -14,10 +14,10 @@ const CRMDeployment: React.FC = () => {
     return (
         <div className="pt-20">
             <SEO
-                title="CRM & Sales Automation for Builders | BuilderProject"
-                description="Custom HighLevel setup for builders. Automate follow-ups, manage leads, and close more custom home projects."
+                title="CRM for Custom Home Builders & Remodelers | BuilderProject"
+                description="Organize your marketing with a HighLevel CRM setup tailored for custom home builders and remodelers. Automate your follow-up emails, track every bid, and manage your pipeline to ensure you never lose a custom home or renovation project to neglect."
                 canonical="/services/crm-deployment"
-                keywords="builder crm, construction sales automation, gohighlevel for builders"
+                keywords="crm for custom home builders, crm for remodelers, sales automation for builders, gohighlevel for construction"
             />
             {/* Hero Section */}
             <section className="relative bg-[#0F172A] text-white pt-32 pb-32 overflow-hidden">
