@@ -190,9 +190,11 @@ const CRMDeployment: React.FC = () => {
                             <div className="order-2 md:order-1">
                                 <div className="bg-slate-50 rounded-2xl p-2 border border-slate-200 shadow-lg -rotate-1 hover:rotate-0 transition-transform duration-500">
                                     <div className="aspect-[4/3] bg-white rounded-xl overflow-hidden relative">
-                                        <div className="absolute inset-0 flex items-center justify-center text-slate-300">
-                                            <Users size={64} />
-                                        </div>
+                                        <img
+                                            src="/images/crm/lead-capture.png"
+                                            alt="Lead Capture Dashboard"
+                                            className="w-full h-full object-cover"
+                                        />
                                     </div>
                                 </div>
                             </div>
@@ -202,9 +204,6 @@ const CRMDeployment: React.FC = () => {
                                 <p className="text-slate-600 text-lg leading-relaxed mb-6">
                                     All leads in one place. Tagged with source, qualification status, and stage in your pipeline. Never lose a sticky note again.
                                 </p>
-                                <Link to="#" className="text-purple-600 font-bold hover:text-purple-800 flex items-center gap-2">
-                                    View Example <ArrowRight size={16} />
-                                </Link>
                             </div>
                         </div>
 
@@ -216,16 +215,15 @@ const CRMDeployment: React.FC = () => {
                                 <p className="text-slate-600 text-lg leading-relaxed mb-6">
                                     6-month email campaign that goes out automatically. Educational content, project showcases, moving them toward booking.
                                 </p>
-                                <Link to="#" className="text-purple-600 font-bold hover:text-purple-800 flex items-center gap-2">
-                                    View Example <ArrowRight size={16} />
-                                </Link>
                             </div>
                             <div>
                                 <div className="bg-slate-50 rounded-2xl p-2 border border-slate-200 shadow-lg rotate-1 hover:rotate-0 transition-transform duration-500">
                                     <div className="aspect-[4/3] bg-white rounded-xl overflow-hidden relative">
-                                        <div className="absolute inset-0 flex items-center justify-center text-slate-300">
-                                            <Mail size={64} />
-                                        </div>
+                                        <img
+                                            src="/images/crm/nurture-sequence.png"
+                                            alt="Automated Nurture Timeline"
+                                            className="w-full h-full object-cover"
+                                        />
                                     </div>
                                 </div>
                             </div>
@@ -236,9 +234,11 @@ const CRMDeployment: React.FC = () => {
                             <div className="order-2 md:order-1">
                                 <div className="bg-slate-50 rounded-2xl p-2 border border-slate-200 shadow-lg -rotate-1 hover:rotate-0 transition-transform duration-500">
                                     <div className="aspect-[4/3] bg-white rounded-xl overflow-hidden relative">
-                                        <div className="absolute inset-0 flex items-center justify-center text-slate-300">
-                                            <TrendingUp size={64} />
-                                        </div>
+                                        <img
+                                            src="/images/crm/pipeline-kanban.png"
+                                            alt="Pipeline Visual Board"
+                                            className="w-full h-full object-cover"
+                                        />
                                     </div>
                                 </div>
                             </div>
@@ -248,9 +248,6 @@ const CRMDeployment: React.FC = () => {
                                 <p className="text-slate-600 text-lg leading-relaxed mb-6">
                                     See every deal at a glance. What stage they're in, what they're worth, what needs to happen next. No more guessing game on Monday morning.
                                 </p>
-                                <Link to="#" className="text-green-600 font-bold hover:text-green-800 flex items-center gap-2">
-                                    View Example <ArrowRight size={16} />
-                                </Link>
                             </div>
                         </div>
                     </div>
