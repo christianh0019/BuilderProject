@@ -395,20 +395,65 @@ const CRMDeployment: React.FC = () => {
             </section>
 
             {/* Funnel + CRM Synergy */}
-            <section className="py-24 bg-purple-900 text-white text-center relative overflow-hidden">
+            <section className="py-24 bg-purple-900 text-white relative overflow-hidden">
                 <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
-                <div className="container mx-auto px-6 max-w-3xl relative z-10">
-                    <h2 className="text-3xl md:text-4xl font-serif font-bold mb-6">Why Funnels + CRM Work Together</h2>
-                    <p className="text-xl text-purple-200 mb-10 leading-relaxed">
-                        Your funnels capture the data. Your CRM manages the relationship.
-                    </p>
-                    <div className="bg-white/10 p-8 rounded-2xl backdrop-blur-sm border border-white/10 text-left">
-                        <p className="mb-6 text-slate-200 text-lg">
-                            When someone fills out your qualification funnel, all their answers flow directly into your CRM. <strong className="text-white">Budget, timeline, land status, project scope—everything tagged automatically.</strong>
+                <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-purple-900 via-slate-900 to-purple-900 opacity-90"></div>
+
+                <div className="container mx-auto px-6 relative z-10">
+                    <div className="text-center mb-20">
+                        <h2 className="text-3xl md:text-5xl font-serif font-bold mb-6">Why Funnels + CRM Work Together</h2>
+                        <p className="text-xl text-purple-200 mb-10 leading-relaxed max-w-3xl mx-auto">
+                            Your funnels capture the data. Your CRM manages the relationship. It's a seamless handoff that happens automatically.
                         </p>
-                        <p className="text-slate-200 text-lg">
-                            Your first call is informed, not blind. And your follow-up is systematic, not random. That's how you go from chaos to control.
-                        </p>
+                    </div>
+
+                    <div className="grid lg:grid-cols-3 gap-8 items-center max-w-6xl mx-auto">
+                        {/* The Funnel Side */}
+                        <div className="bg-white/5 backdrop-blur-md rounded-2xl p-8 border border-white/10 relative group hover:bg-white/10 transition-colors">
+                            <div className="absolute -top-6 -left-6 w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center shadow-lg shadow-purple-500/50">
+                                <Filter className="text-white" size={24} />
+                            </div>
+                            <h3 className="text-2xl font-bold mb-4">The Funnel</h3>
+                            <p className="text-purple-200 mb-6 text-sm">Captures qualification data from every lead.</p>
+                            <div className="space-y-3">
+                                {["Budget Range", "Timeline", "Land Status", "Design Style", "Project Type"].map((item, i) => (
+                                    <div key={i} className="flex items-center gap-3 bg-white/5 rounded-lg p-3 text-sm border border-white/5">
+                                        <div className="w-2 h-2 rounded-full bg-purple-400"></div>
+                                        {item}
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+
+                        {/* The Connector */}
+                        <div className="hidden lg:flex flex-col items-center justify-center relative">
+                            <div className="absolute top-1/2 left-0 w-full h-1 bg-gradient-to-r from-purple-500/20 via-purple-400 to-purple-500/20"></div>
+                            <div className="w-16 h-16 rounded-full bg-purple-600 flex items-center justify-center shadow-[0_0_30px_rgba(168,85,247,0.5)] z-10 animate-pulse">
+                                <ArrowRight className="text-white" size={32} />
+                            </div>
+                            <div className="mt-8 text-center">
+                                <span className="text-xs font-bold uppercase tracking-widest text-purple-300 bg-purple-900/50 px-3 py-1 rounded-full border border-purple-500/30">
+                                    Instant Sync
+                                </span>
+                            </div>
+                        </div>
+
+                        {/* The CRM Side */}
+                        <div className="bg-white/5 backdrop-blur-md rounded-2xl p-8 border border-white/10 relative group hover:bg-white/10 transition-colors">
+                            <div className="absolute -top-6 -right-6 w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center shadow-lg shadow-blue-500/50">
+                                <Database className="text-white" size={24} />
+                            </div>
+                            <h3 className="text-2xl font-bold mb-4">The CRM</h3>
+                            <p className="text-blue-200 mb-6 text-sm">Organizes data & triggers next steps.</p>
+                            <div className="space-y-3">
+                                {["Auto-Tag Profile", "Trigger Nurture", "Assign Task", "Score Lead", "Notify Team"].map((item, i) => (
+                                    <div key={i} className="flex items-center gap-3 bg-white/5 rounded-lg p-3 text-sm border border-white/5">
+                                        <CheckCircle className="text-blue-400" size={14} />
+                                        {item}
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
