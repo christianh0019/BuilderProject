@@ -273,29 +273,51 @@ const PipelineProgram: React.FC = () => {
                 </div>
             </section>
 
-            {/* 5. What's Included */}
-            <section className="py-24 bg-slate-900 text-white">
-                <div className="container mx-auto px-6 max-w-5xl">
-                    <h2 className="text-3xl md:text-4xl font-serif font-bold mb-12 text-center">Everything You Need To Grow</h2>
-                    <div className="grid md:grid-cols-2 gap-x-12 gap-y-8">
-                        {[
-                            { title: "Google & FB Ads Management", desc: "We build, test, and optimize campaigns daily. You never log into an ad manager." },
-                            { title: "\"Tire-Kicker\" Filtering", desc: " Qualification system that only lets serious prospects through. Filters on budget and location." },
-                            { title: "Weekly Performance Reports", desc: "Know exactly how many leads, cost per lead, and ROI. No marketing jargon." },
-                            { title: "CRM Integration", desc: "Every lead flows into your pipeline automatically, tagged by source." },
-                            { title: "Dedicated Account Manager", desc: "One point of contact. Text or call when you need something." },
-                            { title: "Calendar Automation", desc: "Leads book themselves. Reminders go out automatically to reduce no-shows." }
-                        ].map((item, i) => (
-                            <div key={i} className="flex gap-4">
-                                <div className="mt-1 bg-purple-900/50 p-1.5 rounded-full text-purple-400 h-fit">
-                                    <CheckCircle size={20} />
-                                </div>
-                                <div>
-                                    <h3 className="font-bold text-xl mb-2">{item.title}</h3>
-                                    <p className="text-slate-400 leading-relaxed text-sm">{item.desc}</p>
-                                </div>
-                            </div>
-                        ))}
+            {/* 5. What's Included (Card Layout like Partner) */}
+            <section className="py-24 bg-slate-50">
+                <div className="container mx-auto px-6 max-w-6xl">
+                    <div className="text-center mb-16">
+                        <h2 className="text-3xl md:text-5xl font-serif font-bold text-slate-900 mb-6">Everything You Need To Grow</h2>
+                        <p className="text-xl text-slate-500">A complete lead generation department. Managed for you.</p>
+                    </div>
+
+                    <div className="grid md:grid-cols-3 gap-8">
+                        {/* Ads Management */}
+                        <div className="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all">
+                            <div className="text-sm font-bold text-purple-600 uppercase tracking-widest mb-4">Traffic Engine</div>
+                            <h3 className="text-2xl font-bold text-slate-900 mb-4">Ads Managed Daily</h3>
+                            <p className="text-slate-600 mb-6 text-sm">We build, test, and optimize your campaigns on Google and Facebook. You never have to log into an ad manager again.</p>
+                            <ul className="space-y-3">
+                                <li className="flex gap-2 text-slate-600 text-sm"><CheckCircle size={16} className="text-green-500 mt-0.5" /> Google Search (High Intent)</li>
+                                <li className="flex gap-2 text-slate-600 text-sm"><CheckCircle size={16} className="text-green-500 mt-0.5" /> Facebook/Instagram (Visual)</li>
+                                <li className="flex gap-2 text-slate-600 text-sm"><CheckCircle size={16} className="text-green-500 mt-0.5" /> Retargeting Campaigns</li>
+                            </ul>
+                        </div>
+
+                        {/* System (Central) */}
+                        <div className="bg-white p-8 rounded-2xl border border-purple-200 shadow-lg relative transform md:-translate-y-4">
+                            <div className="absolute top-0 right-0 bg-purple-600 text-white text-xs font-bold px-3 py-1 rounded-bl-lg rounded-tr-lg">Core Feature</div>
+                            <div className="text-sm font-bold text-purple-600 uppercase tracking-widest mb-4">Lead Filtering</div>
+                            <h3 className="text-2xl font-bold text-slate-900 mb-4">The "Gatekeeper"</h3>
+                            <p className="text-slate-600 mb-6 text-sm">Our system acts as your filter. We ask the awkward questions (Budget, Land, Timeline) before they ever reach your calendar.</p>
+                            <ul className="space-y-3">
+                                <li className="flex gap-2 text-slate-600 text-sm"><CheckCircle size={16} className="text-green-500 mt-0.5" /> Budget Qualification</li>
+                                <li className="flex gap-2 text-slate-600 text-sm"><CheckCircle size={16} className="text-green-500 mt-0.5" /> Location Verification</li>
+                                <li className="flex gap-2 text-slate-600 text-sm"><CheckCircle size={16} className="text-green-500 mt-0.5" /> Timeline Confirmation</li>
+                            </ul>
+                        </div>
+
+                        {/* Reporting */}
+                        <div className="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all">
+                            <div className="text-sm font-bold text-purple-600 uppercase tracking-widest mb-4">Visibility</div>
+                            <h3 className="text-2xl font-bold text-slate-900 mb-4">Weekly Reporting</h3>
+                            <p className="text-slate-600 mb-6 text-sm">Know exactly what's happening. No marketing jargon, just clear numbers on leads, cost, and booked appointments.</p>
+                            <ul className="space-y-3">
+                                <li className="flex gap-2 text-slate-600 text-sm"><CheckCircle size={16} className="text-green-500 mt-0.5" /> ROI Dashboard</li>
+                                <li className="flex gap-2 text-slate-600 text-sm"><CheckCircle size={16} className="text-green-500 mt-0.5" /> Dedicated Account Manager</li>
+                                <li className="flex gap-2 text-slate-600 text-sm"><CheckCircle size={16} className="text-green-500 mt-0.5" /> CRM Integration</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -371,19 +393,21 @@ const PipelineProgram: React.FC = () => {
             {/* 8. Real Results */}
             <section className="py-24 bg-white">
                 <div className="container mx-auto px-6 max-w-6xl">
-                    <h2 className="text-3xl md:text-5xl font-serif font-bold text-center text-slate-900 mb-16">Real Results From Real Builders</h2>
+                    <div className="text-center mb-16">
+                        <h2 className="text-3xl md:text-5xl font-serif font-bold text-slate-900 mb-6">Real Results From Real Builders</h2>
+                    </div>
                     <div className="grid md:grid-cols-3 gap-8">
                         {[
                             { name: "Eagle Rock Custom Homes", spend: "$5.5k Spend", result: "$3.2M Pipeline", time: "90 Days" },
                             { name: "Schwanz Custom Homes", spend: "$6k Spend", result: "$680k Closed", time: "Year 1" },
                             { name: "Homestead Builders", spend: "$8k Spend", result: "$2.5M Closed", time: "6 Months" }
                         ].map((stat, i) => (
-                            <div key={i} className="text-center p-8 border border-slate-100 rounded-2xl hover:shadow-xl transition-shadow bg-slate-50">
-                                <h3 className="font-bold text-slate-900 mb-2">{stat.name}</h3>
-                                <div className="text-sm text-slate-500 mb-6">{stat.time}</div>
-                                <div className="space-y-2">
-                                    <div className="bg-red-50 text-red-600 py-1 px-3 rounded-full inline-block text-sm font-bold mb-2">{stat.spend}</div>
-                                    <div className="text-3xl font-bold text-slate-900 block">→ {stat.result}</div>
+                            <div key={i} className="text-center p-8 border border-slate-100 rounded-2xl hover:shadow-xl transition-shadow bg-slate-50 flex flex-col justify-center min-h-[300px]">
+                                <h3 className="font-bold text-slate-900 mb-2 text-xl">{stat.name}</h3>
+                                <div className="text-sm text-slate-500 mb-8">{stat.time}</div>
+                                <div className="space-y-4">
+                                    <div className="bg-red-50 text-red-600 py-1.5 px-4 rounded-full inline-block text-sm font-bold border border-red-100">{stat.spend}</div>
+                                    <div className="text-4xl font-bold text-slate-900 block tracking-tight">{stat.result}</div>
                                 </div>
                             </div>
                         ))}
@@ -391,56 +415,50 @@ const PipelineProgram: React.FC = () => {
                 </div>
             </section>
 
-            {/* 9. Timeline */}
-            <section className="py-24 bg-slate-900 text-white">
-                <div className="container mx-auto px-6 max-w-4xl text-center">
-                    <h2 className="text-3xl md:text-4xl font-serif font-bold mb-6">When Will You See Results?</h2>
-                    <p className="text-lg text-slate-400 mb-12 max-w-2xl mx-auto">
-                        This isn't a get-rich-quick scheme. It's building a predictable system. Here is the honest timeline:
-                    </p>
+            {/* 9. Timeline (Roadmap Style) */}
+            <section className="py-24 bg-white border-t border-slate-100">
+                <div className="container mx-auto px-6 max-w-5xl">
+                    <div className="text-center mb-16">
+                        <h2 className="text-3xl md:text-5xl font-serif font-bold text-slate-900 mb-6">When Will You See Results?</h2>
+                        <p className="text-xl text-slate-500">This isn't a get-rich-quick scheme. It's building a predictable system.</p>
+                    </div>
 
-                    <div className="space-y-6 text-left max-w-2xl mx-auto">
-                        <div className="flex gap-4">
-                            <div className="w-16 text-right font-bold text-purple-400 shrink-0">Wk 1-2</div>
-                            <div>
-                                <div className="font-bold text-white mb-1">Leads Start Flowing</div>
-                                <p className="text-slate-400 text-sm">You start getting notifications. 10-20 leads/mo depending on budget.</p>
+                    <div className="space-y-8">
+                        {[
+                            { month: "Weeks 1-2", title: "Launch & Leads", desc: "Ads go live. You start getting notifications. 10-20 qualified leads/mo begin flowing in." },
+                            { month: "Months 1-3", title: "Pipeline Building", desc: "You're taking consultations and sending estimates. Your CRM pipeline is visually filling up with opportunities." },
+                            { month: "Months 6-12", title: "Closing & ROI", desc: "Deals mature and close. Revenue hits the bank. The system pays for its entire year cost 5-10x over." }
+                        ].map((phase, i) => (
+                            <div key={i} className="flex flex-col md:flex-row gap-6 p-6 rounded-2xl hover:bg-slate-50 border border-transparent hover:border-slate-100 transition-all">
+                                <div className="md:w-32 shrink-0">
+                                    <span className="inline-block px-4 py-2 bg-slate-900 text-white text-sm font-bold rounded-lg w-full text-center">{phase.month}</span>
+                                </div>
+                                <div className="flex-1">
+                                    <h3 className="text-xl font-bold text-slate-900 mb-2">{phase.title}</h3>
+                                    <p className="text-slate-600">{phase.desc}</p>
+                                </div>
                             </div>
-                        </div>
-                        <div className="flex gap-4">
-                            <div className="w-16 text-right font-bold text-purple-400 shrink-0">Mo 1-3</div>
-                            <div>
-                                <div className="font-bold text-white mb-1">Pipeline Building</div>
-                                <p className="text-slate-400 text-sm">You're taking consultations. Sending initial estimates. Pipeline is filling.</p>
-                            </div>
-                        </div>
-                        <div className="flex gap-4">
-                            <div className="w-16 text-right font-bold text-purple-400 shrink-0">Mo 6-12</div>
-                            <div>
-                                <div className="font-bold text-white mb-1">Closing & ROI</div>
-                                <p className="text-slate-400 text-sm">Custom homes have long cycles. Deals mature and close here. System pays for itself 5-10x.</p>
-                            </div>
-                        </div>
+                        ))}
                     </div>
                 </div>
             </section>
 
             {/* 10. Foundation Callout */}
-            <section className="py-24 bg-yellow-50">
+            <section className="py-24 bg-slate-900 text-white">
                 <div className="container mx-auto px-6 max-w-4xl text-center">
-                    <div className="inline-flex items-center gap-2 bg-yellow-100 text-yellow-800 px-4 py-2 rounded-full font-bold text-sm mb-6">
+                    <div className="inline-flex items-center gap-2 bg-purple-900/50 text-purple-200 border border-purple-500/30 px-4 py-2 rounded-full font-bold text-sm mb-6">
                         <AlertTriangle size={16} /> Prerequisite Check
                     </div>
-                    <h2 className="text-3xl font-serif font-bold text-slate-900 mb-6">Foundation Required</h2>
-                    <p className="text-slate-700 mb-8 max-w-2xl mx-auto">
+                    <h2 className="text-3xl font-serif font-bold text-white mb-6">Foundation Required</h2>
+                    <p className="text-slate-300 mb-8 max-w-2xl mx-auto">
                         The Pipeline only works if your website converts. We drive traffic, but if your site looks amateur, we waste money.
                     </p>
-                    <div className="bg-white p-6 rounded-xl shadow-sm border border-yellow-100 inline-block text-left">
-                        <div className="font-bold text-slate-900 mb-2">The Bundle Offer</div>
-                        <p className="text-sm text-slate-600 mb-4">
-                            Need both? Get Foundation + Pipeline together and save <span className="font-bold text-green-600">$1,000</span> on your Foundation investment.
+                    <div className="bg-slate-800 p-6 rounded-xl shadow-sm border border-slate-700 inline-block text-left">
+                        <div className="font-bold text-white mb-2">The Bundle Offer</div>
+                        <p className="text-sm text-slate-400 mb-4">
+                            Need both? Get Foundation + Pipeline together and save <span className="font-bold text-emerald-400">$1,000</span> on your Foundation investment.
                         </p>
-                        <Link to="/programs/foundation" className="text-purple-600 font-bold text-sm underline">Check Foundation w/ Bundle</Link>
+                        <Link to="/programs/foundation" className="text-purple-400 font-bold text-sm underline hover:text-purple-300">Check Foundation w/ Bundle</Link>
                     </div>
                 </div>
             </section>
