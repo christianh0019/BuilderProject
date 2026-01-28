@@ -18,7 +18,7 @@ const ContentMarketing: React.FC = () => {
                         <span className="flex h-2 w-2 rounded-full bg-green-400 animate-pulse"></span>
                         <span className="text-sm font-medium text-purple-200 uppercase tracking-widest">CONTENT MARKETING</span>
                     </div>
-                    <h2 className="text-5xl md:text-7xl font-serif font-bold mb-8 leading-tight max-w-5xl mx-auto">
+                    <h2 className="text-[36px] md:text-7xl font-serif font-bold mb-8 leading-tight max-w-5xl mx-auto">
                         Stop Hoping for Referrals. <br />
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">Start Predicting Them.</span>
                     </h2>

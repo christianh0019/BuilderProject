@@ -25,9 +25,8 @@ const FunnelDevelopment: React.FC = () => {
                             <span className="text-sm font-medium text-purple-200 uppercase tracking-widest">FUNNEL DEVELOPMENT</span>
                         </div>
 
-                        <h1 className="text-5xl md:text-7xl font-serif font-bold mb-8 leading-tight tracking-tight">
-                            Funnel Development & Lead Capture Systems
-                            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 mt-2">For Custom Home Builders & Remodelers</span>
+                        <h1 className="text-[36px] md:text-7xl font-serif font-bold mb-8 leading-tight tracking-tight">
+                            Funnel Development & Lead Capture Systems <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400">For Custom Home Builders & Remodelers</span>
                         </h1>
 
                         <p className="text-xl md:text-2xl text-slate-300 mb-10 max-w-3xl mx-auto leading-relaxed font-light">
