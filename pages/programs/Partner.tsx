@@ -24,7 +24,7 @@ const PartnerProgram: React.FC = () => {
                     <div className="max-w-7xl mx-auto text-center mb-20">
                         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-900/30 border border-purple-500/30 mb-8 backdrop-blur-sm">
                             <span className="flex h-2 w-2 rounded-full bg-purple-400 animate-pulse"></span>
-                            <span className="text-sm font-medium text-purple-200 uppercase tracking-widest">For Builders Doing $5M+ Revenue</span>
+                            <span className="text-sm font-medium text-purple-200 uppercase tracking-widest">For Builders Doing $3M+ Revenue</span>
                         </div>
 
                         <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-bold mb-8 leading-tight tracking-tight">
@@ -276,7 +276,7 @@ const PartnerProgram: React.FC = () => {
                             </div>
                             <ul className="space-y-4">
                                 {[
-                                    "Doing $5M+ per year, ready to scale to $15M+",
+                                    "Doing $3M+ per year, ready to scale to $10M+",
                                     "Tired of managing multiple marketing vendors",
                                     "Want to dominate your market, not just participate",
                                     "Ready to invest seriously in long-term growth",
@@ -299,7 +299,7 @@ const PartnerProgram: React.FC = () => {
                                     "Looking for quick results (this takes 6-12 months)",
                                     "Want the cheapest option",
                                     "Not ready to invest $3K-$5K/month consistently",
-                                    "Under $5M revenue (start with Foundation or Pipeline)"
+                                    "Under $3M revenue (start with Foundation or Pipeline)"
                                 ].map((item, i) => (
                                     <li key={i} className="flex gap-3 text-slate-300">
                                         <X size={18} className="text-red-400 shrink-0 mt-1" />
@@ -326,13 +326,19 @@ const PartnerProgram: React.FC = () => {
                         <div className="max-w-2xl mx-auto text-left space-y-4">
                             <p className="text-slate-600">Most builders spend more managing scattered vendors anyway:</p>
                             <div className="grid grid-cols-2 gap-4 text-sm text-slate-500 bg-white p-6 rounded-xl border border-slate-200">
-                                <div>x Web Guy ($1,500)</div>
+                                <div>x SEO Specialist ($2,000)</div>
                                 <div className="text-red-500 line-through">Chaos</div>
-                                <div>x Social Manager ($1,000)</div>
-                                <div className="text-red-500 line-through">Mediocrity</div>
+                                <div>x Website Manager ($500)</div>
+                                <div className="text-red-500 line-through">Pain</div>
                                 <div>x Ads Agency ($2,500)</div>
                                 <div className="text-red-500 line-through">Blame</div>
-                                <div className="font-bold border-t pt-2">Total: $6,500/mo</div>
+                                <div>x Social Manager ($2,000)</div>
+                                <div className="text-red-500 line-through">Mediocrity</div>
+                                <div>x Copywriter ($1,500)</div>
+                                <div className="text-red-500 line-through">Delay</div>
+                                <div>x CRM Tech ($500)</div>
+                                <div className="text-red-500 line-through">Broken</div>
+                                <div className="font-bold border-t pt-2">Total: $9,000/mo</div>
                                 <div className="font-bold border-t pt-2 text-red-500">Headache</div>
                             </div>
                             <p className="text-slate-900 font-medium text-center pt-4">
@@ -365,7 +371,7 @@ const PartnerProgram: React.FC = () => {
                                 <div className="p-8 flex flex-col flex-grow">
                                     <h3 className="text-xl font-bold text-slate-900 mb-4">{study.title}</h3>
                                     <div className="grid grid-cols-2 gap-4 mb-6">
-                                        {study.results.map((res, j) => (
+                                        {study.results.slice(0, 2).map((res, j) => (
                                             <div key={j}>
                                                 <div className="text-xs text-slate-500 uppercase tracking-wider">{res.label}</div>
                                                 <div className="font-bold text-slate-900">{res.value}</div>
@@ -444,7 +450,7 @@ const PartnerProgram: React.FC = () => {
                 <div className="container mx-auto px-6 max-w-4xl">
                     <h2 className="text-4xl font-serif font-bold mb-6">We Only Take 5 New Partners Per Quarter</h2>
                     <p className="text-xl text-slate-400 mb-10">
-                        If you're a $5M+ builder serious about dominating your market, apply below.
+                        If you're a $3M+ builder serious about dominating your market, apply below.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                         <Link to="/partner-application" className="inline-flex items-center bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-full font-bold transition-all hover:scale-105 shadow-[0_0_20px_rgba(168,85,247,0.3)]">
