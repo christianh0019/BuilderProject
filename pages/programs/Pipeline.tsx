@@ -1,12 +1,10 @@
 import React, { useState } from 'react';
 import { ArrowRight, CheckCircle2, ChevronDown, ChevronUp, Clock, TrendingUp, AlertTriangle, Filter, Target, CalendarCheck, BarChart3, Smartphone, DollarSign, XCircle, PlayCircle, Lock, ShieldCheck, CheckCircle, MessageSquare, User, Zap } from 'lucide-react';
-import Modal from '../../components/ui/Modal';
 import { Link } from 'react-router-dom';
 import { caseStudies } from '../../data/caseStudies';
 
 const PipelineProgram: React.FC = () => {
     const [openFaq, setOpenFaq] = useState<number | null>(null);
-    const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
 
     const toggleFaq = (index: number) => {
         setOpenFaq(openFaq === index ? null : index);
@@ -157,10 +155,10 @@ const PipelineProgram: React.FC = () => {
                         </p>
 
                         <div className="flex flex-col sm:flex-row gap-5 justify-center items-center">
-                            <button onClick={() => setIsBookingModalOpen(true)} className="group relative inline-flex items-center justify-center px-8 py-4 text-base font-bold text-white transition-all duration-200 bg-purple-600 font-pj rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-600 hover:bg-purple-700 shadow-[0_0_20px_rgba(168,85,247,0.4)] hover:shadow-[0_0_30px_rgba(168,85,247,0.6)]">
+                            <Link to="/partner-application" className="group relative inline-flex items-center justify-center px-8 py-4 text-base font-bold text-white transition-all duration-200 bg-purple-600 font-pj rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-600 hover:bg-purple-700 shadow-[0_0_20px_rgba(168,85,247,0.4)] hover:shadow-[0_0_30px_rgba(168,85,247,0.6)]">
                                 Start Generating Leads
                                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                            </button>
+                            </Link>
                         </div>
                     </div>
 
@@ -455,7 +453,7 @@ const PipelineProgram: React.FC = () => {
                         <div className="flex gap-3"><CheckCircle2 className="text-green-500 shrink-0" /> Weekly Performance Reporting</div>
                         <div className="flex gap-3"><CheckCircle2 className="text-green-500 shrink-0" /> Dedicated Account Manager</div>
                     </div>
-                    <button onClick={() => setIsBookingModalOpen(true)} className="w-full max-w-md bg-purple-600 text-white font-bold py-4 rounded-full text-lg shadow-xl shadow-purple-500/30 hover:bg-purple-700 transition-colors">Start Generating Leads</button>
+                    <Link to="/partner-application" className="w-full block max-w-md mx-auto bg-purple-600 text-white font-bold py-4 rounded-full text-lg shadow-xl shadow-purple-500/30 hover:bg-purple-700 transition-colors">Start Generating Leads</Link>
                     <p className="text-xs text-slate-400 mt-4">Minimum 6-month commitment for proper testing/optimization.</p>
                 </div>
             </section>
@@ -487,29 +485,7 @@ const PipelineProgram: React.FC = () => {
                 </div>
             </section>
 
-            {/* 11. Foundation Callout */}
-            <section className="py-24 bg-slate-900 text-white">
-                <div className="container mx-auto px-6 max-w-4xl text-center">
-                    <div className="inline-flex items-center gap-2 bg-purple-900/50 text-purple-200 border border-purple-500/30 px-4 py-2 rounded-full font-bold text-sm mb-6">
-                        <AlertTriangle size={16} /> Prerequisite Check
-                    </div>
-                    <h2 className="text-3xl font-serif font-bold text-white mb-6">Foundation Required</h2>
-                    <p className="text-slate-300 mb-8 max-w-2xl mx-auto">
-                        The Pipeline only works if your website converts. We drive traffic, but if your site looks amateur, we waste money.
-                    </p>
-                    <div className="bg-slate-800 p-6 rounded-xl shadow-sm border border-slate-700 inline-block text-left relative overflow-hidden">
-                        <div className="relative z-10">
-                            <div className="font-bold text-white mb-2 text-lg">The Bundle Offer</div>
-                            <p className="text-sm text-slate-400 mb-4">
-                                Need both? Get Foundation + Pipeline together and save <span className="font-bold text-emerald-400">$1,000</span> on your Foundation investment.
-                            </p>
-                            <Link to="/programs/foundation" className="text-purple-400 font-bold text-sm underline hover:text-purple-300">Check Foundation w/ Bundle</Link>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* 12. Final CTA */}
+            {/* 11. Final CTA */}
             <section className="py-24 bg-white text-center">
                 <div className="container mx-auto px-6 max-w-4xl">
                     <h2 className="text-4xl font-serif font-bold text-slate-900 mb-6">Ready For Predictable Leads?</h2>
@@ -517,22 +493,12 @@ const PipelineProgram: React.FC = () => {
                         While your competitors wait for referrals, you could be managing a waitlist.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <button onClick={() => setIsBookingModalOpen(true)} className="inline-flex items-center bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-full font-bold transition-all hover:scale-105 shadow-[0_0_20px_rgba(168,85,247,0.3)]">
+                        <Link to="/partner-application" className="inline-flex items-center bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-full font-bold transition-all hover:scale-105 shadow-[0_0_20px_rgba(168,85,247,0.3)]">
                             Start Generating Leads <ArrowRight className="ml-2" />
-                        </button>
+                        </Link>
                     </div>
                 </div>
             </section>
-
-            {/* Booking Modal */}
-            <Modal isOpen={isBookingModalOpen} onClose={() => setIsBookingModalOpen(false)}>
-                <iframe
-                    src="https://api.leadconnectorhq.com/widget/booking/IBPe3yYeYt197wsoyG1r"
-                    style={{ width: '100%', height: '800px', border: 'none' }}
-                    id="booking-widget"
-                    title="Booking Calendar"
-                ></iframe>
-            </Modal>
 
         </div>
     );
