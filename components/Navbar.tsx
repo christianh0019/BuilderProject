@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, ChevronDown, ExternalLink } from 'lucide-react';
+import { Menu, X, ChevronDown, ExternalLink, Monitor, PenTool, Target, Filter, Database, Briefcase, Rocket, TrendingUp, Handshake } from 'lucide-react';
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -57,60 +57,65 @@ const Navbar: React.FC = () => {
                     <Link to="/services" className="text-xs font-bold text-purple-600 hover:text-purple-700">View All</Link>
                   </div>
 
-                  <div className="space-y-1">
+                  <div className="space-y-2">
                     {[
-                      { name: "Website Design", desc: "Custom builds", link: "/services/website-design" },
-                      { name: "Content Marketing", desc: "SEO & Nurture", link: "/services/content-marketing" },
-                      { name: "Paid Advertising", desc: "Google & Meta Ads", link: "/services/paid-advertising" },
-                      { name: "Funnel Development", desc: "Lead Capture", link: "/services/funnel-development" },
-                      { name: "CRM Deployment", desc: "System Setup", link: "/services/crm-deployment" },
-                      { name: "Sales Processes", desc: "Closing Systems", link: "/services/sales-processes" },
+                      { name: "Website Design", desc: "Custom builds", link: "/services/website-design", icon: Monitor, color: "text-blue-600", bg: "bg-blue-50" },
+                      { name: "Content Marketing", desc: "SEO & Nurture", link: "/services/content-marketing", icon: PenTool, color: "text-purple-600", bg: "bg-purple-50" },
+                      { name: "Paid Advertising", desc: "Google & Meta Ads", link: "/services/paid-advertising", icon: Target, color: "text-red-600", bg: "bg-red-50" },
+                      { name: "Funnel Development", desc: "Lead Capture", link: "/services/funnel-development", icon: Filter, color: "text-orange-600", bg: "bg-orange-50" },
+                      { name: "CRM Deployment", desc: "System Setup", link: "/services/crm-deployment", icon: Database, color: "text-emerald-600", bg: "bg-emerald-50" },
+                      { name: "Sales Processes", desc: "Closing Systems", link: "/services/sales-processes", icon: Briefcase, color: "text-slate-600", bg: "bg-slate-100" },
                     ].map((service, i) => (
-                      <Link key={i} to={service.link} className="block px-4 py-3 rounded-lg hover:bg-white hover:shadow-sm transition-all group/item">
-                        <span className="block font-semibold text-slate-800 group-hover/item:text-purple-700 transition-colors">{service.name}</span>
-                        <span className="text-xs text-slate-500">{service.desc}</span>
+                      <Link key={i} to={service.link} className="flex items-start gap-4 p-3 rounded-xl hover:bg-white hover:shadow-sm transition-all group/item border border-transparent hover:border-slate-100">
+                        <div className={`w-10 h-10 rounded-lg ${service.bg} flex items-center justify-center ${service.color} shrink-0`}>
+                          <service.icon size={20} />
+                        </div>
+                        <div>
+                          <span className="block font-semibold text-slate-800 group-hover/item:text-purple-700 transition-colors text-sm">{service.name}</span>
+                          <span className="text-xs text-slate-500">{service.desc}</span>
+                        </div>
                       </Link>
                     ))}
                   </div>
                 </div>
 
                 {/* Right Column: Programs (8 cols) -> 7 cols */}
-                <div className="col-span-7 p-8">
-                  <div className="flex items-center justify-between mb-6">
+                <div className="col-span-7 p-8 flex flex-col h-full bg-slate-50/20">
+                  <div className="flex items-center justify-between mb-4">
                     <span className="text-xs font-bold text-slate-400 uppercase tracking-wider">Growth Programs</span>
                     <Link to="/programs" className="text-xs font-bold text-purple-600 hover:text-purple-700">View All Programs</Link>
                   </div>
 
-                  <div className="grid gap-4">
+                  <div className="flex flex-col gap-3 flex-1">
                     {/* Program 1 */}
-                    <Link to="/programs/foundation" className="flex items-start gap-4 p-4 rounded-xl border border-slate-100 hover:border-purple-200 hover:bg-purple-50/30 transition-all group/card">
-                      <div className="w-10 h-10 rounded-lg bg-blue-50 flex items-center justify-center text-blue-600 group-hover/card:bg-blue-100 transition-colors shrink-0">
-                        <div className="font-bold">01</div>
+                    <Link to="/programs/foundation" className="flex-1 flex items-center gap-4 p-4 rounded-xl border border-slate-100 hover:border-purple-200 hover:bg-purple-50/30 transition-all group/card bg-white hover:shadow-md">
+                      <div className="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center text-blue-600 group-hover/card:bg-blue-100 transition-colors shrink-0 shadow-sm">
+                        <Rocket size={24} />
                       </div>
                       <div>
-                        <h4 className="font-bold text-slate-900 mb-1 group-hover/card:text-purple-700">The Foundation</h4>
+                        <h4 className="font-bold text-slate-900 mb-0.5 group-hover/card:text-purple-700 text-lg">The Foundation</h4>
                         <p className="text-sm text-slate-500 leading-snug">Complete digital infrastructure setup for builders starting to scale.</p>
                       </div>
                     </Link>
 
                     {/* Program 2 */}
-                    <Link to="/programs/pipeline" className="flex items-start gap-4 p-4 rounded-xl border border-slate-100 hover:border-purple-200 hover:bg-purple-50/30 transition-all group/card">
-                      <div className="w-10 h-10 rounded-lg bg-purple-50 flex items-center justify-center text-purple-600 group-hover/card:bg-purple-100 transition-colors shrink-0">
-                        <div className="font-bold">02</div>
+                    <Link to="/programs/pipeline" className="flex-1 flex items-center gap-4 p-4 rounded-xl border border-slate-100 hover:border-purple-200 hover:bg-purple-50/30 transition-all group/card bg-white hover:shadow-md">
+                      <div className="w-12 h-12 rounded-xl bg-purple-50 flex items-center justify-center text-purple-600 group-hover/card:bg-purple-100 transition-colors shrink-0 shadow-sm">
+                        <TrendingUp size={24} />
                       </div>
                       <div>
-                        <h4 className="font-bold text-slate-900 mb-1 group-hover/card:text-purple-700">The Pipeline</h4>
+                        <h4 className="font-bold text-slate-900 mb-0.5 group-hover/card:text-purple-700 text-lg">The Pipeline</h4>
                         <p className="text-sm text-slate-500 leading-snug">Aggressive lead generation and sales system for established firms.</p>
                       </div>
                     </Link>
 
                     {/* Program 3 */}
-                    <Link to="/programs/partner" className="flex items-start gap-4 p-4 rounded-xl border border-slate-100 hover:border-purple-200 hover:bg-purple-50/30 transition-all group/card">
-                      <div className="w-10 h-10 rounded-lg bg-slate-900 flex items-center justify-center text-white group-hover/card:bg-slate-800 transition-colors shrink-0">
-                        <div className="font-bold">03</div>
+                    <Link to="/programs/partner" className="flex-1 flex items-center gap-4 p-4 rounded-xl border border-slate-100 hover:border-purple-200 hover:bg-purple-50/30 transition-all group/card bg-white hover:shadow-md">
+                      <div className="w-12 h-12 rounded-xl bg-slate-900 flex items-center justify-center text-white group-hover/card:bg-slate-800 transition-colors shrink-0 shadow-sm">
+                        <Handshake size={24} />
                       </div>
                       <div>
-                        <h4 className="font-bold text-slate-900 mb-1 group-hover/card:text-purple-700">The Partner Program</h4>
+                        <h4 className="font-bold text-slate-900 mb-0.5 group-hover/card:text-purple-700 text-lg">The Partner Program</h4>
                         <p className="text-sm text-slate-500 leading-snug">Full-service fractional CMO & growth team integration.</p>
                       </div>
                     </Link>
