@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Layout, PenTool, TrendingUp, ChevronRight } from 'lucide-react';
+import { ArrowRight, Layout, PenTool, TrendingUp, ChevronRight, Filter, Database, Briefcase } from 'lucide-react';
 
 const Services: React.FC = () => {
     return (
@@ -65,6 +65,49 @@ const Services: React.FC = () => {
                             </p>
                             <Link to="/services/content-marketing" className="inline-flex items-center text-purple-600 font-bold text-lg group-hover:translate-x-2 transition-transform">
                                 Explore Content <ArrowRight className="ml-2" />
+                            </Link>
+                        </div>
+
+
+                        {/* 4. Funnel Development */}
+                        <div className="group border border-slate-200 rounded-[2rem] p-8 md:p-12 hover:shadow-2xl hover:shadow-purple-900/10 hover:-translate-y-2 transition-all duration-300 flex flex-col items-start">
+                            <div className="w-16 h-16 bg-slate-50 rounded-2xl flex items-center justify-center mb-8 text-slate-900 group-hover:bg-slate-900 group-hover:text-white transition-colors">
+                                <Filter size={32} />
+                            </div>
+                            <h3 className="text-3xl font-serif font-bold text-slate-900 mb-4">Funnel Development</h3>
+                            <p className="text-slate-600 text-lg leading-relaxed mb-10 flex-grow">
+                                Automated lead capture and nurturing systems that turn traffic into booked appointments. We build high-converting landing pages that filter out the tire-kickers.
+                            </p>
+                            <Link to="/services/funnel-development" className="inline-flex items-center text-purple-600 font-bold text-lg group-hover:translate-x-2 transition-transform">
+                                Explore Funnels <ArrowRight className="ml-2" />
+                            </Link>
+                        </div>
+
+                        {/* 5. CRM Deployment */}
+                        <div className="group border border-slate-200 rounded-[2rem] p-8 md:p-12 hover:shadow-2xl hover:shadow-purple-900/10 hover:-translate-y-2 transition-all duration-300 flex flex-col items-start">
+                            <div className="w-16 h-16 bg-slate-50 rounded-2xl flex items-center justify-center mb-8 text-slate-900 group-hover:bg-slate-900 group-hover:text-white transition-colors">
+                                <Database size={32} />
+                            </div>
+                            <h3 className="text-3xl font-serif font-bold text-slate-900 mb-4">CRM Deployment</h3>
+                            <p className="text-slate-600 text-lg leading-relaxed mb-10 flex-grow">
+                                Custom HighLevel (GHL) setups tailored for builders. Track every lead, automate follow-ups, and measure ROI on every dollar you spend.
+                            </p>
+                            <Link to="/services/crm-deployment" className="inline-flex items-center text-purple-600 font-bold text-lg group-hover:translate-x-2 transition-transform">
+                                Explore CRM <ArrowRight className="ml-2" />
+                            </Link>
+                        </div>
+
+                        {/* 6. Sales Processes */}
+                        <div className="group border border-slate-200 rounded-[2rem] p-8 md:p-12 hover:shadow-2xl hover:shadow-purple-900/10 hover:-translate-y-2 transition-all duration-300 flex flex-col items-start">
+                            <div className="w-16 h-16 bg-slate-50 rounded-2xl flex items-center justify-center mb-8 text-slate-900 group-hover:bg-slate-900 group-hover:text-white transition-colors">
+                                <Briefcase size={32} />
+                            </div>
+                            <h3 className="text-3xl font-serif font-bold text-slate-900 mb-4">Sales Processes</h3>
+                            <p className="text-slate-600 text-lg leading-relaxed mb-10 flex-grow">
+                                Proven scripts, frameworks, and closing systems to help you turn more estimates into signed contracts. We train your team to sell value, not price.
+                            </p>
+                            <Link to="/services/sales-processes" className="inline-flex items-center text-purple-600 font-bold text-lg group-hover:translate-x-2 transition-transform">
+                                Explore Sales <ArrowRight className="ml-2" />
                             </Link>
                         </div>
 
