@@ -42,7 +42,7 @@ const Navbar: React.FC = () => {
       >
         <div className="container mx-auto px-6 flex justify-between items-center relative z-50">
           {/* Logo */}
-          <Link to="/" className="text-2xl font-bold font-serif tracking-tight flex items-center gap-2">
+          <Link to="/" title="Home" className="text-2xl font-bold font-serif tracking-tight flex items-center gap-2">
             <img src="/images/logo_icon.png" alt="BuilderProject Logo" title="BuilderProject Logo" className="w-8 h-8 rounded-lg" />
             <span className="text-slate-900">BuilderProject</span>
           </Link>
@@ -55,6 +55,7 @@ const Navbar: React.FC = () => {
             <div className="relative group">
               <Link
                 to="/services"
+                title="Services"
                 className="flex items-center text-slate-700 hover:text-purple-700 font-medium transition-colors gap-1 py-4"
               >
                 Services <ChevronDown size={16} className="group-hover:rotate-180 transition-transform duration-200" />
@@ -67,7 +68,7 @@ const Navbar: React.FC = () => {
                   <div className="col-span-5 p-6 border-r border-slate-50 bg-slate-50/50">
                     <div className="flex items-center justify-between mb-4">
                       <span className="text-xs font-bold text-slate-400 uppercase tracking-wider">Services</span>
-                      <Link to="/services" className="text-xs font-bold text-purple-600 hover:text-purple-700">View All</Link>
+                      <Link to="/services" title="View All Services" className="text-xs font-bold text-purple-600 hover:text-purple-700">View All</Link>
                     </div>
 
                     <div className="space-y-2">
@@ -79,7 +80,7 @@ const Navbar: React.FC = () => {
                         { name: "CRM Deployment", desc: "System Setup", link: "/services/crm-deployment", icon: Database, color: "text-emerald-600", bg: "bg-emerald-50" },
                         { name: "Sales Processes", desc: "Closing Systems", link: "/services/sales-processes", icon: Briefcase, color: "text-slate-600", bg: "bg-slate-100" },
                       ].map((service, i) => (
-                        <Link key={i} to={service.link} className="flex items-start gap-4 p-3 rounded-xl hover:bg-white hover:shadow-sm transition-all group/item border border-transparent hover:border-slate-100">
+                        <Link key={i} to={service.link} title={service.name} className="flex items-start gap-4 p-3 rounded-xl hover:bg-white hover:shadow-sm transition-all group/item border border-transparent hover:border-slate-100">
                           <div className={`w-10 h-10 rounded-lg ${service.bg} flex items-center justify-center ${service.color} shrink-0`}>
                             <service.icon size={20} />
                           </div>
@@ -96,12 +97,12 @@ const Navbar: React.FC = () => {
                   <div className="col-span-7 p-8 flex flex-col h-full bg-slate-50/20">
                     <div className="flex items-center justify-between mb-4">
                       <span className="text-xs font-bold text-slate-400 uppercase tracking-wider">Growth Programs</span>
-                      <Link to="/programs" className="text-xs font-bold text-purple-600 hover:text-purple-700">View All Programs</Link>
+                      <Link to="/programs" title="View All Programs" className="text-xs font-bold text-purple-600 hover:text-purple-700">View All Programs</Link>
                     </div>
 
                     <div className="flex flex-col gap-3 flex-1">
                       {/* Program 1 */}
-                      <Link to="/programs/foundation" className="flex-1 flex items-center gap-4 p-4 rounded-xl border border-slate-100 hover:border-purple-200 hover:bg-purple-50/30 transition-all group/card bg-white hover:shadow-md">
+                      <Link to="/programs/foundation" title="The Foundation" className="flex-1 flex items-center gap-4 p-4 rounded-xl border border-slate-100 hover:border-purple-200 hover:bg-purple-50/30 transition-all group/card bg-white hover:shadow-md">
                         <div className="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center text-blue-600 group-hover/card:bg-blue-100 transition-colors shrink-0 shadow-sm">
                           <Rocket size={24} />
                         </div>
@@ -112,7 +113,7 @@ const Navbar: React.FC = () => {
                       </Link>
 
                       {/* Program 2 */}
-                      <Link to="/programs/pipeline" className="flex-1 flex items-center gap-4 p-4 rounded-xl border border-slate-100 hover:border-purple-200 hover:bg-purple-50/30 transition-all group/card bg-white hover:shadow-md">
+                      <Link to="/programs/pipeline" title="The Pipeline" className="flex-1 flex items-center gap-4 p-4 rounded-xl border border-slate-100 hover:border-purple-200 hover:bg-purple-50/30 transition-all group/card bg-white hover:shadow-md">
                         <div className="w-12 h-12 rounded-xl bg-purple-50 flex items-center justify-center text-purple-600 group-hover/card:bg-purple-100 transition-colors shrink-0 shadow-sm">
                           <TrendingUp size={24} />
                         </div>
@@ -123,7 +124,7 @@ const Navbar: React.FC = () => {
                       </Link>
 
                       {/* Program 3 */}
-                      <Link to="/programs/partner" className="flex-1 flex items-center gap-4 p-4 rounded-xl border border-slate-100 hover:border-purple-200 hover:bg-purple-50/30 transition-all group/card bg-white hover:shadow-md">
+                      <Link to="/programs/partner" title="The Partner Program" className="flex-1 flex items-center gap-4 p-4 rounded-xl border border-slate-100 hover:border-purple-200 hover:bg-purple-50/30 transition-all group/card bg-white hover:shadow-md">
                         <div className="w-12 h-12 rounded-xl bg-slate-900 flex items-center justify-center text-white group-hover/card:bg-slate-800 transition-colors shrink-0 shadow-sm">
                           <Handshake size={24} />
                         </div>
@@ -139,8 +140,8 @@ const Navbar: React.FC = () => {
               </div>
             </div>
 
-            <Link to="/case-studies" className="text-slate-700 hover:text-purple-700 font-medium transition-colors">Case Studies</Link>
-            <Link to="/blog" className="text-slate-700 hover:text-purple-700 font-medium transition-colors">Insights</Link>
+            <Link to="/case-studies" title="Case Studies" className="text-slate-700 hover:text-purple-700 font-medium transition-colors">Case Studies</Link>
+            <Link to="/blog" title="Insights" className="text-slate-700 hover:text-purple-700 font-medium transition-colors">Insights</Link>
 
             {/* Dropdown */}
             <div className="relative group">
@@ -151,15 +152,15 @@ const Navbar: React.FC = () => {
               </button>
               <div className="absolute top-full left-0 w-56 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0">
                 <div className="bg-white rounded-xl shadow-xl border border-slate-100 overflow-hidden">
-                  <Link to="/book" className="block px-6 py-4 hover:bg-slate-50 border-b border-slate-50">
+                  <Link to="/book" title="Our Book" className="block px-6 py-4 hover:bg-slate-50 border-b border-slate-50">
                     <span className="block font-semibold text-slate-800">Our Book</span>
                     <span className="text-sm text-slate-500">The Builder's Marketing Playbook</span>
                   </Link>
-                  <Link to="/about" className="block px-6 py-4 hover:bg-slate-50 border-b border-slate-50">
+                  <Link to="/about" title="About Us" className="block px-6 py-4 hover:bg-slate-50 border-b border-slate-50">
                     <span className="block font-semibold text-slate-800">About Us</span>
                     <span className="text-sm text-slate-500">Mission & Team</span>
                   </Link>
-                  <Link to="/podcast" className="block px-6 py-4 hover:bg-slate-50 border-b border-slate-50">
+                  <Link to="/podcast" title="Podcast" className="block px-6 py-4 hover:bg-slate-50 border-b border-slate-50">
                     <span className="block font-semibold text-slate-800">Podcast</span>
                     <span className="text-sm text-slate-500">The Builder Backstage</span>
                   </Link>
@@ -167,6 +168,7 @@ const Navbar: React.FC = () => {
                     href="https://www.youtube.com/@BuilderProjectCo"
                     target="_blank"
                     rel="noopener noreferrer"
+                    title="YouTube Channel"
                     className="block px-6 py-4 hover:bg-slate-50 group/item"
                   >
                     <span className="flex items-center gap-2 font-semibold text-slate-800">
@@ -174,7 +176,7 @@ const Navbar: React.FC = () => {
                     </span>
                     <span className="text-sm text-slate-500">Video tutorials & tips</span>
                   </a>
-                  <Link to="/careers" className="block px-6 py-4 hover:bg-slate-50 border-t border-slate-50">
+                  <Link to="/careers" title="Careers" className="block px-6 py-4 hover:bg-slate-50 border-t border-slate-50">
                     <span className="block font-semibold text-slate-800">Careers</span>
                     <span className="text-sm text-slate-500">Join our team</span>
                   </Link>
@@ -182,12 +184,13 @@ const Navbar: React.FC = () => {
               </div>
             </div>
 
-            <a href="https://app.buildsurge.co" target="_blank" rel="noreferrer" className="text-slate-700 hover:text-purple-700 font-medium transition-colors">
+            <a href="https://app.buildsurge.co" title="Login" target="_blank" rel="noreferrer" className="text-slate-700 hover:text-purple-700 font-medium transition-colors">
               Login
             </a>
 
             <Link
               to="/contact"
+              title="Get in Touch"
               className="px-6 py-2.5 rounded-full bg-slate-900 text-white font-medium hover:bg-gradient-to-r hover:from-purple-700 hover:to-pink-600 transition-all duration-300 shadow-lg hover:shadow-purple-500/25"
             >
               Get in Touch
@@ -221,27 +224,27 @@ const Navbar: React.FC = () => {
             </button>
             {servicesOpen && (
               <div className="pl-4 mt-4 flex flex-col space-y-4">
-                <Link to="/services/website-design" className="flex items-center gap-3 text-slate-600 p-2 rounded-lg hover:bg-slate-50">
+                <Link to="/services/website-design" title="Website Design" className="flex items-center gap-3 text-slate-600 p-2 rounded-lg hover:bg-slate-50">
                   <div className="w-8 h-8 rounded-md bg-blue-50 flex items-center justify-center text-blue-600 shrink-0"><Monitor size={16} /></div>
                   <span className="font-medium">Website Design</span>
                 </Link>
-                <Link to="/services/content-marketing" className="flex items-center gap-3 text-slate-600 p-2 rounded-lg hover:bg-slate-50">
+                <Link to="/services/content-marketing" title="Content Marketing" className="flex items-center gap-3 text-slate-600 p-2 rounded-lg hover:bg-slate-50">
                   <div className="w-8 h-8 rounded-md bg-purple-50 flex items-center justify-center text-purple-600 shrink-0"><PenTool size={16} /></div>
                   <span className="font-medium">Content Marketing</span>
                 </Link>
-                <Link to="/services/paid-advertising" className="flex items-center gap-3 text-slate-600 p-2 rounded-lg hover:bg-slate-50">
+                <Link to="/services/paid-advertising" title="Paid Advertising" className="flex items-center gap-3 text-slate-600 p-2 rounded-lg hover:bg-slate-50">
                   <div className="w-8 h-8 rounded-md bg-red-50 flex items-center justify-center text-red-600 shrink-0"><Target size={16} /></div>
                   <span className="font-medium">Paid Advertising</span>
                 </Link>
-                <Link to="/services/funnel-development" className="flex items-center gap-3 text-slate-600 p-2 rounded-lg hover:bg-slate-50">
+                <Link to="/services/funnel-development" title="Funnel Development" className="flex items-center gap-3 text-slate-600 p-2 rounded-lg hover:bg-slate-50">
                   <div className="w-8 h-8 rounded-md bg-orange-50 flex items-center justify-center text-orange-600 shrink-0"><Filter size={16} /></div>
                   <span className="font-medium">Funnel Development</span>
                 </Link>
-                <Link to="/services/crm-deployment" className="flex items-center gap-3 text-slate-600 p-2 rounded-lg hover:bg-slate-50">
+                <Link to="/services/crm-deployment" title="CRM Deployment" className="flex items-center gap-3 text-slate-600 p-2 rounded-lg hover:bg-slate-50">
                   <div className="w-8 h-8 rounded-md bg-emerald-50 flex items-center justify-center text-emerald-600 shrink-0"><Database size={16} /></div>
                   <span className="font-medium">CRM Deployment</span>
                 </Link>
-                <Link to="/services/sales-processes" className="flex items-center gap-3 text-slate-600 p-2 rounded-lg hover:bg-slate-50">
+                <Link to="/services/sales-processes" title="Sales Processes" className="flex items-center gap-3 text-slate-600 p-2 rounded-lg hover:bg-slate-50">
                   <div className="w-8 h-8 rounded-md bg-slate-100 flex items-center justify-center text-slate-600 shrink-0"><Briefcase size={16} /></div>
                   <span className="font-medium">Sales Processes</span>
                 </Link>
@@ -249,28 +252,28 @@ const Navbar: React.FC = () => {
                 <div className="pt-4 border-t border-slate-100 mt-2">
                   <div className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3">Growth Programs</div>
                   <div className="flex flex-col space-y-3">
-                    <Link to="/programs/foundation" className="flex items-center gap-3 p-3 rounded-xl border border-slate-100 bg-slate-50/50">
+                    <Link to="/programs/foundation" title="The Foundation" className="flex items-center gap-3 p-3 rounded-xl border border-slate-100 bg-slate-50/50">
                       <div className="w-10 h-10 rounded-lg bg-white flex items-center justify-center text-blue-600 shrink-0 shadow-sm"><Rocket size={20} /></div>
                       <div>
                         <div className="text-slate-900 font-bold text-sm">The Foundation</div>
                         <div className="text-slate-500 text-xs">For scaling builders</div>
                       </div>
                     </Link>
-                    <Link to="/programs/pipeline" className="flex items-center gap-3 p-3 rounded-xl border border-slate-100 bg-slate-50/50">
+                    <Link to="/programs/pipeline" title="The Pipeline" className="flex items-center gap-3 p-3 rounded-xl border border-slate-100 bg-slate-50/50">
                       <div className="w-10 h-10 rounded-lg bg-white flex items-center justify-center text-purple-600 shrink-0 shadow-sm"><TrendingUp size={20} /></div>
                       <div>
                         <div className="text-slate-900 font-bold text-sm">The Pipeline</div>
                         <div className="text-slate-500 text-xs">For established firms</div>
                       </div>
                     </Link>
-                    <Link to="/programs/partner" className="flex items-center gap-3 p-3 rounded-xl border border-slate-100 bg-slate-50/50">
+                    <Link to="/programs/partner" title="The Partner Program" className="flex items-center gap-3 p-3 rounded-xl border border-slate-100 bg-slate-50/50">
                       <div className="w-10 h-10 rounded-lg bg-slate-900 flex items-center justify-center text-white shrink-0 shadow-sm"><Handshake size={20} /></div>
                       <div>
                         <div className="text-slate-900 font-bold text-sm">The Partner Program</div>
                         <div className="text-slate-500 text-xs">Fractional CMO</div>
                       </div>
                     </Link>
-                    <Link to="/programs" className="text-purple-600 font-bold text-sm mt-2 flex items-center gap-1 justify-center py-2">
+                    <Link to="/programs" title="View All Programs" className="text-purple-600 font-bold text-sm mt-2 flex items-center gap-1 justify-center py-2">
                       View All Programs <ArrowRight size={14} />
                     </Link>
                   </div>
@@ -279,8 +282,8 @@ const Navbar: React.FC = () => {
             )}
           </div>
 
-          <Link to="/case-studies" className="text-slate-900 font-semibold border-b border-slate-100 pb-4">Case Studies</Link>
-          <Link to="/blog" className="text-slate-900 font-semibold border-b border-slate-100 pb-4">Insights</Link>
+          <Link to="/case-studies" title="Case Studies" className="text-slate-900 font-semibold border-b border-slate-100 pb-4">Case Studies</Link>
+          <Link to="/blog" title="Insights" className="text-slate-900 font-semibold border-b border-slate-100 pb-4">Insights</Link>
 
           <div>
             <button
@@ -291,23 +294,24 @@ const Navbar: React.FC = () => {
             </button>
             {resourceOpen && (
               <div className="pl-4 mt-4 flex flex-col space-y-4">
-                <Link to="/book" className="text-slate-600">Our Book</Link>
-                <Link to="/about" className="text-slate-600">About Us</Link>
-                <Link to="/podcast" className="text-slate-600">Podcast</Link>
-                <a href="https://www.youtube.com/@BuilderProjectCo" target="_blank" rel="noopener noreferrer" className="text-slate-600 flex items-center gap-2">
+                <Link to="/book" title="Our Book" className="text-slate-600">Our Book</Link>
+                <Link to="/about" title="About Us" className="text-slate-600">About Us</Link>
+                <Link to="/podcast" title="Podcast" className="text-slate-600">Podcast</Link>
+                <a href="https://www.youtube.com/@BuilderProjectCo" title="YouTube Channel" target="_blank" rel="noopener noreferrer" className="text-slate-600 flex items-center gap-2">
                   YouTube Channel <ExternalLink size={14} />
                 </a>
-                <Link to="/careers" className="text-slate-600">Careers</Link>
+                <Link to="/careers" title="Careers" className="text-slate-600">Careers</Link>
               </div>
             )}
           </div>
 
-          <a href="https://app.buildsurge.co" target="_blank" rel="noreferrer" className="text-slate-900 font-semibold border-b border-slate-100 pb-4 block">
+          <a href="https://app.buildsurge.co" title="Login" target="_blank" rel="noreferrer" className="text-slate-900 font-semibold border-b border-slate-100 pb-4 block">
             Login
           </a>
 
           <Link
             to="/contact"
+            title="Get in Touch"
             className="text-center w-full py-4 rounded-xl bg-slate-900 text-white font-bold mt-4"
           >
             Get in Touch

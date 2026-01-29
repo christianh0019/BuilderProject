@@ -137,6 +137,7 @@ const Home: React.FC = () => {
         title="BuilderProject | Marketing for Custom Home Builders & Remodelers"
         description="We help custom home builders and remodelers get more high quality leads and scale their revenue through digital marketing strategies. Our services include Website Design, SEO, Facebook Ads, Google Ads, and more!"
         keywords="marketing for custom home builders, digital marketing for remodelers, construction marketing agency, builder seo, contractor website design, facebook ads for builders"
+        canonical="/"
       />
 
       {/* Hero Section */}

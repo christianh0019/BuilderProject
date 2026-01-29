@@ -35,40 +35,40 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="text-lg font-bold mb-6 font-serif text-slate-200">Company</h4>
             <ul className="space-y-4">
-              <li><Link to="/" className="text-slate-400 hover:text-white transition-colors">Home</Link></li>
-              <li><Link to="/services" className="text-slate-400 hover:text-white transition-colors">Services</Link></li>
-              <li><Link to="/programs" className="text-slate-400 hover:text-white transition-colors">Programs</Link></li>
-              <li><Link to="/case-studies" className="text-slate-400 hover:text-white transition-colors">Case Studies</Link></li>
-              <li><Link to="/contact" className="text-slate-400 hover:text-white transition-colors">Contact</Link></li>
-              <li><a href="https://app.buildsurge.co" target="_blank" rel="noreferrer" className="text-slate-400 hover:text-white transition-colors">Login</a></li>
+              <li><Link to="/" title="Home" className="text-slate-400 hover:text-white transition-colors">Home</Link></li>
+              <li><Link to="/services" title="Services" className="text-slate-400 hover:text-white transition-colors">Services</Link></li>
+              <li><Link to="/programs" title="Programs" className="text-slate-400 hover:text-white transition-colors">Programs</Link></li>
+              <li><Link to="/case-studies" title="Case Studies" className="text-slate-400 hover:text-white transition-colors">Case Studies</Link></li>
+              <li><Link to="/contact" title="Contact Us" className="text-slate-400 hover:text-white transition-colors">Contact</Link></li>
+              <li><a href="https://app.buildsurge.co" title="Login" target="_blank" rel="noreferrer" className="text-slate-400 hover:text-white transition-colors">Login</a></li>
             </ul>
           </div>
           <div>
             <h4 className="text-lg font-bold mb-6 font-serif text-slate-200">Resources</h4>
             <ul className="space-y-4">
-              <li><Link to="/about" className="text-slate-400 hover:text-white transition-colors">About Us</Link></li>
-              <li><Link to="/podcast" className="text-slate-400 hover:text-white transition-colors">Podcast</Link></li>
-              <li><Link to="/careers" className="text-slate-400 hover:text-white transition-colors">Careers</Link></li>
-              <li><Link to="/book" className="text-slate-400 hover:text-white transition-colors">Free Book</Link></li>
-              <li><a href="https://www.youtube.com/@BuilderProjectCo" target="_blank" rel="noreferrer" className="text-slate-400 hover:text-white transition-colors">YouTube Channel</a></li>
+              <li><Link to="/about" title="About Us" className="text-slate-400 hover:text-white transition-colors">About Us</Link></li>
+              <li><Link to="/podcast" title="Podcast" className="text-slate-400 hover:text-white transition-colors">Podcast</Link></li>
+              <li><Link to="/careers" title="Careers" className="text-slate-400 hover:text-white transition-colors">Careers</Link></li>
+              <li><Link to="/book" title="Free Book" className="text-slate-400 hover:text-white transition-colors">Free Book</Link></li>
+              <li><a href="https://www.youtube.com/@BuilderProjectCo" title="YouTube Channel" target="_blank" rel="noreferrer" className="text-slate-400 hover:text-white transition-colors">YouTube Channel</a></li>
             </ul>
           </div>
           <div>
             <h4 className="text-lg font-bold mb-6 font-serif text-slate-200">Services</h4>
             <ul className="space-y-4">
-              <li><Link to="/services/website-design" className="text-slate-400 hover:text-white transition-colors">Website Design</Link></li>
-              <li><Link to="/services/content-marketing" className="text-slate-400 hover:text-white transition-colors">Content Marketing</Link></li>
-              <li><Link to="/services/paid-advertising" className="text-slate-400 hover:text-white transition-colors">Paid Advertising</Link></li>
-              <li><Link to="/services/funnel-development" className="text-slate-400 hover:text-white transition-colors">Funnel Development</Link></li>
-              <li><Link to="/services/crm-deployment" className="text-slate-400 hover:text-white transition-colors">CRM Deployment</Link></li>
-              <li><Link to="/services/sales-processes" className="text-slate-400 hover:text-white transition-colors">Sales Processes</Link></li>
+              <li><Link to="/services/website-design" title="Website Design" className="text-slate-400 hover:text-white transition-colors">Website Design</Link></li>
+              <li><Link to="/services/content-marketing" title="Content Marketing" className="text-slate-400 hover:text-white transition-colors">Content Marketing</Link></li>
+              <li><Link to="/services/paid-advertising" title="Paid Advertising" className="text-slate-400 hover:text-white transition-colors">Paid Advertising</Link></li>
+              <li><Link to="/services/funnel-development" title="Funnel Development" className="text-slate-400 hover:text-white transition-colors">Funnel Development</Link></li>
+              <li><Link to="/services/crm-deployment" title="CRM Deployment" className="text-slate-400 hover:text-white transition-colors">CRM Deployment</Link></li>
+              <li><Link to="/services/sales-processes" title="Sales Processes" className="text-slate-400 hover:text-white transition-colors">Sales Processes</Link></li>
             </ul>
           </div>
           <div>
             <h4 className="text-lg font-bold mb-6 font-serif text-slate-200">Legal</h4>
             <ul className="space-y-4">
-              <li><Link to="/privacy" className="text-slate-400 hover:text-white transition-colors">Privacy Policy</Link></li>
-              <li><Link to="/terms" className="text-slate-400 hover:text-white transition-colors">Terms of Service</Link></li>
+              <li><Link to="/privacy" title="Privacy Policy" className="text-slate-400 hover:text-white transition-colors">Privacy Policy</Link></li>
+              <li><Link to="/terms" title="Terms of Service" className="text-slate-400 hover:text-white transition-colors">Terms of Service</Link></li>
             </ul>
           </div>
         </div>
@@ -78,9 +78,9 @@ const Footer: React.FC = () => {
             © {new Date().getFullYear()} BuilderProject. All Rights Reserved.
           </p>
           <div className="flex space-x-6">
-            <a href="https://www.facebook.com/builderproject.co/" target="_blank" rel="noreferrer" className="text-slate-400 hover:text-purple-400 transition-colors"><Facebook size={20} /></a>
-            <a href="https://www.instagram.com/builderproject.co/" target="_blank" rel="noreferrer" className="text-slate-400 hover:text-purple-400 transition-colors"><Instagram size={20} /></a>
-            <a href="https://www.linkedin.com/company/builderproject/" target="_blank" rel="noreferrer" className="text-slate-400 hover:text-purple-400 transition-colors"><Linkedin size={20} /></a>
+            <a href="https://www.facebook.com/builderproject.co/" title="Facebook" target="_blank" rel="noreferrer" className="text-slate-400 hover:text-purple-400 transition-colors"><Facebook size={20} /></a>
+            <a href="https://www.instagram.com/builderproject.co/" title="Instagram" target="_blank" rel="noreferrer" className="text-slate-400 hover:text-purple-400 transition-colors"><Instagram size={20} /></a>
+            <a href="https://www.linkedin.com/company/builderproject/" title="LinkedIn" target="_blank" rel="noreferrer" className="text-slate-400 hover:text-purple-400 transition-colors"><Linkedin size={20} /></a>
           </div>
         </div>
       </div>
