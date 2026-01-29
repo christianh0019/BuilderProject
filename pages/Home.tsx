@@ -134,8 +134,9 @@ const Home: React.FC = () => {
   return (
     <div className="bg-white font-sans text-slate-900 selection:bg-purple-200 selection:text-purple-900">
       <SEO
-        title="Marketing for Custom Home Builders & Remodelers"
-        description="BuilderProject helps custom home builders scale to $10M+ with premium website design, SEO, and paid advertising. Guaranteed results or we work for free."
+        title="BuilderProject | Marketing for Custom Home Builders & Remodelers"
+        description="We help custom home builders and remodelers get more high quality leads and scale their revenue through digital marketing strategies. Our services include Website Design, SEO, Facebook Ads, Google Ads, and more!"
+        keywords="marketing for custom home builders, digital marketing for remodelers, construction marketing agency, builder seo, contractor website design, facebook ads for builders"
       />
 
       {/* Hero Section */}
@@ -235,6 +236,7 @@ const Home: React.FC = () => {
                 <img
                   src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=1600&auto=format&fit=crop"
                   alt="Modern luxury kitchen interior"
+                  title="Modern luxury kitchen interior"
                   className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent p-8 md:p-10 flex flex-col justify-end">
@@ -250,6 +252,7 @@ const Home: React.FC = () => {
                   <img
                     src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?q=80&w=1600&auto=format&fit=crop"
                     alt="Luxury Modern Home Exterior"
+                    title="Luxury Modern Home Exterior"
                     className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
                   />
                 </div>
@@ -267,6 +270,7 @@ const Home: React.FC = () => {
                 <img
                   src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1600&auto=format&fit=crop"
                   alt="Architectural detail"
+                  title="Architectural detail"
                   className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent p-8 md:p-10 flex flex-col justify-end">
@@ -315,6 +319,7 @@ const Home: React.FC = () => {
                 <img
                   src="https://images.unsplash.com/photo-1510627489930-0c1b0dc58e85?q=80&w=2000&auto=format&fit=crop"
                   alt="Services Background"
+                  title="Services Background"
                   className="absolute inset-0 w-full h-full object-cover -z-10 opacity-40 group-hover:scale-105 transition-transform duration-1000"
                 />
                 <div className="relative z-10 flex flex-col items-center">

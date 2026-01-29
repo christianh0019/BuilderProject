@@ -50,6 +50,7 @@ const SEO: React.FC<SEOProps> = ({
             {/* Additional Standard Tags */}
             <meta name="robots" content="index, follow" />
             <meta name="author" content="BuilderProject" />
+            <meta name="publisher" content="BuilderProject" />
         </Helmet>
     );
 };
