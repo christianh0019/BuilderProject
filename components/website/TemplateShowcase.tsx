@@ -1,26 +1,15 @@
 
-import Hero from '../template/Hero';
-import Services from '../template/Services';
-import Process from '../template/Process';
-import Portfolio from '../template/Portfolio';
-import Testimonials from '../template/Testimonials';
-import About from '../template/About';
-import Contact from '../template/Contact';
-import Header from '../template/Header';
-import Footer from '../template/Footer';
-
 const TemplateShowcase = () => {
     return (
-        <div className="bg-white font-sans text-slate-900">
-            <Header />
-            <Hero />
-            <Services />
-            <Process />
-            <Portfolio showViewAll={false} />
-            <About />
-            <Testimonials />
-            <Contact />
-            <Footer />
+        <div className="relative w-full h-[4800px]">
+            <iframe
+                src="https://template-website-roan.vercel.app/"
+                className="w-full h-full border-none"
+                title="Template Preview"
+                tabIndex={-1}
+            />
+            {/* Transparent overlay to block clicks but allow parent scrolling */}
+            <div className="absolute inset-0 z-10 bg-transparent" />
         </div>
     );
 };
