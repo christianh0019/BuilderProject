@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { caseStudies } from '../data/caseStudies';
-import { Star, ArrowRight, Play, BookOpen, BarChart3, Youtube, ChevronRight, ChevronDown, Layout, TrendingUp, PenTool, Filter, Database, Briefcase, Mic, X, Sparkles, Code, Globe, Zap } from 'lucide-react';
+import { Star, ArrowRight, Play, BookOpen, BarChart3, Youtube, ChevronRight, ChevronDown, Layout, TrendingUp, PenTool, Filter, Database, Briefcase, Mic, X, Sparkles, Code, Globe, Zap, ShieldCheck, CheckCircle } from 'lucide-react';
 import SEO from '../components/SEO';
 
 const RevealOnScroll: React.FC<{ children: React.ReactNode, className?: string, delay?: number }> = ({ children, className = "", delay = 0 }) => {
@@ -349,19 +349,66 @@ const Home: React.FC = () => {
               </div>
 
               {/* Item 3 - Architectural Detail */}
-              <div className="group relative rounded-[2rem] md:rounded-[2.5rem] overflow-hidden shadow-2xl h-[400px] md:h-full">
-                <img
-                  src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1600&auto=format&fit=crop"
-                  alt="Architectural detail"
-                  title="Architectural detail"
-                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent p-8 md:p-10 flex flex-col justify-end">
-                  <div className="flex gap-2 mb-4">
-                    {[1, 2, 3, 4, 5].map(i => <Star key={i} size={24} className="text-yellow-400" fill="currentColor" />)}
+              {/* Item 3 - Guarantee Card */}
+              <div className="group relative rounded-[2rem] md:rounded-[2.5rem] overflow-hidden shadow-2xl h-[480px] md:h-full bg-slate-900 border border-slate-800">
+                <div className="absolute inset-0 bg-gradient-to-tr from-slate-900 via-green-900/10 to-slate-900"></div>
+
+                {/* Decorative Pattern */}
+                <div className="absolute inset-0 opacity-20" style={{ backgroundImage: 'radial-gradient(#10b981 1px, transparent 1px)', backgroundSize: '30px 30px' }}></div>
+
+                {/* Coded Graphics Area */}
+                <div className="absolute top-8 md:top-10 left-0 right-0 h-64 flex items-start justify-center p-8 group-hover:-translate-y-2 transition-transform duration-700 ease-out">
+                  {/* Shield Graphic Container */}
+                  <div className="relative w-[280px] md:w-64 h-64 flex items-center justify-center">
+                    {/* Outer Glow Ring */}
+                    <div className="absolute w-56 h-56 bg-green-500/20 rounded-full blur-3xl animate-pulse"></div>
+
+                    {/* Main Shield Shape (CSS) */}
+                    <div className="relative w-40 h-48 bg-gradient-to-b from-slate-800 to-slate-900 border border-slate-700 shadow-2xl flex items-center justify-center transform group-hover:scale-105 transition-transform duration-500"
+                      style={{ clipPath: 'polygon(50% 0, 100% 20%, 100% 80%, 50% 100%, 0 80%, 0 20%)' }}>
+
+                      <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-green-500/10 to-transparent"></div>
+
+                      {/* Inner Icon */}
+                      <div className="bg-green-500/20 p-4 rounded-full border border-green-500/30 shadow-[0_0_20px_rgba(34,197,94,0.3)]">
+                        <ShieldCheck size={48} className="text-green-400" />
+                      </div>
+                    </div>
+
+                    {/* Floating "Approved" Badge */}
+                    <div className="absolute top-10 -right-4 md:-right-8 bg-white text-slate-900 px-4 py-1.5 rounded-full text-xs font-bold shadow-xl border-2 border-green-100 flex items-center gap-1.5 animate-bounce" style={{ animationDuration: '3s' }}>
+                      <CheckCircle size={14} className="text-green-600" fill="currentColor" />
+                      Guaranteed
+                    </div>
                   </div>
-                  <p className="text-white text-xl md:text-2xl font-serif font-medium leading-tight mb-6">"Smart ideas, beautiful execution. A true partner."</p>
-                  <Link to="/case-studies" className="bg-white/20 backdrop-blur-md text-white px-8 py-3 rounded-full font-bold text-base w-max hover:bg-white hover:text-slate-900 transition-all">View Case Study</Link>
+                </div>
+
+                <div className="absolute bottom-0 left-0 w-full p-8 md:p-10 z-10 flex flex-col justify-end h-full pointer-events-none">
+                  {/* Gradient fade */}
+                  <div className="absolute bottom-0 left-0 w-full h-2/3 bg-gradient-to-t from-slate-900 via-slate-900/90 to-transparent -z-10"></div>
+
+                  <div className="mt-auto pointer-events-auto">
+                    <div className="flex gap-1 mb-3">
+                      {[1, 2, 3, 4, 5].map(i => <Star key={i} size={16} className="text-green-400" fill="currentColor" />)}
+                    </div>
+                    <h3 className="text-3xl md:text-3xl font-serif font-bold text-white mb-2 leading-tight">Performance Guarantee</h3>
+                    <p className="text-slate-300 font-medium mb-4">We stand behind our work.</p>
+
+                    <ul className="space-y-2 mb-6 text-sm text-slate-400">
+                      <li className="flex items-start gap-2">
+                        <CheckCircle size={16} className="text-green-500 shrink-0 mt-0.5" />
+                        <span><strong className="text-white">30-Day Money Back:</strong> If you're not satisfied, we refund you.</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <CheckCircle size={16} className="text-green-500 shrink-0 mt-0.5" />
+                        <span><strong className="text-white">You Own It All:</strong> No leasing. You own every asset 100%.</span>
+                      </li>
+                    </ul>
+
+                    <Link to="/contact" className="inline-flex items-center text-white bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white hover:text-slate-900 px-6 py-3 rounded-full font-bold text-sm transition-all">
+                      Get Started <ArrowRight size={16} className="ml-2" />
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>
