@@ -73,8 +73,8 @@ const FoundationProgram: React.FC = () => {
 
                     {/* Visual: Before/After */}
                     <div className="relative max-w-6xl mx-auto grid md:grid-cols-2 gap-8 items-center">
-                        <div className="bg-slate-800 p-6 rounded-2xl border-2 border-red-500 relative opacity-75 grayscale hover:grayscale-0 transition-all duration-500 shadow-[0_0_20px_rgba(239,68,68,0.3)]">
-                            <div className="absolute top-4 right-4 bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full z-20 shadow-lg tracking-wider">BEFORE</div>
+                        <div className="bg-slate-800 p-6 rounded-2xl border-4 border-red-600 relative opacity-75 grayscale hover:grayscale-0 transition-all duration-500 shadow-[0_0_30px_rgba(220,38,38,0.5)]">
+                            <div className="absolute top-4 right-4 bg-red-600 text-white text-xs font-bold px-4 py-1.5 rounded-full z-20 shadow-lg tracking-wider border border-white/20">BEFORE</div>
                             <div className="bg-slate-900 rounded-lg p-4 mb-4 border border-slate-700">
                                 <div className="h-4 w-3/4 bg-slate-700 rounded mb-2"></div>
                                 <div className="h-3 w-1/2 bg-slate-800 rounded mb-6"></div>
@@ -97,10 +97,10 @@ const FoundationProgram: React.FC = () => {
                                 {/* Dashboard Header */}
                                 <div className="flex items-center justify-between mb-6 pb-4 border-b border-slate-800">
                                     <div className="flex items-center gap-3">
-                                        <div className="w-8 h-8 rounded-full bg-white p-[2px] overflow-hidden">
-                                            <img src={versoLogo} alt="Verso" className="w-full h-full object-cover rounded-full" />
+                                        <div className="w-8 h-8 rounded-full bg-white/10 p-[2px] overflow-hidden flex items-center justify-center">
+                                            <img src="/images/foundation-icon.png" alt="Foundation" className="w-full h-full object-contain" />
                                         </div>
-                                        <span className="text-white font-bold">Website & Funnels</span>
+                                        <span className="text-white font-bold">The Foundation</span>
                                     </div>
                                     <div className="flex items-center gap-2 text-emerald-400 text-xs font-bold bg-emerald-900/30 px-2 py-1 rounded">
                                         <div className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></div> Active
@@ -130,7 +130,7 @@ const FoundationProgram: React.FC = () => {
                                     <div className="flex items-center justify-between bg-slate-800/50 p-3 rounded-lg border border-slate-700/50">
                                         <div className="flex items-center gap-3">
                                             <Globe size={16} className="text-purple-400" />
-                                            <span className="text-slate-300 text-sm">Website</span>
+                                            <span className="text-slate-300 text-sm">Website & Funnels</span>
                                         </div>
                                         <CheckCircle size={16} className="text-emerald-500" />
                                     </div>
