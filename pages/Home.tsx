@@ -265,16 +265,16 @@ const Home: React.FC = () => {
             {/* Mobile Fix: h-auto instead of fixed height */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 h-auto md:h-[600px]">
               {/* Item 1 - AI Custom Websites */}
-              <div className="group relative rounded-[2rem] md:rounded-[2.5rem] overflow-hidden shadow-2xl h-[400px] md:h-full bg-slate-900 border border-slate-800">
+              <div className="group relative rounded-[2rem] md:rounded-[2.5rem] overflow-hidden shadow-2xl h-[480px] md:h-full bg-slate-900 border border-slate-800">
                 <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900/10 to-slate-900"></div>
 
                 {/* Decorative Pattern */}
                 <div className="absolute inset-0 opacity-20" style={{ backgroundImage: 'radial-gradient(#6366f1 1px, transparent 1px)', backgroundSize: '30px 30px' }}></div>
 
                 {/* Coded Graphics Area */}
-                <div className="absolute top-10 left-0 right-0 h-64 flex items-center justify-center p-8 group-hover:-translate-y-2 transition-transform duration-700 ease-out">
+                <div className="absolute top-8 md:top-10 left-0 right-0 h-64 flex items-start justify-center p-8 group-hover:-translate-y-2 transition-transform duration-700 ease-out">
                   {/* Mock Browser/Editor Window */}
-                  <div className="relative w-full max-w-xs bg-slate-800/80 backdrop-blur-xl rounded-xl border border-slate-700/50 shadow-2xl overflow-hidden transform rotate-[-2deg] group-hover:rotate-0 transition-all duration-500">
+                  <div className="relative w-full max-w-[280px] md:max-w-xs bg-slate-800/80 backdrop-blur-xl rounded-xl border border-slate-700/50 shadow-2xl overflow-hidden transform rotate-[-2deg] scale-90 md:scale-100 group-hover:rotate-0 transition-all duration-500">
                     {/* Header */}
                     <div className="h-8 bg-slate-700/50 border-b border-slate-700/50 flex items-center px-4 gap-2">
                       <div className="w-2.5 h-2.5 rounded-full bg-red-400"></div>
@@ -312,9 +312,13 @@ const Home: React.FC = () => {
                 </div>
 
                 <div className="absolute bottom-0 left-0 w-full p-8 md:p-10 z-10 flex flex-col justify-end h-full pointer-events-none">
-                  <div className="mt-auto pointer-events-auto">
+                  {/* Gradient fade to ensure text readability if overlaps */}
+                  <div className="absolute bottom-0 left-0 w-full h-2/3 bg-gradient-to-t from-slate-900 via-slate-900/80 to-transparent -z-10"></div>
+
+                  <div className="mt-auto pointer-events-auto relative">
                     <h3 className="text-3xl md:text-3xl font-serif font-bold text-white mb-2 leading-tight">New AI Custom Websites</h3>
-                    <p className="text-slate-400 font-medium mb-6">High-performance sites designed to convert.</p>
+                    <p className="text-slate-300 font-medium mb-2">High-performance sites designed to convert.</p>
+                    <p className="text-purple-300 text-sm font-bold mb-6">Websites that would've cost 30k can now be done for 1/10th of that.</p>
                     <Link to="/services/website-design" className="inline-flex items-center text-white bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white hover:text-slate-900 px-6 py-3 rounded-full font-bold text-sm transition-all">
                       Learn More <ArrowRight size={16} className="ml-2" />
                     </Link>
