@@ -474,77 +474,81 @@ const Home: React.FC = () => {
               </Link>
             </RevealOnScroll>
           </div>
-
-          {/* New Case Studies Section (Below Resources) */}
-          <div className="mt-24 mb-12">
-            <RevealOnScroll>
-              <h2 className="text-4xl md:text-5xl font-serif font-bold text-slate-900 text-center mb-16">Real Results. Real Builders.</h2>
-            </RevealOnScroll>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {caseStudies.slice(0, 3).map((study) => (
-                <div key={study.id} className="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
-                  {study.videoUrl ? (
-                    <div className="mb-6 rounded-xl overflow-hidden bg-slate-100 shadow-inner block">
-                      <video
-                        src={study.videoUrl}
-                        poster={study.imageUrl}
-                        controls
-                        playsInline
-                        className="w-full h-auto"
-                      />
-                    </div>
-                  ) : (
-                    <div className="flex items-center gap-4 mb-4">
-                      <div className="w-12 h-12 rounded-full overflow-hidden bg-slate-100 shrink-0">
-                        <img src={study.imageUrl} alt={study.builderName} className="w-full h-full object-cover" />
-                      </div>
-                      <div>
-                        <div className="font-bold text-slate-900 leading-tight">{study.builderName}</div>
-                        <div className="text-sm text-slate-500">{study.location}</div>
-                      </div>
-                    </div>
-                  )}
-
-                  {study.videoUrl && (
-                    <div className="mb-3">
-                      <div className="font-bold text-slate-900 leading-tight text-lg">{study.builderName}</div>
-                      <div className="text-sm text-slate-500">{study.location}</div>
-                    </div>
-                  )}
-
-                  <h3 className="font-serif font-bold text-lg text-slate-900 mb-3">{study.title}</h3>
-
-                  <div className="grid grid-cols-2 gap-x-4 gap-y-2 mb-4 bg-slate-50 p-3 rounded-lg">
-                    {study.results.slice(0, 2).map((res, i) => (
-                      <div key={i}>
-                        <div className="text-[10px] text-slate-500 uppercase tracking-wide font-bold">{res.label}</div>
-                        <div className="font-bold text-slate-800">{res.value}</div>
-                      </div>
-                    ))}
-                  </div>
-
-                  {study.testimonial && (
-                    <blockquote className="text-slate-600 text-sm italic border-l-2 border-purple-200 pl-3">
-                      "{study.testimonial.quote}"
-                    </blockquote>
-                  )}
-
-                  <Link to={`/case-studies`} className="block w-full text-center mt-6 py-3 rounded-xl border border-purple-200 text-purple-600 font-bold text-sm hover:bg-purple-50 transition-colors">
-                    View Full Case Study
-                  </Link>
-                </div>
-              ))}
-            </div>
-
-            <div className="text-center mt-12">
-              <Link to="/case-studies" className="inline-flex items-center text-slate-900 bg-white border-2 border-slate-200 px-8 py-4 rounded-full font-bold text-lg hover:bg-slate-50 hover:border-purple-200 transition-all hover:-translate-y-1 shadow-lg">
-                View All Case Studies <ArrowRight className="ml-2" />
-              </Link>
-            </div>
-          </div>
         </div>
       </section >
+
+      {/* New Case Studies Section (Below Resources) */}
+      <section className="py-24 bg-slate-50">
+        <div className="container mx-auto px-6">
+          <RevealOnScroll>
+            <h2 className="text-4xl md:text-5xl font-serif font-bold text-slate-900 text-center mb-6">Real Results. Real Builders.</h2>
+            <p className="text-slate-600 text-center text-lg md:text-xl max-w-2xl mx-auto mb-16">See how we're helping custom builders across the country fill their pipelines.</p>
+          </RevealOnScroll>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {caseStudies.slice(0, 3).map((study) => (
+              <div key={study.id} className="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                {study.videoUrl ? (
+                  <div className="mb-6 rounded-xl overflow-hidden bg-slate-100 shadow-inner block relative group">
+                    <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors pointer-events-none z-10"></div>
+                    <video
+                      src={study.videoUrl}
+                      poster={study.imageUrl}
+                      controls
+                      playsInline
+                      className="w-full h-auto"
+                    />
+                  </div>
+                ) : (
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className="w-12 h-12 rounded-full overflow-hidden bg-slate-100 shrink-0">
+                      <img src={study.imageUrl} alt={study.builderName} className="w-full h-full object-cover" />
+                    </div>
+                    <div>
+                      <div className="font-bold text-slate-900 leading-tight">{study.builderName}</div>
+                      <div className="text-sm text-slate-500">{study.location}</div>
+                    </div>
+                  </div>
+                )}
+
+                {study.videoUrl && (
+                  <div className="mb-3">
+                    <div className="font-bold text-slate-900 leading-tight text-lg">{study.builderName}</div>
+                    <div className="text-sm text-slate-500">{study.location}</div>
+                  </div>
+                )}
+
+                <h3 className="font-serif font-bold text-lg text-slate-900 mb-3">{study.title}</h3>
+
+                <div className="grid grid-cols-2 gap-x-4 gap-y-2 mb-4 bg-slate-50 p-3 rounded-lg border border-slate-100">
+                  {study.results.slice(0, 2).map((res, i) => (
+                    <div key={i}>
+                      <div className="text-[10px] text-slate-500 uppercase tracking-wide font-bold">{res.label}</div>
+                      <div className="font-bold text-slate-800">{res.value}</div>
+                    </div>
+                  ))}
+                </div>
+
+                {study.testimonial && study.id !== 'open-prairie' && (
+                  <blockquote className="text-slate-600 text-sm italic border-l-2 border-purple-200 pl-3">
+                    "{study.testimonial.quote}"
+                  </blockquote>
+                )}
+
+                <Link to={`/case-studies`} className="block w-full text-center mt-6 py-3 rounded-xl border border-purple-200 text-purple-600 font-bold text-sm hover:bg-purple-600 hover:text-white transition-colors">
+                  View Full Case Study
+                </Link>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center mt-12">
+            <Link to="/case-studies" className="inline-flex items-center text-slate-900 bg-white border-2 border-slate-200 px-8 py-4 rounded-full font-bold text-lg hover:bg-purple-50 hover:border-purple-200 hover:text-purple-900 transition-all hover:-translate-y-1 shadow-lg">
+              View All Case Studies <ArrowRight className="ml-2" />
+            </Link>
+          </div>
+        </div>
+      </section>
 
       {/* FAQ Section */}
       < section className="py-20 md:py-32 bg-slate-50" >
