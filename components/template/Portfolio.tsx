@@ -11,19 +11,19 @@ const Portfolio = ({ showViewAll = true }: { showViewAll?: boolean }) => {
                     {
                         title: "The Timberline Retreat",
                         category: "Mountain Modern",
-                        mainImage: "/images/eagle-rock-update.png",
+                        mainImage: "/images/spotlights/spotlight-5.jpg",
                         slug: "timberline-retreat"
                     },
                     {
                         title: "The Stone Creek Estate",
                         category: "Luxury Estate",
-                        mainImage: "/images/stonebrook-home.png",
+                        mainImage: "/images/spotlights/spotlight-2.png",
                         slug: "stone-creek-estate"
                     },
                     {
                         title: "The Black Forest Estate",
                         category: "Custom Estate",
-                        mainImage: "/images/homestead-hero.png",
+                        mainImage: "/images/spotlights/spotlight-6.png",
                         slug: "black-forest-estate"
                     }
                 ].map((project, index) => (

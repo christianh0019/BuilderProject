@@ -6,7 +6,7 @@ const Hero = () => {
     return (
         <section className="relative h-screen min-h-[700px] flex items-center justify-center bg-slate-900 text-white overflow-hidden">
             {/* Parallax Background */}
-            <div className="absolute inset-0 bg-[url('/images/homestead-hero.png')] bg-cover bg-center bg-fixed opacity-50 z-0 scale-105 animate-slow-zoom"></div>
+            <div className="absolute inset-0 bg-[url('/images/spotlights/spotlight-6.png')] bg-cover bg-center bg-fixed opacity-50 z-0 scale-105 animate-slow-zoom"></div>
             <div className="absolute inset-0 bg-gradient-to-b from-slate-900/30 to-slate-900/90 z-10"></div>
 
             <div className="container mx-auto px-6 relative z-20 text-center max-w-5xl">

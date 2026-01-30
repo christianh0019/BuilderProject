@@ -7,7 +7,7 @@ const About = () => {
                     <div className="lg:w-1/2 relative">
                         <div className="absolute -top-10 -left-10 w-40 h-40 bg-[#2B70B6]/20 rounded-full blur-3xl"></div>
                         <img
-                            src="/images/modern_kitchen.png"
+                            src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=2053&auto=format&fit=crop"
                             alt="Luxury Custom Home Interior"
                             className="w-full h-auto shadow-2xl relative z-10"
                         />

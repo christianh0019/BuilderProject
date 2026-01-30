@@ -4,7 +4,7 @@ import { Phone } from 'lucide-react';
 const Contact = () => {
     return (
         <section className="py-32 bg-[#2B4677] text-white text-center relative overflow-hidden">
-            <div className="absolute inset-0 bg-[url('/images/eagle-rock-update.png')] bg-cover bg-center opacity-10"></div>
+            <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center opacity-10"></div>
             <div className="container mx-auto px-6 relative z-10">
                 <h2 className="text-5xl md:text-6xl font-serif font-bold mb-8">Ready to Start Your Legacy?</h2>
                 <p className="text-xl text-slate-300 mb-12 max-w-2xl mx-auto">Schedule a free consultation to discuss your project, budget, and timeline with our expert team.</p>

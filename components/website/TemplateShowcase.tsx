@@ -6,10 +6,13 @@ import Portfolio from '../template/Portfolio';
 import Testimonials from '../template/Testimonials';
 import About from '../template/About';
 import Contact from '../template/Contact';
+import Header from '../template/Header';
+import Footer from '../template/Footer';
 
 const TemplateShowcase = () => {
     return (
-        <div className="bg-white">
+        <div className="bg-white font-sans text-slate-900">
+            <Header />
             <Hero />
             <Services />
             <Process />
@@ -17,6 +20,7 @@ const TemplateShowcase = () => {
             <About />
             <Testimonials />
             <Contact />
+            <Footer />
         </div>
     );
 };
