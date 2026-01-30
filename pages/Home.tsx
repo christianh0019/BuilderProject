@@ -297,7 +297,7 @@ const Home: React.FC = () => {
                   <div className="w-20 h-20 md:w-24 md:h-24 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center mx-auto mb-6 md:mb-8 hover:bg-white/20 transition-all hover:scale-110 shadow-lg border border-white/20">
                     <Play size={40} className="text-white ml-2" fill="currentColor" />
                   </div>
-                  <p className="text-2xl md:text-3xl font-serif text-white italic leading-tight">"Project Alpha transformed our digital presence completely."</p>
+                  <p className="text-2xl md:text-3xl font-serif text-white italic leading-tight">"Your Custom Home / Remodeling Business Isn't Growing—Here's Why"</p>
                 </div>
               </div>
 
