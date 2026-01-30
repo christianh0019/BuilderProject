@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { caseStudies } from '../data/caseStudies';
 import { Star, ArrowRight, Play, BookOpen, BarChart3, Youtube, ChevronRight, ChevronDown, Layout, TrendingUp, PenTool, Filter, Database, Briefcase, Mic } from 'lucide-react';
 import SEO from '../components/SEO';
 
@@ -356,60 +357,11 @@ const Home: React.FC = () => {
           </div>
 
 
-          {/* New Case Studies Section */}
-          <div className="mb-24">
-            <RevealOnScroll>
-              <h2 className="text-4xl md:text-5xl font-serif font-bold text-slate-900 text-center mb-16">Real Results. Real Builders.</h2>
-            </RevealOnScroll>
-
-            <div className="grid md:grid-cols-3 gap-8">
-              {[
-                {
-                  img: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=800&auto=format&fit=crop",
-                  title: "The Modern Farmhouse",
-                  stat: "+240% Lead Volume",
-                  desc: "How Stonebrook Homes filled their pipeline in 90 days."
-                },
-                {
-                  img: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800&auto=format&fit=crop",
-                  title: "Luxury Renovation",
-                  stat: "14 High-Value Bids",
-                  desc: "Targeting $500k+ remodels with precision ads."
-                },
-                {
-                  img: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=800&auto=format&fit=crop",
-                  title: "Spec Home Sold",
-                  stat: "Sold in 22 Days",
-                  desc: "Pre-selling a development before ground break."
-                }
-              ].map((study, i) => (
-                <RevealOnScroll key={i} delay={i * 100}>
-                  <Link to="/case-studies" className="group block bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border border-slate-100">
-                    <div className="relative h-64 overflow-hidden">
-                      <div className="absolute top-4 left-4 bg-purple-600 text-white text-xs font-bold px-3 py-1 rounded-full z-10">CASE STUDY</div>
-                      <img src={study.img} alt={study.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
-                      <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/80 to-transparent p-6">
-                        <div className="text-white font-bold text-xl">{study.stat}</div>
-                      </div>
-                    </div>
-                    <div className="p-6">
-                      <h3 className="text-xl font-bold text-slate-900 mb-2 font-serif">{study.title}</h3>
-                      <p className="text-slate-600 text-sm mb-4">{study.desc}</p>
-                      <div className="flex items-center text-purple-600 font-bold text-sm">
-                        Read Story <ArrowRight size={16} className="ml-2 group-hover:translate-x-1 transition-transform" />
-                      </div>
-                    </div>
-                  </Link>
-                </RevealOnScroll>
-              ))}
-            </div>
-          </div>
-
           {/* Resources Grid */}
           <div className="grid md:grid-cols-2 gap-6 md:gap-10">
             {/* 1. Podcast (Replaces Case Studies) */}
             <RevealOnScroll delay={100}>
-              <a href="https://pca.st/podcast" target="_blank" rel="noopener noreferrer" className="group relative rounded-[2rem] md:rounded-[3rem] overflow-hidden aspect-[4/5] md:aspect-auto md:h-[500px] bg-indigo-900 border border-indigo-700 shadow-xl hover:shadow-2xl hover:shadow-indigo-900/20 hover:-translate-y-2 transition-all duration-500 w-full block flex flex-col justify-between p-8 md:p-12">
+              <Link to="/podcast" className="group relative rounded-[2rem] md:rounded-[3rem] overflow-hidden aspect-[4/5] md:aspect-auto md:h-[500px] bg-indigo-900 border border-indigo-700 shadow-xl hover:shadow-2xl hover:shadow-indigo-900/20 hover:-translate-y-2 transition-all duration-500 w-full block flex flex-col justify-between p-8 md:p-12">
                 <div className="absolute inset-0 bg-gradient-to-br from-black/20 to-transparent"></div>
                 <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
 
@@ -424,7 +376,7 @@ const Home: React.FC = () => {
                 <div className="relative z-10 flex items-center font-bold text-white text-lg md:text-xl group-hover:text-indigo-200 transition-colors">
                   Listen Now <ArrowRight size={24} className="ml-3 group-hover:translate-x-2 transition-transform" />
                 </div>
-              </a>
+              </Link>
             </RevealOnScroll>
 
             {/* 2. Pricing/Programs */}
@@ -444,9 +396,9 @@ const Home: React.FC = () => {
               </Link>
             </RevealOnScroll>
 
-            {/* 3. YouTube (Links to Insights) */}
+            {/* 3. YouTube (Links to Blog) */}
             <RevealOnScroll delay={300}>
-              <Link to="/insights" className="group relative rounded-[2rem] md:rounded-[3rem] overflow-hidden aspect-[4/5] md:aspect-auto md:h-[500px] bg-[#FF0000] border border-red-600 shadow-xl hover:shadow-2xl hover:shadow-red-900/20 hover:-translate-y-2 transition-all duration-500 flex flex-col justify-between p-8 md:p-12 w-full block">
+              <Link to="/blog" className="group relative rounded-[2rem] md:rounded-[3rem] overflow-hidden aspect-[4/5] md:aspect-auto md:h-[500px] bg-[#FF0000] border border-red-600 shadow-xl hover:shadow-2xl hover:shadow-red-900/20 hover:-translate-y-2 transition-all duration-500 flex flex-col justify-between p-8 md:p-12 w-full block">
                 <div className="absolute inset-0 bg-gradient-to-br from-black/20 to-transparent"></div>
                 <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
                 <div className="relative z-10">
@@ -487,6 +439,75 @@ const Home: React.FC = () => {
                 </div>
               </Link>
             </RevealOnScroll>
+          </div>
+
+          {/* New Case Studies Section (Below Resources) */}
+          <div className="mt-24 mb-12">
+            <RevealOnScroll>
+              <h2 className="text-4xl md:text-5xl font-serif font-bold text-slate-900 text-center mb-16">Real Results. Real Builders.</h2>
+            </RevealOnScroll>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {caseStudies.slice(0, 3).map((study) => (
+                <div key={study.id} className="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
+                  {study.videoUrl ? (
+                    <div className="mb-6 rounded-xl overflow-hidden bg-slate-100 shadow-inner block">
+                      <video
+                        src={study.videoUrl}
+                        poster={study.imageUrl}
+                        controls
+                        playsInline
+                        className="w-full h-auto"
+                      />
+                    </div>
+                  ) : (
+                    <div className="flex items-center gap-4 mb-4">
+                      <div className="w-12 h-12 rounded-full overflow-hidden bg-slate-100 shrink-0">
+                        <img src={study.imageUrl} alt={study.builderName} className="w-full h-full object-cover" />
+                      </div>
+                      <div>
+                        <div className="font-bold text-slate-900 leading-tight">{study.builderName}</div>
+                        <div className="text-sm text-slate-500">{study.location}</div>
+                      </div>
+                    </div>
+                  )}
+
+                  {study.videoUrl && (
+                    <div className="mb-3">
+                      <div className="font-bold text-slate-900 leading-tight text-lg">{study.builderName}</div>
+                      <div className="text-sm text-slate-500">{study.location}</div>
+                    </div>
+                  )}
+
+                  <h3 className="font-serif font-bold text-lg text-slate-900 mb-3">{study.title}</h3>
+
+                  <div className="grid grid-cols-2 gap-x-4 gap-y-2 mb-4 bg-slate-50 p-3 rounded-lg">
+                    {study.results.slice(0, 2).map((res, i) => (
+                      <div key={i}>
+                        <div className="text-[10px] text-slate-500 uppercase tracking-wide font-bold">{res.label}</div>
+                        <div className="font-bold text-slate-800">{res.value}</div>
+                      </div>
+                    ))}
+                  </div>
+
+                  {study.testimonial && (
+                    <blockquote className="text-slate-600 text-sm italic border-l-2 border-purple-200 pl-3">
+                      "{study.testimonial.quote}"
+                    </blockquote>
+                  )}
+
+                  <Link to={`/case-studies`} className="block w-full text-center mt-6 py-3 rounded-xl border border-purple-200 text-purple-600 font-bold text-sm hover:bg-purple-50 transition-colors">
+                    View Full Case Study
+                  </Link>
+                </div>
+              ))}
+            </div>
+
+            <div className="text-center mt-12">
+              <Link to="/case-studies" className="inline-flex items-center text-slate-900 bg-white border-2 border-slate-200 px-8 py-4 rounded-full font-bold text-lg hover:bg-slate-50 hover:border-purple-200 transition-all hover:-translate-y-1 shadow-lg">
+                View All Case Studies <ArrowRight className="ml-2" />
+              </Link>
+            </div>
           </div>
         </div>
       </section >
