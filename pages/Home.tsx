@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { caseStudies } from '../data/caseStudies';
-import { Star, ArrowRight, Play, BookOpen, BarChart3, Youtube, ChevronRight, ChevronDown, Layout, TrendingUp, PenTool, Filter, Database, Briefcase, Mic } from 'lucide-react';
+import { Star, ArrowRight, Play, BookOpen, BarChart3, Youtube, ChevronRight, ChevronDown, Layout, TrendingUp, PenTool, Filter, Database, Briefcase, Mic, X } from 'lucide-react';
 import SEO from '../components/SEO';
 
 const RevealOnScroll: React.FC<{ children: React.ReactNode, className?: string, delay?: number }> = ({ children, className = "", delay = 0 }) => {
@@ -35,6 +35,34 @@ const RevealOnScroll: React.FC<{ children: React.ReactNode, className?: string, 
   );
 };
 
+const VideoModal: React.FC<{ videoId: string | null, onClose: () => void }> = ({ videoId, onClose }) => {
+  if (!videoId) return null;
+
+  return (
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 md:p-8">
+      <div
+        className="absolute inset-0 bg-black/90 backdrop-blur-sm"
+        onClick={onClose}
+      ></div>
+      <div className="relative w-full max-w-5xl aspect-video bg-black rounded-2xl overflow-hidden shadow-2xl animate-in fade-in zoom-in duration-300">
+        <button
+          onClick={onClose}
+          className="absolute top-4 right-4 text-white/50 hover:text-white bg-black/50 hover:bg-black/80 rounded-full p-2 transition-all z-10"
+        >
+          <X size={24} />
+        </button>
+        <iframe
+          src={`https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1`}
+          title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowFullScreen
+          className="w-full h-full"
+        ></iframe>
+      </div>
+    </div>
+  );
+};
+
 const AccordionItem = ({ question, answer, isOpen, onClick }: { question: string, answer: string, isOpen: boolean, onClick: () => void }) => {
   return (
     <div className="border border-slate-200 rounded-2xl bg-white overflow-hidden mb-4 transition-all duration-300 hover:shadow-md">
@@ -60,6 +88,7 @@ const AccordionItem = ({ question, answer, isOpen, onClick }: { question: string
 
 const Home: React.FC = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
+  const [selectedVideo, setSelectedVideo] = useState<string | null>(null);
 
   const faqData = [
     {
@@ -140,6 +169,8 @@ const Home: React.FC = () => {
         keywords="marketing for custom home builders, digital marketing for remodelers, construction marketing agency, builder seo, contractor website design, facebook ads for builders"
         canonical="/"
       />
+
+      <VideoModal videoId={selectedVideo} onClose={() => setSelectedVideo(null)} />
 
       {/* Hero Section */}
       <section className="pt-32 pb-20 lg:pt-48 lg:pb-32 relative overflow-hidden">
@@ -249,7 +280,10 @@ const Home: React.FC = () => {
               </div>
 
               {/* Item 2 - Central Focus - Construction/Builder */}
-              <div className="md:col-span-1 group relative rounded-[2rem] md:rounded-[2.5rem] overflow-hidden bg-slate-900 flex items-center justify-center shadow-2xl h-[400px] md:h-full">
+              <div
+                className="md:col-span-1 group relative rounded-[2rem] md:rounded-[2.5rem] overflow-hidden bg-slate-900 flex items-center justify-center shadow-2xl h-[400px] md:h-full cursor-pointer"
+                onClick={() => setSelectedVideo("CNngG1p-HQQ")}
+              >
                 <div className="absolute inset-0 opacity-60">
                   <img
                     src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?q=80&w=1600&auto=format&fit=crop"
@@ -258,9 +292,9 @@ const Home: React.FC = () => {
                     className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
                   />
                 </div>
-                <div className="absolute inset-0 bg-slate-900/40"></div>
+                <div className="absolute inset-0 bg-slate-900/40 group-hover:bg-slate-900/30 transition-all"></div>
                 <div className="relative z-10 text-center p-8 md:p-10">
-                  <div className="w-20 h-20 md:w-24 md:h-24 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center mx-auto mb-6 md:mb-8 cursor-pointer hover:bg-white/20 transition-all hover:scale-110">
+                  <div className="w-20 h-20 md:w-24 md:h-24 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center mx-auto mb-6 md:mb-8 hover:bg-white/20 transition-all hover:scale-110 shadow-lg border border-white/20">
                     <Play size={40} className="text-white ml-2" fill="currentColor" />
                   </div>
                   <p className="text-2xl md:text-3xl font-serif text-white italic leading-tight">"Project Alpha transformed our digital presence completely."</p>
