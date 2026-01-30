@@ -73,7 +73,7 @@ const FoundationProgram: React.FC = () => {
 
                     {/* Visual: Before/After */}
                     <div className="relative max-w-6xl mx-auto grid md:grid-cols-2 gap-8 items-center">
-                        <div className="bg-slate-800 p-6 rounded-2xl border-4 border-red-600 relative opacity-75 grayscale hover:grayscale-0 transition-all duration-500 shadow-[0_0_30px_rgba(220,38,38,0.5)]">
+                        <div className="bg-slate-800 p-6 rounded-2xl border border-red-500 relative shadow-[0_0_30px_rgba(220,38,38,0.5)]">
                             <div className="absolute top-4 right-4 bg-red-600 text-white text-xs font-bold px-4 py-1.5 rounded-full z-20 shadow-lg tracking-wider border border-white/20">BEFORE</div>
                             <div className="bg-slate-900 rounded-lg p-4 mb-4 border border-slate-700">
                                 <div className="h-4 w-3/4 bg-slate-700 rounded mb-2"></div>
@@ -753,10 +753,6 @@ const FoundationProgram: React.FC = () => {
             {/* 9. Investment & FAQ */}
             <section className="py-24 bg-white">
                 <div className="container mx-auto px-6 max-w-3xl">
-                    <div className="text-center mb-16">
-                        <div className="text-5xl font-bold text-slate-900 mb-4">$4,997</div>
-                        <div className="text-xl text-slate-500">One-Time Investment. Lifetime Stats.</div>
-                    </div>
 
                     <h2 className="text-3xl font-serif font-bold text-slate-900 mb-12 text-center">Common Questions</h2>
                     <div className="space-y-4">
