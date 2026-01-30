@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Star, ArrowRight, Play, BookOpen, BarChart3, Youtube, ChevronRight, ChevronDown } from 'lucide-react';
+import { Star, ArrowRight, Play, BookOpen, BarChart3, Youtube, ChevronRight, ChevronDown, Layout, TrendingUp, PenTool, Filter, Database, Briefcase } from 'lucide-react';
 import SEO from '../components/SEO';
 
 const RevealOnScroll: React.FC<{ children: React.ReactNode, className?: string, delay?: number }> = ({ children, className = "", delay = 0 }) => {
@@ -326,9 +326,27 @@ const Home: React.FC = () => {
                 <div className="relative z-10 flex flex-col items-center">
                   <span className="inline-block py-2 px-6 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white text-xs md:text-sm font-bold tracking-widest uppercase mb-6 md:mb-8">Comprehensive Growth</span>
                   <h2 className="text-4xl md:text-8xl font-serif font-bold text-white mb-6 md:mb-10 leading-tight">Everything You Need <br /> To Dominate</h2>
-                  <p className="text-lg md:text-2xl text-slate-200 max-w-3xl mx-auto mb-10 md:mb-14 font-light">
+                  <p className="text-lg md:text-2xl text-slate-200 max-w-3xl mx-auto mb-12 font-light">
                     From world-class website design to automated lead generation, we offer a comprehensive suite of services dedicated specifically to custom home builders.
                   </p>
+
+                  {/* Service Grid */}
+                  <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 w-full max-w-5xl mb-10">
+                    {[
+                      { icon: Layout, label: "Website Design", link: "/services/website-design" },
+                      { icon: TrendingUp, label: "Paid Advertising", link: "/services/paid-advertising" },
+                      { icon: PenTool, label: "Content Marketing", link: "/services/content-marketing" },
+                      { icon: Filter, label: "Funnel Development", link: "/services/funnel-development" },
+                      { icon: Database, label: "CRM Deployment", link: "/services/crm-deployment" },
+                      { icon: Briefcase, label: "Sales Processes", link: "/services/sales-processes" }
+                    ].map((service, i) => (
+                      <Link key={i} to={service.link} className="group flex flex-col items-center justify-center p-6 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 hover:-translate-y-1 transition-all backdrop-blur-sm">
+                        <service.icon size={32} className="text-purple-300 mb-3 group-hover:text-white transition-colors" />
+                        <span className="text-base md:text-lg font-bold text-white text-center">{service.label}</span>
+                      </Link>
+                    ))}
+                  </div>
+
                   <Link to="/services" className="inline-flex items-center bg-white text-slate-900 px-8 py-4 md:px-12 md:py-6 rounded-full font-bold text-lg md:text-xl hover:bg-slate-200 transition-all hover:scale-105 hover:shadow-2xl">
                     View All Services <ChevronRight className="ml-2" />
                   </Link>
