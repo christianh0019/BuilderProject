@@ -286,9 +286,9 @@ const Home: React.FC = () => {
               >
                 <div className="absolute inset-0 opacity-60">
                   <img
-                    src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?q=80&w=1600&auto=format&fit=crop"
-                    alt="Luxury Modern Home Exterior"
-                    title="Luxury Modern Home Exterior"
+                    src="/images/hero-video-thumb.jpg"
+                    alt="Builder Project Hero Video"
+                    title="Builder Project Hero Video"
                     className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
                   />
                 </div>
