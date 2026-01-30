@@ -598,7 +598,6 @@ const Home: React.FC = () => {
               if (study.id === 'schwanz') timeline = "5 Months";
 
               return (
-                return (
                 <div key={study.id} className="bg-white p-6 rounded-2xl border border-white/10 shadow-xl hover:shadow-2xl hover:shadow-purple-500/10 hover:-translate-y-2 transition-all duration-300 flex flex-col h-full relative group">
                   {/* Hover Glow Effect */}
                   <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl opacity-0 group-hover:opacity-100 transition duration-500 blur opacity-25 -z-10"></div>
