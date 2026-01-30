@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { ArrowRight, CheckCircle, ChevronDown, ChevronUp, Layout, MousePointerClick, Search, Smartphone, Users, Zap, Clock, TrendingUp, AlertTriangle, ShieldCheck, CheckCircle2, Star, MapPin, MessageSquare, BarChart3, Globe, LineChart } from 'lucide-react';
 import BrowserFrame from '../../components/ui/BrowserFrame';
-import VersoShowcase from '../../components/website/VersoShowcase';
+import TemplateShowcase from '../../components/website/TemplateShowcase';
+// import VersoShowcase from '../../components/website/VersoShowcase';
 import Modal from '../../components/ui/Modal';
 
 // Images reused from Quickstart
@@ -258,8 +259,8 @@ const FoundationProgram: React.FC = () => {
                             </div>
                             <div className="md:w-1/2">
                                 <div className="transform scale-95 hover:scale-100 transition-transform duration-500">
-                                    <BrowserFrame url="versobuilders.com">
-                                        <VersoShowcase />
+                                    <BrowserFrame url="homesteadbuilders.com">
+                                        <TemplateShowcase />
                                     </BrowserFrame>
                                 </div>
                             </div>

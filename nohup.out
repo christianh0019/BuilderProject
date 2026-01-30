@@ -1,0 +1,11 @@
+
+> builderproject-agency@0.0.0 dev
+> vite --port 5173
+
+6:55:34 AM [vite] (client) Re-optimizing dependencies because lockfile has changed
+
+  VITE v6.4.1  ready in 266 ms
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: http://192.168.50.80:5173/
+  ➜  press h + enter to show help
