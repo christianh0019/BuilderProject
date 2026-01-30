@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ArrowRight, CheckCircle, ChevronDown, ChevronUp, Layout, MousePointerClick, Search, Smartphone, Users, Zap, Clock, TrendingUp, AlertTriangle, ShieldCheck, CheckCircle2, Star, MapPin, MessageSquare, BarChart3, Globe, LineChart } from 'lucide-react';
+import { ArrowRight, CheckCircle, ChevronDown, ChevronUp, Layout, MousePointerClick, Search, Smartphone, Users, Zap, Clock, TrendingUp, AlertTriangle, ShieldCheck, CheckCircle2, Star, MapPin, MessageSquare, BarChart3, Globe, LineChart, Filter, Magnet } from 'lucide-react';
 import Modal from '../../components/ui/Modal';
 
 // Images reused from Quickstart
@@ -321,6 +321,63 @@ const FoundationProgram: React.FC = () => {
                                     <div className="mt-4 flex items-center gap-2 text-xs text-slate-400">
                                         <MessageSquare size={12} />
                                         <span>Automated SMS: "Hi John, saw you requested..."</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        {/* Feature: Funnels */}
+                        <div className="flex flex-col md:flex-row gap-12 items-center">
+                            <div className="md:w-1/2">
+                                <span className="text-pink-600 font-bold tracking-wider text-sm uppercase mb-2 block">Capture System</span>
+                                <h3 className="text-3xl font-serif font-bold text-slate-900 mb-6">High-Converting Funnels</h3>
+                                <p className="text-lg text-slate-600 mb-6 leading-relaxed">
+                                    Don't let 95% of your traffic leave without a trace. We implement dual funnel systems: a Qualification Engine to filter ready-to-build clients, and a Nurture Engine to capture detailed lead data from early-stage researchers.
+                                </p>
+                                <ul className="space-y-3">
+                                    <li className="flex items-center gap-3 text-slate-700 font-medium">
+                                        <div className="bg-green-100 p-1 rounded-full text-green-600"><CheckCircle2 size={16} /></div>
+                                        Automated budget & timeline qualification
+                                    </li>
+                                    <li className="flex items-center gap-3 text-slate-700 font-medium">
+                                        <div className="bg-green-100 p-1 rounded-full text-green-600"><CheckCircle2 size={16} /></div>
+                                        Lead magnet delivery & nurtures
+                                    </li>
+                                </ul>
+                                <SectionCTA />
+                            </div>
+                            <div className="md:w-1/2 bg-slate-50 rounded-3xl p-8 border border-slate-100 flex items-center justify-center">
+                                {/* Funnel Mock */}
+                                <div className="space-y-4 w-full max-w-sm">
+                                    {/* Qualification Funnel */}
+                                    <div className="bg-slate-900 rounded-xl p-4 text-white shadow-xl transform hover:scale-105 transition-transform duration-300">
+                                        <div className="flex justify-between items-start mb-3">
+                                            <div className="p-2 bg-slate-800 rounded-lg">
+                                                <Filter size={20} className="text-purple-400" />
+                                            </div>
+                                            <span className="text-[10px] uppercase font-bold bg-green-500/20 text-green-400 px-2 py-1 rounded">Top 5%</span>
+                                        </div>
+                                        <h4 className="font-bold text-lg mb-1">Qualification Engine</h4>
+                                        <div className="flex items-center gap-2 text-xs text-slate-400">
+                                            <CheckCircle2 size={12} />
+                                            <span>Filters tire kickers instantly</span>
+                                        </div>
+                                    </div>
+
+                                    {/* Nurture Funnel */}
+                                    <div className="bg-white rounded-xl p-4 border border-slate-200 shadow-xl transform hover:scale-105 transition-transform duration-300 delay-75">
+                                        <div className="flex justify-between items-start mb-3">
+                                            <div className="p-2 bg-blue-50 rounded-lg">
+                                                <Magnet size={20} className="text-blue-500" />
+                                            </div>
+                                            <span className="text-[10px] uppercase font-bold bg-slate-100 text-slate-500 px-2 py-1 rounded">Researching</span>
+                                        </div>
+                                        <h4 className="font-bold text-lg text-slate-900 mb-1">Lead Magnet Funnel</h4>
+                                        <div className="flex items-center gap-2 text-xs text-slate-500">
+                                            <CheckCircle2 size={12} />
+                                            <span>Captures email & nurtures</span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
