@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Star, ArrowRight, Play, BookOpen, BarChart3, Youtube, ChevronRight, ChevronDown, Layout, TrendingUp, PenTool, Filter, Database, Briefcase } from 'lucide-react';
+import { Star, ArrowRight, Play, BookOpen, BarChart3, Youtube, ChevronRight, ChevronDown, Layout, TrendingUp, PenTool, Filter, Database, Briefcase, Mic } from 'lucide-react';
 import SEO from '../components/SEO';
 
 const RevealOnScroll: React.FC<{ children: React.ReactNode, className?: string, delay?: number }> = ({ children, className = "", delay = 0 }) => {
@@ -355,26 +355,76 @@ const Home: React.FC = () => {
             </RevealOnScroll>
           </div>
 
+
+          {/* New Case Studies Section */}
+          <div className="mb-24">
+            <RevealOnScroll>
+              <h2 className="text-4xl md:text-5xl font-serif font-bold text-slate-900 text-center mb-16">Real Results. Real Builders.</h2>
+            </RevealOnScroll>
+
+            <div className="grid md:grid-cols-3 gap-8">
+              {[
+                {
+                  img: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=800&auto=format&fit=crop",
+                  title: "The Modern Farmhouse",
+                  stat: "+240% Lead Volume",
+                  desc: "How Stonebrook Homes filled their pipeline in 90 days."
+                },
+                {
+                  img: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800&auto=format&fit=crop",
+                  title: "Luxury Renovation",
+                  stat: "14 High-Value Bids",
+                  desc: "Targeting $500k+ remodels with precision ads."
+                },
+                {
+                  img: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=800&auto=format&fit=crop",
+                  title: "Spec Home Sold",
+                  stat: "Sold in 22 Days",
+                  desc: "Pre-selling a development before ground break."
+                }
+              ].map((study, i) => (
+                <RevealOnScroll key={i} delay={i * 100}>
+                  <Link to="/case-studies" className="group block bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border border-slate-100">
+                    <div className="relative h-64 overflow-hidden">
+                      <div className="absolute top-4 left-4 bg-purple-600 text-white text-xs font-bold px-3 py-1 rounded-full z-10">CASE STUDY</div>
+                      <img src={study.img} alt={study.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                      <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/80 to-transparent p-6">
+                        <div className="text-white font-bold text-xl">{study.stat}</div>
+                      </div>
+                    </div>
+                    <div className="p-6">
+                      <h3 className="text-xl font-bold text-slate-900 mb-2 font-serif">{study.title}</h3>
+                      <p className="text-slate-600 text-sm mb-4">{study.desc}</p>
+                      <div className="flex items-center text-purple-600 font-bold text-sm">
+                        Read Story <ArrowRight size={16} className="ml-2 group-hover:translate-x-1 transition-transform" />
+                      </div>
+                    </div>
+                  </Link>
+                </RevealOnScroll>
+              ))}
+            </div>
+          </div>
+
           {/* Resources Grid */}
           <div className="grid md:grid-cols-2 gap-6 md:gap-10">
-            {/* 1. Case Studies */}
+            {/* 1. Podcast (Replaces Case Studies) */}
             <RevealOnScroll delay={100}>
-              <Link to="/case-studies" className="group relative rounded-[2rem] md:rounded-[3rem] overflow-hidden aspect-[4/5] md:aspect-auto md:h-[500px] bg-purple-900 border border-purple-700 shadow-xl hover:shadow-2xl hover:shadow-purple-900/20 hover:-translate-y-2 transition-all duration-500 w-full block flex flex-col justify-between p-8 md:p-12">
+              <a href="https://pca.st/podcast" target="_blank" rel="noopener noreferrer" className="group relative rounded-[2rem] md:rounded-[3rem] overflow-hidden aspect-[4/5] md:aspect-auto md:h-[500px] bg-indigo-900 border border-indigo-700 shadow-xl hover:shadow-2xl hover:shadow-indigo-900/20 hover:-translate-y-2 transition-all duration-500 w-full block flex flex-col justify-between p-8 md:p-12">
                 <div className="absolute inset-0 bg-gradient-to-br from-black/20 to-transparent"></div>
                 <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
 
                 <div className="relative z-10">
                   <div className="w-14 h-14 md:w-16 md:h-16 bg-white rounded-2xl flex items-center justify-center shadow-md mb-6 md:mb-8 group-hover:scale-110 transition-transform">
-                    <BarChart3 size={32} className="text-purple-900" />
+                    <Mic size={32} className="text-indigo-900" />
                   </div>
-                  <h3 className="text-3xl md:text-5xl font-serif font-bold text-white mb-4 group-hover:translate-x-2 transition-transform">See Real Results</h3>
-                  <p className="text-purple-100 text-lg md:text-xl font-medium max-w-sm">Detailed breakdowns of how we scaled builders to $10M+.</p>
+                  <h3 className="text-3xl md:text-5xl font-serif font-bold text-white mb-4 group-hover:translate-x-2 transition-transform">Builder Podcast</h3>
+                  <p className="text-indigo-100 text-lg md:text-xl font-medium max-w-sm">Conversations with the top 1% of the construction industry.</p>
                 </div>
 
-                <div className="relative z-10 flex items-center font-bold text-white text-lg md:text-xl group-hover:text-purple-200 transition-colors">
-                  View Case Studies <ArrowRight size={24} className="ml-3 group-hover:translate-x-2 transition-transform" />
+                <div className="relative z-10 flex items-center font-bold text-white text-lg md:text-xl group-hover:text-indigo-200 transition-colors">
+                  Listen Now <ArrowRight size={24} className="ml-3 group-hover:translate-x-2 transition-transform" />
                 </div>
-              </Link>
+              </a>
             </RevealOnScroll>
 
             {/* 2. Pricing/Programs */}
@@ -394,9 +444,9 @@ const Home: React.FC = () => {
               </Link>
             </RevealOnScroll>
 
-            {/* 3. YouTube */}
+            {/* 3. YouTube (Links to Insights) */}
             <RevealOnScroll delay={300}>
-              <a href="https://www.youtube.com/@builderprojectco" target="_blank" rel="noopener noreferrer" className="group relative rounded-[2rem] md:rounded-[3rem] overflow-hidden aspect-[4/5] md:aspect-auto md:h-[500px] bg-[#FF0000] border border-red-600 shadow-xl hover:shadow-2xl hover:shadow-red-900/20 hover:-translate-y-2 transition-all duration-500 flex flex-col justify-between p-8 md:p-12 w-full block">
+              <Link to="/insights" className="group relative rounded-[2rem] md:rounded-[3rem] overflow-hidden aspect-[4/5] md:aspect-auto md:h-[500px] bg-[#FF0000] border border-red-600 shadow-xl hover:shadow-2xl hover:shadow-red-900/20 hover:-translate-y-2 transition-all duration-500 flex flex-col justify-between p-8 md:p-12 w-full block">
                 <div className="absolute inset-0 bg-gradient-to-br from-black/20 to-transparent"></div>
                 <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
                 <div className="relative z-10">
@@ -414,7 +464,7 @@ const Home: React.FC = () => {
                 <div className="relative z-10 flex items-center font-bold text-white text-lg md:text-xl group-hover:text-slate-100 transition-colors">
                   Watch Now <ArrowRight size={24} className="ml-3 group-hover:translate-x-2 transition-transform" />
                 </div>
-              </a>
+              </Link>
             </RevealOnScroll>
 
             {/* 4. The Book */}
