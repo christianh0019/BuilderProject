@@ -669,33 +669,32 @@ const Home: React.FC = () => {
             </Link>
           </div>
         </div>
-    </div>
-      </section >
+      </section>
 
-  {/* FAQ Section */ }
-  < section className = "py-20 md:py-32 bg-slate-50" >
-    <div className="container mx-auto px-6">
-      <RevealOnScroll>
-        <h2 className="text-4xl md:text-6xl font-serif font-bold text-slate-900 text-center mb-16">Common Questions</h2>
-      </RevealOnScroll>
-
-      <div className="max-w-4xl mx-auto">
-        {faqData.map((item, index) => (
-          <RevealOnScroll key={index} delay={index * 100}>
-            <AccordionItem
-              question={item.question}
-              answer={item.answer}
-              isOpen={openIndex === index}
-              onClick={() => setOpenIndex(openIndex === index ? null : index)}
-            />
+      {/* FAQ Section */}
+      <section className="py-20 md:py-32 bg-slate-50">
+        <div className="container mx-auto px-6">
+          <RevealOnScroll>
+            <h2 className="text-4xl md:text-6xl font-serif font-bold text-slate-900 text-center mb-16">Common Questions</h2>
           </RevealOnScroll>
-        ))}
-      </div>
-    </div>
-      </section >
 
-  {/* CTA Section */ }
-  < section className = "py-20 md:py-32 bg-slate-900 relative overflow-hidden" >
+          <div className="max-w-4xl mx-auto">
+            {faqData.map((item, index) => (
+              <RevealOnScroll key={index} delay={index * 100}>
+                <AccordionItem
+                  question={item.question}
+                  answer={item.answer}
+                  isOpen={openIndex === index}
+                  onClick={() => setOpenIndex(openIndex === index ? null : index)}
+                />
+              </RevealOnScroll>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 md:py-32 bg-slate-900 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-purple-900/20 to-transparent"></div>
         <div className="container mx-auto px-6 relative z-10 text-center">
           <RevealOnScroll>
