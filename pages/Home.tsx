@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { caseStudies } from '../data/caseStudies';
-import { Star, ArrowRight, Play, BookOpen, BarChart3, Youtube, ChevronRight, ChevronDown, Layout, TrendingUp, PenTool, Filter, Database, Briefcase, Mic, X } from 'lucide-react';
+import { Star, ArrowRight, Play, BookOpen, BarChart3, Youtube, ChevronRight, ChevronDown, Layout, TrendingUp, PenTool, Filter, Database, Briefcase, Mic, X, Sparkles, Code, Globe, Zap } from 'lucide-react';
 import SEO from '../components/SEO';
 
 const RevealOnScroll: React.FC<{ children: React.ReactNode, className?: string, delay?: number }> = ({ children, className = "", delay = 0 }) => {
@@ -264,18 +264,61 @@ const Home: React.FC = () => {
           <RevealOnScroll delay={400}>
             {/* Mobile Fix: h-auto instead of fixed height */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 h-auto md:h-[600px]">
-              {/* Item 1 - Luxury Interior */}
-              <div className="group relative rounded-[2rem] md:rounded-[2.5rem] overflow-hidden shadow-2xl h-[400px] md:h-full">
-                <img
-                  src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=1600&auto=format&fit=crop"
-                  alt="Modern luxury kitchen interior"
-                  title="Modern luxury kitchen interior"
-                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent p-8 md:p-10 flex flex-col justify-end">
-                  <div className="text-white text-5xl md:text-6xl font-serif font-bold mb-2">150%</div>
-                  <p className="text-white/80 font-medium text-lg">Increase in qualified leads</p>
-                  <Link to="/case-studies" className="mt-6 inline-flex items-center text-white font-bold border-b-2 border-white pb-1 w-max text-lg hover:text-purple-300 hover:border-purple-300 transition-colors">See Project</Link>
+              {/* Item 1 - AI Custom Websites */}
+              <div className="group relative rounded-[2rem] md:rounded-[2.5rem] overflow-hidden shadow-2xl h-[400px] md:h-full bg-slate-900 border border-slate-800">
+                <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900/10 to-slate-900"></div>
+
+                {/* Decorative Pattern */}
+                <div className="absolute inset-0 opacity-20" style={{ backgroundImage: 'radial-gradient(#6366f1 1px, transparent 1px)', backgroundSize: '30px 30px' }}></div>
+
+                {/* Coded Graphics Area */}
+                <div className="absolute top-10 left-0 right-0 h-64 flex items-center justify-center p-8 group-hover:-translate-y-2 transition-transform duration-700 ease-out">
+                  {/* Mock Browser/Editor Window */}
+                  <div className="relative w-full max-w-xs bg-slate-800/80 backdrop-blur-xl rounded-xl border border-slate-700/50 shadow-2xl overflow-hidden transform rotate-[-2deg] group-hover:rotate-0 transition-all duration-500">
+                    {/* Header */}
+                    <div className="h-8 bg-slate-700/50 border-b border-slate-700/50 flex items-center px-4 gap-2">
+                      <div className="w-2.5 h-2.5 rounded-full bg-red-400"></div>
+                      <div className="w-2.5 h-2.5 rounded-full bg-yellow-400"></div>
+                      <div className="w-2.5 h-2.5 rounded-full bg-green-400"></div>
+                    </div>
+                    {/* Body */}
+                    <div className="p-5 space-y-4">
+                      <div className="flex gap-4">
+                        <div className="w-1/3 space-y-2">
+                          <div className="h-2 w-full bg-slate-600/50 rounded animate-pulse"></div>
+                          <div className="h-2 w-2/3 bg-slate-600/50 rounded animate-pulse delay-75"></div>
+                        </div>
+                        <div className="w-2/3 h-16 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-lg border border-white/5 flex items-center justify-center">
+                          <Sparkles className="text-purple-400 opacity-60" size={20} />
+                        </div>
+                      </div>
+                      <div className="h-1 w-full bg-slate-700 rounded"></div>
+                      <div className="grid grid-cols-3 gap-2">
+                        <div className="h-12 bg-slate-700/30 rounded border border-white/5"></div>
+                        <div className="h-12 bg-slate-700/30 rounded border border-white/5"></div>
+                        <div className="h-12 bg-slate-700/30 rounded border border-white/5 relative overflow-hidden">
+                          <div className="absolute bottom-1 right-1">
+                            <Code size={12} className="text-slate-500" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Floating Badge */}
+                    <div className="absolute -bottom-4 -right-4 bg-gradient-to-r from-purple-600 to-pink-600 px-4 py-2 rounded-full text-white text-xs font-bold shadow-lg flex items-center gap-2 transform group-hover:scale-110 transition-transform">
+                      <Zap size={12} fill="currentColor" /> AI Powered
+                    </div>
+                  </div>
+                </div>
+
+                <div className="absolute bottom-0 left-0 w-full p-8 md:p-10 z-10 flex flex-col justify-end h-full pointer-events-none">
+                  <div className="mt-auto pointer-events-auto">
+                    <h3 className="text-3xl md:text-3xl font-serif font-bold text-white mb-2 leading-tight">New AI Custom Websites</h3>
+                    <p className="text-slate-400 font-medium mb-6">High-performance sites designed to convert.</p>
+                    <Link to="/services/website-design" className="inline-flex items-center text-white bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white hover:text-slate-900 px-6 py-3 rounded-full font-bold text-sm transition-all">
+                      Learn More <ArrowRight size={16} className="ml-2" />
+                    </Link>
+                  </div>
                 </div>
               </div>
 
