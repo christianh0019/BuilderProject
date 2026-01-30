@@ -506,39 +506,67 @@ const FoundationProgram: React.FC = () => {
                                 <SectionCTA />
                             </div>
                             <div className="md:w-1/2 bg-slate-900 rounded-3xl p-8 border border-slate-800 flex items-center justify-center">
-                                {/* Masonry Grid Mock */}
-                                <div className="grid grid-cols-2 gap-4 w-full max-w-sm rotate-1 hover:rotate-0 transition-transform duration-500">
-                                    <div className="space-y-4">
+                                {/* Project Page Mock */}
+                                <div className="bg-white rounded-xl shadow-2xl border border-slate-700 w-full max-w-sm overflow-hidden transform hover:-translate-y-2 transition-transform duration-500">
+                                    {/* Mock Browser Header */}
+                                    <div className="bg-slate-50 border-b border-slate-100 p-3 flex items-center justify-between">
+                                        <div className="flex gap-1.5">
+                                            <div className="w-2.5 h-2.5 rounded-full bg-red-400"></div>
+                                            <div className="w-2.5 h-2.5 rounded-full bg-yellow-400"></div>
+                                            <div className="w-2.5 h-2.5 rounded-full bg-green-400"></div>
+                                        </div>
+                                        <div className="h-2 w-24 bg-slate-200 rounded-full"></div>
+                                        <div className="w-4"></div>
+                                    </div>
+
+                                    {/* Hero Mock */}
+                                    <div className="relative h-48 w-full group">
                                         <img
                                             src={interiorLiving}
-                                            alt="Stonebrook Living Room"
-                                            title="Stonebrook Living Room"
-                                            className="h-40 object-cover rounded-lg w-full shadow-lg"
+                                            alt="Project Hero"
+                                            className="w-full h-full object-cover"
                                         />
-                                        <img
-                                            src={exteriorFront}
-                                            alt="Homestead Exterior"
-                                            title="Homestead Exterior"
-                                            className="h-24 object-cover rounded-lg w-full shadow-lg"
-                                        />
+                                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-5">
+                                            <h4 className="text-white font-serif font-bold text-xl mb-1">The Stonebrook Layout</h4>
+                                            <div className="flex items-center gap-3 text-xs text-white/80">
+                                                <span className="flex items-center gap-1"><MapPin size={10} /> Hingham, MA</span>
+                                                <span className="w-1 h-1 bg-white/50 rounded-full"></span>
+                                                <span>Custom Build</span>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div className="space-y-4 pt-8">
-                                        <img
-                                            src={interiorKitchen}
-                                            alt="Modern Kitchen"
-                                            title="Modern Kitchen"
-                                            className="h-24 object-cover rounded-lg w-full shadow-lg"
-                                        />
-                                        <img
-                                            src={exteriorRear}
-                                            alt="Open Prairie Rear"
-                                            title="Open Prairie Rear"
-                                            className="h-40 object-cover rounded-lg w-full shadow-lg"
-                                        />
+
+                                    {/* Content Mock */}
+                                    <div className="p-5 space-y-4">
+                                        <div className="flex justify-between items-center border-b border-slate-100 pb-4">
+                                            <div className="text-center">
+                                                <div className="text-[10px] text-slate-400 uppercase font-bold">Square Ft</div>
+                                                <div className="text-sm font-bold text-slate-900">4,200</div>
+                                            </div>
+                                            <div className="w-px h-8 bg-slate-100"></div>
+                                            <div className="text-center">
+                                                <div className="text-[10px] text-slate-400 uppercase font-bold">Bed / Bath</div>
+                                                <div className="text-sm font-bold text-slate-900">5 / 4.5</div>
+                                            </div>
+                                            <div className="w-px h-8 bg-slate-100"></div>
+                                            <div className="text-center">
+                                                <div className="text-[10px] text-slate-400 uppercase font-bold">Timeline</div>
+                                                <div className="text-sm font-bold text-slate-900">10 Mos</div>
+                                            </div>
+                                        </div>
+
+                                        <div className="space-y-2">
+                                            <div className="h-2 w-full bg-slate-100 rounded"></div>
+                                            <div className="h-2 w-5/6 bg-slate-100 rounded"></div>
+                                            <div className="h-2 w-4/6 bg-slate-100 rounded"></div>
+                                        </div>
+
+                                        <button className="w-full py-2 bg-slate-900 text-white text-xs font-bold rounded hover:bg-slate-800 transition-colors">
+                                            View Full Gallery
+                                        </button>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
+                            </div>                        </div>
 
                         {/* Feature 6: SEO */}
                         <div className="flex flex-col md:flex-row gap-12 items-center">
