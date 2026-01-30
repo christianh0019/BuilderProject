@@ -522,7 +522,7 @@ const FoundationProgram: React.FC = () => {
                                     {/* Hero Mock */}
                                     <div className="relative h-48 w-full group">
                                         <img
-                                            src={interiorLiving}
+                                            src="/images/project-hero-bg.jpg"
                                             alt="Project Hero"
                                             className="w-full h-full object-cover"
                                         />
