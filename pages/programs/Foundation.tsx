@@ -458,32 +458,73 @@ const FoundationProgram: React.FC = () => {
                                 <SectionCTA />
                             </div>
                             <div className="md:w-1/2 bg-slate-50 rounded-3xl p-8 border border-slate-100 flex items-center justify-center">
-                                {/* Instagram Mock */}
-                                <div className="bg-white rounded-3xl shadow-2xl border border-slate-200 p-4 w-full max-w-sm transform rotate-1 hover:rotate-0 transition-transform duration-300">
-                                    <div className="flex items-center gap-3 mb-6">
-                                        <div className="w-12 h-12 rounded-full bg-gradient-to-tr from-yellow-400 via-red-500 to-purple-600 p-[2px] shrink-0">
-                                            <div className="w-full h-full rounded-full bg-white p-[2px] overflow-hidden">
-                                                <img src={versoLogo} alt="Profile" title="Profile" className="w-full h-full object-cover rounded-full" />
+                                {/* Social Profiles Mock */}
+                                <div className="relative w-full max-w-sm h-64">
+                                    {/* Facebook Profile (Behind) */}
+                                    <div className="absolute top-8 right-0 w-64 bg-white rounded-xl shadow-xl border border-slate-200 overflow-hidden transform rotate-3 z-10">
+                                        {/* FB Cover */}
+                                        <div className="h-16 bg-slate-200 w-full relative">
+                                            <div className="absolute -bottom-6 left-4 w-12 h-12 rounded-full border-2 border-white bg-white overflow-hidden z-20">
+                                                <img src={versoLogo} alt="Profile" className="w-full h-full object-cover" />
                                             </div>
                                         </div>
-                                        <div>
-                                            <div className="h-3 w-24 bg-slate-900 rounded mb-1 text-[10px] font-bold leading-3">versobuilders</div>
-                                            <div className="h-3 w-16 text-[8px] text-slate-500">Custom Homes</div>
+                                        <div className="pt-8 px-4 pb-4">
+                                            <div className="font-bold text-slate-900 text-sm">Verso Custom Builders</div>
+                                            <div className="text-[10px] text-slate-500 mb-3">Home Improvement</div>
+
+                                            <div className="flex gap-2">
+                                                <div className="flex-1 bg-blue-600 text-white text-[10px] font-bold py-1.5 rounded flex items-center justify-center gap-1">
+                                                    <div className="w-3 h-3 bg-white/20 rounded-full"></div> Like
+                                                </div>
+                                                <div className="flex-1 bg-slate-100 text-slate-700 text-[10px] font-bold py-1.5 rounded flex items-center justify-center">
+                                                    Message
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div className="grid grid-cols-3 gap-0.5 mb-0.5">
-                                        <img src={interiorKitchen} alt="Modern Kitchen" title="Modern Kitchen" className="aspect-square object-cover" />
-                                        <img src={exteriorFront} alt="Homestead Exterior" title="Homestead Exterior" className="aspect-square object-cover" />
-                                        <img src={interiorLiving} alt="Stonebrook Living Room" title="Stonebrook Living Room" className="aspect-square object-cover" />
-                                    </div>
-                                    <div className="grid grid-cols-3 gap-0.5">
-                                        <img src={exteriorRear} alt="Open Prairie Rear" title="Open Prairie Rear" className="aspect-square object-cover" />
-                                        <img src={exteriorSide} alt="Eagle Rock Side" title="Eagle Rock Side" className="aspect-square object-cover grayscale opacity-50" />
-                                        <div className="aspect-square bg-slate-100 flex items-center justify-center text-[8px] text-slate-400">More...</div>
+
+                                    {/* Instagram Profile (Front) */}
+                                    <div className="absolute top-0 left-4 w-64 bg-white rounded-xl shadow-2xl border border-slate-200 p-4 transform -rotate-2 z-20">
+                                        <div className="flex justify-between items-center mb-4">
+                                            <div className="text-xs font-bold text-slate-900">versobuilders</div>
+                                            <div className="h-1 w-4 bg-slate-300 rounded-full"></div>
+                                        </div>
+
+                                        <div className="flex items-center gap-4 mb-4">
+                                            <div className="w-16 h-16 rounded-full bg-gradient-to-tr from-yellow-400 via-red-500 to-purple-600 p-[2px] shrink-0">
+                                                <div className="w-full h-full rounded-full bg-white p-[2px] overflow-hidden">
+                                                    <img src={versoLogo} alt="Profile" className="w-full h-full object-cover rounded-full" />
+                                                </div>
+                                            </div>
+                                            <div className="flex-1 flex justify-between text-center">
+                                                <div>
+                                                    <div className="text-sm font-bold text-slate-900">1.2k</div>
+                                                    <div className="text-[8px] text-slate-500">Posts</div>
+                                                </div>
+                                                <div>
+                                                    <div className="text-sm font-bold text-slate-900">4.5k</div>
+                                                    <div className="text-[8px] text-slate-500">Followers</div>
+                                                </div>
+                                                <div>
+                                                    <div className="text-sm font-bold text-slate-900">230</div>
+                                                    <div className="text-[8px] text-slate-500">Following</div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div className="text-xs text-slate-900 font-bold mb-0.5">Verso Custom Builders</div>
+                                        <div className="text-[10px] text-slate-500 leading-tight mb-3">
+                                            Building legacy homes in Hingham & South Shore.
+                                            Est. 2018.
+                                            Contact us for a consultation 👇
+                                        </div>
+
+                                        <div className="w-full bg-slate-100 text-slate-900 text-[10px] font-bold py-1.5 rounded flex items-center justify-center">
+                                            Edit Profile
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
+                            </div>                        </div>
 
                         {/* Feature 5: Portfolio */}
                         <div className="flex flex-col md:flex-row-reverse gap-12 items-center">
