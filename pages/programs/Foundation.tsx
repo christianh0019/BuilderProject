@@ -665,14 +665,17 @@ const FoundationProgram: React.FC = () => {
                             <div className="text-left md:w-1/2">
                                 <h3 className="text-xl font-bold mb-4 text-red-300">The "Scattered" Way</h3>
                                 <ul className="space-y-2 text-slate-400 text-sm mb-6">
-                                    <li className="flex justify-between border-b border-slate-700 pb-2"><span>Website (doesn't convert)</span> <span>$3,000</span></li>
-                                    <li className="flex justify-between border-b border-slate-700 pb-2"><span>Social Mgmt (1 yr)</span> <span>$12,000</span></li>
-                                    <li className="flex justify-between border-b border-slate-700 pb-2"><span>Reputation Tool (1 yr)</span> <span>$6,000</span></li>
-                                    <li className="flex justify-between border-b border-slate-700 pb-2"><span>SEO Setup</span> <span>$2,000</span></li>
-                                    <li className="flex justify-between pt-2 font-bold text-white text-lg"><span>Total Year 1:</span> <span>$23,000+</span></li>
+                                    <li className="flex justify-between border-b border-slate-700 pb-2"><span>Custom Website Design</span> <span>$5,000</span></li>
+                                    <li className="flex justify-between border-b border-slate-700 pb-2"><span>Funnel Buildout</span> <span>$3,000</span></li>
+                                    <li className="flex justify-between border-b border-slate-700 pb-2"><span>CRM Implementation</span> <span>$2,500</span></li>
+                                    <li className="flex justify-between border-b border-slate-700 pb-2"><span>Local Maps Optimization</span> <span>$1,000</span></li>
+                                    <li className="flex justify-between border-b border-slate-700 pb-2"><span>Social Branding Package</span> <span>$1,500</span></li>
+                                    <li className="flex justify-between border-b border-slate-700 pb-2"><span>Portfolio Strategy</span> <span>$1,500</span></li>
+                                    <li className="flex justify-between border-b border-slate-700 pb-2"><span>Technical SEO Setup</span> <span>$2,000</span></li>
+                                    <li className="flex justify-between pt-2 font-bold text-white text-lg"><span>Total Separate Cost:</span> <span>$16,500+</span></li>
                                 </ul>
                                 <p className="text-xs text-red-200/80 leading-relaxed">
-                                    <span className="font-bold text-red-300">The Reality:</span> You pay 5x more for disconnected systems that don't talk to each other, built by generalists who have no clue how to sell custom homes.
+                                    <span className="font-bold text-red-300">The Reality:</span> You pay 3x more for disconnected systems that don't talk to each other, built by generalists who have no clue how to sell custom homes.
                                 </p>
                             </div>
                             <div className="hidden md:block h-32 w-px bg-slate-600"></div>
