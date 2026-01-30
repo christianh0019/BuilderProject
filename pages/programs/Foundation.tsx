@@ -73,8 +73,8 @@ const FoundationProgram: React.FC = () => {
 
                     {/* Visual: Before/After */}
                     <div className="relative max-w-6xl mx-auto grid md:grid-cols-2 gap-8 items-center">
-                        <div className="bg-slate-800 p-6 rounded-2xl border border-red-500/30 relative opacity-75 grayscale hover:grayscale-0 transition-all duration-500">
-                            <div className="absolute top-4 right-4 bg-red-500 text-white text-xs font-bold px-3 py-1 rounded-full z-20">BEFORE</div>
+                        <div className="bg-slate-800 p-6 rounded-2xl border-2 border-red-500 relative opacity-75 grayscale hover:grayscale-0 transition-all duration-500 shadow-[0_0_20px_rgba(239,68,68,0.3)]">
+                            <div className="absolute top-4 right-4 bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full z-20 shadow-lg tracking-wider">BEFORE</div>
                             <div className="bg-slate-900 rounded-lg p-4 mb-4 border border-slate-700">
                                 <div className="h-4 w-3/4 bg-slate-700 rounded mb-2"></div>
                                 <div className="h-3 w-1/2 bg-slate-800 rounded mb-6"></div>
@@ -97,24 +97,32 @@ const FoundationProgram: React.FC = () => {
                                 {/* Dashboard Header */}
                                 <div className="flex items-center justify-between mb-6 pb-4 border-b border-slate-800">
                                     <div className="flex items-center gap-3">
-                                        <div className="w-8 h-8 rounded bg-purple-600 flex items-center justify-center text-white font-bold">BP</div>
-                                        <span className="text-white font-bold">System Status</span>
+                                        <div className="w-8 h-8 rounded-full bg-white p-[2px] overflow-hidden">
+                                            <img src={versoLogo} alt="Verso" className="w-full h-full object-cover rounded-full" />
+                                        </div>
+                                        <span className="text-white font-bold">Website & Funnels</span>
                                     </div>
                                     <div className="flex items-center gap-2 text-emerald-400 text-xs font-bold bg-emerald-900/30 px-2 py-1 rounded">
                                         <div className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></div> Active
                                     </div>
                                 </div>
                                 {/* Main Stats */}
-                                <div className="grid grid-cols-2 gap-4 mb-6">
-                                    <div className="bg-slate-800 p-4 rounded-lg border border-slate-700">
-                                        <div className="text-slate-400 text-xs mb-1">Conversion Rate</div>
-                                        <div className="text-2xl font-bold text-white">2.5%</div>
-                                        <div className="text-emerald-400 text-xs mt-1 flex items-center gap-1"><TrendingUp size={10} /> +400%</div>
+                                <div className="grid grid-cols-3 gap-3 mb-6">
+                                    <div className="bg-slate-800 p-3 rounded-lg border border-slate-700">
+                                        <div className="text-slate-400 text-[10px] mb-1 uppercase tracking-wider">Conversion</div>
+                                        <div className="text-xl font-bold text-white">2.5%</div>
+                                        <div className="text-emerald-400 text-[10px] mt-1 flex items-center gap-1"><TrendingUp size={10} /> +400%</div>
                                     </div>
-                                    <div className="bg-slate-800 p-4 rounded-lg border border-slate-700">
-                                        <div className="text-slate-400 text-xs mb-1">Lead Flow</div>
-                                        <div className="text-2xl font-bold text-white">Steady</div>
-                                        <div className="text-emerald-400 text-xs mt-1 flex items-center gap-1"><CheckCircle size={10} /> Qualified</div>
+                                    <div className="bg-slate-800 p-3 rounded-lg border border-slate-700">
+                                        <div className="text-slate-400 text-[10px] mb-1 uppercase tracking-wider">Lead Flow</div>
+                                        <div className="text-xl font-bold text-white">Steady</div>
+                                        <div className="text-emerald-400 text-[10px] mt-1 flex items-center gap-1"><CheckCircle size={10} /> Qualified</div>
+                                    </div>
+                                    <div className="bg-slate-800 p-3 rounded-lg border border-slate-700 relative overflow-hidden">
+                                        <div className="absolute inset-0 bg-emerald-500/10 animate-pulse"></div>
+                                        <div className="text-slate-400 text-[10px] mb-1 uppercase tracking-wider relative z-10">Added Rev</div>
+                                        <div className="text-xl font-bold text-emerald-400 relative z-10">$3M</div>
+                                        <div className="text-emerald-400 text-[10px] mt-1 flex items-center gap-1 relative z-10"><TrendingUp size={10} /> YTD</div>
                                     </div>
                                 </div>
                                 {/* System Modules */}
