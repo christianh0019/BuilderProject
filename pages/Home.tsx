@@ -572,117 +572,131 @@ const Home: React.FC = () => {
       </section >
 
       {/* New Case Studies Section (Below Resources) */}
-      <section className="py-24 bg-white">
-        <div className="container mx-auto px-6">
-          <div className="bg-slate-50 rounded-[3rem] p-8 md:p-16">
-            <RevealOnScroll>
-              <h2 className="text-4xl md:text-5xl font-serif font-bold text-slate-900 text-center mb-6">Real Results. Real Builders.</h2>
-              <p className="text-slate-600 text-center text-lg md:text-xl max-w-2xl mx-auto mb-16">See how we're helping custom builders across the country fill their pipelines.</p>
-            </RevealOnScroll>
+      <section className="py-24 md:py-32 bg-slate-900 relative overflow-hidden">
+        {/* Background Effects */}
+        <div className="absolute top-0 left-0 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-5 pointer-events-none"></div>
+        <div className="absolute top-0 md:-top-[20%] right-0 md:-right-[10%] w-[600px] h-[600px] bg-purple-500/20 rounded-full blur-[100px] pointer-events-none animate-pulse"></div>
+        <div className="absolute bottom-0 md:-bottom-[20%] left-0 md:-left-[10%] w-[600px] h-[600px] bg-blue-500/10 rounded-full blur-[100px] pointer-events-none"></div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {caseStudies.slice(0, 3).map((study) => {
-                // Inject Timeline Data
-                let timeline = "6 Months";
-                if (study.id === 'open-prairie') timeline = "5 Months";
-                if (study.id === 'schwanz') timeline = "5 Months";
-
-                return (
-                  <div key={study.id} className="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col h-full">
-                    {study.videoUrl ? (
-                      <div className="mb-6 rounded-xl overflow-hidden bg-slate-100 shadow-inner block relative group">
-                        <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors pointer-events-none z-10"></div>
-                        <video
-                          src={study.videoUrl}
-                          poster={study.imageUrl}
-                          controls
-                          playsInline
-                          className="w-full h-auto"
-                        />
-                      </div>
-                    ) : (
-                      <div className="flex items-center gap-4 mb-4">
-                        <div className="w-12 h-12 rounded-full overflow-hidden bg-slate-100 shrink-0">
-                          <img src={study.imageUrl} alt={study.builderName} className="w-full h-full object-cover" />
-                        </div>
-                        <div>
-                          <div className="font-bold text-slate-900 leading-tight">{study.builderName}</div>
-                          <div className="text-sm text-slate-500">{study.location}</div>
-                        </div>
-                      </div>
-                    )}
-
-                    {study.videoUrl && (
-                      <div className="mb-6">
-                        <div className="font-bold text-slate-900 leading-tight text-xl mb-1">{study.builderName}</div>
-                        <div className="text-sm text-slate-500">{study.location}</div>
-                      </div>
-                    )}
-
-                    <div className="grid grid-cols-2 gap-x-4 gap-y-4 mb-6 bg-slate-50 p-4 rounded-xl border border-slate-100">
-                      {study.results.slice(0, 2).map((res, i) => (
-                        <div key={i}>
-                          <div className="text-[10px] text-slate-500 uppercase tracking-wide font-bold mb-1">{res.label}</div>
-                          <div className="font-bold text-slate-900 text-lg leading-none">{res.value}</div>
-                        </div>
-                      ))}
-                      {/* Injected Timeline */}
-                      <div className="col-span-2 border-t border-slate-200 pt-3 mt-1">
-                        <div className="text-[10px] text-slate-500 uppercase tracking-wide font-bold mb-1">Timeline</div>
-                        <div className="font-bold text-slate-900 text-lg leading-none">{timeline}</div>
-                      </div>
-                    </div>
-
-                    {study.testimonial && study.id !== 'open-prairie' && (
-                      <blockquote className="text-slate-600 text-sm italic border-l-2 border-purple-200 pl-4 mb-6 flex-grow">
-                        "{study.testimonial.quote}"
-                      </blockquote>
-                    )}
-
-                    {/* Spacer for cards without testimonial to push button down if needed, or just let flex-grow handle it */}
-                    {(!study.testimonial || study.id === 'open-prairie') && <div className="flex-grow"></div>}
-
-                    <Link to={`/case-studies`} className="block w-full text-center mt-auto py-3 rounded-xl border border-purple-200 text-purple-600 font-bold text-sm hover:bg-purple-600 hover:text-white transition-colors">
-                      View Full Case Study
-                    </Link>
-                  </div>
-                )
-              })}
-            </div>
-
-            <div className="text-center mt-12">
-              <Link to="/case-studies" className="inline-flex items-center text-slate-900 bg-white border-2 border-slate-200 px-8 py-4 rounded-full font-bold text-lg hover:bg-purple-50 hover:border-purple-200 hover:text-purple-900 transition-all hover:-translate-y-1 shadow-lg">
-                View All Case Studies <ArrowRight className="ml-2" />
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ Section */}
-      < section className="py-20 md:py-32 bg-slate-50" >
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-6 relative z-10">
+          {/* Removing the grey box wrapper completely */}
           <RevealOnScroll>
-            <h2 className="text-4xl md:text-6xl font-serif font-bold text-slate-900 text-center mb-16">Common Questions</h2>
+            <div className="text-center mb-16 md:mb-20">
+              <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/10 px-4 py-1.5 rounded-full mb-6 text-purple-200 text-sm font-bold uppercase tracking-wider">
+                <Star size={14} fill="currentColor" /> Case Studies
+              </div>
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-white mb-6">Real Results. <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">Real Builders.</span></h2>
+              <p className="text-slate-300 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">See how we're helping custom builders across the country fill their pipelines.</p>
+            </div>
           </RevealOnScroll>
 
-          <div className="max-w-4xl mx-auto">
-            {faqData.map((item, index) => (
-              <RevealOnScroll key={index} delay={index * 100}>
-                <AccordionItem
-                  question={item.question}
-                  answer={item.answer}
-                  isOpen={openIndex === index}
-                  onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                />
-              </RevealOnScroll>
-            ))}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {caseStudies.slice(0, 3).map((study) => {
+              // Inject Timeline Data
+              let timeline = "6 Months";
+              if (study.id === 'open-prairie') timeline = "5 Months";
+              if (study.id === 'schwanz') timeline = "5 Months";
+
+              return (
+                return (
+                <div key={study.id} className="bg-white p-6 rounded-2xl border border-white/10 shadow-xl hover:shadow-2xl hover:shadow-purple-500/10 hover:-translate-y-2 transition-all duration-300 flex flex-col h-full relative group">
+                  {/* Hover Glow Effect */}
+                  <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl opacity-0 group-hover:opacity-100 transition duration-500 blur opacity-25 -z-10"></div>
+
+                  {study.videoUrl ? (
+                    <div className="mb-6 rounded-xl overflow-hidden bg-slate-100 shadow-inner block relative group/video">
+                      <div className="absolute inset-0 bg-black/10 group-hover/video:bg-transparent transition-colors pointer-events-none z-10"></div>
+                      <video
+                        src={study.videoUrl}
+                        poster={study.imageUrl}
+                        controls
+                        playsInline
+                        className="w-full h-auto"
+                      />
+                    </div>
+                  ) : (
+                    <div className="flex items-center gap-4 mb-4">
+                      <div className="w-12 h-12 rounded-full overflow-hidden bg-slate-100 shrink-0">
+                        <img src={study.imageUrl} alt={study.builderName} className="w-full h-full object-cover" />
+                      </div>
+                      <div>
+                        <div className="font-bold text-slate-900 leading-tight">{study.builderName}</div>
+                        <div className="text-sm text-slate-500">{study.location}</div>
+                      </div>
+                    </div>
+                  )}
+
+                  {study.videoUrl && (
+                    <div className="mb-6">
+                      <div className="font-bold text-slate-900 leading-tight text-xl mb-1">{study.builderName}</div>
+                      <div className="text-sm text-slate-500">{study.location}</div>
+                    </div>
+                  )}
+
+                  <div className="grid grid-cols-2 gap-x-4 gap-y-4 mb-6 bg-slate-50 p-4 rounded-xl border border-slate-100">
+                    {study.results.slice(0, 2).map((res, i) => (
+                      <div key={i}>
+                        <div className="text-[10px] text-slate-500 uppercase tracking-wide font-bold mb-1">{res.label}</div>
+                        <div className="font-bold text-slate-900 text-lg leading-none">{res.value}</div>
+                      </div>
+                    ))}
+                    {/* Injected Timeline */}
+                    <div className="col-span-2 border-t border-slate-200 pt-3 mt-1">
+                      <div className="text-[10px] text-slate-500 uppercase tracking-wide font-bold mb-1">Timeline</div>
+                      <div className="font-bold text-slate-900 text-lg leading-none">{timeline}</div>
+                    </div>
+                  </div>
+
+                  {study.testimonial && study.id !== 'open-prairie' && (
+                    <blockquote className="text-slate-600 text-sm italic border-l-2 border-purple-200 pl-4 mb-6 flex-grow">
+                      "{study.testimonial.quote}"
+                    </blockquote>
+                  )}
+
+                  {/* Spacer for cards without testimonial to push button down if needed, or just let flex-grow handle it */}
+                  {(!study.testimonial || study.id === 'open-prairie') && <div className="flex-grow"></div>}
+
+                  <Link to={`/case-studies`} className="block w-full text-center mt-auto py-3 rounded-xl border border-purple-200 text-purple-600 font-bold text-sm hover:bg-purple-600 hover:text-white transition-colors">
+                    View Full Case Study
+                  </Link>
+                </div>
+              )
+            })}
+          </div>
+
+          <div className="text-center mt-12">
+            <Link to="/case-studies" className="inline-flex items-center text-slate-900 bg-white border-2 border-slate-200 px-8 py-4 rounded-full font-bold text-lg hover:bg-purple-50 hover:border-purple-200 hover:text-purple-900 transition-all hover:-translate-y-1 shadow-lg">
+              View All Case Studies <ArrowRight className="ml-2" />
+            </Link>
           </div>
         </div>
+    </div>
       </section >
 
-      {/* CTA Section */}
-      < section className="py-20 md:py-32 bg-slate-900 relative overflow-hidden" >
+  {/* FAQ Section */ }
+  < section className = "py-20 md:py-32 bg-slate-50" >
+    <div className="container mx-auto px-6">
+      <RevealOnScroll>
+        <h2 className="text-4xl md:text-6xl font-serif font-bold text-slate-900 text-center mb-16">Common Questions</h2>
+      </RevealOnScroll>
+
+      <div className="max-w-4xl mx-auto">
+        {faqData.map((item, index) => (
+          <RevealOnScroll key={index} delay={index * 100}>
+            <AccordionItem
+              question={item.question}
+              answer={item.answer}
+              isOpen={openIndex === index}
+              onClick={() => setOpenIndex(openIndex === index ? null : index)}
+            />
+          </RevealOnScroll>
+        ))}
+      </div>
+    </div>
+      </section >
+
+  {/* CTA Section */ }
+  < section className = "py-20 md:py-32 bg-slate-900 relative overflow-hidden" >
         <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-purple-900/20 to-transparent"></div>
         <div className="container mx-auto px-6 relative z-10 text-center">
           <RevealOnScroll>
