@@ -6,18 +6,19 @@ import { Link } from 'react-router-dom';
 const FreeTraining: React.FC = () => {
     return (
         <div className="bg-slate-900 min-h-screen text-white font-sans selection:bg-purple-500 selection:text-white pb-20">
-            <SEO 
+            <SEO
                 title="Free Marketing Training | BuilderProject"
                 description="Watch our comprehensive 2-hour training on the exact marketing system we use to help custom home builders scale."
                 canonical="/free-training"
-                noindex={true} 
+                noindex={true}
             />
 
             {/* Header / Nav Area */}
             <div className="border-b border-white/10 bg-slate-900/50 backdrop-blur-md sticky top-0 z-50">
                 <div className="container mx-auto px-6 py-4 flex items-center justify-between">
-                    <Link to="/" className="font-serif text-xl font-bold tracking-tight">
-                        BuilderProject<span className="text-purple-500">.</span>
+                    <Link to="/" className="font-serif text-xl font-bold tracking-tight flex items-center gap-2">
+                        <img src="/images/logo_icon.png" alt="BuilderProject Logo" title="BuilderProject Logo" className="w-8 h-8 rounded-lg" />
+                        <span>BuilderProject<span className="text-purple-500">.</span></span>
                     </Link>
                     <div className="text-xs font-bold uppercase tracking-widest text-slate-400">
                         Restricted Access
@@ -44,11 +45,11 @@ const FreeTraining: React.FC = () => {
                 <div className="max-w-5xl mx-auto mb-16 relative group">
                     <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
                     <div className="relative aspect-video bg-black rounded-2xl overflow-hidden shadow-2xl border border-white/10">
-                        <iframe 
+                        <iframe
                             className="w-full h-full"
-                            src="https://www.youtube.com/embed/duJEpSTCq6I?si=D9beuLdLWFnmcJ5a" 
+                            src="https://www.youtube.com/embed/duJEpSTCq6I?si=D9beuLdLWFnmcJ5a"
                             title="Builder Marketing System Training"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                             allowFullScreen
                         ></iframe>
                     </div>

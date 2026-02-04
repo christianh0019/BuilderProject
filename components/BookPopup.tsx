@@ -70,15 +70,15 @@ const BookPopup: React.FC = () => {
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">Marketing System</span>
                         </h3>
                         <p className="text-slate-300 mb-8 text-sm leading-relaxed">
-                            Watch the 2-hour internal training video where we break down the exact funnel, ads, and sales process we use to scale custom home builders.
+                            Get immediate access to the internal breakdown where we reveal the exact funnel, ads, and sales process we use to scale custom home builders.
                         </p>
 
                         <div className="flex items-center gap-4 text-sm font-bold">
                             <div className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center border border-white/20">
-                                <Play size={20} className="ml-1" fill="currentColor" />
+                                <Lock size={20} className="ml-1" fill="currentColor" />
                             </div>
                             <div>
-                                <div>2 Hour Masterclass</div>
+                                <div>Full System Breakdown</div>
                                 <div className="text-purple-300 font-normal text-xs">100% Free Access</div>
                             </div>
                         </div>
@@ -89,7 +89,7 @@ const BookPopup: React.FC = () => {
                 <div className="p-8 md:w-7/12 bg-white">
                     <div className="text-center mb-6">
                         <h4 className="text-xl font-bold text-slate-900">Unlock Immediate Access</h4>
-                        <p className="text-sm text-slate-500">Enter your details to watch the training now.</p>
+                        <p className="text-sm text-slate-500">Enter your details to get the system now.</p>
                     </div>
 
                     <form onSubmit={handleSubmit} className="space-y-4">
@@ -140,7 +140,7 @@ const BookPopup: React.FC = () => {
                             type="submit"
                             className="w-full py-4 rounded-xl bg-slate-900 hover:bg-purple-600 text-white font-bold text-lg shadow-lg hover:shadow-purple-500/25 transition-all duration-300 transform hover:-translate-y-1"
                         >
-                            Watch Training Now
+                            Get Free Access
                         </button>
                     </form>
 
