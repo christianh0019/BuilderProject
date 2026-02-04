@@ -35,6 +35,7 @@ import TermsOfService from './pages/TermsOfService';
 import AdvertisingLanding from './pages/AdvertisingLanding';
 import Quickstart from './pages/Quickstart';
 import NotFound from './pages/NotFound';
+import FreeTraining from './pages/FreeTraining';
 import ChatWidget from './components/ChatWidget';
 import SocialProofWidget from './components/SocialProofWidget';
 // Onboarding
@@ -57,7 +58,7 @@ const MainLayout = () => {
         <Outlet />
       </main>
       <Footer />
-      {/* <BookPopup /> */}
+      <BookPopup />
       {/* <SocialProofWidget /> */}
       <ChatWidget />
     </div>
@@ -111,6 +112,7 @@ const App: React.FC = () => {
           <Route path="/booking" element={<Booking />} />
           <Route path="/thank-you" element={<ThankYou />} />
           <Route path="/quickstart" element={<Quickstart />} />
+          <Route path="/free-training" element={<FreeTraining />} />
         </Routes>
       </Router>
     </HelmetProvider>

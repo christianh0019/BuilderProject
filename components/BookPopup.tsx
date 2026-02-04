@@ -1,13 +1,21 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import { BookOpen, ArrowRight, TrendingUp } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
+import { Play, X, Lock } from 'lucide-react';
 
 const BookPopup: React.FC = () => {
     const [isVisible, setIsVisible] = useState(false);
     const [isDismissed, setIsDismissed] = useState(false);
+    const navigate = useNavigate();
+
+    // Form State
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        phone: '',
+        businessName: ''
+    });
 
     useEffect(() => {
-        // Check if previously dismissed in this session
         const dismissed = sessionStorage.getItem('bookPopupDismissed');
         if (dismissed) {
             setIsDismissed(true);
@@ -16,7 +24,7 @@ const BookPopup: React.FC = () => {
 
         const timer = setTimeout(() => {
             setIsVisible(true);
-        }, 10000); // 10 seconds
+        }, 12000);
 
         return () => clearTimeout(timer);
     }, []);
@@ -27,64 +35,119 @@ const BookPopup: React.FC = () => {
         sessionStorage.setItem('bookPopupDismissed', 'true');
     };
 
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setFormData({ ...formData, [e.target.name]: e.target.value });
+    };
+
+    const handleSubmit = (e: React.FormEvent) => {
+        e.preventDefault();
+        // In a real implementation, you would submit this data to a backend here.
+        handleDismiss();
+        navigate('/free-training');
+    };
+
     if (!isVisible || isDismissed) return null;
 
     return (
         <div className="fixed inset-0 z-50 flex items-center justify-center px-4">
-            {/* Backdrop */}
-            <div
-                className="absolute inset-0 bg-slate-900/60 backdrop-blur-sm transition-opacity duration-300"
-                onClick={handleDismiss}
-            />
+            <div className="absolute inset-0 bg-slate-900/80 backdrop-blur-sm transition-opacity duration-300" onClick={handleDismiss} />
 
-            {/* Popup Content */}
-            <div className="relative bg-white rounded-3xl shadow-2xl max-w-2xl w-full overflow-hidden animate-fade-in-up border border-slate-100">
+            <div className="relative bg-white rounded-2xl shadow-2xl max-w-4xl w-full overflow-hidden animate-fade-in-up flex flex-col md:flex-row">
+                <button onClick={handleDismiss} className="absolute top-4 right-4 text-white/50 hover:text-white z-50 md:text-slate-400 md:hover:text-slate-600">
+                    <X size={24} />
+                </button>
 
-                <div className="flex flex-col md:flex-row">
-                    {/* Image Side */}
-                    <div className="bg-slate-900 p-8 md:w-2/5 flex flex-col justify-center items-center text-center relative overflow-hidden">
-                        <div className="absolute inset-0 bg-gradient-to-br from-purple-900/60 to-blue-900/60"></div>
-                        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
-
-                        {/* Revenue Icon */}
-                        <div className="relative z-10 bg-white/10 backdrop-blur-md p-8 rounded-2xl border border-white/20 mb-6 shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-500">
-                            <TrendingUp size={64} className="text-white" />
+                {/* Left Side - Visual/Value */}
+                <div className="bg-slate-900 p-8 md:w-5/12 text-white relative flex flex-col justify-center overflow-hidden">
+                    <div className="absolute inset-0 bg-gradient-to-br from-purple-900/50 to-blue-900/50"></div>
+                    {/* Abstract background */}
+                    <div className="relative z-10">
+                        <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-6">
+                            <Lock size={12} /> Internal Training
                         </div>
-                        <p className="relative z-10 text-white font-serif font-bold text-xl mb-1">Scale Revenue</p>
-                        <p className="relative z-10 text-purple-200 text-xs font-bold uppercase tracking-widest">Predictably</p>
+                        <h3 className="text-3xl font-serif font-bold mb-4 leading-tight">
+                            Steal Our Entire <br />
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">Marketing System</span>
+                        </h3>
+                        <p className="text-slate-300 mb-8 text-sm leading-relaxed">
+                            Watch the 2-hour internal training video where we break down the exact funnel, ads, and sales process we use to scale custom home builders.
+                        </p>
+
+                        <div className="flex items-center gap-4 text-sm font-bold">
+                            <div className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center border border-white/20">
+                                <Play size={20} className="ml-1" fill="currentColor" />
+                            </div>
+                            <div>
+                                <div>2 Hour Masterclass</div>
+                                <div className="text-purple-300 font-normal text-xs">100% Free Access</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Right Side - Form */}
+                <div className="p-8 md:w-7/12 bg-white">
+                    <div className="text-center mb-6">
+                        <h4 className="text-xl font-bold text-slate-900">Unlock Immediate Access</h4>
+                        <p className="text-sm text-slate-500">Enter your details to watch the training now.</p>
                     </div>
 
-                    {/* Content Side */}
-                    <div className="p-10 md:w-3/5 flex flex-col justify-center text-left">
-                        <div className="mb-6">
-                            <h3 className="text-2xl md:text-3xl font-serif font-bold text-slate-900 mb-3 leading-tight">
-                                Tired of relying on referrals?
-                            </h3>
-                            <div className="h-1 w-20 bg-purple-600 rounded-full mb-4"></div>
-                            <p className="text-slate-600 font-medium text-base md:text-lg leading-relaxed mb-2">
-                                We know marketing hasn't worked for you in the past. That's because general agencies don't understand the construction sales cycle.
-                            </p>
-                            <p className="text-slate-600 text-sm">
-                                Stop guessing. Download our <span className="text-purple-700 font-bold">"Revenue Framework"</span> to see exactly how we generate high-ticket leads.
-                            </p>
+                    <form onSubmit={handleSubmit} className="space-y-4">
+                        <div className="grid grid-cols-2 gap-4">
+                            <input
+                                type="text"
+                                name="name"
+                                placeholder="Full Name"
+                                required
+                                value={formData.name}
+                                onChange={handleChange}
+                                className="w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-200 focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all placeholder:text-slate-400"
+                            />
+                            <input
+                                type="tel"
+                                name="phone"
+                                placeholder="Phone Number"
+                                required
+                                value={formData.phone}
+                                onChange={handleChange}
+                                className="w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-200 focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all placeholder:text-slate-400"
+                            />
+                        </div>
+                        <div>
+                            <input
+                                type="email"
+                                name="email"
+                                placeholder="Email Address"
+                                required
+                                value={formData.email}
+                                onChange={handleChange}
+                                className="w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-200 focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all placeholder:text-slate-400"
+                            />
+                        </div>
+                        <div>
+                            <input
+                                type="text"
+                                name="businessName"
+                                placeholder="Business Name"
+                                required
+                                value={formData.businessName}
+                                onChange={handleChange}
+                                className="w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-200 focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all placeholder:text-slate-400"
+                            />
                         </div>
 
-                        <Link
-                            to="/book"
-                            onClick={handleDismiss}
-                            className="flex items-center justify-center gap-3 w-full py-5 rounded-xl bg-slate-900 hover:bg-purple-700 text-white font-bold text-lg transition-all shadow-xl hover:shadow-purple-500/30 hover:-translate-y-1 group"
+                        <button
+                            type="submit"
+                            className="w-full py-4 rounded-xl bg-slate-900 hover:bg-purple-600 text-white font-bold text-lg shadow-lg hover:shadow-purple-500/25 transition-all duration-300 transform hover:-translate-y-1"
                         >
-                            Send Me The Framework <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
-                        </Link>
+                            Watch Training Now
+                        </button>
+                    </form>
 
-                        <div className="mt-5 text-center">
-                            <button
-                                onClick={handleDismiss}
-                                className="text-sm text-slate-400 hover:text-slate-600 font-medium hover:underline decoration-slate-300 transition-colors"
-                            >
-                                No thanks, I'll stick to word-of-mouth
-                            </button>
-                        </div>
+                    <div className="mt-4 text-center">
+                        <button onClick={handleDismiss} className="text-xs text-slate-400 hover:text-slate-600 font-medium">
+                            No thanks, I'll stick to guessing
+                        </button>
                     </div>
                 </div>
             </div>
