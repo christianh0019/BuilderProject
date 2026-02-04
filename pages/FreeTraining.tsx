@@ -8,7 +8,7 @@ const FreeTraining: React.FC = () => {
         <div className="bg-slate-900 min-h-screen text-white font-sans selection:bg-purple-500 selection:text-white pb-20">
             <SEO
                 title="Free Marketing Training | BuilderProject"
-                description="Watch our comprehensive 2-hour training on the exact marketing system we use to help custom home builders scale."
+                description="Watch our comprehensive 2-hour training on the exact marketing system we use to help custom home builders and remodelers scale."
                 canonical="/free-training"
                 noindex={true}
             />
@@ -37,7 +37,7 @@ const FreeTraining: React.FC = () => {
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">Builder Marketing System</span>
                     </h1>
                     <p className="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed">
-                        This 2-hour deep dive reveals every strategy, framework, and tactic we use to generate high-ticket leads for custom builders.
+                        This 2-hour deep dive reveals every strategy, framework, and tactic we use to generate high-ticket leads for custom builders and remodelers.
                     </p>
                 </div>
 
@@ -57,6 +57,14 @@ const FreeTraining: React.FC = () => {
 
                 {/* Content / Notes */}
                 <div className="max-w-3xl mx-auto">
+
+                    <div className="text-center mb-12">
+                        <p className="text-slate-400 mb-6">Ready to implement this system without doing the work yourself?</p>
+                        <Link to="/booking" className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white font-bold py-4 px-10 rounded-full text-lg shadow-lg shadow-purple-900/20 transition-all hover:scale-105">
+                            Book Your Strategy Call <ArrowRight size={20} />
+                        </Link>
+                    </div>
+
                     <div className="bg-white/5 border border-white/10 rounded-2xl p-8 md:p-10 mb-12">
                         <h3 className="text-2xl font-serif font-bold mb-6">What You'll Learn:</h3>
                         <ul className="space-y-4">
@@ -77,12 +85,7 @@ const FreeTraining: React.FC = () => {
                         </ul>
                     </div>
 
-                    <div className="text-center">
-                        <p className="text-slate-400 mb-6">Ready to implement this system without doing the work yourself?</p>
-                        <Link to="/booking" className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white font-bold py-4 px-10 rounded-full text-lg shadow-lg shadow-purple-900/20 transition-all hover:scale-105">
-                            Book Your Strategy Call <ArrowRight size={20} />
-                        </Link>
-                    </div>
+
                 </div>
             </div>
         </div>

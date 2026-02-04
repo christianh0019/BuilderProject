@@ -70,7 +70,7 @@ const BookPopup: React.FC = () => {
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">Marketing System</span>
                         </h3>
                         <p className="text-slate-300 mb-8 text-sm leading-relaxed">
-                            Get immediate access to the internal breakdown where we reveal the exact funnel, ads, and sales process we use to scale custom home builders.
+                            Get immediate access to the internal breakdown where we reveal the exact funnel, ads, and sales process we use to scale custom home builders and remodelers.
                         </p>
 
                         <div className="flex items-center gap-4 text-sm font-bold">
