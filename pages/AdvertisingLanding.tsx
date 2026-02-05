@@ -72,6 +72,16 @@ const AdvertisingLanding: React.FC = () => {
                             <p className="text-lg text-slate-600 max-w-2xl mx-auto">
                                 So that you can turn your owner-run operation into a real company that's built on systems, not randomness.
                             </p>
+
+                            {/* Mobile Only CTA */}
+                            <div className="md:hidden mt-8">
+                                <button
+                                    onClick={scrollToSurvey}
+                                    className="w-full px-8 py-4 text-lg font-bold text-white transition-all duration-200 bg-gradient-to-r from-purple-700 to-pink-600 rounded-full shadow-lg shadow-purple-500/20 active:scale-95"
+                                >
+                                    See If You Qualify
+                                </button>
+                            </div>
                         </div>
 
                         {/* Form Container */}
