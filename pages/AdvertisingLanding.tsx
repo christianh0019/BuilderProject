@@ -46,7 +46,7 @@ const AdvertisingLanding: React.FC = () => {
                 onClick={scrollToSurvey}
                 className="group relative inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white transition-all duration-200 bg-gradient-to-r from-purple-700 to-pink-600 rounded-full hover:shadow-xl hover:shadow-purple-500/30 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 animate-heartbeat shadow-lg shadow-purple-500/20"
             >
-                Book Your Free Strategy Session
+                See If You Qualify
                 <ArrowRight className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" />
             </button>
         </div>
@@ -74,13 +74,8 @@ const AdvertisingLanding: React.FC = () => {
                             </p>
 
                             {/* Mobile Only CTA */}
-                            <div className="md:hidden mt-8">
-                                <button
-                                    onClick={scrollToSurvey}
-                                    className="w-full px-8 py-4 text-lg font-bold text-white transition-all duration-200 bg-gradient-to-r from-purple-700 to-pink-600 rounded-full shadow-lg shadow-purple-500/20 active:scale-95"
-                                >
-                                    See If You Qualify
-                                </button>
+                            <div className="md:hidden">
+                                <CTAButton />
                             </div>
                         </div>
 
