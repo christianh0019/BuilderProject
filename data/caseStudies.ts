@@ -23,6 +23,7 @@ export interface CaseStudy {
         quote: string;
         author: string;
     };
+    landingPageDescription?: string;
 }
 
 export const caseStudies: CaseStudy[] = [
@@ -57,7 +58,8 @@ export const caseStudies: CaseStudy[] = [
                 }
             ],
             outcome: "2 custom homes closed from this system resulting in ~$500,000 in profits from those two projects. All from just $8,000 in ad spend. These weren’t “more leads.” They were better conversations—people who respected his process, showed up on time, and were ready to plan a build."
-        }
+        },
+        landingPageDescription: "Hired a sales rep and added 5M in revenue within 7 months of working with us."
     },
     {
         id: 'open-prairie',
@@ -94,7 +96,8 @@ export const caseStudies: CaseStudy[] = [
         testimonial: {
             quote: "I just signed a $1.5M deal last week... and a $1.3M one’s on the way.",
             author: "Dan, Owner"
-        }
+        },
+        landingPageDescription: "Dan went from sticky notes and referrals to having more leads than he could handle. He added 3M in revenue within 6 months of working with us."
     },
     {
         id: 'schwanz',
@@ -127,7 +130,8 @@ export const caseStudies: CaseStudy[] = [
                 }
             ],
             outcome: "Within 90 days: 2 custom home contracts signed ($280K and $400K) and the build calendar refilled for the rest of the year. $680K in revenue generated off of just $6K in ad spend."
-        }
+        },
+        landingPageDescription: "Was slowly losing revenue year after year so we built them our system and they filled their build slots for the entire year for the first time in over 5 years."
     },
     {
         id: 'eagle-rock',
@@ -160,6 +164,7 @@ export const caseStudies: CaseStudy[] = [
                 }
             ],
             outcome: "In just 60 days, Bill’s calendar booked out completely, forcing him to hire a sales rep. 2 custom homes closed in Pennsylvania and $3.2M+ in pipeline revenue generated from an ad spend of only $5,500."
-        }
+        },
+        landingPageDescription: "Had never worked with anybody but from referrals and has a full process for generating and closing leads and closed 3.2M in revenue within 6 months of working with us."
     }
 ];
