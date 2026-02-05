@@ -4,7 +4,7 @@ import { ArrowRight, CheckCircle2 } from 'lucide-react';
 import { caseStudies } from '../data/caseStudies';
 import SimpleHeader from '../components/SimpleHeader';
 
-const AdvertisingLanding: React.FC = () => {
+const PartnerApplicationV2: React.FC = () => {
     const surveyRef = useRef<HTMLDivElement>(null);
 
     const scrollToSurvey = () => {
@@ -62,15 +62,33 @@ const AdvertisingLanding: React.FC = () => {
                         {/* Hero Section */}
                         <div className="text-center mb-12">
                             {/* Reviews Pill */}
-                            <div className="inline-flex items-center gap-2 bg-purple-50 border border-purple-100 px-4 py-2 rounded-full mb-8 animate-fadeIn">
-                                <span className="text-sm font-bold text-purple-900">Custom Home Builders & Remodelers</span>
+                            <div className="inline-flex items-center gap-2 bg-yellow-50 border border-yellow-100 px-4 py-2 rounded-full mb-8 animate-fadeIn">
+                                <div className="flex gap-0.5">
+                                    {[1, 2, 3, 4, 5].map((i) => (
+                                        <div key={i} className="text-yellow-400">
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                viewBox="0 0 24 24"
+                                                fill="currentColor"
+                                                className="w-4 h-4"
+                                            >
+                                                <path
+                                                    fillRule="evenodd"
+                                                    d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                                    clipRule="evenodd"
+                                                />
+                                            </svg>
+                                        </div>
+                                    ))}
+                                </div>
+                                <span className="text-sm font-bold text-slate-800">Rated 4.9/5 by 100+ Builders</span>
                             </div>
 
                             <h1 className="text-4xl md:text-5xl font-serif font-bold text-slate-900 mb-6 leading-tight">
-                                Stop Relying On Referrals And Build A Predictable Pipeline That Takes You From <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-700 to-pink-600">$3–5M To $15M+</span>
+                                Get More High-Margin <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-700 to-pink-600">Custom Home Builds or Remodels</span> in 2026
                             </h1>
                             <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-                                So that you can turn your owner-run operation into a real company that's built on systems, not randomness.
+                                We help Builders and Remodelers break free from the inconsistency of word of mouth by implementing our proven marketing systems. Fill out the quick survey below to book a short discovery call. (Not a sales call)
                             </p>
                         </div>
 
@@ -435,4 +453,4 @@ That's the difference. We're not figuring this out as we go. We already know exa
     );
 };
 
-export default AdvertisingLanding;
+export default PartnerApplicationV2;

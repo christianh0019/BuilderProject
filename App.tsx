@@ -33,6 +33,7 @@ import Careers from './pages/Careers';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsOfService from './pages/TermsOfService';
 import AdvertisingLanding from './pages/AdvertisingLanding';
+import PartnerApplicationV2 from './pages/PartnerApplicationV2';
 import Quickstart from './pages/Quickstart';
 import NotFound from './pages/NotFound';
 import FreeTraining from './pages/FreeTraining';
@@ -103,6 +104,7 @@ const App: React.FC = () => {
 
           {/* Dedicated Landing Pages (No Nav/Footer) */}
           <Route path="/partner-application" element={<AdvertisingLanding />} />
+          <Route path="/partner-application-v2" element={<PartnerApplicationV2 />} />
 
           {/* Onboarding Funnel */}
           <Route path="/onboarding/welcome" element={<Welcome />} />
