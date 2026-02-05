@@ -88,6 +88,9 @@ const AdvertisingLanding: React.FC = () => {
                         {/* Testimonials Section */}
                         <div className="border-t border-slate-200 pt-16">
                             <div className="text-center mb-12">
+                                <p className="text-xl md:text-2xl font-serif text-slate-900 italic mb-8 max-w-3xl mx-auto">
+                                    "Here’s what happens when builders replace referral-only growth with real infrastructure."
+                                </p>
                                 <span className="text-purple-600 font-bold tracking-wider text-sm uppercase mb-3 block">Proven Results</span>
                                 <h2 className="text-3xl font-serif font-bold text-slate-900">What Our Partners Are Saying</h2>
                             </div>
@@ -130,12 +133,6 @@ const AdvertisingLanding: React.FC = () => {
                                                     {study.landingPageDescription || study.content.overview}
                                                 </p>
                                             </div>
-
-                                            {study.testimonial && (
-                                                <blockquote className="mt-4 text-slate-600 text-sm italic border-l-2 border-purple-200 pl-3">
-                                                    "{study.testimonial.quote}"
-                                                </blockquote>
-                                            )}
                                         </div>
                                     ))}
                             </div>
