@@ -118,7 +118,7 @@ const AdvertisingLanding: React.FC = () => {
                             </div>
 
                             {/* Logo Carousel */}
-                            <div className="mt-8 mb-12">
+                            <div className="mt-4 mb-8">
                                 <LogoCarousel />
                             </div>
                         </div>
