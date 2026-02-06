@@ -81,7 +81,7 @@ const AdvertisingLanding: React.FC = () => {
                             </div>
 
                             <h1 className="text-[28px] md:text-5xl font-serif font-bold text-slate-900 mb-6 leading-tight">
-                                Stop Relying On Referrals And Build A Predictable Pipeline That Takes You From <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-700 to-pink-600">$3–5M To $15M+</span>
+                                Stop Relying On Referrals And Build A Predictable Pipeline That Takes You From <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-700 to-pink-600">$2–7M To $15M+</span>
                             </h1>
                             <p className="hidden md:block text-lg text-slate-600 max-w-2xl mx-auto">
                                 So that you can turn your owner-run operation into a real company that's built on systems, not randomness.
