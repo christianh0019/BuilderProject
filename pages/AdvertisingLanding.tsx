@@ -11,8 +11,12 @@ const AdvertisingLanding: React.FC = () => {
 
     const handleVideoClick = () => {
         if (videoRef.current) {
-            videoRef.current.muted = !videoRef.current.muted;
-            setIsMuted(!isMuted);
+            if (isMuted) {
+                videoRef.current.currentTime = 0;
+                videoRef.current.muted = false;
+                videoRef.current.controls = true;
+                setIsMuted(false);
+            }
         }
     };
 
@@ -83,7 +87,7 @@ const AdvertisingLanding: React.FC = () => {
                             </p>
 
                             {/* Autoplay Video Section */}
-                            <div className="mt-8 mb-8 relative mx-auto max-w-[280px] group cursor-pointer" onClick={handleVideoClick}>
+                            <div className="mt-8 mb-8 relative mx-auto max-w-sm md:max-w-md group cursor-pointer" onClick={handleVideoClick}>
                                 <div className="rounded-2xl overflow-hidden shadow-2xl border-4 border-white transform transition-transform duration-300 hover:scale-105">
                                     <video
                                         ref={videoRef}
@@ -94,20 +98,16 @@ const AdvertisingLanding: React.FC = () => {
                                         muted
                                         playsInline
                                     />
-                                    <div className={`absolute inset-0 bg-black/20 flex flex-col items-center justify-center transition-opacity duration-300 ${!isMuted ? 'opacity-0 group-hover:opacity-100' : 'opacity-100'}`}>
-                                        <div className="bg-white/20 backdrop-blur-md p-4 rounded-full mb-3 shadow-lg ring-1 ring-white/50">
-                                            {isMuted ? (
+                                    {isMuted && (
+                                        <div className="absolute inset-0 bg-black/20 flex flex-col items-center justify-center transition-opacity duration-300 hover:bg-black/10">
+                                            <div className="bg-white/20 backdrop-blur-md p-4 rounded-full mb-3 shadow-lg ring-1 ring-white/50 animate-pulse">
                                                 <VolumeX className="w-8 h-8 text-white fill-white" />
-                                            ) : (
-                                                <Volume2 className="w-8 h-8 text-white fill-white" />
-                                            )}
-                                        </div>
-                                        {isMuted && (
+                                            </div>
                                             <span className="bg-black/60 text-white text-[10px] font-bold tracking-widest uppercase px-3 py-1 rounded-full backdrop-blur-sm">
                                                 Click to Unmute
                                             </span>
-                                        )}
-                                    </div>
+                                        </div>
+                                    )}
                                 </div>
                             </div>
 
