@@ -424,7 +424,7 @@ export const blogPosts: BlogPost[] = [
     title: "If You Still Use Contact Forms, You're Losing 3-5 New Builds Per Year",
     date: 'February 06, 2026',
     readTime: '8 min read',
-    thumbnail: 'https://img.youtube.com/vi/z8j0izsgA_M/maxresdefault.jpg',
+    thumbnail: 'https://img.youtube.com/vi/z8j0izsgA_M/hqdefault.jpg',
     youtubeUrl: 'https://www.youtube.com/watch?v=z8j0izsgA_M',
     excerpt: "If your contact form is bringing you spam instead of qualified leads, it's costing you millions. Learn why the traditional contact page is dead and how a simple funnel can add 3-5 projects to your pipeline this year.",
     content: `
