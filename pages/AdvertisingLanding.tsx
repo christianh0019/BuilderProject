@@ -3,6 +3,7 @@ import SurveyForm from '../components/SurveyForm';
 import { ArrowRight, CheckCircle2, Volume2, VolumeX } from 'lucide-react';
 import { caseStudies } from '../data/caseStudies';
 import SimpleHeader from '../components/SimpleHeader';
+import LogoCarousel from '../components/LogoCarousel';
 
 const AdvertisingLanding: React.FC = () => {
     const surveyRef = useRef<HTMLDivElement>(null);
@@ -79,7 +80,7 @@ const AdvertisingLanding: React.FC = () => {
                                 <span className="text-sm font-bold text-purple-900">Custom Home Builders & Remodelers</span>
                             </div>
 
-                            <h1 className="text-[25px] md:text-5xl font-serif font-bold text-slate-900 mb-6 leading-tight">
+                            <h1 className="text-[28px] md:text-5xl font-serif font-bold text-slate-900 mb-6 leading-tight">
                                 Stop Relying On Referrals And Build A Predictable Pipeline That Takes You From <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-700 to-pink-600">$3–5M To $15M+</span>
                             </h1>
                             <p className="hidden md:block text-lg text-slate-600 max-w-2xl mx-auto">
@@ -114,6 +115,11 @@ const AdvertisingLanding: React.FC = () => {
                             {/* Mobile Only CTA */}
                             <div className="md:hidden">
                                 <CTAButton />
+                            </div>
+
+                            {/* Logo Carousel */}
+                            <div className="mt-8 mb-12">
+                                <LogoCarousel />
                             </div>
                         </div>
 
