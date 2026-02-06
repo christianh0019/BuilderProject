@@ -418,4 +418,65 @@ export const blogPosts: BlogPost[] = [
       </div>
         `
   },
+  },
+{
+  id: '9',
+    slug: 'broken-contact-form-custom-home-builders',
+      title: "Your Contact Form is Broken... Here's Why (And How To Fix It)",
+        date: 'February 06, 2026',
+          readTime: '8 min read',
+            thumbnail: 'https://img.youtube.com/vi/z8j0izsgA_M/maxresdefault.jpg',
+              youtubeUrl: 'https://www.youtube.com/watch?v=z8j0izsgA_M',
+                excerpt: "If your contact form is bringing you spam instead of qualified leads, it's costing you millions. Learn why the traditional contact page is dead and how a simple funnel can add 3-5 projects to your pipeline this year.",
+                  content: `
+      <p class="mb-6">How many times a week do you get an email from your website and it's just a subcontractor begging for work, or some spam message from halfway across the world? If that's what your contact form is bringing you, it's broken, and it's costing you three to five real projects every single year. I'm going to prove it to you with math.</p>
+      
+      <p class="mb-6">I'm Christian with BuilderProject, and I work with custom home builders and remodelers all across the country helping them scale their revenue with digital marketing strategies.</p>
+      
+      <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4 font-serif">The Old Way vs. The Reality</h2>
+      <p class="mb-6">Here's what I see on almost every website I look at. You've got a contact page with the same setup everyone has. Name, email, phone number, and that message box. You put it up years ago, and honestly, you probably haven't thought much about it since.</p>
+      
+      <p class="mb-6">But here's the problem. That form is pushing away the exact people you want to work with while attracting everyone you don't.</p>
+      
+      <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4 font-serif">Why The Standard Form Fails</h2>
+      <p class="mb-6">Let's talk about what happens when someone lands on your contact page right now. They've been looking at builders for weeks, maybe months. They've googled Custom Home Builders or remodelers near me and maybe found your website or clicked on one of your facebook ads.</p>
+      
+      <p class="mb-6">And once they're on your contact page, they see those empty boxes staring back at them. They've got to type in their name, email, and phone number, which already is bad. And then comes the message box. This is where most people freeze up. What are they supposed to write? Do they explain their whole project? Do they just say "call me"? There's no guidance, no direction, and it ends up feeling awkward.</p>
+      
+      <p class="mb-6">So a lot of people just click off because of the Paradox of Choice. Which basically means that when you have alot of options, you're more likely to choose none.</p>
+      
+      <div class="bg-purple-50 border-l-4 border-purple-500 p-6 my-8 rounded-r-lg">
+        <p class="font-medium text-purple-900 italic">"The ones who do fill it out usually write something generic like 'Hi, I'm interested in building a home, please contact me.' And now when you call them, you're going in completely blind."</p>
+      </div>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4 font-serif">The Solution: Interactive Funnels</h2>
+      <p class="mb-6">Now imagine something different. Instead of that form, they land on a page that just asks one simple question. "What type of project are you planning?" And there are these big, easy buttons to click. New Custom Home. Kitchen Remodel. Home Addition. Whole House Renovation.</p>
+      
+      <p class="mb-6">They click "New Custom Home" and the next question slides in. "What's your timeline for starting?" More buttons. Ready to start soon. Three to six months. Six to twelve months. Just exploring for now.</p>
+      
+      <p class="mb-6">Another click. The questions keep flowing naturally based on what they're telling you. If they said custom home, it asks "Do you already own land?" If they said remodel, it might ask about their current space. By the time they get through five or six questions like this, they've given you a complete picture of their project without ever feeling like they're filling out paperwork.</p>
+      
+      <p class="mb-6">And then at the very end, it asks for their contact info so you can follow up with them. At that point, they've already invested time answering your questions, so they're way more likely to finish. That's proven as well and it's called the Commitment and Consistency Bias.</p>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4 font-serif">The Math: What It Costs You</h2>
+      <p class="mb-6">Let's look at what this actually means for your business in real numbers. Let's say you're getting about a thousand people visiting your website every month. That's pretty normal for a builder doing three to ten million a year.</p>
+      
+      <p class="mb-6">With your current contact form, you're probably converting about half a percent of those visitors. So out of a thousand people, maybe five fill out your form each month. That's sixty submissions per year. But 90% are garbage. So realistically, you're getting about six qualified leads per year from your website. If you close twenty percent of those, you're getting one, maybe two projects annually.</p>
+      
+      <p class="mb-6">Now let's look at what happens with a funnel instead. Our funnels convert at about five percent. So out of those same thousand monthly visitors, fifty people complete the funnel every month. That's six hundred per year.</p>
+      
+      <p class="mb-6">Because the funnel is asking questions about budget, timeline, land ownership, you're automatically filtering people. With a funnel, we see twenty to thirty percent are qualified. Let's say twenty percent. That gives you ten qualified leads every month. A hundred and twenty per year.</p>
+      
+      <p class="mb-6">If you're closing twenty percent of those, that's twenty-four projects per year from your website instead of one or two. Even if you only close a handful of those, that's multiple million-dollar projects you wouldn't have had otherwise.</p>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4 font-serif">Stop Guessing, Start Building</h2>
+      <p class="mb-6">You're already working hard to get people to visit your website. Whether that's through ads, SEO, word of mouth, whatever you're doing. Don't let all that effort go to waste at the last step just because your form makes it hard for people to actually reach out to you.</p>
+      
+      <div class="bg-slate-900 text-white p-8 rounded-2xl my-10 text-center">
+        <h3 class="text-2xl font-bold mb-4 font-serif">Free Marketing Audit</h3>
+        <p class="text-slate-300 mb-6">We will audit your current marketing systems—or lack thereof—and show you hidden opportunities. No strings attached.</p>
+        <a href="/contact" class="inline-block bg-white text-slate-900 font-bold px-8 py-3 rounded-full hover:bg-purple-50 transition-colors">Book Your Audit</a>
+      </div>
+    `
+}
 ];
