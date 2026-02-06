@@ -113,7 +113,8 @@ const AdvertisingLanding: React.FC = () => {
                             </div>
 
                             {/* Mobile Only CTA */}
-                            <div className="md:hidden">
+                            {/* CTA Button */}
+                            <div className="mt-8 mb-8">
                                 <CTAButton />
                             </div>
 
