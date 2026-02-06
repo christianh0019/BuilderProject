@@ -418,17 +418,16 @@ export const blogPosts: BlogPost[] = [
       </div>
         `
   },
-  },
-{
-  id: '9',
+  {
+    id: '9',
     slug: 'broken-contact-form-custom-home-builders',
-      title: "Your Contact Form is Broken... Here's Why (And How To Fix It)",
-        date: 'February 06, 2026',
-          readTime: '8 min read',
-            thumbnail: 'https://img.youtube.com/vi/z8j0izsgA_M/maxresdefault.jpg',
-              youtubeUrl: 'https://www.youtube.com/watch?v=z8j0izsgA_M',
-                excerpt: "If your contact form is bringing you spam instead of qualified leads, it's costing you millions. Learn why the traditional contact page is dead and how a simple funnel can add 3-5 projects to your pipeline this year.",
-                  content: `
+    title: "If You Still Use Contact Forms, You're Losing 3-5 New Builds Per Year",
+    date: 'February 06, 2026',
+    readTime: '8 min read',
+    thumbnail: 'https://img.youtube.com/vi/z8j0izsgA_M/maxresdefault.jpg',
+    youtubeUrl: 'https://www.youtube.com/watch?v=z8j0izsgA_M',
+    excerpt: "If your contact form is bringing you spam instead of qualified leads, it's costing you millions. Learn why the traditional contact page is dead and how a simple funnel can add 3-5 projects to your pipeline this year.",
+    content: `
       <p class="mb-6">How many times a week do you get an email from your website and it's just a subcontractor begging for work, or some spam message from halfway across the world? If that's what your contact form is bringing you, it's broken, and it's costing you three to five real projects every single year. I'm going to prove it to you with math.</p>
       
       <p class="mb-6">I'm Christian with BuilderProject, and I work with custom home builders and remodelers all across the country helping them scale their revenue with digital marketing strategies.</p>
@@ -478,5 +477,5 @@ export const blogPosts: BlogPost[] = [
         <a href="/contact" class="inline-block bg-white text-slate-900 font-bold px-8 py-3 rounded-full hover:bg-purple-50 transition-colors">Book Your Audit</a>
       </div>
     `
-}
+  }
 ];
