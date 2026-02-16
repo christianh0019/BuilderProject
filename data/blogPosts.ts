@@ -477,5 +477,50 @@ export const blogPosts: BlogPost[] = [
         <a href="/contact" class="inline-block bg-white text-slate-900 font-bold px-8 py-3 rounded-full hover:bg-purple-50 transition-colors">Book Your Audit</a>
       </div>
     `
+  },
+  {
+    id: '10',
+    slug: 'how-to-get-more-referrals-custom-home-builder',
+    title: "How To Get More Referrals As A Custom Home Builder",
+    date: 'February 16, 2026',
+    readTime: '10 min read',
+    thumbnail: 'https://img.youtube.com/vi/fr4WYTNKApA/maxresdefault.jpg',
+    youtubeUrl: 'https://www.youtube.com/watch?v=fr4WYTNKApA',
+    excerpt: "For 99% of builders, referrals are random. Learn how to systematize referrals from past clients and vendors to add millions to your top line without extra work.",
+    content: `
+      <p class="mb-6">Everyone loves referrals. They close faster, they complain less, and they trust you more. But here’s the problem. For ninety-nine percent of builders, referrals are completely random. You sit by the phone and hope a past client mentions your name at a dinner party. That is not a strategy. That is hope. And you cannot scale a multimillion-dollar business on hope.</p>
+      <p class="mb-6">If you want to double or triple your referral volume this year, you need to stop waiting for them and start buying them. Today I’m going to show you how to set up a formalized referral program that incentivizes your past clients and your professional network to become your most profitable sales team.</p>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4 font-serif">The Mindset Shift: Buying the Best Lead</h2>
+      <p class="mb-6">Most builders look at a referral as a "free" lead. But if you’re running ads or paying an agency, you are already comfortable paying to acquire a customer. So why wouldn't you be willing to pay for the best kind of lead you can possibly get? A referral comes pre-sold. The trust is transferred. The sales cycle is half as long.</p>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4 font-serif">The Math That Makes This a No-Brainer</h2>
+      <p class="mb-6">Let’s say you sell a custom home for one million dollars. Your gross profit is likely around $150,000 to $200,000. If I told you that you could guarantee that profit check by writing a check for $10,000, would you do it? Every single time. That is a 20X return on investment.</p>
+      <div class="bg-purple-50 border-l-4 border-purple-500 p-6 my-8 rounded-r-lg">
+        <p class="font-medium text-purple-900 italic">"You probably pay Realtors 3%—$30,000 on a million-dollar home—without blinking. Why wouldn't you pay a past client or architect 1% to bring you an even better client?"</p>
+      </div>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4 font-serif">Structuring for Past Clients</h2>
+      <p class="mb-6">Your past clients are your best advocates, but they are busy. They aren't waking up thinking about how to help you grow. Money creates urgency. Imagine sending an email saying, "For every client you introduce who signs a contract, we will pay you a $10,000 referral commission."</p>
+      <p class="mb-6">To them, that isn't dinner money. That is "take the family to Hawaii" money. Suddenly, they are actively listening for opportunities to sell you.</p>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4 font-serif">The Professional Network: Your Gatekeepers</h2>
+      <p class="mb-6">Architects, lenders, and interior designers are talking to your ideal clients months before you do. Money talks here too. If your competitor sends a bottle of scotch at Christmas, but you have a formal agreement to pay a $5,000 consulting fee for closed projects, who are they going to lean towards? You are treating them like a partner, not just a lead source.</p>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4 font-serif">How to Implement It</h2>
+      <ul class="list-disc pl-6 mb-6 space-y-2 text-slate-700">
+        <li><strong>Create a dedicated page:</strong> Build a "Referral Program" or "Partner With Us" page on your site detailing the terms.</li>
+        <li><strong>Legitimize it:</strong> Having it in writing shows it’s a business program, not a bribe.</li>
+        <li><strong>Market it:</strong> Send an email blast to your past clients. Message architects and lenders on LinkedIn to walk them through your "Vendor Partnership Program."</li>
+      </ul>
+
+      <p class="mb-6">This is how you turn "word of mouth" from a passive hope into an active revenue channel. At BuilderProject, we build these growth infrastructures for clients because we know it’s the easiest way to add millions to your top line without hiring a sales team.</p>
+
+      <div class="bg-slate-900 text-white p-8 rounded-2xl my-10 text-center">
+        <h3 class="text-2xl font-bold mb-4 font-serif">Free Marketing Audit</h3>
+        <p class="text-slate-300 mb-6">We will audit your current marketing systems—or lack thereof—and show you hidden opportunities. No strings attached.</p>
+        <a href="/contact" class="inline-block bg-white text-slate-900 font-bold px-8 py-3 rounded-full hover:bg-purple-50 transition-colors">Book Your Audit</a>
+      </div>
+    `
   }
 ];
