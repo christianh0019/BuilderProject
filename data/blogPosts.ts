@@ -484,7 +484,7 @@ export const blogPosts: BlogPost[] = [
     title: "How To Get More Referrals As A Custom Home Builder",
     date: 'February 16, 2026',
     readTime: '10 min read',
-    thumbnail: 'https://img.youtube.com/vi/fr4WYTNKApA/maxresdefault.jpg',
+    thumbnail: 'https://img.youtube.com/vi/fr4WYTNKApA/hqdefault.jpg',
     youtubeUrl: 'https://www.youtube.com/watch?v=fr4WYTNKApA',
     excerpt: "For 99% of builders, referrals are random. Learn how to systematize referrals from past clients and vendors to add millions to your top line without extra work.",
     content: `
