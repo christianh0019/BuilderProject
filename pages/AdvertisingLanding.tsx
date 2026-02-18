@@ -92,7 +92,7 @@ const AdvertisingLanding: React.FC = () => {
                                 <div className="rounded-2xl overflow-hidden shadow-2xl border-4 border-white transform transition-transform duration-300 hover:scale-105">
                                     <video
                                         ref={videoRef}
-                                        src="https://storage.googleapis.com/msgsndr/HllUVzV8V6VFH4nUuq4W/media/6985d441d017c33ad9dc0279.mp4"
+                                        src="https://storage.googleapis.com/msgsndr/HllUVzV8V6VFH4nUuq4W/media/6995e10363fc7c5c2726adaa.mp4"
                                         className="w-full h-auto object-cover"
                                         autoPlay
                                         loop
