@@ -118,7 +118,7 @@ const AdvertisingPreMeeting: React.FC = () => {
                         </div>
 
                         {/* Testimonials Section */}
-                        <div ref={resultsRef} className="border-t border-slate-200 pt-16 scroll-mt-24">
+                        <div ref={resultsRef} className="border-t border-slate-200 pt-16 pb-16 scroll-mt-24">
                             <div className="text-center mb-12">
                                 <span className="text-purple-600 font-bold tracking-wider text-sm uppercase mb-3 block">Proven Results</span>
                                 <h2 className="text-3xl font-serif font-bold text-slate-900">What Our Partners Are Saying</h2>
