@@ -44,14 +44,14 @@ const AdvertisingPreMeeting: React.FC = () => {
                         <div className="text-center mb-12">
                             {/* Reviews Pill */}
                             <div className="inline-flex items-center gap-2 bg-purple-50 border border-purple-100 px-4 py-2 rounded-full mb-8 animate-fadeIn">
-                                <span className="text-sm font-bold text-purple-900">Custom Home Builders & Remodelers</span>
+                                <span className="text-sm font-bold text-purple-900">You're Booked!</span>
                             </div>
 
                             <h1 className="text-[28px] md:text-5xl font-serif font-bold text-slate-900 mb-6 leading-tight">
-                                Stop Relying On Referrals And Build A Predictable Pipeline That Takes You From <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-700 to-pink-600">$2–7M To $15M+</span>
+                                Please Watch This Short Video To See How You Could Land <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-700 to-pink-600">3-5 More Projects This Year.</span>
                             </h1>
                             <p className="block text-lg text-slate-600 max-w-2xl mx-auto">
-                                Watch the short video below to see how:
+                                We've also put some of our clients results and the answers to our most asked questions.
                             </p>
 
                             {/* Autoplay Video Section */}
