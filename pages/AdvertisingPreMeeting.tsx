@@ -6,7 +6,17 @@ import LogoCarousel from '../components/LogoCarousel';
 
 const AdvertisingPreMeeting: React.FC = () => {
     const videoRef = useRef<HTMLVideoElement>(null);
+    const resultsRef = useRef<HTMLDivElement>(null);
+    const faqRef = useRef<HTMLDivElement>(null);
     const [isMuted, setIsMuted] = React.useState(true);
+
+    const scrollToResults = () => {
+        resultsRef.current?.scrollIntoView({ behavior: 'smooth' });
+    };
+
+    const scrollToFAQ = () => {
+        faqRef.current?.scrollIntoView({ behavior: 'smooth' });
+    };
 
     const handleVideoClick = () => {
         if (videoRef.current) {
@@ -79,6 +89,22 @@ const AdvertisingPreMeeting: React.FC = () => {
                                 </div>
                             </div>
 
+                            {/* Navigation Buttons */}
+                            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8 mb-8">
+                                <button
+                                    onClick={scrollToResults}
+                                    className="w-full sm:w-auto px-8 py-4 text-lg font-bold text-white transition-all duration-200 bg-slate-900 rounded-full hover:bg-slate-800 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-slate-900 focus:ring-offset-2"
+                                >
+                                    See Results
+                                </button>
+                                <button
+                                    onClick={scrollToFAQ}
+                                    className="w-full sm:w-auto px-8 py-4 text-lg font-bold text-purple-700 transition-all duration-200 bg-purple-50 rounded-full hover:bg-purple-100 hover:shadow-lg border border-purple-200 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2"
+                                >
+                                    Get Answers
+                                </button>
+                            </div>
+
                             {/* Logo Carousel */}
                             <div className="mt-4 mb-8">
                                 <LogoCarousel />
@@ -92,7 +118,7 @@ const AdvertisingPreMeeting: React.FC = () => {
                         </div>
 
                         {/* Testimonials Section */}
-                        <div className="border-t border-slate-200 pt-16">
+                        <div ref={resultsRef} className="border-t border-slate-200 pt-16 scroll-mt-24">
                             <div className="text-center mb-12">
                                 <p className="text-xl md:text-2xl font-serif text-slate-900 italic mb-8 max-w-3xl mx-auto">
                                     "Here’s what happens when builders replace referral-only growth with real infrastructure."
@@ -146,7 +172,7 @@ const AdvertisingPreMeeting: React.FC = () => {
 
 
                         {/* FAQ Section */}
-                        <div className="py-24 border-t border-slate-200 hidden">
+                        <div ref={faqRef} className="py-24 border-t border-slate-200 hidden scroll-mt-24">
                             <div className="text-center mb-16">
                                 <span className="text-purple-600 font-bold tracking-wider text-sm uppercase mb-3 block">Common Questions</span>
                                 <h2 className="text-3xl md:text-4xl font-serif font-bold text-slate-900">
