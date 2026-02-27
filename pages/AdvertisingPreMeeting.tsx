@@ -183,56 +183,96 @@ const AdvertisingPreMeeting: React.FC = () => {
                             <div className="max-w-3xl mx-auto space-y-4">
                                 {[
                                     {
-                                        q: "How long until I see results?",
-                                        a: `Look, I'm going to be straight with you because I don't want to waste your time or mine. It takes 6 months or longer to land your first signed contract through this system. That's just the reality of custom home builds. The sales cycle is long. People don't decide to build a $1.5 million house overnight.
+                                        q: "Who is this program actually for?",
+                                        a: `This is specifically designed for established custom home builders who are already doing roughly $2M–$7M per year and want to scale to the next level.
 
-But here's what most agencies won't tell you - we build in ways to monetize your sales process early so you're not just sitting around waiting. We help you implement paid concept design agreements and preconstruction packages. That means instead of doing 6 months of free consulting and sending ballpark numbers hoping they sign, you're getting paid $5,000, $10,000, sometimes $25,000 just to develop their plans and get them through preconstruction. That revenue starts flowing within the first few months.
+Most of the builders we work with already have a strong reputation and get referrals, but they want a more predictable pipeline of projects so they can grow without constantly worrying about where the next job will come from.
 
-But the real money? That shows up 6 to 12 months down the line when everything compounds. Your website is ranking on Google. Your social media has consistent content going out. You have retargeting ads following up with every lead who visited your site. Your CRM is nurturing dozens of prospects through automated follow-up. All of that builds momentum. So by month 9, month 10, you're not just landing one project - you're managing a pipeline worth $50 million, $100 million. That's when builders go from doing $5 million a year to $15 million a year.
-
-If you want instant results or you're not willing to invest the time to build something real, this isn't for you. But if you're serious about creating a predictable system that controls your revenue instead of hoping referrals come in, this is how you do it.`
+If you're just getting started or primarily doing small remodels, this likely won't be the right fit.`
                                     },
                                     {
-                                        q: "I've tried marketing before and it didn't work. Why would this be different?",
-                                        a: `Because running a few Facebook ads or building a pretty website isn't marketing. That's just checking boxes. Real marketing is a complete system that works together.
+                                        q: "What makes this different from other marketing companies?",
+                                        a: `Most marketing companies focus on generating leads.
 
-Think about what probably happened before. You hired someone to run ads - they sent traffic to your website, but your website didn't convert anyone. Or maybe you paid for a new website, but nobody can find it on Google and you have no way to drive traffic to it. Or you got leads, but nobody followed up with them consistently, so they disappeared.
+We focus on installing a complete client acquisition system inside your business.
 
-That's like trying to build a house with just a foundation and no walls. Or walls with no roof. It doesn't work because you're missing critical pieces.
+That includes:
 
-Here's what actually works: You need a website that converts visitors into leads AND ranks on Google so people can find you. You need paid ads that target the right people and speak to them in a way that makes them want to learn more. You need content going out on social media that educates prospects before they ever call you. You need a CRM that captures every lead and automatically follows up so nothing falls through the cracks over the 6 to 12 month sales cycle. You need pricing structures that monetize your process early so you're not doing free work.
+• Generating qualified leads
+• Filtering out tire-kickers before they reach you
+• Tracking every opportunity in a structured pipeline
+• Implementing follow-ups over the 6–12 month sales cycle
+• Helping you build sales processes and operations as you scale
 
-All of that has to work together as one system. That's what we build. Not just ads. Not just a website. The entire system from the first click to the signed contract. That's why it works when the other stuff didn't.`
+Instead of just giving you contacts and saying “good luck,” we build the entire system that consistently produces projects.`
                                     },
                                     {
-                                        q: "I already have a website. Do I need a new one?",
-                                        a: `Here's the honest answer - you probably already know deep down whether your website is working or not.
+                                        q: "What kind of results should I realistically expect?",
+                                        a: `Every market is different, but most builders we work with install the system to generate 5–10 additional custom home projects per year once everything is fully running.
 
-Pull up your contact form submissions from the last 6 months. How many did you get? And I'm not talking about subcontractors begging for work or spam. I'm talking about actual qualified homeowners who want to build.
+Some builders see results faster, but the real goal is predictability, not random spikes.
 
-If your website is getting 10, 20, 30 real leads coming through every month, then no, you don't need a new one. We'll just optimize what you have - make sure it's ranking on Google, fine-tune the messaging, improve the user experience.
-
-But if you're being honest with yourself and you know your website isn't bringing in leads, then yeah, you need a new one. A website that works is something you know when you have it. Your phone rings. Your inbox fills up with real prospects. That's a website that converts.
-
-Most builders we work with have a website that looks decent but does absolutely nothing. It just sits there. Nobody finds it on Google. And when someone does land on it, there's nothing that builds trust or moves them forward. It's basically an online business card.
-
-We build websites that actually generate revenue. They show up first when people search for builders in your area. They explain your process clearly. They showcase your work in a way that builds trust. And they have clear paths for qualified prospects to reach out.
-
-After we audit your current setup, we'll tell you straight up what needs to happen. If it can be fixed, we'll fix it. If it needs to be rebuilt, we'll rebuild it. Either way, you'll know the truth.`
+When your pipeline becomes consistent, it becomes much easier to hire, grow your team, and scale the company.`
                                     },
                                     {
-                                        q: "What makes you different from other marketing agencies?",
-                                        a: `Two things: We only work with residential builders, and we've spent 4 years perfecting a system specifically for your industry.
+                                        q: "Will I start getting leads immediately?",
+                                        a: `There is usually a ramp-up period while the system is installed and optimized.
 
-Most marketing agencies work with everyone. They'll take on a dentist, a lawyer, an e-commerce store, and a builder all at the same time. They use the same generic templates, the same cookie-cutter strategies, and wonder why it doesn't work for construction.
+Custom home sales cycles are typically 6–12 months, so while leads can start coming in relatively quickly, the focus is on building a long-term pipeline of serious projects rather than quick, low-quality leads.
 
-We're different because we know your prospects inside and out. We know they're not making a buying decision in 2 days like someone buying a pair of shoes online. We know they're going to take 6 to 12 months researching builders, figuring out their budget, securing financing, finding land. We know they need to be educated on the building process before they ever book a call with you. We know the questions they ask, the objections they have, what makes them choose one builder over another.
+The builders who benefit the most are the ones thinking about next year’s projects today.`
+                                    },
+                                    {
+                                        q: "How do you make sure the leads are actually qualified?",
+                                        a: `Every lead goes through a qualification process before they ever reach you.
 
-We've spent almost 4 years and close to a million dollars testing what actually works for custom builders specifically. What ad messaging converts. What website layouts generate the most leads. What follow-up sequences keep prospects warm through a long sales cycle. What pricing structures help you monetize early. What content educates prospects and positions you as the expert.
+We capture key details like:
 
-We've generated over 100 million in revenue for our clients because we've perfected the system based on real results from real builders. Every strategy we implement has been tested dozens of times. We know what works because we've already done it for over 100 builders.
+• Budget
+• Timeline
+• Location
+• Land status
 
-That's the difference. We're not figuring this out as we go. We already know exactly what works for your industry, and we're just implementing that proven system for your business.`
+Only leads who meet your criteria are allowed to book a conversation with you. That way you're spending time with serious homeowners, not people who want a $1.5M home for $300k.`
+                                    },
+                                    {
+                                        q: "Will I need to manage all of this myself?",
+                                        a: `No.
+
+Our team installs and manages the system with you.
+
+We also meet weekly to review lead quality, pipeline health, and performance so we can continuously improve the system as your business grows.
+
+The goal is not to give you more work. The goal is to remove the burden of marketing and pipeline management so you can focus on building.`
+                                    },
+                                    {
+                                        q: "What happens during the call?",
+                                        a: `The call is a strategy session, not a sales pitch.
+
+We'll look at:
+
+• Your current pipeline
+• How you're currently getting projects
+• Your target project types
+• Your growth goals
+
+Then we'll map out exactly what the system would look like inside your business.
+
+If it makes sense to move forward, we can discuss the next steps. If it doesn't, we'll point you toward some free resources that can still help you.`
+                                    },
+                                    {
+                                        q: "Do you work with builders in any market?",
+                                        a: `Yes.
+
+We've worked with builders across many different markets. The specific strategy will change based on your location, price point, and target client, but the system itself works in almost every market.`
+                                    },
+                                    {
+                                        q: "What happens if we determine it's not a good fit?",
+                                        a: `No problem at all.
+
+If we don't think we can get strong results for you, we'll let you know and direct you to some of our free training resources that show you how to build parts of this system yourself.
+
+We only work with builders where we believe we can create meaningful growth.`
                                     }
                                 ].map((item, i) => (
                                     <div key={i} className="bg-white border border-slate-200 rounded-2xl overflow-hidden hover:border-purple-200 transition-colors">
