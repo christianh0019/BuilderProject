@@ -31,8 +31,8 @@ export const caseStudies: CaseStudy[] = [
         id: 'homestead',
         slug: 'homestead',
         title: 'Generated $2.5M In Revenue Off $8k Of Ad Spend',
-        builderName: 'Homestead Home Builders',
-        location: 'Denver, CO',
+        builderName: 'Herman Boonstra',
+        location: '',
         results: [
             { label: 'Revenue', value: '$2.5M' },
             { label: 'Ad Spend', value: '$8k' },
@@ -65,8 +65,8 @@ export const caseStudies: CaseStudy[] = [
         id: 'open-prairie',
         slug: 'open-prairie',
         title: 'Closed $2.8M in Projects from Just $7K in Ad Spend',
-        builderName: 'Open Prairie Custom Homes',
-        location: 'Dallas, TX',
+        builderName: 'Dan Schlaak',
+        location: '',
         results: [
             { label: 'Revenue', value: '$2.8M' },
             { label: 'Ad Spend', value: '$7k' },
@@ -103,8 +103,8 @@ export const caseStudies: CaseStudy[] = [
         id: 'schwanz',
         slug: 'schwanz-custom',
         title: 'Filled Build Slots & Generated $680K in Revenue Off $6K Spend',
-        builderName: 'Schwanz Custom Homes',
-        location: 'Wisconsin',
+        builderName: 'Becki Schwanz',
+        location: '',
         results: [
             { label: 'Revenue', value: '$680k' },
             { label: 'Ad Spend', value: '$6k' },
@@ -137,8 +137,8 @@ export const caseStudies: CaseStudy[] = [
         id: 'eagle-rock',
         slug: 'eagle-rock',
         title: 'Generated $3.2M Revenue from Just $5.5K Ad Spend',
-        builderName: 'Eagle Rock Custom Homes',
-        location: 'Nationwide / PA & GA',
+        builderName: 'Bill Huetmaker',
+        location: '',
         results: [
             { label: 'Revenue', value: '$3.2M' },
             { label: 'Ad Spend', value: '$5.5k' },
