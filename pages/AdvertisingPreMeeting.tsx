@@ -120,9 +120,6 @@ const AdvertisingPreMeeting: React.FC = () => {
                         {/* Testimonials Section */}
                         <div ref={resultsRef} className="border-t border-slate-200 pt-16 scroll-mt-24">
                             <div className="text-center mb-12">
-                                <p className="text-xl md:text-2xl font-serif text-slate-900 italic mb-8 max-w-3xl mx-auto">
-                                    "Here’s what happens when builders replace referral-only growth with real infrastructure."
-                                </p>
                                 <span className="text-purple-600 font-bold tracking-wider text-sm uppercase mb-3 block">Proven Results</span>
                                 <h2 className="text-3xl font-serif font-bold text-slate-900">What Our Partners Are Saying</h2>
                             </div>
