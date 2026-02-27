@@ -172,7 +172,7 @@ const AdvertisingPreMeeting: React.FC = () => {
 
 
                         {/* FAQ Section */}
-                        <div ref={faqRef} className="py-24 border-t border-slate-200 hidden scroll-mt-24">
+                        <div ref={faqRef} className="py-24 border-t border-slate-200 scroll-mt-24">
                             <div className="text-center mb-16">
                                 <span className="text-purple-600 font-bold tracking-wider text-sm uppercase mb-3 block">Common Questions</span>
                                 <h2 className="text-3xl md:text-4xl font-serif font-bold text-slate-900">
