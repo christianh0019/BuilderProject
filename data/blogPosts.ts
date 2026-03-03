@@ -522,5 +522,68 @@ export const blogPosts: BlogPost[] = [
         <a href="/contact" class="inline-block bg-white text-slate-900 font-bold px-8 py-3 rounded-full hover:bg-purple-50 transition-colors">Book Your Audit</a>
       </div>
     `
+  },
+  {
+    id: '11',
+    slug: 'how-much-to-spend-marketing-home-builder',
+    title: "How Much Should You ACTUALLY Spend on Marketing As A Home Builder?",
+    date: 'March 03, 2026',
+    readTime: '8 min read',
+    thumbnail: 'https://img.youtube.com/vi/rFBfzB12YA0/maxresdefault.jpg',
+    youtubeUrl: 'https://www.youtube.com/watch?v=rFBfzB12YA0',
+    excerpt: "Most home builders spend either way too much or way too little on marketing. Learn the exact formula to calculate your marketing budget based on your growth goals and cash position.",
+    content: `<p class="mb-6">Most home builders spend either way too much or way too little on marketing. I'm going to show you the exact formula to get it right, and why this industry has some of the highest ROI potential of any business. I'm Christian with BuilderProject, and I work with custom home builders all across the country helping them scale their revenue with marketing that actually makes sense.</p>
+
+<p class="mb-6">I get this question all the time: "How much should I spend on marketing?" The typical answers you hear are pretty generic. The Association of Professional Builders suggests three percent of revenue. Others say to start with a thousand bucks a month and see what happens.</p>
+
+<p class="mb-6">Now, three percent isn't wrong as a baseline. If you're doing five million in revenue, that's one hundred and fifty grand a year, or about twelve thousand a month. That's a reasonable starting point for an established builder. But here's the problem with generic percentages: they ignore your cash position, your growth goals, and the unique economics of custom home building.</p>
+
+<h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4 font-serif">The Foundation: Can You Afford to Market?</h2>
+
+<p class="mb-6">Let's start with the foundation question. And this might sound harsh, but it's the most important thing I'm going to say: Can you actually afford to market right now?</p>
+
+<p class="mb-6">Marketing requires capital. Not just the money you spend on ads, but the ability to carry projects through their sales cycle. Here's the rule: You need at least six months of operating expenses sitting in the bank before you invest heavily in marketing. Why? Because when you start generating leads, you're going to need to carry those prospects for six to twelve months before they sign a contract.</p>
+
+<div class="bg-purple-50 border-l-4 border-purple-500 p-6 my-8 rounded-r-lg">
+  <p class="font-medium text-purple-900 italic">"That's nine months from the first click to a signed deal. And during that entire time, you're spending money nurturing them. Following up. Providing value. All before you see a dime of revenue."</p>
+</div>
+
+<p class="mb-6">If you're living paycheck to paycheck right now, marketing will break you. If you don't have six months of reserves, focus on building that buffer first. Take on smaller projects, tighten up your operations, and get financially stable. And if you're a brand new builder with fewer than 3 completed projects, take that marketing budget and use it to finance your next build. Reputation is everything in this business, and marketing only amplifies what you already have.</p>
+
+<h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4 font-serif">Working Backwards From Your Goal</h2>
+
+<p class="mb-6">Alright, now let's walk through a real example. Let's say you did five million in revenue last year, and you want to hit ten million next year. You need to add five million dollars in new business.</p>
+
+<p class="mb-6">If your average project is one million dollars, you need five more signed projects. If your close rate on qualified leads is thirty percent, you need about seventeen qualified leads. But we know only about five percent of total leads are actually serious and ready to move forward. So to get seventeen qualified leads, you need about three hundred and forty total leads.</p>
+
+<ul class="list-disc pl-6 mb-6 space-y-2 text-slate-700">
+  <li>At an average cost per lead of $50, that's $17,000 in pure ad spend.</li>
+  <li>Budget 2-3x that amount ($50,000/year or $4,000/month) to buffer for underperforming campaigns.</li>
+  <li>Add SEO and a converting website ($2,000-$3,000/month).</li>
+  <li>Add content production like videos and case studies ($2,000/month).</li>
+  <li>Add a CRM and marketing automation tools ($500-$1,000/month).</li>
+</ul>
+
+<p class="mb-6">So now we're at about eight to ten thousand a month in total marketing spend. If you work with an agency, add management fees, bringing your total to around twelve to fifteen thousand a month, or $150,000 to $180,000 a year. Notice how that lines up almost perfectly with the three percent rule? But this time, we reverse-engineered it from your actual goal.</p>
+
+<h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4 font-serif">The Absurd ROI of Custom Home Building</h2>
+
+<p class="mb-6">You're spending $180,000 to generate the leads, nurture them, and close five million in new revenue. At a twenty percent profit margin, that five million generates one million in profit. You just spent $180K to make a million. That's a five and a half X return.</p>
+
+<p class="mb-6">And here's why home builders have the most profitable marketing opportunity of almost any business: When your average sale is one to two million dollars, you can afford much higher acquisition costs than other industries. You can pay five thousand dollars to acquire a client who's worth two hundred thousand dollars in profit on a single project.</p>
+
+<p class="mb-6">My client Dan spent seven thousand dollars on ads and closed $2.8 million in signed contracts. Herman spent over eight thousand dollars and closed $2.5 million. These aren't outliers. This is what happens when you have a solid brand, a good system, and the patience to let the sales cycle play out.</p>
+
+<h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4 font-serif">Dominate Your Market</h2>
+
+<p class="mb-6">If you want to blow past your goals, you're not spending three percent. You're spending six to ten percent. If you invest $300,000 in marketing to double your revenue to twenty million, and make an extra two million in profit, that's a 6X return.</p>
+
+<p class="mb-6">The top builders in every market understand the math. They know it's not an expense—it's their highest ROI investment. Calculate how many projects you need, how many leads that requires, and what the total investment looks like. The question isn't whether you can afford to invest in marketing. It's whether you can afford not to.</p>
+
+<div class="bg-slate-900 text-white p-8 rounded-2xl my-10 text-center">
+  <h3 class="text-2xl font-bold mb-4 font-serif">Free Marketing Audit</h3>
+  <p class="text-slate-300 mb-6">If you're an established builder ready to scale, we'll audit your current systems and show you exactly how to structure your marketing investment for maximum return. No strings attached.</p>
+  <a href="/contact" class="inline-block bg-white text-slate-900 font-bold px-8 py-3 rounded-full hover:bg-purple-50 transition-colors">Book Your Audit</a>
+</div>`
   }
 ];
