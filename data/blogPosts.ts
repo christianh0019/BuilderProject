@@ -585,5 +585,76 @@ export const blogPosts: BlogPost[] = [
   <p class="text-slate-300 mb-6">If you're an established builder ready to scale, we'll audit your current systems and show you exactly how to structure your marketing investment for maximum return. No strings attached.</p>
   <a href="/contact" class="inline-block bg-white text-slate-900 font-bold px-8 py-3 rounded-full hover:bg-purple-50 transition-colors">Book Your Audit</a>
 </div>`
+  },
+  {
+    id: '12',
+    slug: 'when-to-hire-first-sales-rep-home-builder',
+    title: "When (And How) To Hire Your First Sales Rep As A Home Builder",
+    date: 'March 04, 2026',
+    readTime: '10 min read',
+    thumbnail: 'https://img.youtube.com/vi/0FcB2A8sm0U/maxresdefault.jpg',
+    youtubeUrl: 'https://www.youtube.com/watch?v=0FcB2A8sm0U',
+    excerpt: "Most custom home builders hire their first sales rep at exactly the wrong time. Learn the actual revenue milestone when it makes sense and the critical steps required before you even post the job.",
+    content: `<p class="mb-6">Most custom home builders hire their first sales rep at exactly the wrong time. Either way too early when they can't afford it, or way too late when they're drowning. I'm going to show you the exact revenue milestone when it makes sense and how to structure it so it doesn't kill your margins.</p>
+
+<p class="mb-6">I'm Christian with BuilderProject, and I work with custom home builders helping them scale from owner-operator to actual business owner. And one of the most common questions I get is, "When should I hire a sales rep?"</p>
+
+<p class="mb-6">I totally get why you're asking. You're tired of running every single sales call yourself. You want someone else handling consultations so you can focus on managing projects or actually growing the business. But you're also scared. What if they can't close deals? What if you waste six months training someone who ends up quitting?</p>
+
+<h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4 font-serif">The Prerequisite: A Documented Sales Process</h2>
+
+<p class="mb-6">Before we talk about exactly when to hire, we have to talk about the prerequisite. Because if you get this wrong, nothing else matters: You cannot hire a sales rep if you don't have a documented sales process.</p>
+
+<div class="bg-purple-50 border-l-4 border-purple-500 p-6 my-8 rounded-r-lg">
+  <p class="font-medium text-purple-900 italic">"If your entire sales process exists only in your head, you're not ready to hire."</p>
+</div>
+
+<p class="mb-6">Here's what happens when you don't document it: You hire someone, tell them to "just go sell," and expect them to magically figure out what questions to ask and how to close deals. They can't. They don't have your fifteen years of experience or your intuition. So they struggle, you get frustrated, and you fire them after six months.</p>
+
+<p class="mb-6">Before hiring anyone, actually write down your process. Standardize the questions you ask on a discovery call, your proposal template, and how you handle objections about budget or timeline.</p>
+
+<h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4 font-serif">The Revenue Milestone</h2>
+
+<p class="mb-6">Alright, assuming your process is documented, when does it make financial sense to hire? Here is the exact milestone:</p>
+
+<ul class="list-disc pl-6 mb-6 space-y-2 text-slate-700">
+  <li>You're consistently doing $3M to $5M in annual revenue.</li>
+  <li>You're personally handling 20+ sales consultations a year.</li>
+  <li>You have a marketing system bringing in consistent leads.</li>
+</ul>
+
+<p class="mb-6">If you're doing $3M to $5M a year at a 15-20% margin, you're making around $450K to $1M in gross profit. At that level, you can afford a $60K to $80K base salary plus commission. It won't break you, and if they close even one extra deal you didn't have time for, they've paid for themselves.</p>
+
+<h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4 font-serif">You Need Consistent Lead Flow</h2>
+
+<p class="mb-6">This is where most builders hit a wall. When you run a real marketing system, you're going to get two to three new leads every single day. There's no way an owner managing multiple builds can properly follow up with nearly a thousand leads a year.</p>
+
+<p class="mb-6">Your leads go cold because you don't have the bandwidth. A dedicated sales rep changes everything. Their only job is following up relentlessly. An owner might follow up twice; a sales rep follows up eight times over three weeks because that's their entire job. That persistence turns an apparently cold lead into a signed contract.</p>
+
+<h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4 font-serif">Structuring Compensation</h2>
+
+<p class="mb-6">When it comes to paying them, option one normally works best: <strong>Base Plus Commission</strong>.</p>
+
+<p class="mb-6">Pay them a base salary of $60K to $80K a year, plus commission on top. For custom homes, typical commission is 2-3% of the contract value or 10-15% of the gross profit. They have a stable base while learning, but are heavily incentivized to close deals.</p>
+
+<p class="mb-6">Critical tip: Don't pay the full commission upfront. Structure it in milestones. 50% at contract signing, 25% at groundbreaking, and 25% at final close-out. If a project dies or loses margin, milestone payments protect you.</p>
+
+<h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4 font-serif">Who to Hire and How to Train Them</h2>
+
+<p class="mb-6">Look for someone with 2-5 years of consultative, B2C sales experience with long sales cycles (real estate, financial advisors). Avoid extreme pushy salespeople or those with zero experience. You want someone highly coachable who understands relationship-building.</p>
+
+<p class="mb-6">When you hire them, train them actively for at least 30 days. Have them shadow your calls silently for two weeks. In weeks three and four, they run calls with you as backup. By month two, they run solo consultations but you review every session with them.</p>
+
+<h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4 font-serif">The Final Piece: The Marketing Engine</h2>
+
+<p class="mb-6">Your sales rep can be amazing, but if they don't have enough volume of leads, they'll fail. They need 15-20 consultations a month to get reps, practice, and build confidence. You must have a marketing system humming before you make the hire.</p>
+
+<p class="mb-6">If you're at that $3M to $5M level and you're ready to scale but lack the consistent lead flow to support a sales rep, we can help. Click the link below. We'll show you how to build the marketing infrastructure that guarantees your new hire hits the ground running.</p>
+
+<div class="bg-slate-900 text-white p-8 rounded-2xl my-10 text-center">
+  <h3 class="text-2xl font-bold mb-4 font-serif">Free Marketing Audit</h3>
+  <p class="text-slate-300 mb-6">We will audit your current marketing systems—or lack thereof—and show you hidden opportunities. No strings attached.</p>
+  <a href="/contact" class="inline-block bg-white text-slate-900 font-bold px-8 py-3 rounded-full hover:bg-purple-50 transition-colors">Book Your Audit</a>
+</div>`
   }
 ];
