@@ -127,16 +127,15 @@ const TheMarketingQuiz: React.FC = () => {
 
                     {/* Hero Section */}
                     <div className="text-center shrink-0 py-12 md:py-24">
-                        <h1 className="text-3xl md:text-5xl lg:text-6xl font-serif font-bold text-slate-900 mb-6 leading-tight">
-                            How Does Your Marketing Rank Among <br className="hidden md:block" />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-700 to-pink-600">Top Custom Home Builders?</span>
+                        <h1 className="text-3xl md:text-5xl lg:text-6xl font-serif font-bold text-slate-900 mb-6 leading-tight max-w-5xl mx-auto">
+                            How Does Your Marketing Rank Among <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-700 to-pink-600">Top Custom Home Builders?</span>
                         </h1>
                         <p className="block text-lg md:text-xl text-slate-600 max-w-2xl mx-auto px-4 mb-10">
                             Take this 21-question assessment to uncover exactly where your marketing is leaking revenue and get expert insights on what you should improve.
                         </p>
                         <button
                             onClick={() => setQuizStarted(true)}
-                            className="inline-flex items-center justify-center px-10 py-5 text-xl font-bold text-white transition-all duration-200 bg-purple-600 rounded-full hover:bg-purple-700 hover:shadow-xl hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2 animate-bounce-slow"
+                            className="inline-flex items-center justify-center px-10 py-5 text-xl font-bold text-white transition-all duration-300 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full hover:shadow-[0_0_30px_rgba(217,70,239,0.5)] hover:-translate-y-1 hover:scale-105 animate-[pulse_2s_cubic-bezier(0.4,0,0.6,1)_infinite]"
                         >
                             Start The Quiz
                         </button>
