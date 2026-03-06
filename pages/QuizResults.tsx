@@ -64,7 +64,26 @@ const QuizResults: React.FC = () => {
     if (!location.state || !location.state.answers || !leadInfo) return null;
 
     const totalQuestions = 21;
-    const progressPercentage = score !== null ? (score / totalQuestions) * 100 : 0;
+    let tier: 1 | 2 | 3 = 1;
+    let progressPercentage = 0;
+
+    if (score !== null) {
+        progressPercentage = (score / totalQuestions) * 100;
+        if (score <= 7) tier = 1;
+        else if (score <= 14) tier = 2;
+        else tier = 3;
+    }
+
+    const getTierDisplay = (t: 1 | 2 | 3) => {
+        switch (t) {
+            case 1: return { label: "Poor", colorClass: "text-red-500", bgClass: "bg-red-500" };
+            case 2: return { label: "Average", colorClass: "text-amber-500", bgClass: "bg-amber-500" };
+            case 3: return { label: "Succeeding", colorClass: "text-green-500", bgClass: "bg-green-500" };
+        }
+    };
+
+    const tierDisplay = getTierDisplay(tier);
+
 
     return (
         <div className="min-h-screen bg-slate-50 flex flex-col font-sans">
@@ -84,7 +103,7 @@ const QuizResults: React.FC = () => {
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-700 to-pink-600">Performance Results</span>
                         </h1>
                         <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-                            Hi {leadInfo?.name}, here is your personalized breakdown based on your ${leadInfo?.businessName ? `business (${leadInfo.businessName})` : 'business'}.
+                            Hi {leadInfo?.name}, here is your personalized breakdown based on {leadInfo?.businessName ? `your business (${leadInfo.businessName})` : 'your business'}.
                         </p>
                     </div>
 
@@ -95,16 +114,21 @@ const QuizResults: React.FC = () => {
                             animate={{ opacity: 1, y: 0 }}
                             className="bg-white rounded-3xl shadow-xl border border-slate-100 p-8 md:p-12 mb-8 relative overflow-hidden flex flex-col items-center text-center"
                         >
-                            <h2 className="text-sm font-bold text-slate-400 uppercase tracking-widest mb-4">Systems Active</h2>
+                            <h2 className="text-sm font-bold text-slate-400 uppercase tracking-widest mb-4">Marketing Health Rating</h2>
+
+                            <div className={`text-3xl md:text-5xl font-serif font-bold ${tierDisplay.colorClass} mb-6`}>
+                                {tierDisplay.label}
+                            </div>
+
                             <div className="flex items-baseline gap-2 mb-8">
-                                <span className="text-6xl md:text-8xl font-bold text-slate-900">{score}</span>
-                                <span className="text-2xl text-slate-400 font-medium">/ 21</span>
+                                <span className="text-5xl md:text-7xl font-bold text-slate-900">{score}</span>
+                                <span className="text-xl text-slate-400 font-medium">/ 21 Systems Active</span>
                             </div>
 
                             {/* Visual Progress */}
                             <div className="w-full max-w-2xl h-4 bg-slate-100 rounded-full overflow-hidden mb-4">
                                 <motion.div
-                                    className="h-full bg-gradient-to-r from-purple-500 to-pink-500"
+                                    className={`h-full ${tierDisplay.bgClass}`}
                                     initial={{ width: 0 }}
                                     animate={{ width: `${progressPercentage}%` }}
                                     transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
