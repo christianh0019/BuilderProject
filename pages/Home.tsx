@@ -524,25 +524,26 @@ const Home: React.FC = () => {
               </Link>
             </RevealOnScroll>
 
-            {/* 3. YouTube (Links to Blog) */}
+            {/* 3. The Marketing Quiz */}
             <RevealOnScroll delay={300}>
-              <Link to="/blog" className="group relative rounded-[2rem] md:rounded-[3rem] overflow-hidden aspect-[4/5] md:aspect-auto md:h-[500px] bg-[#FF0000] border border-red-600 shadow-xl hover:shadow-2xl hover:shadow-red-900/20 hover:-translate-y-2 transition-all duration-500 flex flex-col justify-between p-8 md:p-12 w-full block">
-                <div className="absolute inset-0 bg-gradient-to-br from-black/20 to-transparent"></div>
+              <Link to="/the-marketing-quiz" className="group relative rounded-[2rem] md:rounded-[3rem] overflow-hidden aspect-[4/5] md:aspect-auto md:h-[500px] bg-gradient-to-br from-pink-600 to-purple-800 border border-purple-500 shadow-xl hover:shadow-2xl hover:shadow-pink-500/30 hover:-translate-y-2 transition-all duration-500 flex flex-col justify-between p-8 md:p-12 w-full block">
                 <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
+                {/* Decorative Glowing Orbs */}
+                <div className="absolute top-0 right-0 w-64 h-64 bg-pink-400 rounded-full blur-[80px] -translate-y-1/2 translate-x-1/2 opacity-50 group-hover:opacity-70 transition-opacity"></div>
+                <div className="absolute bottom-0 left-0 w-64 h-64 bg-purple-400 rounded-full blur-[80px] translate-y-1/2 -translate-x-1/2 opacity-50 group-hover:opacity-70 transition-opacity"></div>
+
                 <div className="relative z-10">
-                  <div className="w-14 h-14 md:w-16 md:h-16 bg-white rounded-2xl flex items-center justify-center shadow-md mb-6 md:mb-8 group-hover:scale-110 transition-transform">
-                    {/* Custom YouTube SVG */}
-                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <rect width="24" height="24" fill="white" rx="0" className="hidden" />
-                      <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z" fill="#FF0000" />
-                      <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="white" />
-                    </svg>
+                  <div className="w-14 h-14 md:w-16 md:h-16 bg-white rounded-2xl flex items-center justify-center shadow-lg mb-6 md:mb-8 group-hover:scale-110 transition-transform">
+                    <ClipboardCheck size={32} className="text-pink-600" />
                   </div>
-                  <h3 className="text-3xl md:text-5xl font-serif font-bold text-white mb-4">Watch The Strategy</h3>
-                  <p className="text-white/90 text-lg md:text-xl font-medium">Deep dives on our YouTube channel.</p>
+                  <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/20 backdrop-blur-sm text-white text-xs font-bold uppercase tracking-wider mb-4 border border-white/30">
+                    <Sparkles size={12} /> Free Tool
+                  </div>
+                  <h3 className="text-3xl md:text-5xl font-serif font-bold text-white mb-4 leading-tight">Marketing<br />Health Quiz</h3>
+                  <p className="text-pink-100 text-lg md:text-xl font-medium max-w-sm">Discover what's holding your growth back in 2 minutes.</p>
                 </div>
-                <div className="relative z-10 flex items-center font-bold text-white text-lg md:text-xl group-hover:text-slate-100 transition-colors">
-                  Watch Now <ArrowRight size={24} className="ml-3 group-hover:translate-x-2 transition-transform" />
+                <div className="relative z-10 flex items-center font-bold text-white text-lg md:text-xl group-hover:text-pink-200 transition-colors">
+                  Take The Quiz <ArrowRight size={24} className="ml-3 group-hover:translate-x-2 transition-transform" />
                 </div>
               </Link>
             </RevealOnScroll>

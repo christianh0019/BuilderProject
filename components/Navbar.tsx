@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, ChevronDown, ExternalLink, Monitor, PenTool, Target, Filter, Database, Briefcase, Rocket, TrendingUp, Handshake, ArrowRight } from 'lucide-react';
+import { Menu, X, ChevronDown, ExternalLink, Monitor, PenTool, Target, Filter, Database, Briefcase, Rocket, TrendingUp, Handshake, ArrowRight, ClipboardCheck } from 'lucide-react';
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [resourceOpen, setResourceOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
+  const [showBanner, setShowBanner] = useState(true);
   const location = useLocation();
 
   useEffect(() => {
@@ -36,9 +37,24 @@ const Navbar: React.FC = () => {
 
   return (
     <>
+      {/* Top Banner */}
+      {showBanner && (
+        <div className="bg-gradient-to-r from-purple-700 to-pink-600 text-white py-2 px-6 text-center relative z-50 text-sm font-medium">
+          <Link to="/the-marketing-quiz" className="hover:underline flex items-center justify-center gap-2">
+            Is your marketing leaking leads? Take our 2-minute Marketing Health Quiz <ArrowRight size={14} />
+          </Link>
+          <button
+            onClick={() => setShowBanner(false)}
+            className="absolute right-4 top-1/2 -translate-y-1/2 hover:bg-black/20 rounded-full p-1 transition-colors"
+            aria-label="Close banner"
+          >
+            <X size={14} />
+          </button>
+        </div>
+      )}
+
       <nav
-        className={`fixed w-full z-50 transition-all duration-300 ${isOpen || scrolled ? 'bg-white shadow-sm py-4' : 'bg-transparent py-6'
-          }`}
+        className={`fixed w-full z-40 transition-all duration-300 ${isOpen || scrolled ? 'bg-white shadow-sm py-4' : 'bg-transparent py-6'} ${showBanner ? (scrolled ? 'top-0' : 'top-9') : 'top-0'}`}
       >
         <div className="container mx-auto px-6 flex justify-between items-center relative z-50">
           {/* Logo */}
