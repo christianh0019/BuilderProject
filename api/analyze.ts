@@ -79,8 +79,11 @@ Return ONLY the analysis text. Format it with clean markdown for readability (e.
 
         return res.status(200).json({ analysis });
 
-    } catch (error) {
+    } catch (error: any) {
         console.error('Error generating analysis:', error);
-        return res.status(500).json({ error: 'Failed to generate analysis' });
+        return res.status(500).json({
+            error: 'Failed to generate analysis',
+            details: error?.message || String(error)
+        });
     }
 }
