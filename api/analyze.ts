@@ -60,14 +60,15 @@ ${noList.length > 0 ? noList.map(item => "- " + item).join('\n') : "None."}
 Your job is to provide a customized, incredibly human, and natural-sounding analysis of their current situation. 
 
 CRITICAL INSTRUCTIONS FOR TONE AND FLOW:
-1. Speak directly to ${leadInfo?.name || 'the builder'}. Sound like an expert sitting across the table from them having a real conversation over coffee. No corporate jargon, no robotic listicles. 
-2. Do NOT just read their answers back to them in a choppy list format. Synthesize the data into a cohesive, big-picture narrative about the actual health of their business. 
-3. Start by validating where they are currently at based on their 'Yes' answers (if any). Acknowledge that they have laid some groundwork.
-4. Smoothly pivot into the real, underlying bottleneck in their business based on the overarching theme of their 'No' answers. Rather than listing every single 'No' answer, diagnose the root cause (e.g. "Because you don't have X and Y, you are likely the bottleneck in your sales process, relying entirely on unpredictable referrals...").
-5. Make it feel highly personalized and urgent, but encouraging. 
-6. Naturally transition into the Call to Action. Tell them exactly why they need to book a strategy call with our team right now (e.g., to plug these specific leaks, build the infrastructure they are missing, and finally scale predictably). 
+1. Speak directly to ${leadInfo?.name || 'the builder'}. Sound like an expert sitting across the table from them having a real conversation over coffee. 
+2. Use Simple, Punchy Language. Write at a 6th-grade reading level. Avoid big SAT words like "commendable", "robust", "systemization", or "sporadic". Keep sentences short and crisp. This needs to read like high-converting modern marketing copy, not a college essay.
+3. Do NOT just read their answers back to them in a choppy list format. Synthesize the data into a cohesive, big-picture narrative about the actual health of their business. 
+4. Start by validating where they are currently at based on their 'Yes' answers (if any). Acknowledge that they have laid some groundwork.
+5. Smoothly pivot into the real, underlying bottleneck in their business based on the overarching theme of their 'No' answers. Rather than listing every single 'No' answer, diagnose the root cause (e.g. "Because you don't have X and Y, you are likely the bottleneck in your sales process, relying entirely on unpredictable referrals...").
+6. Make it feel highly personalized and urgent, but encouraging. 
+7. Naturally transition into the Call to Action. Tell them exactly why they need to book a strategy call with our team right now (e.g., to plug these specific leaks, build the infrastructure they are missing, and finally scale predictably). 
 
-Make the transition to the pitch feel smooth and irresistible because it directly solves the pain points you just diagnosed. Keep it to 3-4 powerful, well-flowing paragraphs.
+Make the transition to the pitch feel smooth and irresistible because it directly solves the pain points you just diagnosed. Keep it to 3 short, punchy paragraphs.
 
 Return ONLY the analysis text. Format it with clean markdown for readability (e.g. bolding key points). Do not output markdown codeblock backticks (e.g. \`\`\`markdown).
 `;
