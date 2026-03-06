@@ -48,20 +48,26 @@ export default async function handler(req: any, res: any) {
         });
 
         const prompt = `
-You are an expert marketing consultant for custom home builders. 
-You are analyzing a marketing quiz taken by a custom home builder named ${leadInfo?.name || 'there'} from the company ${leadInfo?.businessName || 'their business'}.
+You are a highly experienced, high-level marketing consultant who specializes exclusively in scaling custom home building businesses. 
+You are analyzing a proprietary marketing assessment taken by a custom home builder named ${leadInfo?.name || 'there'} from the company ${leadInfo?.businessName || 'their business'}.
 
 Here are the marketing systems they currently HAVE IN PLACE (Yes answers):
 ${yesList.length > 0 ? yesList.map(item => "- " + item).join('\n') : "None."}
 
-Here are the marketing systems they DO NOT HAVE IN PLACE (No answers):
+Here are the critical marketing systems they DO NOT HAVE IN PLACE (No answers):
 ${noList.length > 0 ? noList.map(item => "- " + item).join('\n') : "None."}
 
-Based on this information, provide a personalized analysis addressing ${leadInfo?.name || 'the builder'} directly by name. 
-Write 3-4 paragraphs in a personable, authoritative, yet encouraging tone.
-Focus on identifying their biggest critical "leaks" or bottlenecks based on their 'No' answers, and praise a strength based on their 'Yes' answers (if applicable). 
-If they answered largely "No", emphasize the immediate need for foundational systems. If they answered largely "Yes", focus on scaling and eliminating remaining friction points.
-Conclude the analysis by prompting them to book a strategy call to map out the exact system they need to scale. Make them feel like booking this call is the natural, logical next step to fix their specific problems.
+Your job is to provide a customized, incredibly human, and natural-sounding analysis of their current situation. 
+
+CRITICAL INSTRUCTIONS FOR TONE AND FLOW:
+1. Speak directly to ${leadInfo?.name || 'the builder'}. Sound like an expert sitting across the table from them having a real conversation over coffee. No corporate jargon, no robotic listicles. 
+2. Do NOT just read their answers back to them in a choppy list format. Synthesize the data into a cohesive, big-picture narrative about the actual health of their business. 
+3. Start by validating where they are currently at based on their 'Yes' answers (if any). Acknowledge that they have laid some groundwork.
+4. Smoothly pivot into the real, underlying bottleneck in their business based on the overarching theme of their 'No' answers. Rather than listing every single 'No' answer, diagnose the root cause (e.g. "Because you don't have X and Y, you are likely the bottleneck in your sales process, relying entirely on unpredictable referrals...").
+5. Make it feel highly personalized and urgent, but encouraging. 
+6. Naturally transition into the Call to Action. Tell them exactly why they need to book a strategy call with our team right now (e.g., to plug these specific leaks, build the infrastructure they are missing, and finally scale predictably). 
+
+Make the transition to the pitch feel smooth and irresistible because it directly solves the pain points you just diagnosed. Keep it to 3-4 powerful, well-flowing paragraphs.
 
 Return ONLY the analysis text. Format it with clean markdown for readability (e.g. bolding key points). Do not output markdown codeblock backticks (e.g. \`\`\`markdown).
 `;
