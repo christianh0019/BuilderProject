@@ -76,13 +76,18 @@ const QuizResults: React.FC = () => {
 
     const getTierDisplay = (t: 1 | 2 | 3) => {
         switch (t) {
-            case 1: return { label: "Poor", colorClass: "text-red-500", bgClass: "bg-red-500" };
-            case 2: return { label: "Average", colorClass: "text-amber-500", bgClass: "bg-amber-500" };
-            case 3: return { label: "Succeeding", colorClass: "text-green-500", bgClass: "bg-green-500" };
+            case 1: return { label: "Poor", colorClass: "text-red-500", strokeClass: "stroke-red-500" };
+            case 2: return { label: "Average", colorClass: "text-amber-500", strokeClass: "stroke-amber-500" };
+            case 3: return { label: "Succeeding", colorClass: "text-green-500", strokeClass: "stroke-green-500" };
         }
     };
 
     const tierDisplay = getTierDisplay(tier);
+
+    // Circular chart calculations
+    const radius = 60;
+    const circumference = 2 * Math.PI * radius;
+    const strokeDashoffset = circumference - (progressPercentage / 100) * circumference;
 
 
     return (
@@ -114,25 +119,47 @@ const QuizResults: React.FC = () => {
                             animate={{ opacity: 1, y: 0 }}
                             className="bg-white rounded-3xl shadow-xl border border-slate-100 p-8 md:p-12 mb-8 relative overflow-hidden flex flex-col items-center text-center"
                         >
-                            <h2 className="text-sm font-bold text-slate-400 uppercase tracking-widest mb-4">Marketing Health Rating</h2>
+                            <h2 className="text-sm font-bold text-slate-400 uppercase tracking-widest mb-8">Marketing Health Rating</h2>
 
-                            <div className={`text-3xl md:text-5xl font-serif font-bold ${tierDisplay.colorClass} mb-6`}>
+                            <div className="relative flex flex-col items-center justify-center mb-6">
+                                {/* SVG Circular Chart */}
+                                <svg width="180" height="180" viewBox="0 0 160 160" className="transform -rotate-90">
+                                    {/* Background Circle */}
+                                    <circle
+                                        cx="80"
+                                        cy="80"
+                                        r={radius}
+                                        stroke="currentColor"
+                                        strokeWidth="12"
+                                        fill="transparent"
+                                        className="text-slate-100"
+                                    />
+                                    {/* Progress Circle */}
+                                    <motion.circle
+                                        cx="80"
+                                        cy="80"
+                                        r={radius}
+                                        stroke="currentColor"
+                                        strokeWidth="12"
+                                        fill="transparent"
+                                        strokeDasharray={circumference}
+                                        initial={{ strokeDashoffset: circumference }}
+                                        animate={{ strokeDashoffset }}
+                                        transition={{ duration: 1.5, ease: "easeOut" }}
+                                        strokeLinecap="round"
+                                        className={tierDisplay.strokeClass}
+                                    />
+                                </svg>
+
+                                {/* Score in Center */}
+                                <div className="absolute flex flex-col items-center justify-center">
+                                    <span className="text-5xl font-bold text-slate-900 leading-none">{score}</span>
+                                    <span className="text-lg text-slate-400 font-medium tracking-tight mt-1">/ 21</span>
+                                </div>
+                            </div>
+
+                            <div className={`text-4xl font-serif font-bold ${tierDisplay.colorClass}`}>
                                 {tierDisplay.label}
-                            </div>
-
-                            <div className="flex items-baseline gap-2 mb-8">
-                                <span className="text-5xl md:text-7xl font-bold text-slate-900">{score}</span>
-                                <span className="text-xl text-slate-400 font-medium">/ 21 Systems Active</span>
-                            </div>
-
-                            {/* Visual Progress */}
-                            <div className="w-full max-w-2xl h-4 bg-slate-100 rounded-full overflow-hidden mb-4">
-                                <motion.div
-                                    className={`h-full ${tierDisplay.bgClass}`}
-                                    initial={{ width: 0 }}
-                                    animate={{ width: `${progressPercentage}%` }}
-                                    transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
-                                />
                             </div>
                         </motion.div>
                     )}
