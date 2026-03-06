@@ -94,20 +94,20 @@ const QuizResults: React.FC = () => {
         <div className="min-h-screen bg-slate-50 flex flex-col font-sans">
             <SimpleHeader showStatus={false} />
 
-            <div className="flex-grow flex flex-col pt-32 pb-20 px-4 md:px-6">
+            <div className="flex-grow flex flex-col pt-24 pb-20 px-4 md:px-6">
                 <div className="container mx-auto max-w-4xl">
 
                     {/* Header */}
-                    <div className="text-center mb-16">
-                        <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-100 text-slate-600 font-medium text-sm mb-6">
+                    <div className="text-center mb-10">
+                        <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-100 text-slate-600 font-medium text-sm mb-4">
                             <CheckCircle2 className="w-4 h-4 text-green-500" />
                             Analysis Complete
                         </span>
-                        <h1 className="text-4xl md:text-6xl font-serif font-bold text-slate-900 mb-6 leading-tight">
+                        <h1 className="text-3xl md:text-5xl font-serif font-bold text-slate-900 mb-4 leading-tight">
                             Your Marketing <br className="hidden md:block" />
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-700 to-pink-600">Performance Results</span>
                         </h1>
-                        <p className="text-xl text-slate-600 max-w-2xl mx-auto">
+                        <p className="text-lg text-slate-600 max-w-2xl mx-auto">
                             Hi {leadInfo?.name}, here is your personalized breakdown based on {leadInfo?.businessName ? `your business (${leadInfo.businessName})` : 'your business'}.
                         </p>
                     </div>
@@ -117,11 +117,11 @@ const QuizResults: React.FC = () => {
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
-                            className="bg-white rounded-3xl shadow-xl border border-slate-100 p-8 md:p-12 mb-8 relative overflow-hidden flex flex-col items-center text-center"
+                            className="bg-white rounded-3xl shadow-xl border border-slate-100 p-6 md:p-8 mb-8 relative overflow-hidden flex flex-col items-center text-center max-w-md mx-auto"
                         >
-                            <h2 className="text-sm font-bold text-slate-400 uppercase tracking-widest mb-8">Marketing Health Rating</h2>
+                            <h2 className="text-sm font-bold text-slate-400 uppercase tracking-widest mb-6">Marketing Health Rating</h2>
 
-                            <div className="relative flex flex-col items-center justify-center mb-6">
+                            <div className="relative flex flex-col items-center justify-center">
                                 {/* SVG Circular Chart */}
                                 <svg width="180" height="180" viewBox="0 0 160 160" className="transform -rotate-90">
                                     {/* Background Circle */}
@@ -156,10 +156,6 @@ const QuizResults: React.FC = () => {
                                     <span className="text-5xl font-bold text-slate-900 leading-none">{score}</span>
                                     <span className="text-lg text-slate-400 font-medium tracking-tight mt-1">/ 21</span>
                                 </div>
-                            </div>
-
-                            <div className={`text-4xl font-serif font-bold ${tierDisplay.colorClass}`}>
-                                {tierDisplay.label}
                             </div>
                         </motion.div>
                     )}
