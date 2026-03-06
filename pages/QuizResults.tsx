@@ -44,14 +44,15 @@ const QuizResults: React.FC = () => {
                 });
 
                 if (!response.ok) {
-                    throw new Error('Failed to fetch analysis');
+                    let errorText = await response.text();
+                    throw new Error(`Server responded with ${response.status}: ${errorText}`);
                 }
 
                 const data = await response.json();
                 setAnalysis(data.analysis);
-            } catch (err) {
-                console.error(err);
-                setError("We encountered an issue generating your personalized analysis. Please ensure you are connected to the internet and try again.");
+            } catch (err: any) {
+                console.error("Full analysis error:", err);
+                setError(`Error generating analysis: ${err.message}. If you are testing locally on 'npm run dev', Vite does not support /api routes natively. Use 'vercel dev' or test on the deployed Vercel link.`);
             } finally {
                 setIsLoading(false);
             }
