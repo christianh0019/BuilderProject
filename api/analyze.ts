@@ -7,7 +7,7 @@ export default async function handler(req: any, res: any) {
 
     try {
         const openai = new OpenAI({
-            apiKey: process.env.OPENAI_API_KEY,
+            apiKey: process.env.VITE_OPENAI_API,
         });
 
         const { answers, leadInfo } = req.body;
