@@ -205,7 +205,7 @@ const QuizResults: React.FC = () => {
                                     Book a free strategy call with our team. We'll map out the exact system you need to scale {leadInfo.businessName || 'your business'}.
                                 </p>
                                 <Link
-                                    to="/partner-pre-meeting"
+                                    to="/booking"
                                     className="inline-flex items-center justify-center gap-3 px-10 py-5 text-xl font-bold text-slate-900 bg-white rounded-full hover:bg-purple-50 transition-all duration-200 hover:shadow-[0_0_40px_rgba(255,255,255,0.3)] hover:-translate-y-1"
                                 >
                                     <span>Book Your Strategy Call</span>
