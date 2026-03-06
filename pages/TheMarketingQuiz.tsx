@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowLeft, CheckCircle2, X } from 'lucide-react';
+import { ArrowLeft, ArrowRight, X } from 'lucide-react';
 import SimpleHeader from '../components/SimpleHeader';
 
 type Answer = 'yes' | 'no' | null;
@@ -51,7 +51,15 @@ const TheMarketingQuiz: React.FC = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [isFinished, setIsFinished] = useState(false);
 
-    // Keyboard navigation (Y, N, Enter to advance if answered)
+    // Lead Capture State
+    const [leadInfo, setLeadInfo] = useState({
+        name: '',
+        email: '',
+        phone: '',
+        businessName: ''
+    });
+
+    // Keyboard navigation
     useEffect(() => {
         const handleKeyDown = (e: KeyboardEvent) => {
             if (!quizStarted || isFinished) return;
@@ -62,7 +70,6 @@ const TheMarketingQuiz: React.FC = () => {
             } else if (e.key === 'n' || e.key === 'N') {
                 handleAnswer(currentQ.id, 'no');
             } else if (e.key === 'Enter') {
-                // Only advance on Enter if they've already answered this question
                 if (answers[currentQ.id]) {
                     handleNext();
                 }
@@ -77,7 +84,6 @@ const TheMarketingQuiz: React.FC = () => {
     const handleAnswer = (questionId: string, answer: 'yes' | 'no') => {
         setAnswers(prev => ({ ...prev, [questionId]: answer }));
 
-        // Auto-advance after a brief Typeform-like delay
         setTimeout(() => {
             handleNext();
         }, 400);
@@ -97,9 +103,15 @@ const TheMarketingQuiz: React.FC = () => {
         }
     };
 
-    const handleSubmit = () => {
-        // Navigate to the results page, passing the answers object
-        navigate('/quiz-results', { state: { answers } });
+    const handleLeadChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const { name, value } = e.target;
+        setLeadInfo(prev => ({ ...prev, [name]: value }));
+    };
+
+    const handleSubmit = (e: React.FormEvent) => {
+        e.preventDefault();
+        // Redirect to results and pass answers + leadInfo
+        navigate('/quiz-results', { state: { answers, leadInfo } });
         setQuizStarted(false);
     };
 
@@ -141,10 +153,10 @@ const TheMarketingQuiz: React.FC = () => {
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, scale: 0.95 }}
                         transition={{ duration: 0.3, ease: 'easeOut' }}
-                        className="fixed inset-0 z-50 bg-white flex flex-col"
+                        className="fixed inset-0 z-50 bg-white flex flex-col overflow-y-auto"
                     >
                         {/* Header/Progress Bar for Modal */}
-                        <div className="w-full bg-white flex-shrink-0 relative">
+                        <div className="w-full bg-white flex-shrink-0 sticky top-0 z-20">
                             {/* Close Button */}
                             <div className="absolute top-4 right-4 md:top-6 md:right-8 z-10">
                                 <button
@@ -169,7 +181,7 @@ const TheMarketingQuiz: React.FC = () => {
                         </div>
 
                         {/* Quiz Content Container */}
-                        <div className="flex-grow flex flex-col justify-center px-6 md:px-12 lg:px-16 overflow-y-auto">
+                        <div className="flex-grow flex flex-col justify-center px-6 md:px-12 lg:px-16 py-12">
                             <AnimatePresence mode="wait">
                                 {!isFinished ? (
                                     <motion.div
@@ -211,7 +223,6 @@ const TheMarketingQuiz: React.FC = () => {
                                             </button>
                                         </div>
 
-                                        {/* Helper Text */}
                                         <div className="md:pl-[4.5rem] mt-6 text-slate-400 text-sm flex items-center gap-2">
                                             <span className="hidden md:inline">Press <strong>Y</strong> or <strong>N</strong> to answer.</span>
                                         </div>
@@ -221,19 +232,79 @@ const TheMarketingQuiz: React.FC = () => {
                                         key="finished"
                                         initial={{ opacity: 0, scale: 0.95 }}
                                         animate={{ opacity: 1, scale: 1 }}
-                                        className="w-full max-w-3xl mx-auto text-center py-12"
+                                        className="w-full max-w-2xl mx-auto"
                                     >
-                                        <div className="inline-flex items-center justify-center w-28 h-28 rounded-full bg-green-100 mb-8 shadow-inner">
-                                            <CheckCircle2 className="w-14 h-14 text-green-600" />
+                                        <div className="text-center mb-10">
+                                            <h2 className="text-4xl md:text-5xl font-serif font-bold text-slate-900 mb-4">You're All Set!</h2>
+                                            <p className="text-xl text-slate-600">We've collected your responses. Where should we send your personalized marketing analysis?</p>
                                         </div>
-                                        <h2 className="text-5xl md:text-6xl font-serif font-bold text-slate-900 mb-6">You're All Set!</h2>
-                                        <p className="text-2xl text-slate-600 mb-12 max-w-2xl mx-auto">We've collected all 21 of your responses. Ready to see how you stack up and what to fix first?</p>
-                                        <button
-                                            onClick={handleSubmit}
-                                            className="px-12 py-6 text-2xl font-bold text-white transition-all bg-purple-600 rounded-full hover:bg-purple-700 hover:shadow-2xl hover:-translate-y-1 w-full md:w-auto"
-                                        >
-                                            Get My Marketing Analysis
-                                        </button>
+
+                                        <form onSubmit={handleSubmit} className="space-y-6 bg-slate-50 p-8 md:p-10 rounded-3xl border border-slate-100">
+                                            <div>
+                                                <label htmlFor="name" className="block text-sm font-bold text-slate-700 mb-2 uppercase tracking-wider">Your Name</label>
+                                                <input
+                                                    type="text"
+                                                    id="name"
+                                                    name="name"
+                                                    required
+                                                    value={leadInfo.name}
+                                                    onChange={handleLeadChange}
+                                                    className="w-full px-5 py-4 rounded-xl border-2 border-slate-200 focus:border-purple-600 focus:ring-0 transition-colors text-lg"
+                                                    placeholder="John Doe"
+                                                />
+                                            </div>
+
+                                            <div>
+                                                <label htmlFor="businessName" className="block text-sm font-bold text-slate-700 mb-2 uppercase tracking-wider">Business Name</label>
+                                                <input
+                                                    type="text"
+                                                    id="businessName"
+                                                    name="businessName"
+                                                    required
+                                                    value={leadInfo.businessName}
+                                                    onChange={handleLeadChange}
+                                                    className="w-full px-5 py-4 rounded-xl border-2 border-slate-200 focus:border-purple-600 focus:ring-0 transition-colors text-lg"
+                                                    placeholder="JD Custom Homes"
+                                                />
+                                            </div>
+
+                                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                                <div>
+                                                    <label htmlFor="email" className="block text-sm font-bold text-slate-700 mb-2 uppercase tracking-wider">Email Address</label>
+                                                    <input
+                                                        type="email"
+                                                        id="email"
+                                                        name="email"
+                                                        required
+                                                        value={leadInfo.email}
+                                                        onChange={handleLeadChange}
+                                                        className="w-full px-5 py-4 rounded-xl border-2 border-slate-200 focus:border-purple-600 focus:ring-0 transition-colors text-lg"
+                                                        placeholder="john@example.com"
+                                                    />
+                                                </div>
+                                                <div>
+                                                    <label htmlFor="phone" className="block text-sm font-bold text-slate-700 mb-2 uppercase tracking-wider">Phone Number</label>
+                                                    <input
+                                                        type="tel"
+                                                        id="phone"
+                                                        name="phone"
+                                                        required
+                                                        value={leadInfo.phone}
+                                                        onChange={handleLeadChange}
+                                                        className="w-full px-5 py-4 rounded-xl border-2 border-slate-200 focus:border-purple-600 focus:ring-0 transition-colors text-lg"
+                                                        placeholder="(555) 123-4567"
+                                                    />
+                                                </div>
+                                            </div>
+
+                                            <button
+                                                type="submit"
+                                                className="w-full mt-4 flex items-center justify-center gap-2 px-8 py-5 text-xl font-bold text-white transition-all bg-purple-600 rounded-xl hover:bg-purple-700 hover:shadow-xl hover:-translate-y-0.5"
+                                            >
+                                                <span>Calculate My Results</span>
+                                                <ArrowRight className="w-6 h-6" />
+                                            </button>
+                                        </form>
                                     </motion.div>
                                 )}
                             </AnimatePresence>
