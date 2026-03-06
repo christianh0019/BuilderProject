@@ -1,4 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { ArrowLeft, CheckCircle2 } from 'lucide-react';
 import SimpleHeader from '../components/SimpleHeader';
 
 type Answer = 'yes' | 'no' | null;
@@ -61,100 +63,201 @@ const quizData: Category[] = [
     }
 ];
 
-const TheMarketingQuiz: React.FC = () => {
-    const [answers, setAnswers] = useState<Record<string, Answer>>({});
+// Flatten the questions for the one-by-one interface
+const flattenedQuestions = quizData.flatMap((category) =>
+    category.questions.map((q) => ({
+        ...q,
+        categoryTitle: category.title,
+    }))
+).map((q, index) => ({ ...q, globalIndex: index }));
 
-    const handleAnswer = (questionId: string, answer: Answer) => {
-        setAnswers(prev => ({
-            ...prev,
-            [questionId]: answer
-        }));
+const TOTAL_QUESTIONS = flattenedQuestions.length;
+
+const TheMarketingQuiz: React.FC = () => {
+    const [answers, setAnswers] = useState<Record<string, 'yes' | 'no'>>({});
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const [isFinished, setIsFinished] = useState(false);
+
+    // Keyboard navigation (Y, N, Enter to advance if answered)
+    useEffect(() => {
+        const handleKeyDown = (e: KeyboardEvent) => {
+            if (isFinished) return;
+            const currentQ = flattenedQuestions[currentIndex];
+
+            if (e.key === 'y' || e.key === 'Y') {
+                handleAnswer(currentQ.id, 'yes');
+            } else if (e.key === 'n' || e.key === 'N') {
+                handleAnswer(currentQ.id, 'no');
+            } else if (e.key === 'Enter') {
+                // Only advance on Enter if they've already answered this question
+                if (answers[currentQ.id]) {
+                    handleNext();
+                }
+            }
+        };
+        window.addEventListener('keydown', handleKeyDown);
+        return () => window.removeEventListener('keydown', handleKeyDown);
+    }, [currentIndex, isFinished, answers]);
+
+    const handleAnswer = (questionId: string, answer: 'yes' | 'no') => {
+        setAnswers(prev => ({ ...prev, [questionId]: answer }));
+
+        // Auto-advance after a brief Typeform-like delay
+        setTimeout(() => {
+            handleNext();
+        }, 400);
     };
 
-    const handleSubmit = (e: React.FormEvent) => {
-        e.preventDefault();
-        console.log("Quiz Results:", answers);
-        // Alert for now until connected to CRM
+    const handleNext = () => {
+        if (currentIndex < TOTAL_QUESTIONS - 1) {
+            setCurrentIndex(prev => prev + 1);
+        } else {
+            setIsFinished(true);
+        }
+    };
+
+    const handleBack = () => {
+        if (currentIndex > 0) {
+            setCurrentIndex(prev => prev - 1);
+        }
+    };
+
+    const handleSubmit = () => {
+        console.log("Final Answers:", answers);
+        // Temporary feedback
         alert("Thanks for taking the quiz! Your responses have been recorded.");
     };
 
+    const currentQ = flattenedQuestions[currentIndex];
+    const progressPercentage = (currentIndex / TOTAL_QUESTIONS) * 100;
+
     return (
-        <div className="min-h-screen bg-slate-50 flex flex-col">
+        <div className="min-h-screen bg-slate-50 flex flex-col font-sans">
             <SimpleHeader showStatus={false} />
 
-            <div className="flex-grow pt-24 pb-20 px-6">
-                <div className="container mx-auto">
-                    <div className="max-w-4xl mx-auto">
-                        {/* Hero Section */}
-                        <div className="text-center mb-16">
-                            <h1 className="text-[28px] md:text-5xl font-serif font-bold text-slate-900 mb-6 leading-tight">
+            <div className="flex-grow flex flex-col pt-24 pb-20 px-4 md:px-6">
+                <div className="container mx-auto max-w-4xl flex-grow flex flex-col">
+
+                    {/* Hero Section */}
+                    {!isFinished && (
+                        <div className="text-center mb-8 shrink-0">
+                            <h1 className="text-3xl md:text-5xl font-serif font-bold text-slate-900 mb-4 leading-tight">
                                 How Does Your Marketing Rank Among <br className="hidden md:block" />
                                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-700 to-pink-600">Top Custom Home Builders?</span>
                             </h1>
-                            <p className="block text-lg text-slate-600 max-w-2xl mx-auto">
-                                Take this 21-question assessment to uncover exactly where your marketing is leaking revenue and get expert insights on what you should improve right now.
+                            <p className="block text-base md:text-lg text-slate-600 max-w-2xl mx-auto px-4">
+                                Take this 21-question assessment to uncover exactly where your marketing is leaking revenue and get expert insights on what you should improve.
                             </p>
                         </div>
+                    )}
 
-                        {/* Quiz Form */}
-                        <div className="bg-white rounded-3xl shadow-xl border border-slate-100 p-8 md:p-12">
-                            <form onSubmit={handleSubmit}>
-                                {quizData.map((category, catIndex) => (
-                                    <div key={catIndex} className="mb-12 last:mb-0">
-                                        <h2 className="text-2xl font-serif font-bold text-slate-900 mb-6 pb-2 border-b border-slate-200">
-                                            {category.title}
-                                        </h2>
-                                        <div className="space-y-6">
-                                            {category.questions.map((q) => (
-                                                <div key={q.id} className="flex flex-col md:flex-row md:items-center justify-between gap-4 p-4 rounded-xl hover:bg-slate-50 transition-colors border border-transparent hover:border-slate-100">
-                                                    <p className="text-slate-700 font-medium md:max-w-xl">
-                                                        {q.text}
-                                                    </p>
-                                                    <div className="flex items-center gap-3 shrink-0">
-                                                        <button
-                                                            type="button"
-                                                            onClick={() => handleAnswer(q.id, 'yes')}
-                                                            className={`px-6 py-2 rounded-full font-bold text-sm transition-all ${answers[q.id] === 'yes'
-                                                                ? 'bg-purple-600 text-white shadow-md'
-                                                                : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
-                                                                }`}
-                                                        >
-                                                            Yes
-                                                        </button>
-                                                        <button
-                                                            type="button"
-                                                            onClick={() => handleAnswer(q.id, 'no')}
-                                                            className={`px-6 py-2 rounded-full font-bold text-sm transition-all ${answers[q.id] === 'no'
-                                                                ? 'bg-slate-900 text-white shadow-md'
-                                                                : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
-                                                                }`}
-                                                        >
-                                                            No
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                            ))}
-                                        </div>
-                                    </div>
-                                ))}
+                    {/* Quiz Container */}
+                    <div className="flex-grow flex flex-col justify-center bg-white rounded-3xl shadow-2xl border border-slate-100 overflow-hidden relative">
 
-                                <div className="mt-12 pt-8 border-t border-slate-200 text-center">
-                                    <button
-                                        type="submit"
-                                        className="inline-flex items-center justify-center px-10 py-5 text-lg font-bold text-white transition-all duration-200 bg-purple-600 rounded-full hover:bg-purple-700 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2"
+                        {/* Progress Bar */}
+                        {!isFinished && (
+                            <div className="absolute top-0 left-0 w-full h-1.5 bg-slate-100">
+                                <motion.div
+                                    className="h-full bg-purple-600"
+                                    initial={{ width: 0 }}
+                                    animate={{ width: `${progressPercentage}%` }}
+                                    transition={{ duration: 0.3 }}
+                                />
+                            </div>
+                        )}
+
+                        <div className="p-6 md:p-12 lg:p-16 flex-grow flex flex-col justify-center relative min-h-[400px]">
+                            <AnimatePresence mode="wait">
+                                {!isFinished ? (
+                                    <motion.div
+                                        key={currentIndex}
+                                        initial={{ opacity: 0, y: 20 }}
+                                        animate={{ opacity: 1, y: 0 }}
+                                        exit={{ opacity: 0, y: -20 }}
+                                        transition={{ duration: 0.3, ease: 'easeOut' }}
+                                        className="w-full max-w-3xl mx-auto"
                                     >
-                                        Get My Results
-                                    </button>
-                                    <p className="mt-4 text-sm text-slate-500">
-                                        Your answers will help us pinpoint exactly where you need to focus.
-                                    </p>
-                                </div>
-                            </form>
+                                        <div className="mb-10">
+                                            <span className="text-xs md:text-sm font-bold text-purple-600 tracking-widest uppercase mb-4 block">
+                                                {currentQ.categoryTitle}
+                                            </span>
+                                            <h2 className="text-2xl md:text-4xl font-medium text-slate-900 leading-snug flex items-start">
+                                                <span className="text-slate-300 mr-4 md:mr-6 font-serif select-none">{currentIndex + 1}</span>
+                                                <span>{currentQ.text}</span>
+                                            </h2>
+                                        </div>
+
+                                        <div className="flex flex-col sm:flex-row gap-4 mt-8 md:pl-[3.5rem]">
+                                            <button
+                                                onClick={() => handleAnswer(currentQ.id, 'yes')}
+                                                className={`group flex items-center justify-between px-6 py-4 md:px-8 md:py-5 rounded-2xl border-2 transition-all duration-200 w-full sm:w-1/2 text-left hover:border-purple-600 hover:bg-purple-50 ${answers[currentQ.id] === 'yes'
+                                                    ? 'border-purple-600 bg-purple-50 ring-2 ring-purple-600 ring-offset-2'
+                                                    : 'border-slate-200 bg-white'
+                                                    }`}
+                                            >
+                                                <span className="text-xl font-bold text-slate-900">Yes</span>
+                                                <span className="hidden md:flex items-center justify-center w-8 h-8 rounded-md bg-slate-100 text-slate-500 font-mono text-sm group-hover:bg-purple-200 group-hover:text-purple-700">Y</span>
+                                            </button>
+
+                                            <button
+                                                onClick={() => handleAnswer(currentQ.id, 'no')}
+                                                className={`group flex items-center justify-between px-6 py-4 md:px-8 md:py-5 rounded-2xl border-2 transition-all duration-200 w-full sm:w-1/2 text-left hover:border-slate-900 hover:bg-slate-50 ${answers[currentQ.id] === 'no'
+                                                    ? 'border-slate-900 bg-slate-900 text-white ring-2 ring-slate-900 ring-offset-2'
+                                                    : 'border-slate-200 bg-white'
+                                                    }`}
+                                            >
+                                                <span className={`text-xl font-bold ${answers[currentQ.id] === 'no' ? 'text-white' : 'text-slate-900'}`}>No</span>
+                                                <span className={`hidden md:flex items-center justify-center w-8 h-8 rounded-md font-mono text-sm ${answers[currentQ.id] === 'no' ? 'bg-slate-700 text-white' : 'bg-slate-100 text-slate-500 group-hover:bg-slate-200 group-hover:text-slate-900'}`}>N</span>
+                                            </button>
+                                        </div>
+                                    </motion.div>
+                                ) : (
+                                    <motion.div
+                                        key="finished"
+                                        initial={{ opacity: 0, scale: 0.95 }}
+                                        animate={{ opacity: 1, scale: 1 }}
+                                        className="w-full max-w-2xl mx-auto text-center py-12"
+                                    >
+                                        <div className="inline-flex items-center justify-center w-24 h-24 rounded-full bg-green-100 mb-8">
+                                            <CheckCircle2 className="w-12 h-12 text-green-600" />
+                                        </div>
+                                        <h2 className="text-4xl md:text-5xl font-serif font-bold text-slate-900 mb-6">You're All Set!</h2>
+                                        <p className="text-xl text-slate-600 mb-12 max-w-lg mx-auto">We've collected all 21 of your responses. Ready to see how you stack up and what to fix first?</p>
+                                        <button
+                                            onClick={handleSubmit}
+                                            className="px-10 py-5 text-xl font-bold text-white transition-all bg-purple-600 rounded-full hover:bg-purple-700 hover:shadow-xl hover:-translate-y-1 w-full md:w-auto"
+                                        >
+                                            Get My Marketing Analysis
+                                        </button>
+                                    </motion.div>
+                                )}
+                            </AnimatePresence>
                         </div>
+
+                        {/* Footer Controls */}
+                        {!isFinished && (
+                            <div className="px-6 md:px-8 py-4 md:py-5 border-t border-slate-100 flex items-center justify-between bg-slate-50/50">
+                                <button
+                                    onClick={handleBack}
+                                    disabled={currentIndex === 0}
+                                    className={`flex items-center gap-2 px-4 py-2 font-medium rounded-lg transition-colors ${currentIndex === 0
+                                        ? 'text-slate-300 cursor-not-allowed'
+                                        : 'text-slate-600 hover:bg-slate-200 hover:text-slate-900'
+                                        }`}
+                                >
+                                    <ArrowLeft className="w-4 h-4" />
+                                    <span>Previous</span>
+                                </button>
+
+                                <div className="text-sm font-medium text-slate-500">
+                                    <span className="text-slate-900 text-base">{currentIndex + 1}</span> / {TOTAL_QUESTIONS}
+                                </div>
+                            </div>
+                        )}
                     </div>
-                </div >
-            </div >
-        </div >
+                </div>
+            </div>
+        </div>
     );
 };
 
