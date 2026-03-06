@@ -36,6 +36,7 @@ import AdvertisingLanding from './pages/AdvertisingLanding';
 import PartnerApplicationV2 from './pages/PartnerApplicationV2';
 import AdvertisingPreMeeting from './pages/AdvertisingPreMeeting';
 import TheMarketingQuiz from './pages/TheMarketingQuiz';
+import QuizResults from './pages/QuizResults';
 import Quickstart from './pages/Quickstart';
 import NotFound from './pages/NotFound';
 import FreeTraining from './pages/FreeTraining';
@@ -109,6 +110,7 @@ const App: React.FC = () => {
           <Route path="/partner-application-v2" element={<PartnerApplicationV2 />} />
           <Route path="/partner-pre-meeting" element={<AdvertisingPreMeeting />} />
           <Route path="/the-marketing-quiz" element={<TheMarketingQuiz />} />
+          <Route path="/quiz-results" element={<QuizResults />} />
 
           {/* Onboarding Funnel */}
           <Route path="/onboarding/welcome" element={<Welcome />} />

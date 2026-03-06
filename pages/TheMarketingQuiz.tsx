@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowLeft, CheckCircle2, X } from 'lucide-react';
 import SimpleHeader from '../components/SimpleHeader';
@@ -44,6 +45,7 @@ const flattenedQuestions: Question[] = rawQuestions.map((text, index) => ({
 const TOTAL_QUESTIONS = flattenedQuestions.length;
 
 const TheMarketingQuiz: React.FC = () => {
+    const navigate = useNavigate();
     const [quizStarted, setQuizStarted] = useState(false);
     const [answers, setAnswers] = useState<Record<string, 'yes' | 'no'>>({});
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -96,9 +98,8 @@ const TheMarketingQuiz: React.FC = () => {
     };
 
     const handleSubmit = () => {
-        console.log("Final Answers:", answers);
-        // Temporary feedback
-        alert("Thanks for taking the quiz! Your responses have been recorded.");
+        // Navigate to the results page, passing the answers object
+        navigate('/quiz-results', { state: { answers } });
         setQuizStarted(false);
     };
 
