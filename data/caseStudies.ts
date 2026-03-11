@@ -9,7 +9,6 @@ export interface CaseStudy {
         value: string;
     }[];
     imageUrl: string;
-    videoUrl?: string;
     content: {
         overview: string;
         challenge: string;
@@ -39,7 +38,6 @@ export const caseStudies: CaseStudy[] = [
             { label: 'Homes Closed', value: '2' }
         ],
         imageUrl: '/images/homestead-poster.jpg',
-        videoUrl: 'https://storage.googleapis.com/msgsndr/HllUVzV8V6VFH4nUuq4W/media/68a889645f2e6e7e3e8ad82a.mp4',
         content: {
             overview: "Herm runs Homestead Home Builders in Denver. When we first spoke, he was honest: he’d been burned before. Big fees, noisy dashboards, and “leads” that never showed up. Referrals kept the lights on, but they also kept him guessing. He didn’t want another pitch—he wanted steady, qualified conversations he could see on his calendar and trace back to a clear system.",
             challenge: "Wasting time on folks who were just price-shopping. Leads going cold, no-shows, and paying for activity without knowing if it produced revenue.",
@@ -73,7 +71,6 @@ export const caseStudies: CaseStudy[] = [
             { label: 'ROI', value: '113x' }
         ],
         imageUrl: '/images/schwanz-poster.jpg',
-        videoUrl: 'https://storage.googleapis.com/msgsndr/HllUVzV8V6VFH4nUuq4W/media/6866c7145143a2f20901e957.mp4',
         content: {
             overview: "For years, Schwanz Custom Homes was booked out 12-18 months in advance with word-of-mouth alone. But as leads slowed, they had open calendar space for the first time. They reached out to BuilderProject not to grow fast, but to get back to normal.",
             challenge: "The goal wasn’t just more leads. It was to deliver serious, build-ready homeowners who would restore momentum and re-fill their once overflowing schedule.",
@@ -107,7 +104,6 @@ export const caseStudies: CaseStudy[] = [
             { label: 'Leads', value: '1,300+' }
         ],
         imageUrl: '/images/eagle-rock-update.png',
-        videoUrl: 'https://storage.googleapis.com/msgsndr/HllUVzV8V6VFH4nUuq4W/media/69678674d473d851664ab847.mp4',
         content: {
             overview: "Eagle Rock Custom Homes provides premium custom home material packages nationwide. Despite a solid offering, founder Bill was doing all the sales himself and struggling with inconsistent lead flow.",
             challenge: "Bill needed a way to generate consistent, qualified leads and remove himself from the manual sales grind to scale the business.",

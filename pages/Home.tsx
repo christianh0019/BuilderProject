@@ -603,35 +603,15 @@ const Home: React.FC = () => {
                   {/* Hover Glow Effect */}
                   <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl opacity-0 group-hover:opacity-100 transition duration-500 blur opacity-25 -z-10"></div>
 
-                  {study.videoUrl ? (
-                    <div className="mb-6 rounded-xl overflow-hidden bg-slate-100 shadow-inner block relative group/video">
-                      <div className="absolute inset-0 bg-black/10 group-hover/video:bg-transparent transition-colors pointer-events-none z-10"></div>
-                      <video
-                        src={study.videoUrl}
-                        poster={study.imageUrl}
-                        controls
-                        playsInline
-                        className="w-full h-auto"
-                      />
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className="w-12 h-12 rounded-full overflow-hidden bg-slate-100 shrink-0">
+                      <img src={study.imageUrl} alt={study.builderName} className="w-full h-full object-cover" />
                     </div>
-                  ) : (
-                    <div className="flex items-center gap-4 mb-4">
-                      <div className="w-12 h-12 rounded-full overflow-hidden bg-slate-100 shrink-0">
-                        <img src={study.imageUrl} alt={study.builderName} className="w-full h-full object-cover" />
-                      </div>
-                      <div>
-                        <div className="font-bold text-slate-900 leading-tight">{study.builderName}</div>
-                        <div className="text-sm text-slate-500">{study.location}</div>
-                      </div>
-                    </div>
-                  )}
-
-                  {study.videoUrl && (
-                    <div className="mb-6">
-                      <div className="font-bold text-slate-900 leading-tight text-xl mb-1">{study.builderName}</div>
+                    <div>
+                      <div className="font-bold text-slate-900 leading-tight">{study.builderName}</div>
                       <div className="text-sm text-slate-500">{study.location}</div>
                     </div>
-                  )}
+                  </div>
 
                   <div className="grid grid-cols-2 gap-x-4 gap-y-4 mb-6 bg-slate-50 p-4 rounded-xl border border-slate-100">
                     {study.results.slice(0, 2).map((res, i) => (

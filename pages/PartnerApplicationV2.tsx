@@ -293,34 +293,15 @@ const PartnerApplicationV2: React.FC = () => {
                                 {caseStudies
                                     .map((study) => (
                                         <div key={study.id} className="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
-                                            {study.videoUrl ? (
-                                                <div className="mb-6 rounded-xl overflow-hidden bg-slate-100 shadow-inner block">
-                                                    <video
-                                                        src={study.videoUrl}
-                                                        poster={study.imageUrl}
-                                                        controls
-                                                        playsInline
-                                                        className="w-full h-auto"
-                                                    />
+                                            <div className="flex items-center gap-4 mb-4">
+                                                <div className="w-12 h-12 rounded-full overflow-hidden bg-slate-100 shrink-0">
+                                                    <img src={study.imageUrl} alt={study.builderName} className="w-full h-full object-cover" />
                                                 </div>
-                                            ) : (
-                                                <div className="flex items-center gap-4 mb-4">
-                                                    <div className="w-12 h-12 rounded-full overflow-hidden bg-slate-100 shrink-0">
-                                                        <img src={study.imageUrl} alt={study.builderName} className="w-full h-full object-cover" />
-                                                    </div>
-                                                    <div>
-                                                        <div className="font-bold text-slate-900 leading-tight">{study.builderName}</div>
-                                                        <div className="text-sm text-slate-500">{study.location}</div>
-                                                    </div>
-                                                </div>
-                                            )}
-
-                                            {study.videoUrl && (
-                                                <div className="mb-3">
-                                                    <div className="font-bold text-slate-900 leading-tight text-lg">{study.builderName}</div>
+                                                <div>
+                                                    <div className="font-bold text-slate-900 leading-tight">{study.builderName}</div>
                                                     <div className="text-sm text-slate-500">{study.location}</div>
                                                 </div>
-                                            )}
+                                            </div>
 
                                             <h3 className="font-serif font-bold text-lg text-slate-900 mb-3">{study.title}</h3>
 
