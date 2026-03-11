@@ -62,44 +62,6 @@ export const caseStudies: CaseStudy[] = [
         landingPageDescription: "Hired a sales rep and added over $5M in closed projects within 7 months of working with BuilderProject."
     },
     {
-        id: 'open-prairie',
-        slug: 'open-prairie',
-        title: 'Closed $2.8M in Projects from Just $7K in Ad Spend',
-        builderName: 'Dan Schlaak',
-        location: '',
-        results: [
-            { label: 'Revenue', value: '$2.8M' },
-            { label: 'Ad Spend', value: '$7k' },
-            { label: 'Top Project', value: '$1.5M' }
-        ],
-        imageUrl: '/images/open-prairie-poster.jpg',
-        videoUrl: 'https://storage.googleapis.com/msgsndr/HllUVzV8V6VFH4nUuq4W/media/686e860d9334981695b5ec1d.mp4',
-        content: {
-            overview: "Dan, the founder of Open Prairie Custom Homes in North Texas, isn’t new to high-end home building. He’s built stunning, estate-level custom homes for years — but he was stuck relying on referrals. He knew there were more $1M+ clients out there, he just didn’t have a predictable system to reach them.",
-            challenge: "He needed qualified, design-focused homeowners ready to build now — and a brand experience that matched the caliber of his craftsmanship, not tire-kickers or lowball inquiries.",
-            strategy: [
-                {
-                    title: "Laser-Targeted Meta Ad Campaigns",
-                    description: "Focused on affluent areas around DFW. We positioned Dan as the go-to builder for modern, luxury homes on acreage lots."
-                },
-                {
-                    title: "High-Intent Funnel",
-                    description: "Filtered out budget-shoppers and surfaced prospects with land, $1M+ budgets, and realistic timelines."
-                },
-                {
-                    title: "Internal Dialer Team",
-                    description: "We reached out to every lead, confirmed their details, and booked them directly onto Dan’s calendar with full context."
-                }
-            ],
-            outcome: "With just $7,000 in ad spend, Open Prairie Custom Homes closed $2.8M in signed projects, including two multi-million dollar homes from cold traffic. Now he has a pipeline of similar-quality leads continuing to book."
-        },
-        testimonial: {
-            quote: "I just signed a $1.5M deal last week... and a $1.3M one’s on the way.",
-            author: "Dan, Owner"
-        },
-        landingPageDescription: "Went from referrals and sticky notes to a full pipeline system and added over $3M in new projects within 6 months."
-    },
-    {
         id: 'schwanz',
         slug: 'schwanz-custom',
         title: 'Filled Build Slots & Generated $680K in Revenue Off $6K Spend',
