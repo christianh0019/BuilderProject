@@ -332,12 +332,6 @@ const Home: React.FC = () => {
                 onClick={() => setSelectedVideo("CNngG1p-HQQ")}
               >
                 <div className="absolute inset-0 opacity-60">
-                  <img
-                    src="/images/hero-video-thumb.gif"
-                    alt="Builder Project Hero Video"
-                    title="Builder Project Hero Video"
-                    className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
-                  />
                 </div>
                 <div className="absolute inset-0 bg-slate-900/40 group-hover:bg-slate-900/30 transition-all"></div>
                 <div className="relative z-10 text-center p-8 md:p-10">
